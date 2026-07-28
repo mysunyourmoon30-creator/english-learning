@@ -18,6 +18,10 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<SpeakingSubmission> SpeakingSubmissions => Set<SpeakingSubmission>();
     public DbSet<ContentRevision> ContentRevisions => Set<ContentRevision>();
     public DbSet<AuditFinding> AuditFindings => Set<AuditFinding>();
+    public DbSet<LearningActivity> LearningActivities => Set<LearningActivity>();
+    public DbSet<LearnerAchievement> LearnerAchievements => Set<LearnerAchievement>();
+    public DbSet<AiUsageRecord> AiUsageRecords => Set<AiUsageRecord>();
+    public DbSet<ContentReviewAssignment> ContentReviewAssignments => Set<ContentReviewAssignment>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -46,6 +50,21 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
         builder.Entity<ContentRevision>()
             .HasIndex(x => new { x.LessonId, x.Version });
 
+        builder.Entity<LearningActivity>()
+            .HasIndex(x => new { x.UserId, x.DeduplicationKey })
+            .IsUnique();
+
+        builder.Entity<LearnerAchievement>()
+            .HasIndex(x => new { x.UserId, x.Code })
+            .IsUnique();
+
+        builder.Entity<AiUsageRecord>()
+            .HasIndex(x => x.CreatedAt);
+
+        builder.Entity<ContentReviewAssignment>()
+            .HasIndex(x => new { x.LessonId, x.ReviewerRole })
+            .IsUnique();
+
         builder.Entity<CourseModule>()
             .Property(x => x.Category)
             .HasConversion<string>();
@@ -63,6 +82,10 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             .HasConversion<string>();
 
         builder.Entity<ContentRevision>()
+            .Property(x => x.Status)
+            .HasConversion<string>();
+
+        builder.Entity<ContentReviewAssignment>()
             .Property(x => x.Status)
             .HasConversion<string>();
 
@@ -85,6 +108,12 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             .OnDelete(DeleteBehavior.Cascade);
 
         builder.Entity<ContentRevision>()
+            .HasOne(x => x.Lesson)
+            .WithMany()
+            .HasForeignKey(x => x.LessonId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.Entity<ContentReviewAssignment>()
             .HasOne(x => x.Lesson)
             .WithMany()
             .HasForeignKey(x => x.LessonId)

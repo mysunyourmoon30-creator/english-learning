@@ -121,6 +121,15 @@ public sealed class AuditService(ApplicationDbContext db)
             lesson,
             userId,
             RequiredText(input.ChangeSummary, 300, "Change summary")));
+        var reviewAssignments = await db.ContentReviewAssignments
+            .Where(x => x.LessonId == lessonId)
+            .ToListAsync();
+        foreach (var assignment in reviewAssignments)
+        {
+            assignment.Status = ContentReviewStatus.Pending;
+            assignment.ReviewedAt = null;
+            assignment.Notes = string.Empty;
+        }
         await db.SaveChangesAsync();
     }
 
@@ -149,6 +158,23 @@ public sealed class AuditService(ApplicationDbContext db)
             {
                 throw new InvalidOperationException(
                     "Resolve all Critical and High findings before publishing.");
+            }
+
+            var category = await db.Lessons
+                .Where(x => x.Id == lessonId)
+                .Select(x => x.Module.Category)
+                .SingleAsync();
+            if (category == LearningCategory.AiEnglish)
+            {
+                var reviews = await db.ContentReviewAssignments
+                    .Where(x => x.LessonId == lessonId)
+                    .ToListAsync();
+                if (reviews.Count < 2
+                    || reviews.Any(x => x.Status != ContentReviewStatus.Approved))
+                {
+                    throw new InvalidOperationException(
+                        "AI English lessons require approved language and AI subject-matter reviews before publishing.");
+                }
             }
         }
 

@@ -5,7 +5,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EnglishMasterAI.Web.Application;
 
-public sealed class AssessmentService(ApplicationDbContext db, LearningService learningService)
+public sealed class AssessmentService(
+    ApplicationDbContext db,
+    LearningService learningService,
+    LearningEngagementService engagement)
 {
     private static readonly Dictionary<string, string> PriorityLabels = new(StringComparer.OrdinalIgnoreCase)
     {
@@ -29,6 +32,23 @@ public sealed class AssessmentService(ApplicationDbContext db, LearningService l
             .ToListAsync();
 
         return questions.Select(ToPrompt).ToList();
+    }
+
+    public async Task<QuestionPrompt?> GetToeicListeningQuestionAsync(
+        Guid questionId,
+        CancellationToken cancellationToken = default)
+    {
+        var question = await db.AssessmentQuestions
+            .AsNoTracking()
+            .SingleOrDefaultAsync(
+                x => x.Id == questionId
+                    && x.IsPublished
+                    && (x.Kind == AssessmentKind.ToeicDiagnostic
+                        || x.Kind == AssessmentKind.ToeicMock)
+                    && x.ToeicPart >= 1
+                    && x.ToeicPart <= 4,
+                cancellationToken);
+        return question is null ? null : ToPrompt(question);
     }
 
     public async Task<AssessmentResult> SubmitAsync(
@@ -78,7 +98,7 @@ public sealed class AssessmentService(ApplicationDbContext db, LearningService l
             .Select(x => PriorityLabels.GetValueOrDefault(x.Key, x.Key))
             .ToList();
 
-        db.PlacementAttempts.Add(new PlacementAttempt
+        var attempt = new PlacementAttempt
         {
             UserId = userId,
             AssessmentName = kind switch
@@ -94,7 +114,8 @@ public sealed class AssessmentService(ApplicationDbContext db, LearningService l
             CorrectAnswers = correctAnswers,
             TotalQuestions = questions.Count,
             DurationSeconds = Math.Max(0, durationSeconds)
-        });
+        };
+        db.PlacementAttempts.Add(attempt);
 
         if (kind == AssessmentKind.Placement)
         {
@@ -105,6 +126,14 @@ public sealed class AssessmentService(ApplicationDbContext db, LearningService l
         }
 
         await db.SaveChangesAsync();
+        await engagement.RecordAsync(
+            userId,
+            kind is AssessmentKind.ToeicDiagnostic or AssessmentKind.ToeicMock
+                ? "toeic"
+                : "assessment",
+            $"assessment:{attempt.Id}",
+            Math.Max(1, durationSeconds / 60),
+            accuracy);
         return new AssessmentResult(cefr, estimatedToeic, correctAnswers, questions.Count, skillScores, priorities);
     }
 

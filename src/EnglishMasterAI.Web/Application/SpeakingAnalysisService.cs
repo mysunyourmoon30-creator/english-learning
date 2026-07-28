@@ -10,6 +10,9 @@ public sealed partial class SpeakingAnalysisService(
     ApplicationDbContext db,
     OpenAiGateway ai,
     AiPracticeLimiter limiter,
+    AiUsageService usage,
+    LearningEngagementService engagement,
+    PronunciationAssessmentService pronunciation,
     ILogger<SpeakingAnalysisService> logger)
 {
     private static readonly JsonObject FeedbackSchema = JsonNode.Parse(
@@ -46,20 +49,48 @@ public sealed partial class SpeakingAnalysisService(
         string contentType,
         int durationSeconds,
         string browserTranscript,
+        string referenceText = "",
         CancellationToken cancellationToken = default)
     {
         var safePrompt = WritingFeedbackService.NormalizeText(prompt, 600);
         var transcript = WritingFeedbackService.NormalizeText(browserTranscript, 8_000);
         var usedServerTranscription = false;
         var aiPermit = ai.IsConfigured && limiter.TryAcquire(userId);
+        byte[]? audio = null;
+        PronunciationFeedback? pronunciationFeedback = null;
 
-        if (aiPermit && audioStream is not null)
+        if ((aiPermit || pronunciation.IsConfigured) && audioStream is not null)
         {
             try
             {
-                var audio = await ReadAudioAsync(audioStream, ai.MaxAudioBytes, cancellationToken);
+                audio = await ReadAudioAsync(
+                    audioStream,
+                    ai.MaxAudioBytes,
+                    cancellationToken);
+            }
+            catch (ArgumentOutOfRangeException exception)
+            {
+                logger.LogWarning(exception, "Submitted speaking audio was rejected.");
+            }
+        }
+
+        if (pronunciation.IsConfigured
+            && audio is not null
+            && !string.IsNullOrWhiteSpace(referenceText))
+        {
+            pronunciationFeedback = await pronunciation.AssessAsync(
+                audio,
+                referenceText,
+                cancellationToken);
+        }
+
+        if (aiPermit && audio is not null)
+        {
+            try
+            {
                 transcript = WritingFeedbackService.NormalizeText(
                     await ai.TranscribeAsync(
+                        userId,
                         audio,
                         fileName,
                         contentType,
@@ -76,6 +107,11 @@ public sealed partial class SpeakingAnalysisService(
                 logger.LogWarning(
                     exception,
                     "Server transcription failed; using browser transcript when available.");
+                await usage.RecordFallbackAsync(
+                    userId,
+                    "transcription",
+                    exception.GetType().Name,
+                    cancellationToken);
             }
         }
 
@@ -129,6 +165,11 @@ public sealed partial class SpeakingAnalysisService(
                     wordsPerMinute,
                     fillerCount,
                     "AI analysis was unavailable; a transcript-based local rubric was used.");
+                await usage.RecordFallbackAsync(
+                    userId,
+                    "english_speaking_feedback",
+                    exception.GetType().Name,
+                    cancellationToken);
             }
         }
         else
@@ -141,9 +182,19 @@ public sealed partial class SpeakingAnalysisService(
                 ai.IsConfigured
                     ? "AI practice limit reached. Wait one minute before requesting another AI review."
                     : "Set AI__ApiKey for server transcription and deeper language feedback.");
+            await usage.RecordFallbackAsync(
+                userId,
+                "english_speaking_feedback",
+                ai.IsConfigured ? "RateLimit" : "NotConfigured",
+                cancellationToken);
         }
 
-        db.SpeakingSubmissions.Add(new SpeakingSubmission
+        if (pronunciationFeedback is not null)
+        {
+            feedback = feedback with { Pronunciation = pronunciationFeedback };
+        }
+
+        var submission = new SpeakingSubmission
         {
             UserId = userId,
             Prompt = safePrompt,
@@ -151,9 +202,22 @@ public sealed partial class SpeakingAnalysisService(
             DurationSeconds = duration,
             Score = feedback.Score,
             EvaluationMode = feedback.EvaluationMode,
-            FeedbackJson = JsonSerializer.Serialize(feedback)
-        });
+            FeedbackJson = JsonSerializer.Serialize(feedback),
+            PronunciationScore = pronunciationFeedback?.PronunciationScore,
+            AccuracyScore = pronunciationFeedback?.AccuracyScore,
+            CompletenessScore = pronunciationFeedback?.CompletenessScore,
+            ProsodyScore = pronunciationFeedback?.ProsodyScore,
+            PronunciationProvider = pronunciationFeedback?.Provider
+        };
+        db.SpeakingSubmissions.Add(submission);
         await db.SaveChangesAsync(cancellationToken);
+        await engagement.RecordAsync(
+            userId,
+            "speaking",
+            $"speaking:{submission.Id}",
+            Math.Max(1, duration / 60),
+            feedback.Score,
+            cancellationToken);
         return feedback;
     }
 

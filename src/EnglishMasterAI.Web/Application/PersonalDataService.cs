@@ -24,6 +24,7 @@ public sealed class PersonalDataService(
                 x.TargetToeicScore,
                 x.DailyMinutes,
                 x.CurrentStreak,
+                x.TimeZoneId,
                 x.CreatedAt,
                 x.UpdatedAt
             })
@@ -93,8 +94,51 @@ public sealed class PersonalDataService(
                 x.DurationSeconds,
                 x.Score,
                 x.EvaluationMode,
+                x.PronunciationScore,
+                x.AccuracyScore,
+                x.CompletenessScore,
+                x.ProsodyScore,
+                x.PronunciationProvider,
                 x.FeedbackJson,
                 x.SubmittedAt
+            })
+            .ToListAsync(cancellationToken);
+        var activities = await db.LearningActivities
+            .AsNoTracking()
+            .Where(x => x.UserId == userId)
+            .Select(x => new
+            {
+                x.Kind,
+                x.Minutes,
+                x.Points,
+                x.OccurredAt
+            })
+            .ToListAsync(cancellationToken);
+        var achievements = await db.LearnerAchievements
+            .AsNoTracking()
+            .Where(x => x.UserId == userId)
+            .Select(x => new
+            {
+                x.Code,
+                x.Title,
+                x.Description,
+                x.EarnedAt
+            })
+            .ToListAsync(cancellationToken);
+        var aiUsage = await db.AiUsageRecords
+            .AsNoTracking()
+            .Where(x => x.UserId == userId)
+            .Select(x => new
+            {
+                x.Operation,
+                x.Provider,
+                x.Model,
+                x.Status,
+                x.InputUnits,
+                x.InputTokens,
+                x.OutputTokens,
+                x.DurationMilliseconds,
+                x.CreatedAt
             })
             .ToListAsync(cancellationToken);
 
@@ -106,7 +150,10 @@ public sealed class PersonalDataService(
             ["VocabularyReviews"] = reviews,
             ["WritingSubmissions"] = writing,
             ["SpeakingSubmissions"] = speaking,
-            ["AudioRetention"] = "Raw audio is processed in memory and is not stored."
+            ["LearningActivities"] = activities,
+            ["Achievements"] = achievements,
+            ["AiUsageMetadata"] = aiUsage,
+            ["AudioRetention"] = "Learner audio is processed in memory and is not stored. Generated reference audio may be cached by text hash."
         };
     }
 
@@ -135,6 +182,23 @@ public sealed class PersonalDataService(
         await db.SpeakingSubmissions
             .Where(x => x.UserId == userId)
             .ExecuteDeleteAsync(cancellationToken);
+        await db.LearningActivities
+            .Where(x => x.UserId == userId)
+            .ExecuteDeleteAsync(cancellationToken);
+        await db.LearnerAchievements
+            .Where(x => x.UserId == userId)
+            .ExecuteDeleteAsync(cancellationToken);
+        await db.AiUsageRecords
+            .Where(x => x.UserId == userId)
+            .ExecuteDeleteAsync(cancellationToken);
+        await db.ContentReviewAssignments
+            .Where(x => x.ReviewerUserId == userId)
+            .ExecuteUpdateAsync(
+                setters => setters
+                    .SetProperty(x => x.ReviewerUserId, (string?)null)
+                    .SetProperty(x => x.Status, Domain.ContentReviewStatus.Pending)
+                    .SetProperty(x => x.ReviewedAt, (DateTimeOffset?)null),
+                cancellationToken);
 
         var result = await userManager.DeleteAsync(user);
         if (result.Succeeded)

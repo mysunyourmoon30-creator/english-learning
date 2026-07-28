@@ -2,6 +2,7 @@
 @attribute [Authorize]
 @inject IJSRuntime JS
 @inject SpeakingAnalysisService Speaking
+@inject PronunciationAssessmentService Pronunciation
 @inject CurrentUserService CurrentUser
 
 <PageTitle>Speaking Practice | EnglishMaster AI</PageTitle>
@@ -12,19 +13,39 @@
         <h1>อธิบายให้ชัด ไม่ต้องเลียนสำเนียง</h1>
         <p>ประเมิน fluency, grammar, vocabulary, relevance และ organization โดยไม่หักคะแนนเพียงเพราะสำเนียงต่างจากเจ้าของภาษา</p>
     </div>
-    <span class="tag gold">60–90 วินาที</span>
+    <span class="tag gold">@(_pronunciationMode ? "อ่านตาม 20–30 วินาที" : "พูดอิสระ 60–90 วินาที")</span>
 </div>
 
 <div class="split-layout">
     <section class="surface surface-pad">
         <div class="eyebrow">TODAY'S PROMPT</div>
-        <h2>@Prompt</h2>
-        <div class="speaking-framework">
-            <div><span>P</span><strong>Point</strong><small>I prefer / The main idea is…</small></div>
-            <div><span>R</span><strong>Reason</strong><small>because…</small></div>
-            <div><span>E</span><strong>Example</strong><small>For example…</small></div>
-            <div><span>R</span><strong>Result</strong><small>As a result…</small></div>
+        <div class="d-flex gap-2 flex-wrap my-3">
+            <button class="btn @(!_pronunciationMode ? "btn-primary" : "btn-outline-primary")"
+                    @onclick="() => SetMode(false)">พูดอิสระ</button>
+            <button class="btn @(_pronunciationMode ? "btn-primary" : "btn-outline-primary")"
+                    @onclick="() => SetMode(true)">Pronunciation จากเสียง</button>
         </div>
+        <h2>@CurrentPrompt</h2>
+        @if (_pronunciationMode)
+        {
+            <div class="callout">
+                <p><strong>Reference:</strong> @ReferenceText</p>
+                <small>
+                    @(Pronunciation.IsConfigured
+                        ? "ระบบจะประเมิน accuracy, fluency, completeness และ prosody จาก acoustic signal"
+                        : "ยังไม่ได้ตั้ง Azure Speech key ระบบจะให้ transcript feedback แต่จะไม่สร้างคะแนน pronunciation ปลอม")
+                </small>
+            </div>
+        }
+        else
+        {
+            <div class="speaking-framework">
+                <div><span>P</span><strong>Point</strong><small>I prefer / The main idea is…</small></div>
+                <div><span>R</span><strong>Reason</strong><small>because…</small></div>
+                <div><span>E</span><strong>Example</strong><small>For example…</small></div>
+                <div><span>R</span><strong>Result</strong><small>As a result…</small></div>
+            </div>
+        }
         <div class="record-stage @(_recording ? "is-recording" : "")">
             <div class="record-dot"></div>
             <strong>@StatusText</strong>
@@ -94,6 +115,20 @@
                 <span>Organization<strong>@_feedback.Rubric.Organization/20</strong></span>
             </div>
             <p class="small text-secondary">@_feedback.Notice</p>
+            @if (_feedback.Pronunciation is not null)
+            {
+                <h3>Acoustic pronunciation assessment</h3>
+                <div class="rubric-grid acoustic">
+                    <span>Pronunciation<strong>@_feedback.Pronunciation.PronunciationScore.ToString("0.0")</strong></span>
+                    <span>Accuracy<strong>@_feedback.Pronunciation.AccuracyScore.ToString("0.0")</strong></span>
+                    <span>Fluency<strong>@_feedback.Pronunciation.FluencyScore.ToString("0.0")</strong></span>
+                    <span>Completeness<strong>@_feedback.Pronunciation.CompletenessScore.ToString("0.0")</strong></span>
+                    <span>Prosody<strong>@_feedback.Pronunciation.ProsodyScore.ToString("0.0")</strong></span>
+                </div>
+                <p class="small text-secondary">
+                    @_feedback.Pronunciation.Provider — @_feedback.Pronunciation.Notice
+                </p>
+            }
             <h3 class="text-success">จุดที่ทำได้ดี</h3>
             <ul class="small lh-lg">@foreach (var item in _feedback.Strengths) { <li>@item</li> }</ul>
             <h3 class="text-warning">ลองปรับรอบถัดไป</h3>
@@ -112,7 +147,9 @@
 </style>
 
 @code {
-    private const string Prompt = "Explain why a team might use RAG in an AI application.";
+    private const string FreeSpeakingPrompt = "Explain why a team might use RAG in an AI application.";
+    private const string ReferenceText = "Relevant chunks are retrieved, ranked, and sent to the model as grounded context.";
+    private bool _pronunciationMode;
     private bool _recording;
     private bool _hasRecording;
     private bool _consent;
@@ -120,6 +157,9 @@
     private string? _error;
     private RecordingMetadata? _recordingMetadata;
     private SpeakingFeedback? _feedback;
+    private string CurrentPrompt => _pronunciationMode
+        ? "Read the reference sentence aloud as clearly and naturally as you can."
+        : FreeSpeakingPrompt;
 
     private string StatusText => _recording
         ? "กำลังบันทึกเสียง…"
@@ -143,6 +183,20 @@
         {
             _error = "ไม่สามารถใช้ไมโครโฟนได้ กรุณาตรวจสิทธิ์ของ browser";
         }
+    }
+
+    private void SetMode(bool pronunciationMode)
+    {
+        if (_recording || _analyzing)
+        {
+            return;
+        }
+
+        _pronunciationMode = pronunciationMode;
+        _feedback = null;
+        _hasRecording = false;
+        _recordingMetadata = null;
+        _error = null;
     }
 
     private async Task StopAsync()
@@ -181,12 +235,13 @@
                 maxAllowedSize: 10 * 1024 * 1024);
             _feedback = await Speaking.EvaluateAsync(
                 await CurrentUser.GetRequiredUserIdAsync(),
-                Prompt,
+                CurrentPrompt,
                 audioStream,
-                "speaking.webm",
+                "speaking.wav",
                 _recordingMetadata.Type,
                 _recordingMetadata.DurationSeconds,
-                _recordingMetadata.Transcript);
+                _recordingMetadata.Transcript,
+                _pronunciationMode ? ReferenceText : string.Empty);
         }
         catch (Exception)
         {
@@ -209,7 +264,7 @@
     private sealed class RecordingMetadata
     {
         public long Size { get; set; }
-        public string Type { get; set; } = "audio/webm";
+        public string Type { get; set; } = "audio/wav";
         public int DurationSeconds { get; set; }
         public string Transcript { get; set; } = string.Empty;
     }

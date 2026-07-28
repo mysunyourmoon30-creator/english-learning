@@ -32,6 +32,10 @@ public sealed class EnglishMasterWebFactory : WebApplicationFactory<Program>
                 ["DataProtection:KeysPath"] = Path.Combine(_testRoot, "keys"),
                 ["SeedAdmin:Enabled"] = "false",
                 ["AI:Enabled"] = "false",
+                ["AI:InputTokenUsdPerMillion"] = "2",
+                ["AI:OutputTokenUsdPerMillion"] = "4",
+                ["AI:SpeechUsdPerMillionCharacters"] = "10",
+                ["AI:TranscriptionUsdPerMinute"] = "0.01",
                 ["Security:RequireConfirmedAccount"] = "false"
             });
         });

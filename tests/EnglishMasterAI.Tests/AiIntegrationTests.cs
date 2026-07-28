@@ -2,6 +2,9 @@ using System.Net;
 using System.Text.Json.Nodes;
 using EnglishMasterAI.Web.Application;
 using EnglishMasterAI.Web.Configuration;
+using EnglishMasterAI.Web.Data;
+using EnglishMasterAI.Web.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
 
@@ -89,8 +92,25 @@ public sealed class AiIntegrationTests
         Assert.Contains("filename=speaking.webm", handler.RequestBody);
     }
 
-    private static OpenAiGateway CreateGateway(HttpMessageHandler handler) =>
-        new(
+    private static OpenAiGateway CreateGateway(HttpMessageHandler handler)
+    {
+        var dbOptions = new DbContextOptionsBuilder<ApplicationDbContext>()
+            .UseSqlite("Data Source=:memory:")
+            .Options;
+        var db = new ApplicationDbContext(dbOptions);
+        db.Database.OpenConnection();
+        db.Database.EnsureCreated();
+        var usage = new AiUsageService(
+            db,
+            Options.Create(new AiOptions()),
+            NullLogger<AiUsageService>.Instance);
+        var telemetry = new LearningTelemetry();
+        var alerts = new OperationalAlertService(
+            new HttpClient(new RecordingHandler("{}")),
+            Options.Create(new AlertingOptions()),
+            NullLogger<OperationalAlertService>.Instance);
+
+        return new OpenAiGateway(
             new HttpClient(handler),
             Options.Create(new AiOptions
             {
@@ -101,7 +121,11 @@ public sealed class AiIntegrationTests
                 FeedbackModel = "gpt-5.6-luna",
                 TranscriptionModel = "gpt-4o-mini-transcribe"
             }),
+            usage,
+            telemetry,
+            alerts,
             NullLogger<OpenAiGateway>.Instance);
+    }
 
     private sealed class ScoreResult
     {

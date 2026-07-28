@@ -1,0 +1,59 @@
+name: englishmaster
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-englishmaster}
+      POSTGRES_USER: ${POSTGRES_USER:-englishmaster}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change-me-local-only}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-englishmaster} -d ${POSTGRES_DB:-englishmaster}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build:
+      context: .
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "${WEB_PORT:-8080}:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Staging
+      AllowedHosts: ${ALLOWED_HOSTS:-localhost}
+      Database__Provider: PostgreSql
+      Database__ConnectionStringName: PostgreSqlConnection
+      Database__ApplyMigrationsOnStartup: "true"
+      Database__SeedOnStartup: "true"
+      ConnectionStrings__PostgreSqlConnection: Host=postgres;Port=5432;Database=${POSTGRES_DB:-englishmaster};Username=${POSTGRES_USER:-englishmaster};Password=${POSTGRES_PASSWORD:-change-me-local-only}
+      Security__RequireConfirmedAccount: "false"
+      DataProtection__KeysPath: /var/lib/englishmaster/keys
+      AI__ApiKey: ${OPENAI_API_KEY:-}
+      AI__ReferenceAudioCachePath: /var/lib/englishmaster/audio-cache
+      Pronunciation__Enabled: ${PRONUNCIATION_ENABLED:-false}
+      Pronunciation__AzureSpeechKey: ${AZURE_SPEECH_KEY:-}
+      Pronunciation__AzureSpeechRegion: ${AZURE_SPEECH_REGION:-}
+      Observability__OtlpEndpoint: ${OTEL_EXPORTER_OTLP_ENDPOINT:-}
+      Alerting__Enabled: ${ALERTING_ENABLED:-false}
+      Alerting__WebhookUrl: ${ALERT_WEBHOOK_URL:-}
+    volumes:
+      - data-protection:/var/lib/englishmaster/keys
+      - reference-audio:/var/lib/englishmaster/audio-cache
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "http://localhost:8080/health/ready"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+volumes:
+  postgres-data:
+  data-protection:
+  reference-audio:

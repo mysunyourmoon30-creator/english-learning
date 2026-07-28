@@ -43,7 +43,23 @@ public sealed record DashboardData(
     int TotalLessons,
     IReadOnlyList<string> WeakAreas,
     IReadOnlyList<DailyTask> DailyPlan,
-    IReadOnlyList<ModuleProgress> ContinueModules);
+    IReadOnlyList<ModuleProgress> ContinueModules,
+    WeeklyProgress WeeklyProgress,
+    IReadOnlyList<LearnerAchievement> Achievements);
+
+public sealed record WeeklyProgressDay(
+    DateOnly Date,
+    int Minutes,
+    int ActivityCount);
+
+public sealed record WeeklyProgress(
+    int Minutes,
+    int Points,
+    int ActivityCount,
+    int LessonsCompleted,
+    int ReviewsCompleted,
+    int AssessmentsCompleted,
+    IReadOnlyList<WeeklyProgressDay> Days);
 
 public sealed record QuizResult(
     int Score,
@@ -96,6 +112,16 @@ public sealed record SpeakingFeedback(
     IReadOnlyList<string> Suggestions,
     SpeakingRubric Rubric,
     string EvaluationMode,
+    string Notice,
+    PronunciationFeedback? Pronunciation = null);
+
+public sealed record PronunciationFeedback(
+    double PronunciationScore,
+    double AccuracyScore,
+    double FluencyScore,
+    double CompletenessScore,
+    double ProsodyScore,
+    string Provider,
     string Notice);
 
 public sealed record LessonEditInput(

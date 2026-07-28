@@ -4,7 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EnglishMasterAI.Web.Application;
 
-public sealed class ReviewService(ApplicationDbContext db)
+public sealed class ReviewService(
+    ApplicationDbContext db,
+    LearningEngagementService engagement)
 {
     public async Task ScheduleLessonVocabularyAsync(string userId, Guid lessonId)
     {
@@ -58,6 +60,12 @@ public sealed class ReviewService(ApplicationDbContext db)
         schedule.NextReviewAt = update.NextReviewAt;
         schedule.LastReviewedAt = now;
         await db.SaveChangesAsync();
+        await engagement.RecordAsync(
+            userId,
+            "review",
+            $"review:{schedule.Id}:{now.UtcTicks}",
+            2,
+            Math.Clamp(rating, 0, 5) * 5);
         return update;
     }
 }

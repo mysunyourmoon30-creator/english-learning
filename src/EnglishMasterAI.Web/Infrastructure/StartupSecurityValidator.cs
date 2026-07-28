@@ -7,6 +7,7 @@ public sealed class StartupSecurityValidator(
     IWebHostEnvironment environment,
     IConfiguration configuration,
     IOptions<EmailOptions> emailOptions,
+    IOptions<DatabaseOptions> databaseOptions,
     ILogger<StartupSecurityValidator> logger)
 {
     public void Validate()
@@ -35,6 +36,13 @@ public sealed class StartupSecurityValidator(
         {
             throw new InvalidOperationException(
                 "SeedAdmin must be disabled outside Development.");
+        }
+
+        if (!databaseOptions.Value.IsPostgreSql
+            && !databaseOptions.Value.AllowSqliteInProduction)
+        {
+            throw new InvalidOperationException(
+                "Production must use PostgreSQL unless Database:AllowSqliteInProduction is explicitly enabled.");
         }
 
         logger.LogInformation("Production security configuration passed startup validation.");

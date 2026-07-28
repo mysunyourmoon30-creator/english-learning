@@ -1,0 +1,100 @@
+@page "/admin/content-reviews"
+@attribute [Authorize(Roles = "ContentAdmin,Admin")]
+@inject ContentReviewService Reviews
+@inject CurrentUserService CurrentUser
+
+<PageTitle>Content Reviews | EnglishMaster AI</PageTitle>
+
+<div class="page-header">
+    <div>
+        <div class="eyebrow">QUALITY GATE · AI01–AI24</div>
+        <h1>Human reviewer sign-off</h1>
+        <p>แยกการตรวจภาษาและความถูกต้องด้าน AI ก่อนอนุญาตให้ publish เนื้อหา</p>
+    </div>
+</div>
+
+@if (!string.IsNullOrWhiteSpace(_message))
+{
+    <div class="alert @(_isError ? "alert-danger" : "alert-success")">@_message</div>
+}
+
+@if (_assignments is null || _coverage is null)
+{
+    <div class="loading"><div class="spinner"></div></div>
+}
+else
+{
+    <section class="grid-4 mb-4">
+        <div class="surface stat-card"><small>Assignments</small><strong>@_coverage.Total</strong></div>
+        <div class="surface stat-card"><small>Approved</small><strong>@_coverage.Approved</strong></div>
+        <div class="surface stat-card"><small>Pending/In review</small><strong>@_coverage.Pending</strong></div>
+        <div class="surface stat-card"><small>Changes requested</small><strong>@_coverage.ChangesRequested</strong></div>
+    </section>
+
+    <div class="review-grid">
+        @foreach (var assignment in _assignments)
+        {
+            <section class="surface surface-pad">
+                <div class="d-flex justify-content-between gap-2">
+                    <div>
+                        <div class="eyebrow">@assignment.Lesson.Module.Code · @assignment.ReviewerRole</div>
+                        <h3>@assignment.Lesson.Title</h3>
+                    </div>
+                    <span class="tag">@assignment.Status</span>
+                </div>
+                <label class="form-label">สถานะ</label>
+                <select class="form-select" @bind="assignment.Status">
+                    @foreach (var status in Enum.GetValues<ContentReviewStatus>())
+                    {
+                        <option value="@status">@status</option>
+                    }
+                </select>
+                <label class="form-label mt-3">Reviewer notes</label>
+                <textarea class="form-control" rows="3" maxlength="1000"
+                          @bind="assignment.Notes"></textarea>
+                <button class="btn btn-primary mt-3"
+                        @onclick="() => SaveAsync(assignment)">บันทึก sign-off</button>
+            </section>
+        }
+    </div>
+}
+
+<style>
+    .review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+    @@media(max-width:850px){.review-grid{grid-template-columns:1fr}}
+</style>
+
+@code {
+    private List<ContentReviewAssignment>? _assignments;
+    private ContentReviewCoverage? _coverage;
+    private string? _message;
+    private bool _isError;
+
+    protected override Task OnInitializedAsync() => LoadAsync();
+
+    private async Task LoadAsync()
+    {
+        _assignments = (await Reviews.GetAssignmentsAsync()).ToList();
+        _coverage = await Reviews.GetCoverageAsync();
+    }
+
+    private async Task SaveAsync(ContentReviewAssignment assignment)
+    {
+        try
+        {
+            await Reviews.UpdateAsync(
+                assignment.Id,
+                await CurrentUser.GetRequiredUserIdAsync(),
+                assignment.Status,
+                assignment.Notes);
+            _message = "บันทึก reviewer sign-off แล้ว";
+            _isError = false;
+            await LoadAsync();
+        }
+        catch (Exception exception)
+        {
+            _message = exception.Message;
+            _isError = true;
+        }
+    }
+}

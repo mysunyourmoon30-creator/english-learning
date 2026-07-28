@@ -7,7 +7,13 @@ src/EnglishMasterAI.Web/Data/app.db
 src/EnglishMasterAI.Web/Data/app.db-shm
 src/EnglishMasterAI.Web/Data/app.db-wal
 src/EnglishMasterAI.Web/Data/ProtectionKeys/
+src/EnglishMasterAI.Web/Data/AudioCache/
+src/EnglishMasterAI.Web/Data/Backups/
 TestResults/
 .tmp/
+.dotnet/
+.tools/
+coverage/
+artifacts/
 appsettings.Local.json
 appsettings.*.local.json

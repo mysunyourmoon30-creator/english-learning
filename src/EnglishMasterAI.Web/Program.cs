@@ -14,12 +14,22 @@ using EnglishMasterAI.Web.Application;
 using EnglishMasterAI.Web.Api;
 using EnglishMasterAI.Web.Configuration;
 using EnglishMasterAI.Web.Infrastructure;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Logging.ClearProviders();
-builder.Logging.AddConsole();
-builder.Logging.AddDebug();
+if (builder.Environment.IsDevelopment())
+{
+    builder.Logging.AddConsole();
+    builder.Logging.AddDebug();
+}
+else
+{
+    builder.Logging.AddJsonConsole();
+}
 
 builder.Services.Configure<AiOptions>(
     builder.Configuration.GetSection(AiOptions.SectionName));
@@ -27,6 +37,14 @@ builder.Services.Configure<EmailOptions>(
     builder.Configuration.GetSection(EmailOptions.SectionName));
 builder.Services.Configure<SecurityOptions>(
     builder.Configuration.GetSection(SecurityOptions.SectionName));
+builder.Services.Configure<DatabaseOptions>(
+    builder.Configuration.GetSection(DatabaseOptions.SectionName));
+builder.Services.Configure<ObservabilityOptions>(
+    builder.Configuration.GetSection(ObservabilityOptions.SectionName));
+builder.Services.Configure<AlertingOptions>(
+    builder.Configuration.GetSection(AlertingOptions.SectionName));
+builder.Services.Configure<PronunciationOptions>(
+    builder.Configuration.GetSection(PronunciationOptions.SectionName));
 
 // Add services to the container.
 var dataProtectionPath = builder.Configuration["DataProtection:KeysPath"]
@@ -52,9 +70,30 @@ builder.Services.AddAuthentication(options =>
     })
     .AddIdentityCookies();
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+var databaseOptions = builder.Configuration
+    .GetSection(DatabaseOptions.SectionName)
+    .Get<DatabaseOptions>() ?? new DatabaseOptions();
+var connectionString = builder.Configuration.GetConnectionString(
+    databaseOptions.ConnectionStringName)
+    ?? throw new InvalidOperationException(
+        $"Connection string '{databaseOptions.ConnectionStringName}' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(connectionString));
+{
+    if (databaseOptions.IsPostgreSql)
+    {
+        options.UseNpgsql(
+            connectionString,
+            postgres => postgres.MigrationsAssembly(
+                "EnglishMasterAI.Migrations.PostgreSql"));
+    }
+    else
+    {
+        options.UseSqlite(
+            connectionString,
+            sqlite => sqlite.MigrationsAssembly(
+                typeof(Program).Assembly.FullName));
+    }
+});
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 var requireConfirmedAccount = builder.Configuration.GetValue<bool?>(
@@ -122,22 +161,75 @@ else
 
 builder.Services.AddScoped<CurrentUserService>();
 builder.Services.AddScoped<LearningService>();
+builder.Services.AddScoped<LearningEngagementService>();
 builder.Services.AddScoped<AssessmentService>();
 builder.Services.AddScoped<ReviewService>();
 builder.Services.AddScoped<WritingFeedbackService>();
 builder.Services.AddScoped<SpeakingAnalysisService>();
+builder.Services.AddScoped<PronunciationAssessmentService>();
+builder.Services.AddScoped<ReferenceAudioService>();
+builder.Services.AddScoped<AiUsageService>();
 builder.Services.AddScoped<AuditService>();
+builder.Services.AddScoped<ContentReviewService>();
 builder.Services.AddScoped<PersonalDataService>();
+builder.Services.AddScoped<OperationsDashboardService>();
 builder.Services.AddSingleton<AiPracticeLimiter>();
+builder.Services.AddSingleton<LearningTelemetry>();
 builder.Services.AddHttpClient<OpenAiGateway>((services, client) =>
 {
     var ai = services.GetRequiredService<
         Microsoft.Extensions.Options.IOptions<AiOptions>>().Value;
     client.Timeout = TimeSpan.FromSeconds(Math.Clamp(ai.TimeoutSeconds, 10, 120));
 });
+builder.Services.AddHttpClient<OperationalAlertService>();
+builder.Services.AddHostedService<OperationalMonitorService>();
+
+var observability = builder.Configuration
+    .GetSection(ObservabilityOptions.SectionName)
+    .Get<ObservabilityOptions>() ?? new ObservabilityOptions();
+var openTelemetry = builder.Services
+    .AddOpenTelemetry()
+    .ConfigureResource(resource => resource.AddService(
+        observability.ServiceName,
+        serviceVersion: typeof(Program).Assembly.GetName().Version?.ToString()))
+    .WithTracing(tracing =>
+    {
+        tracing
+            .AddSource(LearningTelemetry.ActivitySourceName)
+            .AddAspNetCoreInstrumentation(options =>
+            {
+                options.RecordException = true;
+                options.Filter = context =>
+                    !context.Request.Path.StartsWithSegments("/health/live");
+            })
+            .AddHttpClientInstrumentation(options => options.RecordException = true);
+
+        if (Uri.TryCreate(
+            observability.OtlpEndpoint,
+            UriKind.Absolute,
+            out var endpoint))
+        {
+            tracing.AddOtlpExporter(options => options.Endpoint = endpoint);
+        }
+    })
+    .WithMetrics(metrics =>
+    {
+        metrics
+            .AddMeter(LearningTelemetry.MeterName)
+            .AddAspNetCoreInstrumentation()
+            .AddHttpClientInstrumentation();
+
+        if (Uri.TryCreate(
+            observability.OtlpEndpoint,
+            UriKind.Absolute,
+            out var endpoint))
+        {
+            metrics.AddOtlpExporter(options => options.Endpoint = endpoint);
+        }
+    });
 
 builder.Services.AddHealthChecks()
-    .AddCheck<DatabaseHealthCheck>("database");
+    .AddCheck<DatabaseHealthCheck>("database", tags: ["ready"]);
 builder.Services.AddSingleton<StartupSecurityValidator>();
 
 var securityOptions = builder.Configuration
@@ -219,6 +311,14 @@ app.MapHealthChecks("/healthz", new HealthCheckOptions
             timestamp = DateTimeOffset.UtcNow
         }));
     }
+}).AllowAnonymous();
+app.MapHealthChecks("/health/live", new HealthCheckOptions
+{
+    Predicate = _ => false
+}).AllowAnonymous();
+app.MapHealthChecks("/health/ready", new HealthCheckOptions
+{
+    Predicate = check => check.Tags.Contains("ready")
 }).AllowAnonymous();
 
 await using (var scope = app.Services.CreateAsyncScope())

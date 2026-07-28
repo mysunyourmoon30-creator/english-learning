@@ -54,6 +54,33 @@ public sealed class ProductionReadinessTests(EnglishMasterWebFactory factory)
         Assert.True(first.TryGetProperty("options", out _));
         Assert.False(first.TryGetProperty("correctOptionIndex", out _));
         Assert.False(first.TryGetProperty("explanation", out _));
+        Assert.Equal(JsonValueKind.Null, first.GetProperty("supportingText").ValueKind);
+        Assert.StartsWith(
+            "/api/v1/assessment/toeic/questions/",
+            first.GetProperty("audioUrl").GetString());
+        Assert.All(
+            document.RootElement.EnumerateArray()
+                .Where(x => x.GetProperty("toeicPart").GetInt32() <= 4),
+            question => Assert.Equal(
+                JsonValueKind.Null,
+                question.GetProperty("supportingText").ValueKind));
+    }
+
+    [Fact]
+    public async Task ToeicAudioEndpoint_FailsClosedWhenSpeechProviderIsNotConfigured()
+    {
+        using var client = factory.CreateHttpsClient(authenticated: true);
+        using var questions = await client.GetAsync(
+            "/api/v1/assessment/toeic/mock/questions");
+        using var document = JsonDocument.Parse(
+            await questions.Content.ReadAsStringAsync());
+        var audioUrl = document.RootElement[0]
+            .GetProperty("audioUrl")
+            .GetString();
+
+        using var response = await client.GetAsync(audioUrl);
+
+        Assert.Equal(HttpStatusCode.ServiceUnavailable, response.StatusCode);
     }
 
     [Fact]
@@ -159,6 +186,169 @@ public sealed class ProductionReadinessTests(EnglishMasterWebFactory factory)
         Assert.Equal(previousVersion + 1, updated.Version);
         Assert.Equal(ContentStatus.Draft, updated.Status);
         Assert.Equal("Integration test revision", revision.ChangeSummary);
+    }
+
+    [Fact]
+    public async Task LearningActivity_IsIdempotent_AndUpdatesWeeklyProgressAndAchievements()
+    {
+        await using var scope = factory.Services.CreateAsyncScope();
+        var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        var engagement = scope.ServiceProvider.GetRequiredService<LearningEngagementService>();
+        var userId = $"engagement-{Guid.NewGuid():N}";
+        db.LearnerProfiles.Add(new LearnerProfile
+        {
+            UserId = userId,
+            TimeZoneId = "Asia/Bangkok"
+        });
+        await db.SaveChangesAsync();
+
+        await engagement.RecordAsync(userId, "lesson", "lesson:AI01:attempt:1", 20, 80);
+        await engagement.RecordAsync(userId, "lesson", "lesson:AI01:attempt:1", 20, 80);
+
+        var profile = await db.LearnerProfiles
+            .AsNoTracking()
+            .SingleAsync(x => x.UserId == userId);
+        var activities = await db.LearningActivities
+            .AsNoTracking()
+            .Where(x => x.UserId == userId)
+            .ToListAsync();
+        var achievements = await engagement.GetAchievementsAsync(userId);
+        var weekly = await engagement.GetWeeklyProgressAsync(userId);
+
+        Assert.Single(activities);
+        Assert.Equal(1, profile.CurrentStreak);
+        Assert.Equal(20, weekly.Minutes);
+        Assert.Equal(80, weekly.Points);
+        Assert.Equal(1, weekly.LessonsCompleted);
+        Assert.Contains(achievements, x => x.Code == "first-step");
+        Assert.Contains(achievements, x => x.Code == "lesson-hero");
+    }
+
+    [Fact]
+    public async Task AiUsage_StoresOnlyOperationalMetadata_AndBuildsSummary()
+    {
+        await using var scope = factory.Services.CreateAsyncScope();
+        var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        var usage = scope.ServiceProvider.GetRequiredService<AiUsageService>();
+        var userId = $"usage-{Guid.NewGuid():N}";
+
+        await usage.RecordAsync(
+            userId,
+            "writing",
+            "test-model",
+            "Succeeded",
+            inputUnits: 100,
+            inputTokens: 30,
+            outputTokens: 20,
+            durationMilliseconds: 125,
+            requestId: "request-test");
+
+        var record = await db.AiUsageRecords
+            .AsNoTracking()
+            .SingleAsync(x => x.UserId == userId);
+        var summary = await usage.GetSummaryAsync();
+
+        Assert.Equal("writing", record.Operation);
+        Assert.Equal(30, record.InputTokens);
+        Assert.Equal(20, record.OutputTokens);
+        Assert.True(summary.TotalRequests >= 1);
+        Assert.True(summary.InputTokens >= 30);
+        Assert.True(summary.OutputTokens >= 20);
+        Assert.True(summary.PricingConfigured);
+        Assert.True(summary.EstimatedCostUsd >= 0.00014);
+    }
+
+    [Fact]
+    public async Task AiEnglishPublishing_RequiresBothHumanReviewRoles()
+    {
+        await using var scope = factory.Services.CreateAsyncScope();
+        var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        var audit = scope.ServiceProvider.GetRequiredService<AuditService>();
+        var lesson = await db.Lessons
+            .Include(x => x.Module)
+            .FirstAsync(x => x.Module.Code == "AI24");
+        var assignments = await db.ContentReviewAssignments
+            .Where(x => x.LessonId == lesson.Id)
+            .ToListAsync();
+        var originalLessonStatus = lesson.Status;
+        var originalReviewStates = assignments
+            .Select(x => (x.Id, x.Status, x.ReviewerUserId, x.ReviewedAt))
+            .ToDictionary(x => x.Id);
+
+        try
+        {
+            Assert.Equal(2, assignments.Count);
+            lesson.Status = ContentStatus.Approved;
+            foreach (var assignment in assignments)
+            {
+                assignment.Status = ContentReviewStatus.Pending;
+                assignment.ReviewerUserId = null;
+                assignment.ReviewedAt = null;
+            }
+            await db.SaveChangesAsync();
+
+            var rejection = await Assert.ThrowsAsync<InvalidOperationException>(
+                () => audit.ChangeContentStatusAsync(
+                    lesson.Id,
+                    ContentStatus.Published,
+                    "quality-gate-test"));
+            Assert.Contains("require approved", rejection.Message);
+
+            foreach (var assignment in assignments)
+            {
+                assignment.Status = ContentReviewStatus.Approved;
+                assignment.ReviewerUserId = "human-reviewer";
+                assignment.ReviewedAt = DateTimeOffset.UtcNow;
+            }
+            await db.SaveChangesAsync();
+
+            await audit.ChangeContentStatusAsync(
+                lesson.Id,
+                ContentStatus.Published,
+                "quality-gate-test");
+
+            Assert.Equal(
+                ContentStatus.Published,
+                (await db.Lessons.FindAsync(lesson.Id))!.Status);
+        }
+        finally
+        {
+            lesson.Status = originalLessonStatus;
+            foreach (var assignment in assignments)
+            {
+                var original = originalReviewStates[assignment.Id];
+                assignment.Status = original.Status;
+                assignment.ReviewerUserId = original.ReviewerUserId;
+                assignment.ReviewedAt = original.ReviewedAt;
+            }
+            await db.SaveChangesAsync();
+        }
+    }
+
+    [Fact]
+    public async Task AiLessons_HaveLanguageAndSubjectMatterReviewAssignments()
+    {
+        await using var scope = factory.Services.CreateAsyncScope();
+        var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        var assignments = await db.ContentReviewAssignments
+            .AsNoTracking()
+            .Include(x => x.Lesson)
+            .ThenInclude(x => x.Module)
+            .Where(x => x.Lesson.Module.Category == LearningCategory.AiEnglish)
+            .ToListAsync();
+
+        Assert.Equal(48, assignments.Count);
+        Assert.Equal(
+            24,
+            assignments.Select(x => x.LessonId).Distinct().Count());
+        Assert.All(
+            assignments.GroupBy(x => x.LessonId),
+            group =>
+            {
+                Assert.Equal(2, group.Count());
+                Assert.Contains(group, x => x.ReviewerRole == "English Reviewer");
+                Assert.Contains(group, x => x.ReviewerRole == "AI Subject Matter Expert");
+            });
     }
 
     [Fact]

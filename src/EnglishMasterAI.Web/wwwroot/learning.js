@@ -12,8 +12,12 @@ window.englishMaster = {
         window.speechSynthesis.speak(utterance);
     },
 
-    recorder: null,
-    chunks: [],
+    audioContext: null,
+    sourceNode: null,
+    processorNode: null,
+    silentGain: null,
+    pcmChunks: [],
+    sampleRate: 0,
     stream: null,
     lastBlob: null,
     recognition: null,
@@ -21,19 +25,27 @@ window.englishMaster = {
     recordingStartedAt: 0,
 
     async startRecording() {
-        if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!navigator.mediaDevices?.getUserMedia || !AudioContext) {
             throw new Error("Audio recording is not supported by this browser.");
         }
         this.stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        this.chunks = [];
+        this.pcmChunks = [];
         this.lastBlob = null;
         this.transcript = "";
         this.recordingStartedAt = Date.now();
-        this.recorder = new MediaRecorder(this.stream);
-        this.recorder.ondataavailable = event => {
-            if (event.data.size > 0) this.chunks.push(event.data);
+        this.audioContext = new AudioContext();
+        this.sampleRate = this.audioContext.sampleRate;
+        this.sourceNode = this.audioContext.createMediaStreamSource(this.stream);
+        this.processorNode = this.audioContext.createScriptProcessor(4096, 1, 1);
+        this.silentGain = this.audioContext.createGain();
+        this.silentGain.gain.value = 0;
+        this.processorNode.onaudioprocess = event => {
+            this.pcmChunks.push(new Float32Array(event.inputBuffer.getChannelData(0)));
         };
-        this.recorder.start();
+        this.sourceNode.connect(this.processorNode);
+        this.processorNode.connect(this.silentGain);
+        this.silentGain.connect(this.audioContext.destination);
 
         const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
         if (Recognition) {
@@ -59,40 +71,82 @@ window.englishMaster = {
     },
 
     async stopRecording(audioElementId) {
-        if (!this.recorder) {
-            return { size: 0, type: "audio/webm", durationSeconds: 0, transcript: "" };
+        if (!this.audioContext) {
+            return { size: 0, type: "audio/wav", durationSeconds: 0, transcript: "" };
         }
-        const recorder = this.recorder;
-        return new Promise(resolve => {
-            recorder.onstop = () => {
-                const blob = new Blob(this.chunks, { type: recorder.mimeType || "audio/webm" });
-                this.lastBlob = blob;
-                const audio = document.getElementById(audioElementId);
-                if (audio) {
-                    if (audio.dataset.objectUrl) URL.revokeObjectURL(audio.dataset.objectUrl);
-                    const url = URL.createObjectURL(blob);
-                    audio.src = url;
-                    audio.dataset.objectUrl = url;
-                    audio.hidden = false;
-                }
-                this.stream?.getTracks().forEach(track => track.stop());
-                try { this.recognition?.stop(); } catch { }
-                this.recognition = null;
-                this.recorder = null;
-                this.stream = null;
-                resolve({
-                    size: blob.size,
-                    type: blob.type || "audio/webm",
-                    durationSeconds: Math.max(1, Math.round((Date.now() - this.recordingStartedAt) / 1000)),
-                    transcript: this.transcript.trim()
-                });
-            };
-            recorder.stop();
-        });
+        this.stream?.getTracks().forEach(track => track.stop());
+        try { this.recognition?.stop(); } catch { }
+        this.sourceNode?.disconnect();
+        this.processorNode?.disconnect();
+        this.silentGain?.disconnect();
+        await this.audioContext.close();
+
+        const blob = this.encodeWav(this.pcmChunks, this.sampleRate);
+        this.lastBlob = blob;
+        const audio = document.getElementById(audioElementId);
+        if (audio) {
+            if (audio.dataset.objectUrl) URL.revokeObjectURL(audio.dataset.objectUrl);
+            const url = URL.createObjectURL(blob);
+            audio.src = url;
+            audio.dataset.objectUrl = url;
+            audio.hidden = false;
+        }
+
+        this.recognition = null;
+        this.audioContext = null;
+        this.sourceNode = null;
+        this.processorNode = null;
+        this.silentGain = null;
+        this.stream = null;
+        this.pcmChunks = [];
+        return {
+            size: blob.size,
+            type: "audio/wav",
+            durationSeconds: Math.max(1, Math.round((Date.now() - this.recordingStartedAt) / 1000)),
+            transcript: this.transcript.trim()
+        };
     },
 
     getRecordingBlob() {
         if (!this.lastBlob) throw new Error("No recording is available.");
         return this.lastBlob;
+    },
+
+    encodeWav(chunks, sampleRate) {
+        const sampleCount = chunks.reduce((total, chunk) => total + chunk.length, 0);
+        const buffer = new ArrayBuffer(44 + sampleCount * 2);
+        const view = new DataView(buffer);
+        const writeAscii = (offset, value) => {
+            for (let index = 0; index < value.length; index++) {
+                view.setUint8(offset + index, value.charCodeAt(index));
+            }
+        };
+
+        writeAscii(0, "RIFF");
+        view.setUint32(4, 36 + sampleCount * 2, true);
+        writeAscii(8, "WAVE");
+        writeAscii(12, "fmt ");
+        view.setUint32(16, 16, true);
+        view.setUint16(20, 1, true);
+        view.setUint16(22, 1, true);
+        view.setUint32(24, sampleRate, true);
+        view.setUint32(28, sampleRate * 2, true);
+        view.setUint16(32, 2, true);
+        view.setUint16(34, 16, true);
+        writeAscii(36, "data");
+        view.setUint32(40, sampleCount * 2, true);
+
+        let offset = 44;
+        for (const chunk of chunks) {
+            for (let index = 0; index < chunk.length; index++) {
+                const sample = Math.max(-1, Math.min(1, chunk[index]));
+                view.setInt16(
+                    offset,
+                    sample < 0 ? sample * 0x8000 : sample * 0x7fff,
+                    true);
+                offset += 2;
+            }
+        }
+        return new Blob([view], { type: "audio/wav" });
     }
 };

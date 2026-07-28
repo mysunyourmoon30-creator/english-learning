@@ -44,6 +44,14 @@ public enum AuditSeverity
     Critical
 }
 
+public enum ContentReviewStatus
+{
+    Pending,
+    InReview,
+    Approved,
+    ChangesRequested
+}
+
 public class LearnerProfile
 {
     public Guid Id { get; set; } = Guid.NewGuid();
@@ -58,6 +66,7 @@ public class LearnerProfile
     public bool PlacementCompleted { get; set; }
     public int CurrentStreak { get; set; }
     public DateOnly? LastLearningDate { get; set; }
+    [MaxLength(80)] public string TimeZoneId { get; set; } = "Asia/Bangkok";
     public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
     public DateTimeOffset UpdatedAt { get; set; } = DateTimeOffset.UtcNow;
 }
@@ -196,7 +205,63 @@ public class SpeakingSubmission
     public int Score { get; set; }
     [MaxLength(40)] public required string EvaluationMode { get; set; }
     public required string FeedbackJson { get; set; }
+    public double? PronunciationScore { get; set; }
+    public double? AccuracyScore { get; set; }
+    public double? CompletenessScore { get; set; }
+    public double? ProsodyScore { get; set; }
+    [MaxLength(40)] public string? PronunciationProvider { get; set; }
     public DateTimeOffset SubmittedAt { get; set; } = DateTimeOffset.UtcNow;
+}
+
+public class LearningActivity
+{
+    public Guid Id { get; set; } = Guid.NewGuid();
+    [MaxLength(450)] public required string UserId { get; set; }
+    [MaxLength(60)] public required string Kind { get; set; }
+    [MaxLength(160)] public required string DeduplicationKey { get; set; }
+    public int Minutes { get; set; }
+    public int Points { get; set; }
+    public DateTimeOffset OccurredAt { get; set; } = DateTimeOffset.UtcNow;
+}
+
+public class LearnerAchievement
+{
+    public Guid Id { get; set; } = Guid.NewGuid();
+    [MaxLength(450)] public required string UserId { get; set; }
+    [MaxLength(60)] public required string Code { get; set; }
+    [MaxLength(120)] public required string Title { get; set; }
+    [MaxLength(300)] public required string Description { get; set; }
+    public DateTimeOffset EarnedAt { get; set; } = DateTimeOffset.UtcNow;
+}
+
+public class AiUsageRecord
+{
+    public Guid Id { get; set; } = Guid.NewGuid();
+    [MaxLength(450)] public required string UserId { get; set; }
+    [MaxLength(40)] public required string Operation { get; set; }
+    [MaxLength(40)] public required string Provider { get; set; }
+    [MaxLength(80)] public required string Model { get; set; }
+    [MaxLength(20)] public required string Status { get; set; }
+    public int InputUnits { get; set; }
+    public int InputTokens { get; set; }
+    public int OutputTokens { get; set; }
+    public int DurationMilliseconds { get; set; }
+    [MaxLength(100)] public string? RequestId { get; set; }
+    [MaxLength(120)] public string? FailureType { get; set; }
+    public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
+}
+
+public class ContentReviewAssignment
+{
+    public Guid Id { get; set; } = Guid.NewGuid();
+    public Guid LessonId { get; set; }
+    public Lesson Lesson { get; set; } = null!;
+    [MaxLength(450)] public string? ReviewerUserId { get; set; }
+    [MaxLength(80)] public required string ReviewerRole { get; set; }
+    public ContentReviewStatus Status { get; set; } = ContentReviewStatus.Pending;
+    [MaxLength(1000)] public string Notes { get; set; } = string.Empty;
+    public DateTimeOffset AssignedAt { get; set; } = DateTimeOffset.UtcNow;
+    public DateTimeOffset? ReviewedAt { get; set; }
 }
 
 public class ContentRevision

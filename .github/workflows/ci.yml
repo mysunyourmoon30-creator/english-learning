@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+          cache: true
+          cache-dependency-path: |
+            **/*.csproj
+            .config/dotnet-tools.json
+
+      - name: Restore
+        run: dotnet restore EnglishMasterAI.sln
+
+      - name: Verify formatting
+        run: dotnet format EnglishMasterAI.sln --verify-no-changes --no-restore
+
+      - name: Build
+        run: dotnet build EnglishMasterAI.sln --configuration Release --no-restore
+
+      - name: Test with coverage
+        run: >
+          dotnet test EnglishMasterAI.sln
+          --configuration Release
+          --no-build
+          --settings coverlet.runsettings
+          --collect:"XPlat Code Coverage"
+          --logger "trx;LogFileName=tests.trx"
+          --results-directory artifacts/test-results
+
+      - name: Scan NuGet dependencies
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force artifacts | Out-Null
+          $scan = dotnet list EnglishMasterAI.sln package --vulnerable --include-transitive 2>&1 | Out-String
+          $scan | Tee-Object -FilePath artifacts/nuget-vulnerabilities.txt
+          if ($LASTEXITCODE -ne 0) {
+            throw "NuGet vulnerability scan failed to execute."
+          }
+          if ($scan -match "has the following vulnerable packages") {
+            throw "A vulnerable NuGet package was detected."
+          }
+
+      - name: Build container
+        run: docker build --tag englishmaster-ai:ci .
+
+      - name: Upload test and security reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-reports
+          path: |
+            artifacts/test-results
+            artifacts/nuget-vulnerabilities.txt
+          if-no-files-found: warn

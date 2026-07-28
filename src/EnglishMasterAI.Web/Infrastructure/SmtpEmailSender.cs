@@ -1,5 +1,6 @@
 using System.Net;
 using System.Net.Mail;
+using System.Security.Authentication;
 using EnglishMasterAI.Web.Configuration;
 using EnglishMasterAI.Web.Data;
 using Microsoft.AspNetCore.Identity;
@@ -8,7 +9,10 @@ using Microsoft.Extensions.Options;
 
 namespace EnglishMasterAI.Web.Infrastructure;
 
-public sealed class SmtpEmailSender(IOptions<EmailOptions> options) : IEmailSender<ApplicationUser>
+public sealed class SmtpEmailSender(
+    IOptions<EmailOptions> options,
+    OperationalAlertService alerts,
+    ILogger<SmtpEmailSender> logger) : IEmailSender<ApplicationUser>
 {
     private readonly EmailOptions _options = options.Value;
 
@@ -34,6 +38,10 @@ public sealed class SmtpEmailSender(IOptions<EmailOptions> options) : IEmailSend
     {
         if (!_options.IsConfigured)
         {
+            await alerts.TrySendAsync(
+                "smtp-not-configured",
+                "SMTP delivery is not configured",
+                "An email delivery was requested without complete SMTP settings.");
             throw new InvalidOperationException("SMTP email delivery is not configured.");
         }
 
@@ -55,6 +63,24 @@ public sealed class SmtpEmailSender(IOptions<EmailOptions> options) : IEmailSend
             client.Credentials = new NetworkCredential(_options.Username, _options.Password);
         }
 
-        await client.SendMailAsync(message);
+        try
+        {
+            await client.SendMailAsync(message);
+        }
+        catch (Exception exception) when (
+            exception is SmtpException
+            or InvalidOperationException
+            or AuthenticationException)
+        {
+            logger.LogError(
+                exception,
+                "SMTP delivery failed for message type {EmailSubject}.",
+                subject);
+            await alerts.TrySendAsync(
+                "smtp-delivery-failed",
+                "SMTP email delivery failed",
+                exception.GetType().Name);
+            throw;
+        }
     }
 }

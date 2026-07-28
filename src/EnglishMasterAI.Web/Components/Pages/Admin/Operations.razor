@@ -1,0 +1,97 @@
+@page "/admin/operations"
+@attribute [Authorize(Roles = "ContentAdmin,Admin")]
+@inject OperationsDashboardService OperationsService
+
+<PageTitle>Operations | EnglishMaster AI</PageTitle>
+
+<div class="page-header">
+    <div>
+        <div class="eyebrow">OPERATIONS · LAST 30 DAYS</div>
+        <h1>Service & AI usage dashboard</h1>
+        <p>แสดงเฉพาะ metadata การใช้งาน ไม่แสดง prompt, transcript หรือไฟล์เสียง</p>
+    </div>
+</div>
+
+@if (_data is null)
+{
+    <div class="loading"><div class="spinner"></div></div>
+}
+else
+{
+    <section class="grid-4">
+        <div class="surface stat-card">
+            <small>Database</small>
+            <strong>@(_data.DatabaseHealthy ? "Healthy" : "Failed")</strong>
+            <span>@_data.DatabaseProvider</span>
+        </div>
+        <div class="surface stat-card">
+            <small>AI Provider</small>
+            <strong>@(_data.AiConfigured ? "Ready" : "Fallback")</strong>
+            <span>OpenAI</span>
+        </div>
+        <div class="surface stat-card">
+            <small>Pronunciation</small>
+            <strong>@(_data.PronunciationConfigured ? "Ready" : "Disabled")</strong>
+            <span>Azure Speech</span>
+        </div>
+        <div class="surface stat-card">
+            <small>Telemetry / Alerts</small>
+            <strong>@(_data.OtlpConfigured ? "OTLP" : "Local")</strong>
+            <span>Alerts @(_data.AlertingConfigured ? "on" : "off")</span>
+        </div>
+    </section>
+
+    <section class="grid-4 mt-4">
+        <div class="surface stat-card"><small>AI records</small><strong>@_data.Ai.TotalRequests</strong></div>
+        <div class="surface stat-card"><small>Succeeded</small><strong>@_data.Ai.Succeeded</strong></div>
+        <div class="surface stat-card"><small>Failed / fallback</small><strong>@_data.Ai.Failed / @_data.Ai.Fallbacks</strong></div>
+        <div class="surface stat-card">
+            <small>Estimated AI cost</small>
+            <strong>$@_data.Ai.EstimatedCostUsd.ToString("0.000000")</strong>
+            <span>
+                @_data.Ai.AverageDurationMilliseconds ms avg ·
+                @(_data.Ai.PricingConfigured ? "configured rates" : "set AI pricing rates")
+            </span>
+        </div>
+    </section>
+
+    <section class="surface surface-pad mt-4">
+        <div class="d-flex justify-content-between gap-3">
+            <div>
+                <div class="eyebrow">TOKEN USAGE</div>
+                <h2>@_data.Ai.InputTokens input · @_data.Ai.OutputTokens output</h2>
+            </div>
+            <button class="btn btn-outline-primary" @onclick="LoadAsync">Refresh</button>
+        </div>
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <thead><tr><th>Operation</th><th>Model</th><th>Requests</th><th>Failed</th><th>Fallback</th><th>Tokens</th><th>Est. cost</th></tr></thead>
+                <tbody>
+                @foreach (var item in _data.Ai.Operations)
+                {
+                    <tr>
+                        <td>@item.Operation</td>
+                        <td><code>@item.Model</code></td>
+                        <td>@item.Requests</td>
+                        <td>@item.Failed</td>
+                        <td>@item.Fallbacks</td>
+                        <td>@item.InputTokens / @item.OutputTokens</td>
+                        <td>$@item.EstimatedCostUsd.ToString("0.000000")</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </section>
+}
+
+@code {
+    private OperationsDashboard? _data;
+
+    protected override Task OnInitializedAsync() => LoadAsync();
+
+    private async Task LoadAsync()
+    {
+        _data = await OperationsService.GetAsync();
+    }
+}

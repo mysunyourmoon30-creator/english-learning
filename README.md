@@ -1,119 +1,145 @@
 # EnglishMaster AI
 
-ระบบเรียนภาษาอังกฤษสำหรับ AI Engineer ตามแผนในโฟลเดอร์ `roadmap` สร้างด้วย .NET 9 Blazor Web App, ASP.NET Core Identity, EF Core และ SQLite
+ระบบเรียนภาษาอังกฤษสำหรับ AI Engineer สร้างด้วย .NET 10 LTS, Blazor Web App,
+ASP.NET Core Identity และ EF Core รองรับ SQLite สำหรับ development และ PostgreSQL
+สำหรับ staging/production
 
-## ความสามารถปัจจุบัน
+## ความสามารถหลัก
 
-- Onboarding, Placement Test และ Personalized Roadmap
-- English Core E01–E17 พร้อม Lesson Player, Quiz และ Progress
-- AI English AI01–AI24 พร้อม Reading, Listening, Speaking และ Writing prompt
-- Vocabulary Review แบบ spaced repetition
-- Listening/Shadowing และ browser speech synthesis
-- Speaking Recording, transcription และ rubric feedback
-- Writing Feedback แบบ structured AI พร้อม local fallback ที่อธิบายกฎได้
-- TOEIC Quick Diagnostic Parts 1–7
-- TOEIC Practice Simulation 200 ข้อ จับเวลา 120 นาที
-- Lesson Editor, Content Revision, Audit Workflow และ Rollback
-- REST API ภายใต้ `/api/v1` โดยไม่ส่งเฉลยก่อน submit
-- Rate limiting, security headers, health checks และ Problem Details
-- ดาวน์โหลดหรือลบข้อมูลการเรียนส่วนบุคคลได้จากหน้า Account
+- หลักสูตร English Core E01–E17 และ AI English AI01–AI24
+- Placement Test, personalized roadmap และ TOEIC Parts 1–7/Mock 200 ข้อ
+- TOEIC Listening Parts 1–4 เล่นเสียงโดยไม่เปิด transcript ก่อนตอบ
+- Listening/Shadowing พร้อม reference audio ที่สร้างและแคชจาก TTS
+- Speaking recording เป็น PCM WAV และ acoustic pronunciation assessment ผ่าน Azure Speech
+- Writing/Speaking feedback แบบ structured AI พร้อม transparent local fallback
+- Vocabulary spaced repetition, achievement, timezone-aware streak และ weekly progress
+- Content revision/audit และ reviewer sign-off สองบทบาทสำหรับ AI01–AI24
+- Structured logging, OpenTelemetry, health checks, alert webhook และ operations dashboard
+- REST API ภายใต้ `/api/v1` พร้อม authentication และ rate limiting
 
-## เริ่มระบบ
+เสียงจาก TTS จะแสดงข้อความกำกับว่าเป็นเสียงที่สร้างโดย AI ระบบไม่อ้างคะแนน
+pronunciation จาก transcript และไม่เก็บ raw learner audio โดยค่าเริ่มต้น
 
-เปิด PowerShell ที่โฟลเดอร์โครงการ:
+## เริ่มระบบในเครื่อง
+
+ต้องใช้ .NET SDK 10 ตาม `global.json`
 
 ```powershell
 Set-Location -LiteralPath 'D:\Project\C#\english-learning'
+.\run.ps1
+```
+
+`run.ps1` จะใช้ `.dotnet\dotnet.exe` หากมี SDK แบบ local ในโครงการ ไม่เช่นนั้นจะใช้
+`dotnet` จาก PATH
+
+รันด้วยคำสั่งตรง:
+
+```powershell
 dotnet restore '.\EnglishMasterAI.sln'
 dotnet run --project '.\src\EnglishMasterAI.Web\EnglishMasterAI.Web.csproj'
 ```
 
-เปิด URL ที่แสดงหลัง `Now listening on:` แล้วสมัคร learner account ได้ทันทีใน Development
+SQLite migrations และ seed data จะทำงานเมื่อแอปเริ่ม โดยฐานข้อมูล development อยู่ที่
+`src/EnglishMasterAI.Web/Data/app.db`
 
-Migration และข้อมูลหลักสูตรที่ขาดจะถูก apply/seed โดยอัตโนมัติเมื่อแอปเริ่มทำงาน ข้อมูลและ progress เดิมจะไม่ถูกลบ
+## ตั้งค่า AI และ pronunciation
+
+เก็บ credentials ใน User Secrets หรือ secret manager เท่านั้น:
+
+```powershell
+dotnet user-secrets set --project '.\src\EnglishMasterAI.Web\EnglishMasterAI.Web.csproj' 'AI:ApiKey' '<openai-api-key>'
+dotnet user-secrets set --project '.\src\EnglishMasterAI.Web\EnglishMasterAI.Web.csproj' 'Pronunciation:Enabled' 'true'
+dotnet user-secrets set --project '.\src\EnglishMasterAI.Web\EnglishMasterAI.Web.csproj' 'Pronunciation:AzureSpeechKey' '<azure-speech-key>'
+dotnet user-secrets set --project '.\src\EnglishMasterAI.Web\EnglishMasterAI.Web.csproj' 'Pronunciation:AzureSpeechRegion' '<azure-region>'
+```
+
+เมื่อไม่มี API key:
+
+- Writing/Speaking ใช้ local rubric ที่อธิบายข้อจำกัดชัดเจน
+- Listening ใช้เสียงสังเคราะห์ของ browser
+- ระบบไม่สร้าง acoustic pronunciation score ปลอม
 
 ## Development admin
 
-รหัส admin ไม่ถูกเก็บใน repository แล้ว สำหรับฐานข้อมูลใหม่ให้ตั้งค่าผ่าน .NET User Secrets:
+สร้าง admin เฉพาะ Development ผ่าน User Secrets:
 
 ```powershell
 dotnet user-secrets set --project '.\src\EnglishMasterAI.Web\EnglishMasterAI.Web.csproj' 'SeedAdmin:Enabled' 'true'
 dotnet user-secrets set --project '.\src\EnglishMasterAI.Web\EnglishMasterAI.Web.csproj' 'SeedAdmin:Email' 'admin@localhost'
-dotnet user-secrets set --project '.\src\EnglishMasterAI.Web\EnglishMasterAI.Web.csproj' 'SeedAdmin:Password' '<choose-a-strong-password>'
+dotnet user-secrets set --project '.\src\EnglishMasterAI.Web\EnglishMasterAI.Web.csproj' 'SeedAdmin:Password' '<strong-password>'
 ```
 
-Password ต้องมีอย่างน้อย 12 ตัวอักษร และประกอบด้วยตัวพิมพ์ใหญ่ ตัวพิมพ์เล็ก ตัวเลข และอักขระพิเศษ
+Production validator จะปฏิเสธ `SeedAdmin`, wildcard `AllowedHosts`, SQLite โดยไม่ได้
+explicit override และการบังคับยืนยันอีเมลที่ไม่มี SMTP
 
-หากอัปเกรดจาก MVP รุ่นก่อน บัญชี admin ที่อยู่ในฐานข้อมูลเดิมยังใช้งานได้ตามเดิม
+## PostgreSQL และ migrations
 
-## เปิด AI Writing และ Speaking
-
-ระบบทำงานได้โดยไม่มี API key:
-
-- Writing ใช้ transparent local rules
-- Speaking ใช้ browser transcript บน Chrome/Edge และ local rubric
-
-หากต้องการ server transcription และ structured AI feedback ให้ตั้ง OpenAI API key ผ่าน User Secrets:
+SQLite migrations อยู่ใน Web project ส่วน PostgreSQL migrations แยกอยู่ใน
+`EnglishMasterAI.Migrations.PostgreSql`
 
 ```powershell
-dotnet user-secrets set --project '.\src\EnglishMasterAI.Web\EnglishMasterAI.Web.csproj' 'AI:ApiKey' '<your-api-key>'
+$env:POSTGRES_CONNECTION_STRING = 'Host=localhost;Port=5432;Database=englishmaster;Username=englishmaster;Password=<password>'
+dotnet tool restore
+dotnet ef database update `
+  --project '.\src\EnglishMasterAI.Migrations.PostgreSql\EnglishMasterAI.Migrations.PostgreSql.csproj' `
+  --startup-project '.\src\EnglishMasterAI.Migrations.PostgreSql\EnglishMasterAI.Migrations.PostgreSql.csproj' `
+  --context ApplicationDbContext `
+  --configuration Release
 ```
 
-หรือใช้ environment variable:
+## Docker และ staging
+
+คัดลอก `.env.example` เป็น `.env`, เปลี่ยน credentials แล้วรัน:
 
 ```powershell
-$env:AI__ApiKey = '<your-api-key>'
+docker compose --env-file '.\.env' up --build -d
+docker compose ps
 ```
 
-ค่าตั้งต้นใช้:
+Staging template และ release runbook อยู่ใน `deploy/staging` และ `deploy/README.md`
+container ทำงานด้วย non-root user และมี liveness/readiness health checks
 
-- Feedback: `gpt-5.6-luna`
-- Transcription: `gpt-4o-mini-transcribe`
-- ไม่เก็บ response ที่ผู้ให้บริการด้วย `store: false`
-- จำกัด AI practice ต่อผู้ใช้ตาม `Security:AiRequestsPerMinute`
-
-สามารถเปลี่ยน model ผ่าน `AI__FeedbackModel` และ `AI__TranscriptionModel`
-
-## Production configuration
-
-ดูตัวอย่างใน `appsettings.Production.example.json` และส่งค่าลับผ่าน environment variables หรือ secret manager เท่านั้น
-
-ค่าที่จำเป็นสำหรับ Production:
-
-- กำหนด `AllowedHosts` เป็น hostname จริง ห้ามใช้ `*`
-- ตั้ง SMTP และ `Email__Enabled=true` เพื่อยืนยันอีเมลและ reset password
-- ตั้ง `DataProtection__KeysPath` เป็น persistent/shared storage
-- ใช้ HTTPS ที่ reverse proxy หรือ host
-- ปิด `SeedAdmin`
-- สำรองฐานข้อมูลก่อน deploy migration
-
-SQLite เหมาะกับ local และ single-instance deployment หากต้องรองรับหลาย instance หรือปริมาณเขียนสูง ควรย้ายไป PostgreSQL/SQL Server พร้อมสร้าง provider-specific migrations และ shared Data Protection keys ก่อนเปิด production
-
-## ทดสอบ
+สำรองและทดสอบ restore:
 
 ```powershell
-dotnet test '.\EnglishMasterAI.sln' --configuration Release
+.\scripts\Backup-Postgres.ps1
+.\scripts\Verify-PostgresBackup.ps1
 ```
 
-ชุดทดสอบครอบคลุม scorer, SRS, API contract, authentication, security headers, health check, migration/seed, TOEIC 200 ข้อ, AI fallback, speaking privacy behavior และ content revision
+`Restore-Postgres.ps1` ต้องระบุ `-ConfirmRestore` และปฏิเสธชื่อฐานข้อมูล production
+ที่กำหนดไว้ เพื่อป้องกันการเขียนทับโดยไม่ได้ตั้งใจ
 
-## Health และ API
+## ตรวจคุณภาพ
 
-- `GET /healthz` — ตรวจ application และ database
-- `GET /api/v1/health` — lightweight service status
-- `GET /api/v1/catalog/modules`
-- `GET /api/v1/assessment/placement/questions`
-- `POST /api/v1/assessment/placement/submit`
-- `GET /api/v1/assessment/toeic/questions`
-- `POST /api/v1/assessment/toeic/submit`
-- `GET /api/v1/assessment/toeic/mock/questions`
-- `POST /api/v1/assessment/toeic/mock/submit`
+```powershell
+dotnet format '.\EnglishMasterAI.sln' --verify-no-changes --no-restore
+dotnet build '.\EnglishMasterAI.sln' --configuration Release
+dotnet test '.\EnglishMasterAI.sln' --configuration Release --settings '.\coverlet.runsettings' --collect:'XPlat Code Coverage'
+dotnet list '.\EnglishMasterAI.sln' package --vulnerable --include-transitive
+```
 
-ทุก API ยกเว้น health ต้องผ่าน authentication และ rate limit
+GitHub Actions รัน format, build, tests, coverage, vulnerability scan, Docker build,
+PostgreSQL migration/backup-restore test และ CodeQL ทุก push/PR ส่วน Dependabot ตรวจ
+NuGet, Actions และ Docker ทุกสัปดาห์
 
-## ข้อจำกัดที่ระบุไว้ชัดเจน
+## Health และ operations
 
-- TOEIC Listening ใน Practice Simulation ใช้ transcript จำลอง ยังไม่ใช่ชุดเสียงสอบจริง
-- Speaking rubric ไม่เดาคะแนน pronunciation จาก transcript
-- AI feedback เป็นผู้ช่วยตรวจเบื้องต้น ผู้เรียนควรทบทวนคำแนะนำก่อนนำไปใช้
-- เนื้อหา AI01–AI24 เป็นบทเรียนเริ่มต้นที่พร้อมขยายผ่าน Content Studio ไม่ใช่หลักสูตรเชิงลึกเต็มบททุก module
+- `GET /health/live` — process liveness
+- `GET /health/ready` — database readiness
+- `GET /healthz` — รายละเอียด health แบบ JSON
+- `/admin/operations` — AI usage/failure/fallback และสถานะ integration
+- `/admin/content-reviews` — reviewer workflow สำหรับ AI01–AI24
+
+ตั้ง `Observability__OtlpEndpoint` เพื่อส่ง traces/metrics ไป OTLP collector และตั้ง
+`Alerting__WebhookUrl` เป็น HTTPS endpoint เพื่อรับ AI/database/SMTP failure alerts
+ตั้ง rate ล่าสุดจากผู้ให้บริการใน `AI__InputTokenUsdPerMillion`,
+`AI__OutputTokenUsdPerMillion`, `AI__SpeechUsdPerMillionCharacters` และ
+`AI__TranscriptionUsdPerMinute` เพื่อให้ dashboard คำนวณค่าใช้จ่ายประมาณการ
+
+## สถานะ production
+
+โค้ดและ automation พร้อมสำหรับ staging แต่ก่อน production จริงยังต้องจัดหา
+PostgreSQL host, SMTP, OpenAI/Azure Speech keys, OTLP backend, alert webhook,
+HTTPS ingress และให้ผู้เชี่ยวชาญภาษากับ AI ตรวจและกดอนุมัติบทเรียน AI01–AI24
+
+ดูแผนและเกณฑ์ส่งมอบทั้งหมดใน `docs/PRODUCTION_ROADMAP.md`

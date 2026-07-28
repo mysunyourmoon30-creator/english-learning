@@ -5,7 +5,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EnglishMasterAI.Web.Application;
 
-public sealed class LearningService(ApplicationDbContext db, ReviewService reviewService)
+public sealed class LearningService(
+    ApplicationDbContext db,
+    ReviewService reviewService,
+    LearningEngagementService engagement)
 {
     public async Task<LearnerProfile> GetOrCreateProfileAsync(string userId, string? email = null)
     {
@@ -123,6 +126,8 @@ public sealed class LearningService(ApplicationDbContext db, ReviewService revie
             new("Listening & Shadowing", "ฟัง → ตอบ → เปิด transcript → พูดตาม", Math.Min(15, Math.Max(10, minutes / 4)), "/practice/listening", "listening"),
             new("AI English", nextAi?.Title ?? "Technical English practice", Math.Min(20, Math.Max(10, minutes / 3)), nextAi?.FirstLessonSlug is null ? "/ai-english" : $"/lessons/{nextAi.FirstLessonSlug}", "ai")
         };
+        var weeklyProgress = await engagement.GetWeeklyProgressAsync(userId);
+        var achievements = await engagement.GetAchievementsAsync(userId);
 
         return new DashboardData(
             profile,
@@ -132,7 +137,9 @@ public sealed class LearningService(ApplicationDbContext db, ReviewService revie
             totalLessons,
             weakAreas,
             plan,
-            modules.Where(x => x.ProgressPercent < 100).Take(4).ToList());
+            modules.Where(x => x.ProgressPercent < 100).Take(4).ToList(),
+            weeklyProgress,
+            achievements);
     }
 
     public Task<Lesson?> GetLessonAsync(string slug) =>
@@ -178,26 +185,15 @@ public sealed class LearningService(ApplicationDbContext db, ReviewService revie
         progress.CompletedAt = passed ? DateTimeOffset.UtcNow : progress.CompletedAt;
         progress.LastActivityAt = DateTimeOffset.UtcNow;
 
-        var profile = await GetOrCreateProfileAsync(userId);
-        UpdateStreak(profile);
         await db.SaveChangesAsync();
         await reviewService.ScheduleLessonVocabularyAsync(userId, lesson.Id);
+        await engagement.RecordAsync(
+            userId,
+            passed ? "lesson" : "quiz",
+            $"lesson:{lessonId}:attempt:{progress.AttemptCount}",
+            lesson.EstimatedMinutes,
+            passed ? 100 : score);
 
         return new QuizResult(score, correct, total, passed, correctness, explanations);
-    }
-
-    private static void UpdateStreak(LearnerProfile profile)
-    {
-        var today = DateOnly.FromDateTime(DateTime.UtcNow);
-        if (profile.LastLearningDate == today)
-        {
-            return;
-        }
-
-        profile.CurrentStreak = profile.LastLearningDate == today.AddDays(-1)
-            ? profile.CurrentStreak + 1
-            : 1;
-        profile.LastLearningDate = today;
-        profile.UpdatedAt = DateTimeOffset.UtcNow;
     }
 }

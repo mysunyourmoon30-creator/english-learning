@@ -12,6 +12,8 @@ public sealed partial class WritingFeedbackService(
     ApplicationDbContext db,
     OpenAiGateway ai,
     AiPracticeLimiter limiter,
+    AiUsageService usage,
+    LearningEngagementService engagement,
     IOptions<AiOptions> options,
     ILogger<WritingFeedbackService> logger)
 {
@@ -100,6 +102,11 @@ public sealed partial class WritingFeedbackService(
                     safeContent,
                     words,
                     "AI service was unavailable, so transparent local rules were used.");
+                await usage.RecordFallbackAsync(
+                    userId,
+                    "english_writing_feedback",
+                    exception.GetType().Name,
+                    cancellationToken);
             }
         }
         else
@@ -110,17 +117,30 @@ public sealed partial class WritingFeedbackService(
                 ai.IsConfigured
                     ? "AI practice limit reached. Wait one minute before requesting another AI review; local rules were used."
                     : "Set AI__ApiKey to enable grammar-level AI feedback. Local rules were used.");
+            await usage.RecordFallbackAsync(
+                userId,
+                "english_writing_feedback",
+                ai.IsConfigured ? "RateLimit" : "NotConfigured",
+                cancellationToken);
         }
 
-        db.WritingSubmissions.Add(new WritingSubmission
+        var submission = new WritingSubmission
         {
             UserId = userId,
             Prompt = safePrompt,
             Content = safeContent,
             Score = feedback.Score,
             FeedbackJson = JsonSerializer.Serialize(feedback)
-        });
+        };
+        db.WritingSubmissions.Add(submission);
         await db.SaveChangesAsync(cancellationToken);
+        await engagement.RecordAsync(
+            userId,
+            "writing",
+            $"writing:{submission.Id}",
+            Math.Max(1, words.Count / 20),
+            feedback.Score,
+            cancellationToken);
         return feedback;
     }
 

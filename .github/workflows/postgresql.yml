@@ -1,0 +1,84 @@
+name: PostgreSQL migration and restore
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_DB: englishmaster
+          POSTGRES_USER: englishmaster
+          POSTGRES_PASSWORD: ci-password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U englishmaster -d englishmaster"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      PGPASSWORD: ci-password
+      POSTGRES_CONNECTION_STRING: Host=localhost;Port=5432;Database=englishmaster;Username=englishmaster;Password=ci-password
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore tools and packages
+        run: |
+          dotnet tool restore
+          dotnet restore EnglishMasterAI.sln
+
+      - name: Build migration assembly
+        run: >
+          dotnet build
+          src/EnglishMasterAI.Migrations.PostgreSql/EnglishMasterAI.Migrations.PostgreSql.csproj
+          --configuration Release
+          --no-restore
+
+      - name: Apply PostgreSQL migrations
+        run: >
+          dotnet ef database update
+          --project src/EnglishMasterAI.Migrations.PostgreSql/EnglishMasterAI.Migrations.PostgreSql.csproj
+          --startup-project src/EnglishMasterAI.Migrations.PostgreSql/EnglishMasterAI.Migrations.PostgreSql.csproj
+          --context ApplicationDbContext
+          --configuration Release
+          --no-build
+
+      - name: Create and restore backup
+        run: |
+          psql -h localhost -U englishmaster -d englishmaster -v ON_ERROR_STOP=1 \
+            -c 'CREATE TABLE backup_restore_probe (id integer PRIMARY KEY, value text NOT NULL);' \
+            -c "INSERT INTO backup_restore_probe VALUES (1, 'verified');"
+          pg_dump -h localhost -U englishmaster -d englishmaster --format=custom \
+            --file=artifacts-postgres.dump
+          createdb -h localhost -U englishmaster englishmaster_restore_test
+          pg_restore -h localhost -U englishmaster -d englishmaster_restore_test \
+            --exit-on-error artifacts-postgres.dump
+          test "$(psql -h localhost -U englishmaster -d englishmaster_restore_test -Atc \
+            "SELECT value FROM backup_restore_probe WHERE id = 1;")" = "verified"
+          dropdb -h localhost -U englishmaster englishmaster_restore_test
+
+      - name: Upload backup verification artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: postgres-restore-test
+          path: artifacts-postgres.dump
+          retention-days: 3

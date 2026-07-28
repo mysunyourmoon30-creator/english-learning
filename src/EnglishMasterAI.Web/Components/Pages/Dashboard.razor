@@ -78,6 +78,51 @@ else
         </section>
     </div>
 
+    <div class="grid-2 mt-4">
+        <section class="surface surface-pad">
+            <div class="eyebrow">LAST 7 DAYS</div>
+            <div class="d-flex justify-content-between align-items-end gap-3">
+                <div>
+                    <h2 class="mb-1">@_data.WeeklyProgress.Minutes นาที</h2>
+                    <small class="text-secondary">
+                        @_data.WeeklyProgress.ActivityCount กิจกรรม · @_data.WeeklyProgress.Points XP
+                    </small>
+                </div>
+                <span class="tag">@_data.WeeklyProgress.LessonsCompleted บทเรียน</span>
+            </div>
+            <div class="weekly-bars mt-3" aria-label="กิจกรรมการเรียนเจ็ดวันล่าสุด">
+                @foreach (var day in _data.WeeklyProgress.Days)
+                {
+                    var height = Math.Max(6, Math.Min(100, day.Minutes * 3));
+                    <div title="@($"{day.Date:dd MMM}: {day.Minutes} นาที")">
+                        <span style="@($"height:{height}px")"></span>
+                        <small>@day.Date.ToString("ddd")</small>
+                    </div>
+                }
+            </div>
+        </section>
+        <section class="surface surface-pad">
+            <div class="eyebrow">ACHIEVEMENTS</div>
+            <h2>ความสำเร็จล่าสุด</h2>
+            @if (_data.Achievements.Count == 0)
+            {
+                <p class="text-secondary small">ทำกิจกรรมแรกเพื่อปลดล็อก badge</p>
+            }
+            else
+            {
+                <div class="achievement-list">
+                    @foreach (var achievement in _data.Achievements.Take(4))
+                    {
+                        <div>
+                            <span aria-hidden="true">★</span>
+                            <p><strong>@achievement.Title</strong><small>@achievement.Description</small></p>
+                        </div>
+                    }
+                </div>
+            }
+        </section>
+    </div>
+
     <div class="section-title">
         <h2>เรียนต่อจากจุดนี้</h2>
         <a href="/roadmap">ดู Roadmap ทั้งหมด →</a>
@@ -102,6 +147,11 @@ else
     .focus-list{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;gap:.7rem}
     .focus-list li{display:flex;gap:.7rem;align-items:center;padding:.75rem;background:#f7f9f6;border-radius:.7rem}
     .focus-list span{width:1.6rem;height:1.6rem;display:grid;place-items:center;border-radius:.5rem;background:#17332f;color:#fff;font-size:.7rem}
+    .weekly-bars{height:125px;display:grid;grid-template-columns:repeat(7,1fr);align-items:end;gap:.55rem}
+    .weekly-bars>div{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:.35rem}
+    .weekly-bars span{display:block;width:100%;max-width:2rem;background:linear-gradient(180deg,#e4a93e,#1d766c);border-radius:.45rem .45rem .2rem .2rem}
+    .weekly-bars small{font-size:.6rem;color:#6d7c74}.achievement-list{display:grid;gap:.55rem}.achievement-list>div{display:flex;gap:.7rem;padding:.7rem;background:#f7f9f6;border-radius:.7rem}
+    .achievement-list>div>span{color:#d18f20;font-size:1.1rem}.achievement-list p,.achievement-list strong,.achievement-list small{display:block;margin:0}.achievement-list small{color:#6d7c74;margin-top:.15rem}
 </style>
 
 @code {

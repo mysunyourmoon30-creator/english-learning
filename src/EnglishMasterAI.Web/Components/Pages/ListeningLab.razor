@@ -1,6 +1,8 @@
 @page "/practice/listening"
 @attribute [Authorize]
 @inject IJSRuntime JS
+@inject ReferenceAudioService ReferenceAudio
+@inject CurrentUserService CurrentUser
 
 <PageTitle>Listening Lab | EnglishMaster AI</PageTitle>
 
@@ -19,7 +21,16 @@
             <span class="wave" aria-hidden="true">▂▄▆█▆▄▂ ▃▇▅▂▄▆▃</span>
             <h2>RAG workflow · 34 seconds</h2>
             <p>ปรับความเร็วแล้วกดเล่น ฟังเนื้อหาให้ครบก่อนตอบ</p>
-            <button class="play-main" @onclick="PlayAsync">▶</button>
+            <button class="play-main" disabled="@_loadingAudio" @onclick="PlayAsync">▶</button>
+            @if (_audioDataUrl is not null)
+            {
+                <audio class="w-100 mt-2" controls autoplay src="@_audioDataUrl"></audio>
+                <small class="d-block text-warning mt-2">@_audioDisclosure</small>
+            }
+            @if (!string.IsNullOrWhiteSpace(_audioError))
+            {
+                <small class="d-block text-warning mt-2">@_audioError</small>
+            }
             <div class="speed-row">
                 <label for="speed">Speed @_speed.ToString("0.00")×</label>
                 <input id="speed" type="range" min="0.6" max="1.2" step="0.05" @bind="_speed" />
@@ -79,6 +90,39 @@
     private readonly string[] _options = ["The answer is deleted.", "The retrieved chunks are ranked.", "The user closes the application.", "The model is deployed."];
     private string? _selected;
     private bool _showTranscript;
+    private bool _loadingAudio;
+    private string? _audioDataUrl;
+    private string? _audioDisclosure;
+    private string? _audioError;
     private double _speed = 0.85;
-    private Task PlayAsync() => JS.InvokeVoidAsync("englishMaster.speak", _transcript, _speed).AsTask();
+
+    private async Task PlayAsync()
+    {
+        _audioError = null;
+        if (!ReferenceAudio.IsConfigured)
+        {
+            _audioError = "กำลังใช้เสียงสังเคราะห์ของ browser — ตั้ง AI__ApiKey เพื่อสร้างและแคช reference audio คุณภาพสูง";
+            await JS.InvokeVoidAsync("englishMaster.speak", _transcript, _speed);
+            return;
+        }
+
+        _loadingAudio = true;
+        try
+        {
+            var audio = await ReferenceAudio.GetOrCreateAsync(
+                await CurrentUser.GetRequiredUserIdAsync(),
+                _transcript);
+            _audioDataUrl = $"data:{audio.ContentType};base64,{Convert.ToBase64String(audio.Bytes)}";
+            _audioDisclosure = audio.Disclosure;
+        }
+        catch (Exception)
+        {
+            _audioError = "สร้าง reference audio ไม่สำเร็จ จึงใช้เสียงของ browser แทน";
+            await JS.InvokeVoidAsync("englishMaster.speak", _transcript, _speed);
+        }
+        finally
+        {
+            _loadingAudio = false;
+        }
+    }
 }

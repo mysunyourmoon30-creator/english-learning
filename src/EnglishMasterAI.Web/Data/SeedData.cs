@@ -11,7 +11,25 @@ public static class SeedData
     public static async Task InitializeAsync(IServiceProvider services, IConfiguration configuration, IWebHostEnvironment environment)
     {
         var db = services.GetRequiredService<ApplicationDbContext>();
-        await db.Database.MigrateAsync();
+        var databaseOptions = configuration
+            .GetSection(Configuration.DatabaseOptions.SectionName)
+            .Get<Configuration.DatabaseOptions>() ?? new Configuration.DatabaseOptions();
+        if (databaseOptions.ApplyMigrationsOnStartup)
+        {
+            await db.Database.MigrateAsync();
+        }
+
+        if (!databaseOptions.SeedOnStartup)
+        {
+            return;
+        }
+
+        await db.LearnerProfiles
+            .Where(x => x.TimeZoneId == string.Empty)
+            .ExecuteUpdateAsync(
+                setters => setters.SetProperty(
+                    x => x.TimeZoneId,
+                    "Asia/Bangkok"));
 
         await SeedRolesAndDevelopmentAdminAsync(services, configuration, environment);
         var moduleTemplates = BuildModules();
@@ -85,6 +103,36 @@ public static class SeedData
                     "Initial seeded content")));
             await db.SaveChangesAsync();
         }
+
+        var aiLessons = await db.Lessons
+            .Include(x => x.Module)
+            .Where(x => x.Module.Category == LearningCategory.AiEnglish)
+            .ToListAsync();
+        var existingReviewKeys = await db.ContentReviewAssignments
+            .Select(x => new { x.LessonId, x.ReviewerRole })
+            .ToListAsync();
+        var reviewKeySet = existingReviewKeys
+            .Select(x => $"{x.LessonId:N}:{x.ReviewerRole}")
+            .ToHashSet(StringComparer.OrdinalIgnoreCase);
+        var reviewerRoles = new[] { "English Reviewer", "AI Subject Matter Expert" };
+        foreach (var lesson in aiLessons)
+        {
+            foreach (var reviewerRole in reviewerRoles)
+            {
+                if (reviewKeySet.Contains($"{lesson.Id:N}:{reviewerRole}"))
+                {
+                    continue;
+                }
+
+                db.ContentReviewAssignments.Add(new ContentReviewAssignment
+                {
+                    LessonId = lesson.Id,
+                    ReviewerRole = reviewerRole,
+                    Status = ContentReviewStatus.Pending
+                });
+            }
+        }
+        await db.SaveChangesAsync();
     }
 
     private static async Task SeedRolesAndDevelopmentAdminAsync(

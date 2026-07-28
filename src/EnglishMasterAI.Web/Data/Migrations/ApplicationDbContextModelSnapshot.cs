@@ -15,7 +15,7 @@ namespace EnglishMasterAI.Web.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "9.0.2");
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.10");
 
             modelBuilder.Entity("EnglishMasterAI.Web.Data.ApplicationUser", b =>
                 {
@@ -85,6 +85,67 @@ namespace EnglishMasterAI.Web.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("EnglishMasterAI.Web.Domain.AiUsageRecord", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("DurationMilliseconds")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("FailureType")
+                        .HasMaxLength(120)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("InputTokens")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("InputUnits")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Model")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Operation")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("OutputTokens")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Provider")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RequestId")
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasMaxLength(450)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreatedAt");
+
+                    b.ToTable("AiUsageRecords");
                 });
 
             modelBuilder.Entity("EnglishMasterAI.Web.Domain.AssessmentQuestion", b =>
@@ -199,6 +260,47 @@ namespace EnglishMasterAI.Web.Migrations
                     b.ToTable("AuditFindings");
                 });
 
+            modelBuilder.Entity("EnglishMasterAI.Web.Domain.ContentReviewAssignment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTimeOffset>("AssignedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("LessonId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Notes")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTimeOffset?>("ReviewedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReviewerRole")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReviewerUserId")
+                        .HasMaxLength(450)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LessonId", "ReviewerRole")
+                        .IsUnique();
+
+                    b.ToTable("ContentReviewAssignments");
+                });
+
             modelBuilder.Entity("EnglishMasterAI.Web.Domain.ContentRevision", b =>
                 {
                     b.Property<Guid>("Id")
@@ -296,6 +398,43 @@ namespace EnglishMasterAI.Web.Migrations
                     b.ToTable("CourseModules");
                 });
 
+            modelBuilder.Entity("EnglishMasterAI.Web.Domain.LearnerAchievement", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTimeOffset>("EarnedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasMaxLength(450)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId", "Code")
+                        .IsUnique();
+
+                    b.ToTable("LearnerAchievements");
+                });
+
             modelBuilder.Entity("EnglishMasterAI.Web.Domain.LearnerProfile", b =>
                 {
                     b.Property<Guid>("Id")
@@ -343,6 +482,11 @@ namespace EnglishMasterAI.Web.Migrations
                     b.Property<int>("TargetToeicScore")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("TimeZoneId")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("TEXT");
+
                     b.Property<DateTimeOffset>("UpdatedAt")
                         .HasColumnType("TEXT");
 
@@ -357,6 +501,44 @@ namespace EnglishMasterAI.Web.Migrations
                         .IsUnique();
 
                     b.ToTable("LearnerProfiles");
+                });
+
+            modelBuilder.Entity("EnglishMasterAI.Web.Domain.LearningActivity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("DeduplicationKey")
+                        .IsRequired()
+                        .HasMaxLength(160)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Kind")
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Minutes")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTimeOffset>("OccurredAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Points")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasMaxLength(450)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId", "DeduplicationKey")
+                        .IsUnique();
+
+                    b.ToTable("LearningActivities");
                 });
 
             modelBuilder.Entity("EnglishMasterAI.Web.Domain.LearningProgress", b =>
@@ -569,6 +751,12 @@ namespace EnglishMasterAI.Web.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<double?>("AccuracyScore")
+                        .HasColumnType("REAL");
+
+                    b.Property<double?>("CompletenessScore")
+                        .HasColumnType("REAL");
+
                     b.Property<int>("DurationSeconds")
                         .HasColumnType("INTEGER");
 
@@ -585,6 +773,16 @@ namespace EnglishMasterAI.Web.Migrations
                         .IsRequired()
                         .HasMaxLength(300)
                         .HasColumnType("TEXT");
+
+                    b.Property<string>("PronunciationProvider")
+                        .HasMaxLength(40)
+                        .HasColumnType("TEXT");
+
+                    b.Property<double?>("PronunciationScore")
+                        .HasColumnType("REAL");
+
+                    b.Property<double?>("ProsodyScore")
+                        .HasColumnType("REAL");
 
                     b.Property<int>("Score")
                         .HasColumnType("INTEGER");
@@ -829,6 +1027,17 @@ namespace EnglishMasterAI.Web.Migrations
                 });
 
             modelBuilder.Entity("EnglishMasterAI.Web.Domain.AuditFinding", b =>
+                {
+                    b.HasOne("EnglishMasterAI.Web.Domain.Lesson", "Lesson")
+                        .WithMany()
+                        .HasForeignKey("LessonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Lesson");
+                });
+
+            modelBuilder.Entity("EnglishMasterAI.Web.Domain.ContentReviewAssignment", b =>
                 {
                     b.HasOne("EnglishMasterAI.Web.Domain.Lesson", "Lesson")
                         .WithMany()

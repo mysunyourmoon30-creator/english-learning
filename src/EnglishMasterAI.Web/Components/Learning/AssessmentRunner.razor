@@ -1,5 +1,7 @@
 @inject AssessmentService Assessment
 @inject CurrentUserService CurrentUser
+@inject ReferenceAudioService ReferenceAudio
+@inject IJSRuntime JS
 @implements IAsyncDisposable
 
 @if (_loading)
@@ -65,11 +67,31 @@ else
 
     <section class="surface question-focus">
         <div class="eyebrow">@CurrentQuestion.Skill</div>
-        @if (!string.IsNullOrWhiteSpace(CurrentQuestion.SupportingText))
+        @if (IsListeningQuestion)
+        {
+            <div class="listening-audio">
+                <button type="button"
+                        class="btn btn-primary"
+                        disabled="@_loadingAudio"
+                        @onclick="PlayListeningAudioAsync">
+                    @(_loadingAudio ? "Preparing audio…" : "▶ Play TOEIC audio")
+                </button>
+                @if (_audioDataUrl is not null)
+                {
+                    <audio class="w-100 mt-3" controls autoplay src="@_audioDataUrl"></audio>
+                    <small class="d-block text-secondary mt-2">@_audioDisclosure</small>
+                }
+                @if (!string.IsNullOrWhiteSpace(_audioError))
+                {
+                    <div class="alert alert-warning mt-3">@_audioError</div>
+                }
+            </div>
+        }
+        @if (!IsListeningQuestion && !string.IsNullOrWhiteSpace(CurrentQuestion.SupportingText))
         {
             <blockquote>@CurrentQuestion.SupportingText</blockquote>
         }
-        <h2>@CurrentQuestion.Prompt</h2>
+        <h2>@DisplayPrompt</h2>
         <div class="quiz-options">
             @for (var optionIndex = 0; optionIndex < CurrentQuestion.Options.Count; optionIndex++)
             {
@@ -78,7 +100,7 @@ else
                         class="quiz-option @SelectedClass(capturedIndex)"
                         @onclick="() => Select(capturedIndex)">
                     <span class="option-letter">@((char)('A' + capturedIndex))</span>
-                    <span>@CurrentQuestion.Options[capturedIndex]</span>
+                    <span>@OptionLabel(capturedIndex)</span>
                 </button>
             }
         </div>
@@ -114,6 +136,7 @@ else
     .skill-row{margin:1rem 0}.skill-row>div:first-child{display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:.4rem}
     .priority-list{padding-left:1.4rem;line-height:2.25}.priority-list li::marker{color:#e4a93e;font-weight:800}
     .timer{font:800 .78rem Manrope;color:#1d766c;background:#eaf4ef;border-radius:2rem;padding:.35rem .6rem}.timer.ending{color:#a23c33;background:#fff0ed}
+    .listening-audio{padding:1rem;margin:.5rem 0 1.25rem;background:#edf7f4;border-radius:.8rem}
     @@media(max-width:600px){.result-hero{align-items:flex-start;flex-direction:column}.score-ring{width:5.5rem;height:5.5rem;flex-basis:5.5rem}}
 </style>
 
@@ -130,10 +153,20 @@ else
     private int _current;
     private bool _loading = true;
     private bool _submitting;
+    private bool _loadingAudio;
+    private Guid? _audioQuestionId;
+    private string? _audioDataUrl;
+    private string? _audioDisclosure;
+    private string? _audioError;
     private DateTimeOffset _startedAt;
     private int _remainingSeconds;
     private CancellationTokenSource? _timerCancellation;
     private QuestionPrompt CurrentQuestion => _questions[_current];
+    private bool IsListeningQuestion =>
+        ToeicListeningPresentation.IsListening(CurrentQuestion);
+    private string DisplayPrompt => IsListeningQuestion
+        ? ToeicListeningPresentation.DisplayPrompt(CurrentQuestion)
+        : CurrentQuestion.Prompt;
     private string TimerText => TimeSpan.FromSeconds(Math.Max(0, _remainingSeconds)).ToString(@"hh\:mm\:ss");
 
     protected override async Task OnParametersSetAsync()
@@ -149,10 +182,71 @@ else
     }
 
     private void Select(int index) => _answers[CurrentQuestion.Id] = index;
-    private void Next() => _current = Math.Min(_current + 1, _questions.Count - 1);
-    private void Previous() => _current = Math.Max(0, _current - 1);
+    private void Next()
+    {
+        _current = Math.Min(_current + 1, _questions.Count - 1);
+        ResetAudio();
+    }
+
+    private void Previous()
+    {
+        _current = Math.Max(0, _current - 1);
+        ResetAudio();
+    }
+
     private string SelectedClass(int index) =>
         _answers.TryGetValue(CurrentQuestion.Id, out var selected) && selected == index ? "selected" : "";
+    private string OptionLabel(int index) =>
+        IsListeningQuestion
+        && ToeicListeningPresentation.HideOptionText(CurrentQuestion)
+            ? $"Choice {(char)('A' + index)}"
+            : CurrentQuestion.Options[index];
+
+    private async Task PlayListeningAudioAsync()
+    {
+        _audioError = null;
+        var audioText = ToeicListeningPresentation.BuildAudioText(CurrentQuestion);
+        if (!ReferenceAudio.IsConfigured)
+        {
+            _audioError = "Using the browser voice. Configure AI__ApiKey for cached high-quality reference audio.";
+            await JS.InvokeVoidAsync("englishMaster.speak", audioText, 1);
+            return;
+        }
+
+        if (_audioQuestionId == CurrentQuestion.Id && _audioDataUrl is not null)
+        {
+            return;
+        }
+
+        _loadingAudio = true;
+        try
+        {
+            var audio = await ReferenceAudio.GetOrCreateAsync(
+                await CurrentUser.GetRequiredUserIdAsync(),
+                audioText);
+            _audioQuestionId = CurrentQuestion.Id;
+            _audioDataUrl =
+                $"data:{audio.ContentType};base64,{Convert.ToBase64String(audio.Bytes)}";
+            _audioDisclosure = audio.Disclosure;
+        }
+        catch (Exception)
+        {
+            _audioError = "Reference audio was unavailable; using the browser voice.";
+            await JS.InvokeVoidAsync("englishMaster.speak", audioText, 1);
+        }
+        finally
+        {
+            _loadingAudio = false;
+        }
+    }
+
+    private void ResetAudio()
+    {
+        _audioQuestionId = null;
+        _audioDataUrl = null;
+        _audioDisclosure = null;
+        _audioError = null;
+    }
 
     private async Task SubmitAsync()
     {
