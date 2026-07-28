@@ -5,7 +5,7 @@ param(
     [Parameter(Mandatory)]
     [string]$TargetDatabase,
     [switch]$ConfirmRestore,
-    [string]$ComposeFile = (Join-Path (Split-Path $PSScriptRoot -Parent) 'compose.yaml'),
+    [string]$ComposeFile,
     [string]$DatabaseUser = 'englishmaster'
 )
 
@@ -17,6 +17,9 @@ if ($TargetDatabase -in @('englishmaster', 'postgres', 'template0', 'template1')
     throw "Refusing to replace protected database '$TargetDatabase'. Use a new restore-test database."
 }
 
+if ([string]::IsNullOrWhiteSpace($ComposeFile)) {
+    $ComposeFile = Join-Path (Split-Path $PSScriptRoot -Parent) 'compose.yaml'
+}
 $resolvedBackup = (Resolve-Path -LiteralPath $BackupPath).Path
 $composePath = (Resolve-Path -LiteralPath $ComposeFile).Path
 $containerFile = "/tmp/$([IO.Path]::GetFileName($resolvedBackup))"

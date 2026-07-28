@@ -42,9 +42,12 @@ public static class LearningEndpoints
             return Results.Ok(result);
         });
 
-        authorized.MapGet("/assessment/toeic/questions", async (AssessmentService assessment) =>
+        authorized.MapGet("/assessment/toeic/questions", async (
+            AssessmentService assessment,
+            ToeicMediaCatalog media) =>
             Results.Ok(ToToeicQuestionDtos(
-                await assessment.GetQuestionsAsync(AssessmentKind.ToeicDiagnostic))));
+                await assessment.GetQuestionsAsync(AssessmentKind.ToeicDiagnostic),
+                media)));
 
         authorized.MapPost("/assessment/toeic/submit", async (
             ClaimsPrincipal user,
@@ -59,15 +62,18 @@ public static class LearningEndpoints
             return Results.Ok(result);
         });
 
-        authorized.MapGet("/assessment/toeic/mock/questions", async (AssessmentService assessment) =>
+        authorized.MapGet("/assessment/toeic/mock/questions", async (
+            AssessmentService assessment,
+            ToeicMediaCatalog media) =>
             Results.Ok(ToToeicQuestionDtos(
-                await assessment.GetQuestionsAsync(AssessmentKind.ToeicMock))));
+                await assessment.GetQuestionsAsync(AssessmentKind.ToeicMock),
+                media)));
 
         authorized.MapGet("/assessment/toeic/questions/{questionId:guid}/audio", async (
             ClaimsPrincipal user,
             Guid questionId,
             AssessmentService assessment,
-            ReferenceAudioService referenceAudio,
+            ToeicAudioService toeicAudio,
             CancellationToken cancellationToken) =>
         {
             var question = await assessment.GetToeicListeningQuestionAsync(
@@ -78,17 +84,17 @@ public static class LearningEndpoints
                 return Results.NotFound();
             }
 
-            if (!referenceAudio.IsConfigured)
+            if (!toeicAudio.CanServe(question))
             {
                 return Results.Problem(
-                    title: "Reference audio is not configured.",
-                    detail: "Configure AI__ApiKey to generate TOEIC Listening audio.",
+                    title: "Approved TOEIC audio is unavailable.",
+                    detail: "Provide an approved licensed human recording for this item.",
                     statusCode: StatusCodes.Status503ServiceUnavailable);
             }
 
-            var audio = await referenceAudio.GetOrCreateAsync(
+            var audio = await toeicAudio.GetAsync(
                 RequiredUserId(user),
-                ToeicListeningPresentation.BuildAudioText(question),
+                question,
                 cancellationToken);
             return Results.File(audio.Bytes, audio.ContentType);
         }).RequireRateLimiting("ai-practice");
@@ -124,7 +130,8 @@ public static class LearningEndpoints
         ?? throw new InvalidOperationException("Authenticated user id is missing.");
 
     private static IReadOnlyList<ToeicQuestionDto> ToToeicQuestionDtos(
-        IReadOnlyList<QuestionPrompt> questions) =>
+        IReadOnlyList<QuestionPrompt> questions,
+        ToeicMediaCatalog media) =>
         questions.Select(question =>
         {
             var isListening = ToeicListeningPresentation.IsListening(question);
@@ -144,6 +151,10 @@ public static class LearningEndpoints
                 question.ToeicPart,
                 isListening
                     ? $"/api/v1/assessment/toeic/questions/{question.Id}/audio"
+                    : null,
+                media.GetApprovedPartOneImageUrl(question),
+                isListening
+                    ? ToeicMediaCatalog.CreateContentKey(question)
                     : null);
         }).ToList();
 
@@ -156,5 +167,7 @@ public static class LearningEndpoints
         string? SupportingText,
         IReadOnlyList<string> Options,
         int? ToeicPart,
-        string? AudioUrl);
+        string? AudioUrl,
+        string? ImageUrl,
+        string? ContentKey);
 }

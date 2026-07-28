@@ -8,18 +8,22 @@ namespace EnglishMasterAI.Web.Data;
 
 public static class SeedData
 {
-    public static async Task InitializeAsync(IServiceProvider services, IConfiguration configuration, IWebHostEnvironment environment)
+    public static async Task InitializeAsync(
+        IServiceProvider services,
+        IConfiguration configuration,
+        IWebHostEnvironment environment,
+        bool forceMigrationsAndSeed = false)
     {
         var db = services.GetRequiredService<ApplicationDbContext>();
         var databaseOptions = configuration
             .GetSection(Configuration.DatabaseOptions.SectionName)
             .Get<Configuration.DatabaseOptions>() ?? new Configuration.DatabaseOptions();
-        if (databaseOptions.ApplyMigrationsOnStartup)
+        if (forceMigrationsAndSeed || databaseOptions.ApplyMigrationsOnStartup)
         {
             await db.Database.MigrateAsync();
         }
 
-        if (!databaseOptions.SeedOnStartup)
+        if (!forceMigrationsAndSeed && !databaseOptions.SeedOnStartup)
         {
             return;
         }

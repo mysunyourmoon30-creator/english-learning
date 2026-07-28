@@ -1,5 +1,9 @@
 # EnglishMaster AI
 
+> Production hardening status, blockers, and executable rollout steps are tracked in
+> [docs/PRODUCTION_ROADMAP.md](docs/PRODUCTION_ROADMAP.md). Production web instances
+> never migrate automatically; use the one-off `--migrate-and-seed` job.
+
 ระบบเรียนภาษาอังกฤษสำหรับ AI Engineer สร้างด้วย .NET 10 LTS, Blazor Web App,
 ASP.NET Core Identity และ EF Core รองรับ SQLite สำหรับ development และ PostgreSQL
 สำหรับ staging/production

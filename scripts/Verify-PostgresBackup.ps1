@@ -1,11 +1,14 @@
 [CmdletBinding()]
 param(
-    [string]$ComposeFile = (Join-Path (Split-Path $PSScriptRoot -Parent) 'compose.yaml'),
+    [string]$ComposeFile,
     [string]$Database = 'englishmaster',
     [string]$DatabaseUser = 'englishmaster'
 )
 
 $ErrorActionPreference = 'Stop'
+if ([string]::IsNullOrWhiteSpace($ComposeFile)) {
+    $ComposeFile = Join-Path (Split-Path $PSScriptRoot -Parent) 'compose.yaml'
+}
 $restoreDatabase = 'englishmaster_restore_test_{0:yyyyMMddHHmmss}' -f [DateTimeOffset]::UtcNow
 $backup = & (Join-Path $PSScriptRoot 'Backup-Postgres.ps1') `
     -ComposeFile $ComposeFile `

@@ -15,7 +15,7 @@ public sealed class OperationalMonitorService(
         using var timer = new PeriodicTimer(TimeSpan.FromMinutes(1));
         while (!stoppingToken.IsCancellationRequested)
         {
-            await CheckDatabaseAsync(stoppingToken);
+            await CheckNowAsync(stoppingToken);
             try
             {
                 await timer.WaitForNextTickAsync(stoppingToken);
@@ -27,7 +27,7 @@ public sealed class OperationalMonitorService(
         }
     }
 
-    private async Task CheckDatabaseAsync(CancellationToken cancellationToken)
+    public async Task CheckNowAsync(CancellationToken cancellationToken = default)
     {
         try
         {

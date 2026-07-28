@@ -17,8 +17,14 @@ using EnglishMasterAI.Web.Infrastructure;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
+using StackExchange.Redis;
 
-var builder = WebApplication.CreateBuilder(args);
+var runMigrationJob = args.Any(argument =>
+    argument.Equals("--migrate-and-seed", StringComparison.OrdinalIgnoreCase));
+var builder = WebApplication.CreateBuilder(
+    args.Where(argument =>
+            !argument.Equals("--migrate-and-seed", StringComparison.OrdinalIgnoreCase))
+        .ToArray());
 
 builder.Logging.ClearProviders();
 if (builder.Environment.IsDevelopment())
@@ -45,13 +51,53 @@ builder.Services.Configure<AlertingOptions>(
     builder.Configuration.GetSection(AlertingOptions.SectionName));
 builder.Services.Configure<PronunciationOptions>(
     builder.Configuration.GetSection(PronunciationOptions.SectionName));
+builder.Services.Configure<AudioStorageOptions>(
+    builder.Configuration.GetSection(AudioStorageOptions.SectionName));
+builder.Services.Configure<MultiInstanceOptions>(
+    builder.Configuration.GetSection(MultiInstanceOptions.SectionName));
+builder.Services.Configure<ToeicMediaOptions>(
+    builder.Configuration.GetSection(ToeicMediaOptions.SectionName));
 
 // Add services to the container.
-var dataProtectionPath = builder.Configuration["DataProtection:KeysPath"]
-    ?? Path.Combine(builder.Environment.ContentRootPath, "Data", "ProtectionKeys");
-builder.Services.AddDataProtection()
-    .PersistKeysToFileSystem(new DirectoryInfo(dataProtectionPath))
+var multiInstanceOptions = builder.Configuration
+    .GetSection(MultiInstanceOptions.SectionName)
+    .Get<MultiInstanceOptions>() ?? new MultiInstanceOptions();
+Lazy<IConnectionMultiplexer>? redisConnection = null;
+if (multiInstanceOptions.Enabled)
+{
+    var redisConnectionString = builder.Configuration.GetConnectionString(
+        multiInstanceOptions.RedisConnectionStringName);
+    if (string.IsNullOrWhiteSpace(redisConnectionString))
+    {
+        throw new InvalidOperationException(
+            $"Connection string '{multiInstanceOptions.RedisConnectionStringName}' "
+            + "is required when MultiInstance:Enabled is true.");
+    }
+
+    redisConnection = new Lazy<IConnectionMultiplexer>(() =>
+    {
+        var redisConfiguration = ConfigurationOptions.Parse(redisConnectionString);
+        redisConfiguration.AbortOnConnectFail = false;
+        return ConnectionMultiplexer.Connect(redisConfiguration);
+    });
+    builder.Services.AddSingleton(_ => redisConnection.Value);
+}
+
+var dataProtection = builder.Services.AddDataProtection()
     .SetApplicationName("EnglishMasterAI");
+if (multiInstanceOptions.Enabled
+    && multiInstanceOptions.UseSharedDataProtectionKeys)
+{
+    dataProtection.PersistKeysToStackExchangeRedis(
+        () => redisConnection!.Value.GetDatabase(),
+        multiInstanceOptions.DataProtectionKeyName);
+}
+else
+{
+    var dataProtectionPath = builder.Configuration["DataProtection:KeysPath"]
+        ?? Path.Combine(builder.Environment.ContentRootPath, "Data", "ProtectionKeys");
+    dataProtection.PersistKeysToFileSystem(new DirectoryInfo(dataProtectionPath));
+}
 
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
@@ -168,6 +214,19 @@ builder.Services.AddScoped<WritingFeedbackService>();
 builder.Services.AddScoped<SpeakingAnalysisService>();
 builder.Services.AddScoped<PronunciationAssessmentService>();
 builder.Services.AddScoped<ReferenceAudioService>();
+builder.Services.AddSingleton<ToeicMediaCatalog>();
+builder.Services.AddScoped<ToeicAudioService>();
+var audioStorageOptions = builder.Configuration
+    .GetSection(AudioStorageOptions.SectionName)
+    .Get<AudioStorageOptions>() ?? new AudioStorageOptions();
+if (audioStorageOptions.IsAzureBlob)
+{
+    builder.Services.AddSingleton<IReferenceAudioStore, AzureBlobReferenceAudioStore>();
+}
+else
+{
+    builder.Services.AddSingleton<IReferenceAudioStore, FileReferenceAudioStore>();
+}
 builder.Services.AddScoped<AiUsageService>();
 builder.Services.AddScoped<AuditService>();
 builder.Services.AddScoped<ContentReviewService>();
@@ -228,8 +287,12 @@ var openTelemetry = builder.Services
         }
     });
 
-builder.Services.AddHealthChecks()
+var healthChecks = builder.Services.AddHealthChecks()
     .AddCheck<DatabaseHealthCheck>("database", tags: ["ready"]);
+if (multiInstanceOptions.Enabled)
+{
+    healthChecks.AddCheck<RedisHealthCheck>("redis", tags: ["ready"]);
+}
 builder.Services.AddSingleton<StartupSecurityValidator>();
 
 var securityOptions = builder.Configuration
@@ -260,10 +323,17 @@ builder.Services.AddRateLimiter(options =>
         PartitionKey(context),
         Math.Clamp(securityOptions.LoginRequestsPerMinute, 3, 60)));
 });
+if (multiInstanceOptions.Enabled
+    && multiInstanceOptions.UseDistributedRateLimiting)
+{
+    builder.Services.AddSingleton<
+        IDistributedRateLimitGate,
+        RedisDistributedRateLimitGate>();
+}
 
 var app = builder.Build();
 
-app.Services.GetRequiredService<StartupSecurityValidator>().Validate();
+app.Services.GetRequiredService<StartupSecurityValidator>().Validate(runMigrationJob);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -279,8 +349,13 @@ else
 
 app.UseHttpsRedirection();
 app.UseMiddleware<SecurityHeadersMiddleware>();
-app.UseRateLimiter();
 app.UseAuthentication();
+if (multiInstanceOptions.Enabled
+    && multiInstanceOptions.UseDistributedRateLimiting)
+{
+    app.UseMiddleware<DistributedRateLimitMiddleware>();
+}
+app.UseRateLimiter();
 app.UseAuthorization();
 app.UseAntiforgery();
 
@@ -323,7 +398,18 @@ app.MapHealthChecks("/health/ready", new HealthCheckOptions
 
 await using (var scope = app.Services.CreateAsyncScope())
 {
-    await SeedData.InitializeAsync(scope.ServiceProvider, app.Configuration, app.Environment);
+    await SeedData.InitializeAsync(
+        scope.ServiceProvider,
+        app.Configuration,
+        app.Environment,
+        runMigrationJob);
+}
+
+if (runMigrationJob)
+{
+    app.Logger.LogInformation(
+        "One-off database migration and seed job completed successfully.");
+    return;
 }
 
 await app.RunAsync();

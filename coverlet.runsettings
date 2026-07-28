@@ -6,7 +6,7 @@
         <Configuration>
           <Format>cobertura</Format>
           <Exclude>[*.Tests]*</Exclude>
-          <ExcludeByFile>**/Data/Migrations/*.cs,**/Migrations/*.cs</ExcludeByFile>
+          <ExcludeByFile>**/*.razor,**/obj/**/*.cs,**/Data/Migrations/*.cs,**/Migrations/*.cs</ExcludeByFile>
           <SkipAutoProps>true</SkipAutoProps>
           <UseSourceLink>true</UseSourceLink>
         </Configuration>

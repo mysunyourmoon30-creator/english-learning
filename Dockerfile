@@ -8,6 +8,7 @@ COPY src/EnglishMasterAI.Web/EnglishMasterAI.Web.csproj src/EnglishMasterAI.Web/
 RUN dotnet restore src/EnglishMasterAI.Web/EnglishMasterAI.Web.csproj
 
 COPY src/ src/
+COPY content/ content/
 RUN dotnet publish src/EnglishMasterAI.Web/EnglishMasterAI.Web.csproj \
     --configuration Release \
     --no-restore \

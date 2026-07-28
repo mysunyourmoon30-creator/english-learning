@@ -92,6 +92,31 @@ public sealed class AiIntegrationTests
         Assert.Contains("filename=speaking.webm", handler.RequestBody);
     }
 
+    [Fact]
+    public async Task OpenAiGateway_records_and_surfaces_provider_failure()
+    {
+        var gateway = CreateGateway(new ErrorHandler(HttpStatusCode.ServiceUnavailable));
+        var schema = JsonNode.Parse(
+            """
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": { "score": { "type": "integer" } },
+              "required": ["score"]
+            }
+            """)!.AsObject();
+
+        var exception = await Assert.ThrowsAsync<OpenAiGatewayException>(
+            () => gateway.CreateStructuredResponseAsync<ScoreResult>(
+                "failure-user",
+                "Evaluate.",
+                "Sample",
+                "failure-test",
+                schema));
+
+        Assert.Contains("503", exception.Message);
+    }
+
     private static OpenAiGateway CreateGateway(HttpMessageHandler handler)
     {
         var dbOptions = new DbContextOptionsBuilder<ApplicationDbContext>()
@@ -152,5 +177,16 @@ public sealed class AiIntegrationTests
                 Content = new StringContent(responseJson)
             };
         }
+    }
+
+    private sealed class ErrorHandler(HttpStatusCode statusCode) : HttpMessageHandler
+    {
+        protected override Task<HttpResponseMessage> SendAsync(
+            HttpRequestMessage request,
+            CancellationToken cancellationToken) =>
+            Task.FromResult(new HttpResponseMessage(statusCode)
+            {
+                Content = new StringContent("""{"error":{"message":"simulated"}}""")
+            });
     }
 }

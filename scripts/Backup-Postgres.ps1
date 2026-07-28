@@ -1,12 +1,19 @@
 [CmdletBinding()]
 param(
-    [string]$ComposeFile = (Join-Path (Split-Path $PSScriptRoot -Parent) 'compose.yaml'),
-    [string]$OutputDirectory = (Join-Path (Split-Path $PSScriptRoot -Parent) 'artifacts\backups'),
+    [string]$ComposeFile,
+    [string]$OutputDirectory,
     [string]$Database = 'englishmaster',
     [string]$DatabaseUser = 'englishmaster'
 )
 
 $ErrorActionPreference = 'Stop'
+$repositoryRoot = Split-Path $PSScriptRoot -Parent
+if ([string]::IsNullOrWhiteSpace($ComposeFile)) {
+    $ComposeFile = Join-Path $repositoryRoot 'compose.yaml'
+}
+if ([string]::IsNullOrWhiteSpace($OutputDirectory)) {
+    $OutputDirectory = Join-Path $repositoryRoot 'artifacts\backups'
+}
 $composePath = (Resolve-Path -LiteralPath $ComposeFile).Path
 New-Item -ItemType Directory -Force -Path $OutputDirectory | Out-Null
 $outputPath = Join-Path (Resolve-Path -LiteralPath $OutputDirectory).Path (

@@ -1,5 +1,3 @@
-using System.Buffers.Binary;
-using System.Text;
 using EnglishMasterAI.Web.Configuration;
 using Microsoft.CognitiveServices.Speech;
 using Microsoft.CognitiveServices.Speech.Audio;
@@ -34,7 +32,9 @@ public sealed class PronunciationAssessmentService(
 
         try
         {
-            var pcm = ParsePcmWave(wavAudio.Span);
+            var pcm = PcmWaveParser.Parse(
+                wavAudio.Span,
+                _options.MaxAudioSeconds);
             var speechConfig = SpeechConfig.FromSubscription(
                 _options.AzureSpeechKey,
                 _options.AzureSpeechRegion);
@@ -90,72 +90,4 @@ public sealed class PronunciationAssessmentService(
         }
     }
 
-    private static PcmWave ParsePcmWave(ReadOnlySpan<byte> wave)
-    {
-        if (wave.Length < 44
-            || !wave[..4].SequenceEqual("RIFF"u8)
-            || !wave.Slice(8, 4).SequenceEqual("WAVE"u8))
-        {
-            throw new InvalidDataException("Only PCM WAV audio is supported.");
-        }
-
-        ushort audioFormat = 0;
-        ushort channels = 0;
-        ushort bitsPerSample = 0;
-        uint sampleRate = 0;
-        byte[]? pcm = null;
-
-        var offset = 12;
-        while (offset + 8 <= wave.Length)
-        {
-            var chunkId = Encoding.ASCII.GetString(wave.Slice(offset, 4));
-            var chunkSize = BinaryPrimitives.ReadUInt32LittleEndian(
-                wave.Slice(offset + 4, 4));
-            var dataOffset = offset + 8;
-            if (dataOffset + chunkSize > wave.Length)
-            {
-                throw new InvalidDataException("WAV chunk is truncated.");
-            }
-
-            if (chunkId == "fmt " && chunkSize >= 16)
-            {
-                audioFormat = BinaryPrimitives.ReadUInt16LittleEndian(
-                    wave.Slice(dataOffset, 2));
-                channels = BinaryPrimitives.ReadUInt16LittleEndian(
-                    wave.Slice(dataOffset + 2, 2));
-                sampleRate = BinaryPrimitives.ReadUInt32LittleEndian(
-                    wave.Slice(dataOffset + 4, 4));
-                bitsPerSample = BinaryPrimitives.ReadUInt16LittleEndian(
-                    wave.Slice(dataOffset + 14, 2));
-            }
-            else if (chunkId == "data")
-            {
-                pcm = wave.Slice(dataOffset, checked((int)chunkSize)).ToArray();
-            }
-
-            offset = dataOffset + checked((int)chunkSize) + (int)(chunkSize % 2);
-        }
-
-        if (audioFormat != 1
-            || channels is < 1 or > 2
-            || bitsPerSample != 16
-            || sampleRate is < 8_000 or > 96_000
-            || pcm is null)
-        {
-            throw new InvalidDataException(
-                "WAV must contain 16-bit PCM audio with a supported sample rate.");
-        }
-
-        return new PcmWave(
-            sampleRate,
-            checked((byte)bitsPerSample),
-            checked((byte)channels),
-            pcm);
-    }
-
-    private sealed record PcmWave(
-        uint SampleRate,
-        byte BitsPerSample,
-        byte Channels,
-        byte[] AudioBytes);
 }

@@ -1,117 +1,182 @@
-# EnglishMaster AI — Production Roadmap
+# EnglishMaster AI — Production Hardening Roadmap
 
 อัปเดตล่าสุด: 2026-07-28
 
-## สถานะโดยสรุป
+## สถานะสรุป
 
-งานระดับ source code และ automation ตามแผนดำเนินการแล้วทั้งหมด ส่วนการเปิด staging,
-การทดสอบ PostgreSQL restore บน infrastructure จริง และ human sign-off ต้องใช้
-credentials/บุคลากรภายนอก repository
-
-| Phase | สถานะ | หลักฐาน/สิ่งที่เหลือ |
+| งาน | สถานะ | หลักฐาน |
 |---|---|---|
-| Security baseline | เสร็จ | .NET 10, SQLitePCLRaw 2.1.12, NuGet scan ไม่พบช่องโหว่ |
-| CI/security automation | เสร็จ | CI, coverage, CodeQL, Dependabot |
-| PostgreSQL/deployment | โค้ดเสร็จ | migrations, Docker, staging, backup/restore; รันจริงเมื่อ Docker/PostgreSQL พร้อม |
-| Observability | เสร็จ | JSON logs, OTel, alerts, health, operations dashboard |
-| Learning engagement | เสร็จ | achievements, streak, weekly progress |
-| Content quality workflow | ระบบเสร็จ | รอผู้เชี่ยวชาญตรวจและอนุมัติ AI01–AI24 |
-| Audio/pronunciation | ระบบเสร็จ | รอ OpenAI/Azure credentials เพื่อสร้างเสียงและประเมินเสียงจริง |
-| Production release | รอ external setup | staging sign-off, secrets, HTTPS, SMTP, OTLP และ deployment approval |
+| One-off database migration | เสร็จและทดสอบระดับโค้ด | web process ถูกห้าม migrate/seed นอก Development; ใช้ `--migrate-and-seed` เท่านั้น |
+| Test coverage gate | ผ่าน | 59 tests; line 66.97%, branch 50.36%; CI บังคับขั้นต่ำ 60%/40% |
+| PostgreSQL integration | พร้อมใน CI | migration job รันซ้ำ 2 รอบ, provider integration test และ backup/restore |
+| Playwright learner journey | ผ่านในเครื่องและพร้อมใน CI | Chromium ทดสอบสมัครสมาชิก → เปิดบทเรียน → TOEIC audio UI สำเร็จ |
+| TOEIC production media gate | ระบบเสร็จ; รอ content จริง | release ถูกบล็อกจนมี human audio 100 ชิ้น, Part 1 images 6 ภาพ, license และ expert approval |
+| Scheduled live AI evaluation | พร้อม; รอ secret | fixed dataset, model-as-judge, prompt-injection/hallucination/cost gates |
+| Supply-chain hardening | เสร็จใน repo | Actions pin ด้วย SHA, Trivy, SPDX SBOM, attestations, Cosign, immutable digest |
+| GitHub repository settings | รอการยืนยันก่อนเปลี่ยน settings | ตรวจพบว่า `main` ยังไม่มี classic branch protection และ Dependency graph/Dependabot ยังปิดอยู่ |
+| Multi-instance foundation | เสร็จ | Redis rate limit, Redis Data Protection keys, Redis readiness, Azure Blob audio store |
+| Real staging drill | ถูกบล็อกด้วยเครื่อง | Docker Desktop เปิดแล้วแต่แจ้ง `Virtualization support not detected`; engine stopped |
 
-## Phase 0 — Security baseline
+Coverage ไม่นับ generated Razor markup (`*.razor`), generated `obj` และ EF migrations
+เพราะ UI ถูกตรวจด้วย Playwright และ migration ถูกตรวจด้วย PostgreSQL workflow แยกต่างหาก
 
-- [x] ย้าย target framework เป็น .NET 10 LTS
-- [x] อัปเดต ASP.NET Core/EF Core เป็น 10.0.10
-- [x] pin `SQLitePCLRaw.bundle_e_sqlite3` เป็น 2.1.12 ซึ่งไม่อยู่ใน advisory
-- [x] รัน `dotnet list package --vulnerable --include-transitive`
-- [x] เพิ่ม Dependabot และ CodeQL
-- [x] สำรอง SQLite ก่อน migration และไม่ commit database/secrets
+## 1. Safe production migrations
 
-Definition of Done: Release build ผ่าน, scan ไม่พบ vulnerable package และไม่มี
-credentials ใน source control
+- [x] `appsettings.Production.example.json` ปิด
+  `ApplyMigrationsOnStartup` และ `SeedOnStartup`
+- [x] startup validator ปฏิเสธ automatic migration/seed นอก Development
+- [x] เพิ่ม explicit one-off mode:
+  `dotnet EnglishMasterAI.Web.dll --migrate-and-seed`
+- [x] Compose เพิ่ม service `migration`; web รอ
+  `condition: service_completed_successfully`
+- [x] PostgreSQL CI รัน migration/seed job สองครั้งเพื่อยืนยัน idempotency
+- [x] เพิ่ม `scripts/Invoke-DatabaseMigration.ps1`
 
-## Phase 1 — Continuous Integration
+กฎ deploy: migration job ต้องสำเร็จก่อนเริ่ม web instance ใหม่ทุกครั้ง ห้ามเปิด
+startup migration เพื่อแก้ปัญหาเฉพาะหน้า
 
-- [x] Restore, format, build และ test ทุก push/PR
-- [x] สร้าง Cobertura coverage และอัปโหลดเป็น artifact
-- [x] ทำให้ workflow ล้มเหลวเมื่อ NuGet พบ vulnerable package
-- [x] CodeQL สำหรับ C#
-- [x] Dependabot สำหรับ NuGet, GitHub Actions และ Docker
-- [x] build container ใน CI
+## 2. Coverage and tests
 
-งานตั้งค่าหลัง push: เปิด branch protection ให้บังคับ CI, CodeQL และ PostgreSQL
-workflow ผ่านก่อน merge
+- [x] Authentication boundary: unauthenticated API = 401 และ Playwright สมัครสมาชิกจริง
+- [x] Assessment/Learning/Review/Personal data/Content review workflows
+- [x] PostgreSQL provider integration
+- [x] SMTP, AI provider และ operational alert failures
+- [x] PCM WAV parsing: header, truncated chunk, duration limit
+- [x] backup/restore destructive guards
+- [x] Playwright registration, lesson navigation และ TOEIC audio UI
+- [x] CI threshold: line 60%, branch 40%
 
-## Phase 2 — Production data and deployment
+คำสั่งตรวจ:
 
-- [x] แยก `EnglishMasterAI.Data` ออกจาก Web project
-- [x] รองรับ `Database:Provider` เป็น SQLite/PostgreSQL
-- [x] แยก provider-specific migrations คนละ assembly
-- [x] multi-stage .NET 10 Dockerfile, non-root user และ health check
-- [x] local Compose และ staging Compose template
-- [x] PostgreSQL backup, guarded restore และ automated restore verification
-- [x] PostgreSQL CI service apply migration และ restore ไปฐานใหม่
+```powershell
+dotnet test '.\tests\EnglishMasterAI.Tests\EnglishMasterAI.Tests.csproj' `
+  --configuration Release `
+  --settings '.\coverlet.runsettings' `
+  --collect:'XPlat Code Coverage' `
+  --results-directory '.\artifacts\coverage'
 
-งาน external: เปิด Docker/PostgreSQL, รัน staging workflow และกำหนด retention/
-off-site encryption policy ของ backup
+$report = Get-ChildItem '.\artifacts\coverage' -Recurse `
+  -Filter 'coverage.cobertura.xml' |
+  Select-Object -First 1 -ExpandProperty FullName
 
-## Phase 3 — Observability and operations
+powershell -ExecutionPolicy Bypass `
+  -File '.\scripts\Test-CoverageThreshold.ps1' `
+  -CoverageFile $report
+```
 
-- [x] structured JSON logging นอก Development
-- [x] OpenTelemetry traces/metrics สำหรับ ASP.NET Core และ outbound HTTP
-- [x] custom AI request/failure/fallback/latency และ learning activity metrics
-- [x] เก็บ AI usage metadata โดยไม่เก็บ prompt/audio
-- [x] operations dashboard สำหรับ request, token, failure และ fallback
-- [x] HTTPS webhook alert พร้อม cooldown
-- [x] database health monitor และ liveness/readiness endpoints
+## 3. Staging acceptance
 
-งาน external: ต่อ OTLP collector/dashboard และ alert receiver จริง แล้วทดสอบ
-notification routing/on-call ownership
+### งานที่ทำใน repo แล้ว
 
-## Phase 4 — Learning quality and engagement
+- [x] PostgreSQL + Redis Compose health checks
+- [x] one-off migration service
+- [x] guarded backup and isolated restore test
+- [x] immutable image deployment script
+- [x] automatic image rollback เมื่อ readiness/load smoke ล้มเหลว
+- [x] readiness-under-load smoke test
+- [x] controlled database pause/recovery drill พร้อม explicit confirmation
+- [x] AI/SMTP/database failure paths มี automated tests และ alert delivery tests
 
-- [x] achievement badges
-- [x] timezone-aware streak จากกิจกรรมจริง
-- [x] weekly 7-day progress
-- [x] idempotent activity keys ป้องกันคะแนนซ้ำ
-- [x] review assignment สองบทบาทสำหรับ AI01–AI24
-- [x] ห้าม publish AI lesson หาก review ไม่ครบหรือมี High/Critical finding
+### ผลการทดลองบนเครื่องนี้
 
-งาน external: ผู้เชี่ยวชาญภาษาอังกฤษและ AI ต้องตรวจเนื้อหาและกด sign-off จริง
-ระบบไม่สามารถรับรองแทนมนุษย์ได้
+วันที่ 2026-07-28 เปิด Docker Desktop สำเร็จ แต่หน้า Dashboard แสดง:
 
-## Phase 5 — Audio, pronunciation and AI quality
+> Virtualization support not detected
 
-- [x] สร้าง/แคช TTS reference audio พร้อม disclosure ว่าเป็นเสียง AI
-- [x] TOEIC Listening Parts 1–4 เล่นเสียงและไม่ส่ง transcript ใน question API
-- [x] ซ่อนข้อความตัวเลือกของ Parts 1–2 ที่ผู้เรียนต้องฟัง
-- [x] browser speech fallback เมื่อไม่มี TTS key
-- [x] บันทึกเสียงผู้เรียนเป็น PCM WAV ใน memory
-- [x] Azure Speech acoustic pronunciation assessment
-- [x] แสดง pronunciation score เฉพาะเมื่อ acoustic provider สำเร็จ
-- [x] ไม่ persist raw learner audio โดยค่าเริ่มต้น
-- [x] AI golden tests สำหรับ schema bounds, prompt-injection sample และ fallback behavior
+Docker engine จึงไม่เริ่มและไม่สามารถรัน PostgreSQL/Redis containers จริงได้
+งานด้าน BIOS/virtualization และการ sign in ต้องให้เจ้าของเครื่องดำเนินการเอง
 
-งาน external: จัดหา OpenAI/Azure Speech credentials, ทดสอบเสียงกับผู้เรียนจริง และ
-กำหนดงบประมาณ/voice acceptance criteria
+### รันต่อหลัง engine พร้อม
 
-## Phase 6 — Staging และ production release
+```powershell
+docker info
+docker compose --env-file '.\.env' up --build --detach
+docker compose ps
 
-- [ ] เปิด staging ด้วย immutable image digest
-- [ ] ตรวจ `/health/live`, `/health/ready`, sign-in, lesson, audio และ AI fallback
-- [ ] รัน PostgreSQL backup/restore verification
-- [ ] ตรวจ dashboard/alerts และทำ failure drill
-- [ ] ให้ผู้เชี่ยวชาญ sign-off AI01–AI24
-- [ ] ตั้ง HTTPS, SMTP, secrets และ persistent Data Protection keys
-- [ ] บันทึก deployment approval และ rollback image/database
+.\scripts\Verify-PostgresBackup.ps1
+.\scripts\Invoke-DatabaseFailureDrill.ps1 -ConfirmDisruption
+.\scripts\Test-ReadinessUnderLoad.ps1 -BaseUri 'http://127.0.0.1:8080'
+```
 
-## Credentials และบริการที่ต้องจัดหาภายนอก
+สำหรับ staging image ที่ release แล้ว:
 
-- OpenAI API key สำหรับ structured feedback, transcription และ TTS
-- Azure Speech key/region สำหรับ acoustic pronunciation scoring
-- PostgreSQL staging/production
-- SMTP credentials
-- OTLP collector/observability backend
-- HTTPS alert webhook
-- ผู้เชี่ยวชาญภาษาอังกฤษและ AI สำหรับ content sign-off
+```powershell
+.\scripts\Invoke-StagingRelease.ps1 `
+  -AppImage 'ghcr.io/mysunyourmoon30-creator/english-learning@sha256:<digest>' `
+  -PreviousImage 'ghcr.io/mysunyourmoon30-creator/english-learning@sha256:<previous-digest>' `
+  -RunBackupRestoreDrill `
+  -ConfirmDeploy
+```
+
+Database rollback ไม่ทำอัตโนมัติ เพราะอาจทำให้ข้อมูลหลัง backup สูญหาย ต้องใช้
+forward-compatible migration เป็นค่าเริ่มต้น และ restore เฉพาะหลัง incident owner
+อนุมัติ recovery point แล้วเท่านั้น
+
+## 4. TOEIC production content
+
+- [x] runtime catalog อ้างอิง item ด้วย SHA-256 content key
+- [x] production ปิด AI-generated TOEIC fallback
+- [x] production validator บังคับ approved human media mode
+- [x] Azure Blob-backed shared audio storage และ CDN configuration
+- [x] Part 1 UI รองรับ licensed HTTPS image
+- [x] release gate ตรวจ:
+  - human recordings 100 ชิ้นสำหรับ Parts 1–4
+  - สำเนียง US, UK, Australian และ Canadian
+  - Part 1 images 6 ภาพ
+  - license ID/evidence, SHA-256, approver และ approval timestamp
+  - normalization -18 ถึง -14 LUFS และ true peak ไม่เกิน -1 dBTP
+  - expert clarity approval
+- [ ] จัดหาไฟล์เสียงมนุษย์และรูปภาพที่มีสิทธิ์ใช้จริง
+- [ ] ให้ผู้เชี่ยวชาญตรวจและลงชื่ออนุมัติทุก asset
+
+ห้ามคัดลอกข้อสอบ เสียง หรือภาพของ ETS/TOEIC โดยไม่ได้รับอนุญาต Release workflow
+จะล้มเหลวในขั้น `Test-ToeicMediaManifest.ps1 -Mode Production` จนกว่า catalog
+จะครบตามเกณฑ์
+
+## 5. Live AI evaluation
+
+- [x] dataset คงที่ใน `evals/ai-feedback-golden.json`
+- [x] Responses API structured output และ `store:false`
+- [x] ตรวจ grammar, usefulness, hallucination safety และ prompt injection
+- [x] เก็บ input/output tokens และบังคับ estimated cost ceiling
+- [x] scheduled/workflow-dispatch เท่านั้น ไม่รันทุก push
+- [ ] ตั้ง GitHub secret `OPENAI_API_KEY`
+- [ ] ตรวจ report จริงอย่างน้อยหนึ่งรอบก่อนเปลี่ยน model/prompt
+
+## 6. Supply chain and GitHub
+
+- [x] GitHub Actions ทุกตัว pin ด้วย immutable commit SHA
+- [x] NuGet vulnerability scan
+- [x] Trivy HIGH/CRITICAL container gate
+- [x] SPDX JSON SBOM
+- [x] build provenance และ SBOM attestations
+- [x] keyless Cosign signature
+- [x] deployment artifact บันทึก `APP_IMAGE=...@sha256:...`
+- [x] script สำหรับ branch protection, required checks, secret scanning,
+  push protection และ Dependabot security updates
+- [ ] authenticate GitHub CLI หรือเชื่อม GitHub connector
+- [ ] รัน `scripts/Configure-GitHubSecurity.ps1`
+- [ ] ตรวจว่า required checks ปรากฏครบหลัง workflow รันครั้งแรก
+
+## 7. Multi-instance
+
+- [x] Redis fixed-window gate ใช้ atomic Lua operation
+- [x] Redis-backed shared Data Protection keys
+- [x] Redis persistence ใน Compose และ readiness check
+- [x] Azure Blob audio object store พร้อม idempotent concurrent write
+- [x] production validator ห้าม multi-instance + local audio filesystem
+- [x] production validator ห้าม Azure Blob configuration ที่ไม่มี connection string
+- [x] normal web process ไม่แก้ schema/database seed
+
+Production ต้องใช้ Redis ที่เปิด persistence และ Azure Blob container ที่ provision
+ล่วงหน้า `CreateContainerIfMissing` ควรเป็น `false`
+
+## External prerequisites ก่อน production
+
+- Virtualization/WSL2 หรือ Linux container host ที่ใช้งานได้
+- GitHub authentication และสิทธิ์ admin ของ repository
+- PostgreSQL, Redis และ Azure Blob production services
+- HTTPS ingress, SMTP, OTLP backend และ alert webhook
+- OpenAI/Azure Speech secrets จาก secret manager
+- licensed TOEIC media และ human expert sign-off
+- backup retention, off-site encryption, RPO/RTO และ incident owner ที่อนุมัติแล้ว

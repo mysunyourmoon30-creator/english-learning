@@ -1,0 +1,77 @@
+name: Playwright E2E
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  learner-journey:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      E2E_BASE_URL: http://127.0.0.1:5019
+
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore and build
+        run: |
+          dotnet restore EnglishMasterAI.sln
+          dotnet build EnglishMasterAI.sln --configuration Release --no-restore
+
+      - name: Install Chromium
+        shell: pwsh
+        run: >
+          ./tests/EnglishMasterAI.E2E/bin/Release/net10.0/playwright.ps1
+          install --with-deps chromium
+
+      - name: Start application
+        env:
+          ASPNETCORE_ENVIRONMENT: Development
+          ASPNETCORE_URLS: http://127.0.0.1:5019
+          ConnectionStrings__DefaultConnection: Data Source=/tmp/englishmaster-e2e.db
+          Database__ApplyMigrationsOnStartup: "true"
+          Database__SeedOnStartup: "true"
+          SeedAdmin__Enabled: "false"
+          AI__Enabled: "false"
+          Security__RequireConfirmedAccount: "false"
+        run: |
+          mkdir -p artifacts
+          dotnet run --project src/EnglishMasterAI.Web/EnglishMasterAI.Web.csproj \
+            --configuration Release --no-build > artifacts/e2e-web.log 2>&1 &
+          echo $! > artifacts/e2e-web.pid
+          for attempt in {1..60}; do
+            if curl --fail --silent http://127.0.0.1:5019/health/ready; then
+              exit 0
+            fi
+            sleep 2
+          done
+          cat artifacts/e2e-web.log
+          exit 1
+
+      - name: Run Playwright learner journey
+        run: >
+          dotnet test tests/EnglishMasterAI.E2E/EnglishMasterAI.E2E.csproj
+          --configuration Release --no-build
+
+      - name: Upload browser diagnostics
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: playwright-diagnostics
+          path: |
+            artifacts/e2e
+            artifacts/e2e-web.log
+          if-no-files-found: warn
+          retention-days: 7

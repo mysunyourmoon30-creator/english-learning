@@ -8,7 +8,7 @@ namespace EnglishMasterAI.Web.Application;
 public sealed class ReferenceAudioService(
     OpenAiGateway ai,
     AiPracticeLimiter limiter,
-    IWebHostEnvironment environment,
+    IReferenceAudioStore store,
     IOptions<AiOptions> options)
 {
     private readonly AiOptions _options = options.Value;
@@ -26,42 +26,35 @@ public sealed class ReferenceAudioService(
             throw new ArgumentException("Reference text is required.", nameof(text));
         }
 
-        var cacheRoot = Path.GetFullPath(Path.Combine(
-            environment.ContentRootPath,
-            _options.ReferenceAudioCachePath));
-        Directory.CreateDirectory(cacheRoot);
         var cacheKey = Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(
-            $"{_options.SpeechModel}|{_options.SpeechVoice}|{safeText}")))
+                $"{_options.SpeechModel}|{_options.SpeechVoice}|{safeText}")))
             .ToLowerInvariant();
-        var path = Path.Combine(cacheRoot, $"{cacheKey}.mp3");
-
-        byte[] audio;
-        var cacheHit = File.Exists(path);
-        if (cacheHit)
+        var cachedAudio = await store.TryReadAsync(cacheKey, cancellationToken);
+        if (cachedAudio is not null)
         {
-            audio = await File.ReadAllBytesAsync(path, cancellationToken);
-        }
-        else
-        {
-            if (!limiter.TryAcquire(userId))
-            {
-                throw new OpenAiGatewayException(
-                    "Reference audio generation limit reached. Please wait before retrying.");
-            }
-
-            audio = await ai.GenerateSpeechAsync(
-                userId,
-                safeText,
-                cancellationToken);
-            await File.WriteAllBytesAsync(path, audio, cancellationToken);
+            return CreateResult(cachedAudio, true);
         }
 
-        return new ReferenceAudio(
+        if (!limiter.TryAcquire(userId))
+        {
+            throw new OpenAiGatewayException(
+                "Reference audio generation limit reached. Please wait before retrying.");
+        }
+
+        var audio = await ai.GenerateSpeechAsync(
+            userId,
+            safeText,
+            cancellationToken);
+        await store.WriteAsync(cacheKey, audio, cancellationToken);
+        return CreateResult(audio, false);
+    }
+
+    private static ReferenceAudio CreateResult(byte[] audio, bool cacheHit) =>
+        new(
             audio,
             "audio/mpeg",
             cacheHit,
-            "เสียงนี้สร้างโดย AI เพื่อใช้เป็น reference สำหรับการฝึกฟังและพูดตาม");
-    }
+            "เสียงนี้สร้างโดย AI เพื่อใช้เป็น reference สำหรับฝึกฟังและพูดตาม");
 }
 
 public sealed record ReferenceAudio(

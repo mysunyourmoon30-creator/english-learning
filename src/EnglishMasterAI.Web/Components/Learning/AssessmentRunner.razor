@@ -1,6 +1,7 @@
 @inject AssessmentService Assessment
 @inject CurrentUserService CurrentUser
-@inject ReferenceAudioService ReferenceAudio
+@inject ToeicAudioService ToeicAudio
+@inject ToeicMediaCatalog ToeicMedia
 @inject IJSRuntime JS
 @implements IAsyncDisposable
 
@@ -69,6 +70,12 @@ else
         <div class="eyebrow">@CurrentQuestion.Skill</div>
         @if (IsListeningQuestion)
         {
+            @if (ToeicMedia.GetApprovedPartOneImageUrl(CurrentQuestion) is { } imageUrl)
+            {
+                <img class="toeic-part-one-image mb-3"
+                     src="@imageUrl"
+                     alt="Licensed photograph for TOEIC Part 1 practice item" />
+            }
             <div class="listening-audio">
                 <button type="button"
                         class="btn btn-primary"
@@ -137,6 +144,7 @@ else
     .priority-list{padding-left:1.4rem;line-height:2.25}.priority-list li::marker{color:#e4a93e;font-weight:800}
     .timer{font:800 .78rem Manrope;color:#1d766c;background:#eaf4ef;border-radius:2rem;padding:.35rem .6rem}.timer.ending{color:#a23c33;background:#fff0ed}
     .listening-audio{padding:1rem;margin:.5rem 0 1.25rem;background:#edf7f4;border-radius:.8rem}
+    .toeic-part-one-image{width:100%;max-height:28rem;object-fit:contain;border-radius:.8rem;background:#f4f6f3}
     @@media(max-width:600px){.result-hero{align-items:flex-start;flex-direction:column}.score-ring{width:5.5rem;height:5.5rem;flex-basis:5.5rem}}
 </style>
 
@@ -206,7 +214,7 @@ else
     {
         _audioError = null;
         var audioText = ToeicListeningPresentation.BuildAudioText(CurrentQuestion);
-        if (!ReferenceAudio.IsConfigured)
+        if (!ToeicAudio.CanServe(CurrentQuestion))
         {
             _audioError = "Using the browser voice. Configure AI__ApiKey for cached high-quality reference audio.";
             await JS.InvokeVoidAsync("englishMaster.speak", audioText, 1);
@@ -221,9 +229,9 @@ else
         _loadingAudio = true;
         try
         {
-            var audio = await ReferenceAudio.GetOrCreateAsync(
+            var audio = await ToeicAudio.GetAsync(
                 await CurrentUser.GetRequiredUserIdAsync(),
-                audioText);
+                CurrentQuestion);
             _audioQuestionId = CurrentQuestion.Id;
             _audioDataUrl =
                 $"data:{audio.ContentType};base64,{Convert.ToBase64String(audio.Bytes)}";

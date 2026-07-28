@@ -58,8 +58,9 @@
     private IEnumerable<IdentityError>? identityErrors;
 
     [SupplyParameterFromForm]
-    private InputModel? FormInput { get; set; }
-    private InputModel Input => FormInput ??= new();
+    private InputModel Input { get; set; } = default!;
+
+    protected override void OnInitialized() => Input ??= new();
 
     [SupplyParameterFromQuery]
     private string? ReturnUrl { get; set; }

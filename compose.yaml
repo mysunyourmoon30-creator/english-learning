@@ -16,12 +16,45 @@ services:
       timeout: 5s
       retries: 10
 
+  redis:
+    image: redis:8-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  migration:
+    build:
+      context: .
+    restart: "no"
+    command: ["dotnet", "EnglishMasterAI.Web.dll", "--migrate-and-seed"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: Staging
+      AllowedHosts: ${ALLOWED_HOSTS:-localhost}
+      Database__Provider: PostgreSql
+      Database__ConnectionStringName: PostgreSqlConnection
+      Database__ApplyMigrationsOnStartup: "false"
+      Database__SeedOnStartup: "false"
+      ConnectionStrings__PostgreSqlConnection: Host=postgres;Port=5432;Database=${POSTGRES_DB:-englishmaster};Username=${POSTGRES_USER:-englishmaster};Password=${POSTGRES_PASSWORD:-change-me-local-only}
+      Security__RequireConfirmedAccount: "false"
+      SeedAdmin__Enabled: "false"
+
   web:
     build:
       context: .
     restart: unless-stopped
     depends_on:
-      postgres:
+      migration:
+        condition: service_completed_successfully
+      redis:
         condition: service_healthy
     ports:
       - "${WEB_PORT:-8080}:8080"
@@ -30,11 +63,19 @@ services:
       AllowedHosts: ${ALLOWED_HOSTS:-localhost}
       Database__Provider: PostgreSql
       Database__ConnectionStringName: PostgreSqlConnection
-      Database__ApplyMigrationsOnStartup: "true"
-      Database__SeedOnStartup: "true"
+      Database__ApplyMigrationsOnStartup: "false"
+      Database__SeedOnStartup: "false"
       ConnectionStrings__PostgreSqlConnection: Host=postgres;Port=5432;Database=${POSTGRES_DB:-englishmaster};Username=${POSTGRES_USER:-englishmaster};Password=${POSTGRES_PASSWORD:-change-me-local-only}
+      ConnectionStrings__Redis: redis:6379,abortConnect=false
+      ConnectionStrings__AudioBlobStorage: ${AUDIO_BLOB_CONNECTION_STRING:-}
       Security__RequireConfirmedAccount: "false"
-      DataProtection__KeysPath: /var/lib/englishmaster/keys
+      MultiInstance__Enabled: "true"
+      MultiInstance__UseDistributedRateLimiting: "true"
+      MultiInstance__UseSharedDataProtectionKeys: "true"
+      AudioStorage__Provider: ${AUDIO_STORAGE_PROVIDER:-FileSystem}
+      AudioStorage__CachePath: /var/lib/englishmaster/audio-cache
+      AudioStorage__CreateContainerIfMissing: ${AUDIO_CREATE_CONTAINER_IF_MISSING:-false}
+      AudioStorage__CdnBaseUrl: ${AUDIO_CDN_BASE_URL:-}
       AI__ApiKey: ${OPENAI_API_KEY:-}
       AI__ReferenceAudioCachePath: /var/lib/englishmaster/audio-cache
       Pronunciation__Enabled: ${PRONUNCIATION_ENABLED:-false}
@@ -44,7 +85,6 @@ services:
       Alerting__Enabled: ${ALERTING_ENABLED:-false}
       Alerting__WebhookUrl: ${ALERT_WEBHOOK_URL:-}
     volumes:
-      - data-protection:/var/lib/englishmaster/keys
       - reference-audio:/var/lib/englishmaster/audio-cache
     healthcheck:
       test: ["CMD", "curl", "--fail", "--silent", "http://localhost:8080/health/ready"]
@@ -55,5 +95,5 @@ services:
 
 volumes:
   postgres-data:
-  data-protection:
+  redis-data:
   reference-audio:
