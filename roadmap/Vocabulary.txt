@@ -1,0 +1,757 @@
+Vocabulary ครบจบ
+ระบบเรียนคำศัพท์อังกฤษตั้งแต่ 0 → อ่านออก ฟังเข้าใจ เขียนได้ พูดคล่อง และสอบ TOEIC
+
+Vocabulary ไม่ใช่แค่ “คำศัพท์ + คำแปล” แต่ต้องเรียนครบ 8 ส่วน:
+
+เห็นคำ → อ่านออก → รู้ความหมาย → รู้ชนิดคำ → รู้รูปคำ → รู้คำที่ใช้คู่กัน → ฟังออก → นำไปพูดและเขียนได้
+
+1. Vocabulary คืออะไร
+
+Vocabulary แบ่งเป็น 4 ความสามารถ
+
+ประเภท	ความหมาย	ตัวอย่าง
+Reading Vocabulary	คำที่อ่านแล้วเข้าใจ	อ่าน employee แล้วรู้ว่าหมายถึงพนักงาน
+Listening Vocabulary	คำที่ได้ยินแล้วเข้าใจ	ได้ยิน /ɪmˈplɔɪiː/ แล้วรู้ว่าเป็น employee
+Speaking Vocabulary	คำที่นำมาพูดได้	พูดว่า I am an employee.
+Writing Vocabulary	คำที่เขียนได้ถูกต้อง	สะกด employee และใช้ในประโยคได้
+
+คำที่เรา “รู้ความหมายแต่ใช้ไม่ได้” เรียกว่า Passive Vocabulary
+
+คำที่เราสามารถพูดและเขียนได้ เรียกว่า Active Vocabulary
+
+เป้าหมายจริงคือ:
+
+เปลี่ยน Passive Vocabulary ให้กลายเป็น Active Vocabulary
+
+2. สิ่งที่ต้องเรียนในคำศัพท์หนึ่งคำ
+
+อย่าจำเพียงคำแปล ต้องเรียนตามโครงสร้างนี้
+
+ตัวอย่างคำว่า apply
+หัวข้อ	สิ่งที่ต้องรู้
+Word	apply
+Pronunciation	/əˈplaɪ/ อะ-พลาย
+Part of Speech	Verb
+Core Meaning	สมัคร, นำไปใช้
+Word Forms	apply, applies, applied, applying
+Word Family	application, applicant, applicable
+Collocation	apply for a job
+Preposition	apply for, apply to
+Example	I applied for a new job.
+Listening	ได้ยินแล้วจำคำได้
+Speaking	พูดประโยคใหม่ด้วยตัวเอง
+Writing	เขียนประโยคใหม่ได้
+รูปแบบบัตรคำศัพท์มาตรฐาน
+Word:
+IPA:
+Thai pronunciation:
+Part of speech:
+Core meaning:
+Other common meanings:
+Word forms:
+Word family:
+Collocations:
+Prepositions:
+Example sentence:
+My sentence:
+Synonym:
+Antonym:
+Common mistake:
+3. องค์ประกอบของคำศัพท์ที่ต้องรู้
+3.1 Spelling — การสะกด
+
+ต้องสามารถ:
+
+มองเห็นแล้วจำคำได้
+สะกดจากเสียงได้
+แยกคำที่สะกดคล้ายกันได้
+
+ตัวอย่าง:
+
+คำ	ความหมาย
+quiet	เงียบ
+quite	ค่อนข้าง
+accept	ยอมรับ
+except	ยกเว้น
+affect	ส่งผลกระทบ
+effect	ผลกระทบ
+3.2 Pronunciation — การออกเสียง
+
+ต้องเรียนพร้อมกัน 4 ส่วน
+
+IPA
+พยางค์
+ตำแหน่งเน้นเสียง
+เสียงเชื่อมในประโยค
+
+ตัวอย่าง:
+
+employee
+/ɪmˈplɔɪiː/
+em-PLOY-ee
+เน้นพยางค์ PLOY
+
+อย่าจำด้วยคำอ่านภาษาไทยอย่างเดียว เพราะเสียงภาษาไทยไม่สามารถแทนเสียงอังกฤษได้ครบทั้งหมด
+
+3.3 Meaning — ความหมาย
+
+คำหนึ่งคำอาจมีหลายความหมาย แต่ให้เรียนตามลำดับ:
+
+ความหมายที่ใช้บ่อยที่สุด
+ความหมายในชีวิตประจำวัน
+ความหมายในงานหรือการสอบ
+ความหมายเฉพาะทาง
+
+ตัวอย่าง run
+
+run = วิ่ง
+run a business = บริหารธุรกิจ
+run a program = รันโปรแกรม
+run out of money = เงินหมด
+
+ไม่ต้องจำทุกความหมายพร้อมกัน ให้จำผ่านบริบท
+
+3.4 Part of Speech — ชนิดของคำ
+
+คำศัพท์ต้องรู้ว่าอยู่ตำแหน่งไหนในประโยค
+
+ชนิดคำ	หน้าที่	ตัวอย่าง
+Noun	คน สิ่งของ สถานที่ แนวคิด	decision
+Verb	การกระทำหรือสภาวะ	decide
+Adjective	ขยายนาม	decisive
+Adverb	ขยายกริยา/คุณศัพท์	decisively
+Pronoun	แทนคำนาม	they
+Preposition	เชื่อมความสัมพันธ์	in, on, at
+Conjunction	เชื่อมคำหรือประโยค	and, but
+Determiner	กำหนดคำนาม	a, the, this
+
+ตัวอย่าง Word Family:
+
+decide      = ตัดสินใจ        Verb
+decision    = การตัดสินใจ     Noun
+decisive    = เด็ดขาด         Adjective
+decisively  = อย่างเด็ดขาด    Adverb
+
+เรียนหนึ่งคำ แต่ขยายเป็นหลายคำได้
+
+4. Word Forms — รูปของคำ
+Verb Forms
+V1: apply
+V2: applied
+V3: applied
+V-ing: applying
+V-s: applies
+Noun Forms
+book → books
+person → people
+child → children
+information → ไม่มีรูปพหูพจน์ทั่วไป
+Adjective Comparison
+fast → faster → fastest
+beautiful → more beautiful → most beautiful
+good → better → best
+
+การรู้รูปคำช่วยทั้ง Grammar, Reading, Writing และ TOEIC
+
+5. Word Family — ครอบครัวคำศัพท์
+
+การเรียนเป็นครอบครัวช่วยเพิ่มคำศัพท์เร็วกว่าเรียนทีละคำ
+
+ตัวอย่าง develop
+develop       พัฒนา
+developer     นักพัฒนา
+development   การพัฒนา
+developed     ที่พัฒนาแล้ว
+developing    ที่กำลังพัฒนา
+
+ตัวอย่างประโยค:
+
+We develop software.
+She is a software developer.
+The project is under development.
+6. Prefix, Suffix และ Root Word
+6.1 Prefix — ส่วนเติมหน้าคำ
+Prefix	ความหมาย	ตัวอย่าง
+un-	ไม่	unhappy
+re-	อีกครั้ง	rewrite
+pre-	ก่อน	preview
+mis-	ผิด	misunderstand
+dis-	ไม่/ตรงข้าม	disagree
+over-	มากเกินไป	overwork
+under-	ต่ำกว่า/ไม่เพียงพอ	underestimate
+inter-	ระหว่าง	international
+sub-	ใต้/ย่อย	subsystem
+auto-	อัตโนมัติ	automatic
+6.2 Suffix — ส่วนเติมท้ายคำ
+Suffix	มักเป็น	ตัวอย่าง
+-tion	Noun	information
+-ment	Noun	development
+-er	คน	developer
+-ness	สภาพ	happiness
+-able	Adjective	readable
+-ful	Adjective	useful
+-less	Adjective	useless
+-ly	Adverb	quickly
+-ize	Verb	organize
+-ify	Verb	simplify
+6.3 Root Word — รากศัพท์
+port = carry หรือ ขนส่ง
+transport
+import
+export
+portable
+
+รากศัพท์ช่วยเดาคำที่ไม่เคยเห็นได้ แต่ไม่ควรใช้แทนการเรียนจากบริบท
+
+7. Collocation — คำที่มักใช้คู่กัน
+
+Collocation สำคัญกว่าการท่องคำเดี่ยว เพราะทำให้พูดและเขียนเป็นธรรมชาติ
+
+Verb + Noun
+make a decision
+take a break
+have a meeting
+do homework
+pay attention
+Adjective + Noun
+heavy traffic
+strong coffee
+high quality
+serious problem
+major change
+Adverb + Adjective
+highly effective
+deeply concerned
+completely different
+strongly recommended
+
+ตัวอย่างข้อผิดพลาด:
+
+❌ do a decision
+✅ make a decision
+
+❌ strong rain
+✅ heavy rain
+
+หลักสำคัญ:
+
+อย่าจำแค่ decision = การตัดสินใจ
+ให้จำ make a decision = ตัดสินใจ
+
+8. Chunks — กลุ่มคำพร้อมใช้
+
+Chunks คือคำหลายคำที่ควรจำเป็นชุด
+
+I’m not sure.
+It depends on...
+As far as I know...
+Could you explain that again?
+I’m responsible for...
+The problem is caused by...
+Let me check.
+That makes sense.
+
+การจำเป็น Chunks ช่วยให้พูดเร็วขึ้น เพราะไม่ต้องสร้างประโยคใหม่ทุกคำ
+
+9. Synonym, Antonym และความแตกต่างของคำ
+Synonym — คำความหมายใกล้เคียง
+big / large / huge
+look / see / watch
+job / work / career
+say / tell / speak / talk
+
+คำเหล่านี้ไม่สามารถใช้แทนกันได้ทุกสถานการณ์
+
+ตัวอย่าง:
+
+say something
+tell someone
+speak English
+talk to my manager
+Antonym — คำตรงข้าม
+increase ↔ decrease
+accept ↔ reject
+possible ↔ impossible
+temporary ↔ permanent
+
+เรียนเป็นคู่ช่วยจำได้ง่ายขึ้น
+
+10. Phrasal Verbs
+
+Phrasal Verb คือ Verb + คำอื่นแล้วเกิดความหมายใหม่
+
+turn on       เปิด
+turn off      ปิด
+find out      ค้นพบข้อมูล
+give up       ยอมแพ้
+look for      มองหา
+look after    ดูแล
+set up        ติดตั้ง/จัดตั้ง
+carry out     ดำเนินการ
+figure out    หาคำตอบ
+run out of    หมด
+
+ตัวอย่าง:
+
+I’m looking for a new job.
+Please turn off the computer.
+We need to figure out the problem.
+
+สำหรับชีวิตประจำวันและการพูด Phrasal Verbs สำคัญมาก
+
+11. Idioms และสำนวน
+
+เรียนเฉพาะสำนวนที่ใช้จริง ไม่จำเป็นต้องท่องสำนวนหายาก
+
+a piece of cake = ง่ายมาก
+break the ice = เริ่มพูดให้บรรยากาศผ่อนคลาย
+on the same page = เข้าใจตรงกัน
+under the weather = รู้สึกไม่สบาย
+hit the deadline = ทำทันกำหนด
+
+ควรเรียนหลังจากมีคำศัพท์พื้นฐานแล้ว
+
+12. หมวดคำศัพท์ที่จำเป็นจริง
+ระดับที่ 1: ชีวิตประจำวัน
+คนและครอบครัว
+บ้านและสิ่งของ
+เวลา วัน เดือน ปี
+ตัวเลขและราคา
+อาหารและเครื่องดื่ม
+ร่างกาย
+เสื้อผ้า
+สถานที่
+การเดินทาง
+สภาพอากาศ
+อารมณ์
+กิจวัตรประจำวัน
+คำกริยาพื้นฐาน
+คำคุณศัพท์พื้นฐาน
+ระดับที่ 2: การสื่อสาร
+การถามและตอบ
+การขอความช่วยเหลือ
+การแสดงความคิดเห็น
+การเห็นด้วยและไม่เห็นด้วย
+การอธิบายปัญหา
+การขอโทษ
+การขอบคุณ
+การแนะนำ
+การเปรียบเทียบ
+การเล่าอดีต
+การพูดถึงแผนอนาคต
+ระดับที่ 3: การทำงาน
+ตำแหน่งงาน
+หน้าที่ความรับผิดชอบ
+บริษัทและแผนก
+การประชุม
+อีเมล
+เอกสาร
+กำหนดเวลา
+โครงการ
+ปัญหาและแนวทางแก้
+ลูกค้า
+การขาย
+การเงินพื้นฐาน
+การสมัครงาน
+การสัมภาษณ์งาน
+ระดับที่ 4: Technology และ AI
+Computer fundamentals
+Software development
+Database
+API
+Testing
+Security
+Cloud
+Git
+Data
+Machine Learning
+AI และ LLM
+Prompt Engineering
+Deployment
+Monitoring
+
+ตัวอย่างคำที่ควรรู้:
+
+requirement
+feature
+issue
+bug
+release
+deploy
+maintain
+retrieve
+generate
+validate
+evaluate
+permission
+performance
+reliable
+scalable
+ระดับที่ 5: TOEIC
+
+แบ่งเป็นหมวดหลัก:
+
+Office
+Personnel
+Recruitment
+Meetings
+Travel
+Transportation
+Hotel
+Restaurant
+Shopping
+Banking
+Accounting
+Marketing
+Sales
+Manufacturing
+Shipping
+Construction
+Healthcare
+Contracts
+Customer service
+Technology
+
+TOEIC ไม่ได้วัดแค่คำแปล แต่ทดสอบ:
+
+Part of Speech
+Word Family
+Collocation
+Preposition
+Synonym
+คำศัพท์จากบริบท
+ภาษาทางการในงาน
+13. Roadmap จำนวนคำศัพท์
+
+จำนวนคำเป็นเพียงค่าประมาณ เพราะวิธีนับแต่ละแหล่งไม่เหมือนกัน
+
+ระดับ	เป้าหมายโดยประมาณ	ทำอะไรได้
+Starter	300–500 คำ	เข้าใจคำพื้นฐานมากที่สุด
+A1	500–1,000 คำ	สื่อสารเรื่องง่าย ๆ
+A2	1,000–2,000 คำ	ใช้ชีวิตประจำวันและเดินทาง
+B1	2,000–3,500 คำ	สนทนาและอ่านเรื่องทั่วไป
+B2	3,500–5,000 คำ	ทำงาน อ่านข่าว และประชุม
+Work/TOEIC	5,000 คำขึ้นไป	ใช้ภาษาในงานและทำข้อสอบได้ดีขึ้น
+
+ไม่ควรรอให้จำครบ 5,000 คำก่อนเริ่มพูด ให้พูดตั้งแต่ 100 คำแรก
+
+14. ลำดับการเรียนที่เร็วที่สุด
+Phase 1: Core 500 Words
+
+เรียน:
+
+Pronouns
+Be / Have / Do
+Modal verbs
+กริยาพื้นฐาน
+คำนามรอบตัว
+คำคุณศัพท์พื้นฐาน
+เวลา ตัวเลข สถานที่
+Question words
+Prepositions พื้นฐาน
+
+เป้าหมาย: สร้างประโยคสั้นได้
+
+I work here.
+She has a car.
+Where do you live?
+I need help.
+Phase 2: Daily 1,000 Words
+
+เพิ่ม:
+
+กิจวัตร
+อาหาร
+การเดินทาง
+สุขภาพ
+อารมณ์
+การซื้อของ
+การสื่อสาร
+Phrasal verbs พื้นฐาน
+
+เป้าหมาย: สนทนาเรื่องชีวิตประจำวัน
+
+Phase 3: Functional 2,000 Words
+
+เพิ่ม:
+
+Collocations
+Word Families
+Synonyms
+Chunks
+การเล่าเรื่อง
+การแสดงความคิดเห็น
+การอธิบายปัญหา
+
+เป้าหมาย: พูดและเขียนเรื่องทั่วไปได้
+
+Phase 4: Work 3,500 Words
+
+เพิ่ม:
+
+Business vocabulary
+Email vocabulary
+Meeting vocabulary
+Project vocabulary
+Technology vocabulary
+Formal language
+
+เป้าหมาย: สื่อสารในที่ทำงาน
+
+Phase 5: TOEIC และ Professional Vocabulary
+
+เพิ่ม:
+
+TOEIC topic vocabulary
+Academic words ที่ใช้บ่อย
+Formal synonyms
+Common business collocations
+Word formation
+Context clues
+
+เป้าหมาย: อ่านเร็ว ฟังเร็ว และทำข้อสอบได้
+
+15. วิธีเรียนคำศัพท์หนึ่งคำให้ใช้ได้จริง
+
+ใช้กระบวนการ 7 ขั้น
+
+ขั้นที่ 1 เห็นคำ
+require
+ขั้นที่ 2 ฟังและออกเสียง
+/rɪˈkwaɪər/
+ริ-ไควเออร์
+ขั้นที่ 3 รู้ความหมายหลัก
+require = ต้องการ, กำหนดให้ต้องมี
+ขั้นที่ 4 รู้ชนิดคำ
+require = Verb
+ขั้นที่ 5 เรียน Word Family
+require
+required
+requirement
+ขั้นที่ 6 เรียน Collocation
+require approval
+meet the requirements
+system requirements
+ขั้นที่ 7 สร้างประโยคของตัวเอง
+This feature requires approval.
+The system meets all requirements.
+
+คำหนึ่งคำควรผ่านทั้งการอ่าน ฟัง พูด และเขียน
+
+16. ระบบทบทวนแบบ SRS
+
+ทบทวนก่อนที่จะลืม
+
+เรียนวันแรก
+ทบทวนหลังเรียน
+ทบทวนวันถัดไป
+ทบทวนอีกครั้งใน 3 วัน
+ทบทวนใน 7 วัน
+ทบทวนใน 14 วัน
+ทบทวนใน 30 วัน
+
+ให้แบ่งผลการจำเป็น 4 ระดับ
+
+ระดับ	ความหมาย	การจัดการ
+Again	จำไม่ได้	ทบทวนทันที
+Hard	จำได้ยาก	ทบทวนเร็ว
+Good	จำได้	เว้นระยะเพิ่ม
+Easy	ใช้ได้คล่อง	เว้นระยะนาน
+17. ตารางเรียนประจำวัน
+แบบ 30 นาที
+เวลา	กิจกรรม
+5 นาที	ทบทวนคำเก่า
+10 นาที	เรียนคำใหม่ 5–10 คำ
+5 นาที	ฟังและพูดตาม
+5 นาที	แต่งประโยค
+5 นาที	ทำ Quiz
+แบบ 60 นาที
+เวลา	กิจกรรม
+10 นาที	SRS คำเก่า
+15 นาที	คำใหม่
+10 นาที	Listening
+10 นาที	Speaking
+10 นาที	Reading/Writing
+5 นาที	Quiz
+
+จำนวนที่เหมาะสม:
+
+เริ่มต้น: 5 คำต่อวัน
+ปกติ: 10 คำต่อวัน
+เร่งรัด: 15–20 คำต่อวัน
+ไม่ควรเรียนจำนวนมากจนไม่มีเวลาทบทวน
+18. แบบฝึกหัดที่ต้องมี
+
+คำศัพท์หนึ่งชุดควรมีแบบฝึกหัดเหล่านี้
+
+เลือกคำแปล
+ฟังแล้วเลือกคำ
+เติมตัวอักษร
+จับคู่คำกับรูปภาพ
+เลือก Part of Speech
+เลือก Word Family
+เติมคำในประโยค
+จับคู่ Collocation
+เลือก Synonym
+เลือก Antonym
+เรียงคำเป็นประโยค
+พูดตามเสียง
+พูดจากภาพ
+แต่งประโยค
+เขียนย่อหน้าสั้น
+Quiz แบบจับเวลา
+ทบทวนคำที่ตอบผิด
+ใช้คำในสถานการณ์จริง
+19. วิธีวัดว่า “รู้คำศัพท์แล้ว”
+
+ไม่ถือว่ารู้เพียงเพราะจำคำแปลได้
+
+ระดับ 1: Recognition
+
+เห็นคำแล้วรู้ความหมาย
+
+ระดับ 2: Listening Recognition
+
+ได้ยินแล้วรู้ว่าเป็นคำอะไร
+
+ระดับ 3: Controlled Usage
+
+เติมคำในประโยคได้
+
+ระดับ 4: Active Usage
+
+พูดและเขียนได้เอง
+
+ระดับ 5: Automatic Usage
+
+ใช้คำได้ทันทีโดยไม่ต้องแปลในหัว
+
+คำศัพท์ควรถือว่า “ผ่าน” เมื่อ:
+
+อ่านออก
+ฟังออก
+รู้ความหมายหลัก
+รู้ชนิดคำ
+ใช้ Collocation ได้
+สร้างประโยคเองได้
+ยังจำได้หลังผ่านไปหลายวัน
+20. ข้อผิดพลาดที่ทำให้จำคำศัพท์ไม่ได้
+1. ท่องคำแปลอย่างเดียว
+develop = พัฒนา
+
+ควรเรียน:
+
+develop software
+software development
+software developer
+2. เรียนครั้งเดียวไม่ทบทวน
+
+คำศัพท์จะหายเร็วเมื่อไม่มีการดึงกลับมาใช้
+
+3. เรียนคำยากก่อนคำที่ใช้บ่อย
+
+ควรเริ่มจากคำที่พบในชีวิตประจำวัน งาน และข้อสอบบ่อย
+
+4. ไม่เรียนเสียง
+
+อ่านรู้เรื่องแต่ฟังเจ้าของภาษาไม่ออก
+
+5. ไม่สร้างประโยค
+
+รู้คำแต่ไม่สามารถนำไปพูดหรือเขียนได้
+
+6. เรียนคำเดี่ยวมากเกินไป
+
+ควรเรียนคำพร้อม Collocation และ Chunks
+
+7. จำทุกความหมายพร้อมกัน
+
+เริ่มจากความหมายหลักและบริบทที่ใช้บ่อยก่อน
+
+21. โครงสร้างหลักสูตร Vocabulary แบบ Standalone
+Module 1: Vocabulary Fundamentals
+Vocabulary คืออะไร
+Active และ Passive Vocabulary
+วิธีเรียนคำศัพท์อย่างถูกต้อง
+Module 2: Spelling and Pronunciation
+ตัวอักษรและเสียง
+IPA
+Syllables
+Word stress
+Listening recognition
+Module 3: Parts of Speech
+Noun
+Verb
+Adjective
+Adverb
+Function words
+Module 4: Word Forms
+Verb forms
+Plural nouns
+Comparative adjectives
+Irregular forms
+Module 5: Word Families
+Noun–Verb–Adjective–Adverb
+การเปลี่ยนรูปคำ
+TOEIC word formation
+Module 6: Prefixes, Suffixes and Roots
+ส่วนประกอบของคำ
+การเดาความหมาย
+การขยายคลังคำศัพท์
+Module 7: Collocations and Chunks
+คำที่ใช้คู่กัน
+ประโยคสำเร็จรูป
+ภาษาที่เป็นธรรมชาติ
+Module 8: Synonyms and Antonyms
+คำใกล้เคียง
+คำตรงข้าม
+ความแตกต่างของบริบท
+Module 9: Phrasal Verbs and Idioms
+Phrasal verbs ที่ใช้บ่อย
+สำนวนชีวิตประจำวัน
+สำนวนในที่ทำงาน
+Module 10: Topic Vocabulary
+Daily life
+Travel
+Work
+Business
+Technology
+AI
+Module 11: TOEIC Vocabulary
+TOEIC topics
+Formal vocabulary
+Collocations
+Context clues
+Word formation
+Module 12: Vocabulary Practice System
+SRS
+Flashcards
+Listening
+Speaking
+Writing
+Quiz
+Progress tracking
+22. สูตร Vocabulary แบบครบจบ
+Vocabulary Mastery
+        │
+        ├── อ่านคำได้
+        ├── ออกเสียงได้
+        ├── ฟังคำออก
+        ├── รู้ความหมาย
+        ├── รู้ชนิดคำ
+        ├── รู้รูปคำ
+        ├── รู้ Word Family
+        ├── รู้ Collocation
+        ├── รู้บริบท
+        ├── พูดได้
+        ├── เขียนได้
+        └── จำได้ระยะยาว
+สูตรที่ต้องใช้กับทุกคำ
+
+Word + Sound + Meaning + Form + Family + Collocation + Context + Output + Review
+
+หรือจำสั้น ๆ ว่า:
+
+เห็น → ฟัง → เข้าใจ → เชื่อมคำ → ใช้ → ทบทวน
+
+นี่คือโครงสร้าง Vocabulary ที่ครบตั้งแต่เริ่มต้นจนถึงระดับทำงานและสอบ TOEIC ได้ โดยหัวใจสำคัญที่สุดคือ เรียนคำศัพท์เป็นกลุ่มคำและนำไปใช้จริง ไม่ใช่จำคำแปลเพียงอย่างเดียว

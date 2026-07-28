@@ -1,0 +1,1685 @@
+Roadmap ระบบสื่อการเรียนภาษาอังกฤษสำหรับ AI Engineer
+
+แนวทางที่เหมาะที่สุดคือ ไม่สร้างภาษาอังกฤษ 24 หลักสูตรแยกตาม AI Module เพราะจะมี Grammar และ Vocabulary ซ้ำกันมาก ควรแบ่งระบบออกเป็น 2 ชั้น:
+
+English Core Path — เรียนภาษาอังกฤษตั้งแต่ศูนย์จนใช้งานและสอบ TOEIC ได้
+AI English Context Path — นำภาษาอังกฤษที่เรียนแล้วไปใช้กับ AI Modules 1–24
+
+โครงสร้างระดับผู้เรียนควรอิง CEFR ตั้งแต่ A1–C2 และใช้ “Can-do Outcome” เช่น อ่านคำอธิบายได้ ฟังขั้นตอนเข้าใจ หรืออธิบายระบบได้ มากกว่าการวัดเพียงว่าเรียนจบกี่บท
+
+1. เป้าหมายของระบบ
+
+เมื่อเรียนจบ ผู้เรียนควรทำได้จริง 6 ด้าน
+
+ด้าน	ผลลัพธ์ที่ต้องทำได้
+อ่าน	อ่านบทความ เอกสาร API และ AI Documentation ได้
+ฟัง	ฟังบทเรียน การประชุม และคำอธิบายทางเทคนิคได้
+เขียน	เขียนประโยค อีเมล Prompt Summary และ Technical Explanation ได้
+พูด	แนะนำตัว อธิบายงาน นำเสนอระบบ และตอบสัมภาษณ์ได้
+TOEIC	ทำข้อสอบครบ Parts 1–7 พร้อมบริหารเวลาได้
+AI English	อธิบาย AI Modules 1–24 เป็นภาษาอังกฤษได้
+
+TOEIC Listening and Reading ปัจจุบันแบ่งเป็น Listening 100 ข้อ 45 นาที และ Reading 100 ข้อ 75 นาที โดย Listening มี Parts 1–4 และ Reading มี Parts 5–7
+
+2. โครงสร้างหลักสูตรที่จำเป็นจริง
+Phase 0: ตรวจระดับและสร้างแผนส่วนตัว
+Module E00: Placement Test & Learning Goal
+
+ระบบต้องตรวจแยกเป็นรายทักษะ ไม่ใช้คะแนนรวมเพียงคะแนนเดียว
+
+Alphabet และการอ่านออกเสียง
+Vocabulary
+Grammar
+Reading
+Listening
+Speaking
+Writing
+TOEIC Diagnostic
+Technical English
+
+ผลลัพธ์ตัวอย่าง:
+
+Overall Level: A1
+
+Reading: A2
+Listening: A1
+Speaking: Pre-A1
+Writing: A1
+Grammar: A1
+TOEIC Mock: 315
+
+Priority:
+1. Pronunciation
+2. Sentence structure
+3. Listening
+4. Core vocabulary
+3. English Core Path
+Phase 1: เริ่มต้นจากศูนย์ — อ่านออกและสร้างประโยคได้
+Module E01: Alphabet, Sounds & Basic Pronunciation
+
+เรียนเฉพาะสิ่งที่ใช้จริง:
+
+ชื่อตัวอักษร A–Z
+เสียงพยัญชนะและสระที่สำคัญ
+การสะกดคำ
+พยางค์และการเน้นเสียง
+เสียงท้ายคำ
+การอ่านคำจาก Dictionary
+IPA เฉพาะสัญลักษณ์ที่จำเป็น
+เสียงที่คนไทยมักสับสน เช่น R/L, V/W, TH, SH/CH/J
+
+ผลลัพธ์: เห็นคำใหม่แล้วสามารถลองอ่านได้อย่างมีหลักการ
+
+Module E02: Phonics & Word Reading
+
+เนื้อหาหลัก:
+
+Short vowels และ long vowels
+Silent letters
+Consonant blends
+Word families
+Prefix และ suffix
+การแบ่งคำเป็นพยางค์
+การอ่านคำเทคนิค เช่น architecture, embedding, reliability
+
+ไม่ควรทำ: บังคับให้จำกฎ Phonics ทุกข้อก่อนเริ่มใช้ภาษา
+
+Module E03: Core Vocabulary & Chunks
+
+อย่าสอนคำศัพท์เป็นคำเดี่ยวอย่างเดียว ให้สอนเป็นกลุ่มคำที่นำไปใช้ได้ทันที
+
+make a request
+send a response
+handle an error
+retrieve data
+deploy an application
+evaluate the result
+
+แบ่งคำศัพท์ออกเป็น:
+
+ชีวิตประจำวัน
+การทำงาน
+คำกริยาที่ใช้บ่อย
+คำเชื่อม
+Technology English
+AI English
+TOEIC Workplace Vocabulary
+
+ระบบควรมี Spaced Repetition และให้ผู้เรียนทบทวนจากคำที่ตอบผิดจริง
+
+Module E04: Sentence Building
+
+นี่คือ Module สำคัญที่สุดของผู้เริ่มต้น
+
+เรียนโครงสร้าง:
+
+Subject + Verb
+Subject + Verb + Object
+Subject + Be + Adjective
+Subject + Be + Noun
+Subject + Verb + Object + Complement
+
+ตัวอย่าง:
+
+The model generates text.
+The system is reliable.
+The API returns JSON.
+The developer fixed the error.
+
+ผู้เรียนต้องแยกได้ว่า:
+
+ใครหรืออะไรเป็นประธาน
+คำใดเป็นกริยา
+กริยาต้องการกรรมหรือไม่
+คำใดขยายคำนามหรือกริยา
+Phase 2: Grammar 80/20 — เรียนเฉพาะที่ใช้บ่อย
+Module E05: Nouns, Pronouns & Articles
+
+เนื้อหาจำเป็น:
+
+Common และ proper nouns
+Singular และ plural
+Countable และ uncountable nouns
+Subject และ object pronouns
+Possessive forms
+a, an, the
+some, any, many, much, few, little
+
+ใช้กับ AI:
+
+a model
+the model
+some data
+a piece of information
+many tokens
+much information
+Module E06: Verb System
+
+เรียนระบบกริยาก่อนเรียน Tense
+
+V1, V2, V3, V-ing, V-s
+be, have, do
+Regular และ irregular verbs
+Action, stative และ linking verbs
+Subject–verb agreement
+
+สูตรหลัก:
+
+Modal + V1
+Have/has/had + V3
+Be + V-ing
+Be + V3
+He/She/It + V-s
+Past event + V2
+Module E07: Essential Tenses
+
+ไม่จำเป็นต้องเริ่มด้วยการท่องครบทุก Tense ให้เน้น:
+
+Present Simple
+Present Continuous
+Past Simple
+Present Perfect
+Future ด้วย will และ be going to
+Past Continuous ในฐานะโครงสร้างเสริม
+
+ตัวอย่างการใช้กับงาน AI:
+
+The system processes user requests.
+The model is generating a response.
+We deployed the service yesterday.
+The team has completed the evaluation.
+We will improve the retrieval pipeline.
+Module E08: Questions, Negatives & Modals
+
+เนื้อหาจำเป็น:
+
+Yes/No questions
+Wh-questions
+Negative sentences
+can, could, should, must, may, might
+การขอข้อมูลและขอความช่วยเหลือ
+การตั้งคำถามในที่ประชุม
+
+ตัวอย่าง:
+
+What does this function return?
+Why did the request fail?
+Could you explain the architecture?
+The system must validate the input.
+The response might be incorrect.
+Module E09: Description & Connection
+
+เรียน:
+
+Adjectives
+Adverbs
+Comparatives และ superlatives
+Prepositions ที่ใช้บ่อย
+Conjunctions
+Sequence words
+Cause and effect
+
+คำเชื่อมสำคัญ:
+
+first, next, then, finally
+because, so, therefore
+however, although
+while, whereas
+if, unless
+Module E10: Work and TOEIC Grammar
+
+รวม Grammar ที่จำเป็นต่อการทำงานและข้อสอบ:
+
+Passive voice
+Relative clauses
+Gerund และ infinitive
+Participles
+Conditionals 0, 1 และ 2
+Word forms
+Subject–verb agreement
+Parallel structure
+Clauses และ phrases
+
+ไม่ควรลงลึก:
+
+Grammar เชิงวรรณกรรม
+โครงสร้างโบราณ
+Rare idioms
+Tense ที่แทบไม่ใช้ในชีวิตและการทำงาน
+การจำกฎจำนวนมากโดยไม่มีสถานการณ์ใช้งาน
+4. Skill Path
+Module E11: Reading
+
+ฝึกจากง่ายไปยาก:
+
+คำและป้าย
+ประโยคสั้น
+Paragraph
+อีเมลและประกาศ
+บทความ
+Documentation
+API Reference
+AI Technical Paper ฉบับย่อ
+
+ทักษะที่ต้องสอน:
+
+Skimming
+Scanning
+Main idea
+Supporting details
+Reference words
+Context clues
+การแยก Fact กับ Opinion
+การอ่านตาราง แผนภาพ และ JSON
+Module E12: Listening
+
+แบ่งการฝึกเป็น 4 ระดับ:
+
+ฟังเสียงและแยกคำ
+ฟังประโยคสั้น
+ฟังบทสนทนา
+ฟังคำอธิบายและการประชุม
+
+รูปแบบฝึก:
+
+Listen without text
+→ Answer
+→ Listen with transcript
+→ Mark unknown chunks
+→ Shadow
+→ Listen again
+→ Summarize
+
+ต้องมี:
+
+ปรับความเร็วเสียง
+Transcript เปิด–ปิดได้
+เล่นซ้ำรายประโยค
+Dictation
+Shadowing
+Accent ที่หลากหลาย
+บันทึกคำที่ฟังผิดลงระบบทบทวน
+Module E13: Speaking
+
+ลำดับการฝึก:
+
+อ่านตาม
+พูดตามเสียง
+เปลี่ยนคำใน Sentence Pattern
+ตอบคำถามสั้น
+อธิบายภาพ
+อธิบายกระบวนการ
+แสดงความคิดเห็น
+นำเสนอ Technical Topic
+
+Speaking Framework:
+
+Point
+→ Reason
+→ Example
+→ Result
+
+ตัวอย่าง:
+
+I prefer RAG because it can use external information.
+For example, the system can retrieve company documents.
+As a result, the answer can be more relevant.
+
+ระบบควรประเมิน:
+
+Pronunciation
+Fluency
+Grammar
+Vocabulary
+Relevance
+Organization
+
+ไม่ควรหักคะแนนสำเนียง เพียงเพราะไม่เหมือนเจ้าของภาษา หากยังสื่อสารเข้าใจได้
+
+Module E14: Writing
+
+ลำดับการเรียน:
+
+Sentence
+→ Connected sentences
+→ Paragraph
+→ Message
+→ Email
+→ Summary
+→ Technical explanation
+→ Report
+
+งานเขียนที่ควรมี:
+
+แนะนำตัว
+อธิบายงาน
+ขอข้อมูล
+รายงานปัญหา
+เขียนอีเมล
+สรุปบทความ
+เขียน Prompt
+อธิบาย Architecture
+เขียน Bug Report
+เขียน Incident Summary
+Module E15: Workplace & Technical English
+
+สถานการณ์หลัก:
+
+Daily meeting
+Asking for clarification
+Reporting progress
+Explaining a blocker
+Giving an estimate
+Reviewing code
+Presenting architecture
+Writing documentation
+Technical interview
+Communicating with clients
+
+ตัวอย่าง Framework:
+
+Current status:
+The API implementation is complete.
+
+Problem:
+The integration test is failing.
+
+Cause:
+The test database contains incomplete data.
+
+Next action:
+I will update the seed data and rerun the tests.
+5. TOEIC Path
+Module E16: TOEIC Listening and Reading
+Listening
+Part 1: Photographs
+Part 2: Question–Response
+Part 3: Conversations
+Part 4: Talks
+Reading
+Part 5: Incomplete Sentences
+Part 6: Text Completion
+Part 7: Reading Comprehension
+
+ระบบควรประกอบด้วย:
+
+Diagnostic Test
+Lesson by Part
+Question Type Training
+Timed Practice
+Error Analysis
+Vocabulary Review
+Grammar Weakness Report
+Mini Test
+Full Mock Test
+Score Trend
+
+ETS ระบุว่า TOEIC L&R วัดความเข้าใจภาษาอังกฤษในบริบทการทำงานและชีวิตวิชาชีพ คะแนนรวมอยู่ในช่วง 10–990 คะแนน
+
+ควรกำหนดเป้าหมายภายในระบบได้ เช่น:
+
+Foundation Target
+Workplace Target
+Job Application Target
+Advanced Target
+
+ไม่ควรบังคับว่าผู้เรียนทุกคนต้องตั้งเป้าคะแนนเดียวกัน
+
+Module E17: TOEIC Speaking and Writing — เส้นทางเสริม
+
+แม้เป้าหมายหลักจะเป็น TOEIC Listening and Reading แต่ระบบควรแยกเส้นทาง Speaking/Writing ไว้ด้วย เพราะการสอบ L&R เพียงอย่างเดียวไม่ได้ทำให้พูดคล่องหรือเขียนได้โดยอัตโนมัติ
+
+TOEIC Speaking มี 11 ข้อ ใช้เวลาประมาณ 20 นาที ส่วน Writing มี 8 ข้อ ใช้เวลาประมาณ 60 นาที โดยมีทั้งการอ่านออกเสียง อธิบายภาพ ตอบคำถาม เขียนอีเมล และเขียนแสดงความคิดเห็น
+
+6. การเชื่อม English กับ AI Modules 1–24
+AI English Context Mapping
+AI Module	ภาษาอังกฤษที่ต้องใช้	Assignment
+1. Evolution of AI	Past tense, timeline, change verbs	เล่าวิวัฒนาการ AI เป็นลำดับเวลา
+2. LLM Architecture	Definitions, noun phrases, component vocabulary	อธิบายส่วนประกอบจากแผนภาพ
+3. Inference Lifecycle	Sequence words, process language, passive voice	อธิบาย Input → Prefill → Decode → Output
+4. Deterministic vs Stochastic	Compare/contrast, probability language	เปรียบเทียบสองแนวทาง
+5. API-First AI	Request/response verbs, endpoint terminology	อธิบาย API Contract
+6. Prompt Engineering	Imperatives, constraints, examples	เขียน Prompt ที่มี Goal, Rules และ Output
+7. Advanced Reasoning	Cause/effect, justification	อธิบายเหตุผลและหลักฐาน
+8. Structured Outputs	JSON, fields, data types, validation language	ออกแบบ Output Schema
+9. Function & Tool Calling	Parameters, conditions, call/return/error	อธิบาย Tool Call Flow
+10. Managing LLM Failures	Troubleshooting and incident language	เขียน Failure Report
+11. Token Optimization	Quantity, measurement, trade-offs	เปรียบเทียบ Cost กับ Quality
+12. Prompt Chains	Sequencing and dependencies	อธิบาย Prompt Chain ทีละขั้น
+13. RAG Architecture	Retrieval terminology and process description	อธิบาย RAG End-to-End
+14. Data Ingestion	Pipeline verbs and passive voice	อธิบายการนำข้อมูลเข้าสู่ระบบ
+15. Chunking Strategies	Comparison, advantages and limitations	เปรียบเทียบ Chunking 3 แบบ
+16. Embedding Models	Abstract definitions and analogy	อธิบาย Embedding ด้วยตัวอย่าง
+17. Vector Database	Index, storage, retrieval vocabulary	อธิบาย Vector DB Workflow
+18. Similarity Search	Score, ranking, filtering, relevance	อธิบายผลการค้นหา
+19. RAG Evaluation	Criteria, evidence, metrics, findings	สรุป Evaluation Report
+20. Multi-Agent Systems	Roles, delegation, handoff, status	อธิบายหน้าที่แต่ละ Agent
+21. Intelligent Routing	Conditions and decision language	สร้าง If/Then Routing Flow
+22. API Automation	Trigger, action, event, schedule	อธิบาย Automation Workflow
+23. Secure Deployment	Permission, warning, policy, risk	นำเสนอ Security Checklist
+24. Reliability Engineering	Availability, latency, recovery, incident	เขียน Reliability Report
+7. Template ของบทเรียน AI แต่ละ Module
+
+ทุก AI Module ใช้โครงสร้างเดียวกันเพื่อให้ผู้เรียนไม่สับสน
+
+1. Concept Preview
+ภาพรวมภาษาไทย
+แผนภาพ
+เป้าหมายที่ต้องทำได้
+2. Key Vocabulary
+
+ประมาณ 8–15 คำต่อบท เช่น:
+
+retrieve
+generate
+evaluate
+reliable
+latency
+failure
+deployment
+permission
+
+แต่ละคำต้องมี:
+
+ความหมาย
+Pronunciation
+Word form
+Collocation
+ประโยคตัวอย่าง
+Audio
+Quiz
+3. Grammar in Context
+
+สอน Grammar เฉพาะที่จำเป็นต่อบทนั้น เช่น Module 3 ใช้ Sequence Words และ Passive Voice
+
+4. Reading
+
+บทอ่านระดับผู้เรียน โดยมีโหมด:
+
+Thai Support
+Bilingual
+English Only
+Technical Original
+5. Listening
+Audio 1–4 นาที
+Transcript เปิด–ปิด
+Listening questions
+Dictation
+Shadowing
+6. Speaking
+
+ให้พูดสรุปเรื่องนั้น 30–180 วินาทีตามระดับ
+
+7. Writing
+
+เริ่มจาก 3 ประโยค และเพิ่มจนถึง Technical Summary
+
+8. Knowledge Quiz
+
+ตรวจทั้งภาษาอังกฤษและความรู้ AI แยกคะแนนออกจากกัน
+
+English Score: 78%
+AI Knowledge Score: 90%
+9. Mini Project
+
+ตัวอย่าง:
+
+Create a diagram of a RAG system.
+Explain each component in English.
+Record a two-minute presentation.
+Write a short technical summary.
+10. Review
+
+คำที่ผิด Grammar ที่ผิด และคำออกเสียงผิดจะถูกส่งเข้า Personal Review Queue
+
+8. หน้าหลักของระบบ
+ฝั่งผู้เรียน
+Onboarding
+Placement Test
+Personal Roadmap
+Dashboard
+Lesson Player
+Vocabulary Review
+Pronunciation Lab
+Listening Lab
+Reading Lab
+Speaking Practice
+Writing Practice
+TOEIC Center
+AI English Lab
+Project Workspace
+Progress Report
+Achievement และ Learning Streak
+ฝั่งผู้ดูแล
+Course Management
+Lesson Editor
+Question Bank
+Audio Management
+Prompt Management
+Content Versioning
+Audit Center
+User Progress
+AI Evaluation
+Security Log
+Release Management
+9. Roles สำหรับตรวจสอบระบบ
+Role 1: English Teacher / Language Auditor
+
+รับผิดชอบ:
+
+Grammar ถูกต้อง
+คำศัพท์เหมาะกับระดับ
+ประโยคเป็นธรรมชาติ
+คำแปลไม่แข็งหรือผิดบริบท
+Pronunciation และ IPA ถูกต้อง
+ตัวอย่างใช้ได้จริง
+คำตอบและคำอธิบายข้อสอบถูกต้อง
+ระดับความยากสอดคล้องกับผู้เรียน
+
+รายการตรวจ:
+
+[ ] Grammar correct
+[ ] Natural English
+[ ] Translation accurate
+[ ] Vocabulary level appropriate
+[ ] Pronunciation accurate
+[ ] Examples realistic
+[ ] Answer explanation complete
+[ ] No ambiguous question
+Role 2: TOEIC Specialist
+
+รับผิดชอบ:
+
+รูปแบบโจทย์ตรงกับทักษะของ Part นั้น
+Distractors สมเหตุสมผล
+เวลาเหมาะสม
+Vocabulary อยู่ในบริบทการทำงาน
+วิเคราะห์สาเหตุที่ผู้เรียนตอบผิด
+ไม่มีการลอกข้อสอบจริงที่มีลิขสิทธิ์
+Role 3: Instructional Designer
+
+รับผิดชอบด้านการเรียนรู้:
+
+แต่ละบทมี Objective ชัดเจน
+เนื้อหาไม่เยอะเกินไป
+เรียนจากง่ายไปยาก
+มีกิจกรรม Recall และ Practice
+ผู้เรียนต้องสร้าง Output ไม่ใช่อ่านอย่างเดียว
+Quiz วัด Objective ของบทจริง
+มีการทบทวนระยะยาว
+Role 4: UX/UI Designer Auditor
+
+ตรวจ:
+
+หน้าจอใช้งานง่าย
+ลำดับสายตาชัด
+ตัวหนังสืออ่านง่าย
+สีเข้ากับ Project
+Contrast เพียงพอ
+ขนาดปุ่มเหมาะสม
+รองรับมือถือและ Desktop
+ไม่แสดงข้อมูลมากเกินไปในหน้าเดียว
+สถานะเรียนชัดเจน
+Feedback หลังตอบคำถามชัด
+รองรับ Keyboard และ Screen Reader
+
+Design System ควรกำหนดกลาง:
+
+Typography
+Color palette
+Spacing scale
+Border radius
+Button styles
+Input styles
+Card styles
+Success / Warning / Error states
+Lesson layout
+Quiz layout
+
+หน้า Lesson ไม่ควรใช้สีจำนวนมาก สีควรมีหน้าที่ชัดเจน เช่น:
+
+Primary — การกระทำหลัก
+Success — คำตอบถูก
+Warning — จุดที่ต้องระวัง
+Error — คำตอบผิดหรือปัญหา
+Neutral — เนื้อหาทั่วไป
+Role 5: AI Engineer Auditor
+
+รับผิดชอบ:
+
+เนื้อหา AI ถูกต้อง
+ตัวอย่างไม่ล้าสมัยหรือทำให้เข้าใจผิด
+Prompt มี Scope ชัดเจน
+Structured Output ตรวจสอบได้
+RAG ตอบจากหลักฐาน
+ไม่มีการสร้าง Citation ปลอม
+มีการจัดการ Hallucination
+มี Evaluation Dataset
+Prompt และ Model Version ถูกบันทึก
+AI Feedback สม่ำเสมอ
+
+ควรแยกคะแนน:
+
+Technical correctness
+Groundedness
+Relevance
+Completeness
+Instruction following
+Safety
+Language quality
+Role 6: Developer Auditor
+
+รับผิดชอบ:
+
+Architecture และ Code Quality
+API Contract
+Validation
+Error handling
+Logging
+Performance
+Database migration
+Backward compatibility
+Automated tests
+Monitoring
+Rollback
+
+รายการทดสอบขั้นต่ำ:
+
+Unit Test
+Integration Test
+API Test
+Blazor Component Test
+End-to-End Test
+Regression Test
+Performance Test
+AI Evaluation Test
+Role 7: Security System Auditor
+
+ตรวจ:
+
+Authentication
+Role และ Permission
+ข้อมูลส่วนบุคคล
+Password และ Session
+Secret management
+File upload
+Input validation
+Rate limiting
+Prompt injection
+Data leakage
+Cross-user data access
+Audit log
+Backup และ recovery
+
+ข้อมูลเสียงพูด งานเขียน และประวัติการเรียนควรกำหนดอายุการเก็บข้อมูล พร้อมให้ผู้ใช้ดู ดาวน์โหลด หรือลบข้อมูลของตนได้ตามนโยบายของระบบ
+
+Role 8: QA Automation
+
+เป็น Role ที่ควรเพิ่ม เพราะ Developer ไม่ควรเป็นผู้ตรวจงานตัวเองเพียงคนเดียว
+
+รับผิดชอบ:
+
+Test case
+Acceptance criteria
+Browser testing
+Responsive testing
+Accessibility testing
+Regression suite
+Release verification
+ตรวจ Quiz และคะแนน
+ตรวจว่า Progress ไม่สูญหาย
+ตรวจ Spaced Repetition
+ตรวจการคำนวณ TOEIC Mock Score
+10. Audit Workflow
+Content Draft
+   ↓
+Instructional Design Audit
+   ↓
+English Language Audit
+   ↓
+AI Technical Audit
+   ↓
+UX/UI Audit
+   ↓
+Developer & Automated Test
+   ↓
+Security Audit
+   ↓
+Human Final Approval
+   ↓
+Publish
+   ↓
+Monitor & Improve
+
+สถานะ Content:
+
+Draft
+In Review
+Changes Requested
+Approved
+Scheduled
+Published
+Deprecated
+Archived
+
+ระดับปัญหา:
+
+Critical  → ห้าม Publish
+High      → ต้องแก้ก่อน Release
+Medium    → แก้ในรอบปัจจุบัน
+Low       → ปรับปรุงภายหลัง
+Suggestion
+
+AI Auditor สามารถช่วยตรวจเบื้องต้นได้ แต่ Human Reviewer ต้องเป็นผู้อนุมัติสุดท้าย โดยเฉพาะเนื้อหาภาษา ข้อสอบ ความถูกต้องทางเทคนิค และ Security
+
+11. รูปแบบผลลัพธ์ของ Auditor
+
+Auditor ทุก Role ควรส่งผลแบบเดียวกัน:
+
+{
+  "role": "EnglishLanguageAuditor",
+  "status": "changes_required",
+  "score": 82,
+  "summary": "The lesson is understandable but contains unnatural examples.",
+  "findings": [
+    {
+      "severity": "high",
+      "location": "Lesson 3 / Example 4",
+      "issue": "The sentence is grammatically correct but unnatural.",
+      "recommendation": "Replace it with a common workplace expression."
+    }
+  ],
+  "blockerCount": 1,
+  "approved": false
+}
+
+ข้อดีคือสามารถแสดงผลในหน้า Audit Center และนำไปทำ Automated Workflow ได้ง่าย
+
+12. โครงสร้างระบบที่แนะนำ
+
+สำหรับ Stack ของ Project นี้:
+
+Frontend
+└── Blazor Web App
+
+Backend
+└── ASP.NET Core Web API
+
+Application
+├── Learning
+├── Assessment
+├── Progress
+├── TOEIC
+├── Vocabulary Review
+├── AI Practice
+└── Audit Workflow
+
+Infrastructure
+├── SQL Server หรือ PostgreSQL
+├── Object Storage สำหรับเสียงและรูปภาพ
+├── Cache
+├── Background Jobs
+└── Logging / Monitoring
+
+AI Layer
+├── AI Gateway
+├── Prompt Templates
+├── Structured Output
+├── Evaluation
+├── Safety Rules
+└── Model Adapter
+
+Vector Database ยังไม่จำเป็นใน MVP ให้เพิ่มเมื่อมีงานที่ต้องค้นเอกสารจำนวนมาก เช่น:
+
+AI Tutor ตอบจากเนื้อหาในหลักสูตร
+ค้นบทเรียนจากความหมาย
+RAG จาก Technical Documentation
+ตรวจคำตอบโดยอ้างอิง Lesson Source
+13. Domain Modules ของระบบ
+Identity
+Course Catalog
+Curriculum
+Lesson Delivery
+Vocabulary & SRS
+Pronunciation
+Reading
+Listening
+Speaking
+Writing
+Assessment
+TOEIC
+AI English
+Progress Tracking
+Recommendation
+Content Management
+Audit & Approval
+Notification
+Analytics
+Security
+14. Data Model หลัก
+User
+LearningGoal
+PlacementResult
+LearningPath
+Course
+Module
+Lesson
+Activity
+Skill
+CEFRLevel
+VocabularyItem
+GrammarPoint
+PronunciationItem
+AudioAsset
+Question
+QuestionChoice
+Attempt
+Answer
+SkillScore
+ReviewSchedule
+TOEICPractice
+AIContextModule
+ProjectSubmission
+AIReview
+HumanReview
+AuditFinding
+ContentVersion
+Release
+
+กิจกรรมหนึ่งรายการควรระบุได้ว่า:
+
+Skill: Listening
+CEFR: A2
+AI Module: RAG Architecture
+Grammar: Passive Voice
+Vocabulary: retrieve, source, context
+Estimated Time: 10 minutes
+15. การวัดผลที่ถูกต้อง
+
+อย่าวัดเพียง:
+
+จำนวนบทที่เปิด
+ระยะเวลาที่อยู่ในระบบ
+จำนวนวิดีโอที่ดู
+
+ควรวัด:
+
+Vocabulary retention
+Grammar accuracy
+Reading comprehension
+Listening comprehension
+Pronunciation intelligibility
+Speaking fluency
+Writing quality
+TOEIC mock score
+Technical explanation score
+จำนวนครั้งที่ต้องทบทวน
+ความสามารถในการทำ Project
+
+ตัวอย่างเกณฑ์ผ่านบท:
+
+Knowledge Quiz ≥ 80%
+Listening ≥ 70%
+Speaking Rubric ≥ 3/5
+Writing Rubric ≥ 3/5
+Critical Vocabulary Review completed
+Mini Project submitted
+16. ลำดับการสร้างระบบ
+Release 1: Learning Foundation
+
+สร้างก่อน:
+
+Login
+Placement Test
+Dashboard
+Learning Path
+Lesson Player
+Quiz
+Progress Tracking
+Content Management
+E01–E10
+Release 2: Four Skills
+
+เพิ่ม:
+
+Reading Lab
+Listening Player
+Audio Transcript
+Speaking Recording
+Writing Exercise
+Vocabulary Review
+Basic SRS
+Release 3: TOEIC
+
+เพิ่ม:
+
+Parts 1–7
+Timed Practice
+Question Bank
+Error Analysis
+Mini Test
+Full Mock Test
+Score Dashboard
+Release 4: AI English
+
+เพิ่ม:
+
+AI Modules 1–24
+Technical Vocabulary
+Reading Documentation
+Speaking Presentation
+Writing Technical Summary
+AI Project Submission
+Release 5: Audit System
+
+เพิ่ม:
+
+English Audit
+AI Technical Audit
+UX/UI Review
+Developer Review
+Security Review
+Approval Workflow
+Content Versioning
+Rollback
+Release 6: Adaptive AI Coach
+
+ค่อยเพิ่มภายหลัง:
+
+Personalized recommendations
+Speaking feedback
+Writing feedback
+Weakness analysis
+RAG Tutor
+Adaptive question difficulty
+Multi-Agent Audit
+17. MVP ที่ควรเริ่มจริง
+
+MVP ไม่ควรเริ่มด้วย AI Agent จำนวนมากหรือสร้างเนื้อหาครบทั้งหมดทันที
+
+เริ่มจาก:
+
+1. Placement Test
+2. Personalized Roadmap
+3. English Core Modules E01–E10
+4. Lesson Player
+5. Vocabulary Review
+6. Reading + Listening
+7. Basic Speaking Recording
+8. Basic Writing Feedback
+9. TOEIC Diagnostic
+10. AI English ตัวอย่าง 4 Modules
+11. Content Management
+12. Audit Center
+13. Automated Tests
+
+AI Modules ตัวอย่างสำหรับ MVP:
+
+Module 2: LLM Architecture
+Module 6: Prompt Engineering
+Module 13: RAG Architecture
+Module 23: Secure Production Deployment
+
+สี่บทนี้ครอบคลุมการอธิบายโครงสร้าง การเขียนคำสั่ง การอธิบายกระบวนการ และภาษาเกี่ยวกับความปลอดภัย ก่อนขยายเป็นครบ 24 Modules
+
+18. Definition of Done
+
+บทเรียนหรือ Feature จะถือว่าเสร็จเมื่อ:
+
+[ ] Objective ชัดเจน
+[ ] มี Reading, Listening หรือ Output Practice
+[ ] English Teacher ผ่านการตรวจ
+[ ] AI Engineer ผ่านการตรวจ
+[ ] UX/UI ผ่านการตรวจ
+[ ] Automated Tests ผ่าน
+[ ] Security Validation ผ่าน
+[ ] รองรับ Mobile และ Desktop
+[ ] มี Error Handling
+[ ] มี Analytics
+[ ] Content มี Version
+[ ] สามารถ Rollback ได้
+[ ] ไม่มี Critical Audit Finding
+โครงสร้างสุดท้ายที่แนะนำ
+EnglishMaster AI
+
+├── English Foundation
+├── Grammar 80/20
+├── Vocabulary & Pronunciation
+├── Reading
+├── Listening
+├── Speaking
+├── Writing
+├── Workplace English
+├── TOEIC
+├── AI English Modules 1–24
+├── Projects
+├── Personalized Review
+├── Content Studio
+└── Multi-Role Audit Center
+
+หัวใจของระบบคือ:
+
+เรียนภาษาอังกฤษแกนกลางเพียงครั้งเดียว แล้วนำไปฝึกซ้ำผ่านบริบท AI ทั้ง 24 Modules โดยทุกบทต้องมีการอ่าน ฟัง พูด เขียน และสร้างผลงานจริง
+
+ครบจบที่เดียว
+
+ใช่ครับ เป้าหมายควรเป็น ระบบเดียวครบจบที่เดียว ผู้เรียนไม่ต้องออกไปหาแอปเรียนคำศัพท์ แอปฟัง เว็บไซต์ Grammar เว็บไซต์ TOEIC หรือเครื่องมือตรวจภาษาแยกกัน
+
+EnglishMaster AI — All-in-One Learning System
+เริ่มจาก 0
+   ↓
+ตรวจระดับ
+   ↓
+สร้าง Roadmap ส่วนตัว
+   ↓
+อ่านออก + ออกเสียงถูก
+   ↓
+สร้างประโยคได้
+   ↓
+Grammar ที่จำเป็น
+   ↓
+ฟังเข้าใจ
+   ↓
+พูดสื่อสารได้
+   ↓
+เขียนได้
+   ↓
+ใช้ภาษาอังกฤษในการทำงาน
+   ↓
+เรียนภาษาอังกฤษผ่าน AI Modules 1–24
+   ↓
+ฝึก TOEIC Parts 1–7
+   ↓
+ทำ Mock Test
+   ↓
+วิเคราะห์จุดอ่อน
+   ↓
+ได้ Portfolio + Certificate + คะแนนความสามารถ
+ระบบเดียวต้องมี 10 ศูนย์การเรียน
+ศูนย์	สิ่งที่ผู้เรียนทำได้
+1. Foundation Center	เรียนตั้งแต่ Alphabet, Phonics และการอ่านคำ
+2. Vocabulary Center	เรียนคำศัพท์ทั่วไป งาน IT, AI และ TOEIC
+3. Grammar Center	เรียน Grammar 80/20 ที่ใช้จริง
+4. Pronunciation Center	ฝึกออกเสียง ฟังเสียงตัวเองและเปรียบเทียบ
+5. Four Skills Center	ฝึกอ่าน ฟัง เขียนและพูด
+6. Workplace English	ประชุม อีเมล รายงานงานและสัมภาษณ์
+7. AI English Center	เรียน AI 24 Modules พร้อมภาษาอังกฤษ
+8. TOEIC Center	ฝึก Parts 1–7 และทำข้อสอบจับเวลา
+9. Project Center	ทำ Project และสะสม Portfolio
+10. Progress Center	ดูคะแนน จุดอ่อน แผนทบทวนและเป้าหมาย
+เส้นทางการเรียนหลัก
+Level 0: เริ่มจากศูนย์
+
+เรียน:
+
+Alphabet
+เสียงพื้นฐาน
+Phonics
+การสะกดคำ
+การแบ่งพยางค์
+คำศัพท์พื้นฐาน
+Subject + Verb
+ประโยคบอกเล่า ปฏิเสธ และคำถาม
+
+ผลลัพธ์:
+
+เห็นคำแล้วพออ่านได้ ฟังคำพื้นฐานออก และสร้างประโยคสั้นได้
+
+Level 1: ภาษาอังกฤษพื้นฐาน
+
+เรียน:
+
+Noun
+Pronoun
+Verb 5 Forms
+Adjective
+Adverb
+Articles
+Prepositions
+Present Simple
+Present Continuous
+Past Simple
+Future
+Modal verbs
+
+ผลลัพธ์:
+
+พูดและเขียนเรื่องชีวิตประจำวันได้
+
+Level 2: สื่อสารได้
+
+เรียน:
+
+Present Perfect
+Passive Voice
+Conditionals
+Gerund และ Infinitive
+Relative Clauses
+Linking Words
+การสนทนา
+การฟังบทพูด
+การเขียน Paragraph
+การพูดแบบ Point → Reason → Example
+
+ผลลัพธ์:
+
+สนทนา ฟังเนื้อหาทั่วไป และอธิบายความคิดเห็นได้
+
+Level 3: ภาษาอังกฤษเพื่อการทำงาน
+
+เรียน:
+
+Email
+Chat และข้อความทำงาน
+Daily Meeting
+Report Progress
+Explain Problems
+Ask for Clarification
+Presentation
+Technical Documentation
+Job Interview
+Resume และ LinkedIn
+
+ผลลัพธ์:
+
+ใช้ภาษาอังกฤษในงาน Programmer และ AI Engineer ได้
+
+Level 4: AI English Modules 1–24
+
+แต่ละ Module ต้องเรียนทั้ง ความรู้ AI และภาษาอังกฤษพร้อมกัน
+
+Concept ภาษาไทย
+   ↓
+คำศัพท์สำคัญ
+   ↓
+Grammar ที่ใช้ในบท
+   ↓
+Reading
+   ↓
+Listening
+   ↓
+Speaking
+   ↓
+Writing
+   ↓
+Quiz
+   ↓
+Mini Project
+   ↓
+AI + English Audit
+
+ตัวอย่าง Module 13: RAG Architecture
+
+Vocabulary:
+retrieve, source, context, embedding, relevant
+
+Grammar:
+Present Simple + Passive Voice + Sequence Words
+
+Reading:
+อ่านคำอธิบาย RAG
+
+Listening:
+ฟัง RAG Workflow
+
+Speaking:
+อธิบาย RAG ภายใน 2 นาที
+
+Writing:
+เขียน RAG Technical Summary
+
+Project:
+วาด RAG Architecture และนำเสนอเป็นภาษาอังกฤษ
+Level 5: TOEIC Complete
+
+ระบบต้องมีครบ:
+
+Diagnostic Test
+├── Part 1 Photographs
+├── Part 2 Question–Response
+├── Part 3 Conversations
+├── Part 4 Talks
+├── Part 5 Incomplete Sentences
+├── Part 6 Text Completion
+└── Part 7 Reading Comprehension
+
+พร้อมระบบ:
+
+จับเวลา
+วิเคราะห์คำตอบผิด
+บอก Grammar ที่อ่อน
+บอกคำศัพท์ที่ไม่รู้
+สร้างชุดทบทวนส่วนตัว
+Mini Test
+Full Mock Test
+ประเมินคะแนน
+แสดงแนวโน้มคะแนน
+ทุกบทเรียนต้องใช้ Template เดียวกัน
+1. เป้าหมายบทเรียน
+2. ภาพสรุป
+3. อธิบายภาษาไทย
+4. Vocabulary
+5. Pronunciation
+6. Grammar
+7. Reading
+8. Listening
+9. Speaking
+10. Writing
+11. Quiz
+12. Practice
+13. Mini Project
+14. จุดที่ตอบผิด
+15. ตารางทบทวน
+
+ผู้เรียนจะไม่เพียง “อ่านบทเรียนจบ” แต่ต้องสร้าง Output จริงทุกบท
+
+AI Personal Tutor
+
+AI Tutor ภายในระบบต้องทำหน้าที่เป็น:
+
+ครูสอนภาษาอังกฤษ
+คู่ฝึกสนทนา
+ผู้ตรวจ Grammar
+ผู้ตรวจงานเขียน
+ผู้ช่วยฝึกออกเสียง
+ผู้สร้างแบบฝึกหัด
+ผู้วิเคราะห์จุดอ่อน
+ผู้ช่วยอธิบาย AI
+ผู้จำลองการสัมภาษณ์
+ผู้วางแผน TOEIC
+
+ตัวอย่างคำสั่ง:
+
+อธิบายข้อนี้ให้ง่ายลง
+อ่านประโยคนี้ให้ฟัง
+ตรวจการออกเสียงของฉัน
+แก้ Grammar แต่คงความหมายเดิม
+จำลอง Daily Meeting
+สัมภาษณ์ตำแหน่ง AI Engineer
+สร้างข้อสอบจากคำที่ฉันตอบผิด
+ระบบทบทวนอัตโนมัติ
+
+ทุกข้อผิดต้องไม่หายไปหลังทำ Quiz
+
+ตอบผิด
+   ↓
+จำแนกสาเหตุ
+
+├── ไม่รู้คำศัพท์
+├── Grammar ไม่แม่น
+├── ฟังเสียงไม่ออก
+├── อ่านไม่ทัน
+├── เข้าใจคำถามผิด
+└── ความรู้ AI ไม่ถูกต้อง
+
+   ↓
+สร้างบททบทวนส่วนตัว
+   ↓
+ทบทวนตาม Spaced Repetition
+   ↓
+ทดสอบซ้ำ
+
+หน้า Daily Plan อาจแสดง:
+
+วันนี้ 45 นาที
+
+Vocabulary Review       10 นาที
+Listening Practice      10 นาที
+Grammar Weak Point      10 นาที
+AI English Lesson       10 นาที
+Speaking Challenge       5 นาที
+Project และ Portfolio
+
+ผู้เรียนต้องได้ผลงานจากระบบ ไม่ใช่แค่คะแนน
+
+ตัวอย่าง Portfolio:
+
+English Self-Introduction
+Technical Email
+Daily Meeting Recording
+API Explanation
+Prompt Engineering Project
+RAG Architecture Diagram
+AI System Presentation
+Security Checklist
+GitHub Documentation
+Technical Interview Recording
+TOEIC Score Progress Report
+
+เมื่อจบระบบ ผู้เรียนควรมี:
+
+English Skill Profile
+TOEIC Mock Score
+AI Knowledge Score
+Speaking Record
+Writing Portfolio
+Technical Projects
+Certificate
+Job Readiness Report
+Role Audit ภายในระบบ
+English Teacher
+
+ตรวจ:
+
+Grammar
+Vocabulary
+Translation
+Pronunciation
+Natural English
+ระดับความยาก
+Instructional Designer
+
+ตรวจ:
+
+เรียนง่ายหรือไม่
+ลำดับเหมาะสมหรือไม่
+แบบฝึกวัดเป้าหมายจริงหรือไม่
+เนื้อหาเยอะเกินไปหรือไม่
+UX/UI Designer
+
+ตรวจ:
+
+หน้าจออ่านง่าย
+ขนาด Font
+สีและ Contrast
+Responsive
+ปุ่มและ Navigation
+Accessibility
+Cognitive Load
+AI Engineer
+
+ตรวจ:
+
+ความรู้ AI
+Prompt
+Structured Output
+RAG
+Evaluation
+Hallucination
+Model Version
+Developer
+
+ตรวจ:
+
+Code Quality
+API
+Database
+Validation
+Error Handling
+Performance
+Automated Tests
+Security Auditor
+
+ตรวจ:
+
+Authentication
+Authorization
+Data Privacy
+Prompt Injection
+File Upload
+Rate Limit
+Secret Management
+Audit Logs
+QA Automation
+
+ตรวจ:
+
+Unit Test
+Integration Test
+Component Test
+End-to-End Test
+Regression Test
+Security Test
+AI Evaluation Test
+Performance Test
+หน้า Dashboard หลัก
+สวัสดี ผู้เรียน
+เป้าหมาย: TOEIC 750 + AI Engineer English
+
+ระดับปัจจุบัน: A2
+เป้าหมาย: B2
+
+วันนี้
+├── Grammar Review          10 นาที
+├── Listening Practice      15 นาที
+├── AI Module 2             20 นาที
+└── Speaking Challenge       5 นาที
+
+จุดอ่อน
+├── Past Simple
+├── Part 3 Listening
+├── Technical Speaking
+└── R/L Pronunciation
+
+ความคืบหน้า
+English Core       42%
+Speaking           31%
+AI English         18%
+TOEIC              36%
+โครงสร้างระบบสุดท้าย
+EnglishMaster AI
+│
+├── Start Here
+│   ├── Onboarding
+│   ├── Placement Test
+│   └── Personal Roadmap
+│
+├── Learn
+│   ├── English Foundation
+│   ├── Grammar 80/20
+│   ├── Vocabulary
+│   ├── Pronunciation
+│   ├── Reading
+│   ├── Listening
+│   ├── Speaking
+│   └── Writing
+│
+├── Work
+│   ├── Workplace English
+│   ├── Email
+│   ├── Meeting
+│   ├── Presentation
+│   └── Interview
+│
+├── AI English
+│   └── Modules 1–24
+│
+├── TOEIC
+│   ├── Parts 1–7
+│   ├── Mini Tests
+│   ├── Mock Tests
+│   └── Score Analysis
+│
+├── Practice
+│   ├── Daily Plan
+│   ├── SRS Review
+│   ├── AI Conversation
+│   └── Weakness Training
+│
+├── Projects
+│   ├── Assignments
+│   ├── Portfolio
+│   └── Certificates
+│
+└── Management
+    ├── Content Studio
+    ├── Question Bank
+    ├── Audit Center
+    ├── Analytics
+    ├── Security
+    └── Release Management
+เป้าหมายสุดท้าย
+
+ระบบนี้ต้องทำให้ผู้เรียนเดินจาก:
+
+อ่านภาษาอังกฤษไม่ออก → อ่านได้ → ฟังเข้าใจ → เขียนได้ → พูดคล่อง → ใช้ภาษาอังกฤษทำงานด้าน AI → สอบ TOEIC → มี Portfolio พร้อมสมัครงาน
+
+โดยทุกอย่างอยู่ใน เว็บไซต์เดียว บัญชีเดียว Dashboard เดียว และ Roadmap เดียว ไม่ต้องไปเรียนแยกหลายแพลตฟอร์มครับ
+
+ใช้เวลาเท่าไหร่
+
+คำถามนี้ประเมินได้ 2 ส่วน: เวลาเรียนจนจบหลักสูตร และ เวลาสร้างระบบ EnglishMaster AI
+
+1. เวลาเรียนตั้งแต่ 0 จนใช้งานได้
+
+จากเวลาที่คุณมีประมาณ วันละ 2–3 ชั่วโมง สัปดาห์ละ 6 วัน หรือประมาณ 12–18 ชั่วโมงต่อสัปดาห์:
+
+ระยะเวลา	ผลลัพธ์ที่คาดหวัง
+เดือน 1–2	อ่านตัวอักษร ออกเสียงพื้นฐาน รู้โครงสร้างประโยค
+เดือน 3–4	อ่านประโยคทั่วไป เขียนประโยคสั้น และฟังบทสนทนาช้าได้
+เดือน 5–6	สนทนาเรื่องทั่วไป อ่านบทความง่าย และเขียน Paragraph ได้
+เดือน 7–9	ใช้ภาษาอังกฤษทำงาน ประชุม เขียนอีเมล และอ่าน Documentation ได้
+เดือน 10–12	เรียน AI English Modules 1–24 และอธิบาย Technical Topic ได้
+เดือน 13–15	ฝึก TOEIC Parts 1–7 ทำข้อสอบจับเวลา และแก้จุดอ่อน
+เดือน 16–18	พัฒนาการพูดให้คล่องขึ้น สัมภาษณ์งาน และทำ Portfolio ภาษาอังกฤษ
+เป้าหมายตามระยะเวลา
+6 เดือน
+อ่านออกระดับพื้นฐาน
+เข้าใจ Grammar สำคัญ
+ฟังบทสนทนาทั่วไปแบบไม่เร็วมาก
+เขียนข้อความและ Paragraph ได้
+พูดเรื่องใกล้ตัวได้
+TOEIC โดยประมาณ 450–600 ขึ้นอยู่กับพื้นฐานและความสม่ำเสมอ
+12 เดือน
+อ่าน Documentation ภาษาอังกฤษได้
+ฟังบทเรียนและการประชุมได้มากขึ้น
+เขียนอีเมลและ Technical Summary ได้
+อธิบาย AI Concept เป็นภาษาอังกฤษได้
+สนทนาในที่ทำงานได้
+TOEIC เป้าหมายประมาณ 650–800
+18 เดือน
+ใช้ภาษาอังกฤษทำงานได้ค่อนข้างมั่นใจ
+นำเสนอ Project ได้
+ตอบ Technical Interview ได้
+อ่านและสรุปบทความ AI ได้
+พูดต่อเนื่องได้โดยไม่ต้องแปลทุกคำในหัว
+TOEIC มีโอกาสไปถึง 800+ เมื่อฝึกข้อสอบอย่างจริงจัง
+
+ระยะเวลาที่เหมาะสมสำหรับเป้าหมาย “ครบจบที่เดียว” คือ 12–18 เดือน
+หากเร่งมาก สามารถทำแบบ Bootcamp 9–12 เดือน ได้ แต่ต้องเรียนเกือบทุกวันและมีการฝึกพูดจริง
+
+2. แผนเรียนที่แนะนำ
+เดือน 1–3
+Foundation + Pronunciation + Sentence Building
+
+เดือน 4–6
+Grammar 80/20 + Vocabulary + Reading + Listening
+
+เดือน 7–9
+Speaking + Writing + Workplace English
+
+เดือน 10–12
+AI English Modules 1–24 + Technical Projects
+
+เดือน 13–15
+TOEIC Parts 1–7 + Mini Tests + Mock Tests
+
+เดือน 16–18
+Fluency + Interview + Portfolio + Weakness Training
+เวลาต่อวัน
+แบบปกติ 2 ชั่วโมง
+Vocabulary / SRS       20 นาที
+Grammar                25 นาที
+Listening              25 นาที
+Reading หรือ TOEIC     25 นาที
+Speaking               15 นาที
+Writing / AI Project   10 นาที
+แบบเข้มข้น 3 ชั่วโมง
+English Core           45 นาที
+Listening              30 นาที
+Speaking               30 นาที
+Reading                30 นาที
+Writing                20 นาที
+TOEIC                   25 นาที
+AI English Project     20 นาที
+3. เวลาในการสร้างระบบ
+กรณีทำคนเดียว
+MVP รุ่นแรก
+
+มีระบบพื้นฐาน ได้แก่:
+
+Login
+Placement Test
+Dashboard
+Roadmap
+Lesson Player
+Quiz
+Progress
+Vocabulary Review
+Content Management
+AI Module ตัวอย่าง 4 บท
+Automated Tests
+
+ใช้เวลาประมาณ 4–6 เดือน หากทำเต็มเวลา
+หากทำหลังเลิกงาน ใช้ประมาณ 8–12 เดือน
+
+ระบบครบทุกส่วน
+
+รวม:
+
+Reading, Listening, Speaking และ Writing
+Speech Recording
+AI Feedback
+TOEIC Parts 1–7
+Full Mock Test
+AI Modules 1–24
+SRS
+Portfolio
+Certificate
+Content Studio
+Multi-role Audit
+Security
+Analytics
+Adaptive AI Tutor
+
+ทำคนเดียวอาจใช้ประมาณ 18–30 เดือน
+
+กรณีมีทีม
+
+ทีมที่เหมาะสม:
+
+1 Product Owner / Instructional Designer
+1 UX/UI Designer
+2–3 Developers
+1 AI Engineer
+1 English Teacher / Content Specialist
+1 QA หรือทำร่วมกับ Developer
+1 Security Reviewer แบบ Part-time
+
+ประมาณการ:
+
+ขอบเขต	ระยะเวลา
+Prototype	1–2 เดือน
+MVP ใช้งานได้	3–5 เดือน
+ระบบ Four Skills + TOEIC	6–9 เดือน
+AI Modules 1–24	8–12 เดือน
+ระบบครบ Production	12–18 เดือน
+ระยะเวลาที่แนะนำสำหรับโปรเจกต์นี้
+
+ควรวางแผนเป็น:
+
+3 เดือนแรก
+สร้าง Foundation และระบบเรียนพื้นฐาน
+
+เดือน 4–6
+เปิดใช้ MVP และเริ่มเก็บ Feedback
+
+เดือน 7–9
+เพิ่ม Four Skills และ TOEIC
+
+เดือน 10–12
+เพิ่ม AI English Modules 1–24
+
+เดือน 13–15
+เพิ่ม AI Tutor และ Audit Automation
+
+เดือน 16–18
+ปรับ Performance, Security และ Production
+สรุป
+เวลาเรียนของผู้เรียน: ประมาณ 12–18 เดือน
+สร้าง MVP คนเดียว: ประมาณ 4–6 เดือนเต็มเวลา
+สร้าง MVP หลังเลิกงาน: ประมาณ 8–12 เดือน
+สร้างระบบครบคนเดียว: ประมาณ 18–30 เดือน
+สร้างระบบครบด้วยทีม: ประมาณ 12–18 เดือน
+
+แนวทางที่คุ้มที่สุดคือ สร้างระบบไปพร้อมกับเรียน โดยเริ่มจาก Foundation ก่อน แล้วใช้ตัวคุณเองเป็นผู้เรียนทดสอบระบบทุก Module จะช่วยให้เห็นปัญหาจริงและไม่เสียเวลาสร้างฟีเจอร์ที่ยังไม่จำเป็นครับ

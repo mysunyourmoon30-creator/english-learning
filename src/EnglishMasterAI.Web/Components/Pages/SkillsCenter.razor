@@ -1,0 +1,51 @@
+@page "/skills"
+@attribute [Authorize]
+
+<PageTitle>Four Skills | EnglishMaster AI</PageTitle>
+
+<div class="page-header">
+    <div>
+        <div class="eyebrow">FOUR SKILLS CENTER</div>
+        <h1>เปลี่ยนความรู้ให้เป็นทักษะ</h1>
+        <p>ฝึก input และ output เป็นวงจร: ฟัง/อ่าน → เข้าใจ → พูด/เขียน → รับ feedback → ลองใหม่</p>
+    </div>
+    <span class="tag">A1 → B2</span>
+</div>
+
+<section class="skills-grid">
+    <a class="skill-card surface listening" href="/practice/listening">
+        <span class="skill-icon">◖</span><span class="tag blue">INPUT</span>
+        <h2>Listening Lab</h2>
+        <p>ฟังโดยไม่ดูข้อความ ตอบ เปิด transcript ทำ shadowing และฟังซ้ำ</p>
+        <strong>เริ่มฝึก →</strong>
+    </a>
+    <a class="skill-card surface reading" href="/lessons/rag-architecture#reading">
+        <span class="skill-icon">¶</span><span class="tag">INPUT</span>
+        <h2>Reading Lab</h2>
+        <p>อ่านจากประโยคสั้นไปถึง documentation พร้อม skimming และ context clues</p>
+        <strong>เปิดบทอ่าน →</strong>
+    </a>
+    <a class="skill-card surface speaking" href="/practice/speaking">
+        <span class="skill-icon">◉</span><span class="tag gold">OUTPUT</span>
+        <h2>Speaking Practice</h2>
+        <p>อัดเสียง อธิบายด้วย Point → Reason → Example → Result แล้วฟังตนเอง</p>
+        <strong>เริ่มอัดเสียง →</strong>
+    </a>
+    <a class="skill-card surface writing" href="/practice/writing">
+        <span class="skill-icon">✎</span><span class="tag red">OUTPUT</span>
+        <h2>Writing Practice</h2>
+        <p>เขียน status update และ technical explanation พร้อม feedback พื้นฐานทันที</p>
+        <strong>เริ่มเขียน →</strong>
+    </a>
+</section>
+
+<div class="callout mt-4"><p>ระบบ MVP ประเมิน Writing ด้วยกฎโปร่งใสและให้ผู้เรียนฟังเสียงตนเอง ส่วน AI feedback เชิงลึกจะต่อผ่าน AI Gateway ใน release ถัดไป</p></div>
+
+<style>
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+    .skill-card{padding:1.5rem;min-height:250px;text-decoration:none;color:#17332f;position:relative;overflow:hidden;transition:.2s}
+    .skill-card:hover{transform:translateY(-3px);color:#17332f}.skill-card h2{margin:2.3rem 0 .7rem}.skill-card p{color:#6d7c74;max-width:30rem}.skill-card>strong{position:absolute;bottom:1.4rem;color:#1d766c}
+    .skill-icon{position:absolute;right:1.2rem;top:1rem;font:800 3.5rem Manrope;color:#17332f10}
+    .listening{border-top:3px solid #4f87a4}.reading{border-top:3px solid #5b9a80}.speaking{border-top:3px solid #e4a93e}.writing{border-top:3px solid #bd6259}
+    @@media(max-width:700px){.skills-grid{grid-template-columns:1fr}}
+</style>

@@ -1,0 +1,122 @@
+@page "/practice/writing"
+@attribute [Authorize]
+@inject WritingFeedbackService Writing
+@inject CurrentUserService CurrentUser
+
+<PageTitle>Writing Practice | EnglishMaster AI</PageTitle>
+
+<div class="page-header">
+    <div>
+        <div class="eyebrow">WRITING PRACTICE</div>
+        <h1>จากประโยคสู่ Technical Update</h1>
+        <p>เขียนให้ชัด กระชับ และตรวจสอบได้ — ใช้ AI structured feedback เมื่อกำหนด key และ fallback ที่โปร่งใสเมื่อ offline</p>
+    </div>
+    <span class="tag red">เป้าหมาย 60–100 คำ</span>
+</div>
+
+<div class="split-layout">
+    <section class="surface surface-pad">
+        <div class="eyebrow">PROMPT</div>
+        <h2>@_prompt</h2>
+        <label class="form-label mt-3" for="writing">Your response</label>
+        <textarea id="writing" class="form-control writing-area" @bind="_content" placeholder="Current status: The API implementation is complete…"></textarea>
+        <div class="d-flex justify-content-between align-items-center mt-2">
+            <small class="text-secondary">@WordCount words</small>
+            <button class="btn btn-primary" disabled="@(WordCount < 5 || _evaluating)" @onclick="EvaluateAsync">
+                @(_evaluating ? "กำลังตรวจ…" : "ส่งงานเขียน")
+            </button>
+        </div>
+        @if (!string.IsNullOrWhiteSpace(_error))
+        {
+            <div class="alert alert-danger mt-3">@_error</div>
+        }
+    </section>
+    <aside class="surface surface-pad sticky-panel">
+        @if (_feedback is null)
+        {
+            <div class="eyebrow">WRITING FRAMEWORK</div>
+            <h2>Status → Problem → Cause → Next action</h2>
+            <p class="text-secondary small">ใช้ประโยคสั้นก่อน แล้วเชื่อมด้วย because, however, therefore หรือ sequence words</p>
+            <div class="sample-copy">
+                <strong>Current status:</strong> The API implementation is complete.<br /><br />
+                <strong>Problem:</strong> The integration test is failing.<br /><br />
+                <strong>Cause:</strong> The seed data is incomplete.<br /><br />
+                <strong>Next action:</strong> I will update the data and rerun the tests.
+            </div>
+        }
+        else
+        {
+            <div class="d-flex justify-content-between align-items-start gap-2">
+                <div class="feedback-score"><strong>@_feedback.Score</strong><span>/ 100</span></div>
+                <span class="tag">@_feedback.EvaluationMode</span>
+            </div>
+            <div class="rubric-grid">
+                <span>Grammar<strong>@_feedback.Rubric.Grammar/20</strong></span>
+                <span>Clarity<strong>@_feedback.Rubric.Clarity/20</strong></span>
+                <span>Organization<strong>@_feedback.Rubric.Organization/20</strong></span>
+                <span>Vocabulary<strong>@_feedback.Rubric.Vocabulary/20</strong></span>
+                <span>Task<strong>@_feedback.Rubric.TaskCompletion/20</strong></span>
+            </div>
+            <p class="small text-secondary">@_feedback.Notice</p>
+            <h3 class="text-success mt-3">จุดที่ทำได้ดี</h3>
+            @if (_feedback.Strengths.Count == 0) { <p class="small text-secondary">ยังไม่มีข้อมูลเพียงพอ</p> }
+            <ul class="small lh-lg">@foreach (var item in _feedback.Strengths) { <li>@item</li> }</ul>
+            <h3 class="text-warning mt-3">ลองปรับรอบถัดไป</h3>
+            @if (_feedback.Suggestions.Count == 0) { <p class="small text-success">ผ่านกฎพื้นฐานครบแล้ว</p> }
+            <ul class="small lh-lg">@foreach (var item in _feedback.Suggestions) { <li>@item</li> }</ul>
+            @if (_feedback.Issues.Count > 0)
+            {
+                <h3 class="mt-3">จุดแก้ไขรายรายการ</h3>
+                @foreach (var issue in _feedback.Issues)
+                {
+                    <div class="issue-card">
+                        <strong>@issue.Category</strong>
+                        <small>@issue.Original → @issue.Suggestion</small>
+                        <p>@issue.Explanation</p>
+                    </div>
+                }
+            }
+            @if (!string.IsNullOrWhiteSpace(_feedback.RevisedVersion))
+            {
+                <h3 class="mt-3">ตัวอย่างฉบับปรับแล้ว</h3>
+                <div class="sample-copy">@_feedback.RevisedVersion</div>
+            }
+        }
+    </aside>
+</div>
+
+<style>
+    .writing-area{min-height:330px;line-height:1.8}.sample-copy{padding:1rem;background:#f6f8f5;border-radius:.8rem;font-size:.82rem;color:#53635c}
+    .feedback-score{display:flex;align-items:baseline;color:#1d766c}.feedback-score strong{font:800 3rem Manrope}.feedback-score span{color:#6d7c74}
+    .rubric-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem;margin:1rem 0}.rubric-grid span{display:flex;justify-content:space-between;padding:.55rem .65rem;background:#f6f8f5;border-radius:.55rem;font-size:.72rem}.rubric-grid strong{color:#1d766c}.issue-card{border-left:3px solid #d3a33f;padding:.65rem .8rem;margin:.55rem 0;background:#fffaf0}.issue-card small,.issue-card p{display:block;margin-top:.3rem;font-size:.72rem}.issue-card p{margin-bottom:0;color:#53635c}
+</style>
+
+@code {
+    private readonly string _prompt = "Write a short technical status update about an API feature, one problem, its cause, and your next action.";
+    private string _content = "";
+    private bool _evaluating;
+    private WritingFeedback? _feedback;
+    private string? _error;
+    private int WordCount => _content.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries).Length;
+
+    private async Task EvaluateAsync()
+    {
+        _evaluating = true;
+        _error = null;
+        try
+        {
+            _feedback = await Writing.EvaluateAsync(
+                await CurrentUser.GetRequiredUserIdAsync(),
+                _prompt,
+                _content);
+        }
+        catch (Exception)
+        {
+            _error = "ตรวจงานเขียนไม่สำเร็จ กรุณาลองอีกครั้ง";
+        }
+        finally
+        {
+            _evaluating = false;
+        }
+    }
+}

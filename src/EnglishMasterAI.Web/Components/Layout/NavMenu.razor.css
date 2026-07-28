@@ -1,0 +1,31 @@
+.navbar-toggler {
+    appearance: none; cursor: pointer; width: 2.75rem; height: 2.75rem; color: white;
+    position: absolute; top: .65rem; right: 1rem; border: 1px solid #ffffff24; border-radius: .75rem;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,.8%29' stroke-linecap='round' stroke-width='2' d='M4 8h22M4 15h22M4 22h22'/%3e%3c/svg%3e") no-repeat center/1.5rem #ffffff12;
+}
+.top-row { min-height: 4.1rem; display: flex; align-items: center; padding: 0 1rem; border-bottom: 1px solid #ffffff12; }
+.navbar-brand { display: flex; align-items: center; gap: .7rem; color: white; text-decoration: none; line-height: 1.05; }
+.navbar-brand > span:last-child { display: flex; flex-direction: column; }
+.navbar-brand strong { font-size: .98rem; letter-spacing: -.02em; }
+.navbar-brand small { color: #9fb6af; font-size: .65rem; margin-top: .2rem; text-transform: uppercase; letter-spacing: .08em; }
+.brand-mark { width: 2.1rem; height: 2.1rem; border-radius: .7rem; display: grid; place-items: center; background: #e4a93e; color: #102a2a; font: 900 1rem/1 Georgia,serif; transform: rotate(-3deg); }
+.brand-mark span { font-size: .65rem; }
+.nav-scrollable { display: none; padding: .5rem 0 1rem; }
+.navbar-toggler:checked ~ .nav-scrollable { display: block; }
+.nav-section { padding: 1.2rem 1.4rem .45rem; color: #78968e; font-size: .62rem; font-weight: 800; letter-spacing: .16em; }
+.nav-item { font-size: .84rem; padding-bottom: .18rem; }
+.nav-item ::deep .nav-link {
+    color: #b9ccc7; background: transparent; border: 0; border-radius: .65rem;
+    min-height: 2.55rem; display: flex; gap: .7rem; align-items: center; padding: .55rem .75rem;
+    width: 100%; text-decoration: none; transition: .15s ease;
+}
+.nav-icon { width: 1.25rem; text-align: center; color: #89aaa2; font-size: 1rem; }
+.nav-item ::deep a.active { background: #ffffff12; color: white; box-shadow: inset 3px 0 #e4a93e; }
+.nav-item ::deep a.active .nav-icon { color: #e4a93e; }
+.nav-item ::deep .nav-link:hover { background: #ffffff0b; color: white; }
+.nav-spacer { height: 1rem; }
+.public-nav { color: #b9ccc7; padding: 2rem 1.5rem 1rem; line-height: 1.75; font-size: .9rem; }
+@media (min-width: 760px) {
+    .navbar-toggler { display: none; }
+    .nav-scrollable { display: block; height: calc(100vh - 4.1rem); overflow-y: auto; scrollbar-width: thin; scrollbar-color: #ffffff22 transparent; }
+}

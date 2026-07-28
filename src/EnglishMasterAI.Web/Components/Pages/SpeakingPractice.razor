@@ -1,0 +1,216 @@
+@page "/practice/speaking"
+@attribute [Authorize]
+@inject IJSRuntime JS
+@inject SpeakingAnalysisService Speaking
+@inject CurrentUserService CurrentUser
+
+<PageTitle>Speaking Practice | EnglishMaster AI</PageTitle>
+
+<div class="page-header">
+    <div>
+        <div class="eyebrow">SPEAKING PRACTICE</div>
+        <h1>อธิบายให้ชัด ไม่ต้องเลียนสำเนียง</h1>
+        <p>ประเมิน fluency, grammar, vocabulary, relevance และ organization โดยไม่หักคะแนนเพียงเพราะสำเนียงต่างจากเจ้าของภาษา</p>
+    </div>
+    <span class="tag gold">60–90 วินาที</span>
+</div>
+
+<div class="split-layout">
+    <section class="surface surface-pad">
+        <div class="eyebrow">TODAY'S PROMPT</div>
+        <h2>@Prompt</h2>
+        <div class="speaking-framework">
+            <div><span>P</span><strong>Point</strong><small>I prefer / The main idea is…</small></div>
+            <div><span>R</span><strong>Reason</strong><small>because…</small></div>
+            <div><span>E</span><strong>Example</strong><small>For example…</small></div>
+            <div><span>R</span><strong>Result</strong><small>As a result…</small></div>
+        </div>
+        <div class="record-stage @(_recording ? "is-recording" : "")">
+            <div class="record-dot"></div>
+            <strong>@StatusText</strong>
+            @if (!string.IsNullOrWhiteSpace(_error))
+            {
+                <p class="text-danger small">@_error</p>
+            }
+            <div class="mt-3 d-flex justify-content-center gap-2 flex-wrap">
+                @if (!_recording)
+                {
+                    <button class="btn btn-primary" disabled="@_analyzing" @onclick="StartAsync">
+                        @(_hasRecording ? "อัดใหม่" : "เริ่มบันทึก")
+                    </button>
+                }
+                else
+                {
+                    <button class="btn btn-outline-primary" @onclick="StopAsync">หยุดบันทึก</button>
+                }
+            </div>
+            <audio id="recording-preview" class="w-100 mt-3" controls hidden></audio>
+        </div>
+
+        @if (_hasRecording)
+        {
+            <div class="privacy-box mt-3">
+                <label>
+                    <input type="checkbox" @bind="_consent" />
+                    ยินยอมให้ประมวลผลเสียงเพื่อสร้าง transcript และ feedback
+                </label>
+                <small>ไฟล์เสียงประมวลผลในหน่วยความจำและไม่ถูกบันทึกลงฐานข้อมูล ระบบเก็บเฉพาะ transcript กับผลประเมิน</small>
+                <button class="btn btn-primary mt-3" disabled="@(!_consent || _analyzing)" @onclick="AnalyzeAsync">
+                    @(_analyzing ? "กำลังวิเคราะห์…" : "วิเคราะห์การพูด")
+                </button>
+            </div>
+        }
+    </section>
+    <aside class="surface surface-pad sticky-panel">
+        @if (_feedback is null)
+        {
+            <div class="eyebrow">SELF-CHECK</div>
+            <h2>ฟังเสียงตัวเองแล้วตรวจ</h2>
+            <label class="check-item"><input type="checkbox" /> มี Point ชัดเจน</label>
+            <label class="check-item"><input type="checkbox" /> ให้เหตุผลด้วย because</label>
+            <label class="check-item"><input type="checkbox" /> มีตัวอย่างจริง</label>
+            <label class="check-item"><input type="checkbox" /> สรุปผลด้วย as a result</label>
+            <label class="check-item"><input type="checkbox" /> เสียงท้ายคำสำคัญชัดเจน</label>
+            <div class="callout mt-3">
+                <p>Chrome/Edge สามารถสร้าง browser transcript เป็น fallback ได้ หากกำหนด AI key ระบบจะใช้ server transcription แทน</p>
+            </div>
+        }
+        else
+        {
+            <div class="d-flex justify-content-between align-items-start gap-2">
+                <div class="feedback-score"><strong>@_feedback.Score</strong><span>/ 100</span></div>
+                <span class="tag">@_feedback.EvaluationMode</span>
+            </div>
+            <div class="metric-row">
+                <span>@_feedback.WordCount words</span>
+                <span>@_feedback.WordsPerMinute wpm</span>
+                <span>@_feedback.FillerWordCount fillers</span>
+            </div>
+            <div class="rubric-grid">
+                <span>Fluency<strong>@_feedback.Rubric.Fluency/20</strong></span>
+                <span>Grammar<strong>@_feedback.Rubric.Grammar/20</strong></span>
+                <span>Vocabulary<strong>@_feedback.Rubric.Vocabulary/20</strong></span>
+                <span>Relevance<strong>@_feedback.Rubric.Relevance/20</strong></span>
+                <span>Organization<strong>@_feedback.Rubric.Organization/20</strong></span>
+            </div>
+            <p class="small text-secondary">@_feedback.Notice</p>
+            <h3 class="text-success">จุดที่ทำได้ดี</h3>
+            <ul class="small lh-lg">@foreach (var item in _feedback.Strengths) { <li>@item</li> }</ul>
+            <h3 class="text-warning">ลองปรับรอบถัดไป</h3>
+            <ul class="small lh-lg">@foreach (var item in _feedback.Suggestions) { <li>@item</li> }</ul>
+            <h3>Transcript</h3>
+            <div class="transcript-box">@(_feedback.Transcript.Length == 0 ? "ไม่พบ transcript" : _feedback.Transcript)</div>
+        }
+    </aside>
+</div>
+
+<style>
+    .speaking-framework{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin:1.5rem 0}.speaking-framework>div{padding:.8rem;background:#f6f8f5;border-radius:.7rem}.speaking-framework span{width:1.7rem;height:1.7rem;display:grid;place-items:center;background:#17332f;color:white;border-radius:.5rem;font-size:.7rem}.speaking-framework strong,.speaking-framework small{display:block;margin-top:.35rem}.speaking-framework small{color:#6d7c74}
+    .record-stage{text-align:center;border:1px dashed #b7c7bf;border-radius:1rem;padding:2rem}.record-dot{width:.8rem;height:.8rem;background:#839087;border-radius:50%;margin:0 auto 1rem}.is-recording .record-dot{background:#c14f44;box-shadow:0 0 0 .4rem #c14f4422;animation:pulse 1s infinite}
+    .check-item{display:flex;gap:.6rem;padding:.75rem 0;border-bottom:1px solid #e4e9e2}.check-item input,.privacy-box input{accent-color:#1d766c}.privacy-box{padding:1rem;border:1px solid #dce6df;border-radius:.8rem}.privacy-box label{display:flex;gap:.6rem;align-items:flex-start}.privacy-box small{display:block;margin:.55rem 0;color:#6d7c74}.feedback-score{display:flex;align-items:baseline;color:#1d766c}.feedback-score strong{font:800 3rem Manrope}.feedback-score span{color:#6d7c74}.metric-row{display:flex;gap:.4rem;flex-wrap:wrap;margin:.7rem 0}.metric-row span{background:#eef5f1;border-radius:2rem;padding:.3rem .55rem;font-size:.68rem}.rubric-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.4rem;margin:1rem 0}.rubric-grid span{display:flex;justify-content:space-between;padding:.5rem;background:#f6f8f5;border-radius:.5rem;font-size:.7rem}.rubric-grid strong{color:#1d766c}.transcript-box{max-height:220px;overflow:auto;padding:.8rem;background:#f6f8f5;border-radius:.65rem;font-size:.76rem;line-height:1.65}
+    @@keyframes pulse{50%{transform:scale(1.2)}}@@media(max-width:650px){.speaking-framework{grid-template-columns:repeat(2,1fr)}}
+</style>
+
+@code {
+    private const string Prompt = "Explain why a team might use RAG in an AI application.";
+    private bool _recording;
+    private bool _hasRecording;
+    private bool _consent;
+    private bool _analyzing;
+    private string? _error;
+    private RecordingMetadata? _recordingMetadata;
+    private SpeakingFeedback? _feedback;
+
+    private string StatusText => _recording
+        ? "กำลังบันทึกเสียง…"
+        : _analyzing
+            ? "กำลังถอดเสียงและวิเคราะห์…"
+            : _hasRecording
+                ? $"บันทึกแล้ว {_recordingMetadata?.DurationSeconds ?? 0} วินาที — ฟังหรือส่งวิเคราะห์ได้"
+                : "พร้อมเมื่อคุณพร้อม";
+
+    private async Task StartAsync()
+    {
+        try
+        {
+            _error = null;
+            _feedback = null;
+            _consent = false;
+            await JS.InvokeVoidAsync("englishMaster.startRecording");
+            _recording = true;
+        }
+        catch (JSException)
+        {
+            _error = "ไม่สามารถใช้ไมโครโฟนได้ กรุณาตรวจสิทธิ์ของ browser";
+        }
+    }
+
+    private async Task StopAsync()
+    {
+        try
+        {
+            _recordingMetadata = await JS.InvokeAsync<RecordingMetadata>(
+                "englishMaster.stopRecording",
+                "recording-preview");
+            _recording = false;
+            _hasRecording = _recordingMetadata.Size > 0;
+        }
+        catch (JSException)
+        {
+            _recording = false;
+            _error = "หยุดบันทึกไม่สำเร็จ กรุณาลองใหม่";
+        }
+    }
+
+    private async Task AnalyzeAsync()
+    {
+        if (_recordingMetadata is null)
+        {
+            return;
+        }
+
+        _analyzing = true;
+        _error = null;
+        IJSStreamReference? audioReference = null;
+        Stream? audioStream = null;
+        try
+        {
+            audioReference = await JS.InvokeAsync<IJSStreamReference>(
+                "englishMaster.getRecordingBlob");
+            audioStream = await audioReference.OpenReadStreamAsync(
+                maxAllowedSize: 10 * 1024 * 1024);
+            _feedback = await Speaking.EvaluateAsync(
+                await CurrentUser.GetRequiredUserIdAsync(),
+                Prompt,
+                audioStream,
+                "speaking.webm",
+                _recordingMetadata.Type,
+                _recordingMetadata.DurationSeconds,
+                _recordingMetadata.Transcript);
+        }
+        catch (Exception)
+        {
+            _error = "วิเคราะห์เสียงไม่สำเร็จ กรุณาตรวจขนาดไฟล์หรือทดลองอัดใหม่";
+        }
+        finally
+        {
+            if (audioStream is not null)
+            {
+                await audioStream.DisposeAsync();
+            }
+            if (audioReference is not null)
+            {
+                await audioReference.DisposeAsync();
+            }
+            _analyzing = false;
+        }
+    }
+
+    private sealed class RecordingMetadata
+    {
+        public long Size { get; set; }
+        public string Type { get; set; } = "audio/webm";
+        public int DurationSeconds { get; set; }
+        public string Transcript { get; set; } = string.Empty;
+    }
+}

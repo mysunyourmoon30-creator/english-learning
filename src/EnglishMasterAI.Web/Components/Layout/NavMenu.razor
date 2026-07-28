@@ -1,0 +1,103 @@
+﻿@implements IDisposable
+
+@inject NavigationManager NavigationManager
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">
+            <span class="brand-mark" aria-hidden="true">E<span>+</span></span>
+            <span><strong>EnglishMaster</strong><small>AI Engineer Path</small></span>
+        </a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="nav flex-column">
+        <AuthorizeView>
+            <Authorized>
+                <div class="nav-section">LEARN</div>
+                @NavItem("dashboard", "⌂", "Dashboard")
+                @NavItem("roadmap", "⌁", "Roadmap ส่วนตัว")
+                @NavItem("learn", "▤", "English Core")
+                @NavItem("review", "↻", "Vocabulary Review")
+                @NavItem("skills", "◇", "Four Skills")
+
+                <div class="nav-section">SPECIALIZE</div>
+                @NavItem("ai-english", "✦", "AI English")
+                @NavItem("toeic", "◷", "TOEIC Center")
+
+                <div class="nav-section">START HERE</div>
+                @NavItem("onboarding", "◎", "เป้าหมายการเรียน")
+                @NavItem("placement", "✓", "Placement Test")
+
+                <AuthorizeView Roles="ContentAdmin,Admin" Context="adminContext">
+                    <div class="nav-section">MANAGEMENT</div>
+                    @NavItem("admin/content", "▦", "Content Studio")
+                    @NavItem("admin/audit", "⚑", "Audit Center")
+                </AuthorizeView>
+
+                <div class="nav-spacer"></div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="Account/Manage">
+                        <span class="nav-icon" aria-hidden="true">⚙</span> ตั้งค่าบัญชี
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <form action="Account/Logout" method="post">
+                        <AntiforgeryToken />
+                        <input type="hidden" name="ReturnUrl" value="@currentUrl" />
+                        <button type="submit" class="nav-link">
+                            <span class="nav-icon" aria-hidden="true">↪</span> ออกจากระบบ
+                        </button>
+                    </form>
+                </div>
+            </Authorized>
+            <NotAuthorized>
+                <div class="public-nav">
+                    <p>ภาษาอังกฤษตั้งแต่ศูนย์<br />ถึงพร้อมทำงานสาย AI</p>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="Account/Register">
+                        <span class="nav-icon" aria-hidden="true">＋</span> สมัครสมาชิก
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="Account/Login">
+                        <span class="nav-icon" aria-hidden="true">→</span> เข้าสู่ระบบ
+                    </NavLink>
+                </div>
+            </NotAuthorized>
+        </AuthorizeView>
+    </nav>
+</div>
+
+@code {
+    private string? currentUrl;
+
+    protected override void OnInitialized()
+    {
+        currentUrl = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
+        NavigationManager.LocationChanged += OnLocationChanged;
+    }
+
+    private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        currentUrl = NavigationManager.ToBaseRelativePath(e.Location);
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        NavigationManager.LocationChanged -= OnLocationChanged;
+    }
+
+    private RenderFragment NavItem(string href, string icon, string label) => @<div class="nav-item px-3">
+        <NavLink class="nav-link" href="@href">
+            <span class="nav-icon" aria-hidden="true">@icon</span>
+            <span>@label</span>
+        </NavLink>
+    </div>;
+}
+

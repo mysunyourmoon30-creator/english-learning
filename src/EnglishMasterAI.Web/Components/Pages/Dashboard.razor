@@ -1,0 +1,122 @@
+@page "/dashboard"
+@attribute [Authorize]
+@inject CurrentUserService CurrentUser
+@inject LearningService Learning
+
+<PageTitle>Dashboard | EnglishMaster AI</PageTitle>
+
+@if (_data is null)
+{
+    <div class="loading"><div class="spinner"></div></div>
+}
+else
+{
+    <div class="page-header">
+        <div>
+            <div class="eyebrow">PERSONAL LEARNING DASHBOARD</div>
+            <h1>สวัสดี @_data.Profile.DisplayName</h1>
+            <p>วันนี้เดินหน้าทีละช่วงสั้น ๆ ให้ครบทั้ง input, practice และ output</p>
+        </div>
+        <div>
+            <span class="tag gold">🔥 @_data.Profile.CurrentStreak วันต่อเนื่อง</span>
+        </div>
+    </div>
+
+    @if (!_data.Profile.OnboardingCompleted || !_data.Profile.PlacementCompleted)
+    {
+        <div class="callout mb-4">
+            <p>
+                <strong>ตั้งค่าระบบให้ครบเพื่อรับแผนส่วนตัว:</strong>
+                @if (!_data.Profile.OnboardingCompleted)
+                {
+                    <a href="/onboarding">ตั้งเป้าหมาย</a>
+                }
+                else
+                {
+                    <a href="/placement">ทำ Placement Test</a>
+                }
+            </p>
+        </div>
+    }
+
+    <section class="grid-4">
+        <div class="surface stat-card"><small>ระดับปัจจุบัน</small><strong>@_data.Profile.CurrentCefr</strong><span>เป้าหมาย @_data.Profile.TargetCefr</span></div>
+        <div class="surface stat-card"><small>ความคืบหน้ารวม</small><strong>@_data.OverallProgress%</strong><div class="progress"><div class="progress-bar" style="@($"width:{_data.OverallProgress}%")"></div></div></div>
+        <div class="surface stat-card"><small>บทเรียนที่ผ่าน</small><strong>@_data.CompletedLessons/@_data.TotalLessons</strong><span>เกณฑ์ผ่าน quiz ≥ 80%</span></div>
+        <div class="surface stat-card"><small>ถึงเวลาทบทวน</small><strong>@_data.DueReviews</strong><a href="/review" class="small text-decoration-none">เปิด SRS queue →</a></div>
+    </section>
+
+    <div class="grid-2 mt-4">
+        <section class="surface surface-pad">
+            <div class="section-title mt-0">
+                <div><div class="eyebrow">TODAY · @_data.Profile.DailyMinutes MINUTES</div><h2>แผนเรียนวันนี้</h2></div>
+            </div>
+            <ul class="list-clean">
+                @foreach (var task in _data.DailyPlan)
+                {
+                    <li>
+                        <a href="@task.Url" class="d-flex align-items-center gap-3 py-3 text-decoration-none text-reset">
+                            <span class="task-icon @task.Kind">@TaskIcon(task.Kind)</span>
+                            <span class="flex-grow-1"><strong class="d-block">@task.Title</strong><small class="text-secondary">@task.Detail</small></span>
+                            <span class="tag">@task.Minutes นาที</span>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </section>
+        <section class="surface surface-pad">
+            <div class="eyebrow">FOCUS AREAS</div>
+            <h2>จุดที่ควรพัฒนาก่อน</h2>
+            <p class="text-secondary small">เรียงจากผล Placement Test ล่าสุด และจะปรับเมื่อมีข้อมูลใหม่</p>
+            <ol class="focus-list">
+                @for (var i = 0; i < _data.WeakAreas.Count; i++)
+                {
+                    <li><span>@(i + 1)</span><strong>@_data.WeakAreas[i]</strong></li>
+                }
+            </ol>
+            <a class="btn btn-outline-primary w-100 mt-3" href="/placement">ทำ Placement ใหม่</a>
+        </section>
+    </div>
+
+    <div class="section-title">
+        <h2>เรียนต่อจากจุดนี้</h2>
+        <a href="/roadmap">ดู Roadmap ทั้งหมด →</a>
+    </div>
+    <section class="module-grid">
+        @foreach (var module in _data.ContinueModules)
+        {
+            <a class="surface module-card" href="@(module.FirstLessonSlug is null ? "/learn" : $"/lessons/{module.FirstLessonSlug}")">
+                <div class="module-code"><span>@module.Code · @module.CefrLevel</span><span class="tag">@module.ProgressPercent%</span></div>
+                <h3>@module.Title</h3>
+                <p>@module.TitleThai<br />@module.Summary</p>
+                <div class="progress"><div class="progress-bar" style="@($"width:{module.ProgressPercent}%")"></div></div>
+                <div class="module-foot"><span>@module.CompletedLessons/@module.TotalLessons บท</span><span>เรียนต่อ →</span></div>
+            </a>
+        }
+    </section>
+}
+
+<style>
+    .task-icon{width:2.4rem;height:2.4rem;border-radius:.75rem;display:grid;place-items:center;background:#edf4ef;color:#1d766c;font-weight:800}
+    .task-icon.ai{background:#fff3d8;color:#8a5e11}.task-icon.listening{background:#e8f1f7;color:#356582}
+    .focus-list{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;gap:.7rem}
+    .focus-list li{display:flex;gap:.7rem;align-items:center;padding:.75rem;background:#f7f9f6;border-radius:.7rem}
+    .focus-list span{width:1.6rem;height:1.6rem;display:grid;place-items:center;border-radius:.5rem;background:#17332f;color:#fff;font-size:.7rem}
+</style>
+
+@code {
+    private DashboardData? _data;
+    protected override async Task OnInitializedAsync()
+    {
+        var userId = await CurrentUser.GetRequiredUserIdAsync();
+        _data = await Learning.GetDashboardAsync(userId);
+    }
+
+    private static string TaskIcon(string kind) => kind switch
+    {
+        "review" => "↻",
+        "listening" => "◖",
+        "ai" => "✦",
+        _ => "A"
+    };
+}

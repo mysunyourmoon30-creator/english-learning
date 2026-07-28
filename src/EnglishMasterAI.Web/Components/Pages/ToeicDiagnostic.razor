@@ -1,0 +1,14 @@
+@page "/toeic/diagnostic"
+@attribute [Authorize]
+
+<PageTitle>TOEIC Diagnostic | EnglishMaster AI</PageTitle>
+
+<div class="page-header">
+    <div>
+        <div class="eyebrow">TOEIC QUICK DIAGNOSTIC</div>
+        <h1>ตัวอย่างครบ Parts 1–7</h1>
+        <p>แบบย่อ Part ละ 1 ข้อ ใช้ตรวจ flow, timing และ report ของระบบ ก่อนขยายเป็น Mini/Full Mock</p>
+    </div>
+    <span class="tag gold">7 ข้อ · 7 Parts</span>
+</div>
+<AssessmentRunner Kind="AssessmentKind.ToeicDiagnostic" CompletionUrl="/toeic" CompletionLabel="กลับ TOEIC Center" />

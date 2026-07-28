@@ -1,0 +1,115 @@
+@page "/onboarding"
+@attribute [Authorize]
+@inject CurrentUserService CurrentUser
+@inject LearningService Learning
+@inject NavigationManager Navigation
+
+<PageTitle>ตั้งเป้าหมาย | EnglishMaster AI</PageTitle>
+
+<div class="page-header">
+    <div>
+        <div class="eyebrow">START HERE · STEP 1</div>
+        <h1>ออกแบบเป้าหมายของคุณ</h1>
+        <p>ข้อมูลนี้ใช้จัดเวลาและลำดับบทเรียน คุณกลับมาแก้ไขภายหลังได้เสมอ</p>
+    </div>
+    <span class="tag gold">ประมาณ 2 นาที</span>
+</div>
+
+<div class="split-layout">
+    <div class="surface surface-pad">
+        @if (_loading)
+        {
+            <div class="loading"><div class="spinner"></div></div>
+        }
+        else
+        {
+            <EditForm Model="_model" OnValidSubmit="SaveAsync" FormName="onboarding">
+                <DataAnnotationsValidator />
+                <div class="mb-4">
+                    <label class="form-label" for="display-name">ชื่อที่ต้องการให้เรียก</label>
+                    <InputText id="display-name" class="form-control" @bind-Value="_model.DisplayName" />
+                    <ValidationMessage For="() => _model.DisplayName" />
+                </div>
+                <div class="mb-4">
+                    <label class="form-label" for="goal">เป้าหมายหลัก</label>
+                    <InputSelect id="goal" class="form-select" @bind-Value="_model.Goal">
+                        <option value="Use English confidently as an AI Engineer">ใช้ภาษาอังกฤษทำงานสาย AI Engineer</option>
+                        <option value="Reach my TOEIC target score">ทำคะแนน TOEIC ให้ถึงเป้าหมาย</option>
+                        <option value="Read technical documentation confidently">อ่าน Technical Documentation ได้คล่อง</option>
+                        <option value="Speak and write confidently at work">พูดและเขียนในที่ทำงานได้มั่นใจ</option>
+                    </InputSelect>
+                </div>
+                <div class="grid-2">
+                    <div class="mb-4">
+                        <label class="form-label" for="cefr">CEFR เป้าหมาย</label>
+                        <InputSelect id="cefr" class="form-select" @bind-Value="_model.TargetCefr">
+                            <option>A2</option><option>B1</option><option>B2</option><option>C1</option>
+                        </InputSelect>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label" for="toeic-target">TOEIC เป้าหมาย</label>
+                        <InputNumber id="toeic-target" class="form-control" @bind-Value="_model.TargetToeic" />
+                        <ValidationMessage For="() => _model.TargetToeic" />
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label" for="minutes">เวลาเรียนต่อวัน: <strong>@_model.DailyMinutes นาที</strong></label>
+                    <InputNumber id="minutes" class="form-control" step="15" @bind-Value="_model.DailyMinutes" />
+                    <div class="form-text">แนะนำ 45–90 นาทีสำหรับการเรียนอย่างสม่ำเสมอ</div>
+                    <ValidationMessage For="() => _model.DailyMinutes" />
+                </div>
+                <button class="btn btn-primary" type="submit" disabled="@_saving">
+                    @(_saving ? "กำลังบันทึก…" : "บันทึกและไป Placement Test →")
+                </button>
+            </EditForm>
+        }
+    </div>
+    <aside class="surface surface-pad sticky-panel">
+        <div class="eyebrow">WHAT HAPPENS NEXT</div>
+        <h2>ระบบจะสร้าง Roadmap อย่างไร</h2>
+        <ol class="ps-3 text-secondary lh-lg">
+            <li>ตรวจระดับแยก 9 ทักษะ</li>
+            <li>เรียง 4 จุดที่ควรพัฒนาก่อน</li>
+            <li>เลือก English Core ที่เหมาะกับระดับ</li>
+            <li>จัด Daily Plan ตามเวลาที่มี</li>
+        </ol>
+        <div class="callout mt-3"><p>คะแนนใช้วางแผนเท่านั้น ไม่ได้ใช้ตัดสินความสามารถหรือสำเนียงของผู้เรียน</p></div>
+    </aside>
+</div>
+
+@code {
+    private readonly OnboardingModel _model = new();
+    private bool _loading = true;
+    private bool _saving;
+    private string _userId = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _userId = await CurrentUser.GetRequiredUserIdAsync();
+        var profile = await Learning.GetOrCreateProfileAsync(_userId);
+        _model.DisplayName = profile.DisplayName;
+        _model.Goal = profile.LearningGoal;
+        _model.TargetCefr = profile.TargetCefr;
+        _model.TargetToeic = profile.TargetToeicScore;
+        _model.DailyMinutes = profile.DailyMinutes;
+        _loading = false;
+    }
+
+    private async Task SaveAsync()
+    {
+        _saving = true;
+        var profile = await Learning.SaveOnboardingAsync(
+            _userId, _model.DisplayName, _model.Goal, _model.TargetCefr, _model.TargetToeic, _model.DailyMinutes);
+        Navigation.NavigateTo(profile.PlacementCompleted ? "/dashboard" : "/placement");
+    }
+
+    private sealed class OnboardingModel
+    {
+        [System.ComponentModel.DataAnnotations.Required, System.ComponentModel.DataAnnotations.StringLength(100, MinimumLength = 2)]
+        public string DisplayName { get; set; } = "";
+        [System.ComponentModel.DataAnnotations.Required] public string Goal { get; set; } = "Use English confidently as an AI Engineer";
+        public string TargetCefr { get; set; } = "B2";
+        [System.ComponentModel.DataAnnotations.Range(10, 990)] public int TargetToeic { get; set; } = 750;
+        [System.ComponentModel.DataAnnotations.Range(15, 180)] public int DailyMinutes { get; set; } = 60;
+    }
+}

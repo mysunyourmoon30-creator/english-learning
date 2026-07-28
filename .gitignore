@@ -1,0 +1,13 @@
+bin/
+obj/
+*.user
+*.suo
+.vs/
+src/EnglishMasterAI.Web/Data/app.db
+src/EnglishMasterAI.Web/Data/app.db-shm
+src/EnglishMasterAI.Web/Data/app.db-wal
+src/EnglishMasterAI.Web/Data/ProtectionKeys/
+TestResults/
+.tmp/
+appsettings.Local.json
+appsettings.*.local.json

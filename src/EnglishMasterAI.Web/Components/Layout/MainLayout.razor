@@ -1,0 +1,45 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <div class="top-context">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span>เส้นทางเรียนวันนี้พร้อมแล้ว</span>
+            </div>
+            <AuthorizeView>
+                <Authorized>
+                    <a class="profile-link" href="Account/Manage">
+                        <span class="avatar">@GetInitial(context.User.Identity?.Name)</span>
+                        <span class="profile-copy"><strong>@context.User.Identity?.Name</strong><small>จัดการบัญชี</small></span>
+                    </a>
+                </Authorized>
+                <NotAuthorized>
+                    <div class="top-actions">
+                        <a class="btn btn-ghost" href="Account/Login">เข้าสู่ระบบ</a>
+                        <a class="btn btn-primary btn-sm" href="Account/Register">เริ่มเรียน</a>
+                    </div>
+                </NotAuthorized>
+            </AuthorizeView>
+        </div>
+
+        <article class="content">
+            @Body
+        </article>
+    </main>
+</div>
+
+@code {
+    private static string GetInitial(string? name) =>
+        string.IsNullOrWhiteSpace(name) ? "E" : name[..1].ToUpperInvariant();
+}
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>

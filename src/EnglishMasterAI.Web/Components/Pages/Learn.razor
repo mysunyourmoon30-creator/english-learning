@@ -1,0 +1,64 @@
+@page "/learn"
+@attribute [Authorize]
+@inject CurrentUserService CurrentUser
+@inject LearningService Learning
+
+<PageTitle>English Core | EnglishMaster AI</PageTitle>
+
+<div class="page-header">
+    <div>
+        <div class="eyebrow">ENGLISH CORE PATH · E01–E10</div>
+        <h1>เรียนแกนกลางให้แน่น</h1>
+        <p>เริ่มจากอ่านออกและสร้างประโยค ก่อนต่อยอด Grammar 80/20 ที่พบจริงในงานและ TOEIC</p>
+    </div>
+    <span class="tag">Pre-A1 → B1</span>
+</div>
+
+@if (_modules is null)
+{
+    <div class="loading"><div class="spinner"></div></div>
+}
+else
+{
+    <div class="filter-row surface">
+        <button class="@FilterClass(null)" @onclick="() => SetFilter(null)">ทั้งหมด</button>
+        <button class="@FilterClass(LearningCategory.Foundation)" @onclick="() => SetFilter(LearningCategory.Foundation)">Foundation</button>
+        <button class="@FilterClass(LearningCategory.Vocabulary)" @onclick="() => SetFilter(LearningCategory.Vocabulary)">Vocabulary</button>
+        <button class="@FilterClass(LearningCategory.Grammar)" @onclick="() => SetFilter(LearningCategory.Grammar)">Grammar 80/20</button>
+    </div>
+    <section class="module-grid mt-3">
+        @foreach (var module in FilteredModules)
+        {
+            <a class="surface module-card" href="@(module.FirstLessonSlug is null ? "#" : $"/lessons/{module.FirstLessonSlug}")">
+                <div class="module-code"><span>@module.Code · @module.CefrLevel</span><span>@module.EstimatedMinutes นาที</span></div>
+                <h3>@module.Title</h3>
+                <p><strong>@module.TitleThai</strong><br />@module.Summary</p>
+                <div class="progress"><div class="progress-bar" style="@($"width:{module.ProgressPercent}%")"></div></div>
+                <div class="module-foot"><span>@module.ProgressPercent% completed</span><span>@(module.ProgressPercent > 0 ? "เรียนต่อ →" : "เริ่มบทเรียน →")</span></div>
+            </a>
+        }
+    </section>
+}
+
+<style>
+    .filter-row{display:flex;gap:.35rem;padding:.4rem;overflow-x:auto}
+    .filter-row button{border:0;background:transparent;border-radius:.6rem;padding:.55rem .8rem;white-space:nowrap;color:#6d7c74;font-weight:650;font-size:.8rem}
+    .filter-row button.active{background:#17332f;color:white}
+</style>
+
+@code {
+    private IReadOnlyList<ModuleProgress>? _modules;
+    private LearningCategory? _filter;
+    private IEnumerable<ModuleProgress> FilteredModules => _modules?.Where(x => _filter is null || x.Category == _filter) ?? [];
+
+    protected override async Task OnInitializedAsync()
+    {
+        var userId = await CurrentUser.GetRequiredUserIdAsync();
+        _modules = (await Learning.GetModulesAsync(userId))
+            .Where(x => x.Category != LearningCategory.AiEnglish)
+            .ToList();
+    }
+
+    private void SetFilter(LearningCategory? category) => _filter = category;
+    private string FilterClass(LearningCategory? category) => _filter == category ? "active" : "";
+}

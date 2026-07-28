@@ -1,0 +1,75 @@
+@page "/toeic"
+@attribute [Authorize]
+@inject CurrentUserService CurrentUser
+@inject AssessmentService Assessment
+
+<PageTitle>TOEIC Center | EnglishMaster AI</PageTitle>
+
+<div class="page-header">
+    <div>
+        <div class="eyebrow">TOEIC LISTENING & READING</div>
+        <h1>ฝึก Parts 1–7 อย่างมีหลักฐาน</h1>
+        <p>แยก Question Type, เวลา, Grammar และ Vocabulary ที่ผิด ก่อนนำไปสร้างชุดทบทวนส่วนตัว</p>
+    </div>
+    <div class="d-flex gap-2 flex-wrap">
+        <a class="btn btn-outline-primary" href="/toeic/diagnostic">Quick Diagnostic</a>
+        <a class="btn btn-primary" href="/toeic/mock">200-item Mock →</a>
+    </div>
+</div>
+
+@if (_history is null)
+{
+    <div class="loading"><div class="spinner"></div></div>
+}
+else
+{
+    <section class="toeic-score surface">
+        @if (_history.Count == 0)
+        {
+            <div><div class="eyebrow">NO RESULT YET</div><h2>ยังไม่มีคะแนน Diagnostic</h2><p>เริ่มจากแบบย่อ 7 ข้อเพื่อดูจุดอ่อนราย Part</p></div>
+            <div class="score-number">—<small>/990</small></div>
+        }
+        else
+        {
+            var latest = _history[0];
+            <div><div class="eyebrow">LATEST ESTIMATE</div><h2>@latest.CorrectAnswers/@latest.TotalQuestions ข้อใน Quick Diagnostic</h2><p>@latest.CompletedAt.ToLocalTime().ToString("dd MMM yyyy · HH:mm") · ระดับ @latest.OverallCefr</p></div>
+            <div class="score-number">@latest.EstimatedToeicScore<small>/990</small></div>
+        }
+    </section>
+
+    <div class="section-title"><h2>Listening · 45 minutes in full test</h2><span class="tag blue">Parts 1–4</span></div>
+    <section class="grid-4">
+        @PartCard(1, "Photographs", "บรรยายภาพและตำแหน่ง", "Listening")
+        @PartCard(2, "Question–Response", "จับ question word และ intent", "Listening")
+        @PartCard(3, "Conversations", "ผู้พูด จุดประสงค์ และ next step", "Listening")
+        @PartCard(4, "Talks", "ประกาศ ข้อความ และรายละเอียด", "Listening")
+    </section>
+
+    <div class="section-title"><h2>Reading · 75 minutes in full test</h2><span class="tag">Parts 5–7</span></div>
+    <section class="grid-3">
+        @PartCard(5, "Incomplete Sentences", "Grammar และ word forms", "Reading")
+        @PartCard(6, "Text Completion", "ความเชื่อมโยงของข้อความ", "Reading")
+        @PartCard(7, "Reading Comprehension", "single, double และ triple passages", "Reading")
+    </section>
+
+    <div class="callout mt-4"><p><strong>หมายเหตุ:</strong> Diagnostic และ Mock เป็นแบบฝึกต้นฉบับสำหรับวิเคราะห์ทักษะ ไม่ใช่ข้อสอบ TOEIC จริงหรือคะแนนรับรองจาก ETS</p></div>
+}
+
+<style>
+    .toeic-score{padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;background:#153f3b;color:white}.toeic-score p{color:#b7cdc7;margin:0}.toeic-score .eyebrow{color:#efbd5d}
+    .score-number{font:800 clamp(2.4rem,7vw,4.5rem) Manrope;color:#efbd5d}.score-number small{font-size:.8rem;color:#b7cdc7}
+    .part-card{padding:1.2rem}.part-card>span:first-child{display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:.7rem;background:#17332f;color:white;font-weight:800}.part-card h3{margin:1rem 0 .35rem}.part-card p{color:#6d7c74;font-size:.8rem}
+    @@media(max-width:600px){.toeic-score{align-items:flex-start;flex-direction:column}}
+</style>
+
+@code {
+    private IReadOnlyList<PlacementAttempt>? _history;
+    protected override async Task OnInitializedAsync()
+    {
+        _history = await Assessment.GetHistoryAsync(await CurrentUser.GetRequiredUserIdAsync(), "TOEIC Diagnostic");
+    }
+
+    private RenderFragment PartCard(int part, string title, string detail, string type) => @<article class="surface part-card">
+        <span>@part</span><h3>@title</h3><p>@detail</p><span class="tag @(type == "Listening" ? "blue" : "")">@type</span>
+    </article>;
+}

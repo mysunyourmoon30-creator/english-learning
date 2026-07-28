@@ -1,0 +1,78 @@
+@page "/roadmap"
+@attribute [Authorize]
+@inject CurrentUserService CurrentUser
+@inject LearningService Learning
+
+<PageTitle>Roadmap ส่วนตัว | EnglishMaster AI</PageTitle>
+
+<div class="page-header">
+    <div>
+        <div class="eyebrow">PERSONAL ROADMAP</div>
+        <h1>เส้นทางจากพื้นฐานสู่ AI English</h1>
+        <p>เรียนภาษาอังกฤษแกนกลางครั้งเดียว แล้วนำไปฝึกซ้ำผ่านบริบท AI และ TOEIC</p>
+    </div>
+    <a class="btn btn-outline-primary" href="/placement">ประเมินระดับใหม่</a>
+</div>
+
+@if (_modules is null)
+{
+    <div class="loading"><div class="spinner"></div></div>
+}
+else
+{
+    @foreach (var group in _modules.GroupBy(x => x.Phase))
+    {
+        <section class="roadmap-phase">
+            <div class="phase-head">
+                <span>@PhaseNumber(group.Key)</span>
+                <div><div class="eyebrow">@group.Key</div><h2>@PhaseTitle(group.Key)</h2></div>
+            </div>
+            <div class="phase-line">
+                @foreach (var module in group)
+                {
+                    <a class="roadmap-item surface" href="@(module.FirstLessonSlug is null ? "/learn" : $"/lessons/{module.FirstLessonSlug}")">
+                        <div class="roadmap-dot @(module.ProgressPercent == 100 ? "done" : module.ProgressPercent > 0 ? "active" : "")">
+                            @(module.ProgressPercent == 100 ? "✓" : module.Code)
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between gap-2"><strong>@module.Title</strong><span class="tag">@module.CefrLevel</span></div>
+                            <small>@module.TitleThai · @module.EstimatedMinutes นาที</small>
+                            <div class="progress mt-2"><div class="progress-bar" style="@($"width:{module.ProgressPercent}%")"></div></div>
+                        </div>
+                    </a>
+                }
+            </div>
+        </section>
+    }
+    <div class="callout mt-4"><p><strong>หลักการผ่านบท:</strong> Knowledge Quiz ≥ 80% และ Critical Vocabulary จะเข้าสู่ Personal Review Queue อัตโนมัติ</p></div>
+}
+
+<style>
+    .roadmap-phase{display:grid;grid-template-columns:220px 1fr;gap:1.5rem;margin-bottom:2rem}
+    .phase-head{display:flex;gap:.8rem;align-items:flex-start;padding-top:.8rem}
+    .phase-head>span{width:2.5rem;height:2.5rem;border-radius:.8rem;background:#17332f;color:white;display:grid;place-items:center;font-weight:800}
+    .phase-head h2{font-size:1rem;margin:0}.phase-head .eyebrow{margin-bottom:.35rem}
+    .phase-line{display:grid;gap:.65rem;position:relative}
+    .roadmap-item{display:flex;gap:1rem;align-items:center;padding:1rem;text-decoration:none;color:#17332f}
+    .roadmap-item:hover{color:#17332f;border-color:#a8c4bd}
+    .roadmap-item small{color:#6d7c74}
+    .roadmap-dot{width:3.2rem;height:3.2rem;flex:0 0 3.2rem;border-radius:.9rem;background:#eef1ed;color:#6d7c74;display:grid;place-items:center;font-size:.7rem;font-weight:800}
+    .roadmap-dot.active{background:#e6f2ee;color:#1d766c}.roadmap-dot.done{background:#1d766c;color:white;font-size:1rem}
+    @@media(max-width:800px){.roadmap-phase{grid-template-columns:1fr;gap:.5rem}.phase-head{padding-top:0}}
+</style>
+
+@code {
+    private IReadOnlyList<ModuleProgress>? _modules;
+    protected override async Task OnInitializedAsync()
+    {
+        _modules = await Learning.GetModulesAsync(await CurrentUser.GetRequiredUserIdAsync());
+    }
+
+    private static string PhaseNumber(string phase) => phase switch { "Phase 1" => "01", "Phase 2" => "02", _ => "AI" };
+    private static string PhaseTitle(string phase) => phase switch
+    {
+        "Phase 1" => "อ่านออกและสร้างประโยค",
+        "Phase 2" => "Grammar 80/20 ที่ใช้จริง",
+        _ => "ใช้ภาษาอังกฤษอธิบายระบบ AI"
+    };
+}

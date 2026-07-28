@@ -1,0 +1,23 @@
+@page "/toeic/mock"
+@attribute [Authorize]
+
+<PageTitle>TOEIC Practice Simulation | EnglishMaster AI</PageTitle>
+
+<div class="page-header">
+    <div>
+        <div class="eyebrow">200-ITEM PRACTICE SIMULATION</div>
+        <h1>TOEIC Listening & Reading Mock</h1>
+        <p>แบบฝึกต้นฉบับ Parts 1–7 จับเวลา 120 นาที ข้อที่ไม่ตอบจะนับเป็นข้อผิด</p>
+    </div>
+    <span class="tag red">120 minutes</span>
+</div>
+
+<div class="callout mb-4">
+    <p><strong>Practice mode:</strong> ส่วน Listening ใช้ transcript จำลองและยังไม่ใช่เสียงสอบจริง ชุดนี้ไม่ใช่ข้อสอบหรือคะแนนรับรองจาก ETS</p>
+</div>
+
+<AssessmentRunner Kind="AssessmentKind.ToeicMock"
+                  TimeLimitMinutes="120"
+                  AllowSkipping="true"
+                  CompletionUrl="/toeic"
+                  CompletionLabel="กลับ TOEIC Center" />

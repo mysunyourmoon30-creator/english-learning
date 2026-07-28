@@ -1,0 +1,231 @@
+@page "/lessons/{Slug}"
+@attribute [Authorize]
+@inject LearningService Learning
+@inject CurrentUserService CurrentUser
+@inject IJSRuntime JS
+
+<PageTitle>@(_lesson?.Title ?? "Lesson") | EnglishMaster AI</PageTitle>
+
+@if (_loading)
+{
+    <div class="loading"><div class="spinner"></div></div>
+}
+else if (_lesson is null)
+{
+    <div class="empty-state"><div class="empty-icon">!</div><h1>ไม่พบบทเรียน</h1><a href="/learn">กลับ English Core</a></div>
+}
+else
+{
+    <div class="lesson-head">
+        <div>
+            <div class="eyebrow">@_lesson.Module.Code · @_lesson.Module.CefrLevel · VERSION @_lesson.Version</div>
+            <h1>@_lesson.Title</h1>
+            <p>@_lesson.Objective</p>
+        </div>
+        <div class="lesson-meta">
+            <span class="tag">@_lesson.EstimatedMinutes นาที</span>
+            <span class="tag gold">Quiz ≥ 80%</span>
+        </div>
+    </div>
+
+    <div class="split-layout">
+        <main>
+            <section id="concept" class="surface lesson-section">
+                <h2><span class="step-number">1</span> Concept Preview</h2>
+                <p class="lesson-copy">@_lesson.ThaiExplanation</p>
+                <div class="objective-box"><strong>Can-do outcome</strong><span>@_lesson.Objective</span></div>
+            </section>
+
+            <section id="vocabulary" class="surface lesson-section">
+                <h2><span class="step-number">2</span> Key Vocabulary</h2>
+                <div class="table-responsive">
+                    <table class="word-table">
+                        <thead><tr><th>Word</th><th>Meaning & form</th><th>Chunk</th><th>Example</th><th>Audio</th></tr></thead>
+                        <tbody>
+                        @foreach (var item in _lesson.Vocabulary)
+                        {
+                            <tr>
+                                <td><strong>@item.Word</strong><br /><small>@item.Pronunciation</small></td>
+                                <td>@item.ThaiMeaning<br /><small>@item.WordForm</small></td>
+                                <td>@item.Collocation</td>
+                                <td>@item.ExampleSentence</td>
+                                <td><button class="audio-button" title="ฟังการออกเสียง" @onclick="() => SpeakAsync(item.Word, 0.8)">▶</button></td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="grammar" class="surface lesson-section">
+                <h2><span class="step-number">3</span> Grammar in Context</h2>
+                <p class="lesson-copy">@_lesson.GrammarFocus</p>
+            </section>
+
+            <section id="reading" class="surface lesson-section">
+                <div class="d-flex justify-content-between gap-2 align-items-center">
+                    <h2><span class="step-number">4</span> Reading</h2>
+                    <span class="tag blue">English Only</span>
+                </div>
+                <blockquote class="reading-copy">@_lesson.ReadingContent</blockquote>
+            </section>
+
+            <section id="listening" class="surface lesson-section">
+                <h2><span class="step-number">5</span> Listening & Shadowing</h2>
+                <div class="audio-player">
+                    <button class="play-button" @onclick="() => SpeakAsync(_lesson.ListeningTranscript, _speed)">▶</button>
+                    <div class="flex-grow-1"><strong>Lesson audio</strong><small>ฟังก่อนเปิด transcript แล้วพูดตาม</small></div>
+                    <select class="form-select speed-select" @bind="_speed">
+                        <option value="0.7">0.7×</option><option value="0.85">0.85×</option><option value="1">1×</option><option value="1.15">1.15×</option>
+                    </select>
+                </div>
+                <button class="btn btn-ghost btn-sm mt-3" @onclick="() => _showTranscript = !_showTranscript">
+                    @(_showTranscript ? "ซ่อน Transcript" : "เปิด Transcript")
+                </button>
+                @if (_showTranscript)
+                {
+                    <div class="transcript mt-2">@_lesson.ListeningTranscript</div>
+                }
+            </section>
+
+            <section id="output" class="surface lesson-section">
+                <h2><span class="step-number">6</span> Output Practice</h2>
+                <div class="grid-2">
+                    <div class="practice-card"><span>🎙</span><div><strong>Speaking</strong><p>@_lesson.SpeakingPrompt</p><a href="/practice/speaking">เปิด Speaking Lab →</a></div></div>
+                    <div class="practice-card"><span>✎</span><div><strong>Writing</strong><p>@_lesson.WritingPrompt</p><a href="/practice/writing">เปิด Writing Lab →</a></div></div>
+                </div>
+            </section>
+
+            <section id="quiz" class="surface lesson-section">
+                <h2><span class="step-number">7</span> Knowledge Quiz</h2>
+                @foreach (var question in _lesson.Questions.OrderBy(x => x.SortOrder))
+                {
+                    var options = Options(question);
+                    <div class="question-card">
+                        <div class="eyebrow">@question.Skill</div>
+                        <h3>@question.Prompt</h3>
+                        <div class="quiz-options">
+                            @for (var index = 0; index < options.Count; index++)
+                            {
+                                var captured = index;
+                                <button type="button"
+                                        class="quiz-option @QuizOptionClass(question.Id, captured)"
+                                        disabled="@(_quizResult is not null)"
+                                        @onclick="() => _answers[question.Id] = captured">
+                                    <span>@((char)('A' + captured)).</span> @options[captured]
+                                </button>
+                            }
+                        </div>
+                        @if (_quizResult is not null)
+                        {
+                            <p class="small mt-2 @(_quizResult.Correctness[question.Id] ? "text-success" : "text-danger")">
+                                @(_quizResult.Correctness[question.Id] ? "ถูกต้อง — " : "ยังไม่ถูก — ") @_quizResult.Explanations[question.Id]
+                            </p>
+                        }
+                    </div>
+                }
+                @if (_quizResult is null)
+                {
+                    <button class="btn btn-primary" disabled="@(_answers.Count != _lesson.Questions.Count || _submitting)" @onclick="SubmitQuizAsync">
+                        @(_submitting ? "กำลังตรวจ…" : "ส่งคำตอบ")
+                    </button>
+                }
+                else
+                {
+                    <div class="quiz-result @(_quizResult.Passed ? "passed" : "retry")">
+                        <strong>@_quizResult.Score%</strong>
+                        <div>
+                            <h3>@(_quizResult.Passed ? "ผ่านบทเรียนแล้ว" : "ทบทวนอีกครั้งแล้วลองใหม่")</h3>
+                            <p>@_quizResult.Correct/@_quizResult.Total ข้อ · คำศัพท์ในบทถูกเพิ่มเข้า Review Queue แล้ว</p>
+                        </div>
+                        @if (_quizResult.Passed)
+                        {
+                            <a class="btn btn-primary" href="/roadmap">ไปบทถัดไป →</a>
+                        }
+                        else
+                        {
+                            <button class="btn btn-outline-primary" @onclick="RetryQuiz">ลองใหม่</button>
+                        }
+                    </div>
+                }
+            </section>
+        </main>
+        <aside class="surface surface-pad sticky-panel lesson-nav">
+            <div class="eyebrow">LESSON MAP</div>
+            <a href="#concept">01 Concept Preview</a>
+            <a href="#vocabulary">02 Vocabulary</a>
+            <a href="#grammar">03 Grammar</a>
+            <a href="#reading">04 Reading</a>
+            <a href="#listening">05 Listening</a>
+            <a href="#output">06 Speaking & Writing</a>
+            <a href="#quiz">07 Quiz</a>
+            <div class="callout mt-3"><p>ทุกข้อผิดจะถูกส่งไปทบทวน ไม่มีคำผิดใดหายไปหลังจบบท</p></div>
+        </aside>
+    </div>
+}
+
+<style>
+    .lesson-head{display:flex;justify-content:space-between;gap:2rem;align-items:end;margin-bottom:1.5rem}
+    .lesson-head p{color:#6d7c74;max-width:48rem}.lesson-meta{display:flex;gap:.5rem;white-space:nowrap}
+    .objective-box{display:flex;flex-direction:column;gap:.25rem;background:#eaf4f0;border-radius:.8rem;padding:1rem;margin-top:1rem}.objective-box strong{color:#1d766c;font-size:.75rem;text-transform:uppercase}
+    .reading-copy{font:500 1.08rem/2 IBM Plex Sans Thai;padding:1.2rem;border-left:3px solid #e4a93e;background:#fff9ed;margin:0}
+    .audio-button,.play-button{border:0;background:#1d766c;color:white;border-radius:50%;width:2rem;height:2rem}.play-button{width:3rem;height:3rem;flex:0 0 3rem}
+    .audio-player{display:flex;align-items:center;gap:1rem;padding:1rem;background:#eef4ef;border-radius:.9rem}.audio-player small{display:block;color:#6d7c74}.speed-select{width:5.5rem}
+    .transcript{padding:1rem;background:#f8faf7;border:1px dashed #b7c8bf;border-radius:.75rem;line-height:1.8}
+    .practice-card{display:flex;gap:.8rem;padding:1rem;background:#f7f9f6;border-radius:.8rem}.practice-card>span{font-size:1.4rem}.practice-card p{color:#6d7c74;font-size:.83rem;min-height:3rem}.practice-card a{font-size:.8rem;font-weight:700;text-decoration:none}
+    .lesson-nav{display:flex;flex-direction:column}.lesson-nav>a{padding:.58rem 0;border-bottom:1px solid #e6ebe4;text-decoration:none;color:#53635c;font-size:.82rem}.lesson-nav>a:hover{color:#1d766c}
+    .quiz-result{display:flex;align-items:center;gap:1rem;padding:1rem;border-radius:.9rem;margin-top:1rem}.quiz-result>strong{font:800 2rem Manrope}.quiz-result>div{flex:1}.quiz-result h3,.quiz-result p{margin:.1rem 0}.quiz-result.passed{background:#e8f6ef;color:#195e49}.quiz-result.retry{background:#fff4dc;color:#73500e}
+    @@media(max-width:700px){.lesson-head{align-items:flex-start;flex-direction:column}.lesson-meta{white-space:normal}}
+</style>
+
+@code {
+    [Parameter] public string Slug { get; set; } = string.Empty;
+    private Lesson? _lesson;
+    private bool _loading = true;
+    private bool _showTranscript;
+    private bool _submitting;
+    private double _speed = 0.85;
+    private readonly Dictionary<Guid, int> _answers = [];
+    private QuizResult? _quizResult;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        _loading = true;
+        _lesson = await Learning.GetLessonAsync(Slug);
+        _answers.Clear();
+        _quizResult = null;
+        _loading = false;
+    }
+
+    private static IReadOnlyList<string> Options(AssessmentQuestion question) =>
+        JsonSerializer.Deserialize<List<string>>(question.OptionsJson) ?? [];
+
+    private Task SpeakAsync(string text, double speed) =>
+        JS.InvokeVoidAsync("englishMaster.speak", text, speed).AsTask();
+
+    private string QuizOptionClass(Guid questionId, int index)
+    {
+        if (_quizResult is not null)
+        {
+            return _quizResult.Correctness[questionId]
+                ? (_answers.GetValueOrDefault(questionId) == index ? "correct" : "")
+                : (_answers.GetValueOrDefault(questionId) == index ? "incorrect" : "");
+        }
+        return _answers.GetValueOrDefault(questionId, -1) == index ? "selected" : "";
+    }
+
+    private async Task SubmitQuizAsync()
+    {
+        if (_lesson is null) return;
+        _submitting = true;
+        _quizResult = await Learning.SubmitLessonQuizAsync(
+            await CurrentUser.GetRequiredUserIdAsync(), _lesson.Id, _answers);
+        _submitting = false;
+    }
+
+    private void RetryQuiz()
+    {
+        _answers.Clear();
+        _quizResult = null;
+    }
+}

@@ -1,0 +1,79 @@
+@page "/ai-english"
+@attribute [Authorize]
+@inject CurrentUserService CurrentUser
+@inject LearningService Learning
+
+<PageTitle>AI English | EnglishMaster AI</PageTitle>
+
+<div class="ai-hero surface">
+    <div>
+        <div class="eyebrow">AI ENGLISH CONTEXT PATH</div>
+        <h1>เรียนภาษาอังกฤษผ่านระบบ AI ที่คุณสร้างจริง</h1>
+        <p>แต่ละ Module รวม Concept ภาษาไทย, Technical Vocabulary, Grammar in Context, Four Skills, Quiz และ Mini Project</p>
+    </div>
+    <div class="score-pair">
+        <div><strong>EN</strong><span>English score</span></div>
+        <div><strong>AI</strong><span>Knowledge score</span></div>
+    </div>
+</div>
+
+<div class="section-title">
+    <div><div class="eyebrow">COMPLETE CONTEXT CATALOG</div><h2>AI English Modules 1–24</h2></div>
+    <span class="tag gold">@(_modules?.Count ?? 0) / 24 Modules</span>
+</div>
+
+@if (_modules is null)
+{
+    <div class="loading"><div class="spinner"></div></div>
+}
+else
+{
+    <section class="module-grid">
+        @foreach (var module in _modules)
+        {
+            <a class="surface module-card ai-card" href="/lessons/@module.FirstLessonSlug">
+                <div class="module-code"><span>@module.Code · @module.CefrLevel</span><span class="tag gold">AI + EN</span></div>
+                <h3>@module.Title</h3>
+                <p><strong>@module.TitleThai</strong><br />@module.Summary</p>
+                <div class="mini-project"><span>MINI PROJECT</span>@ProjectFor(module)</div>
+                <div class="progress mt-3"><div class="progress-bar" style="@($"width:{module.ProgressPercent}%")"></div></div>
+                <div class="module-foot"><span>@module.ProgressPercent% complete</span><span>เปิด Module →</span></div>
+            </a>
+        }
+    </section>
+}
+
+<section class="surface surface-pad mt-4">
+    <div class="eyebrow">SAME LESSON TEMPLATE</div>
+    <div class="template-flow">
+        @foreach (var step in new[] { "Concept", "Vocabulary", "Grammar", "Reading", "Listening", "Speaking", "Writing", "Quiz", "Project", "Review" })
+        {
+            <span>@step</span>
+        }
+    </div>
+</section>
+
+<style>
+    .ai-hero{background:#153f3b;color:white;padding:clamp(1.5rem,5vw,3rem);display:flex;justify-content:space-between;align-items:center;gap:2rem}.ai-hero p{color:#b7cdc7;max-width:47rem}.ai-hero .eyebrow{color:#efbd5d}
+    .score-pair{display:flex}.score-pair>div{width:6.5rem;height:6.5rem;border:1px solid #ffffff2c;display:grid;place-content:center;text-align:center}.score-pair>div:first-child{border-radius:1rem 0 0 1rem}.score-pair>div:last-child{border-radius:0 1rem 1rem 0;background:#e4a93e;color:#17332f}.score-pair strong,.score-pair span{display:block}.score-pair strong{font:800 1.6rem Manrope}.score-pair span{font-size:.65rem}
+    .mini-project{background:#f7f9f6;border-radius:.7rem;padding:.7rem;font-size:.75rem;color:#52625b}.mini-project span{display:block;color:#1d766c;font:800 .58rem Manrope;letter-spacing:.1em;margin-bottom:.25rem}
+    .template-flow{display:flex;gap:.45rem;overflow-x:auto}.template-flow span{white-space:nowrap;padding:.55rem .7rem;border:1px solid #dfe6dc;border-radius:.6rem;font-size:.75rem}.template-flow span+span::before{content:"→";color:#9baa9f;margin-right:.7rem}
+    @@media(max-width:700px){.ai-hero{align-items:flex-start;flex-direction:column}.score-pair>div{width:5.2rem;height:5.2rem}}
+</style>
+
+@code {
+    private IReadOnlyList<ModuleProgress>? _modules;
+    protected override async Task OnInitializedAsync()
+    {
+        _modules = await Learning.GetModulesAsync(await CurrentUser.GetRequiredUserIdAsync(), LearningCategory.AiEnglish);
+    }
+
+    private static string ProjectFor(ModuleProgress module) => module.Code switch
+    {
+        "AI02" => "วาด LLM flow และอธิบาย component เป็นภาษาอังกฤษ",
+        "AI06" => "เขียน prompt ที่คืน API errors เป็น JSON",
+        "AI13" => "วาด RAG architecture พร้อมอธิบาย source grounding",
+        "AI23" => "สร้าง Security checklist สำหรับ AI API",
+        _ => $"อธิบาย {module.Title} เป็นภาษาอังกฤษพร้อมตัวอย่างหนึ่งกรณี"
+    };
+}

@@ -1,0 +1,127 @@
+@page "/admin/audit"
+@attribute [Authorize(Roles = "ContentAdmin,Admin")]
+@inject AuditService Audit
+@inject CurrentUserService CurrentUser
+
+<PageTitle>Audit Center | EnglishMaster AI</PageTitle>
+
+<div class="page-header">
+    <div>
+        <div class="eyebrow">MULTI-ROLE AUDIT CENTER</div>
+        <h1>ตรวจคุณภาพก่อน Publish</h1>
+        <p>English, TOEIC, Instructional Design, UX, AI, Developer, Security และ QA ใช้ผลลัพธ์รูปแบบเดียวกัน</p>
+    </div>
+    <button class="btn btn-primary" @onclick="() => _showForm = !_showForm">＋ เพิ่ม Finding</button>
+</div>
+
+@if (_summary is not null)
+{
+    <section class="grid-4 mb-4">
+        <div class="surface stat-card"><small>Open findings</small><strong>@_summary.Open</strong><span>ทั้งหมด @_summary.Total</span></div>
+        <div class="surface stat-card"><small>Critical</small><strong class="text-danger">@_summary.Critical</strong><span>ห้าม Publish</span></div>
+        <div class="surface stat-card"><small>High</small><strong class="text-warning">@_summary.High</strong><span>ต้องแก้ก่อน Release</span></div>
+        <div class="surface stat-card"><small>Publish gate</small><strong>@(_summary.CanPublish ? "PASS" : "BLOCK")</strong><span>@(_summary.CanPublish ? "ไม่มี blocker" : "มี blocker ค้างอยู่")</span></div>
+    </section>
+}
+
+@if (_showForm && _lessons is not null)
+{
+    <section class="surface surface-pad mb-4">
+        <h2>New audit finding</h2>
+        <EditForm Model="_form" OnValidSubmit="AddFindingAsync" FormName="audit-finding">
+            <DataAnnotationsValidator />
+            <div class="grid-3">
+                <div><label class="form-label">Lesson</label><InputSelect class="form-select" @bind-Value="_form.LessonId">@foreach (var lesson in _lessons) { <option value="@lesson.Id">@lesson.Module.Code · @lesson.Title</option> }</InputSelect></div>
+                <div><label class="form-label">Auditor role</label><InputSelect class="form-select" @bind-Value="_form.Role"><option>English Teacher</option><option>Instructional Designer</option><option>AI Engineer</option><option>UX/UI Designer</option><option>Developer</option><option>Security Auditor</option><option>QA Automation</option></InputSelect></div>
+                <div><label class="form-label">Severity</label><InputSelect class="form-select" @bind-Value="_form.Severity">@foreach (var severity in Enum.GetValues<AuditSeverity>()) { <option value="@severity">@severity</option> }</InputSelect></div>
+            </div>
+            <div class="grid-2 mt-3">
+                <div><label class="form-label">Location</label><InputText class="form-control" @bind-Value="_form.Location" /></div>
+                <div><label class="form-label">Issue</label><InputText class="form-control" @bind-Value="_form.Issue" /></div>
+            </div>
+            <div class="mt-3"><label class="form-label">Recommendation</label><InputTextArea class="form-control" @bind-Value="_form.Recommendation" /></div>
+            <button class="btn btn-primary mt-3" type="submit">บันทึก Finding</button>
+        </EditForm>
+    </section>
+}
+
+@if (_findings is null)
+{
+    <div class="loading"><div class="spinner"></div></div>
+}
+else if (_findings.Count == 0)
+{
+    <div class="empty-state surface"><div class="empty-icon">✓</div><h2>ไม่มี Open Finding</h2></div>
+}
+else
+{
+    <section class="finding-list">
+        @foreach (var finding in _findings)
+        {
+            <article class="surface finding">
+                <div class="severity @finding.Severity.ToString().ToLowerInvariant()">@finding.Severity</div>
+                <div class="finding-body">
+                    <div class="d-flex justify-content-between flex-wrap gap-2"><strong>@finding.Lesson.Module.Code · @finding.Location</strong><span class="tag">@finding.AuditorRole</span></div>
+                    <h3>@finding.Issue</h3>
+                    <p><strong>Recommendation:</strong> @finding.Recommendation</p>
+                    <small>@finding.CreatedAt.ToLocalTime().ToString("dd MMM yyyy · HH:mm")</small>
+                </div>
+                <button class="btn btn-outline-primary btn-sm" @onclick="() => ResolveAsync(finding.Id)">Resolve</button>
+            </article>
+        }
+    </section>
+}
+
+<style>
+    .finding-list{display:grid;gap:.75rem}.finding{display:grid;grid-template-columns:90px 1fr auto;gap:1rem;align-items:start;padding:1rem}.severity{padding:.35rem;text-align:center;border-radius:.5rem;background:#eef2ed;font-size:.7rem;font-weight:800}.severity.critical,.severity.high{background:#fde9e6;color:#9f3e35}.severity.medium{background:#fff3d8;color:#855b10}.finding-body h3{margin:.7rem 0 .3rem}.finding-body p,.finding-body small{color:#6d7c74;font-size:.8rem}
+    @@media(max-width:700px){.finding{grid-template-columns:1fr}.severity{width:max-content}}
+</style>
+
+@code {
+    private IReadOnlyList<AuditFinding>? _findings;
+    private IReadOnlyList<Lesson>? _lessons;
+    private AuditSummary? _summary;
+    private bool _showForm;
+    private FindingForm _form = new();
+
+    protected override async Task OnInitializedAsync() => await ReloadAsync();
+
+    private async Task AddFindingAsync()
+    {
+        await Audit.AddFindingAsync(
+            _form.LessonId,
+            await CurrentUser.GetRequiredUserIdAsync(),
+            _form.Role,
+            _form.Severity,
+            _form.Location,
+            _form.Issue,
+            _form.Recommendation);
+        _showForm = false;
+        _form = new FindingForm { LessonId = _lessons?.FirstOrDefault()?.Id ?? Guid.Empty };
+        await ReloadAsync();
+    }
+
+    private async Task ResolveAsync(Guid id)
+    {
+        await Audit.ResolveAsync(id);
+        await ReloadAsync();
+    }
+
+    private async Task ReloadAsync()
+    {
+        _lessons = await Audit.GetContentLessonsAsync();
+        _findings = await Audit.GetFindingsAsync();
+        _summary = await Audit.GetSummaryAsync();
+        if (_form.LessonId == Guid.Empty) _form.LessonId = _lessons.FirstOrDefault()?.Id ?? Guid.Empty;
+    }
+
+    private sealed class FindingForm
+    {
+        public Guid LessonId { get; set; }
+        public string Role { get; set; } = "English Teacher";
+        public AuditSeverity Severity { get; set; } = AuditSeverity.Medium;
+        [System.ComponentModel.DataAnnotations.Required] public string Location { get; set; } = "Lesson / section";
+        [System.ComponentModel.DataAnnotations.Required] public string Issue { get; set; } = "";
+        [System.ComponentModel.DataAnnotations.Required] public string Recommendation { get; set; } = "";
+    }
+}

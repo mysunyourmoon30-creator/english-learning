@@ -1,0 +1,317 @@
+@page "/admin/content"
+@attribute [Authorize(Roles = "ContentAdmin,Admin")]
+@inject AuditService Audit
+@inject CurrentUserService CurrentUser
+
+<PageTitle>Content Studio | EnglishMaster AI</PageTitle>
+
+<div class="page-header">
+    <div>
+        <div class="eyebrow">MANAGEMENT · CONTENT STUDIO</div>
+        <h1>Lesson Editor & Versioning</h1>
+        <p>แก้เนื้อหา เก็บ revision ย้อนหลัง และบังคับ Draft → Review → Approved → Published</p>
+    </div>
+    <span class="tag">@(_lessons?.Count ?? 0) lessons</span>
+</div>
+
+@if (!string.IsNullOrWhiteSpace(_message))
+{
+    <div class="alert @(_isError ? "alert-danger" : "alert-success")">@_message</div>
+}
+
+@if (_lessons is null)
+{
+    <div class="loading"><div class="spinner"></div></div>
+}
+else
+{
+    <div class="surface content-table-wrap">
+        <table class="content-table">
+            <thead>
+                <tr><th>Module / Lesson</th><th>CEFR</th><th>Version</th><th>Updated</th><th>Status</th><th></th></tr>
+            </thead>
+            <tbody>
+            @foreach (var lesson in _lessons)
+            {
+                <tr class="@(_selectedLessonId == lesson.Id ? "selected-row" : "")">
+                    <td><strong>@lesson.Module.Code · @lesson.Title</strong><small>@lesson.Slug</small></td>
+                    <td><span class="tag">@lesson.Module.CefrLevel</span></td>
+                    <td>v@lesson.Version</td>
+                    <td>@lesson.UpdatedAt.ToLocalTime().ToString("dd MMM yyyy HH:mm")</td>
+                    <td>
+                        <select class="form-select form-select-sm" value="@lesson.Status" disabled="@_busy"
+                                @onchange="eventArgs => ChangeStatusAsync(lesson.Id, eventArgs.Value?.ToString())">
+                            @foreach (var status in Enum.GetValues<ContentStatus>())
+                            {
+                                <option value="@status">@status</option>
+                            }
+                        </select>
+                    </td>
+                    <td>
+                        <button class="btn btn-sm btn-outline-primary" @onclick="() => SelectLessonAsync(lesson)">แก้ไข</button>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
+
+@if (_edit is not null)
+{
+    <div class="editor-layout mt-4">
+        <section class="surface surface-pad">
+            <div class="d-flex justify-content-between gap-3 align-items-start">
+                <div>
+                    <div class="eyebrow">LESSON EDITOR</div>
+                    <h2>@_edit.ModuleCode · @_edit.Slug</h2>
+                </div>
+                <button class="btn-close" aria-label="Close editor" @onclick="CloseEditor"></button>
+            </div>
+            <EditForm Model="_edit" OnValidSubmit="SaveLessonAsync">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+                <div class="editor-grid">
+                    <div class="wide">
+                        <label class="form-label">Title</label>
+                        <InputText class="form-control" @bind-Value="_edit.Title" />
+                    </div>
+                    <div class="wide">
+                        <label class="form-label">Objective</label>
+                        <InputTextArea class="form-control short-area" @bind-Value="_edit.Objective" />
+                    </div>
+                    <div>
+                        <label class="form-label">Thai explanation</label>
+                        <InputTextArea class="form-control editor-area" @bind-Value="_edit.ThaiExplanation" />
+                    </div>
+                    <div>
+                        <label class="form-label">Grammar in context</label>
+                        <InputTextArea class="form-control editor-area" @bind-Value="_edit.GrammarFocus" />
+                    </div>
+                    <div>
+                        <label class="form-label">Reading content</label>
+                        <InputTextArea class="form-control editor-area" @bind-Value="_edit.ReadingContent" />
+                    </div>
+                    <div>
+                        <label class="form-label">Listening transcript</label>
+                        <InputTextArea class="form-control editor-area" @bind-Value="_edit.ListeningTranscript" />
+                    </div>
+                    <div>
+                        <label class="form-label">Speaking prompt</label>
+                        <InputTextArea class="form-control short-area" @bind-Value="_edit.SpeakingPrompt" />
+                    </div>
+                    <div>
+                        <label class="form-label">Writing prompt</label>
+                        <InputTextArea class="form-control short-area" @bind-Value="_edit.WritingPrompt" />
+                    </div>
+                    <div>
+                        <label class="form-label">Estimated minutes</label>
+                        <InputNumber class="form-control" @bind-Value="_edit.EstimatedMinutes" />
+                    </div>
+                    <div>
+                        <label class="form-label">Change summary</label>
+                        <InputText class="form-control" @bind-Value="_edit.ChangeSummary" />
+                    </div>
+                </div>
+                <div class="callout mt-3">
+                    <p>การบันทึกเนื้อหาจะสร้าง revision ใหม่และเปลี่ยนสถานะกลับเป็น Draft เพื่อให้ผ่าน audit workflow อีกครั้ง</p>
+                </div>
+                <button class="btn btn-primary mt-3" disabled="@_busy" type="submit">
+                    @(_busy ? "กำลังบันทึก…" : "บันทึก revision")
+                </button>
+            </EditForm>
+        </section>
+
+        <aside class="surface surface-pad revision-panel">
+            <div class="eyebrow">VERSION HISTORY</div>
+            <h2>ย้อนกลับได้ทุก revision</h2>
+            @if (_revisions is null)
+            {
+                <div class="loading"><div class="spinner"></div></div>
+            }
+            else if (_revisions.Count == 0)
+            {
+                <p class="small text-secondary">ยังไม่มี revision history</p>
+            }
+            else
+            {
+                @foreach (var revision in _revisions)
+                {
+                    <div class="revision-card">
+                        <div class="d-flex justify-content-between">
+                            <strong>v@revision.Version · @revision.Status</strong>
+                            <small>@revision.CreatedAt.ToLocalTime().ToString("dd MMM HH:mm")</small>
+                        </div>
+                        <p>@revision.ChangeSummary</p>
+                        <button class="btn btn-sm btn-outline-primary" disabled="@_busy"
+                                @onclick="() => RollbackAsync(revision.Id, revision.Version)">
+                            Restore เป็น Draft ใหม่
+                        </button>
+                    </div>
+                }
+            }
+        </aside>
+    </div>
+}
+
+<style>
+    .content-table-wrap{overflow:auto}.content-table{width:100%;border-collapse:collapse;min-width:880px}.content-table th{font-size:.68rem;color:#6d7c74;text-transform:uppercase;letter-spacing:.06em;text-align:left;padding:.9rem 1rem;background:#f6f8f5}.content-table td{padding:.9rem 1rem;border-top:1px solid #e2e7df;font-size:.82rem}.content-table td small{display:block;color:#6d7c74;margin-top:.2rem}.content-table select{min-width:150px}.selected-row{background:#eff7f3}
+    .editor-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(260px,.8fr);gap:1rem;align-items:start}.editor-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.editor-grid .wide{grid-column:1/-1}.editor-area{min-height:180px}.short-area{min-height:90px}.revision-panel{position:sticky;top:1rem;max-height:80vh;overflow:auto}.revision-card{padding:.8rem 0;border-bottom:1px solid #e4e9e2}.revision-card p{font-size:.74rem;color:#53635c;margin:.45rem 0}.revision-card small{color:#6d7c74}
+    @@media(max-width:900px){.editor-layout,.editor-grid{grid-template-columns:1fr}.editor-grid .wide{grid-column:auto}.revision-panel{position:static;max-height:none}}
+</style>
+
+@code {
+    private IReadOnlyList<Lesson>? _lessons;
+    private IReadOnlyList<ContentRevision>? _revisions;
+    private LessonEditModel? _edit;
+    private Guid? _selectedLessonId;
+    private string? _message;
+    private bool _isError;
+    private bool _busy;
+
+    protected override async Task OnInitializedAsync() => await ReloadAsync();
+
+    private async Task SelectLessonAsync(Lesson lesson)
+    {
+        _selectedLessonId = lesson.Id;
+        _edit = new LessonEditModel
+        {
+            Id = lesson.Id,
+            ModuleCode = lesson.Module.Code,
+            Slug = lesson.Slug,
+            Title = lesson.Title,
+            Objective = lesson.Objective,
+            ThaiExplanation = lesson.ThaiExplanation,
+            GrammarFocus = lesson.GrammarFocus,
+            ReadingContent = lesson.ReadingContent,
+            ListeningTranscript = lesson.ListeningTranscript,
+            SpeakingPrompt = lesson.SpeakingPrompt,
+            WritingPrompt = lesson.WritingPrompt,
+            EstimatedMinutes = lesson.EstimatedMinutes,
+            ChangeSummary = "Updated lesson content"
+        };
+        _revisions = null;
+        _revisions = await Audit.GetRevisionsAsync(lesson.Id);
+    }
+
+    private async Task SaveLessonAsync()
+    {
+        if (_edit is null)
+        {
+            return;
+        }
+
+        await ExecuteAsync(async () =>
+        {
+            await Audit.UpdateLessonAsync(
+                _edit.Id,
+                await CurrentUser.GetRequiredUserIdAsync(),
+                new LessonEditInput(
+                    _edit.Title,
+                    _edit.Objective,
+                    _edit.ThaiExplanation,
+                    _edit.GrammarFocus,
+                    _edit.ReadingContent,
+                    _edit.ListeningTranscript,
+                    _edit.SpeakingPrompt,
+                    _edit.WritingPrompt,
+                    _edit.EstimatedMinutes,
+                    _edit.ChangeSummary));
+            _message = "บันทึก revision ใหม่และย้ายบทเรียนกลับเป็น Draft แล้ว";
+            await ReloadAndReselectAsync(_edit.Id);
+        });
+    }
+
+    private async Task ChangeStatusAsync(Guid lessonId, string? value)
+    {
+        if (!Enum.TryParse<ContentStatus>(value, out var status))
+        {
+            return;
+        }
+
+        await ExecuteAsync(async () =>
+        {
+            await Audit.ChangeContentStatusAsync(
+                lessonId,
+                status,
+                await CurrentUser.GetRequiredUserIdAsync());
+            _message = $"เปลี่ยนสถานะเป็น {status} สำเร็จ";
+            await ReloadAndReselectAsync(lessonId);
+        });
+    }
+
+    private async Task RollbackAsync(Guid revisionId, int version)
+    {
+        if (_edit is null)
+        {
+            return;
+        }
+
+        await ExecuteAsync(async () =>
+        {
+            await Audit.RollbackAsync(
+                _edit.Id,
+                revisionId,
+                await CurrentUser.GetRequiredUserIdAsync());
+            _message = $"นำเนื้อหาจาก v{version} กลับมาเป็น Draft revision ใหม่แล้ว";
+            await ReloadAndReselectAsync(_edit.Id);
+        });
+    }
+
+    private async Task ExecuteAsync(Func<Task> action)
+    {
+        _busy = true;
+        _message = null;
+        _isError = false;
+        try
+        {
+            await action();
+        }
+        catch (Exception exception) when (exception is InvalidOperationException or ArgumentException)
+        {
+            _message = exception.Message;
+            _isError = true;
+            await ReloadAsync();
+        }
+        finally
+        {
+            _busy = false;
+        }
+    }
+
+    private async Task ReloadAndReselectAsync(Guid lessonId)
+    {
+        await ReloadAsync();
+        var lesson = _lessons?.SingleOrDefault(x => x.Id == lessonId);
+        if (lesson is not null)
+        {
+            await SelectLessonAsync(lesson);
+        }
+    }
+
+    private async Task ReloadAsync() => _lessons = await Audit.GetContentLessonsAsync();
+
+    private void CloseEditor()
+    {
+        _selectedLessonId = null;
+        _edit = null;
+        _revisions = null;
+    }
+
+    private sealed class LessonEditModel
+    {
+        public Guid Id { get; set; }
+        public string ModuleCode { get; set; } = "";
+        public string Slug { get; set; } = "";
+        [Required, StringLength(200)] public string Title { get; set; } = "";
+        [Required, StringLength(500)] public string Objective { get; set; } = "";
+        [Required] public string ThaiExplanation { get; set; } = "";
+        [Required] public string GrammarFocus { get; set; } = "";
+        [Required] public string ReadingContent { get; set; } = "";
+        [Required] public string ListeningTranscript { get; set; } = "";
+        [Required] public string SpeakingPrompt { get; set; } = "";
+        [Required] public string WritingPrompt { get; set; } = "";
+        [Range(5, 240)] public int EstimatedMinutes { get; set; } = 20;
+        [Required, StringLength(300)] public string ChangeSummary { get; set; } = "";
+    }
+}

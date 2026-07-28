@@ -1,0 +1,1402 @@
+Technical English Master Roadmap — ครบจบ
+
+หลักสูตรนี้ออกแบบสำหรับ Programmer, Software Developer, AI Engineer, Data/ML Engineer, QA, BA และสาย IT โดยเน้นภาษาอังกฤษที่ใช้ทำงานจริง ไม่เรียนกว้างเกินความจำเป็น
+
+เป้าหมายปลายทาง
+
+เมื่อเรียนจบ คุณควรทำได้ดังนี้
+
+ทักษะ	ผลลัพธ์
+Reading	อ่าน Documentation, API, Error, Requirement และบทความเทคนิคได้
+Listening	ฟัง Tutorial, Meeting, Interview และการอธิบายระบบได้
+Writing	เขียน Commit, PR, Bug Report, Ticket, Email และ Documentation ได้
+Speaking	Daily Stand-up, อธิบายโค้ด, รายงานปัญหา และประชุมได้
+Vocabulary	รู้ศัพท์ Technical English ที่ใช้บ่อยประมาณ 2,000–3,000 คำ
+Grammar	ใช้ Grammar ที่จำเป็นสำหรับงานเทคนิคได้ถูกต้อง
+Interview	แนะนำตัว อธิบาย Project ตอบ Technical Interview เป็นอังกฤษได้
+AI English	อ่านและอธิบาย AI, LLM, RAG, API, Prompt และ Evaluation ได้
+โครงสร้างหลักสูตรทั้งหมด
+Technical English
+│
+├── Phase 0: Diagnostic
+├── Phase 1: English Foundation
+├── Phase 2: Technical Vocabulary
+├── Phase 3: Reading Technical Content
+├── Phase 4: Code & Error English
+├── Phase 5: Technical Writing
+├── Phase 6: Listening
+├── Phase 7: Speaking
+├── Phase 8: Meetings & Team Communication
+├── Phase 9: Software Development English
+├── Phase 10: AI & Data English
+├── Phase 11: System Design English
+├── Phase 12: Job Interview English
+└── Phase 13: Capstone Project
+Phase 0: Technical English Diagnostic
+จุดประสงค์
+
+ตรวจว่าควรเริ่มเรียนจากส่วนใด ไม่จำเป็นต้องกลับไปเรียนทั้งหมดตั้งแต่ Alphabet หากมีพื้นฐานอยู่แล้ว
+
+แบบทดสอบ
+1. Vocabulary
+
+ทดสอบคำศัพท์ เช่น
+
+create
+update
+delete
+retrieve
+process
+request
+response
+failure
+configuration
+deployment
+dependency
+authentication
+permission
+validation
+performance
+2. Grammar
+
+ตรวจความเข้าใจประโยค เช่น
+
+The system processes the request.
+The request was rejected.
+The user must be authenticated.
+If the connection fails, the system will retry.
+The data has already been updated.
+3. Reading
+
+อ่านเนื้อหา Documentation ประมาณ 200–300 คำ แล้วตอบคำถาม
+
+4. Listening
+
+ฟัง Tutorial หรือการอธิบาย Bug ประมาณ 1–2 นาที
+
+5. Writing
+
+ให้เขียนหัวข้อต่อไปนี้
+
+Commit message
+Bug report
+Daily update
+Project description
+6. Speaking
+
+อัดเสียงตอบคำถาม
+
+What do you do?
+What project are you working on?
+What problem did you solve?
+How does your system work?
+ระดับผลการประเมิน
+ระดับ	ความสามารถ
+T0	ยังอ่านคำและประโยคพื้นฐานไม่คล่อง
+T1	อ่านประโยคทั่วไปได้ แต่ศัพท์เทคนิคยังน้อย
+T2	อ่าน Documentation และเขียนข้อความสั้นได้
+T3	สื่อสารในทีมและอธิบายระบบได้
+T4	ทำงานกับทีมต่างชาติและสัมภาษณ์งานได้
+Phase 1: English Foundation for Technology
+
+ไม่ต้องเรียน Grammar ทุกเรื่อง ให้เน้นเฉพาะส่วนที่พบในงานจริง
+
+Module 1: Pronunciation for Technical English
+
+เรียนการออกเสียงที่จำเป็น เช่น
+
+Alphabet และการสะกดชื่อ
+ตัวเลขและเวอร์ชัน
+URL และ Email
+เครื่องหมายในโค้ด
+คำย่อทางเทคนิค
+การเน้นพยางค์
+เสียงท้ายคำ
+การเชื่อมเสียง
+เครื่องหมายที่ต้องอ่านได้
+เครื่องหมาย	คำอ่าน
+.	dot
+/	slash
+\	backslash
+:	colon
+;	semicolon
+_	underscore
+-	hyphen / dash
+#	hash
+@	at
+*	asterisk
+()	parentheses
+{}	curly braces
+[]	square brackets
+<>	angle brackets
+=	equals
+==	double equals
+!=	not equal
+=>	arrow
+&&	double ampersand / logical AND
+||	double pipe / logical OR
+ตัวอย่างการอ่าน
+user_name
+
+อ่านว่า:
+
+user underscore name
+
+api/v1/users
+
+อ่านว่า:
+
+API slash V one slash users
+
+version 2.5.1
+
+อ่านว่า:
+
+version two point five point one
+
+Module 2: Core Sentence Structure
+
+โครงสร้างสำคัญที่สุดคือ
+
+Subject + Verb + Object
+
+ตัวอย่าง:
+
+The system validates the input.
+The API returns the result.
+The user submits the form.
+The service stores the data.
+The application displays an error.
+
+ต้องแยกให้ออกว่า
+
+ใคร / อะไร + ทำอะไร + กับอะไร
+
+ตัวอย่าง:
+
+The authentication service verifies the access token.
+
+Subject: the authentication service
+Verb: verifies
+Object: the access token
+Module 3: Essential Grammar 80/20
+3.1 Present Simple
+
+ใช้บอกการทำงานทั่วไปของระบบ
+
+The API receives a request.
+The service validates the data.
+The database stores user information.
+3.2 Present Continuous
+
+ใช้บอกสิ่งที่กำลังเกิดขึ้น
+
+The server is processing the request.
+I am investigating the issue.
+We are updating the application.
+3.3 Past Simple
+
+ใช้รายงานสิ่งที่เกิดขึ้นแล้ว
+
+The deployment failed.
+I fixed the authentication bug.
+The customer reported the issue.
+3.4 Present Perfect
+
+ใช้บอกว่างานเสร็จแล้วหรือเกิดขึ้นแล้ว
+
+I have fixed the bug.
+The system has completed the process.
+We have deployed the new version.
+3.5 Future
+We will release the feature tomorrow.
+I am going to update the API.
+The team will review the pull request.
+3.6 Modal Verbs
+Modal	ความหมาย
+can	สามารถ
+could	สามารถ/ขออย่างสุภาพ
+should	ควร
+must	ต้อง
+may	อาจ
+might	อาจจะ
+need to	จำเป็นต้อง
+have to	ต้อง
+
+ตัวอย่าง:
+
+The user must log in.
+The system should validate the input.
+We need to improve performance.
+The request may fail.
+Could you review my code?
+3.7 Passive Voice
+
+พบมากใน Documentation และ Error
+
+be + V3
+The request was rejected.
+The data is stored in the database.
+The user must be authenticated.
+The file has been deleted.
+The service will be restarted.
+3.8 Conditional
+If the request fails, the system will retry.
+If the token is invalid, the API returns 401.
+If the value is null, use the default value.
+If I had more time, I would refactor this module.
+3.9 Relative Clauses
+The service that handles authentication is unavailable.
+The user who created the record can edit it.
+The file that you uploaded is invalid.
+3.10 Connecting Words
+จุดประสงค์	คำที่ใช้
+เพิ่มข้อมูล	and, also, additionally
+ขัดแย้ง	but, however, although
+เหตุผล	because, since, due to
+ผลลัพธ์	so, therefore, as a result
+ตัวอย่าง	for example, such as
+ลำดับ	first, next, then, finally
+เงื่อนไข	if, unless, otherwise
+เปรียบเทียบ	while, whereas, compared with
+Phase 2: Technical Vocabulary System
+
+ไม่ควรท่องศัพท์เป็นคำเดี่ยว ควรเรียนเป็นกลุ่มและประโยค
+
+Module 4: Core Technical Verbs
+กลุ่ม Create
+create
+generate
+build
+initialize
+instantiate
+produce
+กลุ่ม Change
+update
+modify
+edit
+change
+replace
+transform
+convert
+กลุ่ม Delete
+delete
+remove
+clear
+dispose
+terminate
+drop
+กลุ่ม Get
+get
+retrieve
+fetch
+load
+read
+query
+obtain
+กลุ่ม Send
+send
+submit
+transmit
+publish
+push
+forward
+กลุ่ม Check
+check
+verify
+validate
+inspect
+test
+evaluate
+confirm
+กลุ่ม Fix
+fix
+resolve
+correct
+repair
+patch
+troubleshoot
+กลุ่ม Improve
+improve
+optimize
+enhance
+refactor
+simplify
+reduce
+increase
+วิธีเรียนแต่ละคำ
+
+ต้องเก็บข้อมูล 6 ส่วน
+
+1. Word
+2. Meaning
+3. Pronunciation
+4. Word family
+5. Common combinations
+6. Example sentence
+
+ตัวอย่าง:
+
+validate
+ความหมาย: ตรวจสอบว่าถูกต้องตามเงื่อนไข
+Word family: valid, invalid, validation, validator
+Collocations:
+- validate input
+- validate data
+- validation rule
+- input validation
+
+Example:
+The API validates the request before processing it.
+Module 5: Vocabulary Categories
+หมวด	ตัวอย่างคำ
+Programming	variable, method, function, class, object
+Database	table, record, query, index, transaction
+API	endpoint, request, response, header, payload
+Web	browser, route, session, cookie, cache
+Security	authentication, authorization, permission
+Testing	test case, assertion, mock, coverage
+DevOps	build, pipeline, deployment, environment
+Architecture	component, layer, service, dependency
+Project	requirement, scope, deadline, milestone
+Bug	issue, defect, failure, exception, root cause
+Performance	latency, throughput, memory, bottleneck
+AI	model, inference, embedding, prompt, retrieval
+เป้าหมายคำศัพท์
+ระดับ	จำนวนคำโดยประมาณ
+พื้นฐานทั่วไป	500
+Software Development	800
+Business และ Team	400
+AI/Data/ML	500
+Interview/System Design	300
+รวม	2,500 คำ
+Phase 3: Reading Technical English
+Module 6: Reading Code
+
+ต้องอ่านชื่อในโค้ดให้เข้าใจ เช่น
+
+GetActiveCustomerOrders()
+
+แยกเป็น
+
+Get + Active + Customer + Orders
+ดึงรายการสั่งซื้อของลูกค้าที่กำลังใช้งาน
+IsUserAuthenticated
+Is + User + Authenticated
+ผู้ใช้ผ่านการยืนยันตัวตนหรือไม่
+รูปแบบชื่อที่ต้องเข้าใจ
+รูปแบบ	ตัวอย่าง
+Verb + Object	CreateUser
+Verb + Adjective + Object	GetActiveUsers
+Is + Condition	IsAvailable
+Has + Object	HasPermission
+Can + Verb	CanEdit
+Object + Service	AuthenticationService
+Object + Repository	CustomerRepository
+Object + Controller	OrderController
+Object + Request	CreateUserRequest
+Object + Response	LoginResponse
+Module 7: Reading Error Messages
+
+อ่าน Error ด้วยโครงสร้าง 5 ส่วน
+
+1. Error type
+2. What failed
+3. Cause
+4. Location
+5. Suggested action
+
+ตัวอย่าง:
+
+The cast to value type System.Int32 failed because the materialized value is null.
+
+วิเคราะห์:
+
+สิ่งที่ล้มเหลว: การแปลงค่าเป็น Int32
+สาเหตุ: ค่าที่อ่านมาเป็น null
+สิ่งที่ควรตรวจ: Column ที่สามารถเป็น null
+วิธีแก้: ใช้ int? หรือกำหนดค่า Default
+คำที่พบบ่อยใน Error
+failed
+invalid
+missing
+unavailable
+unsupported
+denied
+expected
+actual
+cannot
+unable to
+not found
+already exists
+ambiguous
+null
+timeout
+conflict
+unauthorized
+forbidden
+รูปแบบ Error ที่ต้องรู้
+X failed because Y
+Unable to X
+X cannot be converted to Y
+Expected X but received Y
+X was not found
+Access to X was denied
+Module 8: Reading Documentation
+
+ลำดับการอ่าน Documentation
+
+1. Title
+2. Purpose
+3. Prerequisites
+4. Parameters
+5. Return value
+6. Example
+7. Exceptions
+8. Limitations
+9. Notes
+เทคนิคการอ่าน
+Step 1: อ่านหัวข้อก่อน
+
+อย่าเริ่มแปลทุกคำตั้งแต่บรรทัดแรก
+
+Step 2: หา Main Verb
+
+ตัวอย่าง:
+
+The method returns the first element that matches the specified condition.
+
+Main verb คือ returns
+
+Step 3: หาเงื่อนไข
+if
+when
+unless
+before
+after
+only if
+provided that
+Step 4: แยกส่วนขยาย
+
+The method returns a collection of users who have active subscriptions.
+
+ใจความหลัก:
+
+The method returns a collection.
+
+ส่วนขยาย:
+
+of users who have active subscriptions
+
+Step 5: สรุปด้วยภาษาตัวเอง
+This method is used to...
+It accepts...
+It returns...
+It throws an error when...
+Module 9: API and JSON English
+
+คำที่ต้องรู้
+
+endpoint
+route
+resource
+parameter
+query string
+request body
+payload
+header
+status code
+response body
+serialization
+deserialization
+pagination
+rate limit
+โครงสร้างอธิบาย API
+This endpoint is used to create a new user.
+
+It accepts a JSON request body containing the user's name and email.
+
+If the request is valid, the API returns HTTP 201.
+
+If the email already exists, the API returns HTTP 409.
+Phase 4: Technical Writing
+Module 10: Code Comments
+
+Comment ที่ดีควรอธิบาย เหตุผล ไม่ใช่อ่านโค้ดซ้ำ
+
+ไม่ดี:
+
+// Add one to count
+count++;
+
+ดีกว่า:
+
+// Include the current record in the final result.
+count++;
+
+รูปแบบที่ใช้บ่อย:
+
+This method is responsible for...
+This value is used to...
+Do not remove this check because...
+We use this approach to avoid...
+Retry the operation when...
+Return early if...
+This is required for backward compatibility.
+Module 11: Commit Messages
+
+รูปแบบแนะนำ:
+
+Verb + object
+
+ตัวอย่าง:
+
+Add user authentication
+Fix null reference in order service
+Update customer validation rules
+Remove unused configuration
+Refactor payment processing logic
+Improve query performance
+Add unit tests for login service
+Conventional Commits
+feat: add user authentication
+fix: handle null customer IDs
+refactor: simplify order validation
+test: add API integration tests
+docs: update deployment guide
+chore: upgrade NuGet packages
+perf: optimize customer query
+Module 12: Pull Request Writing
+
+โครงสร้าง Pull Request
+
+Title
+Summary
+Changes
+Reason
+Testing
+Risks
+Screenshots
+Related issue
+
+ตัวอย่าง:
+
+Summary
+
+This pull request adds validation for customer order quantities.
+
+Changes
+
+- Rejects quantities below zero.
+- Adds validation messages.
+- Adds unit tests for invalid quantities.
+
+Testing
+
+- Tested valid and invalid quantities.
+- Verified the existing order flow.
+- All automated tests passed.
+
+Risk
+
+This change may affect integrations that currently send zero quantities.
+Module 13: Bug Report
+
+ใช้โครงสร้าง
+
+Title
+Environment
+Preconditions
+Steps to reproduce
+Expected result
+Actual result
+Error message
+Frequency
+Impact
+Evidence
+
+ตัวอย่างประโยค:
+
+The issue occurs when...
+The problem can be reproduced by...
+I expected the system to...
+Instead, the system...
+This issue affects...
+The error occurs intermittently.
+The issue occurs every time.
+A temporary workaround is...
+Module 14: Requirement and User Story
+User Story
+As a [user],
+I want [goal],
+so that [benefit].
+
+ตัวอย่าง:
+
+As a warehouse employee,
+I want to scan a material barcode,
+so that I can retrieve its current inventory information.
+Acceptance Criteria
+Given [initial condition]
+When [action]
+Then [expected result]
+
+ตัวอย่าง:
+
+Given that the barcode exists,
+when the employee scans it,
+then the system displays the material information.
+Business Rule
+The quantity must be greater than zero.
+Only authorized users can approve the request.
+The order cannot be edited after approval.
+The system must keep an audit log.
+Module 15: Technical Email and Chat
+ขอให้ตรวจงาน
+Could you review this pull request when you have a chance?
+
+The main change is the new validation logic for customer orders.
+
+Please pay particular attention to the null-handling behavior.
+ขอข้อมูลเพิ่มเติม
+Could you clarify the expected behavior when the quantity is zero?
+
+Should the system reject the request or use the default value?
+แจ้งปัญหา
+We have identified an issue with the production API.
+
+Some requests are returning HTTP 500 because the customer ID is null.
+
+We are investigating the root cause and will provide an update after verification.
+Phase 5: Listening for Technology
+Module 16: Listening Skills
+
+สิ่งที่ต้องฝึกฟัง
+
+ระดับ	เนื้อหา
+1	คำศัพท์และประโยคสั้น
+2	การอธิบายโค้ด
+3	Programming tutorial
+4	Daily stand-up
+5	Technical meeting
+6	System design discussion
+7	Technical interview
+วิธีฝึก 5 รอบ
+รอบ 1: ฟังโดยไม่ดู Subtitle
+รอบ 2: ฟังพร้อม English Subtitle
+รอบ 3: จดคำที่ได้ยิน
+รอบ 4: Shadowing ตามผู้พูด
+รอบ 5: สรุปเนื้อหาเป็นภาษาอังกฤษ
+สิ่งที่ต้องจับให้ได้
+หัวข้อหลัก
+ปัญหา
+สาเหตุ
+วิธีแก้
+การตัดสินใจ
+ผู้รับผิดชอบ
+กำหนดเวลา
+ขั้นตอนถัดไป
+ประโยคใน Tutorial ที่พบบ่อย
+In this tutorial, we are going to...
+First, we need to...
+Next, create a new...
+Make sure that...
+Notice that...
+In this case...
+Under the hood...
+Let us take a look at...
+The reason for this is...
+Finally, run the application.
+Phase 6: Technical Speaking
+Module 17: Explaining Code
+
+ใช้โครงสร้าง 6 ขั้น
+
+1. Purpose
+2. Input
+3. Process
+4. Output
+5. Error handling
+6. Example
+
+ตัวอย่าง:
+
+This method is responsible for retrieving active customer orders.
+
+It accepts a customer ID as input.
+
+First, it validates the ID. Then, it queries the database and filters out cancelled orders.
+
+It returns a list of active orders.
+
+If the customer does not exist, the method returns an empty list.
+Module 18: Explaining a Bug
+
+ใช้โครงสร้าง
+
+Problem → Cause → Impact → Fix → Verification
+
+ตัวอย่าง:
+
+We found an issue in the inventory calculation.
+
+The problem was caused by a nullable database column being converted directly to an integer.
+
+As a result, the application crashed when the value was null.
+
+I changed the property to a nullable integer and added a default-value check.
+
+I also added unit tests to verify the null scenario.
+Module 19: Explaining a Project
+
+ใช้โครงสร้าง
+
+Problem
+Users
+Solution
+Architecture
+Your responsibility
+Technical challenge
+Result
+Future improvement
+
+ตัวอย่าง:
+
+The project is a material management system for a manufacturing company.
+
+Its main purpose is to track raw materials, inventory balances and production usage.
+
+The frontend is built with C# WinForms, and the backend uses SQL Server and Entity Framework.
+
+My responsibility was to design the inventory calculation and improve the existing query performance.
+
+One major challenge was handling data from multiple company databases.
+
+I solved it by separating the data access layer and introducing reusable service components.
+Phase 7: Meetings and Team Communication
+Module 20: Daily Stand-up
+
+โครงสร้างมาตรฐาน
+
+1. What I completed
+2. What I am working on
+3. Blockers
+4. Next step
+
+ตัวอย่าง:
+
+Yesterday, I completed the order validation feature and added unit tests.
+
+Today, I am working on the API integration.
+
+I am currently blocked by missing access to the test database.
+
+Once I receive access, I will complete the integration testing.
+Module 21: Asking Questions
+ขอให้พูดซ้ำ
+Could you repeat that, please?
+Could you say that again more slowly?
+Sorry, I did not catch the last part.
+ขอคำอธิบาย
+Could you explain what you mean by that?
+Could you give me an example?
+Could you clarify the expected behavior?
+ตรวจสอบความเข้าใจ
+Let me make sure I understand correctly.
+Do you mean that the system should...?
+So, the main requirement is..., correct?
+ขอเวลา
+Let me check the code first.
+I need some time to investigate the issue.
+I will confirm after reviewing the logs.
+Module 22: Giving Opinions
+I think we should...
+I suggest using...
+In my opinion...
+From a technical perspective...
+One possible approach is...
+The advantage of this approach is...
+The main drawback is...
+The trade-off is...
+I agree with this approach because...
+I have a different concern regarding...
+Module 23: Disagreeing Professionally
+
+แทนที่จะพูดว่า:
+
+You are wrong.
+
+ใช้:
+
+I see your point, but I have a concern.
+That approach could work, although...
+I am not sure this will handle...
+Another option might be...
+Could we consider...?
+My concern is that...
+Based on the current requirements, I think...
+Module 24: Decision and Action Items
+We have agreed to...
+The team decided to...
+The next step is...
+I will be responsible for...
+Could you take ownership of...?
+The deadline is...
+We will revisit this issue after...
+Let us document this decision.
+Phase 8: Software Development English
+Module 25: Git and Version Control
+
+คำศัพท์สำคัญ
+
+repository
+branch
+commit
+merge
+rebase
+conflict
+pull request
+code review
+revert
+rollback
+cherry-pick
+tag
+release
+
+ประโยคที่ใช้จริง:
+
+I created a feature branch.
+Please pull the latest changes.
+There is a merge conflict in this file.
+I will resolve the conflict manually.
+This commit should be reverted.
+The branch is behind the main branch.
+The pull request is ready for review.
+Module 26: Testing English
+
+คำศัพท์:
+
+unit test
+integration test
+component test
+end-to-end test
+regression test
+test case
+test data
+assertion
+expected result
+actual result
+mock
+stub
+coverage
+edge case
+
+ประโยค:
+
+This test verifies that...
+The test fails when...
+We need to cover the null case.
+This scenario is not currently tested.
+All tests passed.
+The change introduced a regression.
+The test result is inconsistent.
+Module 27: Security English
+
+หัวข้อสำคัญ
+
+authentication
+authorization
+identity
+access token
+refresh token
+role
+permission
+encryption
+hashing
+vulnerability
+injection
+data exposure
+audit log
+
+ประโยค:
+
+The user must be authenticated.
+Access is restricted to administrators.
+Sensitive data must be encrypted.
+The API validates the access token.
+This endpoint is vulnerable to injection.
+The system must not expose internal error details.
+Module 28: DevOps English
+build
+pipeline
+deployment
+environment
+configuration
+container
+image
+release
+rollback
+monitoring
+logging
+alert
+incident
+uptime
+downtime
+
+ประโยค:
+
+The build pipeline failed.
+The application was deployed to staging.
+The production environment is unavailable.
+We rolled back to the previous version.
+The service restarted automatically.
+The logs indicate a database timeout.
+Phase 9: AI and Data Technical English
+Module 29: Data and Machine Learning
+
+คำศัพท์หลัก
+
+dataset
+feature
+label
+training
+validation
+testing
+model
+prediction
+classification
+regression
+accuracy
+precision
+recall
+bias
+overfitting
+underfitting
+
+ตัวอย่าง:
+
+The model is trained on historical customer data.
+
+The dataset is divided into training, validation and test sets.
+
+The model performs well on the training data but poorly on unseen data, which may indicate overfitting.
+Module 30: LLM English
+
+คำศัพท์สำคัญ
+
+token
+context window
+prompt
+completion
+inference
+prefill
+decoding
+temperature
+deterministic
+stochastic
+hallucination
+structured output
+tool calling
+reasoning
+latency
+
+ตัวอย่าง:
+
+The model generates text one token at a time.
+
+A higher temperature generally produces more varied outputs.
+
+Structured outputs ensure that the response follows a predefined schema.
+
+Tool calling allows the model to request external functions or services.
+Module 31: RAG and Vector Database
+
+คำศัพท์:
+
+embedding
+vector
+similarity
+retrieval
+document
+chunk
+metadata
+index
+ranking
+context
+citation
+grounded answer
+
+โครงสร้างอธิบาย RAG:
+
+First, the user's query is converted into an embedding.
+
+The system searches the vector database for relevant document chunks.
+
+The retrieved context is added to the prompt.
+
+The language model then generates an answer based on the retrieved information.
+Module 32: Prompt Engineering
+
+สิ่งที่ต้องอธิบายเป็นอังกฤษได้
+
+role
+task
+context
+constraints
+input
+expected output
+examples
+evaluation criteria
+failure behavior
+
+ตัวอย่าง Prompt Specification:
+
+Task
+
+Extract customer information from the input text.
+
+Requirements
+
+- Return valid JSON.
+- Do not add information that is not present.
+- Use null when a value is missing.
+- Follow the provided schema exactly.
+Module 33: AI Evaluation
+
+คำศัพท์:
+
+relevance
+correctness
+completeness
+consistency
+groundedness
+faithfulness
+hallucination rate
+evaluation dataset
+golden answer
+human evaluation
+automated evaluation
+
+ตัวอย่าง:
+
+The response is relevant but incomplete.
+
+The answer contains information that is not supported by the retrieved context.
+
+We use a golden dataset to evaluate correctness and regression.
+Phase 10: System Design English
+Module 34: Architecture Explanation
+
+ใช้โครงสร้าง
+
+Users
+Requirements
+Components
+Data flow
+Database
+API
+Security
+Scalability
+Reliability
+Trade-offs
+
+ตัวอย่าง:
+
+The system consists of a web application, an API service and a SQL database.
+
+The client sends requests to the API through HTTPS.
+
+The API validates the access token before processing the request.
+
+Frequently accessed data is stored in a cache to reduce database load.
+
+The system can be scaled horizontally by adding more API instances.
+คำศัพท์ที่ต้องรู้
+component
+module
+layer
+service
+dependency
+interface
+synchronous
+asynchronous
+queue
+cache
+load balancer
+scalability
+availability
+reliability
+fault tolerance
+consistency
+throughput
+latency
+bottleneck
+trade-off
+Phase 11: Job and Interview English
+Module 35: Self-Introduction
+
+โครงสร้าง:
+
+Current role
+Experience
+Main technologies
+Project experience
+Strength
+Career goal
+
+ตัวอย่าง:
+
+I am a software developer with experience in C#, .NET and SQL Server.
+
+I mainly work on internal systems for manufacturing and material management.
+
+My responsibilities include application development, database design, debugging and system improvement.
+
+I am currently expanding my skills in ASP.NET Core, automated testing and AI engineering.
+
+My goal is to become an AI engineer who can integrate AI systems with enterprise applications.
+Module 36: Behavioral Interview
+
+ใช้ STAR
+
+Situation
+Task
+Action
+Result
+
+คำถามที่ต้องฝึก:
+
+Tell me about a difficult bug you fixed.
+Tell me about a conflict with a team member.
+Describe a project you are proud of.
+Tell me about a time you improved a system.
+Describe a mistake you made.
+How do you handle deadlines?
+How do you learn new technology?
+Module 37: Technical Interview
+
+ต้องตอบได้อย่างเป็นขั้นตอน
+
+1. Clarify the question
+2. State assumptions
+3. Explain the approach
+4. Discuss alternatives
+5. Mention edge cases
+6. Analyze complexity
+7. Verify the result
+
+ประโยคช่วยตอบ:
+
+Let me clarify the requirement first.
+I will assume that...
+One possible approach is...
+The time complexity is...
+We also need to handle...
+An alternative would be...
+The trade-off is...
+Let me test this with an example.
+Phase 12: Capstone Projects
+Project 1: Technical Documentation
+
+สร้าง Documentation สำหรับ API หนึ่งระบบ ประกอบด้วย
+
+Overview
+Architecture
+Installation
+Configuration
+Endpoints
+Request/response examples
+Error handling
+Testing
+Deployment
+Troubleshooting
+Project 2: Bug Investigation Presentation
+
+นำเสนอเป็นภาษาอังกฤษ
+
+Problem
+Timeline
+Evidence
+Root cause
+Solution
+Testing
+Prevention
+Project 3: System Design Presentation
+
+อธิบายระบบ เช่น
+
+AI Learning Platform
+Material Management System
+Transport Management System
+RAG Knowledge Assistant
+Project 4: Mock Technical Interview
+
+ประกอบด้วย
+
+Self-introduction
+Project explanation
+Behavioral questions
+Coding explanation
+System design
+Questions for interviewer
+Project 5: AI Engineer Portfolio
+
+เขียนภาษาอังกฤษสำหรับ
+
+GitHub README
+Project overview
+Architecture diagram description
+Technology stack
+Features
+Setup instructions
+Evaluation results
+Limitations
+Future improvements
+รูปแบบบทเรียนในระบบ EnglishMaster
+
+แต่ละบทควรใช้รูปแบบเดียวกัน
+
+1. Goal
+2. Vocabulary
+3. Pronunciation
+4. Grammar pattern
+5. Reading
+6. Listening
+7. Speaking
+8. Writing
+9. Quiz
+10. Real-world task
+11. Review with SRS
+ตัวอย่างบทเรียน: Reporting a Bug
+Goal
+
+สามารถอธิบาย Bug เป็นภาษาอังกฤษได้
+
+Vocabulary
+occur
+reproduce
+expected
+actual
+impact
+root cause
+workaround
+resolve
+Grammar
+The issue occurs when...
+The problem was caused by...
+If the user..., the system...
+Reading
+
+อ่าน Bug Report ตัวอย่าง
+
+Listening
+
+ฟัง Developer รายงาน Bug
+
+Speaking
+
+อธิบาย Bug ภายใน 60 วินาที
+
+Writing
+
+เขียน Bug Report เต็มรูปแบบ
+
+Quiz
+เลือกศัพท์
+เรียงประโยค
+ฟังแล้วตอบ
+แก้ Grammar
+เขียนสถานการณ์จริง
+ระบบการวัดผล
+คะแนนแต่ละทักษะ
+ทักษะ	สัดส่วน
+Vocabulary	15%
+Grammar	10%
+Reading	20%
+Listening	15%
+Writing	15%
+Speaking	15%
+Project	10%
+เกณฑ์ผ่าน
+Quiz แต่ละ Module: อย่างน้อย 80%
+Vocabulary retention: อย่างน้อย 85%
+Writing task: อย่างน้อยระดับ B
+Speaking task: สื่อสารเข้าใจได้โดยไม่อ่าน Script ทั้งหมด
+Capstone: ผ่านอย่างน้อย 4 จาก 5 Project
+Definition of Done
+
+ถือว่าเรียน Technical English จบเมื่อทำได้ครบดังนี้
+
+อ่าน Documentation โดยไม่แปลทุกคำ
+เข้าใจใจความของ Error Message
+อธิบาย Code และ Data Flow ได้
+เขียน Commit และ Pull Request ได้
+เขียน Bug Report และ Requirement ได้
+ฟัง Tutorial แล้วทำตามได้
+รายงาน Daily Stand-up ได้
+ถามและตอบใน Meeting ได้
+อธิบาย Project ภายใน 3–5 นาทีได้
+อธิบาย Architecture และ Trade-off ได้
+อ่านบทความ AI และ LLM ได้
+เขียน GitHub README ภาษาอังกฤษได้
+ตอบ Technical Interview ได้
+สื่อสารกับ Developer ต่างชาติได้โดยไม่ต้องใช้ประโยคสมบูรณ์แบบทุกครั้ง
+ระยะเวลาเรียน
+แผนเร่งรัด 90 วัน
+
+วันละประมาณ 3 ชั่วโมง
+
+ช่วง	เนื้อหา
+วันที่ 1–15	Foundation และ Grammar
+วันที่ 16–30	Vocabulary, Code และ Error
+วันที่ 31–45	Documentation และ Writing
+วันที่ 46–60	Listening และ Speaking
+วันที่ 61–70	Meetings, Git, Testing, DevOps
+วันที่ 71–80	AI, RAG, LLM, System Design
+วันที่ 81–90	Interview และ Capstone
+
+เหมาะสำหรับผู้ที่มีภาษาอังกฤษพื้นฐานอยู่แล้ว
+
+แผนมาตรฐาน 6 เดือน
+
+วันละประมาณ 2 ชั่วโมง
+
+เดือน 1: Foundation + Vocabulary
+เดือน 2: Code + Error + Documentation
+เดือน 3: Writing + Git + Testing
+เดือน 4: Listening + Speaking + Meetings
+เดือน 5: AI + System Design
+เดือน 6: Interview + Portfolio + Capstone
+แผนสบาย 12 เดือน
+
+วันละประมาณ 45–60 นาที เหมาะสำหรับเรียนควบคู่กับงานประจำ
+
+ตารางฝึกประจำวัน 2 ชั่วโมง
+เวลา	กิจกรรม
+20 นาที	ทบทวน Vocabulary ด้วย SRS
+20 นาที	Grammar และ Sentence Pattern
+25 นาที	Reading Documentation
+20 นาที	Listening
+15 นาที	Shadowing
+10 นาที	Speaking
+10 นาที	Writing
+
+วันเสาร์ทำ Project และวันอาทิตย์ทบทวนพร้อมทำแบบทดสอบ
+
+ลำดับที่ควรเริ่มจริง
+1. Technical English Diagnostic
+2. Core Sentence Structure
+3. Essential Grammar
+4. Core Technical Verbs
+5. Reading Code
+6. Reading Error Messages
+7. Reading Documentation
+8. Technical Writing
+9. Listening and Shadowing
+10. Speaking and Meetings
+11. Software Development English
+12. AI and System Design English
+13. Interview
+14. Capstone
+
+หลักสำคัญคือ ไม่ต้องรอให้ Grammar สมบูรณ์ก่อนจึงเริ่มใช้ภาษาอังกฤษ ให้ฝึกอ่าน ฟัง เขียน และพูดจากเนื้อหาที่ทำงานอยู่ทุกวัน เช่น C#, SQL, API, Git, Testing และ AI แล้วค่อยเติม Grammar และ Vocabulary ที่ขาดระหว่างทาง.

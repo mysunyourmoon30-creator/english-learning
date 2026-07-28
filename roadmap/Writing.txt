@@ -1,0 +1,832 @@
+English Writing — ครบจบตั้งแต่ 0 ถึงเขียนงานได้
+
+หลักสูตรนี้ออกแบบให้เรียนตามลำดับ:
+
+เขียนคำได้ → เขียนประโยคถูก → เขียนย่อหน้ารู้เรื่อง → เขียนแชตและอีเมล → เขียนรายงาน → เขียนเรื่อง Tech/AI → เขียนข้อสอบ
+
+ไม่จำเป็นต้องเรียน Grammar ทั้งหมดก่อนจึงเริ่มเขียน ให้เรียน Grammar พร้อมกับนำมาเขียนจริงทันที
+
+เป้าหมายปลายทาง
+
+เมื่อเรียนครบ คุณควรสามารถ:
+
+ระดับ	ความสามารถ
+Beginner	เขียนคำและประโยคพื้นฐานได้
+Elementary	เขียนเรื่องชีวิตประจำวันได้
+Intermediate	เขียนย่อหน้า แชต อีเมล และแสดงความคิดเห็นได้
+Upper Intermediate	เขียนรายงาน อธิบายปัญหา และเสนอแนวทางได้
+Professional	เขียนเอกสารงาน Software, AI และ Business ได้
+Exam	เขียนตอบข้อสอบ TOEIC Speaking & Writing, IELTS หรือข้อสอบทั่วไปได้
+โครงสร้างหลักสูตรทั้งหมด
+Phase 1: Writing Foundation
+Module 1: Alphabet, Spelling และ Word Formation
+
+เรียนเรื่อง:
+
+ตัวพิมพ์ใหญ่และตัวพิมพ์เล็ก
+การสะกดคำ
+การแบ่งพยางค์
+คำที่มักสะกดผิด
+คำพ้องเสียง เช่น there / their / they're
+รูปคำพื้นฐาน
+
+ตัวอย่าง:
+
+รูปคำ	ตัวอย่าง
+Noun	success
+Verb	succeed
+Adjective	successful
+Adverb	successfully
+
+งานฝึก:
+
+คัดและพิมพ์คำวันละ 20 คำ
+ฟังคำแล้วเขียนตาม
+เปลี่ยนรูปคำ
+เขียนประโยคจากคำใหม่
+
+ผลลัพธ์: สะกดคำพื้นฐานและเลือกชนิดคำได้ถูกต้อง
+
+Module 2: Capitalization และ Punctuation
+
+เรียนเครื่องหมายที่จำเป็น:
+
+เครื่องหมาย	การใช้
+.	จบประโยค
+,	แบ่งข้อความหรือรายการ
+?	คำถาม
+!	อุทานหรือเน้น
+'	แสดงความเป็นเจ้าของหรือคำย่อ
+:	นำเข้าสู่รายการหรือคำอธิบาย
+;	เชื่อมประโยคที่สัมพันธ์กัน
+"	คำพูดโดยตรง
+( )	ข้อมูลเพิ่มเติม
+-	เชื่อมคำหรือแบ่งส่วน
+
+กฎตัวพิมพ์ใหญ่:
+
+คำแรกของประโยค
+ชื่อคน สถานที่ บริษัท ประเทศ ภาษา
+วัน เดือน และเทศกาล
+คำว่า I
+ชื่อตำแหน่งเมื่อใช้เป็นชื่อเฉพาะ
+
+ผลลัพธ์: เขียนข้อความให้อ่านง่ายและดูเป็นมืออาชีพ
+
+Phase 2: Sentence Writing
+Module 3: โครงสร้างประโยคพื้นฐาน
+
+ต้องแม่น 5 โครงสร้างนี้ก่อน:
+
+Pattern	ตัวอย่าง
+S + V	The system works.
+S + V + O	I write code.
+S + be + Adj	The result is correct.
+S + be + N	She is a developer.
+S + V + O + Complement	We made the process faster.
+
+องค์ประกอบหลัก:
+
+Subject — ใครหรืออะไร
+Verb — ทำอะไรหรือเป็นอะไร
+Object — สิ่งที่ถูกกระทำ
+Complement — ข้อมูลที่ทำให้ประโยคสมบูรณ์
+Modifier — ข้อมูลเวลา สถานที่ วิธีการ และเหตุผล
+
+สูตรตรวจประโยค:
+
+ใคร + ทำอะไร + กับอะไร + ที่ไหน + เมื่อไร + อย่างไร + เพราะอะไร
+
+ตัวอย่าง:
+
+The developer fixed the login problem in the production system yesterday.
+
+ผลลัพธ์: เขียนประโยคที่มีประธานและกริยาครบ
+
+Module 4: ประโยคบอกเล่า ปฏิเสธ และคำถาม
+บอกเล่า
+
+She works remotely.
+
+ปฏิเสธ
+
+She does not work remotely.
+
+Yes/No Question
+
+Does she work remotely?
+
+Wh-Question
+
+Where does she work?
+
+ต้องฝึกกับ:
+
+Verb be
+Verb ทั่วไป
+have
+Modal verbs
+Present, past และ future
+
+ผลลัพธ์: เขียนประโยคพื้นฐานได้ครบทุกรูปแบบ
+
+Module 5: Grammar สำหรับ Writing แบบ 80/20
+
+Grammar ที่ต้องใช้ก่อน:
+
+Subject–Verb Agreement
+Present Simple
+Present Continuous
+Past Simple
+Present Perfect
+Future forms
+Pronouns
+Articles: a / an / the
+Singular และ plural
+Countable และ uncountable nouns
+Adjectives และ adverbs
+Prepositions
+Modal verbs
+Comparatives และ superlatives
+Passive voice
+Conditionals
+Relative clauses
+Gerunds และ infinitives
+
+ไม่ต้องจำกฎอย่างเดียว ต้องนำ Grammar แต่ละเรื่องมาเขียนอย่างน้อย 10 ประโยค
+
+ตัวอย่าง:
+
+Grammar	งานเขียน
+Present Simple	เขียนกิจวัตร
+Past Simple	เขียนสิ่งที่ทำเมื่อวาน
+Present Perfect	เขียนประสบการณ์
+Future	เขียนแผนงาน
+Passive	เขียนขั้นตอนของระบบ
+Conditional	เขียนเงื่อนไขและผลลัพธ์
+Module 6: การขยายประโยค
+
+เริ่มจาก:
+
+The system failed.
+
+เพิ่มเวลา:
+
+The system failed yesterday.
+
+เพิ่มสาเหตุ:
+
+The system failed yesterday because the database connection was unavailable.
+
+เพิ่มผลกระทบ:
+
+The system failed yesterday because the database connection was unavailable, so users could not submit their orders.
+
+เทคนิคขยายประโยค:
+
+Adjective
+Adverb
+Prepositional phrase
+Reason
+Example
+Result
+Contrast
+Condition
+
+ผลลัพธ์: เขียนประโยคที่ละเอียดขึ้นโดยไม่วกวน
+
+Module 7: การเชื่อมประโยค
+
+คำเชื่อมสำคัญ:
+
+หน้าที่	คำเชื่อม
+เพิ่มข้อมูล	and, also, moreover, furthermore
+ตรงข้าม	but, however, although, whereas
+เหตุผล	because, since, as
+ผลลัพธ์	so, therefore, as a result
+ตัวอย่าง	for example, for instance, such as
+ลำดับ	first, next, then, finally
+เงื่อนไข	if, unless, provided that
+สรุป	overall, in conclusion, to summarize
+
+ตัวอย่าง:
+
+The API returned an error because the token had expired. Therefore, the user had to log in again.
+
+ผลลัพธ์: เขียนข้อความให้ต่อเนื่องและสัมพันธ์กัน
+
+Phase 3: Paragraph Writing
+Module 8: โครงสร้างย่อหน้า
+
+ย่อหน้าที่ดีประกอบด้วย:
+
+Topic Sentence — ประโยคหลัก
+Explanation — คำอธิบาย
+Example or Evidence — ตัวอย่างหรือหลักฐาน
+Closing Sentence — ประโยคสรุป
+
+สูตรง่าย:
+
+ประเด็น → อธิบาย → ยกตัวอย่าง → สรุป
+
+ตัวอย่างโครงสร้าง:
+
+Automated testing is important for software development. It helps developers identify problems before the software is released. For example, unit tests can detect incorrect business rules immediately after the code changes. Therefore, automated testing reduces risk and improves software quality.
+
+หัวข้อฝึก:
+
+My daily routine
+My job
+A problem I solved
+My learning plan
+Why I want to become an AI Engineer
+Advantages of automated testing
+
+ผลลัพธ์: เขียนย่อหน้า 80–150 คำได้อย่างมีโครงสร้าง
+
+Module 9: Coherence และ Cohesion
+Coherence
+
+ทุกประโยคต้องสนับสนุนหัวข้อเดียวกัน
+
+Cohesion
+
+ประโยคต้องเชื่อมต่อกันผ่าน:
+
+Pronouns
+Repeated keywords
+Synonyms
+Transition words
+ลำดับความคิด
+
+ตัวอย่างที่ไม่ดี:
+
+AI is useful. I like coffee. Developers use APIs. Python is popular.
+
+ตัวอย่างที่ดี:
+
+AI is useful for software developers because it can automate repetitive tasks. For example, developers can use AI APIs to summarize documents, generate structured data, and assist with code analysis.
+
+ผลลัพธ์: เนื้อหาไม่กระโดดและอ่านแล้วเข้าใจเป็นเรื่องเดียวกัน
+
+Module 10: Paragraph Types
+
+ต้องเขียนให้ได้อย่างน้อย 6 แบบ:
+
+ประเภท	จุดประสงค์
+Description	บรรยายคน สถานที่ สิ่งของ หรือระบบ
+Narrative	เล่าเหตุการณ์
+Process	อธิบายขั้นตอน
+Cause and Effect	อธิบายเหตุและผล
+Compare and Contrast	เปรียบเทียบ
+Opinion	แสดงความเห็นพร้อมเหตุผล
+
+หัวข้อฝึกสายงาน:
+
+Describe an AI application.
+Explain how an API works.
+Compare SQL and NoSQL databases.
+Explain the causes of a system failure.
+Describe the software deployment process.
+Give your opinion about remote work.
+Phase 4: Practical Writing
+Module 11: Daily Writing
+
+ฝึกเขียนสิ่งที่ใช้ในชีวิตจริง:
+
+บันทึกประจำวัน
+ตารางและแผนงาน
+รายการสิ่งที่ต้องทำ
+ข้อความสั้น
+การนัดหมาย
+การขอข้อมูล
+การขอบคุณ
+การขอโทษ
+การปฏิเสธ
+การแจ้งปัญหา
+
+สูตรข้อความทั่วไป:
+
+บริบท → จุดประสงค์ → รายละเอียด → สิ่งที่ต้องการ
+
+ตัวอย่าง:
+
+Hi Mark, I cannot join the meeting at 2:00 p.m. because I have a production issue to resolve. Could we move it to 3:30 p.m.?
+
+Module 12: Chat และ Workplace Messages
+
+ประเภทที่ควรฝึก:
+
+แจ้งสถานะงาน
+รายงาน Blocker
+ขอความช่วยเหลือ
+ขออนุมัติ
+นัดประชุม
+ติดตามงาน
+แก้ไขความเข้าใจผิด
+แจ้งว่าทำงานเสร็จแล้ว
+แจ้งความเสี่ยง
+เสนอทางเลือก
+
+สูตรรายงานสถานะ:
+
+Done → Doing → Blocked → Next
+
+ตัวอย่าง:
+
+I completed the login API and added unit tests. I am currently working on role-based authorization. The main blocker is the missing permission data. Once the data is available, I will complete the integration test.
+
+Module 13: Email Writing
+
+โครงสร้างอีเมลมาตรฐาน:
+
+Subject
+Greeting
+Purpose
+Important details
+Requested action
+Deadline
+Closing
+
+ประเภทอีเมลสำคัญ:
+
+Request
+Follow-up
+Confirmation
+Problem report
+Apology
+Complaint
+Meeting invitation
+Progress update
+Job application
+Thank-you email
+
+ระดับความสุภาพ:
+
+ตรงเกินไป	เหมาะสมกว่า
+Send me the file.	Could you please send me the file?
+Fix this today.	Could you please resolve this by the end of today?
+You are wrong.	There may be a misunderstanding regarding this requirement.
+I want an answer.	I would appreciate your confirmation.
+
+ผลลัพธ์: เขียนอีเมลสั้น ชัดเจน และสุภาพได้
+
+Phase 5: Professional Writing
+Module 14: Report Writing
+
+โครงสร้างรายงาน:
+
+Title
+Executive summary
+Background
+Objective
+Findings
+Analysis
+Recommendations
+Risks
+Next steps
+Conclusion
+
+ประเภทที่ควรฝึก:
+
+Daily report
+Weekly report
+Incident report
+Test report
+Bug report
+Project status report
+Root cause analysis
+Performance report
+
+สูตร Incident Report:
+
+What happened → When → Impact → Cause → Resolution → Prevention
+
+Module 15: Technical Writing
+
+เอกสารที่ Developer และ AI Engineer ควรเขียนได้:
+
+README
+Installation guide
+API documentation
+System overview
+Architecture description
+Database documentation
+User story
+Acceptance criteria
+Business rule
+Test case
+Bug report
+Release note
+Pull request description
+Code comment
+Troubleshooting guide
+Security note
+
+หลักการ Technical Writing:
+
+ใช้ประโยคสั้น
+หนึ่งประโยคต่อหนึ่งประเด็น
+ใช้คำให้คงที่
+ระบุ Input และ Output
+ระบุเงื่อนไข
+ระบุ Error และวิธีแก้
+หลีกเลี่ยงคำกำกวม เช่น it, something, maybe
+ใช้ตัวอย่างประกอบ
+
+ตัวอย่างโครงสร้าง Bug Report:
+
+ส่วน	รายละเอียด
+Title	สรุปปัญหา
+Environment	ระบบและเวอร์ชัน
+Preconditions	เงื่อนไขก่อนเกิดปัญหา
+Steps	ขั้นตอนทำซ้ำ
+Expected	ผลลัพธ์ที่ควรเกิด
+Actual	ผลลัพธ์ที่เกิดจริง
+Evidence	รูปหรือ Log
+Severity	ระดับผลกระทบ
+Module 16: AI Writing
+
+ควรเขียนเรื่องต่อไปนี้ได้:
+
+อธิบาย AI และ LLM
+อธิบาย Prompt
+เขียน System Prompt
+เขียน Input/Output specification
+อธิบาย RAG
+อธิบาย Tool Calling
+เขียน Evaluation criteria
+เขียน Test scenario
+รายงาน Hallucination
+เขียน AI risk assessment
+เขียน Model behavior report
+
+สูตรอธิบายเทคโนโลยี:
+
+What it is → How it works → Why it matters → Example → Limitation
+
+ตัวอย่างหัวข้อ:
+
+How a large language model generates text
+How RAG reduces hallucination
+The difference between deterministic and stochastic systems
+How structured output improves application reliability
+Risks of using AI-generated content
+Phase 6: Essay Writing
+Module 17: Essay Structure
+
+โครงสร้างพื้นฐาน:
+
+Introduction
+Background
+Topic
+Thesis statement
+Body Paragraph
+Topic sentence
+Explanation
+Evidence or example
+Connection to thesis
+Conclusion
+Restate the main idea
+Summarize key points
+Final thought or recommendation
+
+สูตร Essay:
+
+บอกว่าจะพูดอะไร → อธิบายและพิสูจน์ → สรุปสิ่งที่พูด
+
+ประเภท Essay:
+
+Opinion
+Discussion
+Advantages and disadvantages
+Problem and solution
+Cause and effect
+Compare and contrast
+Argumentative essay
+Module 18: Argument และ Critical Writing
+
+ต้องสามารถ:
+
+ตั้ง Claim
+ให้เหตุผล
+ยกตัวอย่าง
+ใช้หลักฐาน
+พิจารณาความเห็นอีกด้าน
+โต้แย้งอย่างสุภาพ
+สรุปโดยไม่กล่าวเกินหลักฐาน
+
+สูตร:
+
+Claim → Reason → Evidence → Counterargument → Response → Conclusion
+
+คำที่ควรใช้:
+
+This suggests that...
+The evidence indicates that...
+One possible explanation is...
+However, this argument does not consider...
+A major limitation is...
+Based on these findings...
+Phase 7: Exam Writing
+Module 19: TOEIC Writing
+
+หมายเหตุ: TOEIC Listening & Reading ปกติไม่มีข้อสอบ Writing แต่มีข้อสอบแยกชื่อ TOEIC Speaking and Writing Tests
+
+สิ่งที่ควรฝึก:
+
+เขียนประโยคจากภาพ
+ตอบคำถามเป็นลายลักษณ์อักษร
+ตอบอีเมล
+เขียน Opinion Essay
+เขียนให้ตรงคำสั่งภายในเวลาที่กำหนด
+
+จุดให้คะแนนหลัก:
+
+Grammar
+Vocabulary
+Relevance
+Organization
+Completeness
+Module 20: IELTS Writing
+Task 1
+อธิบายกราฟ
+ตาราง
+แผนภูมิ
+กระบวนการ
+แผนที่
+
+โครงสร้าง:
+
+Introduction → Overview → Details 1 → Details 2
+
+Task 2
+เขียน Essay แสดงความคิดเห็นหรืออภิปราย
+ต้องมี Thesis และเหตุผลที่ชัดเจน
+ใช้ตัวอย่างสนับสนุน
+
+คะแนนวัดจาก:
+
+Task achievement
+Coherence and cohesion
+Lexical resource
+Grammatical range and accuracy
+Phase 8: Editing และ Quality Control
+Module 21: Self-Editing
+
+ตรวจงาน 5 รอบ:
+
+รอบ 1: Content
+ตอบตรงคำถามหรือไม่
+ข้อมูลสำคัญครบหรือไม่
+รอบ 2: Structure
+ลำดับความคิดชัดหรือไม่
+แต่ละย่อหน้ามีหัวข้อเดียวหรือไม่
+รอบ 3: Grammar
+Subject–Verb Agreement
+Tense
+Article
+Singular/Plural
+Preposition
+Word form
+รอบ 4: Vocabulary
+ใช้คำตรงความหมายหรือไม่
+มีคำซ้ำมากเกินไปหรือไม่
+ภาษาทางการเหมาะกับบริบทหรือไม่
+รอบ 5: Mechanics
+Spelling
+Capitalization
+Punctuation
+Formatting
+
+สูตรตรวจประโยค:
+
+S–V–T–A–P
+
+S: Subject
+V: Verb
+T: Tense
+A: Article
+P: Punctuation
+Module 22: Common Writing Errors
+
+ข้อผิดพลาดที่ต้องแก้ให้ได้:
+
+Sentence fragment
+Run-on sentence
+Comma splice
+Subject–Verb disagreement
+Tense inconsistency
+Article error
+Wrong word form
+Singular/Plural error
+Pronoun unclear
+Incorrect preposition
+Direct translation from Thai
+Repetitive vocabulary
+Informal language in formal documents
+Long and confusing sentences
+
+ตัวอย่าง:
+
+ผิด:
+
+The system has an error yesterday.
+
+ถูก:
+
+The system had an error yesterday.
+
+ผิด:
+
+Because the database was unavailable.
+
+ถูก:
+
+The process failed because the database was unavailable.
+
+ระดับการเรียน Writing
+Level 0: Pre-Writing
+Alphabet
+Spelling
+Basic vocabulary
+Capitalization
+Punctuation
+
+เป้าหมาย: เขียนคำและข้อความสั้นได้
+
+Level 1: Sentence
+S + V
+Present, past, future
+Negative
+Questions
+Sentence expansion
+
+เป้าหมาย: เขียนประโยค 10–20 ประโยคเกี่ยวกับตนเองได้
+
+Level 2: Paragraph
+Topic sentence
+Explanation
+Example
+Conclusion
+Linking words
+
+เป้าหมาย: เขียน 100–150 คำได้
+
+Level 3: Functional Writing
+Chat
+Email
+Request
+Complaint
+Update
+Instructions
+
+เป้าหมาย: ใช้ภาษาอังกฤษในชีวิตและที่ทำงานได้
+
+Level 4: Professional Writing
+Reports
+Technical documents
+Project documents
+AI documentation
+
+เป้าหมาย: เขียนเอกสารงานได้จริง
+
+Level 5: Academic and Exam Writing
+Essays
+Arguments
+Graph descriptions
+Timed writing
+
+เป้าหมาย: เขียนสอบและสื่อสารแนวคิดซับซ้อนได้
+
+แผนเรียน 12 สัปดาห์
+สัปดาห์	เนื้อหา	ผลงาน
+1	Spelling, capitalization, punctuation	ข้อความแนะนำตัว
+2	Sentence patterns	50 ประโยคพื้นฐาน
+3	Tenses สำหรับ Writing	เรื่องอดีต ปัจจุบัน อนาคต
+4	การขยายและเชื่อมประโยค	เรื่องสั้น 100 คำ
+5	Paragraph structure	5 ย่อหน้า
+6	Daily messages และ chat	ข้อความ 20 สถานการณ์
+7	Email writing	อีเมล 10 ประเภท
+8	Workplace writing	Status, blocker, request
+9	Report writing	Weekly และ incident report
+10	Technical และ AI writing	README หรือ API document
+11	Essay และ exam writing	Essay 250 คำ
+12	Editing และ Capstone	Portfolio Writing
+รูปแบบฝึกประจำวัน
+
+ใช้เวลา 45–90 นาทีต่อวัน
+
+เวลา	กิจกรรม
+10 นาที	อ่านตัวอย่างงานเขียน
+10 นาที	เรียน Grammar หรือ Vocabulary
+15 นาที	เขียนประโยค 10 ประโยค
+20–40 นาที	เขียนงานหลัก
+10 นาที	ตรวจและแก้ไข
+5 นาที	บันทึกข้อผิดพลาด
+
+กฎสำคัญ:
+
+เขียน → ตรวจ → แก้ → เขียนใหม่
+
+อย่าอ่าน Grammar อย่างเดียวโดยไม่เขียน
+
+ระบบฝึก 4 ขั้น
+1. Copy
+
+คัดลอกตัวอย่างที่ถูกต้อง เพื่อเรียนรู้รูปแบบ
+
+2. Modify
+
+เปลี่ยนข้อมูลในประโยคเดิม
+
+ต้นแบบ:
+
+I completed the API yesterday.
+
+ดัดแปลง:
+
+I completed the database migration this morning.
+
+3. Guided Writing
+
+เขียนโดยใช้โครงสร้างหรือคำถามนำ
+
+4. Free Writing
+
+เขียนเองทั้งหมดโดยไม่ดูต้นแบบ
+
+Writing Portfolio ที่ต้องสร้าง
+
+เมื่อเรียนครบ ควรมีผลงานอย่างน้อย:
+
+Personal introduction
+Daily routine
+Past experience
+Future career plan
+Opinion paragraph
+Professional chat messages
+Request email
+Follow-up email
+Complaint or problem email
+Weekly report
+Incident report
+Bug report
+README
+API documentation
+System overview
+AI concept explanation
+Comparison essay
+Problem–solution essay
+TOEIC Writing simulation
+IELTS-style essay
+เกณฑ์ประเมินงานเขียน
+
+คะแนนเต็ม 100:
+
+ด้าน	คะแนน
+ตอบตรงวัตถุประสงค์	20
+โครงสร้างและลำดับความคิด	20
+Grammar	20
+Vocabulary	15
+ความชัดเจนและเป็นธรรมชาติ	15
+Spelling และ punctuation	10
+
+ระดับผ่าน:
+
+ต่ำกว่า 60: ต้องกลับไปฝึกพื้นฐาน
+60–69: สื่อสารได้แต่ยังผิดบ่อย
+70–79: ใช้งานทั่วไปได้
+80–89: ใช้งานระดับมืออาชีพได้
+90–100: ชัดเจน ถูกต้อง และเป็นธรรมชาติ
+สิ่งสำคัญที่สุดแบบ 80/20
+
+หากต้องการเรียนให้เร็ว ให้เน้นตามลำดับนี้:
+
+โครงสร้าง Subject + Verb
+Present, past และ future
+Subject–Verb Agreement
+Articles และ singular/plural
+การเชื่อมด้วย and, but, because, so
+Topic sentence
+Explanation และ example
+Email structure
+Problem–cause–solution
+การตรวจและเขียนใหม่
+ระยะเวลาที่คาดหวัง
+
+เมื่อฝึกวันละ 1–2 ชั่วโมง:
+
+ระยะเวลา	ผลลัพธ์
+30 วัน	เขียนประโยคและข้อความทั่วไปได้
+60 วัน	เขียนย่อหน้า แชต และอีเมลได้
+90 วัน	เขียนรายงานและเอกสารงานพื้นฐานได้
+4–6 เดือน	เขียนเรื่อง Tech/AI และ Essay ได้ดี
+6–12 เดือน	เขียนระดับทำงานและสอบได้อย่างมั่นใจ
+สูตรสรุป Writing ทั้งหมด
+
+Word → Sentence → Connected Sentences → Paragraph → Message → Email → Report → Technical Document → Essay → Exam
+
+เป้าหมายไม่ใช่เขียนให้ใช้คำยากที่สุด แต่คือ:
+
+ถูกต้อง ชัดเจน กระชับ มีโครงสร้าง และผู้อ่านรู้ว่าต้องทำอะไรต่อ

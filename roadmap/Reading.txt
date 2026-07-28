@@ -1,0 +1,1159 @@
+Reading ภาษาอังกฤษแบบครบจบ
+
+เป้าหมายของ Reading ไม่ใช่แค่ “แปลได้” แต่ต้องพัฒนาให้ครบ 5 ความสามารถ
+
+เห็นคำ → อ่านออกเสียง → รู้ความหมาย → เข้าใจประโยค
+→ เข้าใจทั้งเรื่อง → วิเคราะห์ได้ → อ่านเร็วและทำข้อสอบได้
+Roadmap Reading ตั้งแต่ 0 ถึงระดับสอบ
+Phase 1: อ่านคำออก — Word Decoding
+Module 1: Alphabet & Letter Sounds
+
+ต้องรู้
+
+ชื่อตัวอักษร A–Z
+เสียงของตัวอักษร
+พยัญชนะและสระ
+ตัวอักษรที่มีหลายเสียง
+
+ตัวอย่าง
+
+A = /æ/ ใน cat
+A = /eɪ/ ใน cake
+C = /k/ ใน cat
+C = /s/ ใน city
+G = /g/ ใน go
+G = /dʒ/ ใน giant
+
+เป้าหมาย: เห็นคำพื้นฐานแล้วลองออกเสียงได้ แม้ยังไม่รู้ความหมาย
+
+Module 2: Short Vowels
+
+สระเสียงสั้นที่ต้องรู้
+
+เสียง	ตัวอย่าง
+a /æ/	cat, map, bag
+e /e/	bed, pen, red
+i /ɪ/	sit, big, fish
+o /ɒ/ หรือ /ɑː/	hot, box, stop
+u /ʌ/	cup, sun, run
+
+ฝึกด้วยโครงสร้าง CVC
+
+C = Consonant
+V = Vowel
+CVC = cat, bed, sit, hot, sun
+
+เป้าหมาย: อ่านคำสั้น 3–4 ตัวอักษรได้คล่อง
+
+Module 3: Long Vowels และ Silent E
+
+เมื่อคำลงท้ายด้วย e ตัว e มักไม่ออกเสียง แต่ทำให้สระข้างหน้าเป็นเสียงยาว
+
+Short vowel	Long vowel
+cap	cape
+pet	Pete
+kit	kite
+hop	hope
+cub	cube
+
+หลักจำ
+
+CVC → สระสั้น
+CVCe → สระยาว
+
+เป้าหมาย: แยกคำอย่าง bit/bite, hop/hope, cut/cute ได้
+
+Module 4: Consonant Blends & Digraphs
+Blends
+
+ออกเสียงพยัญชนะแต่ละตัวต่อกัน
+
+bl: black
+br: brown
+cl: class
+fl: flower
+pl: place
+st: stop
+str: street
+Digraphs
+
+ตัวอักษรสองตัวรวมกันเป็นเสียงใหม่
+
+sh: shop
+ch: chair
+th: think / this
+ph: phone
+wh: what
+ng: sing
+ck: back
+
+เป้าหมาย: อ่านคำยาวขึ้นโดยไม่สะกดทีละตัว
+
+Module 5: Vowel Teams
+
+สิ่งที่เรียกว่า ae, ai, ea, ee, ie, oa คือกลุ่ม Vowel Teams หรือชุดตัวอักษรสระ
+
+รูปแบบ	ตัวอย่าง
+ai	rain, train
+ay	day, play
+ea	eat, head
+ee	see, green
+ie	pie, field
+oa	boat, road
+oo	book, moon
+ou	house, young
+ow	cow, snow
+oi	coin, point
+oy	boy, toy
+au	August, sauce
+aw	saw, draw
+
+ข้อสำคัญ: ตัวสะกดเดียวกันอาจออกเสียงต่างกัน
+
+ea:
+eat /iː/
+head /e/
+great /eɪ/
+
+เป้าหมาย: จำเสียงที่พบบ่อยก่อน ไม่จำเป็นต้องท่องข้อยกเว้นทั้งหมดในครั้งเดียว
+
+Module 6: R-Controlled Vowels และ Diphthongs
+R-Controlled Vowels
+ar: car
+er: her
+ir: bird
+or: fork
+ur: turn
+Diphthongs
+
+เสียงสระที่มีการเคลื่อนเสียง
+
+/ɔɪ/ boy, coin
+/aɪ/ my, time
+/aʊ/ now, house
+/eɪ/ day, name
+/oʊ/ go, home
+
+เป้าหมาย: อ่านคำที่มีเสียงผสมได้ถูกต้องขึ้น
+
+Module 7: Syllables — การแบ่งพยางค์
+
+คำยาวต้องแบ่งเป็นส่วน ไม่ควรอ่านทั้งคำในครั้งเดียว
+
+ta-ble
+win-dow
+beau-ti-ful
+in-for-ma-tion
+de-ve-lop-ment
+com-mu-ni-ca-tion
+
+ประเภทสำคัญ
+
+Closed syllable: cat, pic-nic
+Open syllable: he, mu-sic
+Silent-e syllable: make
+Vowel-team syllable: rain
+R-controlled syllable: car
+Consonant-le syllable: ta-ble
+
+เป้าหมาย: แบ่งและอ่านคำ 2–5 พยางค์ได้
+
+Module 8: Word Stress
+
+ภาษาอังกฤษจะมีพยางค์ที่เน้นเสียง
+
+TAble
+DOCtor
+beGIN
+imPORtant
+eduCAtion
+
+คำบางคำเปลี่ยนชนิดตามตำแหน่งเสียงเน้น
+
+REcord = คำนาม
+reCORD = คำกริยา
+
+PREsent = คำนาม/คำคุณศัพท์
+preSENT = คำกริยา
+
+เป้าหมาย: อ่านคำยาวเป็นธรรมชาติ ไม่ออกเสียงทุกพยางค์หนักเท่ากัน
+
+Phase 2: เข้าใจคำศัพท์
+Module 9: High-Frequency Words
+
+เริ่มจากคำที่พบมากในการอ่าน
+
+Function Words
+a, an, the
+is, am, are, was, were
+do, does, did
+have, has, had
+in, on, at, of, for, to
+and, but, or, because
+this, that, these, those
+Common Content Words
+people, time, work, day, place
+make, get, take, use, find
+good, important, different, possible
+
+เป้าหมายตามระดับ
+
+ระดับ	จำนวนคำศัพท์โดยประมาณ
+เริ่มอ่าน	500–1,000 คำ
+อ่านชีวิตประจำวัน	2,000–3,000 คำ
+อ่านบทความทั่วไป	4,000–6,000 คำ
+อ่านงานและข้อสอบ	6,000–10,000+ คำ
+
+ไม่ต้องจำแค่คำแปล ต้องจำรูปแบบการใช้ด้วย
+
+apply = สมัคร / นำไปใช้
+apply for a job
+apply the rule
+Module 10: Word Families
+
+เรียนคำเป็นครอบครัว
+
+develop     = พัฒนา
+development = การพัฒนา
+developer   = นักพัฒนา
+developed   = ที่พัฒนาแล้ว
+developing  = ที่กำลังพัฒนา
+
+อีกตัวอย่าง
+
+success
+succeed
+successful
+successfully
+
+เป้าหมาย: เห็นคำใหม่แล้วเดาความหมายและชนิดคำได้
+
+Module 11: Prefixes, Suffixes และ Roots
+Prefixes
+ส่วนเติมหน้า	ความหมาย	ตัวอย่าง
+un-	ไม่	unhappy
+re-	อีกครั้ง	rewrite
+dis-	ไม่/ตรงข้าม	disagree
+pre-	ก่อน	preview
+mis-	ผิด	misunderstand
+inter-	ระหว่าง	international
+Suffixes
+ส่วนท้าย	มักเป็น	ตัวอย่าง
+-tion	คำนาม	information
+-ment	คำนาม	development
+-er	คน/สิ่งที่ทำ	teacher
+-ful	คุณศัพท์	useful
+-less	ปราศจาก	careless
+-ly	คำวิเศษณ์	quickly
+-ize	คำกริยา	organize
+Roots
+bio = life
+graph = write
+tele = distance
+micro = small
+port = carry
+spect = see
+
+เป้าหมาย: เดาคำศัพท์ใหม่จากส่วนประกอบได้
+
+Module 12: Collocations และ Phrasal Verbs
+
+ต้องอ่านเป็นกลุ่มคำ ไม่อ่านแยกทีละคำ
+
+Collocations
+make a decision
+take responsibility
+heavy rain
+highly recommended
+meet a deadline
+solve a problem
+Phrasal Verbs
+find out = ค้นพบ
+look for = มองหา
+set up = ติดตั้ง/จัดตั้ง
+carry out = ดำเนินการ
+turn down = ปฏิเสธ/ลดเสียง
+
+เป้าหมาย: เข้าใจความหมายจริงของกลุ่มคำโดยไม่แปลตรงตัว
+
+Phase 3: เข้าใจประโยค
+Module 13: Sentence Structure
+
+ทุกครั้งที่อ่านประโยค ให้หาแกนก่อน
+
+Subject + Verb + Object/Complement
+
+ตัวอย่าง
+
+The developer fixed the problem.
+
+Subject: The developer
+Verb: fixed
+Object: the problem
+
+ประโยคยาว
+
+The developer who joined our team last month
+fixed the critical problem in the payment system.
+
+ประธานหลัก: The developer
+กริยาหลัก: fixed
+กรรมหลัก: the critical problem
+
+เป้าหมาย: หาแกนประโยคได้ แม้มีคำขยายจำนวนมาก
+
+Module 14: Parts of Speech เพื่อการอ่าน
+
+ต้องรู้หน้าที่ของคำ
+
+ชนิดคำ	หน้าที่
+Noun	คน สิ่งของ สถานที่ ความคิด
+Pronoun	ใช้แทนคำนาม
+Verb	การกระทำหรือสภาวะ
+Adjective	ขยายคำนาม
+Adverb	ขยายกริยา/คุณศัพท์/ประโยค
+Preposition	บอกความสัมพันธ์
+Conjunction	เชื่อมคำหรือประโยค
+Determiner	กำหนดคำนาม
+
+ตัวอย่าง
+
+The new system processes data quickly.
+
+system = noun
+new = adjective
+processes = verb
+data = noun
+quickly = adverb
+
+เป้าหมาย: เดาหน้าที่คำจากตำแหน่งได้ แม้ไม่รู้คำแปลทั้งหมด
+
+Module 15: Tenses เพื่อเข้าใจเวลา
+
+ไม่จำเป็นต้องแปลชื่อ Tense ทุกครั้ง แต่ต้องมองให้ออกว่าเหตุการณ์เกิดเมื่อไร
+
+works        = ปัจจุบัน/เป็นประจำ
+is working   = กำลังทำ
+worked       = เกิดในอดีต
+has worked   = ทำมาแล้วและเกี่ยวข้องกับปัจจุบัน
+had worked   = เกิดก่อนอีกเหตุการณ์ในอดีต
+will work    = อนาคต
+
+ตัวบอกเวลาสำคัญ
+
+usually → Present Simple
+now → Present Continuous
+yesterday → Past Simple
+since/for → มักใช้ Perfect
+tomorrow → Future
+
+เป้าหมาย: เข้าใจลำดับเหตุการณ์ในเรื่อง
+
+Module 16: Pronoun Reference
+
+ต้องรู้ว่าคำสรรพนามอ้างถึงอะไร
+
+Anna bought a new laptop because she needed it for work.
+
+she = Anna
+it = a new laptop
+
+ตัวอย่างที่ซับซ้อนขึ้น
+
+The company released a new application.
+It allows users to manage their orders.
+
+It = the new application
+
+เป้าหมาย: ติดตามว่าใครทำอะไรกับใครได้ตลอดย่อหน้า
+
+Module 17: Clauses และประโยคซับซ้อน
+Main Clause
+
+อยู่ได้ด้วยตัวเอง
+
+I stayed home.
+Dependent Clause
+
+ต้องพึ่งประโยคหลัก
+
+because it was raining
+
+รวมกัน
+
+I stayed home because it was raining.
+
+คำเชื่อมสำคัญ
+
+ความสัมพันธ์	คำเชื่อม
+เหตุผล	because, since, as
+ผลลัพธ์	so, therefore, therefore
+ขัดแย้ง	but, although, however
+เงื่อนไข	if, unless
+เวลา	when, while, before, after
+เพิ่มข้อมูล	and, moreover, furthermore
+
+เป้าหมาย: เข้าใจความสัมพันธ์ระหว่างความคิด
+
+Module 18: Relative Clauses
+
+ใช้ขยายคำนาม
+
+The man who called me is my manager.
+The book that I bought is useful.
+The company where she works is in Bangkok.
+
+วิธีอ่าน
+
+The man [who called me] is my manager.
+
+ตัดส่วนขยายชั่วคราว จะเหลือแกน
+
+The man is my manager.
+
+เป้าหมาย: ไม่หลงประธานและกริยาในประโยคยาว
+
+Module 19: Passive Voice
+
+โครงสร้าง
+
+be + V3
+
+ตัวอย่าง
+
+The report was completed yesterday.
+The data is stored in the database.
+The problem will be fixed soon.
+
+ใช้บ่อยใน
+
+ข่าว
+รายงาน
+คู่มือ
+เอกสารวิชาการ
+เอกสารทางเทคนิค
+
+เป้าหมาย: รู้ว่าใครหรือสิ่งใด “ถูกกระทำ”
+
+Module 20: Reduced Forms และข้อความที่ถูกละ
+
+ข้อความภาษาอังกฤษบางส่วนถูกลดรูป
+
+The employees working in this department are experienced.
+
+มาจาก
+
+The employees who are working in this department...
+
+อีกตัวอย่าง
+
+The system developed by our team is secure.
+
+มาจาก
+
+The system that was developed by our team...
+
+เป้าหมาย: อ่านเอกสารงานและบทความที่มีประโยคกระชับได้
+
+Phase 4: เข้าใจย่อหน้าและบทความ
+Module 21: Topic และ Main Idea
+Topic
+
+เรื่องกล่าวถึงอะไร
+
+Main Idea
+
+ผู้เขียนต้องการบอกอะไรเกี่ยวกับเรื่องนั้น
+
+ตัวอย่าง
+
+Many companies now allow employees to work remotely.
+This can reduce office costs and give employees more flexibility.
+However, companies must also improve communication systems.
+Topic: Remote work
+Main idea: Remote work has benefits but requires good communication.
+
+เป้าหมาย: สรุปใจความหลักเป็นหนึ่งประโยคได้
+
+Module 22: Supporting Details
+
+รายละเอียดสนับสนุนอาจเป็น
+
+เหตุผล
+ตัวอย่าง
+ตัวเลข
+ข้อเท็จจริง
+คำอธิบาย
+หลักฐาน
+ผลลัพธ์
+
+โครงสร้าง
+
+Main Idea
+├── Reason
+├── Example
+├── Evidence
+└── Result
+
+เป้าหมาย: แยกประเด็นหลักออกจากรายละเอียดได้
+
+Module 23: Paragraph Structure
+
+ย่อหน้าทั่วไป
+
+Topic Sentence
+→ Supporting Details
+→ Example/Evidence
+→ Concluding Sentence
+
+โครงสร้างบทความ
+
+Introduction
+→ Body
+→ Conclusion
+
+เป้าหมาย: มองโครงสร้างก่อนอ่านรายละเอียด
+
+Module 24: Text Organization
+
+รูปแบบบทความที่ต้องรู้
+
+Cause and Effect
+because, due to, therefore, as a result
+Compare and Contrast
+similarly, however, whereas, unlike
+Problem and Solution
+problem, issue, solution, solve, improve
+Sequence
+first, next, then, finally
+Classification
+types, categories, divided into
+Description
+
+อธิบายลักษณะ คุณสมบัติ หรือองค์ประกอบ
+
+เป้าหมาย: คาดเดาได้ว่าข้อมูลส่วนต่อไปจะเป็นแบบใด
+
+Phase 5: อ่านโดยไม่แปลทุกคำ
+Module 25: Context Clues
+Definition Clue
+A habitat, the natural home of an animal, can be destroyed.
+
+habitat ถูกอธิบายในประโยค
+
+Example Clue
+Some devices, such as laptops, tablets, and smartphones...
+Contrast Clue
+Unlike his talkative brother, James is quiet.
+Cause-and-Effect Clue
+The road was slippery because of the heavy rain.
+Word-Part Clue
+unhappy = un + happy
+
+เป้าหมาย: เดาความหมายก่อนเปิดพจนานุกรม
+
+Module 26: Chunk Reading
+
+อย่าอ่านแบบนี้
+
+The / new / system / was / designed / to / reduce / errors.
+
+ให้อ่านเป็นกลุ่ม
+
+The new system /
+was designed /
+to reduce errors.
+
+ตัวอย่าง
+
+According to the report /
+the company plans to launch /
+a new product next year.
+
+เป้าหมาย: อ่านและเข้าใจเป็นวลี ไม่แปลคำต่อคำ
+
+Module 27: Skimming
+
+อ่านเร็วเพื่อหา
+
+เรื่องเกี่ยวกับอะไร
+จุดประสงค์ของข้อความ
+ใจความหลัก
+โครงสร้างโดยรวม
+
+วิธีทำ
+
+อ่านชื่อเรื่อง
+อ่านหัวข้อย่อย
+อ่านประโยคแรกของแต่ละย่อหน้า
+มองคำที่ซ้ำ
+อ่านบทสรุป
+
+ไม่ต้องอ่านทุกคำ
+
+เป้าหมาย: สรุปบทความได้ภายในเวลาสั้น
+
+Module 28: Scanning
+
+กวาดสายตาหาข้อมูลเฉพาะ
+
+ตัวอย่างสิ่งที่ค้นหา
+
+ชื่อ
+วันที่
+เวลา
+ราคา
+สถานที่
+หมายเลข
+คำสำคัญ
+เงื่อนไข
+
+ใช้กับ
+
+ตารางเวลา
+เมนู
+อีเมล
+ประกาศ
+แบบฟอร์ม
+ข้อสอบ TOEIC
+
+เป้าหมาย: หา “คำตอบ” โดยไม่จำเป็นต้องอ่านทุกส่วน
+
+Module 29: Intensive Reading
+
+อ่านละเอียดเพื่อศึกษา
+
+ขั้นตอน
+
+1. อ่านรอบแรกเพื่อจับภาพรวม
+2. ขีดเส้นใต้ประธานและกริยา
+3. แบ่งประโยคเป็นส่วน
+4. เดาคำศัพท์จากบริบท
+5. ตรวจคำศัพท์สำคัญ
+6. สรุปแต่ละย่อหน้า
+7. สรุปทั้งบทความ
+
+ใช้กับ
+
+บทเรียน
+บทความยาก
+Documentation
+รายงาน
+ข้อสอบวิเคราะห์
+Module 30: Extensive Reading
+
+อ่านจำนวนมากเพื่อสร้างความคล่อง
+
+เลือกเนื้อหาที่รู้คำศัพท์ประมาณ 95–98%
+
+ตัวอย่าง
+
+Graded readers
+เรื่องสั้น
+ข่าวสำหรับผู้เรียน
+บทสนทนา
+บทความในหัวข้อที่สนใจ
+เอกสารเทคโนโลยีระดับง่าย
+
+กฎสำคัญ
+
+อ่านต่อเนื่อง
+ไม่เปิดพจนานุกรมทุกคำ
+สนใจความหมายรวม
+เลือกเรื่องที่อ่านแล้วสนุก
+
+เป้าหมาย: เพิ่มความเร็ว ความคุ้นเคย และคลังภาษา
+
+Phase 6: Reading Comprehension ขั้นสูง
+Module 31: Fact vs Opinion
+Fact
+
+ตรวจสอบได้
+
+The meeting starts at 9:00 a.m.
+Opinion
+
+เป็นความเห็นหรือการประเมิน
+
+This is the best solution.
+
+คำสัญญาณ Opinion
+
+I think
+probably
+should
+best
+worst
+important
+in my opinion
+
+เป้าหมาย: ไม่เชื่อทุกข้อความว่าเป็นข้อเท็จจริง
+
+Module 32: Inference
+
+คำตอบไม่ได้เขียนตรง ๆ แต่สรุปจากหลักฐาน
+
+Mina took an umbrella and wore waterproof shoes.
+
+อนุมานได้ว่า
+
+It may be raining.
+
+ต้องแยก
+
+Text evidence + logical reasoning
+≠ personal imagination
+
+เป้าหมาย: ตอบคำถาม “What can be inferred?” ได้
+
+Module 33: Author’s Purpose
+
+จุดประสงค์หลักของผู้เขียน
+
+Inform     = ให้ข้อมูล
+Explain    = อธิบาย
+Persuade   = โน้มน้าว
+Describe   = บรรยาย
+Entertain  = ให้ความบันเทิง
+Instruct   = สอนวิธีทำ
+Warn       = เตือน
+Compare    = เปรียบเทียบ
+
+เป้าหมาย: มองให้ออกว่าข้อความถูกเขียนขึ้นเพื่ออะไร
+
+Module 34: Tone และ Attitude
+
+น้ำเสียงของผู้เขียน เช่น
+
+positive
+negative
+neutral
+formal
+informal
+critical
+concerned
+optimistic
+sarcastic
+enthusiastic
+
+ดูจาก
+
+คำคุณศัพท์
+คำวิเศษณ์
+การเปรียบเทียบ
+เครื่องหมายวรรคตอน
+คำที่แสดงอารมณ์
+สิ่งที่ผู้เขียนเลือกเน้น
+
+เป้าหมาย: เข้าใจความรู้สึกและท่าทีที่ซ่อนอยู่
+
+Module 35: Bias และ Reliability
+
+ตรวจสอบ
+
+ใครเขียน?
+เขียนเมื่อไร?
+ใช้หลักฐานอะไร?
+มีแหล่งอ้างอิงหรือไม่?
+พยายามขายหรือโน้มน้าวหรือไม่?
+นำเสนอข้อมูลอีกด้านหรือไม่?
+
+เป้าหมาย: อ่านอย่างมีวิจารณญาณ ไม่ใช่แค่เข้าใจภาษา
+
+Module 36: Paraphrase และ Summary
+Paraphrase
+
+เขียนความหมายเดิมด้วยคำใหม่
+
+Original:
+The company reduced its operating costs.
+
+Paraphrase:
+The organization lowered the amount it spent on operations.
+Summary
+
+เก็บเฉพาะสาระสำคัญ
+
+ใคร/อะไร
+ทำอะไร
+เหตุใด
+ผลเป็นอย่างไร
+
+เป้าหมาย: พิสูจน์ว่าเข้าใจข้อความจริง ไม่ใช่เพียงจำคำศัพท์
+
+Phase 7: อ่านในชีวิตประจำวันและการทำงาน
+Module 37: Daily Reading
+
+ต้องอ่านได้
+
+ป้าย
+เมนู
+ฉลากสินค้า
+ประกาศ
+แชต
+รีวิว
+คำแนะนำ
+ตารางเวลา
+ใบเสร็จ
+แบบฟอร์ม
+
+ทักษะหลัก: Scanning และคำศัพท์ชีวิตประจำวัน
+
+Module 38: Email Reading
+
+โครงสร้างอีเมล
+
+Subject
+Greeting
+Purpose
+Details
+Requested Action
+Deadline
+Closing
+
+ต้องหาให้เจอ
+
+ใครส่ง
+ส่งเรื่องอะไร
+ต้องการให้เราทำอะไร
+ต้องทำภายในเมื่อไร
+มีไฟล์หรือข้อมูลอะไรแนบมา
+
+คำที่พบบ่อย
+
+regarding
+confirm
+request
+attached
+available
+deadline
+reschedule
+approve
+follow up
+Module 39: Workplace Documents
+
+ฝึกอ่าน
+
+Memo
+Notice
+Announcement
+Policy
+Procedure
+Job description
+Meeting agenda
+Report
+Invoice
+Purchase order
+Contract เบื้องต้น
+
+เป้าหมาย: ดึงข้อมูลที่มีผลต่อการทำงานได้ถูกต้อง
+
+Module 40: Technical Reading
+
+สำหรับ Programmer และ AI Engineer
+
+ฝึกอ่าน
+
+Error messages
+API documentation
+README
+Installation guides
+Release notes
+GitHub issues
+Stack traces
+Code comments
+Architecture documents
+
+วิธีอ่าน Documentation
+
+1. อ่านชื่อหัวข้อ
+2. หา Prerequisites
+3. หา Input
+4. หา Output
+5. อ่านตัวอย่าง
+6. อ่านข้อจำกัด
+7. อ่าน Error/Exception
+8. ทดลองใช้งานจริง
+
+ตัวอย่าง
+
+The method throws an exception when the input is null.
+
+ต้องเข้าใจว่า
+
+เงื่อนไข: input เป็น null
+ผลลัพธ์: เกิด exception
+Phase 8: Reading สำหรับ TOEIC
+Module 41: TOEIC Part 5 — Incomplete Sentences
+
+วัด
+
+Vocabulary
+Parts of speech
+Tenses
+Subject–verb agreement
+Prepositions
+Conjunctions
+Pronouns
+Relative clauses
+
+วิธีทำ
+
+ดูช่องว่าง
+→ ดูคำก่อนและหลัง
+→ ระบุชนิดคำที่ต้องการ
+→ ตรวจความหมาย
+→ เลือกคำตอบ
+
+ตัวอย่าง
+
+The manager _____ the report yesterday.
+
+(A) review
+(B) reviews
+(C) reviewed
+(D) reviewing
+
+yesterday → Past Simple → reviewed
+
+Module 42: TOEIC Part 6 — Text Completion
+
+วัดทั้งระดับประโยคและย่อหน้า
+
+ต้องดู
+
+Grammar
+Vocabulary
+Pronoun reference
+Sentence connection
+Paragraph flow
+Missing sentence
+
+วิธีทำ
+
+อ่านทั้งย่อหน้าก่อน
+อย่าตัดสินจากประโยคเดียว
+ดูข้อความก่อนและหลังช่องว่าง
+Module 43: TOEIC Part 7 — Reading Comprehension
+
+ข้อความที่พบบ่อย
+
+Email
+Advertisement
+Notice
+Article
+Form
+Text message
+Schedule
+Invoice
+Multiple documents
+
+คำถามหลัก
+
+Main idea
+Purpose
+Specific detail
+Inference
+Vocabulary in context
+Reference
+What is suggested?
+What will happen next?
+
+กลยุทธ์
+
+1. อ่านคำถามก่อน
+2. ขีดคำสำคัญ
+3. Scan หาตำแหน่งข้อมูล
+4. อ่านรอบบริเวณนั้น
+5. ตรวจตัวเลือกด้วยหลักฐาน
+Module 44: TOEIC Time Management
+
+เวลา Reading ประมาณ 75 นาที สำหรับ 100 ข้อ
+
+แนวแบ่งเวลา
+
+Part 5: 10–15 นาที
+Part 6: 8–12 นาที
+Part 7: 48–55 นาที
+
+เป้าหมายระยะยาว
+
+Part 5: ประมาณ 20–30 วินาทีต่อข้อ
+Part 6: ประมาณ 30–45 วินาทีต่อช่อง
+Part 7: อ่านตามคำถามและหลักฐาน
+
+อย่าติดคำศัพท์หนึ่งคำนานเกินไป
+
+ระบบฝึก Reading ที่ควรใช้ทุกวัน
+สูตรฝึก 60 นาที
+10 นาที — Phonics/Pronunciation
+10 นาที — Vocabulary และ Word Families
+15 นาที — อ่านบทความระดับง่าย
+10 นาที — วิเคราะห์โครงสร้างประโยค
+10 นาที — ตอบ Reading Comprehension
+5 นาที  — สรุปด้วยคำของตัวเอง
+สูตรฝึก 90 นาที
+15 นาที — อ่านออกเสียงและ Shadow Reading
+15 นาที — คำศัพท์จากบริบท
+20 นาที — Intensive Reading
+20 นาที — Extensive Reading
+15 นาที — แบบฝึก TOEIC
+5 นาที  — บันทึกข้อผิดพลาด
+กระบวนการอ่านหนึ่งบทความ
+รอบที่ 1: ดูชื่อเรื่องและภาพรวม
+          ↓
+รอบที่ 2: Skim หา Main Idea
+          ↓
+รอบที่ 3: Scan หาข้อมูลสำคัญ
+          ↓
+รอบที่ 4: วิเคราะห์ประโยคที่ไม่เข้าใจ
+          ↓
+รอบที่ 5: เดาคำศัพท์จาก Context
+          ↓
+รอบที่ 6: ตรวจคำศัพท์ที่สำคัญจริง
+          ↓
+รอบที่ 7: สรุปบทความ 1–3 ประโยค
+          ↓
+รอบที่ 8: อ่านออกเสียงหรือเล่าเรื่อง
+แบบฝึกที่ควรมีในระบบ EnglishMaster
+
+แต่ละบทควรประกอบด้วย
+
+บทอ่านตามระดับ CEFR
+เสียงอ่านเจ้าของภาษา
+คำศัพท์สำคัญ
+การแบ่ง Chunk
+การไฮไลต์ Subject–Verb
+คำแปลแบบเปิด–ปิดได้
+คำถาม Main Idea
+คำถาม Detail
+คำถาม Inference
+คำถาม Vocabulary in Context
+แบบฝึกเรียงลำดับเหตุการณ์
+แบบฝึกสรุป
+แบบฝึกอ่านจับเวลา
+บันทึกคำผิด
+ระบบทบทวน SRS
+การแบ่งระดับเนื้อหา
+Level 0: Pre-Reading
+Alphabet
+Letter sounds
+Short vowels
+CVC words
+Sight words
+
+ผลลัพธ์: อ่านคำพื้นฐานได้
+
+Level 1: Beginner — A1
+ประโยคสั้น
+ข้อความชีวิตประจำวัน
+ป้ายและประกาศ
+บทสนทนาง่าย
+คำศัพท์ 500–1,000 คำ
+
+ผลลัพธ์: อ่านข้อความง่ายและหาข้อมูลตรง ๆ ได้
+
+Level 2: Elementary — A2
+ย่อหน้าสั้น
+อีเมลง่าย
+เรื่องเล่า
+ตารางเวลา
+คำศัพท์ 1,500–2,500 คำ
+
+ผลลัพธ์: เข้าใจใจความหลักและรายละเอียดพื้นฐาน
+
+Level 3: Intermediate — B1
+ข่าวง่าย
+บทความทั่วไป
+อีเมลงาน
+ความคิดเห็น
+คำศัพท์ 3,000–4,000 คำ
+
+ผลลัพธ์: อ่านบทความทั่วไปโดยไม่แปลทุกคำ
+
+Level 4: Upper Intermediate — B2
+รายงาน
+บทความเชิงวิเคราะห์
+Documentation
+TOEIC ระดับกลาง–สูง
+คำศัพท์ 5,000–7,000 คำ
+
+ผลลัพธ์: วิเคราะห์ จุดประสงค์ น้ำเสียง และข้อสรุปได้
+
+Level 5: Advanced — C1
+บทความวิชาการ
+เอกสารเฉพาะทาง
+รายงานซับซ้อน
+บทความแสดงความคิดเห็น
+คำศัพท์ 8,000–10,000+ คำ
+
+ผลลัพธ์: อ่านเร็ว วิเคราะห์ และสรุปเนื้อหาซับซ้อนได้
+
+ลำดับการเรียนที่ถูกต้อง
+1. Alphabet และ Letter Sounds
+2. Short/Long Vowels
+3. Blends และ Digraphs
+4. Vowel Teams
+5. Syllables และ Word Stress
+6. High-Frequency Vocabulary
+7. Word Families
+8. Sentence Structure
+9. Tenses และ Clauses
+10. Chunk Reading
+11. Main Idea และ Details
+12. Context Clues
+13. Skimming และ Scanning
+14. Inference และ Author’s Purpose
+15. Daily/Workplace/Technical Reading
+16. TOEIC Reading
+17. Speed Reading และ Critical Reading
+ระยะเวลาโดยประมาณ
+
+เมื่อเรียนวันละ 1–2 ชั่วโมง
+
+เป้าหมาย	ระยะเวลา
+อ่านคำพื้นฐานออก	1–2 เดือน
+อ่านประโยคง่ายเข้าใจ	2–4 เดือน
+อ่านบทความทั่วไป	4–8 เดือน
+อ่านอีเมลและเอกสารงาน	6–10 เดือน
+อ่าน Documentation ได้ดี	8–12 เดือน
+พร้อมสอบ TOEIC Reading	6–12 เดือน
+อ่านคล่องระดับ B2	12–18 เดือน
+
+ผู้ที่มีพื้นฐานคำศัพท์และ Grammar อยู่แล้วอาจใช้เวลาน้อยกว่านี้
+
+เกณฑ์ว่า “Reading ครบจบแล้ว”
+
+คุณควรทำได้ครบดังนี้
+
+☐ อ่านคำใหม่โดยใช้หลักเสียงได้
+☐ แบ่งพยางค์คำยาวได้
+☐ อ่านเป็นกลุ่มคำ ไม่อ่านทีละคำ
+☐ หา Subject และ Verb ได้
+☐ เข้าใจประโยคซับซ้อน
+☐ เดาคำศัพท์จากบริบทได้
+☐ หา Main Idea และ Supporting Details ได้
+☐ ใช้ Skimming และ Scanning ได้
+☐ แยก Fact กับ Opinion ได้
+☐ ตอบคำถาม Inference ได้
+☐ วิเคราะห์ Purpose, Tone และ Bias ได้
+☐ สรุปข้อความด้วยคำของตนเองได้
+☐ อ่านอีเมลและเอกสารงานได้
+☐ อ่าน Technical Documentation ได้
+☐ อ่านและทำข้อสอบ TOEIC ภายในเวลาได้
+โครงสร้างฉบับสมบูรณ์
+Reading Mastery
+├── 1. Decoding & Phonics
+├── 2. Pronunciation & Word Stress
+├── 3. Vocabulary Recognition
+├── 4. Sentence Comprehension
+├── 5. Paragraph Comprehension
+├── 6. Reading Strategies
+├── 7. Critical Reading
+├── 8. Daily-Life Reading
+├── 9. Workplace Reading
+├── 10. Technical Reading
+├── 11. TOEIC Reading
+└── 12. Reading Fluency & Speed
+
+นี่คือขอบเขต Reading แบบครบจบตั้งแต่ศูนย์จนถึงอ่านงาน อ่านบทความ วิเคราะห์ และสอบ TOEIC ได้ โดยควรเรียนควบคู่กับ Vocabulary และ Grammar แต่การฝึกจริงต้องเน้นอ่านทุกวันมากกว่าท่องกฎเพียงอย่างเดียว

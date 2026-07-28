@@ -1,0 +1,208 @@
+@inject AssessmentService Assessment
+@inject CurrentUserService CurrentUser
+@implements IAsyncDisposable
+
+@if (_loading)
+{
+    <div class="loading"><div class="spinner"></div></div>
+}
+else if (_result is not null)
+{
+    <section class="result-hero surface">
+        <div class="score-ring"><strong>@_result.OverallCefr</strong><small>CEFR</small></div>
+        <div>
+            <div class="eyebrow">ASSESSMENT COMPLETE</div>
+            <h1>เห็นภาพจุดเริ่มต้นแล้ว</h1>
+            <p>ตอบถูก @_result.CorrectAnswers จาก @_result.TotalQuestions ข้อ · TOEIC โดยประมาณ @_result.EstimatedToeicScore</p>
+        </div>
+    </section>
+    <div class="grid-2 mt-4">
+        <section class="surface surface-pad">
+            <h2>คะแนนรายทักษะ</h2>
+            @foreach (var skill in _result.SkillScores.OrderBy(x => x.Key))
+            {
+                <div class="skill-row">
+                    <div><strong>@skill.Key</strong><span>@skill.Value%</span></div>
+                    <div class="progress"><div class="progress-bar" style="@($"width:{skill.Value}%")"></div></div>
+                </div>
+            }
+        </section>
+        <section class="surface surface-pad">
+            <h2>ลำดับที่ควรพัฒนาก่อน</h2>
+            <ol class="priority-list">
+                @foreach (var priority in _result.Priorities)
+                {
+                    <li>@priority</li>
+                }
+            </ol>
+            <a class="btn btn-primary w-100 mt-3" href="@CompletionUrl">@CompletionLabel →</a>
+        </section>
+    </div>
+}
+else if (_questions.Count == 0)
+{
+    <div class="empty-state"><div class="empty-icon">?</div><h2>ยังไม่มีข้อสอบที่เปิดใช้</h2></div>
+}
+else
+{
+    <div class="assessment-top">
+        <div>
+            <span class="tag">@(_current + 1) / @_questions.Count</span>
+            @if (CurrentQuestion.ToeicPart is not null)
+            {
+                <span class="tag gold ms-1">Part @CurrentQuestion.ToeicPart</span>
+            }
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            @if (TimeLimitMinutes > 0)
+            {
+                <span class="timer @(_remainingSeconds <= 300 ? "ending" : "")">@TimerText</span>
+            }
+            <span class="text-secondary small">@_answers.Count ข้อตอบแล้ว</span>
+        </div>
+    </div>
+    <div class="progress mb-3"><div class="progress-bar" style="@($"width:{(_current + 1) * 100 / _questions.Count}%")"></div></div>
+
+    <section class="surface question-focus">
+        <div class="eyebrow">@CurrentQuestion.Skill</div>
+        @if (!string.IsNullOrWhiteSpace(CurrentQuestion.SupportingText))
+        {
+            <blockquote>@CurrentQuestion.SupportingText</blockquote>
+        }
+        <h2>@CurrentQuestion.Prompt</h2>
+        <div class="quiz-options">
+            @for (var optionIndex = 0; optionIndex < CurrentQuestion.Options.Count; optionIndex++)
+            {
+                var capturedIndex = optionIndex;
+                <button type="button"
+                        class="quiz-option @SelectedClass(capturedIndex)"
+                        @onclick="() => Select(capturedIndex)">
+                    <span class="option-letter">@((char)('A' + capturedIndex))</span>
+                    <span>@CurrentQuestion.Options[capturedIndex]</span>
+                </button>
+            }
+        </div>
+    </section>
+
+    <div class="assessment-actions">
+        <button class="btn btn-ghost" disabled="@(_current == 0)" @onclick="Previous">← ย้อนกลับ</button>
+        @if (_current < _questions.Count - 1)
+        {
+            <button class="btn btn-primary" disabled="@(!AllowSkipping && !_answers.ContainsKey(CurrentQuestion.Id))" @onclick="Next">ข้อต่อไป →</button>
+        }
+        else
+        {
+            <button class="btn btn-primary" disabled="@(!AllowSkipping && _answers.Count != _questions.Count || _submitting)" @onclick="SubmitAsync">
+                @(_submitting ? "กำลังวิเคราะห์…" : "ส่งคำตอบและวิเคราะห์ผล")
+            </button>
+        }
+    </div>
+}
+
+<style>
+    .assessment-top,.assessment-actions{display:flex;justify-content:space-between;align-items:center;margin:1rem 0}
+    .question-focus{padding:clamp(1.2rem,4vw,2rem);max-width:850px;margin:0 auto}
+    .question-focus h2{line-height:1.55;font-size:clamp(1.15rem,3vw,1.5rem)}
+    .question-focus blockquote{padding:1rem;border-left:3px solid #e4a93e;background:#fff8e9;color:#4f5d56}
+    .quiz-option{width:100%;background:white;text-align:left}
+    .option-letter{width:1.7rem;height:1.7rem;flex:0 0 1.7rem;border-radius:.5rem;background:#eef2ed;display:grid;place-items:center;font:800 .7rem Manrope}
+    .selected .option-letter{background:#1d766c;color:white}
+    .result-hero{padding:2rem;display:flex;gap:1.5rem;align-items:center;background:#153f3b;color:white}
+    .result-hero p{color:#b9d0ca}.result-hero .eyebrow{color:#efbd5d}
+    .score-ring{width:7rem;height:7rem;flex:0 0 7rem;border:2px solid #efbd5d;border-radius:50%;display:grid;place-content:center;text-align:center}
+    .score-ring strong{font:800 1.8rem Manrope}.score-ring small{color:#b9d0ca}
+    .skill-row{margin:1rem 0}.skill-row>div:first-child{display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:.4rem}
+    .priority-list{padding-left:1.4rem;line-height:2.25}.priority-list li::marker{color:#e4a93e;font-weight:800}
+    .timer{font:800 .78rem Manrope;color:#1d766c;background:#eaf4ef;border-radius:2rem;padding:.35rem .6rem}.timer.ending{color:#a23c33;background:#fff0ed}
+    @@media(max-width:600px){.result-hero{align-items:flex-start;flex-direction:column}.score-ring{width:5.5rem;height:5.5rem;flex-basis:5.5rem}}
+</style>
+
+@code {
+    [Parameter, EditorRequired] public AssessmentKind Kind { get; set; }
+    [Parameter] public string CompletionUrl { get; set; } = "/dashboard";
+    [Parameter] public string CompletionLabel { get; set; } = "เปิด Roadmap ส่วนตัว";
+    [Parameter] public int TimeLimitMinutes { get; set; }
+    [Parameter] public bool AllowSkipping { get; set; }
+
+    private IReadOnlyList<QuestionPrompt> _questions = [];
+    private readonly Dictionary<Guid, int> _answers = [];
+    private AssessmentResult? _result;
+    private int _current;
+    private bool _loading = true;
+    private bool _submitting;
+    private DateTimeOffset _startedAt;
+    private int _remainingSeconds;
+    private CancellationTokenSource? _timerCancellation;
+    private QuestionPrompt CurrentQuestion => _questions[_current];
+    private string TimerText => TimeSpan.FromSeconds(Math.Max(0, _remainingSeconds)).ToString(@"hh\:mm\:ss");
+
+    protected override async Task OnParametersSetAsync()
+    {
+        _questions = await Assessment.GetQuestionsAsync(Kind);
+        _startedAt = DateTimeOffset.UtcNow;
+        _remainingSeconds = Math.Max(0, TimeLimitMinutes * 60);
+        if (TimeLimitMinutes > 0)
+        {
+            StartTimer();
+        }
+        _loading = false;
+    }
+
+    private void Select(int index) => _answers[CurrentQuestion.Id] = index;
+    private void Next() => _current = Math.Min(_current + 1, _questions.Count - 1);
+    private void Previous() => _current = Math.Max(0, _current - 1);
+    private string SelectedClass(int index) =>
+        _answers.TryGetValue(CurrentQuestion.Id, out var selected) && selected == index ? "selected" : "";
+
+    private async Task SubmitAsync()
+    {
+        if (_submitting || _result is not null)
+        {
+            return;
+        }
+        _submitting = true;
+        _timerCancellation?.Cancel();
+        var userId = await CurrentUser.GetRequiredUserIdAsync();
+        var seconds = (int)(DateTimeOffset.UtcNow - _startedAt).TotalSeconds;
+        _result = await Assessment.SubmitAsync(userId, Kind, _answers, seconds);
+        _submitting = false;
+    }
+
+    private void StartTimer()
+    {
+        _timerCancellation?.Cancel();
+        _timerCancellation?.Dispose();
+        _timerCancellation = new CancellationTokenSource();
+        _ = RunTimerAsync(_timerCancellation.Token);
+    }
+
+    private async Task RunTimerAsync(CancellationToken cancellationToken)
+    {
+        try
+        {
+            using var timer = new PeriodicTimer(TimeSpan.FromSeconds(1));
+            while (await timer.WaitForNextTickAsync(cancellationToken))
+            {
+                _remainingSeconds = Math.Max(
+                    0,
+                    TimeLimitMinutes * 60 - (int)(DateTimeOffset.UtcNow - _startedAt).TotalSeconds);
+                await InvokeAsync(StateHasChanged);
+                if (_remainingSeconds == 0)
+                {
+                    await InvokeAsync(SubmitAsync);
+                    return;
+                }
+            }
+        }
+        catch (OperationCanceledException)
+        {
+        }
+    }
+
+    public ValueTask DisposeAsync()
+    {
+        _timerCancellation?.Cancel();
+        _timerCancellation?.Dispose();
+        return ValueTask.CompletedTask;
+    }
+}

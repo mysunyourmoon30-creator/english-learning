@@ -1,0 +1,902 @@
+TOEIC Diagnostic แบบครบจบ
+
+TOEIC Diagnostic คือระบบตรวจระดับก่อนเริ่มเรียน เพื่อให้รู้มากกว่าแค่ “ได้กี่คะแนน” แต่ต้องตอบให้ได้ว่า:
+
+ตอนนี้อยู่ระดับไหน → อ่อนตรงไหน → ช้าตรงไหน → ต้องเรียนอะไรก่อน → ต้องฝึกนานเท่าไร → พร้อมสอบจริงหรือยัง
+
+1. ผลลัพธ์ที่ Diagnostic ต้องวัด
+
+เมื่อทำเสร็จ ผู้เรียนต้องได้รับข้อมูล 8 อย่าง
+
+คะแนน TOEIC โดยประมาณ
+คะแนน Listening และ Reading แยกกัน
+ระดับ CEFR โดยประมาณ
+ความแม่นยำของแต่ละ Part
+จุดอ่อนด้าน Grammar, Vocabulary และ Comprehension
+ปัญหาด้านความเร็วและการบริหารเวลา
+ช่องว่างระหว่างคะแนนปัจจุบันกับคะแนนเป้าหมาย
+แผนเรียนเฉพาะบุคคล
+
+ระบบจึงไม่ควรแสดงเพียง:
+
+คุณได้ 520 คะแนน
+
+แต่ควรอธิบายว่า:
+
+Listening อยู่ระดับกลาง แต่ Reading ช้า โดยเฉพาะ Part 7
+ปัญหาหลักคือ Vocabulary, Paraphrase และการเชื่อมข้อมูลหลายข้อความ
+ควรเรียน Vocabulary → Part 5 → Part 7 ตามลำดับ
+
+2. โครงสร้างข้อสอบ TOEIC จริง
+
+TOEIC Listening and Reading แบบ Linear มีทั้งหมด 200 ข้อ ใช้เวลาทำข้อสอบ 120 นาที
+
+Listening 100 ข้อ — 45 นาที
+Reading 100 ข้อ — 75 นาที
+
+ข้อสอบแบ่งเป็น 7 Parts ตามโครงสร้างต่อไปนี้
+
+Section	Part	เนื้อหา	จำนวน
+Listening	1	Photographs	6
+Listening	2	Question–Response	25
+Listening	3	Conversations	39
+Listening	4	Short Talks	30
+Reading	5	Incomplete Sentences	30
+Reading	6	Text Completion	16
+Reading	7	Reading Comprehension	54
+รวม			200
+
+คะแนนแต่ละ Section อยู่ระหว่าง 5–495 คะแนน รวมเป็น 10–990 คะแนน ไม่มีการหักคะแนนเมื่อตอบผิด และ TOEIC ไม่มีเกณฑ์ผ่าน–ไม่ผ่านตายตัว แต่แต่ละองค์กรเป็นผู้กำหนดคะแนนที่ต้องการเอง
+
+3. Diagnostic ควรมี 3 รูปแบบ
+รูปแบบ A: Quick Diagnostic
+
+เหมาะสำหรับผู้เริ่มต้นหรือผู้ที่ยังไม่พร้อมทำ 2 ชั่วโมง
+
+รายการ	ค่าแนะนำ
+จำนวนข้อ	50 ข้อ
+เวลา	ประมาณ 35 นาที
+Listening	25 ข้อ
+Reading	25 ข้อ
+ผลลัพธ์	ช่วงคะแนนโดยประมาณ
+ความแม่นยำ	ระดับคัดกรอง
+
+โครงสร้างแนะนำ:
+
+Part 1: 2 ข้อ
+Part 2: 6 ข้อ
+Part 3: 9 ข้อ
+Part 4: 8 ข้อ
+Part 5: 8 ข้อ
+Part 6: 4 ข้อ
+Part 7: 13 ข้อ
+
+Quick Diagnostic ใช้เพื่อตอบว่า:
+
+ผู้เรียนควรเริ่มจาก Foundation, Beginner, Intermediate หรือ Advanced
+
+ไม่ควรใช้แทนคะแนน TOEIC จริง
+
+รูปแบบ B: Standard Diagnostic
+
+เหมาะสำหรับวัดระดับทั่วไปในระบบเรียน
+
+รายการ	ค่าแนะนำ
+จำนวนข้อ	100 ข้อ
+เวลา	ประมาณ 60 นาที
+Listening	50 ข้อ
+Reading	50 ข้อ
+ผลลัพธ์	Estimated TOEIC Score
+ความแม่นยำ	ปานกลาง
+
+โครงสร้างแนะนำ:
+
+Part 1: 3 ข้อ
+Part 2: 13 ข้อ
+Part 3: 19 ข้อ
+Part 4: 15 ข้อ
+Part 5: 15 ข้อ
+Part 6: 8 ข้อ
+Part 7: 27 ข้อ
+รูปแบบ C: Full Diagnostic
+
+ใช้โครงสร้างเทียบเท่าข้อสอบจริง
+
+รายการ	ค่า
+จำนวนข้อ	200 ข้อ
+Listening	100 ข้อ / 45 นาที
+Reading	100 ข้อ / 75 นาที
+เวลารวม	120 นาที
+ผลลัพธ์	คะแนนประมาณการที่น่าเชื่อถือที่สุด
+เหมาะสำหรับ	ก่อนเริ่มเรียนและก่อนสอบจริง
+
+Full Diagnostic ควรทำในสภาพใกล้เคียงวันสอบ:
+
+ใช้หูฟังหรือลำโพงที่ชัดเจน
+ไม่หยุดเสียงกลางข้อ
+Listening เปิดเพียงครั้งเดียว
+ไม่ใช้พจนานุกรม
+ไม่แปลด้วย AI
+Reading ห้ามต่อเวลา
+ตอบทุกข้อก่อนหมดเวลา
+
+ETS ระบุว่าไม่มีการหักคะแนนเมื่อตอบผิด จึงควรตอบทุกข้อ แม้ไม่แน่ใจก็ตาม
+
+4. ขั้นตอนก่อนเริ่ม Diagnostic
+Step 1: เก็บข้อมูลเป้าหมาย
+
+ระบบควรถาม:
+
+เคยสอบ TOEIC หรือไม่
+คะแนนล่าสุดเท่าไร
+สอบเมื่อไร
+คะแนนเป้าหมาย
+วันที่ต้องการสอบ
+เรียนได้วันละกี่นาที
+Listening หรือ Reading อ่อนกว่า
+ใช้คะแนนสมัครงานหรือวัดระดับ
+อาชีพหรือสายงานเป้าหมาย
+ต้องการคะแนนขั้นต่ำหรือคะแนนแข่งขัน
+
+ตัวอย่าง:
+
+คะแนนล่าสุด: ไม่เคยสอบ
+คะแนนเป้าหมาย: 750
+กำหนดสอบ: ภายใน 4 เดือน
+เวลาเรียน: วันละ 2 ชั่วโมง
+จุดอ่อนที่รู้ตัว: ฟังไม่ทันและคำศัพท์น้อย
+Step 2: Audio Check
+
+ก่อนเริ่ม Listening ต้องมีแบบทดสอบเสียง:
+
+เล่นเสียงตัวอย่าง
+ปรับระดับเสียง
+ตรวจว่าฟังซ้าย–ขวาครบ
+ให้ผู้เรียนตอบประโยคทดสอบหนึ่งข้อ
+เมื่อตกลงแล้วจึงล็อกระดับเสียงและเริ่มข้อสอบ
+
+หากเสียงมีปัญหา ผล Diagnostic จะไม่น่าเชื่อถือ
+
+Step 3: Environment Check
+
+ให้ผู้เรียนยืนยันว่า:
+
+อยู่ในพื้นที่เงียบ
+มีเวลาอย่างน้อยตามรูปแบบที่เลือก
+ไม่มีคนช่วยตอบ
+ไม่เปิดเว็บไซต์อื่น
+ไม่ใช้เครื่องมือแปลภาษา
+พร้อมทำต่อเนื่องจนจบ
+5. สิ่งที่ต้องวัดในแต่ละ Part
+Part 1: Photographs
+
+วัดความสามารถด้าน:
+
+คนกำลังทำอะไร
+ตำแหน่งของสิ่งของ
+สภาพของสถานที่
+Active และ Passive Voice
+Present Continuous
+Prepositions of place
+คำศัพท์เกี่ยวกับวัตถุและสถานที่
+การแยกคำที่เสียงคล้ายกัน
+
+แท็กข้อสอบตัวอย่าง:
+
+Part: 1
+Skill: Action Recognition
+Grammar: Present Continuous
+Vocabulary: Office Equipment
+Difficulty: Easy
+Distractor: Similar Sound
+Part 2: Question–Response
+
+วัดเรื่อง:
+
+Who / What / When / Where / Why / How
+Yes–No Questions
+Choice Questions
+Requests
+Offers
+Suggestions
+Negative Questions
+Indirect Answers
+Statements ที่ต้องเลือกคำตอบให้เหมาะสม
+การฟังคำแรกของประโยค
+การจับเจตนาของผู้พูด
+
+ข้อผิดพลาดที่พบบ่อย:
+
+ได้ยินคำเดิมแล้วเลือกทันที
+รอคำตอบ Yes หรือ No เท่านั้น
+ไม่เข้าใจคำตอบอ้อม
+สับสน Who กับ Where
+ฟังคำต้นประโยคไม่ทัน
+Part 3: Conversations
+
+วัดเรื่อง:
+
+ใครกำลังพูด
+พูดกันที่ไหน
+จุดประสงค์ของบทสนทนา
+ปัญหาคืออะไร
+ผู้พูดจะทำอะไรต่อ
+รายละเอียด เช่น เวลา ราคา วันและสถานที่
+ข้อสรุปโดยนัย
+การอ่านกราฟ ตาราง หรือภาพประกอบ
+การเชื่อมคำถามกับข้อมูลที่ได้ยิน
+Paraphrase
+Part 4: Short Talks
+
+วัดเรื่อง:
+
+Announcement
+Advertisement
+Voicemail
+News report
+Recorded message
+Tour information
+Meeting speech
+Instructions
+Weather หรือ traffic information
+จุดประสงค์และกลุ่มผู้ฟัง
+รายละเอียดสำคัญ
+สิ่งที่ผู้ฟังต้องทำต่อ
+Part 5: Incomplete Sentences
+
+ต้องแยกวิเคราะห์เป็นหัวข้อย่อย
+
+Grammar
+Parts of Speech
+Subject–Verb Agreement
+Tenses
+Active / Passive Voice
+Pronouns
+Articles
+Determiners
+Adjectives / Adverbs
+Comparatives
+Prepositions
+Conjunctions
+Relative Clauses
+Conditionals
+Gerunds / Infinitives
+Participles
+Modals
+Parallel Structure
+Vocabulary
+Word Families
+Collocations
+Phrasal Verbs
+Similar-meaning Words
+Business Vocabulary
+Workplace Expressions
+Contextual Meaning
+Part 6: Text Completion
+
+วัดความสามารถเพิ่มจาก Part 5 ได้แก่:
+
+ความต่อเนื่องของย่อหน้า
+การเลือกคำเชื่อม
+Reference words
+Pronoun reference
+Tense consistency
+Tone และรูปแบบภาษา
+Sentence insertion
+Main purpose
+ความสัมพันธ์ระหว่างประโยค
+Part 7: Reading Comprehension
+
+ต้องวิเคราะห์แยกเป็น:
+
+ประเภทข้อความ
+Email
+Notice
+Advertisement
+Article
+Memo
+Letter
+Schedule
+Form
+Chat messages
+Invoice
+Online review
+Double passages
+Triple passages
+ประเภทคำถาม
+Main Idea
+Purpose
+Detail
+Inference
+Vocabulary in Context
+Who / Where / When
+What is suggested
+What will happen next
+NOT / EXCEPT
+Sentence insertion
+Cross-text information
+Paraphrase
+Connecting multiple documents
+6. ระบบ Tag ของข้อสอบ
+
+ทุกข้อควรมี Metadata อย่างน้อยดังนี้:
+
+Part
+Section
+QuestionType
+Skill
+SubSkill
+GrammarTopic
+VocabularyTopic
+BusinessContext
+Difficulty
+CEFRLevel
+AudioAccent
+DistractorType
+ExpectedTime
+CorrectAnswer
+Explanation
+LearningModuleId
+
+ตัวอย่าง:
+
+Part: 7
+QuestionType: Inference
+Skill: Reading Comprehension
+SubSkill: Cross-text Connection
+BusinessContext: Shipping
+Difficulty: Hard
+CEFRLevel: B2
+ExpectedTime: 55 seconds
+DistractorType: True but Irrelevant
+
+การมี Tag ทำให้ระบบรู้ว่า “ตอบผิดเพราะอะไร” ไม่ใช่รู้เพียง “ผิดข้อไหน”
+
+7. ข้อมูลที่ต้องเก็บระหว่างทำข้อสอบ
+
+สำหรับทุกข้อ ระบบควรบันทึก:
+
+คำตอบที่เลือก
+ถูกหรือผิด
+เวลาที่ใช้
+เปลี่ยนคำตอบกี่ครั้ง
+เปิดอ่านย้อนหลังหรือไม่
+หมดเวลาหรือไม่
+ตอบแบบมั่นใจแค่ไหน
+เป็นคำตอบเดาหรือไม่
+ข้อสอบถูกเปิดค้างไว้นานผิดปกติหรือไม่
+
+Confidence แนะนำให้เลือก 3 ระดับ:
+
+1 = เดา
+2 = ไม่แน่ใจ
+3 = มั่นใจ
+
+ข้อมูลนี้ช่วยแยกได้ว่า:
+
+ผลลัพธ์	ความหมาย
+ถูกและมั่นใจ	เข้าใจจริง
+ถูกแต่เดา	ยังไม่มั่นคง
+ผิดแต่มั่นใจ	เข้าใจผิด ต้องแก้เร่งด่วน
+ผิดและไม่มั่นใจ	ยังขาดความรู้
+ถูกแต่ช้ามาก	รู้แต่ยังใช้ไม่คล่อง
+ไม่ได้ตอบ	ปัญหาการบริหารเวลา
+8. วิธีคำนวณคะแนน
+คะแนนที่ควรแสดง 3 แบบ
+1. Raw Score
+
+จำนวนข้อที่ตอบถูกจริง
+
+Listening: 62/100
+Reading: 48/100
+Total: 110/200
+2. Accuracy
+Listening Accuracy: 62%
+Reading Accuracy: 48%
+Total Accuracy: 55%
+3. Estimated TOEIC Score
+
+คะแนนประมาณการบนช่วง 10–990
+
+ต้องเขียนชัดเจนว่า:
+
+Estimated Score — ไม่ใช่คะแนน TOEIC อย่างเป็นทางการ
+
+คะแนน TOEIC จริงไม่ได้ใช้สูตร “จำนวนข้อถูก × ค่าคงที่” แบบตรงไปตรงมา แต่จะนำจำนวนข้อถูกไปแปลงเป็นคะแนนมาตรฐานของแต่ละแบบทดสอบ ดังนั้นระบบ Diagnostic ควรใช้ตารางที่ผ่านการ Calibration ไม่ควรนำเปอร์เซ็นต์ไปคูณ 990 โดยตรง
+
+วิธีที่เหมาะกับระบบ
+MVP
+
+ใช้ช่วงคะแนนแทนคะแนนจุดเดียว เช่น:
+
+Estimated TOEIC: 520–590
+Most likely score: 555
+Confidence: Medium
+ระบบสมบูรณ์
+
+ใช้ข้อมูลต่อไปนี้ประกอบ:
+
+จำนวนข้อถูก
+ระดับความยากของข้อ
+คะแนนจากผู้เรียนก่อนหน้า
+เวลาในการตอบ
+ความสม่ำเสมอ
+Item Response Theory หรือโมเดล Calibration
+ผลจาก Full Diagnostic มากกว่าหนึ่งชุด
+9. การเทียบระดับ CEFR
+
+ETS เผยแพร่เกณฑ์ขั้นต่ำโดยประมาณดังนี้ และแนะนำให้พิจารณา Listening กับ Reading แยกกัน เพราะผู้สอบอาจมีระดับสองทักษะไม่เท่ากัน
+
+CEFR	คะแนนรวมขั้นต่ำโดยประมาณ	Listening	Reading
+A1	120	60	60
+A2	225	110	115
+B1	550	275	275
+B2	785	400	385
+C1	945	490	455
+
+เกณฑ์นี้เป็นแนวทางขั้นต่ำ ไม่ควรนำไปใช้เป็นเส้นตัดแบบตายตัวทุกสถานการณ์
+
+10. Learning Band ภายในระบบ
+
+ต่อไปนี้เป็น ระดับสำหรับจัดเส้นทางเรียนภายในระบบ ไม่ใช่ระดับอย่างเป็นทางการของ ETS
+
+คะแนนประมาณ	Learning Band	เส้นทางหลัก
+10–295	Foundation	เสียง ตัวอักษร ประโยคพื้นฐาน Grammar และศัพท์หลัก
+300–445	Elementary TOEIC	Grammar พื้นฐาน + ศัพท์งาน + Part 1–2
+450–595	Pre-Intermediate	Part 2, 5, 6 และการอ่านสั้น
+600–745	Intermediate	Part 3–4, Paraphrase และ Part 7
+750–845	Upper Intermediate	Inference, Speed, Double/Triple Passages
+850–925	Advanced	ความแม่นยำ ศัพท์ยาก และบริหารเวลา
+930–990	Mastery	ลดข้อผิดพลาดเล็กน้อยและรักษาความสม่ำเสมอ
+11. Error Classification
+
+ทุกข้อผิดต้องถูกจัดเข้าหนึ่งหรือหลายสาเหตุ
+
+Knowledge Error
+
+ไม่รู้ Grammar หรือ Vocabulary
+
+ไม่รู้ว่า interested ตามด้วย in
+ไม่รู้ความหมายของ postpone
+แยก adjective กับ adverb ไม่ได้
+Recognition Error
+
+รู้คำศัพท์เมื่ออ่าน แต่ฟังไม่ออก
+
+รู้คำว่า schedule แต่ไม่รู้จักเมื่อได้ยินจริง
+ฟัง linking sound ไม่ออก
+แยก fifteen กับ fifty ไม่ได้
+Comprehension Error
+
+ฟังหรืออ่านคำได้ แต่ไม่เข้าใจใจความ
+
+Paraphrase Error
+
+คำถามใช้คำไม่เหมือนข้อความต้นฉบับ
+
+purchase = buy
+be postponed = take place later
+complimentary = free
+Inference Error
+
+ข้อมูลไม่ได้บอกตรง ๆ แต่ต้องสรุป
+
+Attention Error
+
+อ่านคำว่า NOT, EXCEPT, most likely หรือ suggested ผิด
+
+Strategy Error
+
+เลือกคำตอบเพราะเห็นคำเหมือนในข้อความ
+
+Speed Error
+
+รู้คำตอบแต่ใช้เวลานานเกินไป
+
+Time-management Error
+
+ทำข้อท้ายไม่ทัน
+
+Guessing Error
+
+ตอบถูกจากการเดา ไม่ใช่ความเข้าใจ
+
+12. เกณฑ์วิเคราะห์เวลา
+Reading Time Budget แนะนำ
+Part	เวลาเป้าหมาย
+Part 5	10–12 นาที
+Part 6	8–10 นาที
+Part 7	53–57 นาที
+
+ตัวอย่างการวิเคราะห์:
+
+Part 5 Accuracy: 80%
+Part 5 Time: 19 นาที
+ผลวิเคราะห์: Grammar ใช้ได้ แต่ตอบช้าเกินไป
+คำแนะนำ: ฝึก Word Families และ Pattern Recognition
+
+อีกตัวอย่าง:
+
+Part 7 Accuracy: 45%
+Answered: 38/54
+Unanswered: 16
+ผลวิเคราะห์: ปัญหาหลักคือเวลา ไม่ใช่เฉพาะความเข้าใจ
+13. Diagnostic Report ที่สมบูรณ์
+
+หน้า Result ควรมี 8 ส่วน
+
+ส่วนที่ 1: Score Overview
+Estimated TOEIC: 565
+Listening: 315
+Reading: 250
+CEFR Estimate: B1
+Target Score: 750
+Score Gap: 185
+ส่วนที่ 2: Accuracy by Part
+Part 1: 83%
+Part 2: 56%
+Part 3: 61%
+Part 4: 47%
+Part 5: 70%
+Part 6: 50%
+Part 7: 39%
+ส่วนที่ 3: Strengths
+
+ตัวอย่าง:
+
+เข้าใจภาพและคำศัพท์สถานที่ได้ดี
+Grammar พื้นฐานค่อนข้างแม่น
+จับข้อมูลตัวเลขและเวลาได้
+ตอบคำถามรายละเอียดตรงได้ดี
+ส่วนที่ 4: Weaknesses
+
+ตัวอย่าง:
+
+ฟังคำตอบอ้อมใน Part 2 ไม่ทัน
+เชื่อมข้อมูลจากหลายประโยคไม่ได้
+Vocabulary ด้านการขนส่งและการเงินน้อย
+Part 7 ทำไม่ทัน 15 ข้อ
+ผิดคำถาม Inference มากกว่าคำถาม Detail
+ส่วนที่ 5: Grammar Breakdown
+Parts of Speech: 80%
+Tenses: 65%
+Prepositions: 40%
+Conjunctions: 45%
+Relative Clauses: 35%
+Passive Voice: 70%
+ส่วนที่ 6: Vocabulary Breakdown
+Office: Strong
+Travel: Medium
+Finance: Weak
+Shipping: Weak
+Human Resources: Medium
+Meetings: Strong
+ส่วนที่ 7: Time Analysis
+Average Reading Time: 53 seconds/question
+Target: 45 seconds/question
+Unanswered Questions: 14
+Changed Answers: 19
+Correct After Change: 7
+Incorrect After Change: 12
+ส่วนที่ 8: Priority Plan
+Priority 1: TOEIC Vocabulary 500 คำ
+Priority 2: Part 2 Indirect Responses
+Priority 3: Parts of Speech และ Word Families
+Priority 4: Part 7 Scanning
+Priority 5: Double/Triple Passages
+14. ระบบสร้างแผนเรียนอัตโนมัติ
+
+ใช้หลัก:
+
+Priority Score =
+ความอ่อน × ความสำคัญในข้อสอบ × จำนวนข้อ × ผลกระทบต่อคะแนน
+
+ตัวอย่าง:
+
+ผู้เรียนอ่อน Part 1 แต่ Part 1 มีเพียง 6 ข้อ
+ขณะเดียวกัน Part 7 อ่อนและมี 54 ข้อ
+
+ระบบควรให้ Part 7 มีลำดับความสำคัญมากกว่า
+
+ตัวอย่างแผนจากผล Diagnostic
+ผู้เรียนได้ประมาณ 420
+
+เรียนตามลำดับ:
+
+Sentence Structure
+Parts of Speech
+Tenses และ Subject–Verb Agreement
+TOEIC Vocabulary 1,000 คำ
+Part 1
+Part 2
+Part 5
+Part 6
+Reading ข้อความสั้น
+เริ่ม Part 3–4
+ผู้เรียนได้ประมาณ 650
+
+เรียนตามลำดับ:
+
+Part 2 Indirect Responses
+Part 3–4 Paraphrase
+Part 5 Advanced Grammar
+Part 6 Context
+Part 7 Single Passages
+Double และ Triple Passages
+Speed Training
+Full Mock Test
+ผู้เรียนได้ประมาณ 800
+
+เรียนตามลำดับ:
+
+Inference
+Vocabulary in Context
+Difficult Paraphrases
+Distractor Analysis
+Multi-passage Reading
+Listening while previewing questions
+Time Compression
+Accuracy Training
+Full Mock ทุกสัปดาห์
+15. Progress Diagnostic
+
+ไม่ควรทำ Full Test ทุกวัน
+
+Daily Check
+10–20 ข้อ
+ใช้ตรวจหัวข้อที่เรียนวันนั้น
+ไม่ประเมินคะแนน TOEIC รวม
+Weekly Check
+30–50 ข้อ
+วัดความก้าวหน้าราย Part
+ตรวจ Error Pattern
+Biweekly Diagnostic
+100 ข้อ
+ทุก 2 สัปดาห์
+ใช้ปรับแผนเรียน
+Full Mock
+200 ข้อ
+ทุก 4–6 สัปดาห์
+หรือก่อนสอบจริง 2–3 ครั้ง
+
+คะแนนสอบซ้ำอาจเปลี่ยนเล็กน้อยจากความคลาดเคลื่อนตามธรรมชาติ ETS อธิบายว่าคะแนน Section จากการสอบหลายชุดสามารถแกว่งรอบระดับความสามารถจริงได้ จึงไม่ควรสรุปจากการเพิ่มหรือลดเพียงเล็กน้อยครั้งเดียว
+
+16. หน้าในระบบที่ควรมี
+/toeic/diagnostic
+/toeic/diagnostic/introduction
+/toeic/diagnostic/audio-check
+/toeic/diagnostic/profile
+/toeic/diagnostic/quick
+/toeic/diagnostic/standard
+/toeic/diagnostic/full
+/toeic/diagnostic/test/{attemptId}
+/toeic/diagnostic/result/{attemptId}
+/toeic/diagnostic/skill-analysis/{attemptId}
+/toeic/diagnostic/study-plan/{attemptId}
+/toeic/diagnostic/history
+17. Data Model
+DiagnosticAttempt
+Id
+UserId
+DiagnosticType
+StartedAt
+SubmittedAt
+Status
+TargetScore
+ListeningRawScore
+ReadingRawScore
+EstimatedListeningScore
+EstimatedReadingScore
+EstimatedTotalScore
+EstimatedCefr
+ConfidenceLevel
+TimeSpent
+UnansweredCount
+DiagnosticAnswer
+Id
+AttemptId
+QuestionId
+SelectedChoice
+IsCorrect
+ResponseTimeSeconds
+Confidence
+WasChanged
+WasGuessed
+WasTimedOut
+DiagnosticQuestion
+Id
+Part
+Section
+QuestionType
+Difficulty
+CefrLevel
+GrammarTopic
+VocabularyTopic
+BusinessContext
+ExpectedTimeSeconds
+AudioUrl
+ImageUrl
+PassageId
+CorrectChoice
+Explanation
+IsActive
+Version
+SkillResult
+AttemptId
+SkillCode
+CorrectCount
+QuestionCount
+Accuracy
+AverageTime
+ConfidenceAccuracy
+MasteryLevel
+Priority
+RecommendedModuleId
+18. สถานะการทำข้อสอบ
+NotStarted
+    ↓
+AudioChecking
+    ↓
+InProgress
+    ↓
+Paused — เฉพาะ Quick หรือ Standard
+    ↓
+Submitted
+    ↓
+Scoring
+    ↓
+Analyzed
+    ↓
+StudyPlanGenerated
+    ↓
+Reviewed
+
+สำหรับ Full Diagnostic ไม่ควรอนุญาต Pause หากต้องการจำลองข้อสอบจริง
+
+19. กฎสำคัญของระบบ
+Listening เปิดเสียงเพียงครั้งเดียว
+ห้ามย้อนกลับข้อ Listening ที่เสียงผ่านไปแล้ว
+Reading สามารถย้อนกลับได้ก่อนหมดเวลา
+หมดเวลาแล้วส่งคำตอบอัตโนมัติ
+บันทึกคำตอบทันทีทุกครั้ง
+อินเทอร์เน็ตหลุดต้องกู้คืน Attempt ได้
+ห้ามแสดงเฉลยก่อนส่งข้อสอบ
+แยก Raw Score กับ Estimated Score ชัดเจน
+เก็บ Question Version ทุก Attempt
+ห้ามใช้คำว่า Official TOEIC Score
+Full Diagnostic ต้องมีครบทุก Part
+ระบบต้องสร้างแผนเรียนหลังตรวจเสร็จ
+ข้อสอบควรเป็นโจทย์แต่งใหม่ในรูปแบบ TOEIC-style ไม่ควรคัดลอกข้อสอบจริงที่มีลิขสิทธิ์
+
+ETS มีคู่มือและตัวอย่างข้อสอบอย่างเป็นทางการให้ใช้ทำความเข้าใจรูปแบบข้อสอบ
+
+20. Automated Testing ที่ต้องมี
+Unit Test
+คำนวณ Raw Score ถูกต้อง
+รวม Listening และ Reading ถูกต้อง
+จัด CEFR ถูกต้อง
+จัด Weak Skill ถูกต้อง
+Priority Ranking ถูกต้อง
+หมดเวลาแล้วล็อกข้อสอบ
+ไม่หักคะแนนข้อผิด
+ไม่รวมข้อที่ถูกยกเลิก
+Integration Test
+สร้าง Attempt
+บันทึกคำตอบ
+กู้คืนคำตอบ
+Submit ข้อสอบ
+ประมวลผลคะแนน
+สร้าง Skill Analysis
+สร้าง Study Plan
+Component Test
+Timer
+Audio Player
+Question Navigator
+Answer Choices
+Progress Bar
+Submit Dialog
+Result Chart
+E2E Test
+Login
+→ เลือกคะแนนเป้าหมาย
+→ Audio Check
+→ เริ่ม Diagnostic
+→ ตอบคำถาม
+→ หมดเวลา
+→ Submit
+→ แสดงคะแนน
+→ วิเคราะห์จุดอ่อน
+→ สร้างแผนเรียน
+Security Test
+ผู้ใช้อ่าน Attempt ของคนอื่นไม่ได้
+API ไม่ส่ง CorrectAnswer ก่อน Submit
+Audio URL ป้องกันการเข้าถึงโดยไม่รับอนุญาต
+Submit ซ้ำไม่ทำให้คะแนนผิด
+แก้เวลาใน Browser ไม่สามารถเพิ่มเวลาสอบได้
+21. Definition of Done
+
+TOEIC Diagnostic ถือว่า ครบจบ เมื่อระบบสามารถ:
+
+มี Quick, Standard และ Full Diagnostic
+ครอบคลุม Parts 1–7
+มี Audio Check
+มี Timer แยก Listening และ Reading
+Autosave ทุกคำตอบ
+ป้องกันการเห็นเฉลย
+แสดง Raw Score
+แสดง Estimated Score
+แสดง Listening และ Reading แยกกัน
+แสดง CEFR โดยประมาณ
+วิเคราะห์ Accuracy ราย Part
+วิเคราะห์ Grammar และ Vocabulary
+วิเคราะห์ความเร็ว
+แยกความรู้ไม่พอกับทำไม่ทัน
+ตรวจคำตอบที่เดาถูก
+จัดอันดับจุดอ่อน
+สร้างแผนเรียนส่วนบุคคล
+มี Progress Diagnostic
+เปรียบเทียบผลครั้งก่อน
+มี Automated Tests
+รองรับข้อสอบหลาย Version
+ไม่ใช้คำว่า Official Score กับคะแนนจำลอง
+ภาพรวมระบบ
+ตั้งเป้าหมายคะแนน
+        ↓
+เลือกประเภท Diagnostic
+        ↓
+Audio + Environment Check
+        ↓
+ทำ Listening
+        ↓
+ทำ Reading
+        ↓
+ตรวจคำตอบ
+        ↓
+Raw Score
+        ↓
+Estimated TOEIC Score
+        ↓
+CEFR + Part Analysis
+        ↓
+Grammar / Vocabulary / Speed Analysis
+        ↓
+จัดลำดับจุดอ่อน
+        ↓
+สร้าง Personalized Learning Path
+        ↓
+ฝึกตามแผน
+        ↓
+Progress Diagnostic
+        ↓
+Full Mock
+        ↓
+พร้อมสอบจริง
+สรุปโครงสร้าง Module
+TOEIC Diagnostic
+├── Goal & Profile
+├── Audio Check
+├── Quick Diagnostic
+├── Standard Diagnostic
+├── Full Diagnostic
+├── Listening Analysis
+│   ├── Part 1
+│   ├── Part 2
+│   ├── Part 3
+│   └── Part 4
+├── Reading Analysis
+│   ├── Part 5
+│   ├── Part 6
+│   └── Part 7
+├── Grammar Analysis
+├── Vocabulary Analysis
+├── Time Analysis
+├── Estimated Score
+├── CEFR Mapping
+├── Error Classification
+├── Personalized Study Plan
+├── Progress Check
+└── Full Mock Readiness
+
+นี่คือ TOEIC Diagnostic ที่สามารถใช้เป็น โมดูลแรกของระบบ TOEIC ตั้งแต่ระดับเริ่มต้นจนถึง 990 คะแนน ได้ โดยลำดับที่ถูกต้องคือ:
+
+Diagnostic → Foundation Repair → Part Training → Speed Training → Mock Test → Exam Readiness

@@ -1,0 +1,99 @@
+@page "/review"
+@attribute [Authorize]
+@inject CurrentUserService CurrentUser
+@inject ReviewService Reviews
+@inject IJSRuntime JS
+
+<PageTitle>Vocabulary Review | EnglishMaster AI</PageTitle>
+
+<div class="page-header">
+    <div>
+        <div class="eyebrow">SPACED REPETITION</div>
+        <h1>Personal Review Queue</h1>
+        <p>ทบทวนจากคำในบทที่เรียนจริง เลือกระดับตามความยากที่รู้สึกเพื่อให้ระบบกำหนดรอบถัดไป</p>
+    </div>
+    <span class="tag gold">@_cards.Count คำถึงเวลา</span>
+</div>
+
+@if (_loading)
+{
+    <div class="loading"><div class="spinner"></div></div>
+}
+else if (_cards.Count == 0)
+{
+    <div class="empty-state surface">
+        <div class="empty-icon">✓</div>
+        <h2>ทบทวนครบแล้ว</h2>
+        <p>คำใหม่จะเข้าคิวเมื่อคุณส่ง Lesson Quiz</p>
+        <a class="btn btn-primary" href="/learn">เลือกบทเรียนถัดไป</a>
+    </div>
+}
+else
+{
+    <div class="review-progress"><span>คำที่ @(_index + 1) จาก @_cards.Count</span><div class="progress"><div class="progress-bar" style="@($"width:{(_index + 1) * 100 / _cards.Count}%")"></div></div></div>
+    <section class="flashcard surface">
+        <div class="eyebrow">@Current.VocabularyItem.Lesson.Title</div>
+        <button class="audio-button" title="ฟังคำ" @onclick="SpeakWord">▶</button>
+        <h1>@Current.VocabularyItem.Word</h1>
+        <p class="phonetic">@Current.VocabularyItem.Pronunciation · @Current.VocabularyItem.WordForm</p>
+        @if (_revealed)
+        {
+            <div class="answer">
+                <strong>@Current.VocabularyItem.ThaiMeaning</strong>
+                <span>@Current.VocabularyItem.Collocation</span>
+                <blockquote>@Current.VocabularyItem.ExampleSentence</blockquote>
+            </div>
+            <div class="rating-grid">
+                <button @onclick="() => RateAsync(0)"><strong>Again</strong><small>10 นาที</small></button>
+                <button @onclick="() => RateAsync(1)"><strong>Hard</strong><small>เร็วขึ้น</small></button>
+                <button @onclick="() => RateAsync(2)"><strong>Good</strong><small>ตามรอบ</small></button>
+                <button @onclick="() => RateAsync(3)"><strong>Easy</strong><small>นานขึ้น</small></button>
+            </div>
+        }
+        else
+        {
+            <button class="btn btn-primary mt-4" @onclick="() => _revealed = true">เปิดคำตอบ</button>
+        }
+    </section>
+}
+
+<style>
+    .review-progress{max-width:700px;margin:0 auto 1rem}.review-progress span{display:block;text-align:right;color:#6d7c74;font-size:.75rem;margin-bottom:.4rem}
+    .flashcard{max-width:700px;margin:0 auto;text-align:center;padding:clamp(1.5rem,5vw,3rem);min-height:420px;position:relative}
+    .flashcard h1{font-size:clamp(2.3rem,7vw,4rem);margin:2rem 0 .3rem}.phonetic{color:#6d7c74}
+    .audio-button{position:absolute;right:1.2rem;top:1.2rem;border:0;background:#e7f2ee;color:#1d766c;width:2.5rem;height:2.5rem;border-radius:50%}
+    .answer{display:flex;flex-direction:column;gap:.5rem;margin:1.5rem 0}.answer strong{font-size:1.25rem}.answer span{color:#1d766c;font-weight:700}.answer blockquote{background:#f6f8f5;padding:1rem;border-radius:.8rem}
+    .rating-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem}.rating-grid button{border:1px solid #dfe6dc;background:#fff;border-radius:.7rem;padding:.7rem}.rating-grid button:hover{border-color:#1d766c;background:#edf7f4}.rating-grid strong,.rating-grid small{display:block}.rating-grid small{color:#6d7c74;font-size:.66rem}
+    @@media(max-width:550px){.rating-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+
+@code {
+    private IReadOnlyList<ReviewSchedule> _cards = [];
+    private int _index;
+    private bool _loading = true;
+    private bool _revealed;
+    private string _userId = string.Empty;
+    private ReviewSchedule Current => _cards[_index];
+
+    protected override async Task OnInitializedAsync()
+    {
+        _userId = await CurrentUser.GetRequiredUserIdAsync();
+        _cards = await Reviews.GetDueAsync(_userId);
+        _loading = false;
+    }
+
+    private Task SpeakWord() => JS.InvokeVoidAsync("englishMaster.speak", Current.VocabularyItem.Word, 0.8).AsTask();
+    private async Task RateAsync(int rating)
+    {
+        await Reviews.RateAsync(_userId, Current.Id, rating);
+        _revealed = false;
+        if (_index < _cards.Count - 1)
+        {
+            _index++;
+        }
+        else
+        {
+            _cards = [];
+        }
+    }
+}
