@@ -1,6 +1,6 @@
 # EnglishMaster AI — Production Hardening Roadmap
 
-อัปเดตล่าสุด: 2026-07-28
+อัปเดตล่าสุด: 2026-07-30
 
 ## สถานะสรุป
 
@@ -13,7 +13,7 @@
 | TOEIC production media gate | ระบบเสร็จ; รอ content จริง | release ถูกบล็อกจนมี human audio 100 ชิ้น, Part 1 images 6 ภาพ, license และ expert approval |
 | Scheduled live AI evaluation | พร้อม; รอ secret | fixed dataset, model-as-judge, prompt-injection/hallucination/cost gates |
 | Supply-chain hardening | เสร็จใน repo | Actions pin ด้วย SHA, Trivy, SPDX SBOM, attestations, Cosign, immutable digest |
-| GitHub repository settings | รอการยืนยันก่อนเปลี่ยน settings | ตรวจพบว่า `main` ยังไม่มี classic branch protection และ Dependency graph/Dependabot ยังปิดอยู่ |
+| GitHub repository settings | เปิดได้บางส่วน | Dependabot alerts/security updates เปิดแล้ว; branch protection และ secret scanning ถูกจำกัดโดยแผนของ private repository |
 | Multi-instance foundation | เสร็จ | Redis rate limit, Redis Data Protection keys, Redis readiness, Azure Blob audio store |
 | Real staging drill | ถูกบล็อกด้วยเครื่อง | Docker Desktop เปิดแล้วแต่แจ้ง `Virtualization support not detected`; engine stopped |
 
@@ -154,9 +154,19 @@ forward-compatible migration เป็นค่าเริ่มต้น แ�
 - [x] deployment artifact บันทึก `APP_IMAGE=...@sha256:...`
 - [x] script สำหรับ branch protection, required checks, secret scanning,
   push protection และ Dependabot security updates
-- [ ] authenticate GitHub CLI หรือเชื่อม GitHub connector
-- [ ] รัน `scripts/Configure-GitHubSecurity.ps1`
+- [x] authenticate GitHub CLI ด้วยบัญชี repository admin
+- [x] เปิด Dependabot vulnerability alerts และ security updates
+- [x] ปรับ `Configure-GitHubSecurity.ps1` ให้รายงานและข้ามฟีเจอร์ที่แผนไม่รองรับ
+- [ ] branch protection และ required checks:
+  private repository นี้ต้องใช้ GitHub Pro หรือเปลี่ยนเป็น public
+- [ ] secret scanning และ push protection:
+  ยังไม่พร้อมใช้งานกับแผนของ private repository นี้
 - [ ] ตรวจว่า required checks ปรากฏครบหลัง workflow รันครั้งแรก
+
+วันที่ 2026-07-30 ตรวจผ่าน GitHub API แล้วว่า vulnerability alerts endpoint
+ตอบ `204 No Content` และ automated security fixes มี `enabled: true`.
+ระบบไม่เปลี่ยน repository เป็น public อัตโนมัติ เพราะเป็นการเปิดเผย source code
+และต้องได้รับการอนุมัติอย่างชัดเจนแยกต่างหาก
 
 ## 7. Multi-instance
 
@@ -174,7 +184,8 @@ Production ต้องใช้ Redis ที่เปิด persistence แล�
 ## External prerequisites ก่อน production
 
 - Virtualization/WSL2 หรือ Linux container host ที่ใช้งานได้
-- GitHub authentication และสิทธิ์ admin ของ repository
+- GitHub Pro หรือการอนุมัติให้ repository เป็น public หากต้องการ branch protection
+  และ secret scanning บน GitHub
 - PostgreSQL, Redis และ Azure Blob production services
 - HTTPS ingress, SMTP, OTLP backend และ alert webhook
 - OpenAI/Azure Speech secrets จาก secret manager

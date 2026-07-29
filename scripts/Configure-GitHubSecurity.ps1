@@ -26,6 +26,46 @@ if ($Branch -notmatch '^[A-Za-z0-9._/-]+$') {
     throw "Invalid branch name: $Branch"
 }
 
+$repositoryJson = gh repo view $Repository `
+    --json nameWithOwner,isPrivate,viewerPermission
+if ($LASTEXITCODE -ne 0) {
+    throw "Could not inspect repository access for $Repository."
+}
+$repositoryInfo = $repositoryJson | ConvertFrom-Json
+if ($repositoryInfo.viewerPermission -ne 'ADMIN') {
+    throw "Admin permission is required for $Repository."
+}
+
+function Test-PlanRestriction {
+    param([string]$Message)
+
+    return $Message -match 'Upgrade to GitHub Pro' `
+        -or $Message -match 'make this repository public' `
+        -or $Message -match 'GitHub Advanced Security' `
+        -or $Message -match 'not available for (this|private) repositor'
+}
+
+function Invoke-GhCapture {
+    param([string[]]$Arguments)
+
+    $previousErrorActionPreference = $ErrorActionPreference
+    try {
+        # Windows PowerShell converts native stderr into ErrorRecord objects.
+        # Capture known API failures without allowing ErrorActionPreference=Stop
+        # to terminate before the caller can classify a GitHub plan restriction.
+        $ErrorActionPreference = 'Continue'
+        $output = & gh @Arguments 2>&1 | Out-String
+        $exitCode = $LASTEXITCODE
+        return [pscustomobject]@{
+            ExitCode = $exitCode
+            Output = $output
+        }
+    }
+    finally {
+        $ErrorActionPreference = $previousErrorActionPreference
+    }
+}
+
 $protection = @{
     required_status_checks = @{
         strict = $true
@@ -60,6 +100,8 @@ $security = @{
 $temporaryRoot = Join-Path ([IO.Path]::GetTempPath()) (
     "englishmaster-github-security-$([Guid]::NewGuid().ToString('N'))")
 New-Item -ItemType Directory -Path $temporaryRoot | Out-Null
+$applied = [Collections.Generic.List[string]]::new()
+$skipped = [Collections.Generic.List[string]]::new()
 try {
     $protectionPath = Join-Path $temporaryRoot 'protection.json'
     $securityPath = Join-Path $temporaryRoot 'security.json'
@@ -67,20 +109,48 @@ try {
     [IO.File]::WriteAllText($protectionPath, $protection, $utf8NoBom)
     [IO.File]::WriteAllText($securityPath, $security, $utf8NoBom)
 
-    gh api --method PUT `
-        -H 'Accept: application/vnd.github+json' `
-        "/repos/$Repository/branches/$Branch/protection" `
-        --input $protectionPath | Out-Null
-    if ($LASTEXITCODE -ne 0) {
-        throw 'Could not apply branch protection.'
+    $protectionCall = Invoke-GhCapture -Arguments @(
+        'api',
+        '--method', 'PUT',
+        '-H', 'Accept: application/vnd.github+json',
+        "/repos/$Repository/branches/$Branch/protection",
+        '--input', $protectionPath)
+    if ($protectionCall.ExitCode -eq 0) {
+        $applied.Add('branch protection and required checks')
+    }
+    elseif ($repositoryInfo.isPrivate -and
+        (Test-PlanRestriction $protectionCall.Output)) {
+        $skipped.Add(
+            'branch protection (requires GitHub Pro or a public repository)')
+        Write-Warning (
+            "GitHub plan restriction: branch protection was not applied to " +
+            "private repository $Repository.")
+    }
+    else {
+        throw "Could not apply branch protection. $($protectionCall.Output)"
     }
 
-    gh api --method PATCH `
-        -H 'Accept: application/vnd.github+json' `
-        "/repos/$Repository" `
-        --input $securityPath | Out-Null
-    if ($LASTEXITCODE -ne 0) {
-        throw 'Could not enable secret scanning and push protection.'
+    $secretScanningCall = Invoke-GhCapture -Arguments @(
+        'api',
+        '--method', 'PATCH',
+        '-H', 'Accept: application/vnd.github+json',
+        "/repos/$Repository",
+        '--input', $securityPath)
+    if ($secretScanningCall.ExitCode -eq 0) {
+        $applied.Add('secret scanning and push protection')
+    }
+    elseif ($repositoryInfo.isPrivate -and
+        (Test-PlanRestriction $secretScanningCall.Output)) {
+        $skipped.Add(
+            'secret scanning/push protection (not included for this private repository plan)')
+        Write-Warning (
+            "GitHub plan restriction: secret scanning and push protection " +
+            "were not enabled for $Repository.")
+    }
+    else {
+        throw (
+            "Could not enable secret scanning and push protection. " +
+            $secretScanningCall.Output)
     }
 
     gh api --method PUT `
@@ -89,6 +159,7 @@ try {
     if ($LASTEXITCODE -ne 0) {
         throw 'Could not enable Dependabot vulnerability alerts.'
     }
+    $applied.Add('Dependabot vulnerability alerts')
 
     gh api --method PUT `
         -H 'Accept: application/vnd.github+json' `
@@ -96,6 +167,7 @@ try {
     if ($LASTEXITCODE -ne 0) {
         throw 'Could not enable Dependabot security updates.'
     }
+    $applied.Add('Dependabot security updates')
 }
 finally {
     if (Test-Path -LiteralPath $temporaryRoot) {
@@ -103,6 +175,10 @@ finally {
     }
 }
 
-Write-Output (
-    "Configured branch protection, required checks, secret scanning, push protection, " +
-    "vulnerability alerts, and security updates for $Repository ($Branch).")
+Write-Output "Applied to $Repository ($Branch): $($applied -join ', ')."
+if ($skipped.Count -gt 0) {
+    Write-Warning "Skipped because of GitHub plan limits: $($skipped -join ', ')."
+    Write-Output (
+        'The repository was not made public automatically. Upgrade the account ' +
+        'or explicitly approve public visibility before retrying unavailable features.')
+}
