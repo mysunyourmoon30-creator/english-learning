@@ -11,6 +11,9 @@ on:
 permissions:
   security-events: write
   packages: read
+  # Declaring any permissions block sets every unlisted scope to none, and the
+  # CodeQL action reads the workflow run through the Actions API.
+  actions: read
   contents: read
 
 jobs:
