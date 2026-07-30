@@ -1,0 +1,766 @@
+{
+  "partOne": {
+    "promptTemplate": "Which sentence best describes this simulated scene: {scene}?",
+    "scenes": [
+      {
+        "scene": "a technician checking cables beside a server rack",
+        "correct": "A technician is inspecting some equipment.",
+        "d1": "The servers are being removed.",
+        "d2": "A customer is signing a receipt.",
+        "d3": "The lights have been turned off."
+      },
+      {
+        "scene": "two colleagues reviewing a chart on a screen",
+        "correct": "Two people are looking at a presentation.",
+        "d1": "The office furniture is being delivered.",
+        "d2": "A woman is closing the curtains.",
+        "d3": "The screen is being repaired."
+      },
+      {
+        "scene": "packages arranged near a loading door",
+        "correct": "Several boxes have been placed near an entrance.",
+        "d1": "A vehicle is crossing a bridge.",
+        "d2": "Some shelves are completely empty.",
+        "d3": "Workers are painting a wall."
+      },
+      {
+        "scene": "a chef placing trays on a counter",
+        "correct": "Food is being arranged on a counter.",
+        "d1": "Customers are paying at a machine.",
+        "d2": "The windows overlook a harbor.",
+        "d3": "A menu has fallen on the floor."
+      },
+      {
+        "scene": "passengers waiting under a station sign",
+        "correct": "Several people are waiting at a station.",
+        "d1": "The platform is being washed.",
+        "d2": "A train conductor is selling food.",
+        "d3": "The sign is covered by a curtain."
+      },
+      {
+        "scene": "a landscaper watering plants outside an office",
+        "correct": "A worker is watering some plants.",
+        "d1": "The building is under construction.",
+        "d2": "The path has been blocked by cars.",
+        "d3": "Some tools are displayed in a shop."
+      }
+    ]
+  },
+  "partTwo": {
+    "questionCount": 25,
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "names": [
+      "Chen",
+      "Garcia",
+      "Khan",
+      "Miller",
+      "Sato"
+    ],
+    "templates": [
+      {
+        "prompt": "When will version {number} be released?",
+        "correct": "By {day} afternoon.",
+        "distractors": [
+          "At the main entrance.",
+          "The design team did.",
+          "About the release notes."
+        ]
+      },
+      {
+        "prompt": "Where is interview room {number}?",
+        "correct": "On the {floor}th floor.",
+        "distractors": [
+          "At three o'clock.",
+          "Mr. Khan reserved it.",
+          "Twice a month."
+        ]
+      },
+      {
+        "prompt": "Who approved purchase request {number}?",
+        "correct": "Ms. {name} did.",
+        "distractors": [
+          "In the accounting office.",
+          "By electronic transfer.",
+          "The new equipment."
+        ]
+      },
+      {
+        "prompt": "Why is service desk {number} closed?",
+        "correct": "Because the system is being upgraded.",
+        "distractors": [
+          "For about two hours.",
+          "At the north entrance.",
+          "A technical assistant."
+        ]
+      },
+      {
+        "prompt": "How often is inspection {number} performed?",
+        "correct": "Every {months} months.",
+        "distractors": [
+          "By the maintenance supervisor.",
+          "In the storage area.",
+          "It passed the inspection."
+        ]
+      }
+    ]
+  },
+  "partThree": {
+    "questions": [
+      {
+        "prompt": "Where does this conversation most likely take place?",
+        "answer": "location",
+        "distractors": [
+          "at a sports stadium",
+          "in a classroom",
+          "at a farm"
+        ]
+      },
+      {
+        "prompt": "What are the speakers mainly discussing?",
+        "answer": "purpose",
+        "distractors": [
+          "a staff celebration",
+          "a new advertising slogan",
+          "a weather forecast"
+        ]
+      },
+      {
+        "prompt": "What will probably happen next?",
+        "answer": "nextAction",
+        "distractors": [
+          "the building will be sold",
+          "all appointments will be canceled",
+          "the office will close permanently"
+        ]
+      }
+    ],
+    "conversations": [
+      {
+        "location": "office",
+        "purpose": "rescheduling a project review",
+        "nextAction": "send an updated calendar invitation",
+        "dialogue": "Our client moved the review to Thursday. I will update everyone's calendar after lunch."
+      },
+      {
+        "location": "hotel",
+        "purpose": "a guest's early check-in request",
+        "nextAction": "check whether a room is ready",
+        "dialogue": "The guest will arrive before noon. Let me ask housekeeping whether room 804 is ready."
+      },
+      {
+        "location": "train station",
+        "purpose": "a delayed train and another route",
+        "nextAction": "take the express train from platform six",
+        "dialogue": "The local train is delayed. The express from platform six will leave in ten minutes."
+      },
+      {
+        "location": "restaurant",
+        "purpose": "a catering order for a workshop",
+        "nextAction": "confirm the number of vegetarian meals",
+        "dialogue": "The workshop order is almost complete, but we still need the final number of vegetarian meals."
+      },
+      {
+        "location": "electronics store",
+        "purpose": "replacing a defective monitor",
+        "nextAction": "bring the receipt to customer service",
+        "dialogue": "This monitor flickers after a few minutes. Bring the receipt and we can replace it today."
+      },
+      {
+        "location": "medical clinic",
+        "purpose": "changing an appointment time",
+        "nextAction": "offer an appointment on Wednesday morning",
+        "dialogue": "The doctor will be away Tuesday afternoon. We have an opening Wednesday at nine."
+      },
+      {
+        "location": "warehouse",
+        "purpose": "an incomplete shipment",
+        "nextAction": "contact the supplier about missing items",
+        "dialogue": "The shipment arrived, but two boxes are missing. I will call the supplier now."
+      },
+      {
+        "location": "conference center",
+        "purpose": "equipment for a presentation",
+        "nextAction": "reserve an additional microphone",
+        "dialogue": "The panel has four speakers, so one microphone will not be enough. I will reserve another."
+      },
+      {
+        "location": "bank",
+        "purpose": "documents needed for an application",
+        "nextAction": "email a copy of the missing statement",
+        "dialogue": "Your application needs last month's statement. You can email a scanned copy this afternoon."
+      },
+      {
+        "location": "museum",
+        "purpose": "tickets for a group visit",
+        "nextAction": "apply the group discount",
+        "dialogue": "There will be eighteen visitors. Groups of fifteen or more receive a discount."
+      },
+      {
+        "location": "airport",
+        "purpose": "a departure gate change",
+        "nextAction": "walk to gate C12",
+        "dialogue": "The flight no longer leaves from B4. The new departure gate is C12."
+      },
+      {
+        "location": "printing company",
+        "purpose": "a correction to a brochure",
+        "nextAction": "send a revised proof before printing",
+        "dialogue": "The telephone number on page two is incorrect. I will send a revised proof for approval."
+      },
+      {
+        "location": "software help desk",
+        "purpose": "a user who cannot access an account",
+        "nextAction": "reset the user's access credentials",
+        "dialogue": "The account was locked after several attempts. I can reset the credentials once I verify the employee ID."
+      }
+    ]
+  },
+  "partFour": {
+    "questions": [
+      {
+        "prompt": "What is the main purpose of the talk?",
+        "answer": "purpose",
+        "distractors": [
+          "to conduct a job interview",
+          "to apologize for a billing error",
+          "to request a product refund"
+        ]
+      },
+      {
+        "prompt": "What location is mentioned?",
+        "answer": "location",
+        "distractors": [
+          "the west parking garage",
+          "the executive dining room",
+          "the research warehouse"
+        ]
+      },
+      {
+        "prompt": "What should listeners do {timeReference}?",
+        "answer": "action",
+        "distractors": [
+          "submit a resignation letter",
+          "purchase new furniture",
+          "call an international operator"
+        ]
+      }
+    ],
+    "talks": [
+      {
+        "purpose": "welcome visitors to a factory tour",
+        "location": "the reception area",
+        "action": "put on safety glasses",
+        "timeReference": "at 9:15",
+        "text": "Welcome to Northfield Manufacturing. Before we enter the production area at 9:15, please collect safety glasses at reception."
+      },
+      {
+        "purpose": "announce a library schedule change",
+        "location": "the city library",
+        "action": "return books through the outside slot",
+        "timeReference": "this Saturday",
+        "text": "The city library will close early this Saturday for electrical maintenance. Books may be returned through the outside slot."
+      },
+      {
+        "purpose": "explain a software training session",
+        "location": "the computer lab",
+        "action": "download the practice files",
+        "timeReference": "tomorrow morning",
+        "text": "Tomorrow morning's software class will be in the computer lab. Please download the practice files before arriving."
+      },
+      {
+        "purpose": "promote a seasonal store discount",
+        "location": "the home goods department",
+        "action": "show a membership card",
+        "timeReference": "through Sunday",
+        "text": "Members receive twenty percent off kitchen items in the home goods department through Sunday. Show your membership card at checkout."
+      },
+      {
+        "purpose": "give instructions before a flight",
+        "location": "gate A18",
+        "action": "have identification ready",
+        "timeReference": "in twenty minutes",
+        "text": "Boarding at gate A18 will begin in twenty minutes. Passengers should have identification and boarding passes ready."
+      },
+      {
+        "purpose": "report a road closure",
+        "location": "River Street",
+        "action": "use the Oak Avenue route",
+        "timeReference": "until Friday",
+        "text": "River Street is closed for resurfacing until Friday. Drivers should use Oak Avenue as an alternate route."
+      },
+      {
+        "purpose": "introduce a company wellness event",
+        "location": "the rooftop garden",
+        "action": "register on the employee portal",
+        "timeReference": "next Wednesday",
+        "text": "A wellness workshop will take place in the rooftop garden next Wednesday. Register through the employee portal."
+      },
+      {
+        "purpose": "describe a museum audio guide",
+        "location": "the information desk",
+        "action": "scan the code on the ticket",
+        "timeReference": "during the visit",
+        "text": "Visitors can access the new audio guide during their visit. Scan the code on your ticket or ask at the information desk."
+      },
+      {
+        "purpose": "announce an office network interruption",
+        "location": "the downtown office",
+        "action": "save cloud-based work in advance",
+        "timeReference": "from 7 to 8 p.m.",
+        "text": "The downtown office network will be unavailable from 7 to 8 p.m. Please save cloud-based work before maintenance begins."
+      },
+      {
+        "purpose": "explain a conference lunch arrangement",
+        "location": "exhibition hall B",
+        "action": "present the meal voucher",
+        "timeReference": "at 12:30",
+        "text": "Lunch will be served at 12:30 in exhibition hall B. Present the voucher inside your name badge holder."
+      }
+    ]
+  },
+  "partFive": {
+    "items": [
+      {
+        "prompt": "All travel claims must be ___ by a supervisor.",
+        "correct": "approved",
+        "d1": "approve",
+        "d2": "approval",
+        "d3": "approving"
+      },
+      {
+        "prompt": "The new branch will open ___ the beginning of September.",
+        "correct": "at",
+        "d1": "on",
+        "d2": "by",
+        "d3": "from"
+      },
+      {
+        "prompt": "Ms. Rivera completed the report more ___ than expected.",
+        "correct": "quickly",
+        "d1": "quick",
+        "d2": "quickness",
+        "d3": "quicker"
+      },
+      {
+        "prompt": "Customers may request a refund ___ thirty days of purchase.",
+        "correct": "within",
+        "d1": "among",
+        "d2": "duringly",
+        "d3": "beside"
+      },
+      {
+        "prompt": "The committee has not ___ selected a venue for the conference.",
+        "correct": "yet",
+        "d1": "still",
+        "d2": "ever",
+        "d3": "soon"
+      },
+      {
+        "prompt": "Please notify the receptionist ___ your visitor arrives.",
+        "correct": "when",
+        "d1": "despite",
+        "d2": "unless of",
+        "d3": "during"
+      },
+      {
+        "prompt": "The warranty covers parts but does not include the cost of ___.",
+        "correct": "installation",
+        "d1": "install",
+        "d2": "installed",
+        "d3": "installer"
+      },
+      {
+        "prompt": "Because demand increased, the factory hired ___ technicians.",
+        "correct": "additional",
+        "d1": "addition",
+        "d2": "additionally",
+        "d3": "add"
+      },
+      {
+        "prompt": "The proposal was revised ___ the client's comments.",
+        "correct": "according to",
+        "d1": "except",
+        "d2": "between",
+        "d3": "instead"
+      },
+      {
+        "prompt": "Neither the manager nor the assistants ___ available this morning.",
+        "correct": "were",
+        "d1": "was",
+        "d2": "be",
+        "d3": "has"
+      },
+      {
+        "prompt": "The workshop is designed for employees ___ manage customer accounts.",
+        "correct": "who",
+        "d1": "which",
+        "d2": "whose it",
+        "d3": "whom they"
+      },
+      {
+        "prompt": "We will begin the inspection as soon as the engineer ___.",
+        "correct": "arrives",
+        "d1": "will arrive",
+        "d2": "arrived",
+        "d3": "arriving"
+      },
+      {
+        "prompt": "The updated software is considerably ___ to use.",
+        "correct": "easier",
+        "d1": "easy",
+        "d2": "easiest",
+        "d3": "easily"
+      },
+      {
+        "prompt": "Applicants should submit two references ___ with the form.",
+        "correct": "along",
+        "d1": "near",
+        "d2": "almost",
+        "d3": "across"
+      },
+      {
+        "prompt": "The director thanked the team for ___ flexibility.",
+        "correct": "their",
+        "d1": "they",
+        "d2": "them",
+        "d3": "theirs is"
+      },
+      {
+        "prompt": "Sales increased ___ the marketing campaign was launched.",
+        "correct": "after",
+        "d1": "although of",
+        "d2": "during that",
+        "d3": "beside"
+      },
+      {
+        "prompt": "The package contains ___ materials for new employees.",
+        "correct": "orientation",
+        "d1": "orient",
+        "d2": "oriented",
+        "d3": "orienting"
+      },
+      {
+        "prompt": "Only authorized personnel may enter the laboratory ___ protective clothing.",
+        "correct": "without",
+        "d1": "unless",
+        "d2": "between",
+        "d3": "toward"
+      },
+      {
+        "prompt": "The consultant recommended that the company ___ its backup policy.",
+        "correct": "review",
+        "d1": "reviews",
+        "d2": "reviewed",
+        "d3": "reviewing"
+      },
+      {
+        "prompt": "Our support team is available to answer questions ___ email.",
+        "correct": "by",
+        "d1": "with which",
+        "d2": "at of",
+        "d3": "from that"
+      },
+      {
+        "prompt": "The auditorium can comfortably ___ up to 300 guests.",
+        "correct": "accommodate",
+        "d1": "accommodation",
+        "d2": "accommodating",
+        "d3": "accommodatedly"
+      },
+      {
+        "prompt": "Invoices received after Friday will be processed the ___ week.",
+        "correct": "following",
+        "d1": "follow",
+        "d2": "followed",
+        "d3": "follows"
+      },
+      {
+        "prompt": "The technician explained the procedure clearly and ___.",
+        "correct": "patiently",
+        "d1": "patient",
+        "d2": "patience",
+        "d3": "more patient"
+      },
+      {
+        "prompt": "A confirmation message will be sent ___ your registration is complete.",
+        "correct": "once",
+        "d1": "even though of",
+        "d2": "throughout",
+        "d3": "meanwhile"
+      },
+      {
+        "prompt": "The company plans to ___ a survey of remote employees.",
+        "correct": "conduct",
+        "d1": "conductive",
+        "d2": "conductor",
+        "d3": "conducted"
+      },
+      {
+        "prompt": "This model is similar to the previous one, ___ it uses less energy.",
+        "correct": "but",
+        "d1": "therefore of",
+        "d2": "despite",
+        "d3": "so that it"
+      },
+      {
+        "prompt": "The board will consider ___ the budget at its next meeting.",
+        "correct": "increasing",
+        "d1": "increase",
+        "d2": "increased",
+        "d3": "to increasing"
+      },
+      {
+        "prompt": "Employees are encouraged to share suggestions ___.",
+        "correct": "regularly",
+        "d1": "regular",
+        "d2": "regularity",
+        "d3": "regulate"
+      },
+      {
+        "prompt": "The shipment arrived intact ___ the severe weather.",
+        "correct": "despite",
+        "d1": "because",
+        "d2": "although of",
+        "d3": "during that"
+      },
+      {
+        "prompt": "Mr. Okada is responsible for ensuring that orders are filled ___.",
+        "correct": "accurately",
+        "d1": "accurate",
+        "d2": "accuracy",
+        "d3": "more accuracy"
+      }
+    ]
+  },
+  "partSix": {
+    "questions": [
+      {
+        "prompt": "Choose the best option for blank [1].",
+        "answer": "one"
+      },
+      {
+        "prompt": "Choose the best option for blank [2].",
+        "answer": "two"
+      },
+      {
+        "prompt": "What is the purpose of the text?",
+        "answer": "purpose",
+        "distractors": [
+          "to advertise an overseas vacation",
+          "to reject a job application",
+          "to compare insurance plans"
+        ]
+      },
+      {
+        "prompt": "Which detail is stated?",
+        "answer": "detail",
+        "distractors": [
+          "All employees will receive a cash award.",
+          "The event has been permanently canceled.",
+          "Customers must visit another country."
+        ]
+      }
+    ],
+    "passages": [
+      {
+        "text": "Subject: Building Access\nBeginning next Monday, all employees must [1] their new identification cards at the lobby gate. The change will make entry faster. [2], the security office will offer card testing on Friday. This message explains the new access procedure.",
+        "correctOne": "use",
+        "oneA": "using",
+        "oneB": "used",
+        "oneC": "uses",
+        "correctTwo": "Therefore",
+        "twoA": "However",
+        "twoB": "For example of",
+        "twoC": "Unless",
+        "purpose": "to explain a new access procedure",
+        "detail": "Card testing is available on Friday."
+      },
+      {
+        "text": "Greenway Café is pleased to [1] a new mobile ordering service. Customers can order before leaving the office. [2], orders will be ready at the pickup counter. The service begins on June 8.",
+        "correctOne": "introduce",
+        "oneA": "introduction",
+        "oneB": "introduced",
+        "oneC": "introducing",
+        "correctTwo": "As a result",
+        "twoA": "Nevertheless of",
+        "twoB": "Otherwise that",
+        "twoC": "Although",
+        "purpose": "to announce a mobile ordering service",
+        "detail": "The service starts on June 8."
+      },
+      {
+        "text": "Thank you for registering for the design seminar. Your seat has been [1]. Please arrive fifteen minutes early. [2], bring the attached worksheet to the session. Contact us if you need to cancel.",
+        "correctOne": "confirmed",
+        "oneA": "confirm",
+        "oneB": "confirmation",
+        "oneC": "confirming",
+        "correctTwo": "In addition",
+        "twoA": "Instead of",
+        "twoB": "Despite",
+        "twoC": "Because of it",
+        "purpose": "to confirm seminar registration",
+        "detail": "Participants should arrive early."
+      },
+      {
+        "text": "The west elevator will be unavailable while technicians [1] its control panel. The work is expected to finish by noon. [2], visitors should use the central elevator. We apologize for the inconvenience.",
+        "correctOne": "replace",
+        "oneA": "replacement",
+        "oneB": "replaced",
+        "oneC": "replacing",
+        "correctTwo": "Meanwhile",
+        "twoA": "Therefore of",
+        "twoB": "Although it",
+        "twoC": "Unless",
+        "purpose": "to report elevator maintenance",
+        "detail": "The work should finish by noon."
+      }
+    ]
+  },
+  "partSeven": {
+    "questions": [
+      {
+        "prompt": "Who wrote or issued the text?",
+        "answer": "writer",
+        "distractors": [
+          "a sports coach",
+          "a television producer",
+          "an unnamed tourist"
+        ]
+      },
+      {
+        "prompt": "What is the main purpose of the text?",
+        "answer": "purpose",
+        "distractors": [
+          "to sell a private vehicle",
+          "to describe a historical battle",
+          "to review a film"
+        ]
+      },
+      {
+        "prompt": "What date or time is mentioned?",
+        "answer": "date",
+        "distractors": [
+          "December 31",
+          "every midnight",
+          "three years ago"
+        ]
+      },
+      {
+        "prompt": "What should the reader do?",
+        "answer": "action",
+        "distractors": [
+          "discard every document",
+          "visit without notice",
+          "send cash by mail"
+        ]
+      },
+      {
+        "prompt": "What location or channel is mentioned?",
+        "answer": "location",
+        "distractors": [
+          "the international terminal",
+          "a mountain resort",
+          "the legal archive"
+        ]
+      },
+      {
+        "prompt": "Which detail is stated?",
+        "answer": "detail",
+        "distractors": [
+          "No further information is available.",
+          "The service is free forever.",
+          "The building will be demolished."
+        ]
+      }
+    ],
+    "passages": [
+      {
+        "writer": "Maya Patel",
+        "purpose": "to request volunteers for a community event",
+        "date": "August 14",
+        "action": "reply with an available time",
+        "location": "Lakeside Park",
+        "detail": "Lunch will be provided.",
+        "text": "From: Maya Patel\nOur company will clean walking paths at Lakeside Park on August 14. Volunteers may choose a morning or afternoon shift. Reply with your available time by Friday. Gloves and lunch will be provided."
+      },
+      {
+        "writer": "Harbor Hotel",
+        "purpose": "to confirm a room reservation",
+        "date": "October 3",
+        "action": "present identification at check-in",
+        "location": "Harbor Hotel",
+        "detail": "Breakfast is included.",
+        "text": "Harbor Hotel confirms your room for October 3. Check-in begins at 3 p.m. Please present identification at reception. Breakfast is included with the reservation."
+      },
+      {
+        "writer": "Leon Wu",
+        "purpose": "to report a delivery change",
+        "date": "May 22",
+        "action": "use the side entrance",
+        "location": "the side entrance",
+        "detail": "Delivery will arrive after 2 p.m.",
+        "text": "From: Leon Wu\nThe furniture delivery scheduled for May 22 will arrive after 2 p.m. Because the front lobby is being renovated, direct the drivers to the side entrance."
+      },
+      {
+        "writer": "Brighton Arts Center",
+        "purpose": "to announce a photography workshop",
+        "date": "November 9",
+        "action": "register online",
+        "location": "Studio 4",
+        "detail": "Participants should bring a camera.",
+        "text": "Brighton Arts Center will hold a photography workshop on November 9 in Studio 4. Register online because seating is limited. Participants should bring a camera, but lighting equipment will be supplied."
+      },
+      {
+        "writer": "Nora Jensen",
+        "purpose": "to summarize a customer survey",
+        "date": "June 30",
+        "action": "review the attached charts",
+        "location": "the quarterly meeting",
+        "detail": "Delivery speed received the lowest rating.",
+        "text": "From: Nora Jensen\nThe customer survey closed on June 30. Product quality received the highest score, while delivery speed received the lowest. Please review the attached charts before the quarterly meeting."
+      },
+      {
+        "writer": "Metro Transit",
+        "purpose": "to explain a temporary bus route",
+        "date": "Monday",
+        "action": "board at Pine Street",
+        "location": "Pine Street",
+        "detail": "The change lasts two weeks.",
+        "text": "Metro Transit notice: Beginning Monday, route 18 will not stop at Central Square because of construction. Passengers should board at Pine Street instead. The change is expected to last two weeks."
+      },
+      {
+        "writer": "Alvarez Medical Group",
+        "purpose": "to remind patients about an appointment policy",
+        "date": "January 1",
+        "action": "cancel at least 24 hours in advance",
+        "location": "the patient portal",
+        "detail": "Late cancellations may incur a fee.",
+        "text": "Alvarez Medical Group: Starting January 1, appointments should be canceled at least 24 hours in advance through the patient portal. A fee may apply to late cancellations."
+      },
+      {
+        "writer": "Orion Software",
+        "purpose": "to invite users to a product demonstration",
+        "date": "September 12",
+        "action": "submit questions before the event",
+        "location": "the online event room",
+        "detail": "A recording will be shared afterward.",
+        "text": "Orion Software will demonstrate its reporting tools online on September 12. Registered users may submit questions in advance. A recording will be shared afterward with all registrants."
+      },
+      {
+        "writer": "Elena Rossi",
+        "purpose": "to provide instructions for an expense report",
+        "date": "Friday",
+        "action": "upload receipts as PDF files",
+        "location": "the finance portal",
+        "detail": "Original paper receipts should be kept for 30 days.",
+        "text": "From: Elena Rossi\nPlease complete the travel expense report in the finance portal by Friday. Upload receipts as PDF files and keep the original paper copies for 30 days."
+      }
+    ]
+  }
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "skill": "Pronunciation",
+    "toeicPart": null,
+    "prompt": "Which word begins with the /v/ sound?",
+    "supportingText": null,
+    "options": [
+      "west",
+      "very",
+      "ready",
+      "three"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "The correct answer is “very”.",
+    "difficulty": 1,
+    "sortOrder": 1
+  },
+  {
+    "skill": "Vocabulary",
+    "toeicPart": null,
+    "prompt": "Choose the natural phrase.",
+    "supportingText": null,
+    "options": [
+      "do a request",
+      "create at data",
+      "send a response",
+      "make an error handled"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "The correct answer is “send a response”.",
+    "difficulty": 1,
+    "sortOrder": 2
+  },
+  {
+    "skill": "Grammar",
+    "toeicPart": null,
+    "prompt": "Choose the correct sentence.",
+    "supportingText": null,
+    "options": [
+      "The model generate text.",
+      "The model generates text.",
+      "The model generating text.",
+      "The model is generate text."
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "The correct answer is “The model generates text.”.",
+    "difficulty": 1,
+    "sortOrder": 3
+  },
+  {
+    "skill": "Grammar",
+    "toeicPart": null,
+    "prompt": "We ___ the update yesterday.",
+    "supportingText": null,
+    "options": [
+      "deploy",
+      "have deploy",
+      "deployed",
+      "will deployed"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "The correct answer is “deployed”.",
+    "difficulty": 1,
+    "sortOrder": 4
+  },
+  {
+    "skill": "Reading",
+    "toeicPart": null,
+    "prompt": "The API rejected the request because the token had expired. Why was the request rejected?",
+    "supportingText": "The API rejected the request because the token had expired.",
+    "options": [
+      "The payload was too large.",
+      "The token had expired.",
+      "The API was offline.",
+      "The user closed the page."
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "The correct answer is “The token had expired.”.",
+    "difficulty": 1,
+    "sortOrder": 5
+  },
+  {
+    "skill": "Listening",
+    "toeicPart": null,
+    "prompt": "Imagine you hear: “Please restart the service after you update the configuration.” What should happen first?",
+    "supportingText": null,
+    "options": [
+      "Restart the service.",
+      "Delete the service.",
+      "Update the configuration.",
+      "Send an invoice."
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "The correct answer is “Update the configuration.”.",
+    "difficulty": 1,
+    "sortOrder": 6
+  },
+  {
+    "skill": "Writing",
+    "toeicPart": null,
+    "prompt": "Choose the clearest status update.",
+    "supportingText": null,
+    "options": [
+      "API done maybe.",
+      "I work API yesterday now.",
+      "The API has complete.",
+      "The API implementation is complete, but the integration test is failing."
+    ],
+    "correctOptionIndex": 3,
+    "explanation": "The correct answer is “The API implementation is complete, but the integration test is failing.”.",
+    "difficulty": 1,
+    "sortOrder": 7
+  },
+  {
+    "skill": "Speaking",
+    "toeicPart": null,
+    "prompt": "Which answer best follows Point → Reason → Example?",
+    "supportingText": null,
+    "options": [
+      "RAG.",
+      "I like it. It is good.",
+      "I prefer RAG because it can use external sources. For example, it can retrieve company documents.",
+      "Because example result."
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "The correct answer is “I prefer RAG because it can use external sources. For example, it can retrieve company documents.”.",
+    "difficulty": 1,
+    "sortOrder": 8
+  },
+  {
+    "skill": "Technical English",
+    "toeicPart": null,
+    "prompt": "What does an API endpoint usually receive and return?",
+    "supportingText": null,
+    "options": [
+      "A keyboard and a monitor",
+      "A request and a response",
+      "A branch and a commit only",
+      "A lesson and a teacher"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "The correct answer is “A request and a response”.",
+    "difficulty": 1,
+    "sortOrder": 9
+  },
+  {
+    "skill": "Technical English",
+    "toeicPart": null,
+    "prompt": "Choose the correct passive sentence.",
+    "supportingText": null,
+    "options": [
+      "The input validates.",
+      "The input is validate.",
+      "The input is validated.",
+      "The input validating."
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "The correct answer is “The input is validated.”.",
+    "difficulty": 1,
+    "sortOrder": 10
+  },
+  {
+    "skill": "TOEIC",
+    "toeicPart": 5,
+    "prompt": "The meeting has been ___ until Friday.",
+    "supportingText": null,
+    "options": [
+      "postpone",
+      "postponed",
+      "postponing",
+      "postpones"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "The correct answer is “postponed”.",
+    "difficulty": 1,
+    "sortOrder": 11
+  },
+  {
+    "skill": "TOEIC",
+    "toeicPart": 7,
+    "prompt": "Read: “Employees must submit travel receipts within ten days.” What must employees submit?",
+    "supportingText": "Employees must submit travel receipts within ten days.",
+    "options": [
+      "Travel receipts",
+      "A job application",
+      "A product sample",
+      "Meeting notes"
+    ],
+    "correctOptionIndex": 0,
+    "explanation": "The correct answer is “Travel receipts”.",
+    "difficulty": 1,
+    "sortOrder": 12
+  }
+]

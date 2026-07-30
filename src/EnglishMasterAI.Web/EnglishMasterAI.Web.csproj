@@ -9,6 +9,10 @@
 
   <ItemGroup>
     <None Update="Data\app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    <Content Include="..\..\content\curriculum\*.json"
+             Link="content\curriculum\%(Filename)%(Extension)"
+             CopyToOutputDirectory="PreserveNewest"
+             ExcludeFromSingleFile="true" />
     <Content Include="..\..\content\toeic-media\manifest.json"
              Link="content\toeic-media\manifest.json"
              CopyToOutputDirectory="PreserveNewest"

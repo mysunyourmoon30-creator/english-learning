@@ -1,0 +1,114 @@
+[
+  {
+    "skill": "TOEIC Listening",
+    "toeicPart": 1,
+    "prompt": "Part 1 — Which sentence best describes the scene: a woman is typing at a desk?",
+    "supportingText": null,
+    "options": [
+      "The chairs are being stacked.",
+      "A woman is working at a computer.",
+      "The office is being painted.",
+      "A package is under the table."
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "The correct answer is “A woman is working at a computer.”.",
+    "difficulty": 1,
+    "sortOrder": 1
+  },
+  {
+    "skill": "TOEIC Listening",
+    "toeicPart": 2,
+    "prompt": "Part 2 — When will the report be ready?",
+    "supportingText": null,
+    "options": [
+      "In the meeting room.",
+      "Yes, I read it.",
+      "By Thursday afternoon.",
+      "The blue folder."
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "The correct answer is “By Thursday afternoon.”.",
+    "difficulty": 1,
+    "sortOrder": 2
+  },
+  {
+    "skill": "TOEIC Listening",
+    "toeicPart": 3,
+    "prompt": "Part 3 — “The 10 a.m. train is delayed, so let’s take the 10:30 express.” What will the speakers probably do?",
+    "supportingText": null,
+    "options": [
+      "Cancel the trip.",
+      "Take a later express train.",
+      "Drive to the office.",
+      "Wait for a bus."
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "The correct answer is “Take a later express train.”.",
+    "difficulty": 1,
+    "sortOrder": 3
+  },
+  {
+    "skill": "TOEIC Listening",
+    "toeicPart": 4,
+    "prompt": "Part 4 — A speaker announces that the museum closes early for maintenance. Why will it close early?",
+    "supportingText": null,
+    "options": [
+      "For a private tour",
+      "Because of bad weather",
+      "For staff training",
+      "For maintenance"
+    ],
+    "correctOptionIndex": 3,
+    "explanation": "The correct answer is “For maintenance”.",
+    "difficulty": 1,
+    "sortOrder": 4
+  },
+  {
+    "skill": "TOEIC Reading",
+    "toeicPart": 5,
+    "prompt": "Part 5 — All expense forms must be ___ by a manager.",
+    "supportingText": null,
+    "options": [
+      "approved",
+      "approving",
+      "approval",
+      "approves"
+    ],
+    "correctOptionIndex": 0,
+    "explanation": "The correct answer is “approved”.",
+    "difficulty": 1,
+    "sortOrder": 5
+  },
+  {
+    "skill": "TOEIC Reading",
+    "toeicPart": 6,
+    "prompt": "Part 6 — The new software is easier to use. ___, it requires less training time.",
+    "supportingText": null,
+    "options": [
+      "However",
+      "Otherwise",
+      "Therefore",
+      "Although"
+    ],
+    "correctOptionIndex": 2,
+    "explanation": "The correct answer is “Therefore”.",
+    "difficulty": 1,
+    "sortOrder": 6
+  },
+  {
+    "skill": "TOEIC Reading",
+    "toeicPart": 7,
+    "prompt": "Part 7 — Notice: The cafeteria will be closed on Monday for equipment inspection. When will it be closed?",
+    "supportingText": "The cafeteria will be closed on Monday for equipment inspection.",
+    "options": [
+      "On Friday",
+      "On Monday",
+      "Every morning",
+      "For one month"
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "The correct answer is “On Monday”.",
+    "difficulty": 1,
+    "sortOrder": 7
+  }
+]
