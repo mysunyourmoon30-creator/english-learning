@@ -40,7 +40,7 @@ public sealed class LearnerJourneyTests
 
             await page.GotoAsync("/onboarding");
             await page.Locator("#display-name").FillAsync("ผู้เรียน E2E");
-            await page.Locator("form button[type='submit']").First.ClickAsync();
+            await page.Locator("main form button[type='submit']").First.ClickAsync();
             await page.WaitForURLAsync(
                 url => url.Contains("/placement", StringComparison.OrdinalIgnoreCase));
 
