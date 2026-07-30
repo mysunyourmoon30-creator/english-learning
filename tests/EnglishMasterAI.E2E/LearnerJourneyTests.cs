@@ -55,13 +55,17 @@ public sealed class LearnerJourneyTests
                 new() { Timeout = 30_000 });
 
             await page.GotoAsync("/practice/writing");
-            await page.Locator("#writing").FillAsync(
+            var writingInput = page.Locator("#writing");
+            var writingSubmit = page.Locator("section.surface button.btn-primary");
+            await writingInput.FillAsync(
                 "The API implementation is complete. However, the integration test is failing because the seed data is incomplete. I will update the data and rerun the tests.");
-            // The textarea uses @bind, so the model only updates on change, and
-            // change only fires on blur. Without this the submit button stays
-            // disabled on a zero word count and can never be clicked to blur it.
-            await page.Locator("#writing").BlurAsync();
-            await page.Locator("section.surface button.btn-primary").ClickAsync();
+            // The textarea binds on change, and the interactive circuit attaches
+            // its handler only once the websocket is up, which happens after the
+            // page renders. A single change event can land in that gap and be
+            // lost for good, leaving the submit button disabled on a zero word
+            // count, so re-fire it until the binding actually commits.
+            await RetryUntilEnabledAsync(writingInput, writingSubmit);
+            await writingSubmit.ClickAsync();
             await Assertions.Expect(page.Locator(".feedback-score")).ToBeVisibleAsync(
                 new() { Timeout = 30_000 });
 
@@ -147,6 +151,23 @@ public sealed class LearnerJourneyTests
             Path = Path.Combine(artifacts, "mobile-register.png"),
             FullPage = true
         });
+    }
+
+    private static async Task RetryUntilEnabledAsync(
+        ILocator boundInput,
+        ILocator dependentButton,
+        int timeoutSeconds = 30)
+    {
+        var deadline = DateTimeOffset.UtcNow.AddSeconds(timeoutSeconds);
+        while (DateTimeOffset.UtcNow < deadline
+            && await dependentButton.IsDisabledAsync())
+        {
+            await boundInput.DispatchEventAsync("change");
+            await boundInput.Page.WaitForTimeoutAsync(500);
+        }
+
+        await Assertions.Expect(dependentButton).ToBeEnabledAsync(
+            new() { Timeout = 5_000 });
     }
 
     private static async Task RegisterAsync(IPage page)
