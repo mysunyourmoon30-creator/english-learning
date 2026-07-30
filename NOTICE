@@ -1,0 +1,54 @@
+EnglishMaster AI
+Copyright 2026 chotikku
+
+================================================================================
+What the Apache License covers
+================================================================================
+
+The Apache License 2.0 in LICENSE covers the software in this repository:
+application source code, build and deployment configuration, database
+migrations, tests, and scripts.
+
+================================================================================
+What it does not cover
+================================================================================
+
+All rights are reserved in the English-language curriculum and assessment
+material authored for this project. That material is not offered under the
+Apache License and may not be copied, redistributed, or used to produce a
+derivative course without written permission. It includes, but is not limited
+to:
+
+  roadmap/                    curriculum and syllabus source documents
+  content/toeic-media/        TOEIC media manifest and cue sheets
+  evals/                      golden evaluation datasets
+  src/EnglishMasterAI.Web/Data/SeedData.cs
+                              seeded modules, lessons, vocabulary, and
+                              assessment items
+
+The reservation follows the material rather than the file extension. Lesson
+text, question banks, and answer keys stay reserved wherever they appear,
+including where they are embedded in .cs or .razor source. Anyone reusing this
+project under the Apache License is expected to supply their own curriculum.
+
+================================================================================
+Third-party components redistributed here
+================================================================================
+
+IBM Plex Sans Thai
+  SIL Open Font License 1.1
+  Licence text: src/EnglishMasterAI.Web/wwwroot/fonts/OFL-IBMPlexSansThai.txt
+
+Manrope
+  SIL Open Font License 1.1
+  Licence text: src/EnglishMasterAI.Web/wwwroot/fonts/OFL-Manrope.txt
+
+Bootstrap
+  MIT License
+  Redistributed under src/EnglishMasterAI.Web/wwwroot/lib/bootstrap/ without
+  its licence text. MIT requires the copyright and permission notice to travel
+  with redistributed copies, so that file still needs to be added.
+
+NuGet dependencies are not redistributed in this repository. They are declared
+in the project files, resolved at restore time, and remain under their own
+licences.
