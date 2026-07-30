@@ -4,6 +4,8 @@ using EnglishMasterAI.Web.Data;
 using EnglishMasterAI.Web.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.FileProviders;
@@ -14,6 +16,60 @@ namespace EnglishMasterAI.Tests;
 
 public sealed class InfrastructureHardeningTests
 {
+    [Fact]
+    public void Identity_validation_errors_are_localized_for_thai_account_pages()
+    {
+        var describer = new ThaiIdentityErrorDescriber();
+
+        Assert.Contains("อีเมล", describer.DuplicateEmail("learner@example.test").Description);
+        Assert.Contains("12", describer.PasswordTooShort(12).Description);
+        Assert.Contains("ตัวเลข", describer.PasswordRequiresDigit().Description);
+    }
+
+    [Fact]
+    public async Task Forwarded_headers_are_applied_only_from_a_trusted_proxy()
+    {
+        var options = new ForwardedHeadersOptions
+        {
+            ForwardedHeaders =
+                ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
+            ForwardLimit = 1
+        };
+        options.KnownProxies.Clear();
+        options.KnownIPNetworks.Clear();
+        options.KnownProxies.Add(System.Net.IPAddress.Parse("10.0.0.10"));
+
+        var trusted = new DefaultHttpContext();
+        trusted.Connection.RemoteIpAddress = System.Net.IPAddress.Parse("10.0.0.10");
+        trusted.Request.Scheme = "http";
+        trusted.Request.Headers["X-Forwarded-For"] = "203.0.113.25";
+        trusted.Request.Headers["X-Forwarded-Proto"] = "https";
+        var middleware = new ForwardedHeadersMiddleware(
+            _ => Task.CompletedTask,
+            NullLoggerFactory.Instance,
+            Options.Create(options));
+
+        await middleware.Invoke(trusted);
+
+        Assert.Equal("https", trusted.Request.Scheme);
+        Assert.Equal(
+            System.Net.IPAddress.Parse("203.0.113.25"),
+            trusted.Connection.RemoteIpAddress);
+
+        var untrusted = new DefaultHttpContext();
+        untrusted.Connection.RemoteIpAddress = System.Net.IPAddress.Parse("10.0.0.11");
+        untrusted.Request.Scheme = "http";
+        untrusted.Request.Headers["X-Forwarded-For"] = "198.51.100.4";
+        untrusted.Request.Headers["X-Forwarded-Proto"] = "https";
+
+        await middleware.Invoke(untrusted);
+
+        Assert.Equal("http", untrusted.Request.Scheme);
+        Assert.Equal(
+            System.Net.IPAddress.Parse("10.0.0.11"),
+            untrusted.Connection.RemoteIpAddress);
+    }
+
     [Fact]
     public async Task Operational_alert_posts_once_during_cooldown()
     {
@@ -191,9 +247,31 @@ public sealed class InfrastructureHardeningTests
         Assert.Contains("AudioBlobStorage", exception.Message);
     }
 
+    [Fact]
+    public void Startup_validator_requires_live_ai_secret_and_pricing()
+    {
+        var configuration = Configuration(new Dictionary<string, string?>
+        {
+            ["AllowedHosts"] = "english.example.test",
+            ["Database:Provider"] = "PostgreSql",
+            ["Database:ApplyMigrationsOnStartup"] = "false",
+            ["Database:SeedOnStartup"] = "false",
+            ["SeedAdmin:Enabled"] = "false"
+        });
+        var validator = Validator(
+            configuration,
+            ai: new AiOptions { Enabled = true });
+
+        var exception = Assert.Throws<InvalidOperationException>(
+            () => validator.Validate());
+
+        Assert.Contains("AI:ApiKey", exception.Message);
+    }
+
     private static StartupSecurityValidator Validator(
         IConfiguration configuration,
-        AudioStorageOptions? audioStorage = null)
+        AudioStorageOptions? audioStorage = null,
+        AiOptions? ai = null)
     {
         var database = configuration
             .GetSection(DatabaseOptions.SectionName)
@@ -209,6 +287,34 @@ public sealed class InfrastructureHardeningTests
             {
                 RequireApprovedHumanAudio = true,
                 AllowAiGeneratedFallback = false
+            }),
+            Options.Create(new ProxyOptions
+            {
+                Enabled = true,
+                KnownProxies = ["127.0.0.1"]
+            }),
+            Options.Create(ai ?? new AiOptions
+            {
+                Enabled = true,
+                ApiKey = "test-key",
+                InputTokenUsdPerMillion = 1
+            }),
+            Options.Create(new PronunciationOptions()),
+            Options.Create(new ObservabilityOptions
+            {
+                OtlpEndpoint = "http://otel-collector:4317"
+            }),
+            Options.Create(new AlertingOptions
+            {
+                Enabled = true,
+                WebhookUrl = "https://alerts.example.test/operations"
+            }),
+            Options.Create(new LegalOptions
+            {
+                OperatorName = "EnglishMaster AI Test",
+                PrivacyContactEmail = "privacy@example.test",
+                BackupRetentionDays = 30,
+                TelemetryRetentionDays = 30
             }),
             NullLogger<StartupSecurityValidator>.Instance);
     }

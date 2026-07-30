@@ -1,8 +1,10 @@
+using System.Net;
 using System.Text.Json;
 using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.RateLimiting;
@@ -57,6 +59,47 @@ builder.Services.Configure<MultiInstanceOptions>(
     builder.Configuration.GetSection(MultiInstanceOptions.SectionName));
 builder.Services.Configure<ToeicMediaOptions>(
     builder.Configuration.GetSection(ToeicMediaOptions.SectionName));
+builder.Services.Configure<ProxyOptions>(
+    builder.Configuration.GetSection(ProxyOptions.SectionName));
+builder.Services.Configure<LegalOptions>(
+    builder.Configuration.GetSection(LegalOptions.SectionName));
+
+var proxyOptions = builder.Configuration
+    .GetSection(ProxyOptions.SectionName)
+    .Get<ProxyOptions>() ?? new ProxyOptions();
+if (proxyOptions.Enabled)
+{
+    builder.Services.Configure<ForwardedHeadersOptions>(options =>
+    {
+        options.ForwardedHeaders =
+            ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+        options.ForwardLimit = Math.Clamp(proxyOptions.ForwardLimit, 1, 5);
+        options.KnownProxies.Clear();
+        options.KnownIPNetworks.Clear();
+
+        foreach (var value in proxyOptions.KnownProxies)
+        {
+            if (!IPAddress.TryParse(value, out var address))
+            {
+                throw new InvalidOperationException(
+                    $"Proxy:KnownProxies contains invalid IP address '{value}'.");
+            }
+
+            options.KnownProxies.Add(address);
+        }
+
+        foreach (var value in proxyOptions.KnownNetworks)
+        {
+            if (!System.Net.IPNetwork.TryParse(value, out var network))
+            {
+                throw new InvalidOperationException(
+                    $"Proxy:KnownNetworks contains invalid CIDR network '{value}'.");
+            }
+
+            options.KnownIPNetworks.Add(network);
+        }
+    });
+}
 
 // Add services to the container.
 var multiInstanceOptions = builder.Configuration
@@ -158,6 +201,7 @@ builder.Services.AddIdentityCore<ApplicationUser>(options =>
         options.Lockout.MaxFailedAccessAttempts = 5;
         options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
     })
+    .AddErrorDescriber<ThaiIdentityErrorDescriber>()
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddSignInManager()
@@ -336,6 +380,11 @@ var app = builder.Build();
 app.Services.GetRequiredService<StartupSecurityValidator>().Validate(runMigrationJob);
 
 // Configure the HTTP request pipeline.
+if (proxyOptions.Enabled)
+{
+    app.UseForwardedHeaders();
+}
+
 if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();

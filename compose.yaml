@@ -69,6 +69,12 @@ services:
       ConnectionStrings__Redis: redis:6379,abortConnect=false
       ConnectionStrings__AudioBlobStorage: ${AUDIO_BLOB_CONNECTION_STRING:-}
       Security__RequireConfirmedAccount: "false"
+      Proxy__Enabled: ${PROXY_ENABLED:-false}
+      Proxy__KnownNetworks__0: ${TRUSTED_PROXY_NETWORK:-}
+      Legal__OperatorName: ${LEGAL_OPERATOR_NAME:-}
+      Legal__PrivacyContactEmail: ${PRIVACY_CONTACT_EMAIL:-}
+      Legal__BackupRetentionDays: ${BACKUP_RETENTION_DAYS:-30}
+      Legal__TelemetryRetentionDays: ${TELEMETRY_RETENTION_DAYS:-30}
       MultiInstance__Enabled: "true"
       MultiInstance__UseDistributedRateLimiting: "true"
       MultiInstance__UseSharedDataProtectionKeys: "true"
@@ -78,6 +84,10 @@ services:
       AudioStorage__CdnBaseUrl: ${AUDIO_CDN_BASE_URL:-}
       AI__ApiKey: ${OPENAI_API_KEY:-}
       AI__ReferenceAudioCachePath: /var/lib/englishmaster/audio-cache
+      AI__InputTokenUsdPerMillion: ${AI_INPUT_TOKEN_USD_PER_MILLION:-0}
+      AI__OutputTokenUsdPerMillion: ${AI_OUTPUT_TOKEN_USD_PER_MILLION:-0}
+      AI__SpeechUsdPerMillionCharacters: ${AI_SPEECH_USD_PER_MILLION_CHARACTERS:-0}
+      AI__TranscriptionUsdPerMinute: ${AI_TRANSCRIPTION_USD_PER_MINUTE:-0}
       Pronunciation__Enabled: ${PRONUNCIATION_ENABLED:-false}
       Pronunciation__AzureSpeechKey: ${AZURE_SPEECH_KEY:-}
       Pronunciation__AzureSpeechRegion: ${AZURE_SPEECH_REGION:-}

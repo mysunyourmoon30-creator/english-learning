@@ -15,16 +15,22 @@
 @inject NavigationManager NavigationManager
 @inject IdentityRedirectManager RedirectManager
 
-<PageTitle>Register</PageTitle>
+<PageTitle>สมัครสมาชิก | EnglishMaster AI</PageTitle>
 
-<h1>Register</h1>
+<div class="page-header">
+    <div>
+        <div class="eyebrow">START YOUR PATH</div>
+        <h1>สร้างบัญชีผู้เรียน</h1>
+        <p>สมัครฟรีเพื่อบันทึกผลประเมิน แผนการเรียน และความคืบหน้าของคุณ</p>
+    </div>
+</div>
 
 <div class="row">
     <div class="col-lg-6">
         <StatusMessage Message="@Message" />
         <EditForm Model="Input" asp-route-returnUrl="@ReturnUrl" method="post" OnValidSubmit="RegisterUser" FormName="register">
             <DataAnnotationsValidator />
-            <h2>Create a new account.</h2>
+            <h2>ข้อมูลสำหรับเข้าสู่ระบบ</h2>
             <hr />
             <ValidationSummary class="text-danger" role="alert" />
             <div class="form-floating mb-3">
@@ -34,20 +40,30 @@
             </div>
             <div class="form-floating mb-3">
                 <InputText type="password" @bind-Value="Input.Password" id="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label for="Input.Password">Password</label>
+                <label for="Input.Password">รหัสผ่าน</label>
                 <ValidationMessage For="() => Input.Password" class="text-danger" />
             </div>
             <div class="form-floating mb-3">
                 <InputText type="password" @bind-Value="Input.ConfirmPassword" id="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label for="Input.ConfirmPassword">Confirm Password</label>
+                <label for="Input.ConfirmPassword">ยืนยันรหัสผ่าน</label>
                 <ValidationMessage For="() => Input.ConfirmPassword" class="text-danger" />
             </div>
-            <button type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+            <div class="form-check mb-3">
+                <InputCheckbox @bind-Value="Input.AcceptLegal"
+                               id="Input.AcceptLegal"
+                               class="form-check-input" />
+                <label for="Input.AcceptLegal" class="form-check-label">
+                    ฉันยอมรับ <a href="/terms" target="_blank">ข้อกำหนดการใช้งาน</a>
+                    และรับทราบ <a href="/privacy" target="_blank">นโยบายความเป็นส่วนตัว</a>
+                </label>
+                <ValidationMessage For="() => Input.AcceptLegal" class="text-danger d-block" />
+            </div>
+            <button type="submit" class="w-100 btn btn-lg btn-primary">สมัครสมาชิก</button>
         </EditForm>
     </div>
     <div class="col-lg-4 col-lg-offset-2">
         <section>
-            <h3>Use another service to register.</h3>
+            <h3>สมัครด้วยบริการอื่น</h3>
             <hr />
             <ExternalLoginPicker />
         </section>
@@ -65,11 +81,16 @@
     [SupplyParameterFromQuery]
     private string? ReturnUrl { get; set; }
 
-    private string? Message => identityErrors is null ? null : $"Error: {string.Join(", ", identityErrors.Select(error => error.Description))}";
+    private string? Message => identityErrors is null ? null : $"ข้อผิดพลาด: {string.Join(", ", identityErrors.Select(error => error.Description))}";
 
     public async Task RegisterUser(EditContext editContext)
     {
         var user = CreateUser();
+        var acceptedAt = DateTimeOffset.UtcNow;
+        user.TermsAcceptedAt = acceptedAt;
+        user.TermsVersion = LegalDocumentVersions.Terms;
+        user.PrivacyNoticeAcknowledgedAt = acceptedAt;
+        user.PrivacyNoticeVersion = LegalDocumentVersions.Privacy;
 
         await UserStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
         var emailStore = GetEmailStore();
@@ -134,14 +155,17 @@
         public string Email { get; set; } = "";
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "รหัสผ่านต้องยาวอย่างน้อย {2} และไม่เกิน {1} ตัวอักษร", MinimumLength = 12)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "รหัสผ่าน")]
         public string Password { get; set; } = "";
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "ยืนยันรหัสผ่าน")]
+        [Compare("Password", ErrorMessage = "รหัสผ่านและการยืนยันรหัสผ่านไม่ตรงกัน")]
         public string ConfirmPassword { get; set; } = "";
+
+        [Range(typeof(bool), "true", "true", ErrorMessage = "กรุณายอมรับข้อกำหนดและรับทราบนโยบายความเป็นส่วนตัว")]
+        public bool AcceptLegal { get; set; }
     }
 }

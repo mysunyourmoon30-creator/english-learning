@@ -27,6 +27,36 @@ jobs:
         shell: pwsh
         run: ./scripts/Test-ToeicMediaManifest.ps1 -Mode Production
 
+      - name: Set up .NET for live release evaluation
+        uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Require live AI evaluation secret
+        shell: bash
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "::error::Configure the OPENAI_API_KEY repository secret before release."
+            exit 1
+          fi
+
+      - name: Run fixed-dataset live AI release gate
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          AI_EVAL_MODEL: gpt-5.6-luna
+          AI_EVAL_INPUT_USD_PER_MILLION: "1"
+          AI_EVAL_OUTPUT_USD_PER_MILLION: "6"
+          AI_EVAL_MAX_COST_USD: "0.50"
+        run: >
+          dotnet run
+          --project tools/EnglishMasterAI.AiEval/EnglishMasterAI.AiEval.csproj
+          --configuration Release
+          --
+          --dataset evals/ai-feedback-golden.json
+          --report artifacts/ai-eval/report.json
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3
 
@@ -107,4 +137,5 @@ jobs:
           path: |
             artifacts/deployment-image.env
             artifacts/release.spdx.json
+            artifacts/ai-eval/report.json
           retention-days: 90

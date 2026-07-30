@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="@Assets["lib/bootstrap/dist/css/bootstrap.min.css"]" />
     <link rel="stylesheet" href="@Assets["app.css"]" />
     <link rel="stylesheet" href="@Assets["EnglishMasterAI.Web.styles.css"]" />
-    <ImportMap />
+    <ImportMap AdditionalAttributes="ImportMapAttributes" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <meta name="theme-color" content="#102a2a" />
     <HeadOutlet @rendermode="PageRenderMode" />
@@ -28,4 +28,10 @@
 
     private IComponentRenderMode? PageRenderMode =>
         HttpContext.AcceptsInteractiveRouting() ? InteractiveServer : null;
+
+    private IReadOnlyDictionary<string, object> ImportMapAttributes =>
+        new Dictionary<string, object>
+        {
+            ["nonce"] = Infrastructure.CspNonce.Get(HttpContext)
+        };
 }

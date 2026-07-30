@@ -11,6 +11,12 @@ public sealed class StartupSecurityValidator(
     IOptions<MultiInstanceOptions> multiInstanceOptions,
     IOptions<AudioStorageOptions> audioStorageOptions,
     IOptions<ToeicMediaOptions> toeicMediaOptions,
+    IOptions<ProxyOptions> proxyOptions,
+    IOptions<AiOptions> aiOptions,
+    IOptions<PronunciationOptions> pronunciationOptions,
+    IOptions<ObservabilityOptions> observabilityOptions,
+    IOptions<AlertingOptions> alertingOptions,
+    IOptions<LegalOptions> legalOptions,
     ILogger<StartupSecurityValidator> logger)
 {
     public void Validate(bool migrationJob = false)
@@ -61,6 +67,15 @@ public sealed class StartupSecurityValidator(
         }
 
         if (environment.IsProduction()
+            && (!proxyOptions.Value.Enabled
+                || !proxyOptions.Value.HasTrustedForwarder))
+        {
+            throw new InvalidOperationException(
+                "Production requires Proxy:Enabled=true and at least one trusted "
+                + "Proxy:KnownProxies or Proxy:KnownNetworks entry.");
+        }
+
+        if (environment.IsProduction()
             && multiInstanceOptions.Value.Enabled
             && !audioStorageOptions.Value.IsAzureBlob)
         {
@@ -84,6 +99,53 @@ public sealed class StartupSecurityValidator(
         {
             throw new InvalidOperationException(
                 "Production must require approved human TOEIC audio and disable AI-generated fallback.");
+        }
+
+        if (environment.IsProduction() && !aiOptions.Value.IsConfigured)
+        {
+            throw new InvalidOperationException(
+                "Production requires AI:Enabled=true and a non-empty AI:ApiKey "
+                + "from the deployment secret manager.");
+        }
+
+        if (environment.IsProduction() && !aiOptions.Value.HasPricing)
+        {
+            throw new InvalidOperationException(
+                "Production requires non-zero AI pricing configuration so usage "
+                + "and cost ceilings are meaningful.");
+        }
+
+        if (environment.IsProduction()
+            && pronunciationOptions.Value.Enabled
+            && !pronunciationOptions.Value.IsConfigured)
+        {
+            throw new InvalidOperationException(
+                "Enabled pronunciation assessment requires Azure Speech key and region.");
+        }
+
+        if (environment.IsProduction()
+            && (!Uri.TryCreate(
+                    observabilityOptions.Value.OtlpEndpoint,
+                    UriKind.Absolute,
+                    out var otlpEndpoint)
+                || (otlpEndpoint.Scheme != Uri.UriSchemeHttp
+                    && otlpEndpoint.Scheme != Uri.UriSchemeHttps)))
+        {
+            throw new InvalidOperationException(
+                "Production requires an absolute HTTP(S) Observability:OtlpEndpoint.");
+        }
+
+        if (environment.IsProduction() && !alertingOptions.Value.IsConfigured)
+        {
+            throw new InvalidOperationException(
+                "Production requires Alerting:Enabled=true and an HTTPS webhook URL.");
+        }
+
+        if (environment.IsProduction() && !legalOptions.Value.IsConfigured)
+        {
+            throw new InvalidOperationException(
+                "Production requires the legal operator, privacy contact, backup "
+                + "retention, and telemetry retention under the Legal section.");
         }
 
         var allowedHosts = configuration["AllowedHosts"];

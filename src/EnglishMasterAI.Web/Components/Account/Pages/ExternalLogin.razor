@@ -16,17 +16,16 @@
 @inject IdentityRedirectManager RedirectManager
 @inject ILogger<ExternalLogin> Logger
 
-<PageTitle>Register</PageTitle>
+<PageTitle>สมัครด้วยบริการภายนอก | EnglishMaster AI</PageTitle>
 
 <StatusMessage Message="@message" />
-<h1>Register</h1>
-<h2>Associate your @ProviderDisplayName account.</h2>
+<h1>สมัครด้วยบริการภายนอก</h1>
+<h2>เชื่อมบัญชี @ProviderDisplayName</h2>
 <hr />
 
 <div  class="alert alert-info">
-    You've successfully authenticated with <strong>@ProviderDisplayName</strong>.
-    Please enter an email address for this site below and click the Register button to finish
-    logging in.
+    ยืนยันตัวตนกับ <strong>@ProviderDisplayName</strong> สำเร็จแล้ว
+    กรุณาตรวจสอบอีเมล ยอมรับข้อกำหนด และกดสมัครสมาชิกเพื่อดำเนินการต่อ
 </div>
 
 <div class="row">
@@ -35,11 +34,19 @@
             <DataAnnotationsValidator />
             <ValidationSummary class="text-danger" role="alert" />
             <div class="form-floating mb-3">
-                <InputText @bind-Value="Input.Email" id="Input.Email" class="form-control" autocomplete="email" placeholder="Please enter your email." />
+                <InputText @bind-Value="Input.Email" id="Input.Email" class="form-control" autocomplete="email" placeholder="name@example.com" />
                 <label for="Input.Email" class="form-label">Email</label>
-                <ValidationMessage For="() => Input.Email" />
+                <ValidationMessage For="() => Input.Email" class="text-danger" />
             </div>
-            <button type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+            <div class="form-check mb-3">
+                <InputCheckbox @bind-Value="Input.AcceptLegal" id="Input.AcceptLegal" class="form-check-input" />
+                <label for="Input.AcceptLegal" class="form-check-label">
+                    ฉันยอมรับ <a href="/terms" target="_blank">ข้อกำหนดการใช้งาน</a>
+                    และรับทราบ <a href="/privacy" target="_blank">นโยบายความเป็นส่วนตัว</a>
+                </label>
+                <ValidationMessage For="() => Input.AcceptLegal" class="text-danger d-block" />
+            </div>
+            <button type="submit" class="w-100 btn btn-lg btn-primary">สมัครสมาชิก</button>
         </EditForm>
     </div>
 </div>
@@ -73,13 +80,13 @@
 
         if (RemoteError is not null)
         {
-            RedirectManager.RedirectToWithStatus("Account/Login", $"Error from external provider: {RemoteError}", HttpContext);
+            RedirectManager.RedirectToWithStatus("Account/Login", $"บริการเข้าสู่ระบบภายนอกแจ้งข้อผิดพลาด: {RemoteError}", HttpContext);
         }
 
         var info = await SignInManager.GetExternalLoginInfoAsync();
         if (info is null)
         {
-            RedirectManager.RedirectToWithStatus("Account/Login", "Error loading external login information.", HttpContext);
+            RedirectManager.RedirectToWithStatus("Account/Login", "ไม่สามารถอ่านข้อมูลการเข้าสู่ระบบภายนอกได้", HttpContext);
         }
 
         externalLoginInfo = info;
@@ -102,7 +109,7 @@
     {
         if (externalLoginInfo is null)
         {
-            RedirectManager.RedirectToWithStatus("Account/Login", "Error loading external login information.", HttpContext);
+            RedirectManager.RedirectToWithStatus("Account/Login", "ไม่สามารถอ่านข้อมูลการเข้าสู่ระบบภายนอกได้", HttpContext);
         }
 
         // Sign in the user with this external login provider if the user already has a login.
@@ -136,11 +143,16 @@
     {
         if (externalLoginInfo is null)
         {
-            RedirectManager.RedirectToWithStatus("Account/Login", "Error loading external login information during confirmation.", HttpContext);
+            RedirectManager.RedirectToWithStatus("Account/Login", "ไม่สามารถยืนยันข้อมูลการเข้าสู่ระบบภายนอกได้", HttpContext);
         }
 
         var emailStore = GetEmailStore();
         var user = CreateUser();
+        var acceptedAt = DateTimeOffset.UtcNow;
+        user.TermsAcceptedAt = acceptedAt;
+        user.TermsVersion = LegalDocumentVersions.Terms;
+        user.PrivacyNoticeAcknowledgedAt = acceptedAt;
+        user.PrivacyNoticeVersion = LegalDocumentVersions.Privacy;
 
         await UserStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
         await emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
@@ -173,7 +185,7 @@
             }
         }
 
-        message = $"Error: {string.Join(",", result.Errors.Select(error => error.Description))}";
+        message = $"ข้อผิดพลาด: {string.Join(",", result.Errors.Select(error => error.Description))}";
     }
 
     private ApplicationUser CreateUser()
@@ -203,5 +215,8 @@
         [Required]
         [EmailAddress]
         public string Email { get; set; } = "";
+
+        [Range(typeof(bool), "true", "true", ErrorMessage = "กรุณายอมรับข้อกำหนดและรับทราบนโยบายความเป็นส่วนตัว")]
+        public bool AcceptLegal { get; set; }
     }
 }

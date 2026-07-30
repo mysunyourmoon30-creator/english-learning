@@ -108,6 +108,7 @@ public sealed class EnglishMasterWebFactory : WebApplicationFactory<Program>
             return Task.CompletedTask;
         }
     }
+
 }
 
 [CollectionDefinition(Name, DisableParallelization = true)]

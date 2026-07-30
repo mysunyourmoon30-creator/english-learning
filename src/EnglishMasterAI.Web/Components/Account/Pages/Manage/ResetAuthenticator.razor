@@ -9,24 +9,24 @@
 @inject IdentityRedirectManager RedirectManager
 @inject ILogger<ResetAuthenticator> Logger
 
-<PageTitle>Reset authenticator key</PageTitle>
+<PageTitle>รีเซ็ต Authenticator | EnglishMaster AI</PageTitle>
 
 <StatusMessage />
-<h3>Reset authenticator key</h3>
+<h3>รีเซ็ตคีย์ Authenticator</h3>
 <div class="alert alert-warning" role="alert">
     <p>
         <span class="glyphicon glyphicon-warning-sign"></span>
-        <strong>If you reset your authenticator key your authenticator app will not work until you reconfigure it.</strong>
+        <strong>หลังรีเซ็ตคีย์ แอป Authenticator เดิมจะใช้ไม่ได้จนกว่าจะตั้งค่าใหม่</strong>
     </p>
     <p>
-        This process disables 2FA until you verify your authenticator app.
-        If you do not complete your authenticator app configuration you may lose access to your account.
+        ขั้นตอนนี้จะปิด 2FA ชั่วคราวจนกว่าคุณจะยืนยันแอป Authenticator
+        หากตั้งค่าไม่เสร็จ คุณอาจไม่สามารถเข้าถึงบัญชีได้
     </p>
 </div>
 <div>
     <form @formname="reset-authenticator" @onsubmit="OnSubmitAsync" method="post">
         <AntiforgeryToken />
-        <button class="btn btn-danger" type="submit">Reset authenticator key</button>
+        <button class="btn btn-danger" type="submit">รีเซ็ตคีย์ Authenticator</button>
     </form>
 </div>
 
@@ -46,7 +46,7 @@
 
         RedirectManager.RedirectToWithStatus(
             "Account/Manage/EnableAuthenticator",
-            "Your authenticator app key has been reset, you will need to configure your authenticator app using the new key.",
+            "รีเซ็ตคีย์ Authenticator แล้ว กรุณาตั้งค่าแอปด้วยคีย์ใหม่",
             HttpContext);
     }
 }

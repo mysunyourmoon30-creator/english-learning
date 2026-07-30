@@ -23,6 +23,10 @@ main { flex: 1; min-width: 0; }
 .profile-copy small { color: #839087; font-size: .7rem; }
 .top-actions { display: flex; align-items: center; gap: .5rem; }
 .content { max-width: 1440px; margin: 0 auto; padding: 2.25rem 2rem 4rem; }
+.site-footer { display:flex; justify-content:space-between; gap:1rem; align-items:center; margin-top:4rem; padding-top:1.25rem; border-top:1px solid #dde5dc; color:#718078; font-size:.76rem; }
+.site-footer nav { display:flex; gap:1rem; flex-wrap:wrap; }
+.site-footer a { color:#527169; text-decoration:none; }
+.site-footer a:hover { text-decoration:underline; }
 #blazor-error-ui { color-scheme: light only; background: #fff4d8; bottom: 0; box-shadow: 0 -1px 8px #0002; display: none; left: 0; padding: .75rem 1.25rem; position: fixed; width: 100%; z-index: 1000; }
 #blazor-error-ui .dismiss { cursor: pointer; position: absolute; right: .75rem; }
 @media (min-width: 760px) {
@@ -32,4 +36,5 @@ main { flex: 1; min-width: 0; }
 @media (max-width: 759px) {
     .top-row { display: none; }
     .content { padding: 1.25rem 1rem 3rem; }
+    .site-footer { align-items:flex-start; flex-direction:column; }
 }
