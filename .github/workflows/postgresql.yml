@@ -55,7 +55,10 @@ jobs:
             | sudo tee /etc/apt/sources.list.d/pgdg.list > /dev/null
           sudo apt-get update
           sudo apt-get install --yes --no-install-recommends postgresql-client-17
-          pg_dump --version
+          # Bare `pg_dump --version` reports the wrapper default (16), not what
+          # runs against the service; pg_wrapper picks the client by server
+          # version at connect time. Assert the 17 binary itself is present.
+          /usr/lib/postgresql/17/bin/pg_dump --version
 
       - name: Restore tools and packages
         run: |
