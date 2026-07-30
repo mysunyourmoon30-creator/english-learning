@@ -43,11 +43,9 @@ Manrope
   SIL Open Font License 1.1
   Licence text: src/EnglishMasterAI.Web/wwwroot/fonts/OFL-Manrope.txt
 
-Bootstrap
+Bootstrap 5.3.3
   MIT License
-  Redistributed under src/EnglishMasterAI.Web/wwwroot/lib/bootstrap/ without
-  its licence text. MIT requires the copyright and permission notice to travel
-  with redistributed copies, so that file still needs to be added.
+  Licence text: src/EnglishMasterAI.Web/wwwroot/lib/bootstrap/LICENSE
 
 NuGet dependencies are not redistributed in this repository. They are declared
 in the project files, resolved at restore time, and remain under their own
