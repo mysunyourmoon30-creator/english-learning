@@ -57,6 +57,10 @@ public sealed class LearnerJourneyTests
             await page.GotoAsync("/practice/writing");
             await page.Locator("#writing").FillAsync(
                 "The API implementation is complete. However, the integration test is failing because the seed data is incomplete. I will update the data and rerun the tests.");
+            // The textarea uses @bind, so the model only updates on change, and
+            // change only fires on blur. Without this the submit button stays
+            // disabled on a zero word count and can never be clicked to blur it.
+            await page.Locator("#writing").BlurAsync();
             await page.Locator("section.surface button.btn-primary").ClickAsync();
             await Assertions.Expect(page.Locator(".feedback-score")).ToBeVisibleAsync(
                 new() { Timeout = 30_000 });
