@@ -162,6 +162,9 @@ public sealed class LearnerJourneyTests
         while (DateTimeOffset.UtcNow < deadline
             && await dependentButton.IsDisabledAsync())
         {
+            // Fire both so the helper does not silently stop working if a field
+            // switches between the default change binding and @bind:event.
+            await boundInput.DispatchEventAsync("input");
             await boundInput.DispatchEventAsync("change");
             await boundInput.Page.WaitForTimeoutAsync(500);
         }
