@@ -82,6 +82,9 @@ jobs:
           format: sarif
           output: artifacts/trivy.sarif
           severity: HIGH,CRITICAL
+          # Without this, the action unsets severity whenever format is sarif,
+          # so exit-code would gate on every LOW and MEDIUM finding too.
+          limit-severities-for-sarif: true
           ignore-unfixed: true
           exit-code: "1"
 
