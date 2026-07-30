@@ -1,0 +1,71 @@
+@page "/privacy"
+@using Microsoft.Extensions.Options
+@inject IOptions<EnglishMasterAI.Web.Configuration.LegalOptions> LegalOptions
+
+<PageTitle>นโยบายความเป็นส่วนตัว | EnglishMaster AI</PageTitle>
+
+<div class="legal-page">
+    <div class="eyebrow">PRIVACY NOTICE · VERSION @LegalDocumentVersions.Privacy</div>
+    <h1>นโยบายความเป็นส่วนตัว</h1>
+    <p class="legal-lead">
+        เอกสารนี้อธิบายว่าระบบเก็บ ใช้ ส่งต่อ และลบข้อมูลของผู้เรียนอย่างไร
+        โดยใช้ภาษาที่อ่านได้ก่อนตัดสินใจสมัครหรือส่งงานให้ระบบประเมิน
+    </p>
+
+    <section class="surface surface-pad">
+        <h2>ข้อมูลที่ระบบเก็บ</h2>
+        <ul>
+            <li>ข้อมูลบัญชี เช่น อีเมล วันที่สร้างบัญชี และการตั้งค่าความปลอดภัย</li>
+            <li>เป้าหมาย ผลประเมิน ความคืบหน้า คำศัพท์ที่ต้องทบทวน และผลงานเขียน</li>
+            <li>Transcript และผลประเมินการพูดเมื่อผู้เรียนยินยอมส่งเสียงเพื่อประมวลผล</li>
+            <li>ข้อมูลปฏิบัติการของ AI เช่น จำนวนโทเคน ระยะเวลา สถานะ และค่าใช้จ่ายโดยประมาณ โดยไม่เก็บ prompt ในบันทึกการใช้งาน AI</li>
+        </ul>
+    </section>
+
+    <section class="surface surface-pad">
+        <h2>การใช้บริการ AI และเสียงภายนอก</h2>
+        <p>
+            เมื่อเปิดใช้ AI ระบบอาจส่งข้อความที่ผู้เรียนเขียนหรือข้อมูลเสียงที่ผู้เรียนเลือกส่งไปยัง OpenAI
+            เพื่อถอดเสียงหรือสร้าง feedback และอาจส่งเสียงพร้อมข้อความอ้างอิงไปยัง Azure Speech
+            เพื่อประเมิน pronunciation ระบบจะแสดง fallback อย่างชัดเจนเมื่อบริการเหล่านี้ไม่ได้ถูกตั้งค่า
+        </p>
+        <p>
+            ไฟล์เสียงของผู้เรียนประมวลผลในหน่วยความจำและไม่บันทึกลงฐานข้อมูลโดยค่าเริ่มต้น
+            ระบบเก็บเฉพาะ transcript และผลประเมินที่จำเป็นต่อประวัติการเรียน
+        </p>
+    </section>
+
+    <section class="surface surface-pad">
+        <h2>ระยะเวลาเก็บและการลบข้อมูล</h2>
+        <p>
+            ข้อมูลบัญชีและการเรียนจะเก็บไว้ตราบเท่าที่บัญชียังเปิดใช้งาน
+            ผู้เรียนดาวน์โหลดหรือลบบัญชีและข้อมูลการเรียนได้จากหน้าจัดการบัญชี
+            สำเนาสำรองจะหมดอายุภายใน @Legal.BackupRetentionDays วัน
+            ส่วน log และ telemetry จะเก็บไม่เกิน @Legal.TelemetryRetentionDays วัน
+        </p>
+    </section>
+
+    <section class="surface surface-pad">
+        <h2>สิทธิ์และการติดต่อ</h2>
+        <p>
+            ผู้เรียนสามารถตรวจสอบ แก้ไข ดาวน์โหลด หรือลบข้อมูลของตนเองได้จากหน้าจัดการบัญชี
+            ผู้ควบคุมข้อมูลคือ <strong>@OperatorDisplayName</strong>
+            @if (!string.IsNullOrWhiteSpace(Legal.PrivacyContactEmail))
+            {
+                <text> ติดต่อเรื่องความเป็นส่วนตัวได้ที่
+                    <a href="@($"mailto:{Legal.PrivacyContactEmail}")">@Legal.PrivacyContactEmail</a>
+                </text>
+            }
+        </p>
+    </section>
+
+    <p class="legal-updated">ปรับปรุงล่าสุด: 30 กรกฎาคม 2026</p>
+</div>
+
+@code {
+    private EnglishMasterAI.Web.Configuration.LegalOptions Legal => LegalOptions.Value;
+    private string OperatorDisplayName =>
+        string.IsNullOrWhiteSpace(Legal.OperatorName)
+            ? "ผู้ดูแล EnglishMaster AI (ยังไม่ได้กำหนดสำหรับ production)"
+            : Legal.OperatorName;
+}

@@ -65,7 +65,19 @@ namespace EnglishMasterAI.Web.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("INTEGER");
 
+                    b.Property<DateTimeOffset?>("PrivacyNoticeAcknowledgedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PrivacyNoticeVersion")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("SecurityStamp")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTimeOffset?>("TermsAcceptedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TermsVersion")
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("TwoFactorEnabled")

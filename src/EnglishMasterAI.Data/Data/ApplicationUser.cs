@@ -7,5 +7,9 @@ public class ApplicationUser : IdentityUser
 {
     public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
     public DateTimeOffset? LastActiveAt { get; set; }
+    public DateTimeOffset? TermsAcceptedAt { get; set; }
+    public string? TermsVersion { get; set; }
+    public DateTimeOffset? PrivacyNoticeAcknowledgedAt { get; set; }
+    public string? PrivacyNoticeVersion { get; set; }
 }
 
