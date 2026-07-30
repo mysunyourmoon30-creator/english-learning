@@ -1,11 +1,16 @@
 using System.Net;
 using System.Net.Http.Json;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using EnglishMasterAI.Web.Application;
 using EnglishMasterAI.Web.Data;
 using EnglishMasterAI.Web.Domain;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace EnglishMasterAI.Tests;
@@ -13,6 +18,64 @@ namespace EnglishMasterAI.Tests;
 [Collection(EnglishMasterWebCollection.Name)]
 public sealed class ProductionReadinessTests(EnglishMasterWebFactory factory)
 {
+    [Fact]
+    public async Task Forwarded_scheme_and_client_ip_are_used_only_from_trusted_proxy()
+    {
+        var builder = WebApplication.CreateBuilder();
+        builder.WebHost.UseTestServer();
+        builder.Services.Configure<ForwardedHeadersOptions>(options =>
+        {
+            options.ForwardedHeaders =
+                ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+            options.KnownProxies.Clear();
+            options.KnownIPNetworks.Clear();
+            options.KnownProxies.Add(IPAddress.Loopback);
+        });
+        await using var app = builder.Build();
+        app.Use(async (context, next) =>
+        {
+            if (context.Request.Headers.TryGetValue(
+                    "X-Test-Remote-IP",
+                    out var value)
+                && IPAddress.TryParse(value, out var address))
+            {
+                context.Connection.RemoteIpAddress = address;
+            }
+            await next();
+        });
+        app.UseForwardedHeaders();
+        app.MapGet(
+            "/observed-request",
+            (HttpContext context) =>
+                $"{context.Request.Scheme}|{context.Connection.RemoteIpAddress}");
+        await app.StartAsync();
+        using var client = app.GetTestClient();
+
+        using var trusted = new HttpRequestMessage(HttpMethod.Get, "/observed-request");
+        trusted.Headers.Add("X-Test-Remote-IP", "127.0.0.1");
+        trusted.Headers.Add("X-Forwarded-Proto", "https");
+        trusted.Headers.Add("X-Forwarded-For", "203.0.113.25");
+
+        using var trustedResponse = await client.SendAsync(trusted);
+
+        Assert.Equal(HttpStatusCode.OK, trustedResponse.StatusCode);
+        Assert.Equal(
+            "https|203.0.113.25",
+            await trustedResponse.Content.ReadAsStringAsync());
+
+        using var untrusted = new HttpRequestMessage(HttpMethod.Get, "/observed-request");
+        untrusted.Headers.Add("X-Test-Remote-IP", "127.0.0.2");
+        untrusted.Headers.Add("X-Forwarded-Proto", "https");
+        untrusted.Headers.Add("X-Forwarded-For", "198.51.100.4");
+
+        using var untrustedResponse = await client.SendAsync(untrusted);
+
+        Assert.Equal(HttpStatusCode.OK, untrustedResponse.StatusCode);
+        Assert.Equal(
+            "http|127.0.0.2",
+            await untrustedResponse.Content.ReadAsStringAsync());
+    }
+
     [Fact]
     public async Task Healthz_ReportsDatabaseHealthy_AndAddsSecurityHeaders()
     {
@@ -27,6 +90,44 @@ public sealed class ProductionReadinessTests(EnglishMasterWebFactory factory)
         Assert.Equal("nosniff", response.Headers.GetValues("X-Content-Type-Options").Single());
         Assert.Equal("DENY", response.Headers.GetValues("X-Frame-Options").Single());
         Assert.True(response.Headers.Contains("Content-Security-Policy"));
+        var csp = response.Headers.GetValues("Content-Security-Policy").Single();
+        Assert.Contains("script-src 'self' 'nonce-", csp);
+        Assert.DoesNotContain("script-src 'self' 'unsafe-inline'", csp);
+    }
+
+    [Fact]
+    public async Task Public_legal_pages_share_the_csp_nonce_and_template_routes_are_gone()
+    {
+        using var client = factory.CreateHttpsClient();
+
+        using var privacy = await client.GetAsync("/privacy");
+        var privacyHtml = await privacy.Content.ReadAsStringAsync();
+        var csp = Assert.Single(
+            privacy.Headers.GetValues("Content-Security-Policy"),
+            value => value.Contains("script-src", StringComparison.Ordinal));
+        var nonce = Regex.Match(csp, @"'nonce-([^']+)'").Groups[1].Value;
+
+        Assert.Equal(HttpStatusCode.OK, privacy.StatusCode);
+        Assert.Contains("นโยบายความเป็นส่วนตัว", privacyHtml);
+        Assert.False(string.IsNullOrWhiteSpace(nonce));
+
+        using var terms = await client.GetAsync("/terms");
+        Assert.Equal(HttpStatusCode.OK, terms.StatusCode);
+        Assert.Contains(
+            "ข้อกำหนดการใช้งาน",
+            await terms.Content.ReadAsStringAsync());
+
+        foreach (var path in new[] { "/weather", "/counter", "/auth" })
+        {
+            using var removed = await client.GetAsync(path);
+            Assert.Equal(HttpStatusCode.NotFound, removed.StatusCode);
+        }
+
+        using var css = await client.GetAsync("/app.css");
+        var cssBody = await css.Content.ReadAsStringAsync();
+        Assert.Equal(HttpStatusCode.OK, css.StatusCode);
+        Assert.DoesNotContain("fonts.googleapis.com", cssBody);
+        Assert.Contains("/fonts/IBMPlexSansThai-Regular.ttf", cssBody);
     }
 
     [Fact]
