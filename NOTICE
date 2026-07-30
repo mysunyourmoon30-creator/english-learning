@@ -20,16 +20,18 @@ derivative course without written permission. It includes, but is not limited
 to:
 
   roadmap/                    curriculum and syllabus source documents
+  content/curriculum/         seeded modules, lessons, vocabulary, and
+                              assessment items
   content/toeic-media/        TOEIC media manifest and cue sheets
   evals/                      golden evaluation datasets
-  src/EnglishMasterAI.Web/Data/SeedData.cs
-                              seeded modules, lessons, vocabulary, and
-                              assessment items
 
-The reservation follows the material rather than the file extension. Lesson
-text, question banks, and answer keys stay reserved wherever they appear,
-including where they are embedded in .cs or .razor source. Anyone reusing this
-project under the Apache License is expected to supply their own curriculum.
+The boundary is meant to be visible in the file layout: everything reserved sits
+under content/ or roadmap/, and the code that loads it does not contain the
+material itself. Should lesson text or answer keys ever be inlined into source
+again, the reservation follows the material rather than the file extension.
+
+Anyone reusing this project under the Apache License is expected to supply their
+own curriculum.
 
 ================================================================================
 Third-party components redistributed here

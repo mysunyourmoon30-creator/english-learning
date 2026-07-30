@@ -1,0 +1,2597 @@
+[
+  {
+    "code": "E01",
+    "title": "Alphabet, Sounds & Basic Pronunciation",
+    "titleThai": "ตัวอักษร เสียง และการออกเสียงพื้นฐาน",
+    "summary": "อ่านตัวอักษร สะกดคำ และแยกเสียงที่ผู้เรียนไทยมักสับสน",
+    "phase": "Phase 1",
+    "cefrLevel": "Pre-A1",
+    "category": "Foundation",
+    "sortOrder": 1,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "alphabet-and-sounds",
+        "title": "Read new words with a sound-first method",
+        "objective": "Read new words with a sound-first method",
+        "thaiExplanation": "แยกตัวอักษร ชื่ออักษร และเสียงของอักษรให้ชัด เริ่มจากเสียงท้ายคำและคู่เสียง R/L, V/W, TH ก่อนใช้ IPA เท่าที่จำเป็น",
+        "grammarFocus": "A letter has a name, but it can represent different sounds. Focus on the sound inside a real word.",
+        "readingContent": "Listen to the final sound. The word work ends with /k/. The word live ends with /v/. Clear final sounds make your message easier to understand.",
+        "listeningTranscript": "Listen to the final sound. The word work ends with /k/. The word live ends with /v/. Clear final sounds make your message easier to understand.",
+        "speakingPrompt": "Say: very, work, reliable, three. Then spell your name and one technical word.",
+        "writingPrompt": "Write four short sentences about the sounds you want to improve.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "sound",
+            "thaiMeaning": "เสียง",
+            "pronunciation": "/saʊnd/",
+            "wordForm": "noun / verb",
+            "collocation": "final sound",
+            "exampleSentence": "Listen to the final sound.",
+            "isCritical": true
+          },
+          {
+            "word": "spell",
+            "thaiMeaning": "สะกดคำ",
+            "pronunciation": "/spel/",
+            "wordForm": "verb",
+            "collocation": "spell a word",
+            "exampleSentence": "Can you spell your name?",
+            "isCritical": true
+          },
+          {
+            "word": "syllable",
+            "thaiMeaning": "พยางค์",
+            "pronunciation": "/ˈsɪl.ə.bəl/",
+            "wordForm": "noun",
+            "collocation": "stress a syllable",
+            "exampleSentence": "Architecture has four syllables.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Pronunciation",
+            "toeicPart": null,
+            "prompt": "Which word ends with the /v/ sound?",
+            "supportingText": null,
+            "options": [
+              "work",
+              "live",
+              "write",
+              "light"
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “live”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          },
+          {
+            "skill": "Pronunciation",
+            "toeicPart": null,
+            "prompt": "How many syllables are in “model”?",
+            "supportingText": null,
+            "options": [
+              "one",
+              "two",
+              "three",
+              "four"
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “two”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E02",
+    "title": "Phonics & Word Reading",
+    "titleThai": "โฟนิกส์และการอ่านคำ",
+    "summary": "แบ่งพยางค์ อ่าน vowel patterns และเดาคำเทคนิคอย่างมีหลักการ",
+    "phase": "Phase 1",
+    "cefrLevel": "A1",
+    "category": "Foundation",
+    "sortOrder": 2,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "phonics-word-reading",
+        "title": "Break long technical words into readable chunks",
+        "objective": "Break long technical words into readable chunks",
+        "thaiExplanation": "ไม่ต้องจำกฎ phonics ทุกข้อ ให้มอง vowel pattern, prefix, suffix และแบ่งคำยาวเป็นพยางค์ก่อน",
+        "grammarFocus": "Prefixes and suffixes give clues. Re-li-a-bil-i-ty becomes easier when you read it in chunks.",
+        "readingContent": "First, find the vowels. Next, divide the word into chunks. Then, mark the stressed syllable. Finally, read the complete word.",
+        "listeningTranscript": "First, find the vowels. Next, divide the word into chunks. Then, mark the stressed syllable. Finally, read the complete word.",
+        "speakingPrompt": "Break down and read: architecture, embedding, reliability, validation.",
+        "writingPrompt": "Divide five technical words into syllables and mark the stressed part.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "prefix",
+            "thaiMeaning": "คำเติมหน้า",
+            "pronunciation": "/ˈpriː.fɪks/",
+            "wordForm": "noun",
+            "collocation": "common prefix",
+            "exampleSentence": "The prefix re- often means again.",
+            "isCritical": true
+          },
+          {
+            "word": "suffix",
+            "thaiMeaning": "คำเติมท้าย",
+            "pronunciation": "/ˈsʌf.ɪks/",
+            "wordForm": "noun",
+            "collocation": "add a suffix",
+            "exampleSentence": "The suffix -able changes the word form.",
+            "isCritical": true
+          },
+          {
+            "word": "stress",
+            "thaiMeaning": "การเน้นเสียง",
+            "pronunciation": "/stres/",
+            "wordForm": "noun / verb",
+            "collocation": "word stress",
+            "exampleSentence": "Correct word stress makes speech clearer.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Reading",
+            "toeicPart": null,
+            "prompt": "Which is the best chunking for “reliability”?",
+            "supportingText": null,
+            "options": [
+              "rel-iab-il-ity",
+              "reli-abili-ty",
+              "re-li-a-bil-i-ty",
+              "r-eliability"
+            ],
+            "correctOptionIndex": 2,
+            "explanation": "The correct answer is “re-li-a-bil-i-ty”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "A suffix is added to the…",
+            "supportingText": null,
+            "options": [
+              "beginning of a word",
+              "end of a word",
+              "middle of a sentence",
+              "sound only"
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “end of a word”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E03",
+    "title": "Core Vocabulary & Chunks",
+    "titleThai": "คำศัพท์แกนกลางและวลีพร้อมใช้",
+    "summary": "เรียนคำเป็น collocation และ chunks พร้อมระบบทบทวนแบบเว้นระยะ",
+    "phase": "Phase 1",
+    "cefrLevel": "A1",
+    "category": "Vocabulary",
+    "sortOrder": 3,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "core-vocabulary-chunks",
+        "title": "Use six high-frequency technical chunks in complete sentences",
+        "objective": "Use six high-frequency technical chunks in complete sentences",
+        "thaiExplanation": "จำคำพร้อมเสียง รูปคำ collocation และประโยคตัวอย่าง เช่น make a request, handle an error และ retrieve data",
+        "grammarFocus": "A useful chunk is easier to retrieve than an isolated word. Learn “send a response,” not only “response.”",
+        "readingContent": "The client makes a request. The API validates the input and sends a response. If the request fails, the system handles the error.",
+        "listeningTranscript": "The client makes a request. The API validates the input and sends a response. If the request fails, the system handles the error.",
+        "speakingPrompt": "Explain a simple API flow using make a request, send a response, and handle an error.",
+        "writingPrompt": "Write one sentence for each chunk: retrieve data, deploy an application, evaluate the result.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "request",
+            "thaiMeaning": "คำขอ",
+            "pronunciation": "/rɪˈkwest/",
+            "wordForm": "noun / verb",
+            "collocation": "make a request",
+            "exampleSentence": "The client makes a request.",
+            "isCritical": true
+          },
+          {
+            "word": "response",
+            "thaiMeaning": "การตอบกลับ",
+            "pronunciation": "/rɪˈspɒns/",
+            "wordForm": "noun",
+            "collocation": "send a response",
+            "exampleSentence": "The API sends a JSON response.",
+            "isCritical": true
+          },
+          {
+            "word": "retrieve",
+            "thaiMeaning": "ดึงกลับมา",
+            "pronunciation": "/rɪˈtriːv/",
+            "wordForm": "verb",
+            "collocation": "retrieve data",
+            "exampleSentence": "The service retrieves customer data.",
+            "isCritical": true
+          },
+          {
+            "word": "evaluate",
+            "thaiMeaning": "ประเมิน",
+            "pronunciation": "/ɪˈvæl.ju.eɪt/",
+            "wordForm": "verb",
+            "collocation": "evaluate the result",
+            "exampleSentence": "We evaluate the result before release.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "Choose the natural collocation.",
+            "supportingText": null,
+            "options": [
+              "do a request",
+              "build a request",
+              "make a request",
+              "cook a request"
+            ],
+            "correctOptionIndex": 2,
+            "explanation": "The correct answer is “make a request”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "The service ___ data from the database.",
+            "supportingText": null,
+            "options": [
+              "returns to",
+              "retrieves",
+              "sends at",
+              "evaluations"
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “retrieves”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E04",
+    "title": "Sentence Building",
+    "titleThai": "การสร้างประโยค",
+    "summary": "มองประธาน กริยา กรรม และส่วนเติมเต็มในประโยคจริง",
+    "phase": "Phase 1",
+    "cefrLevel": "A1",
+    "category": "Grammar",
+    "sortOrder": 4,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "sentence-building",
+        "title": "Build accurate Subject + Verb + Object sentences",
+        "objective": "Build accurate Subject + Verb + Object sentences",
+        "thaiExplanation": "ทุกประโยคหลักต้องมองหาใครหรืออะไรเป็นประธาน และเกิดการกระทำหรือสถานะใด จากนั้นตรวจว่ากริยาต้องการกรรมหรือไม่",
+        "grammarFocus": "Subject + Verb: The service runs. Subject + Verb + Object: The model generates text. Subject + be + adjective: The system is reliable.",
+        "readingContent": "The client sends a request. The API validates the input. The model generates an answer. The response is useful.",
+        "listeningTranscript": "The client sends a request. The API validates the input. The model generates an answer. The response is useful.",
+        "speakingPrompt": "Describe a four-step system. Start every sentence with a clear subject.",
+        "writingPrompt": "Write four sentences about an AI application. Underline the subject and circle the main verb.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "subject",
+            "thaiMeaning": "ประธาน",
+            "pronunciation": "/ˈsʌb.dʒekt/",
+            "wordForm": "noun",
+            "collocation": "sentence subject",
+            "exampleSentence": "The subject performs the action.",
+            "isCritical": true
+          },
+          {
+            "word": "verb",
+            "thaiMeaning": "คำกริยา",
+            "pronunciation": "/vɜːb/",
+            "wordForm": "noun",
+            "collocation": "main verb",
+            "exampleSentence": "Every complete clause needs a verb.",
+            "isCritical": true
+          },
+          {
+            "word": "object",
+            "thaiMeaning": "กรรม",
+            "pronunciation": "/ˈɒb.dʒekt/",
+            "wordForm": "noun",
+            "collocation": "direct object",
+            "exampleSentence": "Text is the object in “The model generates text.”",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Which sentence has Subject + Verb + Object?",
+            "supportingText": null,
+            "options": [
+              "The API is reliable.",
+              "The service runs.",
+              "The model generates text.",
+              "The output is JSON."
+            ],
+            "correctOptionIndex": 2,
+            "explanation": "The correct answer is “The model generates text.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Choose the correct sentence.",
+            "supportingText": null,
+            "options": [
+              "The system reliable.",
+              "The system is reliable.",
+              "The system is reliability.",
+              "System are reliable."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “The system is reliable.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E05",
+    "title": "Nouns, Pronouns & Articles",
+    "titleThai": "คำนาม สรรพนาม และคำนำหน้านาม",
+    "summary": "ใช้ a, an, the และคำนามนับได้/นับไม่ได้ในบริบทข้อมูลและโมเดล",
+    "phase": "Phase 2",
+    "cefrLevel": "A1",
+    "category": "Grammar",
+    "sortOrder": 5,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "nouns-pronouns-articles",
+        "title": "Use nouns and articles accurately with AI vocabulary",
+        "objective": "Use nouns and articles accurately with AI vocabulary",
+        "thaiExplanation": "Data และ information มักเป็นคำนามนับไม่ได้ จึงใช้ some data, much information หรือ a piece of information",
+        "grammarFocus": "Data และ information มักเป็นคำนามนับไม่ได้ จึงใช้ some data, much information หรือ a piece of information",
+        "readingContent": "The model uses some data. It returns a piece of information.",
+        "listeningTranscript": "The model uses some data. It returns a piece of information.",
+        "speakingPrompt": "Explain this pattern in your own words: The model uses some data. It returns a piece of information.",
+        "writingPrompt": "Write three new examples based on: The model uses some data. It returns a piece of information.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "information",
+            "thaiMeaning": "ข้อมูลสารสนเทศ",
+            "pronunciation": "/ˌɪn.fəˈmeɪ.ʃən/",
+            "wordForm": "uncountable noun",
+            "collocation": "a piece of information",
+            "exampleSentence": "The response contains useful information.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Choose the correct phrase.",
+            "supportingText": null,
+            "options": [
+              "an information",
+              "many information",
+              "a piece of information",
+              "informations"
+            ],
+            "correctOptionIndex": 2,
+            "explanation": "The correct answer is “a piece of information”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E06",
+    "title": "Verb System",
+    "titleThai": "ระบบคำกริยา",
+    "summary": "เข้าใจ V1, V2, V3, V-ing, V-s และกริยาช่วยก่อนเรียน tense",
+    "phase": "Phase 2",
+    "cefrLevel": "A1",
+    "category": "Grammar",
+    "sortOrder": 6,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "verb-system",
+        "title": "Choose the correct verb form after auxiliaries",
+        "objective": "Choose the correct verb form after auxiliaries",
+        "thaiExplanation": "จำสูตรหลัก: Modal + V1, have + V3, be + V-ing และประธาน he/she/it ใช้ V-s ใน Present Simple",
+        "grammarFocus": "จำสูตรหลัก: Modal + V1, have + V3, be + V-ing และประธาน he/she/it ใช้ V-s ใน Present Simple",
+        "readingContent": "The service can process requests. The team has deployed the update.",
+        "listeningTranscript": "The service can process requests. The team has deployed the update.",
+        "speakingPrompt": "Explain this pattern in your own words: The service can process requests. The team has deployed the update.",
+        "writingPrompt": "Write three new examples based on: The service can process requests. The team has deployed the update.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "process",
+            "thaiMeaning": "ประมวลผล",
+            "pronunciation": "/ˈprəʊ.ses/",
+            "wordForm": "verb / noun",
+            "collocation": "process a request",
+            "exampleSentence": "The service processes each request.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "The model can ___ text.",
+            "supportingText": null,
+            "options": [
+              "generates",
+              "generate",
+              "generated",
+              "generating"
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “generate”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E07",
+    "title": "Essential Tenses",
+    "titleThai": "กาลที่จำเป็น",
+    "summary": "ใช้ present, past, perfect และ future กับสถานการณ์ทำงาน",
+    "phase": "Phase 2",
+    "cefrLevel": "A2",
+    "category": "Grammar",
+    "sortOrder": 7,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "essential-tenses",
+        "title": "Report current, past, completed, and future work",
+        "objective": "Report current, past, completed, and future work",
+        "thaiExplanation": "Present Simple ใช้กับระบบทำงานทั่วไป Past Simple ใช้กับเหตุการณ์จบแล้ว Present Perfect เชื่อมผลถึงปัจจุบัน",
+        "grammarFocus": "Present Simple ใช้กับระบบทำงานทั่วไป Past Simple ใช้กับเหตุการณ์จบแล้ว Present Perfect เชื่อมผลถึงปัจจุบัน",
+        "readingContent": "We deployed the service yesterday. The team has completed the evaluation. We will improve the pipeline.",
+        "listeningTranscript": "We deployed the service yesterday. The team has completed the evaluation. We will improve the pipeline.",
+        "speakingPrompt": "Explain this pattern in your own words: We deployed the service yesterday. The team has completed the evaluation. We will improve the pipeline.",
+        "writingPrompt": "Write three new examples based on: We deployed the service yesterday. The team has completed the evaluation. We will improve the pipeline.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "deploy",
+            "thaiMeaning": "นำระบบขึ้นใช้งาน",
+            "pronunciation": "/dɪˈplɔɪ/",
+            "wordForm": "verb",
+            "collocation": "deploy a service",
+            "exampleSentence": "We deployed the service yesterday.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "We ___ the service yesterday.",
+            "supportingText": null,
+            "options": [
+              "deploy",
+              "have deploy",
+              "deployed",
+              "will deployed"
+            ],
+            "correctOptionIndex": 2,
+            "explanation": "The correct answer is “deployed”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E08",
+    "title": "Questions, Negatives & Modals",
+    "titleThai": "คำถาม ปฏิเสธ และ Modal verbs",
+    "summary": "ถามข้อมูล ขอความช่วยเหลือ และระบุข้อกำหนดในที่ประชุม",
+    "phase": "Phase 2",
+    "cefrLevel": "A2",
+    "category": "Grammar",
+    "sortOrder": 8,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "questions-negatives-modals",
+        "title": "Ask clear technical questions and state requirements",
+        "objective": "Ask clear technical questions and state requirements",
+        "thaiExplanation": "Wh-question ใช้ question word + auxiliary + subject + verb ส่วน modal ตามด้วย V1 เสมอ",
+        "grammarFocus": "Wh-question ใช้ question word + auxiliary + subject + verb ส่วน modal ตามด้วย V1 เสมอ",
+        "readingContent": "What does this function return? Could you explain the architecture? The system must validate the input.",
+        "listeningTranscript": "What does this function return? Could you explain the architecture? The system must validate the input.",
+        "speakingPrompt": "Explain this pattern in your own words: What does this function return? Could you explain the architecture? The system must validate the input.",
+        "writingPrompt": "Write three new examples based on: What does this function return? Could you explain the architecture? The system must validate the input.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "clarify",
+            "thaiMeaning": "ทำให้ชัดเจน",
+            "pronunciation": "/ˈklær.ɪ.faɪ/",
+            "wordForm": "verb",
+            "collocation": "clarify a requirement",
+            "exampleSentence": "Could you clarify the requirement?",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Choose the correct question.",
+            "supportingText": null,
+            "options": [
+              "What this function returns?",
+              "What does this function return?",
+              "What does return this function?",
+              "What this function does return?"
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “What does this function return?”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E09",
+    "title": "Description & Connection",
+    "titleThai": "การบรรยายและเชื่อมความคิด",
+    "summary": "เชื่อมลำดับ เหตุผล ผลลัพธ์ และการเปรียบเทียบ",
+    "phase": "Phase 2",
+    "cefrLevel": "A2",
+    "category": "Grammar",
+    "sortOrder": 9,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "description-and-connection",
+        "title": "Explain a process with sequence and cause-effect words",
+        "objective": "Explain a process with sequence and cause-effect words",
+        "thaiExplanation": "ใช้ first, next, then, finally สำหรับลำดับ because สำหรับเหตุผล และ therefore/as a result สำหรับผลลัพธ์",
+        "grammarFocus": "ใช้ first, next, then, finally สำหรับลำดับ because สำหรับเหตุผล และ therefore/as a result สำหรับผลลัพธ์",
+        "readingContent": "First, the system retrieves documents. Next, it ranks them. Finally, the model generates an answer.",
+        "listeningTranscript": "First, the system retrieves documents. Next, it ranks them. Finally, the model generates an answer.",
+        "speakingPrompt": "Explain this pattern in your own words: First, the system retrieves documents. Next, it ranks them. Finally, the model generates an answer.",
+        "writingPrompt": "Write three new examples based on: First, the system retrieves documents. Next, it ranks them. Finally, the model generates an answer.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "therefore",
+            "thaiMeaning": "ดังนั้น",
+            "pronunciation": "/ˈðeə.fɔːr/",
+            "wordForm": "adverb",
+            "collocation": "and therefore",
+            "exampleSentence": "The input was invalid; therefore, the request failed.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Which connector introduces a result?",
+            "supportingText": null,
+            "options": [
+              "although",
+              "because",
+              "therefore",
+              "unless"
+            ],
+            "correctOptionIndex": 2,
+            "explanation": "The correct answer is “therefore”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E10",
+    "title": "Work & TOEIC Grammar",
+    "titleThai": "ไวยากรณ์สำหรับงานและ TOEIC",
+    "summary": "ใช้ passive voice, relative clauses, word forms และ conditionals ที่พบบ่อย",
+    "phase": "Phase 2",
+    "cefrLevel": "B1",
+    "category": "Grammar",
+    "sortOrder": 10,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "work-toeic-grammar",
+        "title": "Recognize high-frequency workplace grammar patterns",
+        "objective": "Recognize high-frequency workplace grammar patterns",
+        "thaiExplanation": "Passive voice ใช้ be + V3 เมื่อต้องการเน้นสิ่งที่ถูกกระทำ เช่น The input is validated before processing.",
+        "grammarFocus": "Passive voice ใช้ be + V3 เมื่อต้องการเน้นสิ่งที่ถูกกระทำ เช่น The input is validated before processing.",
+        "readingContent": "The report was reviewed by the team. If the test passes, we will publish the release.",
+        "listeningTranscript": "The report was reviewed by the team. If the test passes, we will publish the release.",
+        "speakingPrompt": "Explain this pattern in your own words: The report was reviewed by the team. If the test passes, we will publish the release.",
+        "writingPrompt": "Write three new examples based on: The report was reviewed by the team. If the test passes, we will publish the release.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "validate",
+            "thaiMeaning": "ตรวจสอบความถูกต้อง",
+            "pronunciation": "/ˈvæl.ɪ.deɪt/",
+            "wordForm": "verb",
+            "collocation": "validate input",
+            "exampleSentence": "All input is validated before processing.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Choose the correct passive sentence.",
+            "supportingText": null,
+            "options": [
+              "The input validates.",
+              "The input is validate.",
+              "The input validating.",
+              "The input is validated."
+            ],
+            "correctOptionIndex": 3,
+            "explanation": "The correct answer is “The input is validated.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E11",
+    "title": "Reading",
+    "titleThai": "การอ่าน",
+    "summary": "อ่านตั้งแต่ข้อความสั้นจนถึง documentation, API reference และ technical paper แบบย่อ",
+    "phase": "Phase 3",
+    "cefrLevel": "B1",
+    "category": "Reading",
+    "sortOrder": 11,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "reading-strategies",
+        "title": "Use skimming, scanning, context clues, and reference words in technical reading",
+        "objective": "Use skimming, scanning, context clues, and reference words in technical reading",
+        "thaiExplanation": "เริ่มจากมองหัวข้อ โครงสร้าง และคำซ้ำเพื่อหา main idea ก่อนอ่านรายละเอียด จากนั้น scan หาชื่อ field, status code และเงื่อนไขที่โจทย์ถาม",
+        "grammarFocus": "เริ่มจากมองหัวข้อ โครงสร้าง และคำซ้ำเพื่อหา main idea ก่อนอ่านรายละเอียด จากนั้น scan หาชื่อ field, status code และเงื่อนไขที่โจทย์ถาม",
+        "readingContent": "Read the endpoint summary first. Scan for the required field and the error response. The reference word “it” points to the request object.",
+        "listeningTranscript": "Read the endpoint summary first. Scan for the required field and the error response. The reference word “it” points to the request object.",
+        "speakingPrompt": "Explain this pattern in your own words: Read the endpoint summary first. Scan for the required field and the error response. The reference word “it” points to the request object.",
+        "writingPrompt": "Write three new examples based on: Read the endpoint summary first. Scan for the required field and the error response. The reference word “it” points to the request object.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "scan",
+            "thaiMeaning": "กวาดตาหาข้อมูลเฉพาะ",
+            "pronunciation": "/skæn/",
+            "wordForm": "verb",
+            "collocation": "scan for details",
+            "exampleSentence": "Scan the API reference for the required field.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Reading",
+            "toeicPart": null,
+            "prompt": "Scanning is mainly used to…",
+            "supportingText": null,
+            "options": [
+              "translate every word",
+              "find specific information",
+              "memorize the paragraph",
+              "guess without reading"
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “find specific information”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E12",
+    "title": "Listening",
+    "titleThai": "การฟัง",
+    "summary": "ฝึกฟังแบบไม่มีข้อความ ตอบ เปิด transcript ทำ dictation และ shadowing",
+    "phase": "Phase 3",
+    "cefrLevel": "B1",
+    "category": "Listening",
+    "sortOrder": 12,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "listening-workflow",
+        "title": "Follow a listen-answer-transcript-shadow-summarize workflow",
+        "objective": "Follow a listen-answer-transcript-shadow-summarize workflow",
+        "thaiExplanation": "รอบแรกฟังเพื่อจับความหมายรวมโดยไม่เปิดข้อความ รอบสองตรวจคำตอบด้วย transcript แล้วพูดตามเป็น chunks ก่อนสรุปด้วยคำของตนเอง",
+        "grammarFocus": "รอบแรกฟังเพื่อจับความหมายรวมโดยไม่เปิดข้อความ รอบสองตรวจคำตอบด้วย transcript แล้วพูดตามเป็น chunks ก่อนสรุปด้วยคำของตนเอง",
+        "readingContent": "First, listen without the transcript. Next, check the key chunks. Then, shadow each sentence. Finally, summarize the message.",
+        "listeningTranscript": "First, listen without the transcript. Next, check the key chunks. Then, shadow each sentence. Finally, summarize the message.",
+        "speakingPrompt": "Explain this pattern in your own words: First, listen without the transcript. Next, check the key chunks. Then, shadow each sentence. Finally, summarize the message.",
+        "writingPrompt": "Write three new examples based on: First, listen without the transcript. Next, check the key chunks. Then, shadow each sentence. Finally, summarize the message.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "shadow",
+            "thaiMeaning": "พูดตามเสียงเกือบพร้อมกัน",
+            "pronunciation": "/ˈʃæd.əʊ/",
+            "wordForm": "verb",
+            "collocation": "shadow a sentence",
+            "exampleSentence": "Shadow the sentence at a comfortable speed.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Listening",
+            "toeicPart": null,
+            "prompt": "What should you do before opening the transcript?",
+            "supportingText": null,
+            "options": [
+              "read every answer",
+              "translate the page",
+              "listen and answer",
+              "skip the audio"
+            ],
+            "correctOptionIndex": 2,
+            "explanation": "The correct answer is “listen and answer”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E13",
+    "title": "Speaking",
+    "titleThai": "การพูด",
+    "summary": "พัฒนาจาก shadowing สู่การอธิบายกระบวนการและนำเสนอหัวข้อเทคนิค",
+    "phase": "Phase 3",
+    "cefrLevel": "B1",
+    "category": "Speaking",
+    "sortOrder": 13,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "speaking-organization",
+        "title": "Organize a technical explanation with Point, Reason, Example, and Result",
+        "objective": "Organize a technical explanation with Point, Reason, Example, and Result",
+        "thaiExplanation": "ใช้ PREP เป็นโครงช่วยคิด ไม่ต้องเลียนสำเนียงเจ้าของภาษา เป้าหมายคือพูดต่อเนื่องและให้ผู้ฟังตามความคิดได้",
+        "grammarFocus": "ใช้ PREP เป็นโครงช่วยคิด ไม่ต้องเลียนสำเนียงเจ้าของภาษา เป้าหมายคือพูดต่อเนื่องและให้ผู้ฟังตามความคิดได้",
+        "readingContent": "I prefer RAG because it can use external information. For example, it can retrieve company documents. As a result, the answer can be more relevant.",
+        "listeningTranscript": "I prefer RAG because it can use external information. For example, it can retrieve company documents. As a result, the answer can be more relevant.",
+        "speakingPrompt": "Explain this pattern in your own words: I prefer RAG because it can use external information. For example, it can retrieve company documents. As a result, the answer can be more relevant.",
+        "writingPrompt": "Write three new examples based on: I prefer RAG because it can use external information. For example, it can retrieve company documents. As a result, the answer can be more relevant.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "fluency",
+            "thaiMeaning": "ความคล่องต่อเนื่อง",
+            "pronunciation": "/ˈfluː.ən.si/",
+            "wordForm": "noun",
+            "collocation": "improve fluency",
+            "exampleSentence": "Short daily practice can improve fluency.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Speaking",
+            "toeicPart": null,
+            "prompt": "Which phrase introduces an example?",
+            "supportingText": null,
+            "options": [
+              "As a result",
+              "For example",
+              "My point is",
+              "In conclusion"
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “For example”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E14",
+    "title": "Writing",
+    "titleThai": "การเขียน",
+    "summary": "เขียน message, email, summary, technical explanation, bug report และ incident summary",
+    "phase": "Phase 3",
+    "cefrLevel": "B1",
+    "category": "Writing",
+    "sortOrder": 14,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "technical-writing",
+        "title": "Write a clear technical update with status, problem, cause, and next action",
+        "objective": "Write a clear technical update with status, problem, cause, and next action",
+        "thaiExplanation": "ให้แต่ละย่อหน้ามีหน้าที่ชัด เริ่มจากสถานะ ต่อด้วยปัญหาและสาเหตุ แล้วปิดด้วย next action ที่ตรวจสอบได้",
+        "grammarFocus": "ให้แต่ละย่อหน้ามีหน้าที่ชัด เริ่มจากสถานะ ต่อด้วยปัญหาและสาเหตุ แล้วปิดด้วย next action ที่ตรวจสอบได้",
+        "readingContent": "The API is complete. However, the integration test is failing because the seed data is incomplete. I will update the data and rerun the test.",
+        "listeningTranscript": "The API is complete. However, the integration test is failing because the seed data is incomplete. I will update the data and rerun the test.",
+        "speakingPrompt": "Explain this pattern in your own words: The API is complete. However, the integration test is failing because the seed data is incomplete. I will update the data and rerun the test.",
+        "writingPrompt": "Write three new examples based on: The API is complete. However, the integration test is failing because the seed data is incomplete. I will update the data and rerun the test.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "concise",
+            "thaiMeaning": "กระชับ",
+            "pronunciation": "/kənˈsaɪs/",
+            "wordForm": "adjective",
+            "collocation": "clear and concise",
+            "exampleSentence": "Keep the status update clear and concise.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Writing",
+            "toeicPart": null,
+            "prompt": "Which sentence gives a next action?",
+            "supportingText": null,
+            "options": [
+              "The test failed.",
+              "The API is complete.",
+              "The data was incomplete.",
+              "I will update the data and rerun the test."
+            ],
+            "correctOptionIndex": 3,
+            "explanation": "The correct answer is “I will update the data and rerun the test.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E15",
+    "title": "Workplace & Technical English",
+    "titleThai": "ภาษาอังกฤษในที่ทำงานและงานเทคนิค",
+    "summary": "ประชุม รายงานความคืบหน้า อธิบาย blocker review code และนำเสนอ architecture",
+    "phase": "Phase 3",
+    "cefrLevel": "B1",
+    "category": "Workplace",
+    "sortOrder": 15,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "workplace-technical-communication",
+        "title": "Report progress, clarify requirements, and explain a blocker professionally",
+        "objective": "Report progress, clarify requirements, and explain a blocker professionally",
+        "thaiExplanation": "ใช้ประโยคตรงประเด็นและแยก fact ออกจาก assumption หาก requirement ไม่ชัดให้ถามยืนยันก่อนเสนอ estimate",
+        "grammarFocus": "ใช้ประโยคตรงประเด็นและแยก fact ออกจาก assumption หาก requirement ไม่ชัดให้ถามยืนยันก่อนเสนอ estimate",
+        "readingContent": "The implementation is complete, but deployment is blocked by a missing permission. Could you confirm who can approve the access request?",
+        "listeningTranscript": "The implementation is complete, but deployment is blocked by a missing permission. Could you confirm who can approve the access request?",
+        "speakingPrompt": "Explain this pattern in your own words: The implementation is complete, but deployment is blocked by a missing permission. Could you confirm who can approve the access request?",
+        "writingPrompt": "Write three new examples based on: The implementation is complete, but deployment is blocked by a missing permission. Could you confirm who can approve the access request?",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "blocker",
+            "thaiMeaning": "สิ่งที่ขัดขวางงาน",
+            "pronunciation": "/ˈblɒk.ər/",
+            "wordForm": "noun",
+            "collocation": "report a blocker",
+            "exampleSentence": "I need to report one deployment blocker.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Workplace",
+            "toeicPart": null,
+            "prompt": "Which question asks for clarification politely?",
+            "supportingText": null,
+            "options": [
+              "Fix this now.",
+              "You are wrong.",
+              "Could you confirm the expected output?",
+              "No requirement."
+            ],
+            "correctOptionIndex": 2,
+            "explanation": "The correct answer is “Could you confirm the expected output?”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E16",
+    "title": "TOEIC Listening & Reading",
+    "titleThai": "TOEIC การฟังและการอ่าน",
+    "summary": "ฝึก Parts 1–7 แบบจับเวลา พร้อมวิเคราะห์ distractor และจุดอ่อน",
+    "phase": "Phase 3",
+    "cefrLevel": "B1",
+    "category": "Toeic",
+    "sortOrder": 16,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "toeic-listening-reading",
+        "title": "Choose a TOEIC strategy by part and manage time across Parts 1–7",
+        "objective": "Choose a TOEIC strategy by part and manage time across Parts 1–7",
+        "thaiExplanation": "Listening เน้นเดาคำถามและจับ paraphrase ส่วน Reading ให้กำหนดเวลา Part 5–6 เพื่อเหลือเวลาสำหรับ Part 7",
+        "grammarFocus": "Listening เน้นเดาคำถามและจับ paraphrase ส่วน Reading ให้กำหนดเวลา Part 5–6 เพื่อเหลือเวลาสำหรับ Part 7",
+        "readingContent": "The meeting has been postponed until Friday. All participants should review the revised agenda before then.",
+        "listeningTranscript": "The meeting has been postponed until Friday. All participants should review the revised agenda before then.",
+        "speakingPrompt": "Explain this pattern in your own words: The meeting has been postponed until Friday. All participants should review the revised agenda before then.",
+        "writingPrompt": "Write three new examples based on: The meeting has been postponed until Friday. All participants should review the revised agenda before then.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "postpone",
+            "thaiMeaning": "เลื่อนออกไป",
+            "pronunciation": "/pəˈspəʊn/",
+            "wordForm": "verb",
+            "collocation": "postpone a meeting",
+            "exampleSentence": "The team postponed the meeting until Friday.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "TOEIC",
+            "toeicPart": null,
+            "prompt": "The meeting has been ___ until Friday.",
+            "supportingText": null,
+            "options": [
+              "attended",
+              "reviewed",
+              "postponed",
+              "attached"
+            ],
+            "correctOptionIndex": 2,
+            "explanation": "The correct answer is “postponed”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "E17",
+    "title": "TOEIC Speaking & Writing",
+    "titleThai": "TOEIC การพูดและการเขียน",
+    "summary": "เส้นทางเสริมสำหรับอ่านออกเสียง อธิบายภาพ ตอบคำถาม เขียนอีเมล และแสดงความคิดเห็น",
+    "phase": "Phase 3",
+    "cefrLevel": "B2",
+    "category": "Toeic",
+    "sortOrder": 17,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "toeic-speaking-writing",
+        "title": "Respond to a workplace speaking prompt and write a complete email response",
+        "objective": "Respond to a workplace speaking prompt and write a complete email response",
+        "thaiExplanation": "งานพูดต้องตอบตรงและมีรายละเอียดสนับสนุน งานเขียนอีเมลต้องตอบทุกข้อกำหนดพร้อม opening, body และ closing ที่เหมาะสม",
+        "grammarFocus": "งานพูดต้องตอบตรงและมีรายละเอียดสนับสนุน งานเขียนอีเมลต้องตอบทุกข้อกำหนดพร้อม opening, body และ closing ที่เหมาะสม",
+        "readingContent": "Thank you for your message. I can attend the workshop on Tuesday. Could you also confirm whether participants should bring a laptop?",
+        "listeningTranscript": "Thank you for your message. I can attend the workshop on Tuesday. Could you also confirm whether participants should bring a laptop?",
+        "speakingPrompt": "Explain this pattern in your own words: Thank you for your message. I can attend the workshop on Tuesday. Could you also confirm whether participants should bring a laptop?",
+        "writingPrompt": "Write three new examples based on: Thank you for your message. I can attend the workshop on Tuesday. Could you also confirm whether participants should bring a laptop?",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "respond",
+            "thaiMeaning": "ตอบกลับ",
+            "pronunciation": "/rɪˈspɒnd/",
+            "wordForm": "verb",
+            "collocation": "respond to an email",
+            "exampleSentence": "Please respond to every point in the email.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "TOEIC",
+            "toeicPart": null,
+            "prompt": "A complete email response should…",
+            "supportingText": null,
+            "options": [
+              "ignore the request",
+              "address every requested point",
+              "use only one word",
+              "omit the closing"
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “address every requested point”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI02",
+    "title": "LLM Architecture",
+    "titleThai": "สถาปัตยกรรม LLM",
+    "summary": "นิยามองค์ประกอบและอธิบาย flow ของโมเดลด้วย noun phrases",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 102,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "llm-architecture",
+        "title": "Explain the main components of an LLM architecture",
+        "objective": "Explain the main components of an LLM architecture",
+        "thaiExplanation": "เชื่อมความรู้ AI กับภาษา: นิยาม component ด้วย “X is a component that…” และใช้ noun phrases เพื่ออธิบายหน้าที่",
+        "grammarFocus": "A tokenizer converts text into tokens. The model processes those tokens through multiple layers. A decoder predicts the next token.",
+        "readingContent": "First, the tokenizer converts the input into tokens. Next, the model processes the sequence. Finally, the decoder produces output tokens.",
+        "listeningTranscript": "First, the tokenizer converts the input into tokens. Next, the model processes the sequence. Finally, the decoder produces output tokens.",
+        "speakingPrompt": "Give a 60-second explanation of tokenizer, layers, and decoder.",
+        "writingPrompt": "Write a 70-word explanation of an LLM architecture for a junior developer.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "tokenizer",
+            "thaiMeaning": "ตัวแปลงข้อความเป็นโทเคน",
+            "pronunciation": "/ˈtəʊ.kən.aɪ.zər/",
+            "wordForm": "noun",
+            "collocation": "use a tokenizer",
+            "exampleSentence": "The tokenizer converts text into tokens.",
+            "isCritical": true
+          },
+          {
+            "word": "layer",
+            "thaiMeaning": "ชั้นของโมเดล",
+            "pronunciation": "/ˈleɪ.ər/",
+            "wordForm": "noun",
+            "collocation": "neural layer",
+            "exampleSentence": "Each layer transforms the representation.",
+            "isCritical": true
+          },
+          {
+            "word": "predict",
+            "thaiMeaning": "ทำนาย",
+            "pronunciation": "/prɪˈdɪkt/",
+            "wordForm": "verb",
+            "collocation": "predict a token",
+            "exampleSentence": "The model predicts the next token.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "What does a tokenizer do?",
+            "supportingText": null,
+            "options": [
+              "It stores passwords.",
+              "It converts text into tokens.",
+              "It deploys the API.",
+              "It ranks databases."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “It converts text into tokens.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Choose the natural definition.",
+            "supportingText": null,
+            "options": [
+              "A decoder a component produces output.",
+              "A decoder is produce output.",
+              "A decoder is a component that produces output.",
+              "A decoder which output."
+            ],
+            "correctOptionIndex": 2,
+            "explanation": "The correct answer is “A decoder is a component that produces output.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI06",
+    "title": "Prompt Engineering",
+    "titleThai": "วิศวกรรมพรอมป์",
+    "summary": "เขียน prompt ที่มี Goal, Context, Rules และ Output ชัดเจน",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 106,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "prompt-engineering",
+        "title": "Write an unambiguous prompt with constraints and output format",
+        "objective": "Write an unambiguous prompt with constraints and output format",
+        "thaiExplanation": "ใช้ imperative verbs เช่น summarize, classify, return และระบุข้อจำกัดเชิงบวกพร้อมตัวอย่าง output",
+        "grammarFocus": "A strong prompt states the goal, provides context, sets rules, and defines the expected output.",
+        "readingContent": "Summarize the incident in three bullet points. Use only the supplied log. Return valid JSON with summary, cause, and nextAction fields.",
+        "listeningTranscript": "Summarize the incident in three bullet points. Use only the supplied log. Return valid JSON with summary, cause, and nextAction fields.",
+        "speakingPrompt": "Read the prompt aloud, then explain why each constraint is necessary.",
+        "writingPrompt": "Create a prompt that extracts API errors into a JSON array.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "constraint",
+            "thaiMeaning": "ข้อจำกัด",
+            "pronunciation": "/kənˈstreɪnt/",
+            "wordForm": "noun",
+            "collocation": "set a constraint",
+            "exampleSentence": "The prompt includes a length constraint.",
+            "isCritical": true
+          },
+          {
+            "word": "instruction",
+            "thaiMeaning": "คำสั่ง",
+            "pronunciation": "/ɪnˈstrʌk.ʃən/",
+            "wordForm": "noun",
+            "collocation": "follow an instruction",
+            "exampleSentence": "The model should follow the instruction.",
+            "isCritical": true
+          },
+          {
+            "word": "output format",
+            "thaiMeaning": "รูปแบบผลลัพธ์",
+            "pronunciation": "/ˈaʊt.pʊt ˈfɔː.mæt/",
+            "wordForm": "noun phrase",
+            "collocation": "define the output format",
+            "exampleSentence": "Define the output format explicitly.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which prompt is most specific?",
+            "supportingText": null,
+            "options": [
+              "Tell me things.",
+              "Write about the log.",
+              "Analyze it.",
+              "Summarize the supplied log in three bullets and name the likely cause."
+            ],
+            "correctOptionIndex": 3,
+            "explanation": "The correct answer is “Summarize the supplied log in three bullets and name the likely cause.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "A rule that limits an answer is a…",
+            "supportingText": null,
+            "options": [
+              "retrieval",
+              "response",
+              "constraint",
+              "tokenizer"
+            ],
+            "correctOptionIndex": 2,
+            "explanation": "The correct answer is “constraint”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI13",
+    "title": "RAG Architecture",
+    "titleThai": "สถาปัตยกรรม RAG",
+    "summary": "อธิบาย retrieval-to-generation process และการอ้างอิงหลักฐาน",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 113,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "rag-architecture",
+        "title": "Explain a grounded RAG flow from query to answer",
+        "objective": "Explain a grounded RAG flow from query to answer",
+        "thaiExplanation": "RAG ผสาน retrieval กับ generation ภาษาหลักของบทคือ sequence words, passive voice และคำว่า relevant, source, context",
+        "grammarFocus": "In RAG, relevant chunks are retrieved from a knowledge source. They are added to the prompt as context. The model then generates a grounded answer.",
+        "readingContent": "First, the query is converted into an embedding. Next, relevant chunks are retrieved and ranked. Then, the context is sent to the model. Finally, the answer is generated with source references.",
+        "listeningTranscript": "First, the query is converted into an embedding. Next, relevant chunks are retrieved and ranked. Then, the context is sent to the model. Finally, the answer is generated with source references.",
+        "speakingPrompt": "Explain the RAG workflow in 90 seconds using first, next, then, and finally.",
+        "writingPrompt": "Write a technical summary that explains how RAG reduces unsupported answers.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "retrieve",
+            "thaiMeaning": "ค้นและดึงกลับมา",
+            "pronunciation": "/rɪˈtriːv/",
+            "wordForm": "verb",
+            "collocation": "retrieve a document",
+            "exampleSentence": "The system retrieves relevant documents.",
+            "isCritical": true
+          },
+          {
+            "word": "relevant",
+            "thaiMeaning": "เกี่ยวข้องตรงประเด็น",
+            "pronunciation": "/ˈrel.ə.vənt/",
+            "wordForm": "adjective",
+            "collocation": "relevant context",
+            "exampleSentence": "Only relevant context is sent to the model.",
+            "isCritical": true
+          },
+          {
+            "word": "grounded",
+            "thaiMeaning": "ยึดโยงกับหลักฐาน",
+            "pronunciation": "/ˈɡraʊn.dɪd/",
+            "wordForm": "adjective",
+            "collocation": "grounded answer",
+            "exampleSentence": "A grounded answer is supported by a source.",
+            "isCritical": true
+          },
+          {
+            "word": "source",
+            "thaiMeaning": "แหล่งข้อมูล",
+            "pronunciation": "/sɔːs/",
+            "wordForm": "noun",
+            "collocation": "cite a source",
+            "exampleSentence": "The answer cites its source.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "What happens before the model generates a RAG answer?",
+            "supportingText": null,
+            "options": [
+              "The database is deleted.",
+              "Relevant context is retrieved.",
+              "The API is archived.",
+              "The password is displayed."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “Relevant context is retrieved.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Choose the correct passive form.",
+            "supportingText": null,
+            "options": [
+              "Relevant chunks retrieve.",
+              "Relevant chunks are retrieve.",
+              "Relevant chunks are retrieved.",
+              "Relevant chunks retrieved are."
+            ],
+            "correctOptionIndex": 2,
+            "explanation": "The correct answer is “Relevant chunks are retrieved.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI23",
+    "title": "Secure Production Deployment",
+    "titleThai": "การนำระบบขึ้นใช้งานอย่างปลอดภัย",
+    "summary": "นำเสนอ permission, policy, risk และ security checklist เป็นภาษาอังกฤษ",
+    "phase": "AI English",
+    "cefrLevel": "B2",
+    "category": "AiEnglish",
+    "sortOrder": 123,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "secure-production-deployment",
+        "title": "Present a practical security checklist for an AI service",
+        "objective": "Present a practical security checklist for an AI service",
+        "thaiExplanation": "ใช้ must/must not สำหรับข้อบังคับ should สำหรับข้อแนะนำ และ may/might สำหรับความเสี่ยง",
+        "grammarFocus": "Secrets must be stored outside source code. The API should validate every input. Logs must not expose personal data.",
+        "readingContent": "Before deployment, permissions are reviewed and secrets are rotated. Inputs are validated and rate limits are enabled. After release, security logs are monitored.",
+        "listeningTranscript": "Before deployment, permissions are reviewed and secrets are rotated. Inputs are validated and rate limits are enabled. After release, security logs are monitored.",
+        "speakingPrompt": "Present five security checks and explain one risk for each check.",
+        "writingPrompt": "Write a release security checklist for an AI API.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "permission",
+            "thaiMeaning": "สิทธิ์การเข้าถึง",
+            "pronunciation": "/pəˈmɪʃ.ən/",
+            "wordForm": "noun",
+            "collocation": "grant permission",
+            "exampleSentence": "Grant only the required permission.",
+            "isCritical": true
+          },
+          {
+            "word": "secret",
+            "thaiMeaning": "ข้อมูลลับสำหรับระบบ",
+            "pronunciation": "/ˈsiː.krət/",
+            "wordForm": "noun",
+            "collocation": "store a secret",
+            "exampleSentence": "Never store a secret in source code.",
+            "isCritical": true
+          },
+          {
+            "word": "rate limit",
+            "thaiMeaning": "ขีดจำกัดอัตราคำขอ",
+            "pronunciation": "/reɪt ˈlɪm.ɪt/",
+            "wordForm": "noun",
+            "collocation": "enforce a rate limit",
+            "exampleSentence": "The gateway enforces a rate limit.",
+            "isCritical": true
+          },
+          {
+            "word": "expose",
+            "thaiMeaning": "เปิดเผยโดยไม่ควร",
+            "pronunciation": "/ɪkˈspəʊz/",
+            "wordForm": "verb",
+            "collocation": "expose data",
+            "exampleSentence": "Logs must not expose personal data.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which rule is safest?",
+            "supportingText": null,
+            "options": [
+              "Secrets may be committed.",
+              "Logs should contain passwords.",
+              "Secrets must be stored outside source code.",
+              "Every user should be an admin."
+            ],
+            "correctOptionIndex": 2,
+            "explanation": "The correct answer is “Secrets must be stored outside source code.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Use ___ for a mandatory security rule.",
+            "supportingText": null,
+            "options": [
+              "might",
+              "must",
+              "could",
+              "would"
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “must”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI01",
+    "title": "Evolution of AI",
+    "titleThai": "วิวัฒนาการของ AI",
+    "summary": "Past tense, timeline, and change verbs",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 101,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-01-evolution-of-ai",
+        "title": "Explain Evolution of AI clearly in English",
+        "objective": "Explain Evolution of AI clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Past tense, timeline, and change verbs แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Past tense, timeline, and change verbs แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "AI evolved from rule-based systems to data-driven models.",
+        "listeningTranscript": "AI evolved from rule-based systems to data-driven models.",
+        "speakingPrompt": "Explain this pattern in your own words: AI evolved from rule-based systems to data-driven models.",
+        "writingPrompt": "Write three new examples based on: AI evolved from rule-based systems to data-driven models.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "evolution",
+            "thaiMeaning": "วิวัฒนาการ",
+            "pronunciation": "/ˌiː.vəˈluː.ʃən/",
+            "wordForm": "technical term",
+            "collocation": "evolution in context",
+            "exampleSentence": "AI evolved from rule-based systems to data-driven models.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “evolution” in the module context?",
+            "supportingText": null,
+            "options": [
+              "evolution is unrelated to this topic.",
+              "AI evolved from rule-based systems to data-driven models.",
+              "Never explain the evolution.",
+              "evolution has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “AI evolved from rule-based systems to data-driven models.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI03",
+    "title": "Inference Lifecycle",
+    "titleThai": "วงจรการอนุมาน",
+    "summary": "Sequence words, process language, and passive voice",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 103,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-03-inference-lifecycle",
+        "title": "Explain Inference Lifecycle clearly in English",
+        "objective": "Explain Inference Lifecycle clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Sequence words, process language, and passive voice แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Sequence words, process language, and passive voice แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "Inference begins when the service receives an input.",
+        "listeningTranscript": "Inference begins when the service receives an input.",
+        "speakingPrompt": "Explain this pattern in your own words: Inference begins when the service receives an input.",
+        "writingPrompt": "Write three new examples based on: Inference begins when the service receives an input.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "inference",
+            "thaiMeaning": "การอนุมาน",
+            "pronunciation": "/ˈɪn.fər.əns/",
+            "wordForm": "technical term",
+            "collocation": "inference in context",
+            "exampleSentence": "Inference begins when the service receives an input.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “inference” in the module context?",
+            "supportingText": null,
+            "options": [
+              "inference is unrelated to this topic.",
+              "Inference begins when the service receives an input.",
+              "Never explain the inference.",
+              "inference has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “Inference begins when the service receives an input.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI04",
+    "title": "Deterministic vs Stochastic",
+    "titleThai": "กำหนดแน่นอนกับเชิงสุ่ม",
+    "summary": "Compare, contrast, and probability language",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 104,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-04-deterministic-vs-stochastic",
+        "title": "Explain Deterministic vs Stochastic clearly in English",
+        "objective": "Explain Deterministic vs Stochastic clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Compare, contrast, and probability language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Compare, contrast, and probability language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "A deterministic process returns the same result for the same input.",
+        "listeningTranscript": "A deterministic process returns the same result for the same input.",
+        "speakingPrompt": "Explain this pattern in your own words: A deterministic process returns the same result for the same input.",
+        "writingPrompt": "Write three new examples based on: A deterministic process returns the same result for the same input.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "deterministic",
+            "thaiMeaning": "กำหนดผลแน่นอน",
+            "pronunciation": "/dɪˌtɜː.mɪˈnɪs.tɪk/",
+            "wordForm": "technical term",
+            "collocation": "deterministic in context",
+            "exampleSentence": "A deterministic process returns the same result for the same input.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “deterministic” in the module context?",
+            "supportingText": null,
+            "options": [
+              "deterministic is unrelated to this topic.",
+              "A deterministic process returns the same result for the same input.",
+              "Never explain the deterministic.",
+              "deterministic has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “A deterministic process returns the same result for the same input.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI05",
+    "title": "API-First AI",
+    "titleThai": "AI ที่เริ่มจาก API",
+    "summary": "Request/response verbs and endpoint terminology",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 105,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-05-api-first-ai",
+        "title": "Explain API-First AI clearly in English",
+        "objective": "Explain API-First AI clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Request/response verbs and endpoint terminology แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Request/response verbs and endpoint terminology แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "The endpoint accepts a request and returns a structured response.",
+        "listeningTranscript": "The endpoint accepts a request and returns a structured response.",
+        "speakingPrompt": "Explain this pattern in your own words: The endpoint accepts a request and returns a structured response.",
+        "writingPrompt": "Write three new examples based on: The endpoint accepts a request and returns a structured response.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "endpoint",
+            "thaiMeaning": "จุดเชื่อมต่อ API",
+            "pronunciation": "/ˈend.pɔɪnt/",
+            "wordForm": "technical term",
+            "collocation": "endpoint in context",
+            "exampleSentence": "The endpoint accepts a request and returns a structured response.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “endpoint” in the module context?",
+            "supportingText": null,
+            "options": [
+              "endpoint is unrelated to this topic.",
+              "The endpoint accepts a request and returns a structured response.",
+              "Never explain the endpoint.",
+              "endpoint has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “The endpoint accepts a request and returns a structured response.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI07",
+    "title": "Advanced Reasoning",
+    "titleThai": "การให้เหตุผลขั้นสูง",
+    "summary": "Cause, effect, justification, and evidence",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 107,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-07-advanced-reasoning",
+        "title": "Explain Advanced Reasoning clearly in English",
+        "objective": "Explain Advanced Reasoning clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Cause, effect, justification, and evidence แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Cause, effect, justification, and evidence แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "The conclusion should be supported by relevant evidence.",
+        "listeningTranscript": "The conclusion should be supported by relevant evidence.",
+        "speakingPrompt": "Explain this pattern in your own words: The conclusion should be supported by relevant evidence.",
+        "writingPrompt": "Write three new examples based on: The conclusion should be supported by relevant evidence.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "evidence",
+            "thaiMeaning": "หลักฐาน",
+            "pronunciation": "/ˈev.ɪ.dəns/",
+            "wordForm": "technical term",
+            "collocation": "evidence in context",
+            "exampleSentence": "The conclusion should be supported by relevant evidence.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “evidence” in the module context?",
+            "supportingText": null,
+            "options": [
+              "evidence is unrelated to this topic.",
+              "The conclusion should be supported by relevant evidence.",
+              "Never explain the evidence.",
+              "evidence has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “The conclusion should be supported by relevant evidence.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI08",
+    "title": "Structured Outputs",
+    "titleThai": "ผลลัพธ์แบบมีโครงสร้าง",
+    "summary": "JSON fields, data types, and validation language",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 108,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-08-structured-outputs",
+        "title": "Explain Structured Outputs clearly in English",
+        "objective": "Explain Structured Outputs clearly in English",
+        "thaiExplanation": "บทนี้ฝึก JSON fields, data types, and validation language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก JSON fields, data types, and validation language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "The schema defines required fields and data types.",
+        "listeningTranscript": "The schema defines required fields and data types.",
+        "speakingPrompt": "Explain this pattern in your own words: The schema defines required fields and data types.",
+        "writingPrompt": "Write three new examples based on: The schema defines required fields and data types.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "schema",
+            "thaiMeaning": "โครงสร้างข้อมูล",
+            "pronunciation": "/ˈskiː.mə/",
+            "wordForm": "technical term",
+            "collocation": "schema in context",
+            "exampleSentence": "The schema defines required fields and data types.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “schema” in the module context?",
+            "supportingText": null,
+            "options": [
+              "schema is unrelated to this topic.",
+              "The schema defines required fields and data types.",
+              "Never explain the schema.",
+              "schema has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “The schema defines required fields and data types.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI09",
+    "title": "Function & Tool Calling",
+    "titleThai": "การเรียกฟังก์ชันและเครื่องมือ",
+    "summary": "Parameters, conditions, calls, returns, and errors",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 109,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-09-function-and-tool-calling",
+        "title": "Explain Function & Tool Calling clearly in English",
+        "objective": "Explain Function & Tool Calling clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Parameters, conditions, calls, returns, and errors แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Parameters, conditions, calls, returns, and errors แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "Each parameter has a name, type, and purpose.",
+        "listeningTranscript": "Each parameter has a name, type, and purpose.",
+        "speakingPrompt": "Explain this pattern in your own words: Each parameter has a name, type, and purpose.",
+        "writingPrompt": "Write three new examples based on: Each parameter has a name, type, and purpose.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "parameter",
+            "thaiMeaning": "พารามิเตอร์",
+            "pronunciation": "/pəˈræm.ɪ.tər/",
+            "wordForm": "technical term",
+            "collocation": "parameter in context",
+            "exampleSentence": "Each parameter has a name, type, and purpose.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “parameter” in the module context?",
+            "supportingText": null,
+            "options": [
+              "parameter is unrelated to this topic.",
+              "Each parameter has a name, type, and purpose.",
+              "Never explain the parameter.",
+              "parameter has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “Each parameter has a name, type, and purpose.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI10",
+    "title": "Managing LLM Failures",
+    "titleThai": "การจัดการความล้มเหลวของ LLM",
+    "summary": "Troubleshooting and incident language",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 110,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-10-managing-llm-failures",
+        "title": "Explain Managing LLM Failures clearly in English",
+        "objective": "Explain Managing LLM Failures clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Troubleshooting and incident language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Troubleshooting and incident language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "The report describes the failure, impact, cause, and mitigation.",
+        "listeningTranscript": "The report describes the failure, impact, cause, and mitigation.",
+        "speakingPrompt": "Explain this pattern in your own words: The report describes the failure, impact, cause, and mitigation.",
+        "writingPrompt": "Write three new examples based on: The report describes the failure, impact, cause, and mitigation.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "failure",
+            "thaiMeaning": "ความล้มเหลว",
+            "pronunciation": "/ˈfeɪ.ljər/",
+            "wordForm": "technical term",
+            "collocation": "failure in context",
+            "exampleSentence": "The report describes the failure, impact, cause, and mitigation.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “failure” in the module context?",
+            "supportingText": null,
+            "options": [
+              "failure is unrelated to this topic.",
+              "The report describes the failure, impact, cause, and mitigation.",
+              "Never explain the failure.",
+              "failure has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “The report describes the failure, impact, cause, and mitigation.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI11",
+    "title": "Token Optimization",
+    "titleThai": "การปรับใช้โทเคนอย่างเหมาะสม",
+    "summary": "Quantity, measurement, and trade-off language",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 111,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-11-token-optimization",
+        "title": "Explain Token Optimization clearly in English",
+        "objective": "Explain Token Optimization clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Quantity, measurement, and trade-off language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Quantity, measurement, and trade-off language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "The team measured the trade-off between cost and answer quality.",
+        "listeningTranscript": "The team measured the trade-off between cost and answer quality.",
+        "speakingPrompt": "Explain this pattern in your own words: The team measured the trade-off between cost and answer quality.",
+        "writingPrompt": "Write three new examples based on: The team measured the trade-off between cost and answer quality.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "trade-off",
+            "thaiMeaning": "ข้อแลกเปลี่ยน",
+            "pronunciation": "/ˈtreɪd.ɒf/",
+            "wordForm": "technical term",
+            "collocation": "trade-off in context",
+            "exampleSentence": "The team measured the trade-off between cost and answer quality.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “trade-off” in the module context?",
+            "supportingText": null,
+            "options": [
+              "trade-off is unrelated to this topic.",
+              "The team measured the trade-off between cost and answer quality.",
+              "Never explain the trade-off.",
+              "trade-off has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “The team measured the trade-off between cost and answer quality.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI12",
+    "title": "Prompt Chains",
+    "titleThai": "สายโซ่พรอมป์",
+    "summary": "Sequencing, dependencies, and handoffs",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 112,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-12-prompt-chains",
+        "title": "Explain Prompt Chains clearly in English",
+        "objective": "Explain Prompt Chains clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Sequencing, dependencies, and handoffs แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Sequencing, dependencies, and handoffs แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "The second prompt has a dependency on the first output.",
+        "listeningTranscript": "The second prompt has a dependency on the first output.",
+        "speakingPrompt": "Explain this pattern in your own words: The second prompt has a dependency on the first output.",
+        "writingPrompt": "Write three new examples based on: The second prompt has a dependency on the first output.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "dependency",
+            "thaiMeaning": "สิ่งที่ขั้นตอนอื่นต้องพึ่งพา",
+            "pronunciation": "/dɪˈpen.dən.si/",
+            "wordForm": "technical term",
+            "collocation": "dependency in context",
+            "exampleSentence": "The second prompt has a dependency on the first output.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “dependency” in the module context?",
+            "supportingText": null,
+            "options": [
+              "dependency is unrelated to this topic.",
+              "The second prompt has a dependency on the first output.",
+              "Never explain the dependency.",
+              "dependency has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “The second prompt has a dependency on the first output.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI14",
+    "title": "Data Ingestion",
+    "titleThai": "การนำข้อมูลเข้าสู่ระบบ",
+    "summary": "Pipeline verbs and passive voice",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 114,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-14-data-ingestion",
+        "title": "Explain Data Ingestion clearly in English",
+        "objective": "Explain Data Ingestion clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Pipeline verbs and passive voice แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Pipeline verbs and passive voice แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "The pipeline ingests, validates, and transforms source documents.",
+        "listeningTranscript": "The pipeline ingests, validates, and transforms source documents.",
+        "speakingPrompt": "Explain this pattern in your own words: The pipeline ingests, validates, and transforms source documents.",
+        "writingPrompt": "Write three new examples based on: The pipeline ingests, validates, and transforms source documents.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "ingest",
+            "thaiMeaning": "นำข้อมูลเข้า",
+            "pronunciation": "/ɪnˈdʒest/",
+            "wordForm": "technical term",
+            "collocation": "ingest in context",
+            "exampleSentence": "The pipeline ingests, validates, and transforms source documents.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “ingest” in the module context?",
+            "supportingText": null,
+            "options": [
+              "ingest is unrelated to this topic.",
+              "The pipeline ingests, validates, and transforms source documents.",
+              "Never explain the ingest.",
+              "ingest has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “The pipeline ingests, validates, and transforms source documents.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI15",
+    "title": "Chunking Strategies",
+    "titleThai": "กลยุทธ์การแบ่งข้อมูล",
+    "summary": "Comparison, advantages, and limitations",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 115,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-15-chunking-strategies",
+        "title": "Explain Chunking Strategies clearly in English",
+        "objective": "Explain Chunking Strategies clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Comparison, advantages, and limitations แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Comparison, advantages, and limitations แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "Each chunk should preserve enough context for retrieval.",
+        "listeningTranscript": "Each chunk should preserve enough context for retrieval.",
+        "speakingPrompt": "Explain this pattern in your own words: Each chunk should preserve enough context for retrieval.",
+        "writingPrompt": "Write three new examples based on: Each chunk should preserve enough context for retrieval.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "chunk",
+            "thaiMeaning": "ส่วนข้อความที่แบ่งไว้",
+            "pronunciation": "/tʃʌŋk/",
+            "wordForm": "technical term",
+            "collocation": "chunk in context",
+            "exampleSentence": "Each chunk should preserve enough context for retrieval.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “chunk” in the module context?",
+            "supportingText": null,
+            "options": [
+              "chunk is unrelated to this topic.",
+              "Each chunk should preserve enough context for retrieval.",
+              "Never explain the chunk.",
+              "chunk has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “Each chunk should preserve enough context for retrieval.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI16",
+    "title": "Embedding Models",
+    "titleThai": "โมเดล Embedding",
+    "summary": "Abstract definitions and analogy",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 116,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-16-embedding-models",
+        "title": "Explain Embedding Models clearly in English",
+        "objective": "Explain Embedding Models clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Abstract definitions and analogy แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Abstract definitions and analogy แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "An embedding represents semantic meaning as a vector.",
+        "listeningTranscript": "An embedding represents semantic meaning as a vector.",
+        "speakingPrompt": "Explain this pattern in your own words: An embedding represents semantic meaning as a vector.",
+        "writingPrompt": "Write three new examples based on: An embedding represents semantic meaning as a vector.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "embedding",
+            "thaiMeaning": "เวกเตอร์แทนความหมาย",
+            "pronunciation": "/ɪmˈbed.ɪŋ/",
+            "wordForm": "technical term",
+            "collocation": "embedding in context",
+            "exampleSentence": "An embedding represents semantic meaning as a vector.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “embedding” in the module context?",
+            "supportingText": null,
+            "options": [
+              "embedding is unrelated to this topic.",
+              "An embedding represents semantic meaning as a vector.",
+              "Never explain the embedding.",
+              "embedding has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “An embedding represents semantic meaning as a vector.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI17",
+    "title": "Vector Database",
+    "titleThai": "ฐานข้อมูลเวกเตอร์",
+    "summary": "Index, storage, and retrieval vocabulary",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 117,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-17-vector-database",
+        "title": "Explain Vector Database clearly in English",
+        "objective": "Explain Vector Database clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Index, storage, and retrieval vocabulary แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Index, storage, and retrieval vocabulary แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "The database indexes vectors for efficient retrieval.",
+        "listeningTranscript": "The database indexes vectors for efficient retrieval.",
+        "speakingPrompt": "Explain this pattern in your own words: The database indexes vectors for efficient retrieval.",
+        "writingPrompt": "Write three new examples based on: The database indexes vectors for efficient retrieval.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "index",
+            "thaiMeaning": "ดัชนี",
+            "pronunciation": "/ˈɪn.deks/",
+            "wordForm": "technical term",
+            "collocation": "index in context",
+            "exampleSentence": "The database indexes vectors for efficient retrieval.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “index” in the module context?",
+            "supportingText": null,
+            "options": [
+              "index is unrelated to this topic.",
+              "The database indexes vectors for efficient retrieval.",
+              "Never explain the index.",
+              "index has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “The database indexes vectors for efficient retrieval.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI18",
+    "title": "Similarity Search",
+    "titleThai": "การค้นหาความคล้าย",
+    "summary": "Scores, ranking, filtering, and relevance",
+    "phase": "AI English",
+    "cefrLevel": "B1",
+    "category": "AiEnglish",
+    "sortOrder": 118,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-18-similarity-search",
+        "title": "Explain Similarity Search clearly in English",
+        "objective": "Explain Similarity Search clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Scores, ranking, filtering, and relevance แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Scores, ranking, filtering, and relevance แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "Similarity search ranks documents by relevance to the query.",
+        "listeningTranscript": "Similarity search ranks documents by relevance to the query.",
+        "speakingPrompt": "Explain this pattern in your own words: Similarity search ranks documents by relevance to the query.",
+        "writingPrompt": "Write three new examples based on: Similarity search ranks documents by relevance to the query.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "similarity",
+            "thaiMeaning": "ความคล้ายกัน",
+            "pronunciation": "/ˌsɪm.ɪˈlær.ə.ti/",
+            "wordForm": "technical term",
+            "collocation": "similarity in context",
+            "exampleSentence": "Similarity search ranks documents by relevance to the query.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “similarity” in the module context?",
+            "supportingText": null,
+            "options": [
+              "similarity is unrelated to this topic.",
+              "Similarity search ranks documents by relevance to the query.",
+              "Never explain the similarity.",
+              "similarity has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “Similarity search ranks documents by relevance to the query.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI19",
+    "title": "RAG Evaluation",
+    "titleThai": "การประเมิน RAG",
+    "summary": "Criteria, evidence, metrics, and findings",
+    "phase": "AI English",
+    "cefrLevel": "B2",
+    "category": "AiEnglish",
+    "sortOrder": 119,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-19-rag-evaluation",
+        "title": "Explain RAG Evaluation clearly in English",
+        "objective": "Explain RAG Evaluation clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Criteria, evidence, metrics, and findings แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Criteria, evidence, metrics, and findings แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "Each metric measures one aspect of retrieval or answer quality.",
+        "listeningTranscript": "Each metric measures one aspect of retrieval or answer quality.",
+        "speakingPrompt": "Explain this pattern in your own words: Each metric measures one aspect of retrieval or answer quality.",
+        "writingPrompt": "Write three new examples based on: Each metric measures one aspect of retrieval or answer quality.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "metric",
+            "thaiMeaning": "ตัวชี้วัด",
+            "pronunciation": "/ˈmet.rɪk/",
+            "wordForm": "technical term",
+            "collocation": "metric in context",
+            "exampleSentence": "Each metric measures one aspect of retrieval or answer quality.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “metric” in the module context?",
+            "supportingText": null,
+            "options": [
+              "metric is unrelated to this topic.",
+              "Each metric measures one aspect of retrieval or answer quality.",
+              "Never explain the metric.",
+              "metric has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “Each metric measures one aspect of retrieval or answer quality.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI20",
+    "title": "Multi-Agent Systems",
+    "titleThai": "ระบบหลายเอเจนต์",
+    "summary": "Roles, delegation, handoffs, and status",
+    "phase": "AI English",
+    "cefrLevel": "B2",
+    "category": "AiEnglish",
+    "sortOrder": 120,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-20-multi-agent-systems",
+        "title": "Explain Multi-Agent Systems clearly in English",
+        "objective": "Explain Multi-Agent Systems clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Roles, delegation, handoffs, and status แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Roles, delegation, handoffs, and status แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "The coordinator delegates a bounded task to a specialist.",
+        "listeningTranscript": "The coordinator delegates a bounded task to a specialist.",
+        "speakingPrompt": "Explain this pattern in your own words: The coordinator delegates a bounded task to a specialist.",
+        "writingPrompt": "Write three new examples based on: The coordinator delegates a bounded task to a specialist.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "delegate",
+            "thaiMeaning": "มอบหมาย",
+            "pronunciation": "/ˈdel.ɪ.ɡeɪt/",
+            "wordForm": "technical term",
+            "collocation": "delegate in context",
+            "exampleSentence": "The coordinator delegates a bounded task to a specialist.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “delegate” in the module context?",
+            "supportingText": null,
+            "options": [
+              "delegate is unrelated to this topic.",
+              "The coordinator delegates a bounded task to a specialist.",
+              "Never explain the delegate.",
+              "delegate has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “The coordinator delegates a bounded task to a specialist.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI21",
+    "title": "Intelligent Routing",
+    "titleThai": "การกำหนดเส้นทางอัจฉริยะ",
+    "summary": "Conditions and decision language",
+    "phase": "AI English",
+    "cefrLevel": "B2",
+    "category": "AiEnglish",
+    "sortOrder": 121,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-21-intelligent-routing",
+        "title": "Explain Intelligent Routing clearly in English",
+        "objective": "Explain Intelligent Routing clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Conditions and decision language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Conditions and decision language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "The router sends each request to the appropriate model.",
+        "listeningTranscript": "The router sends each request to the appropriate model.",
+        "speakingPrompt": "Explain this pattern in your own words: The router sends each request to the appropriate model.",
+        "writingPrompt": "Write three new examples based on: The router sends each request to the appropriate model.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "route",
+            "thaiMeaning": "กำหนดเส้นทาง",
+            "pronunciation": "/ruːt/",
+            "wordForm": "technical term",
+            "collocation": "route in context",
+            "exampleSentence": "The router sends each request to the appropriate model.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “route” in the module context?",
+            "supportingText": null,
+            "options": [
+              "route is unrelated to this topic.",
+              "The router sends each request to the appropriate model.",
+              "Never explain the route.",
+              "route has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “The router sends each request to the appropriate model.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI22",
+    "title": "API Automation",
+    "titleThai": "ระบบอัตโนมัติผ่าน API",
+    "summary": "Triggers, actions, events, and schedules",
+    "phase": "AI English",
+    "cefrLevel": "B2",
+    "category": "AiEnglish",
+    "sortOrder": 122,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-22-api-automation",
+        "title": "Explain API Automation clearly in English",
+        "objective": "Explain API Automation clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Triggers, actions, events, and schedules แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Triggers, actions, events, and schedules แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "A new event triggers the automation workflow.",
+        "listeningTranscript": "A new event triggers the automation workflow.",
+        "speakingPrompt": "Explain this pattern in your own words: A new event triggers the automation workflow.",
+        "writingPrompt": "Write three new examples based on: A new event triggers the automation workflow.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "trigger",
+            "thaiMeaning": "ตัวกระตุ้น",
+            "pronunciation": "/ˈtrɪɡ.ər/",
+            "wordForm": "technical term",
+            "collocation": "trigger in context",
+            "exampleSentence": "A new event triggers the automation workflow.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “trigger” in the module context?",
+            "supportingText": null,
+            "options": [
+              "trigger is unrelated to this topic.",
+              "A new event triggers the automation workflow.",
+              "Never explain the trigger.",
+              "trigger has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “A new event triggers the automation workflow.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AI24",
+    "title": "Reliability Engineering",
+    "titleThai": "วิศวกรรมความน่าเชื่อถือ",
+    "summary": "Availability, latency, recovery, and incident language",
+    "phase": "AI English",
+    "cefrLevel": "B2",
+    "category": "AiEnglish",
+    "sortOrder": 124,
+    "estimatedMinutes": 25,
+    "isPublished": true,
+    "lessons": [
+      {
+        "slug": "ai-24-reliability-engineering",
+        "title": "Explain Reliability Engineering clearly in English",
+        "objective": "Explain Reliability Engineering clearly in English",
+        "thaiExplanation": "บทนี้ฝึก Availability, latency, recovery, and incident language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "grammarFocus": "บทนี้ฝึก Availability, latency, recovery, and incident language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
+        "readingContent": "The recovery plan restores service after a failure.",
+        "listeningTranscript": "The recovery plan restores service after a failure.",
+        "speakingPrompt": "Explain this pattern in your own words: The recovery plan restores service after a failure.",
+        "writingPrompt": "Write three new examples based on: The recovery plan restores service after a failure.",
+        "estimatedMinutes": 25,
+        "sortOrder": 1,
+        "vocabulary": [
+          {
+            "word": "recovery",
+            "thaiMeaning": "การกู้คืน",
+            "pronunciation": "/rɪˈkʌv.ər.i/",
+            "wordForm": "technical term",
+            "collocation": "recovery in context",
+            "exampleSentence": "The recovery plan restores service after a failure.",
+            "isCritical": true
+          }
+        ],
+        "questions": [
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which sentence uses “recovery” in the module context?",
+            "supportingText": null,
+            "options": [
+              "recovery is unrelated to this topic.",
+              "The recovery plan restores service after a failure.",
+              "Never explain the recovery.",
+              "recovery has no meaning."
+            ],
+            "correctOptionIndex": 1,
+            "explanation": "The correct answer is “The recovery plan restores service after a failure.”. Review the lesson example and try again.",
+            "difficulty": 1,
+            "sortOrder": 1
+          }
+        ]
+      }
+    ]
+  }
+]
