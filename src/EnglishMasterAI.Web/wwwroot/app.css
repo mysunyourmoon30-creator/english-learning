@@ -1,4 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+@font-face {
+    font-family: 'IBM Plex Sans Thai';
+    src: url('/fonts/IBMPlexSansThai-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'IBM Plex Sans Thai';
+    src: url('/fonts/IBMPlexSansThai-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'IBM Plex Sans Thai';
+    src: url('/fonts/IBMPlexSansThai-SemiBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'IBM Plex Sans Thai';
+    src: url('/fonts/IBMPlexSansThai-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Manrope';
+    src: url('/fonts/Manrope-Variable.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 200 800;
+    font-display: swap;
+}
 
 :root {
     --ink: #17332f; --muted: #6d7c74; --line: #dfe6dc; --paper: #fff;
@@ -102,6 +136,13 @@ textarea.form-control { min-height: 9rem; resize: vertical; }
 .feature-strip > div { background:#fff; padding:1.2rem; }
 .feature-strip strong { display:block; font-size:.85rem; margin-bottom:.25rem; }
 .feature-strip span { color:var(--muted); font-size:.74rem; }
+.legal-page { max-width:900px; margin:0 auto; }
+.legal-page > h1 { margin-bottom:.65rem; }
+.legal-lead { color:var(--muted); font-size:1.05rem; line-height:1.8; margin-bottom:1.5rem; }
+.legal-page section + section { margin-top:1rem; }
+.legal-page section p,.legal-page section li { color:#4c6059; line-height:1.8; }
+.legal-page section ul { margin-bottom:0; }
+.legal-updated { color:var(--muted); font-size:.78rem; margin-top:1.25rem; }
 @keyframes spin { to { transform:rotate(360deg); } }
 @media(max-width:1050px) { .grid-4 {grid-template-columns:repeat(2,1fr)} .split-layout{grid-template-columns:1fr}.sticky-panel{position:static}.hero{grid-template-columns:1fr}.hero-panel{max-width:650px} }
 @media(max-width:760px) { .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}.page-header{align-items:flex-start;flex-direction:column}.feature-strip{grid-template-columns:repeat(2,1fr)}.hero{min-height:auto;padding:2rem 0}.hero-panel{box-shadow:.65rem .65rem 0 #e4a93e}.word-table{display:block;overflow-x:auto}.module-grid{grid-template-columns:1fr} }

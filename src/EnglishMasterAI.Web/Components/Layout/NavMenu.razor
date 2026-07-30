@@ -11,9 +11,13 @@
     </div>
 </div>
 
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+<button type="button"
+        class="navbar-toggler"
+        aria-label="เปิดหรือปิดเมนูนำทาง"
+        aria-expanded="@_menuOpen"
+        @onclick="ToggleMenu"></button>
 
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+<div class="nav-scrollable @(_menuOpen ? "open" : null)" @onclick="CloseMenu">
     <nav class="nav flex-column">
         <AuthorizeView>
             <Authorized>
@@ -77,6 +81,7 @@
 
 @code {
     private string? currentUrl;
+    private bool _menuOpen;
 
     protected override void OnInitialized()
     {
@@ -87,8 +92,13 @@
     private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
     {
         currentUrl = NavigationManager.ToBaseRelativePath(e.Location);
+        _menuOpen = false;
         StateHasChanged();
     }
+
+    private void ToggleMenu() => _menuOpen = !_menuOpen;
+
+    private void CloseMenu() => _menuOpen = false;
 
     public void Dispose()
     {

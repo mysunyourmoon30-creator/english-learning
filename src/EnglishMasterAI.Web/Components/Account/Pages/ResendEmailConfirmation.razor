@@ -12,10 +12,10 @@
 @inject NavigationManager NavigationManager
 @inject IdentityRedirectManager RedirectManager
 
-<PageTitle>Resend email confirmation</PageTitle>
+<PageTitle>ส่งอีเมลยืนยันอีกครั้ง | EnglishMaster AI</PageTitle>
 
-<h1>Resend email confirmation</h1>
-<h2>Enter your email.</h2>
+<h1>ส่งอีเมลยืนยันอีกครั้ง</h1>
+<p>กรอกอีเมลที่ใช้สมัครสมาชิก</p>
 <hr />
 <StatusMessage Message="@message" />
 <div class="row">
@@ -28,7 +28,7 @@
                 <label for="Input.Email" class="form-label">Email</label>
                 <ValidationMessage For="() => Input.Email" class="text-danger" />
             </div>
-            <button type="submit" class="w-100 btn btn-lg btn-primary">Resend</button>
+            <button type="submit" class="w-100 btn btn-lg btn-primary">ส่งอีเมลยืนยัน</button>
         </EditForm>
     </div>
 </div>
@@ -46,7 +46,7 @@
         var user = await UserManager.FindByEmailAsync(Input.Email!);
         if (user is null)
         {
-            message = "Verification email sent. Please check your email.";
+            message = "หากอีเมลนี้อยู่ในระบบ เราได้ส่งอีเมลยืนยันให้แล้ว";
             return;
         }
 
@@ -58,7 +58,7 @@
             new Dictionary<string, object?> { ["userId"] = userId, ["code"] = code });
         await EmailSender.SendConfirmationLinkAsync(user, Input.Email, HtmlEncoder.Default.Encode(callbackUrl));
 
-        message = "Verification email sent. Please check your email.";
+        message = "ส่งอีเมลยืนยันแล้ว กรุณาตรวจสอบกล่องจดหมาย";
     }
 
     private sealed class InputModel

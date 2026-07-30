@@ -8,25 +8,25 @@
 @inject IdentityRedirectManager RedirectManager
 @inject ILogger<Disable2fa> Logger
 
-<PageTitle>Disable two-factor authentication (2FA)</PageTitle>
+<PageTitle>ปิดการยืนยันตัวตนสองขั้นตอน | EnglishMaster AI</PageTitle>
 
 <StatusMessage />
-<h3>Disable two-factor authentication (2FA)</h3>
+<h3>ปิดการยืนยันตัวตนสองขั้นตอน (2FA)</h3>
 
 <div class="alert alert-warning" role="alert">
     <p>
-        <strong>This action only disables 2FA.</strong>
+        <strong>การดำเนินการนี้จะปิด 2FA เท่านั้น</strong>
     </p>
     <p>
-        Disabling 2FA does not change the keys used in authenticator apps. If you wish to change the key
-        used in an authenticator app you should <a href="Account/Manage/ResetAuthenticator">reset your authenticator keys.</a>
+        การปิด 2FA จะไม่เปลี่ยนคีย์ในแอป Authenticator หากต้องการเปลี่ยนคีย์
+        ให้ <a href="Account/Manage/ResetAuthenticator">รีเซ็ตคีย์ Authenticator</a>
     </p>
 </div>
 
 <div>
     <form @formname="disable-2fa" @onsubmit="OnSubmitAsync" method="post">
         <AntiforgeryToken />
-        <button class="btn btn-danger" type="submit">Disable 2FA</button>
+        <button class="btn btn-danger" type="submit">ปิด 2FA</button>
     </form>
 </div>
 
@@ -58,7 +58,7 @@
         Logger.LogInformation("User with ID '{UserId}' has disabled 2fa.", userId);
         RedirectManager.RedirectToWithStatus(
             "Account/Manage/TwoFactorAuthentication",
-            "2fa has been disabled. You can reenable 2fa when you setup an authenticator app",
+            "ปิด 2FA แล้ว คุณสามารถเปิดใช้งานอีกครั้งได้เมื่อตั้งค่าแอป Authenticator",
             HttpContext);
     }
 }

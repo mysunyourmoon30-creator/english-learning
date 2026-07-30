@@ -2,24 +2,24 @@
 
 @inject IdentityUserAccessor UserAccessor
 
-<PageTitle>Personal Data</PageTitle>
+<PageTitle>ข้อมูลส่วนบุคคล | EnglishMaster AI</PageTitle>
 
 <StatusMessage />
-<h3>Personal Data</h3>
+<h3>ข้อมูลส่วนบุคคล</h3>
 
 <div class="row">
     <div class="col-md-6">
-        <p>Your account contains identity data, learning progress, assessments, writing, and speaking transcripts. This page allows you to download or delete all of that data.</p>
-        <p>Raw speaking audio is processed in memory and is not retained.</p>
+        <p>บัญชีประกอบด้วยข้อมูลระบุตัวตน ความคืบหน้า ผลประเมิน งานเขียน และ transcript การพูด คุณสามารถดาวน์โหลดหรือลบข้อมูลทั้งหมดได้จากหน้านี้</p>
+        <p>ไฟล์เสียงดิบประมวลผลในหน่วยความจำและไม่ถูกเก็บไว้โดยค่าเริ่มต้น</p>
         <p>
-            <strong>Deleting this data will permanently remove your account, and this cannot be recovered.</strong>
+            <strong>การลบข้อมูลจะปิดบัญชีอย่างถาวรและไม่สามารถกู้คืนได้</strong>
         </p>
         <form action="Account/Manage/DownloadPersonalData" method="post">
             <AntiforgeryToken />
-            <button class="btn btn-primary" type="submit">Download</button>
+            <button class="btn btn-primary" type="submit">ดาวน์โหลดข้อมูล</button>
         </form>
         <p>
-            <a href="Account/Manage/DeletePersonalData" class="btn btn-danger">Delete</a>
+            <a href="Account/Manage/DeletePersonalData" class="btn btn-danger">ลบบัญชีและข้อมูล</a>
         </p>
     </div>
 </div>
