@@ -42,6 +42,24 @@ jobs:
         with:
           dotnet-version: 10.0.x
 
+      # pg_dump refuses to dump from a server newer than itself, and the runner
+      # ships a 16.x client. Keep this major version in step with the postgres
+      # service image above.
+      - name: Install PostgreSQL 17 client
+        run: |
+          sudo install -d /usr/share/postgresql-common/pgdg
+          sudo curl --fail --silent --show-error \
+            -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc \
+            https://www.postgresql.org/media/keys/ACCC4CF8.asc
+          echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" \
+            | sudo tee /etc/apt/sources.list.d/pgdg.list > /dev/null
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends postgresql-client-17
+          # Bare `pg_dump --version` reports the wrapper default (16), not what
+          # runs against the service; pg_wrapper picks the client by server
+          # version at connect time. Assert the 17 binary itself is present.
+          /usr/lib/postgresql/17/bin/pg_dump --version
+
       - name: Restore tools and packages
         run: |
           dotnet tool restore
