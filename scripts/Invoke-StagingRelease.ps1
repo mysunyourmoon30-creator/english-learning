@@ -6,6 +6,8 @@ param(
     [string]$ComposeFile,
     [uri]$BaseUri = 'http://127.0.0.1:8080',
     [switch]$RunBackupRestoreDrill,
+    [switch]$RunDatabaseFailureDrill,
+    [string]$EvidencePath,
     [switch]$ConfirmDeploy
 )
 
@@ -29,6 +31,12 @@ if (-not [string]::IsNullOrWhiteSpace($PreviousImage) -and
 
 $composePath = (Resolve-Path -LiteralPath $ComposeFile).Path
 $repositoryRoot = Split-Path $PSScriptRoot -Parent
+if ([string]::IsNullOrWhiteSpace($EvidencePath)) {
+    $EvidencePath = Join-Path $repositoryRoot 'artifacts\staging\latest.json'
+}
+elseif (-not [System.IO.Path]::IsPathRooted($EvidencePath)) {
+    $EvidencePath = Join-Path $repositoryRoot $EvidencePath
+}
 $env:APP_IMAGE = $AppImage
 
 function Wait-Ready {
@@ -76,6 +84,12 @@ try {
         Wait-Ready
         & (Join-Path $PSScriptRoot 'Test-ReadinessUnderLoad.ps1') `
             -BaseUri $BaseUri
+        if ($RunDatabaseFailureDrill) {
+            & (Join-Path $PSScriptRoot 'Invoke-DatabaseFailureDrill.ps1') `
+                -ComposeFile $composePath `
+                -ReadinessUri ([uri]::new($BaseUri, '/health/ready')) `
+                -ConfirmDisruption
+        }
     }
     catch {
         if ([string]::IsNullOrWhiteSpace($PreviousImage)) {
@@ -96,4 +110,19 @@ finally {
     Pop-Location
 }
 
-Write-Output "Staging release passed migration, readiness, and load smoke checks."
+$evidenceDirectory = Split-Path -Parent $EvidencePath
+New-Item -ItemType Directory -Path $evidenceDirectory -Force | Out-Null
+[ordered]@{
+    schemaVersion = 1
+    passedAtUtc = [DateTimeOffset]::UtcNow.ToString('O')
+    appImage = $AppImage
+    baseUri = $BaseUri.AbsoluteUri
+    migrationPassed = $true
+    readinessLoadPassed = $true
+    backupRestoreDrillPassed = [bool]$RunBackupRestoreDrill
+    databaseFailureDrillPassed = [bool]$RunDatabaseFailureDrill
+} | ConvertTo-Json | Set-Content -LiteralPath $EvidencePath -Encoding utf8
+
+Write-Output (
+    "Staging release passed migration, readiness, load smoke, and requested drills. " +
+    "Evidence: $EvidencePath")
