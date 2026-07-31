@@ -99,17 +99,27 @@ public sealed class LearningService(
         var totalLessons = modules.Sum(x => x.TotalLessons);
         var completedLessons = modules.Sum(x => x.CompletedLessons);
         var now = DateTimeOffset.UtcNow;
-        var reviewTimes = await db.ReviewSchedules
+        // SQLite cannot translate DateTimeOffset comparisons, so it filters
+        // after materialising; PostgreSQL can, so it does the work in the
+        // database. Same split as AiUsageService and LearningEngagementService.
+        var reviewSchedules = db.ReviewSchedules
             .AsNoTracking()
-            .Where(x => x.UserId == userId)
-            .Select(x => x.NextReviewAt)
-            .ToListAsync();
-        var dueReviews = reviewTimes.Count(x => x <= now);
-        var placementAttempts = await db.PlacementAttempts
+            .Where(x => x.UserId == userId);
+        var dueReviews = db.Database.IsSqlite()
+            ? (await reviewSchedules.Select(x => x.NextReviewAt).ToListAsync())
+                .Count(x => x <= now)
+            : await reviewSchedules.CountAsync(x => x.NextReviewAt <= now);
+
+        var placementAttempts = db.PlacementAttempts
             .AsNoTracking()
-            .Where(x => x.UserId == userId && x.AssessmentName == "Placement")
-            .ToListAsync();
-        var lastPlacement = placementAttempts.OrderByDescending(x => x.CompletedAt).FirstOrDefault();
+            .Where(x => x.UserId == userId && x.AssessmentName == "Placement");
+        var lastPlacement = db.Database.IsSqlite()
+            ? (await placementAttempts.ToListAsync())
+                .OrderByDescending(x => x.CompletedAt)
+                .FirstOrDefault()
+            : await placementAttempts
+                .OrderByDescending(x => x.CompletedAt)
+                .FirstOrDefaultAsync();
 
         var weakAreas = lastPlacement is null
             ? new List<string> { "Placement test ยังไม่เสร็จ", "Core vocabulary", "Sentence structure" }
