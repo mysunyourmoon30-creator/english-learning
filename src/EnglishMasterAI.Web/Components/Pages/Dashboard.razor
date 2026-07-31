@@ -154,19 +154,6 @@ else
     </section>
 }
 
-<style>
-    .task-icon{width:2.4rem;height:2.4rem;border-radius:.75rem;display:grid;place-items:center;background:#edf4ef;color:#1d766c;font-weight:800}
-    .task-icon.ai{background:#fff3d8;color:#8a5e11}.task-icon.listening{background:#e8f1f7;color:#356582}
-    .focus-list{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;gap:.7rem}
-    .focus-list li{display:flex;gap:.7rem;align-items:center;padding:.75rem;background:#f7f9f6;border-radius:.7rem}
-    .focus-list span{width:1.6rem;height:1.6rem;display:grid;place-items:center;border-radius:.5rem;background:#17332f;color:#fff;font-size:.7rem}
-    .weekly-bars{height:125px;display:grid;grid-template-columns:repeat(7,1fr);align-items:end;gap:.55rem}
-    .weekly-bars>div{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:.35rem}
-    .weekly-bars span{display:block;width:100%;max-width:2rem;background:linear-gradient(180deg,#e4a93e,#1d766c);border-radius:.45rem .45rem .2rem .2rem}
-    .weekly-bars small{font-size:.6rem;color:#6d7c74}.achievement-list{display:grid;gap:.55rem}.achievement-list>div{display:flex;gap:.7rem;padding:.7rem;background:#f7f9f6;border-radius:.7rem}
-    .achievement-list>div>span{color:#d18f20;font-size:1.1rem}.achievement-list p,.achievement-list strong,.achievement-list small{display:block;margin:0}.achievement-list small{color:#6d7c74;margin-top:.15rem}
-</style>
-
 @code {
     // Carried from the prerender pass so the interactive pass does not repeat
     // the query. Without this the page loads its data twice on every view.
