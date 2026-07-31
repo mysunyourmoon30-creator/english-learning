@@ -5,7 +5,7 @@
 
 <PageTitle>Dashboard | EnglishMaster AI</PageTitle>
 
-@if (_data is null)
+@if (Data is null)
 {
     <div class="loading"><div class="spinner"></div></div>
 }
@@ -14,20 +14,20 @@ else
     <div class="page-header">
         <div>
             <div class="eyebrow">PERSONAL LEARNING DASHBOARD</div>
-            <h1>สวัสดี @_data.Profile.DisplayName</h1>
+            <h1>สวัสดี @Data.Profile.DisplayName</h1>
             <p>วันนี้เดินหน้าทีละช่วงสั้น ๆ ให้ครบทั้ง input, practice และ output</p>
         </div>
         <div>
-            <span class="tag gold">🔥 @_data.Profile.CurrentStreak วันต่อเนื่อง</span>
+            <span class="tag gold">🔥 @Data.Profile.CurrentStreak วันต่อเนื่อง</span>
         </div>
     </div>
 
-    @if (!_data.Profile.OnboardingCompleted || !_data.Profile.PlacementCompleted)
+    @if (!Data.Profile.OnboardingCompleted || !Data.Profile.PlacementCompleted)
     {
         <div class="callout mb-4">
             <p>
                 <strong>ตั้งค่าระบบให้ครบเพื่อรับแผนส่วนตัว:</strong>
-                @if (!_data.Profile.OnboardingCompleted)
+                @if (!Data.Profile.OnboardingCompleted)
                 {
                     <a href="/onboarding">ตั้งเป้าหมาย</a>
                 }
@@ -40,19 +40,19 @@ else
     }
 
     <section class="grid-4">
-        <div class="surface stat-card"><small>ระดับปัจจุบัน</small><strong>@_data.Profile.CurrentCefr</strong><span>เป้าหมาย @_data.Profile.TargetCefr</span></div>
-        <div class="surface stat-card"><small>ความคืบหน้ารวม</small><strong>@_data.OverallProgress%</strong><div class="progress"><div class="progress-bar" style="@($"width:{_data.OverallProgress}%")"></div></div></div>
-        <div class="surface stat-card"><small>บทเรียนที่ผ่าน</small><strong>@_data.CompletedLessons/@_data.TotalLessons</strong><span>เกณฑ์ผ่าน quiz ≥ 80%</span></div>
-        <div class="surface stat-card"><small>ถึงเวลาทบทวน</small><strong>@_data.DueReviews</strong><a href="/review" class="small text-decoration-none">เปิด SRS queue →</a></div>
+        <div class="surface stat-card"><small>ระดับปัจจุบัน</small><strong>@Data.Profile.CurrentCefr</strong><span>เป้าหมาย @Data.Profile.TargetCefr</span></div>
+        <div class="surface stat-card"><small>ความคืบหน้ารวม</small><strong>@Data.OverallProgress%</strong><div class="progress"><div class="progress-bar" style="@($"width:{Data.OverallProgress}%")"></div></div></div>
+        <div class="surface stat-card"><small>บทเรียนที่ผ่าน</small><strong>@Data.CompletedLessons/@Data.TotalLessons</strong><span>เกณฑ์ผ่าน quiz ≥ 80%</span></div>
+        <div class="surface stat-card"><small>ถึงเวลาทบทวน</small><strong>@Data.DueReviews</strong><a href="/review" class="small text-decoration-none">เปิด SRS queue →</a></div>
     </section>
 
     <div class="grid-2 mt-4">
         <section class="surface surface-pad">
             <div class="section-title mt-0">
-                <div><div class="eyebrow">TODAY · @_data.Profile.DailyMinutes MINUTES</div><h2>แผนเรียนวันนี้</h2></div>
+                <div><div class="eyebrow">TODAY · @Data.Profile.DailyMinutes MINUTES</div><h2>แผนเรียนวันนี้</h2></div>
             </div>
             <ul class="list-clean">
-                @foreach (var task in _data.DailyPlan)
+                @foreach (var task in Data.DailyPlan)
                 {
                     <li>
                         <a href="@task.Url" class="d-flex align-items-center gap-3 py-3 text-decoration-none text-reset">
@@ -69,9 +69,9 @@ else
             <h2>จุดที่ควรพัฒนาก่อน</h2>
             <p class="text-secondary small">เรียงจากผล Placement Test ล่าสุด และจะปรับเมื่อมีข้อมูลใหม่</p>
             <ol class="focus-list">
-                @for (var i = 0; i < _data.WeakAreas.Count; i++)
+                @for (var i = 0; i < Data.WeakAreas.Count; i++)
                 {
-                    <li><span>@(i + 1)</span><strong>@_data.WeakAreas[i]</strong></li>
+                    <li><span>@(i + 1)</span><strong>@Data.WeakAreas[i]</strong></li>
                 }
             </ol>
             <a class="btn btn-outline-primary w-100 mt-3" href="/placement">ทำ Placement ใหม่</a>
@@ -83,12 +83,12 @@ else
             <div class="eyebrow">LAST 7 DAYS</div>
             <div class="d-flex justify-content-between align-items-end gap-3">
                 <div>
-                    <h2 class="mb-1">@_data.WeeklyProgress.Minutes นาที</h2>
+                    <h2 class="mb-1">@Data.WeeklyProgress.Minutes นาที</h2>
                     <small class="text-secondary">
-                        @_data.WeeklyProgress.ActivityCount กิจกรรม · @_data.WeeklyProgress.Points XP
+                        @Data.WeeklyProgress.ActivityCount กิจกรรม · @Data.WeeklyProgress.Points XP
                     </small>
                 </div>
-                <span class="tag">@_data.WeeklyProgress.LessonsCompleted บทเรียน</span>
+                <span class="tag">@Data.WeeklyProgress.LessonsCompleted บทเรียน</span>
             </div>
             @{
                 // Scale against the daily goal, or the week's best day when that
@@ -96,18 +96,18 @@ else
                 // minutes, so a learner meeting a 60 minute goal saw seven
                 // identical full-height bars and learned nothing from the chart.
                 var barScale = Math.Max(
-                    Math.Max(1, _data.Profile.DailyMinutes),
-                    _data.WeeklyProgress.Days.Count == 0
+                    Math.Max(1, Data.Profile.DailyMinutes),
+                    Data.WeeklyProgress.Days.Count == 0
                         ? 0
-                        : _data.WeeklyProgress.Days.Max(x => x.Minutes));
+                        : Data.WeeklyProgress.Days.Max(x => x.Minutes));
             }
             <div class="weekly-bars mt-3" aria-label="กิจกรรมการเรียนเจ็ดวันล่าสุด">
-                @foreach (var day in _data.WeeklyProgress.Days)
+                @foreach (var day in Data.WeeklyProgress.Days)
                 {
                     var height = day.Minutes <= 0
                         ? 6
                         : (int)Math.Round(Math.Max(10d, 100d * day.Minutes / barScale));
-                    <div title="@($"{day.Date:dd MMM}: {day.Minutes} นาที (เป้าหมาย {_data.Profile.DailyMinutes} นาที)")">
+                    <div title="@($"{day.Date:dd MMM}: {day.Minutes} นาที (เป้าหมาย {Data.Profile.DailyMinutes} นาที)")">
                         <span style="@($"height:{height}px")"></span>
                         <small>@day.Date.ToString("ddd")</small>
                     </div>
@@ -117,14 +117,14 @@ else
         <section class="surface surface-pad">
             <div class="eyebrow">ACHIEVEMENTS</div>
             <h2>ความสำเร็จล่าสุด</h2>
-            @if (_data.Achievements.Count == 0)
+            @if (Data.Achievements.Count == 0)
             {
                 <p class="text-secondary small">ทำกิจกรรมแรกเพื่อปลดล็อก badge</p>
             }
             else
             {
                 <div class="achievement-list">
-                    @foreach (var achievement in _data.Achievements.Take(4))
+                    @foreach (var achievement in Data.Achievements.Take(4))
                     {
                         <div>
                             <span aria-hidden="true">★</span>
@@ -141,7 +141,7 @@ else
         <a href="/roadmap">ดู Roadmap ทั้งหมด →</a>
     </div>
     <section class="module-grid">
-        @foreach (var module in _data.ContinueModules)
+        @foreach (var module in Data.ContinueModules)
         {
             <a class="surface module-card" href="@(module.FirstLessonSlug is null ? "/learn" : $"/lessons/{module.FirstLessonSlug}")">
                 <div class="module-code"><span>@module.Code · @module.CefrLevel</span><span class="tag">@module.ProgressPercent%</span></div>
@@ -168,11 +168,20 @@ else
 </style>
 
 @code {
-    private DashboardData? _data;
+    // Carried from the prerender pass so the interactive pass does not repeat
+    // the query. Without this the page loads its data twice on every view.
+    [PersistentState]
+    public DashboardData? Data { get; set; }
+
     protected override async Task OnInitializedAsync()
     {
+        if (Data is not null)
+        {
+            return;
+        }
+
         var userId = await CurrentUser.GetRequiredUserIdAsync();
-        _data = await Learning.GetDashboardAsync(userId);
+        Data = await Learning.GetDashboardAsync(userId);
     }
 
     private static string TaskIcon(string kind) => kind switch
