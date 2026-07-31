@@ -19,7 +19,10 @@
         <div class="eyebrow">PROMPT</div>
         <h2>@_prompt</h2>
         <label class="form-label mt-3" for="writing">Your response</label>
-        <textarea id="writing" class="form-control writing-area" @bind="_content" placeholder="Current status: The API implementation is complete…"></textarea>
+@* Binds per keystroke so the word count and the submit button track what the
+   learner has actually typed. The default change event only commits on blur,
+   which left the button greyed out under a finished paragraph. *@
+        <textarea id="writing" class="form-control writing-area" @bind="_content" @bind:event="oninput" placeholder="Current status: The API implementation is complete…"></textarea>
         <div class="d-flex justify-content-between align-items-center mt-2">
             <small class="text-secondary">@WordCount words</small>
             <button class="btn btn-primary" disabled="@(WordCount < 5 || _evaluating)" @onclick="EvaluateAsync">

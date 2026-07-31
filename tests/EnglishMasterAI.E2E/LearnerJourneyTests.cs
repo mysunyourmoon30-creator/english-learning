@@ -57,14 +57,10 @@ public sealed class LearnerJourneyTests
             await page.GotoAsync("/practice/writing");
             var writingInput = page.Locator("#writing");
             var writingSubmit = page.Locator("section.surface button.btn-primary");
-            await writingInput.FillAsync(
+            await FillUntilEnabledAsync(
+                writingInput,
+                writingSubmit,
                 "The API implementation is complete. However, the integration test is failing because the seed data is incomplete. I will update the data and rerun the tests.");
-            // The textarea binds on change, and the interactive circuit attaches
-            // its handler only once the websocket is up, which happens after the
-            // page renders. A single change event can land in that gap and be
-            // lost for good, leaving the submit button disabled on a zero word
-            // count, so re-fire it until the binding actually commits.
-            await RetryUntilEnabledAsync(writingInput, writingSubmit);
             await writingSubmit.ClickAsync();
             await Assertions.Expect(page.Locator(".feedback-score")).ToBeVisibleAsync(
                 new() { Timeout = 30_000 });
@@ -153,15 +149,26 @@ public sealed class LearnerJourneyTests
         });
     }
 
-    private static async Task RetryUntilEnabledAsync(
+    /// <summary>
+    /// Types into a bound field until the control it gates becomes enabled.
+    /// Interactive server components are not wired until the circuit connects,
+    /// and anything written before that is discarded by Blazor's first render,
+    /// so both the value and the event that commits it have to be repeated.
+    /// </summary>
+    private static async Task FillUntilEnabledAsync(
         ILocator boundInput,
         ILocator dependentButton,
+        string text,
         int timeoutSeconds = 30)
     {
         var deadline = DateTimeOffset.UtcNow.AddSeconds(timeoutSeconds);
         while (DateTimeOffset.UtcNow < deadline
             && await dependentButton.IsDisabledAsync())
         {
+            await boundInput.FillAsync(text);
+            // Fire both so this keeps working whether the field binds on input
+            // or on the default change event.
+            await boundInput.DispatchEventAsync("input");
             await boundInput.DispatchEventAsync("change");
             await boundInput.Page.WaitForTimeoutAsync(500);
         }
