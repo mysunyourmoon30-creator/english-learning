@@ -14,7 +14,7 @@
 | TOEIC production media gate | ระบบเสร็จ; รอ content จริง | release ถูกบล็อกจนมี human audio 100 ชิ้น, Part 1 images 6 ภาพ, license และ expert approval |
 | Scheduled/live release AI evaluation | gate เสร็จ; รอ secret จริง | fixed dataset, model-as-judge, prompt-injection/hallucination/cost gates; tag release จะ fail ถ้าไม่มี secret/report ผ่าน |
 | Supply-chain hardening | เสร็จใน repo | Actions pin ด้วย SHA, Trivy, SPDX SBOM, attestations, Cosign, immutable digest |
-| GitHub repository settings | เกือบครบ | repo เป็น public แล้ว; Dependabot, secret scanning, push protection และ code scanning ทำงาน; เหลือ branch protection ที่ยังไม่ได้ตั้ง |
+| GitHub repository settings | เสร็จ | repo เป็น public; Dependabot, secret scanning, push protection, code scanning และ branch protection บน main ทำงานครบ |
 | Licensing | เสร็จ | Apache 2.0 สำหรับโค้ด, `NOTICE` สงวนสิทธิ์เนื้อหาหลักสูตร, ใบอนุญาตฟอนต์และ Bootstrap ครบ |
 | Multi-instance foundation | เสร็จ | Redis rate limit, Redis Data Protection keys, Redis readiness, Azure Blob audio store |
 | Reverse proxy / CSP / legal launch boundary | เสร็จระดับโค้ด | trusted forwarded headers, nonce CSP, self-hosted fonts, Privacy/Terms และ consent evidence |
@@ -183,8 +183,20 @@ forward-compatible migration เป็นค่าเริ่มต้น แ�
   สามารถถูก commit ได้
 - [x] ยืนยันว่า Trivy gate ทำงานตามที่ตั้งใจจริง ก่อนหน้านี้ `severity` ถูกทิ้งเพราะ
   `format: sarif` ทำให้ build แดงจาก CVE ระดับ MEDIUM/LOW แทน HIGH/CRITICAL
-- [ ] ตั้ง branch protection และ required checks — ตอนนี้ทำได้แล้วเพราะ repo เป็น
-  public แต่ยังไม่ได้ตั้ง (`/branches/main/protection` ตอบ `Branch not protected`)
+- [x] ตั้ง branch protection บน main แล้ว: เข้า main ต้องผ่าน PR, required checks
+  ครบสี่ตัว (`verify`, `integration`, `learner-journey`, `analyze`), branch ต้อง
+  ทันสมัยกับ main ก่อน merge, ห้าม force push และห้ามลบ branch
+
+`Configure-GitHubSecurity.ps1` ยังตั้ง `required_approving_review_count = 1` และ
+`require_last_push_approval = true` ซึ่งใช้กับ repo ที่มี collaborator คนเดียวไม่ได้
+เพราะ GitHub ไม่ให้อนุมัติ PR ของตัวเอง เมื่อรวมกับ `enforce_admins = true` จะ merge
+อะไรไม่ได้เลย ค่าที่ตั้งจริงจึงใช้ `required_approving_review_count = 0` และไม่ใช้
+`require_last_push_approval` — ยังบังคับ PR และ required checks เหมือนเดิม แต่เจ้าของ
+merge งานตัวเองได้ ถ้าวันหนึ่งมีผู้ร่วมพัฒนาเพิ่ม ควรยกกลับเป็น 1
+
+`enforce_admins = true` แปลว่าไม่มีทางเลี่ยงแม้แต่เจ้าของ ถ้า check ตัวใดค้างหรือ
+ล้มด้วยเหตุ infrastructure จะ merge ไม่ได้จนกว่าจะแก้ ซึ่งเกิดขึ้นจริงมาแล้วใน repo นี้
+ทางออกชั่วคราวคือปิด `enforce_admins` แล้วเปิดกลับหลัง merge
 
 วันที่ 2026-07-31 เปลี่ยน repository เป็น public หลังได้รับการอนุมัติอย่างชัดเจน
 และหลังสแกนประวัติทั้ง 23 commit แล้วไม่พบ key, ไฟล์ `.env`, ฐานข้อมูล หรือ
