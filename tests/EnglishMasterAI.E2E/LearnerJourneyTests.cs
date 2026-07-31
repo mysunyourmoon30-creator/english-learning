@@ -85,6 +85,20 @@ public sealed class LearnerJourneyTests
                 url => url.Contains("/lessons/", StringComparison.OrdinalIgnoreCase));
             await Assertions.Expect(page.Locator("main h1").First).ToBeVisibleAsync();
 
+            // Visited last so the dashboard has real placement, practice and
+            // lesson activity behind it rather than an empty profile.
+            await page.GotoAsync("/dashboard");
+            await Assertions.Expect(page.Locator(".page-header h1")).ToContainTextAsync(
+                "สวัสดี");
+            await Assertions.Expect(page.Locator("section.grid-4 .stat-card"))
+                .ToHaveCountAsync(4);
+            // GetWeeklyProgressAsync always projects exactly seven days, so a
+            // different count means the chart stopped rendering the full week.
+            await Assertions.Expect(page.Locator(".weekly-bars > div"))
+                .ToHaveCountAsync(7);
+            await Assertions.Expect(page.Locator("section.module-grid a.module-card").First)
+                .ToBeVisibleAsync();
+
             await page.GotoAsync("/toeic/mock");
             var audioButton = page.GetByRole(
                 AriaRole.Button,
