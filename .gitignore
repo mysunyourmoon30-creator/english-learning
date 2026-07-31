@@ -17,3 +17,8 @@ coverage/
 artifacts/
 appsettings.Local.json
 appsettings.*.local.json
+
+# Filled-in environment files hold real database passwords and API keys.
+# The .env.example templates stay tracked.
+.env
+**/.env
