@@ -1,25 +1,39 @@
 # EnglishMaster AI — Production Hardening Roadmap
 
-อัปเดตล่าสุด: 2026-07-30
+อัปเดตล่าสุด: 2026-07-31
 
 ## สถานะสรุป
 
 | งาน | สถานะ | หลักฐาน |
 |---|---|---|
 | One-off database migration | เสร็จและทดสอบระดับโค้ด | web process ถูกห้าม migrate/seed นอก Development; ใช้ `--migrate-and-seed` เท่านั้น |
-| Test coverage gate | ผ่าน | 64 unit/integration tests; CI บังคับขั้นต่ำ line 60% / branch 40% |
+| Test coverage gate | ผ่าน | 70 unit/integration tests; CI บังคับขั้นต่ำ line 60% / branch 40% |
+| CI ทั้งสี่ workflow | เขียวครบ | `verify`, `integration`, `learner-journey`, `analyze` ผ่านบน main |
 | PostgreSQL integration | พร้อมใน CI | migration job รันซ้ำ 2 รอบ, provider integration test และ backup/restore |
 | Playwright learner journey | พร้อมใน CI; local skip ชัดเจนเมื่อไม่มี URL | Chromium ทดสอบสมัคร → onboarding → placement → writing/speaking → บทเรียน → TOEIC และ mobile 390px; ไม่มี `E2E_BASE_URL` จะแสดง skipped |
 | TOEIC production media gate | ระบบเสร็จ; รอ content จริง | release ถูกบล็อกจนมี human audio 100 ชิ้น, Part 1 images 6 ภาพ, license และ expert approval |
 | Scheduled/live release AI evaluation | gate เสร็จ; รอ secret จริง | fixed dataset, model-as-judge, prompt-injection/hallucination/cost gates; tag release จะ fail ถ้าไม่มี secret/report ผ่าน |
 | Supply-chain hardening | เสร็จใน repo | Actions pin ด้วย SHA, Trivy, SPDX SBOM, attestations, Cosign, immutable digest |
-| GitHub repository settings | เปิดได้บางส่วน | Dependabot alerts/security updates เปิดแล้ว; branch protection และ secret scanning ถูกจำกัดโดยแผนของ private repository |
+| GitHub repository settings | เกือบครบ | repo เป็น public แล้ว; Dependabot, secret scanning, push protection และ code scanning ทำงาน; เหลือ branch protection ที่ยังไม่ได้ตั้ง |
+| Licensing | เสร็จ | Apache 2.0 สำหรับโค้ด, `NOTICE` สงวนสิทธิ์เนื้อหาหลักสูตร, ใบอนุญาตฟอนต์และ Bootstrap ครบ |
 | Multi-instance foundation | เสร็จ | Redis rate limit, Redis Data Protection keys, Redis readiness, Azure Blob audio store |
 | Reverse proxy / CSP / legal launch boundary | เสร็จระดับโค้ด | trusted forwarded headers, nonce CSP, self-hosted fonts, Privacy/Terms และ consent evidence |
 | Real staging drill | ถูกบล็อกด้วยเครื่อง | Docker Desktop เปิดแล้วแต่แจ้ง `Virtualization support not detected`; engine stopped |
 
 Coverage ไม่นับ generated Razor markup (`*.razor`), generated `obj` และ EF migrations
 เพราะ UI ถูกตรวจด้วย Playwright และ migration ถูกตรวจด้วย PostgreSQL workflow แยกต่างหาก
+
+## 0. Licensing และขอบเขตเนื้อหา
+
+- [x] `LICENSE` — Apache 2.0 สำหรับซอฟต์แวร์
+- [x] `NOTICE` — สงวนลิขสิทธิ์หลักสูตรและข้อสอบแยกจากโค้ด
+- [x] ใบอนุญาตของบุคคลที่สามที่ redistribute อยู่ใน repo ครบ (IBM Plex Sans Thai,
+  Manrope ตาม OFL และ Bootstrap ตาม MIT)
+- [x] ย้ายหลักสูตรและข้อสอบออกจาก `SeedData.cs` ไป `content/curriculum/*.json`
+  ให้ขอบเขตใบอนุญาตตรงกับโครงสร้างไฟล์ ไม่ต้องพึ่งการอ่าน `NOTICE`
+
+เนื้อหาที่สงวนสิทธิ์ต้องอยู่ใต้ `content/` หรือ `roadmap/` เท่านั้น ห้ามฝังข้อความ
+บทเรียน คลังข้อสอบ หรือเฉลยกลับเข้าไปใน `.cs` หรือ `.razor` อีก
 
 ## 1. Safe production migrations
 
@@ -163,16 +177,27 @@ forward-compatible migration เป็นค่าเริ่มต้น แ�
 - [x] authenticate GitHub CLI ด้วยบัญชี repository admin
 - [x] เปิด Dependabot vulnerability alerts และ security updates
 - [x] ปรับ `Configure-GitHubSecurity.ps1` ให้รายงานและข้ามฟีเจอร์ที่แผนไม่รองรับ
-- [ ] branch protection และ required checks:
-  private repository นี้ต้องใช้ GitHub Pro หรือเปลี่ยนเป็น public
-- [ ] secret scanning และ push protection:
-  ยังไม่พร้อมใช้งานกับแผนของ private repository นี้
-- [ ] ตรวจว่า required checks ปรากฏครบหลัง workflow รันครั้งแรก
+- [x] secret scanning และ push protection เปิดใช้งานแล้ว (`enabled` ทั้งคู่)
+- [x] code scanning ทำงานจริง อัปโหลดผลได้และมี alert ให้ตรวจ
+- [x] `.env` เข้า `.gitignore` แล้ว ก่อนหน้านี้ไฟล์ที่มีรหัสผ่าน DB และ OpenAI key
+  สามารถถูก commit ได้
+- [x] ยืนยันว่า Trivy gate ทำงานตามที่ตั้งใจจริง ก่อนหน้านี้ `severity` ถูกทิ้งเพราะ
+  `format: sarif` ทำให้ build แดงจาก CVE ระดับ MEDIUM/LOW แทน HIGH/CRITICAL
+- [ ] ตั้ง branch protection และ required checks — ตอนนี้ทำได้แล้วเพราะ repo เป็น
+  public แต่ยังไม่ได้ตั้ง (`/branches/main/protection` ตอบ `Branch not protected`)
 
-วันที่ 2026-07-30 ตรวจผ่าน GitHub API แล้วว่า vulnerability alerts endpoint
-ตอบ `204 No Content` และ automated security fixes มี `enabled: true`.
-ระบบไม่เปลี่ยน repository เป็น public อัตโนมัติ เพราะเป็นการเปิดเผย source code
-และต้องได้รับการอนุมัติอย่างชัดเจนแยกต่างหาก
+วันที่ 2026-07-31 เปลี่ยน repository เป็น public หลังได้รับการอนุมัติอย่างชัดเจน
+และหลังสแกนประวัติทั้ง 23 commit แล้วไม่พบ key, ไฟล์ `.env`, ฐานข้อมูล หรือ
+data protection key ที่หลุดออกไป การเปิดสาธารณะทำให้ secret scanning และ
+push protection เปิดอัตโนมัติ และทำให้ CodeQL อัปโหลดผลได้เป็นครั้งแรก
+
+CodeQL รายงาน alert ระดับ high สองรายการ (`cs/user-controlled-bypass` ที่
+`ExternalLogin.razor:96` และ `Manage/ExternalLogins.razor:102`) ตรวจแล้วสรุปว่าเป็น
+false positive — ด่านตรวจจริงคือ `GetExternalLoginInfoAsync` ที่อ่านคุกกี้จาก
+provider ซึ่งทำงานก่อนหน้าเงื่อนไขที่ถูก flag และ `RedirectTo` เป็น `[DoesNotReturn]`
+จึงหยุดการทำงานจริง ตัว query parameter ทำหน้าที่เลือกเส้นทางไม่ใช่เป็นด่านตรวจ
+ทั้งสองรายการถูกเก็บไว้เปิดค้างโดยตั้งใจ เพื่อเป็นเครื่องเตือนเมื่อเปิดใช้
+external login จริง ซึ่งเป็นจุดที่ข้อสรุปนี้ต้องถูกทบทวนใหม่
 
 ## 7. Multi-instance
 
@@ -190,8 +215,11 @@ Production ต้องใช้ Redis ที่เปิด persistence แล�
 ## External prerequisites ก่อน production
 
 - Virtualization/WSL2 หรือ Linux container host ที่ใช้งานได้
-- GitHub Pro หรือการอนุมัติให้ repository เป็น public หากต้องการ branch protection
-  และ secret scanning บน GitHub
+- ค่า config จริงสามตัวที่ production validator บังคับและยังไม่มีใครกรอกได้แทน:
+  `TRUSTED_PROXY_NETWORK` (CIDR ของ ingress จริง), `LEGAL_OPERATOR_NAME`
+  (นิติบุคคลผู้ให้บริการ) และ `PRIVACY_CONTACT_EMAIL` (อีเมลที่มีคนดูแลจริง
+  เพราะจะถูกเผยแพร่ให้ผู้เรียนเห็น) ค่าเหล่านี้ต้องอยู่ใน `.env` บนเซิร์ฟเวอร์หรือ
+  secret manager ไม่ใช่ใน git
 - PostgreSQL, Redis และ Azure Blob production services
 - HTTPS ingress, SMTP, OTLP backend และ alert webhook
 - OpenAI/Azure Speech secrets จาก secret manager
