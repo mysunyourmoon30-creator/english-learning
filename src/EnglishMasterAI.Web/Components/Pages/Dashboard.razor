@@ -90,11 +90,24 @@ else
                 </div>
                 <span class="tag">@_data.WeeklyProgress.LessonsCompleted บทเรียน</span>
             </div>
+            @{
+                // Scale against the daily goal, or the week's best day when that
+                // is higher. A fixed multiplier clipped every day past ~33
+                // minutes, so a learner meeting a 60 minute goal saw seven
+                // identical full-height bars and learned nothing from the chart.
+                var barScale = Math.Max(
+                    Math.Max(1, _data.Profile.DailyMinutes),
+                    _data.WeeklyProgress.Days.Count == 0
+                        ? 0
+                        : _data.WeeklyProgress.Days.Max(x => x.Minutes));
+            }
             <div class="weekly-bars mt-3" aria-label="กิจกรรมการเรียนเจ็ดวันล่าสุด">
                 @foreach (var day in _data.WeeklyProgress.Days)
                 {
-                    var height = Math.Max(6, Math.Min(100, day.Minutes * 3));
-                    <div title="@($"{day.Date:dd MMM}: {day.Minutes} นาที")">
+                    var height = day.Minutes <= 0
+                        ? 6
+                        : (int)Math.Round(Math.Max(10d, 100d * day.Minutes / barScale));
+                    <div title="@($"{day.Date:dd MMM}: {day.Minutes} นาที (เป้าหมาย {_data.Profile.DailyMinutes} นาที)")">
                         <span style="@($"height:{height}px")"></span>
                         <small>@day.Date.ToString("ddd")</small>
                     </div>
