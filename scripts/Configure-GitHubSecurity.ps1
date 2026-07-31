@@ -66,22 +66,30 @@ function Invoke-GhCapture {
     }
 }
 
+# Contexts must be the check-run names GitHub actually reports, which are the
+# bare job ids. Naming them 'CI / verify' style leaves a pull request waiting
+# forever on checks that never report under that name.
 $protection = @{
     required_status_checks = @{
         strict = $true
         contexts = @(
-            'CI / verify',
-            'CodeQL / analyze',
-            'PostgreSQL migration and restore / integration',
-            'Playwright E2E / learner-journey'
+            'verify',
+            'analyze',
+            'integration',
+            'learner-journey'
         )
     }
     enforce_admins = $true
+    # Zero approvals because this repository has a single collaborator and
+    # GitHub does not allow approving your own pull request. Asking for one
+    # here, with enforce_admins on, makes the branch unmergeable rather than
+    # protected — including by the pull request that would undo it. Raise this
+    # to 1 (and consider require_last_push_approval) once a second person can
+    # review. Pull requests and passing checks are still required either way.
     required_pull_request_reviews = @{
         dismiss_stale_reviews = $true
         require_code_owner_reviews = $false
-        required_approving_review_count = 1
-        require_last_push_approval = $true
+        required_approving_review_count = 0
     }
     restrictions = $null
     required_conversation_resolution = $true
