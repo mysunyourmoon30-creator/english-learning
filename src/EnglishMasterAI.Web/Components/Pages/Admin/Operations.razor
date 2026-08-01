@@ -1,4 +1,5 @@
 @page "/admin/operations"
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
 @attribute [Authorize(Roles = "ContentAdmin,Admin")]
 @inject OperationsDashboardService OperationsService
 

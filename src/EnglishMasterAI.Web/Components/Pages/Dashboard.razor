@@ -155,18 +155,10 @@ else
 }
 
 @code {
-    // Carried from the prerender pass so the interactive pass does not repeat
-    // the query. Without this the page loads its data twice on every view.
-    [PersistentState]
-    public DashboardData? Data { get; set; }
+    private DashboardData? Data;
 
     protected override async Task OnInitializedAsync()
     {
-        if (Data is not null)
-        {
-            return;
-        }
-
         var userId = await CurrentUser.GetRequiredUserIdAsync();
         Data = await Learning.GetDashboardAsync(userId);
     }

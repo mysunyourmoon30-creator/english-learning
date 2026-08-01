@@ -1,4 +1,5 @@
 @page "/onboarding"
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
 @attribute [Authorize]
 @inject CurrentUserService CurrentUser
 @inject LearningService Learning

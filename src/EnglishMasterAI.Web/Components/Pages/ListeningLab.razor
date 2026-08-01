@@ -1,4 +1,5 @@
 @page "/practice/listening"
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
 @attribute [Authorize]
 @inject IJSRuntime JS
 @inject ReferenceAudioService ReferenceAudio
