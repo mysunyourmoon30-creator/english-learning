@@ -55,13 +55,6 @@ else
     <div class="callout mt-4"><p><strong>หมายเหตุ:</strong> Diagnostic และ Mock เป็นแบบฝึกต้นฉบับสำหรับวิเคราะห์ทักษะ ไม่ใช่ข้อสอบ TOEIC จริงหรือคะแนนรับรองจาก ETS</p></div>
 }
 
-<style>
-    .toeic-score{padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;background:#153f3b;color:white}.toeic-score p{color:#b7cdc7;margin:0}.toeic-score .eyebrow{color:#efbd5d}
-    .score-number{font:800 clamp(2.4rem,7vw,4.5rem) Manrope;color:#efbd5d}.score-number small{font-size:.8rem;color:#b7cdc7}
-    .part-card{padding:1.2rem}.part-card>span:first-child{display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:.7rem;background:#17332f;color:white;font-weight:800}.part-card h3{margin:1rem 0 .35rem}.part-card p{color:#6d7c74;font-size:.8rem}
-    @@media(max-width:600px){.toeic-score{align-items:flex-start;flex-direction:column}}
-</style>
-
 @code {
     private IReadOnlyList<PlacementAttempt>? _history;
     protected override async Task OnInitializedAsync()

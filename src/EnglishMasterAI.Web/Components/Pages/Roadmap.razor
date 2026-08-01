@@ -47,20 +47,6 @@ else
     <div class="callout mt-4"><p><strong>หลักการผ่านบท:</strong> Knowledge Quiz ≥ 80% และ Critical Vocabulary จะเข้าสู่ Personal Review Queue อัตโนมัติ</p></div>
 }
 
-<style>
-    .roadmap-phase{display:grid;grid-template-columns:220px 1fr;gap:1.5rem;margin-bottom:2rem}
-    .phase-head{display:flex;gap:.8rem;align-items:flex-start;padding-top:.8rem}
-    .phase-head>span{width:2.5rem;height:2.5rem;border-radius:.8rem;background:#17332f;color:white;display:grid;place-items:center;font-weight:800}
-    .phase-head h2{font-size:1rem;margin:0}.phase-head .eyebrow{margin-bottom:.35rem}
-    .phase-line{display:grid;gap:.65rem;position:relative}
-    .roadmap-item{display:flex;gap:1rem;align-items:center;padding:1rem;text-decoration:none;color:#17332f}
-    .roadmap-item:hover{color:#17332f;border-color:#a8c4bd}
-    .roadmap-item small{color:#6d7c74}
-    .roadmap-dot{width:3.2rem;height:3.2rem;flex:0 0 3.2rem;border-radius:.9rem;background:#eef1ed;color:#6d7c74;display:grid;place-items:center;font-size:.7rem;font-weight:800}
-    .roadmap-dot.active{background:#e6f2ee;color:#1d766c}.roadmap-dot.done{background:#1d766c;color:white;font-size:1rem}
-    @@media(max-width:800px){.roadmap-phase{grid-template-columns:1fr;gap:.5rem}.phase-head{padding-top:0}}
-</style>
-
 @code {
     private IReadOnlyList<ModuleProgress>? _modules;
     protected override async Task OnInitializedAsync()

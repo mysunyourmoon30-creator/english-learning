@@ -139,13 +139,6 @@
     </aside>
 </div>
 
-<style>
-    .speaking-framework{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin:1.5rem 0}.speaking-framework>div{padding:.8rem;background:#f6f8f5;border-radius:.7rem}.speaking-framework span{width:1.7rem;height:1.7rem;display:grid;place-items:center;background:#17332f;color:white;border-radius:.5rem;font-size:.7rem}.speaking-framework strong,.speaking-framework small{display:block;margin-top:.35rem}.speaking-framework small{color:#6d7c74}
-    .record-stage{text-align:center;border:1px dashed #b7c7bf;border-radius:1rem;padding:2rem}.record-dot{width:.8rem;height:.8rem;background:#839087;border-radius:50%;margin:0 auto 1rem}.is-recording .record-dot{background:#c14f44;box-shadow:0 0 0 .4rem #c14f4422;animation:pulse 1s infinite}
-    .check-item{display:flex;gap:.6rem;padding:.75rem 0;border-bottom:1px solid #e4e9e2}.check-item input,.privacy-box input{accent-color:#1d766c}.privacy-box{padding:1rem;border:1px solid #dce6df;border-radius:.8rem}.privacy-box label{display:flex;gap:.6rem;align-items:flex-start}.privacy-box small{display:block;margin:.55rem 0;color:#6d7c74}.feedback-score{display:flex;align-items:baseline;color:#1d766c}.feedback-score strong{font:800 3rem Manrope}.feedback-score span{color:#6d7c74}.metric-row{display:flex;gap:.4rem;flex-wrap:wrap;margin:.7rem 0}.metric-row span{background:#eef5f1;border-radius:2rem;padding:.3rem .55rem;font-size:.68rem}.rubric-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.4rem;margin:1rem 0}.rubric-grid span{display:flex;justify-content:space-between;padding:.5rem;background:#f6f8f5;border-radius:.5rem;font-size:.7rem}.rubric-grid strong{color:#1d766c}.transcript-box{max-height:220px;overflow:auto;padding:.8rem;background:#f6f8f5;border-radius:.65rem;font-size:.76rem;line-height:1.65}
-    @@keyframes pulse{50%{transform:scale(1.2)}}@@media(max-width:650px){.speaking-framework{grid-template-columns:repeat(2,1fr)}}
-</style>
-
 @code {
     private const string FreeSpeakingPrompt = "Explain why a team might use RAG in an AI application.";
     private const string ReferenceText = "Relevant chunks are retrieved, ranked, and sent to the model as grounded context.";

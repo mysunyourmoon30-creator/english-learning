@@ -1,0 +1,7 @@
+.review-progress{max-width:700px;margin:0 auto 1rem}.review-progress span{display:block;text-align:right;color:#6d7c74;font-size:.75rem;margin-bottom:.4rem}
+.flashcard{max-width:700px;margin:0 auto;text-align:center;padding:clamp(1.5rem,5vw,3rem);min-height:420px;position:relative}
+.flashcard h1{font-size:clamp(2.3rem,7vw,4rem);margin:2rem 0 .3rem}.phonetic{color:#6d7c74}
+.audio-button{position:absolute;right:1.2rem;top:1.2rem;border:0;background:#e7f2ee;color:#1d766c;width:2.5rem;height:2.5rem;border-radius:50%}
+.answer{display:flex;flex-direction:column;gap:.5rem;margin:1.5rem 0}.answer strong{font-size:1.25rem}.answer span{color:#1d766c;font-weight:700}.answer blockquote{background:#f6f8f5;padding:1rem;border-radius:.8rem}
+.rating-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem}.rating-grid button{border:1px solid #dfe6dc;background:#fff;border-radius:.7rem;padding:.7rem}.rating-grid button:hover{border-color:#1d766c;background:#edf7f4}.rating-grid strong,.rating-grid small{display:block}.rating-grid small{color:#6d7c74;font-size:.66rem}
+@media(max-width:550px){.rating-grid{grid-template-columns:repeat(2,1fr)}}
