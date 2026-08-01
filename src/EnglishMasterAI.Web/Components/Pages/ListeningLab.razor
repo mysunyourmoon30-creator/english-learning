@@ -78,13 +78,6 @@
     </aside>
 </div>
 
-<style>
-    .audio-stage{text-align:center;padding:2rem 1rem;background:#153f3b;color:white;border-radius:1rem}.audio-stage p{color:#b9d0ca}.wave{display:block;color:#efbd5d;font:800 1.7rem/1 Manrope;letter-spacing:.2rem;margin-bottom:1rem}
-    .play-main{width:4rem;height:4rem;border:0;border-radius:50%;background:#e4a93e;color:#17332f;font-size:1.2rem;margin:1rem}
-    .speed-row{display:flex;justify-content:center;align-items:center;gap:1rem}.speed-row input{accent-color:#e4a93e}
-    .transcript{line-height:1.9;padding:1rem;background:#f6f8f5;border-radius:.7rem}
-</style>
-
 @code {
     private const string _transcript = "First, the user query is converted into an embedding. Next, relevant chunks are retrieved from the knowledge source and ranked. Then, the selected context is sent to the language model. Finally, the model generates an answer with source references.";
     private readonly string[] _options = ["The answer is deleted.", "The retrieved chunks are ranked.", "The user closes the application.", "The model is deployed."];

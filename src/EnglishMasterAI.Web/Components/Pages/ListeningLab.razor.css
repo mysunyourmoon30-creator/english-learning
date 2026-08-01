@@ -1,0 +1,4 @@
+.audio-stage{text-align:center;padding:2rem 1rem;background:#153f3b;color:white;border-radius:1rem}.audio-stage p{color:#b9d0ca}.wave{display:block;color:#efbd5d;font:800 1.7rem/1 Manrope;letter-spacing:.2rem;margin-bottom:1rem}
+.play-main{width:4rem;height:4rem;border:0;border-radius:50%;background:#e4a93e;color:#17332f;font-size:1.2rem;margin:1rem}
+.speed-row{display:flex;justify-content:center;align-items:center;gap:1rem}.speed-row input{accent-color:#e4a93e}
+.transcript{line-height:1.9;padding:1rem;background:#f6f8f5;border-radius:.7rem}
