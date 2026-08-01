@@ -1,4 +1,5 @@
 @page "/practice/speaking"
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
 @attribute [Authorize]
 @inject IJSRuntime JS
 @inject SpeakingAnalysisService Speaking

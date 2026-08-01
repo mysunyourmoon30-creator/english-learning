@@ -11,11 +11,16 @@
     <ImportMap AdditionalAttributes="ImportMapAttributes" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <meta name="theme-color" content="#102a2a" />
-    <HeadOutlet @rendermode="PageRenderMode" />
+    <HeadOutlet />
 </head>
 
 <body>
-    <Routes @rendermode="PageRenderMode" />
+    @* No render mode here on purpose. Setting one on Routes makes it apply to
+       every page and blocks pages from choosing their own, which forced every
+       interactive page to prerender and then fetch its data a second time.
+       Pages that need interactivity now declare it themselves; the rest render
+       statically once. *@
+    <Routes />
     <script src="@Assets["learning.js"]"></script>
     <script src="_framework/blazor.web.js"></script>
 </body>
@@ -25,9 +30,6 @@
 @code {
     [CascadingParameter]
     private HttpContext HttpContext { get; set; } = default!;
-
-    private IComponentRenderMode? PageRenderMode =>
-        HttpContext.AcceptsInteractiveRouting() ? InteractiveServer : null;
 
     private IReadOnlyDictionary<string, object> ImportMapAttributes =>
         new Dictionary<string, object>
