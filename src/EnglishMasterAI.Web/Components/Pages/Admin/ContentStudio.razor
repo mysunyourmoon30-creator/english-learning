@@ -154,12 +154,6 @@ else
     </div>
 }
 
-<style>
-    .content-table-wrap{overflow:auto}.content-table{width:100%;border-collapse:collapse;min-width:880px}.content-table th{font-size:.68rem;color:#6d7c74;text-transform:uppercase;letter-spacing:.06em;text-align:left;padding:.9rem 1rem;background:#f6f8f5}.content-table td{padding:.9rem 1rem;border-top:1px solid #e2e7df;font-size:.82rem}.content-table td small{display:block;color:#6d7c74;margin-top:.2rem}.content-table select{min-width:150px}.selected-row{background:#eff7f3}
-    .editor-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(260px,.8fr);gap:1rem;align-items:start}.editor-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.editor-grid .wide{grid-column:1/-1}.editor-area{min-height:180px}.short-area{min-height:90px}.revision-panel{position:sticky;top:1rem;max-height:80vh;overflow:auto}.revision-card{padding:.8rem 0;border-bottom:1px solid #e4e9e2}.revision-card p{font-size:.74rem;color:#53635c;margin:.45rem 0}.revision-card small{color:#6d7c74}
-    @@media(max-width:900px){.editor-layout,.editor-grid{grid-template-columns:1fr}.editor-grid .wide{grid-column:auto}.revision-panel{position:static;max-height:none}}
-</style>
-
 @code {
     private IReadOnlyList<Lesson>? _lessons;
     private IReadOnlyList<ContentRevision>? _revisions;

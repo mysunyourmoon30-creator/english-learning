@@ -128,26 +128,6 @@ else
     </div>
 }
 
-<style>
-    .assessment-top,.assessment-actions{display:flex;justify-content:space-between;align-items:center;margin:1rem 0}
-    .question-focus{padding:clamp(1.2rem,4vw,2rem);max-width:850px;margin:0 auto}
-    .question-focus h2{line-height:1.55;font-size:clamp(1.15rem,3vw,1.5rem)}
-    .question-focus blockquote{padding:1rem;border-left:3px solid #e4a93e;background:#fff8e9;color:#4f5d56}
-    .quiz-option{width:100%;background:white;text-align:left}
-    .option-letter{width:1.7rem;height:1.7rem;flex:0 0 1.7rem;border-radius:.5rem;background:#eef2ed;display:grid;place-items:center;font:800 .7rem Manrope}
-    .selected .option-letter{background:#1d766c;color:white}
-    .result-hero{padding:2rem;display:flex;gap:1.5rem;align-items:center;background:#153f3b;color:white}
-    .result-hero p{color:#b9d0ca}.result-hero .eyebrow{color:#efbd5d}
-    .score-ring{width:7rem;height:7rem;flex:0 0 7rem;border:2px solid #efbd5d;border-radius:50%;display:grid;place-content:center;text-align:center}
-    .score-ring strong{font:800 1.8rem Manrope}.score-ring small{color:#b9d0ca}
-    .skill-row{margin:1rem 0}.skill-row>div:first-child{display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:.4rem}
-    .priority-list{padding-left:1.4rem;line-height:2.25}.priority-list li::marker{color:#e4a93e;font-weight:800}
-    .timer{font:800 .78rem Manrope;color:#1d766c;background:#eaf4ef;border-radius:2rem;padding:.35rem .6rem}.timer.ending{color:#a23c33;background:#fff0ed}
-    .listening-audio{padding:1rem;margin:.5rem 0 1.25rem;background:#edf7f4;border-radius:.8rem}
-    .toeic-part-one-image{width:100%;max-height:28rem;object-fit:contain;border-radius:.8rem;background:#f4f6f3}
-    @@media(max-width:600px){.result-hero{align-items:flex-start;flex-direction:column}.score-ring{width:5.5rem;height:5.5rem;flex-basis:5.5rem}}
-</style>
-
 @code {
     [Parameter, EditorRequired] public AssessmentKind Kind { get; set; }
     [Parameter] public string CompletionUrl { get; set; } = "/dashboard";
