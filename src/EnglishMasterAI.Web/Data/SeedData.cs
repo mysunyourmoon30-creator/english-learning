@@ -41,6 +41,8 @@ public static class SeedData
         var existingModules = await db.CourseModules
             .Include(x => x.Lessons)
             .ThenInclude(x => x.Vocabulary)
+            .Include(x => x.Lessons)
+            .ThenInclude(x => x.Questions)
             .ToListAsync();
         var existingCodeSet = existingModules
             .Select(x => x.Code)
@@ -62,7 +64,7 @@ public static class SeedData
             existing.Category = template.Category;
             existing.SortOrder = template.SortOrder;
             existing.EstimatedMinutes = template.EstimatedMinutes;
-            SyncLessonVocabulary(db, existing, template);
+            SyncLessonContent(db, existing, template);
         }
         var missingModules = moduleTemplates
             .Where(x => !existingCodeSet.Contains(x.Code))
@@ -147,11 +149,12 @@ public static class SeedData
         await db.SaveChangesAsync();
     }
 
-    // Modules are only inserted when their code is missing, so vocabulary added to
+    // Modules are only inserted when their code is missing, so anything a lesson gained in
     // content/curriculum/modules.json after the first seed would never reach an existing
-    // database. Rows are matched by word and updated in place rather than replaced, so the
-    // review schedules that point at them survive a content revision.
-    private static void SyncLessonVocabulary(
+    // database. Rows are matched on their natural key - the word, the prompt - and updated
+    // in place rather than replaced, so the review schedules and quiz answers that point at
+    // them survive a content revision.
+    private static void SyncLessonContent(
         ApplicationDbContext db,
         CourseModule existing,
         CourseModule template)
@@ -165,28 +168,65 @@ public static class SeedData
                 continue;
             }
 
-            var existingWords = lesson.Vocabulary
-                .ToDictionary(x => x.Word, StringComparer.OrdinalIgnoreCase);
-            foreach (var vocabularyTemplate in lessonTemplate.Vocabulary)
-            {
-                if (!existingWords.TryGetValue(vocabularyTemplate.Word, out var vocabulary))
-                {
-                    // Added through the set rather than through lesson.Vocabulary: a template
-                    // item already carries a generated key, so a change tracker that discovers
-                    // it through the navigation reads it as an existing row and updates a
-                    // record that was never inserted.
-                    vocabularyTemplate.LessonId = lesson.Id;
-                    db.VocabularyItems.Add(vocabularyTemplate);
-                    continue;
-                }
+            SyncVocabulary(db, lesson, lessonTemplate);
+            SyncQuestions(db, lesson, lessonTemplate);
+        }
+    }
 
-                vocabulary.ThaiMeaning = vocabularyTemplate.ThaiMeaning;
-                vocabulary.Pronunciation = vocabularyTemplate.Pronunciation;
-                vocabulary.WordForm = vocabularyTemplate.WordForm;
-                vocabulary.Collocation = vocabularyTemplate.Collocation;
-                vocabulary.ExampleSentence = vocabularyTemplate.ExampleSentence;
-                vocabulary.IsCritical = vocabularyTemplate.IsCritical;
+    private static void SyncVocabulary(
+        ApplicationDbContext db,
+        Lesson lesson,
+        Lesson template)
+    {
+        var existingWords = lesson.Vocabulary
+            .ToDictionary(x => x.Word, StringComparer.OrdinalIgnoreCase);
+        foreach (var vocabularyTemplate in template.Vocabulary)
+        {
+            if (!existingWords.TryGetValue(vocabularyTemplate.Word, out var vocabulary))
+            {
+                // Added through the set rather than through lesson.Vocabulary: a template
+                // item already carries a generated key, so a change tracker that discovers
+                // it through the navigation reads it as an existing row and updates a
+                // record that was never inserted.
+                vocabularyTemplate.LessonId = lesson.Id;
+                db.VocabularyItems.Add(vocabularyTemplate);
+                continue;
             }
+
+            vocabulary.ThaiMeaning = vocabularyTemplate.ThaiMeaning;
+            vocabulary.Pronunciation = vocabularyTemplate.Pronunciation;
+            vocabulary.WordForm = vocabularyTemplate.WordForm;
+            vocabulary.Collocation = vocabularyTemplate.Collocation;
+            vocabulary.ExampleSentence = vocabularyTemplate.ExampleSentence;
+            vocabulary.IsCritical = vocabularyTemplate.IsCritical;
+        }
+    }
+
+    private static void SyncQuestions(
+        ApplicationDbContext db,
+        Lesson lesson,
+        Lesson template)
+    {
+        var existingPrompts = lesson.Questions
+            .GroupBy(x => x.Prompt, StringComparer.Ordinal)
+            .ToDictionary(x => x.Key, x => x.First(), StringComparer.Ordinal);
+        foreach (var questionTemplate in template.Questions)
+        {
+            if (!existingPrompts.TryGetValue(questionTemplate.Prompt, out var question))
+            {
+                questionTemplate.LessonId = lesson.Id;
+                db.AssessmentQuestions.Add(questionTemplate);
+                continue;
+            }
+
+            question.Skill = questionTemplate.Skill;
+            question.ToeicPart = questionTemplate.ToeicPart;
+            question.SupportingText = questionTemplate.SupportingText;
+            question.OptionsJson = questionTemplate.OptionsJson;
+            question.CorrectOptionIndex = questionTemplate.CorrectOptionIndex;
+            question.Explanation = questionTemplate.Explanation;
+            question.Difficulty = questionTemplate.Difficulty;
+            question.SortOrder = questionTemplate.SortOrder;
         }
     }
 

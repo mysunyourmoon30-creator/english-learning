@@ -50,6 +50,60 @@
             "collocation": "stress a syllable",
             "exampleSentence": "Architecture has four syllables.",
             "isCritical": true
+          },
+          {
+            "word": "letter",
+            "thaiMeaning": "ตัวอักษร",
+            "pronunciation": "/ˈlet.ər/",
+            "wordForm": "noun",
+            "collocation": "a capital letter",
+            "exampleSentence": "A letter has a name and a sound.",
+            "isCritical": true
+          },
+          {
+            "word": "word",
+            "thaiMeaning": "คำ",
+            "pronunciation": "/wɜːrd/",
+            "wordForm": "noun",
+            "collocation": "a new word",
+            "exampleSentence": "Say the new word one more time.",
+            "isCritical": true
+          },
+          {
+            "word": "name",
+            "thaiMeaning": "ชื่อ",
+            "pronunciation": "/neɪm/",
+            "wordForm": "noun / verb",
+            "collocation": "say your name",
+            "exampleSentence": "Please say your name slowly.",
+            "isCritical": true
+          },
+          {
+            "word": "read",
+            "thaiMeaning": "อ่าน",
+            "pronunciation": "/riːd/",
+            "wordForm": "verb",
+            "collocation": "read a word",
+            "exampleSentence": "I can read new words with the sound method.",
+            "isCritical": true
+          },
+          {
+            "word": "listen",
+            "thaiMeaning": "ฟัง",
+            "pronunciation": "/ˈlɪs.ən/",
+            "wordForm": "verb",
+            "collocation": "listen to",
+            "exampleSentence": "Listen to the final sound in each word.",
+            "isCritical": true
+          },
+          {
+            "word": "say",
+            "thaiMeaning": "พูด, กล่าว",
+            "pronunciation": "/seɪ/",
+            "wordForm": "verb",
+            "collocation": "say a word",
+            "exampleSentence": "Say the word again, a little slower.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -65,7 +119,7 @@
               "light"
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “live”. Review the lesson example and try again.",
+            "explanation": "“live” ends with the /v/ sound. “work” ends with /k/, and both “write” and “light” end with /t/. Say each word slowly and hold the last sound so you can hear where it stops.",
             "difficulty": 1,
             "sortOrder": 1
           },
@@ -81,7 +135,7 @@
               "four"
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “two”. Review the lesson example and try again.",
+            "explanation": "“model” has two syllables: mo-del. Count the vowel sounds you hear, not the letters you see — the word has five letters but only two beats.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -155,7 +209,7 @@
               "r-eliability"
             ],
             "correctOptionIndex": 2,
-            "explanation": "The correct answer is “re-li-a-bil-i-ty”. Review the lesson example and try again.",
+            "explanation": "“re-li-a-bil-i-ty” breaks at every vowel sound, so each chunk can be said on its own. The other options cut across the sounds and leave pieces such as “iab” or “r” that you cannot pronounce.",
             "difficulty": 1,
             "sortOrder": 1
           },
@@ -171,7 +225,7 @@
               "sound only"
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “end of a word”. Review the lesson example and try again.",
+            "explanation": "A suffix goes on the end of a word: reliable + ity = reliability. A part added to the front is a prefix, as in re-read.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -254,7 +308,7 @@
               "cook a request"
             ],
             "correctOptionIndex": 2,
-            "explanation": "The correct answer is “make a request”. Review the lesson example and try again.",
+            "explanation": "English pairs the verb “make” with “request”: make a request. “Do”, “build” and “cook” are all real verbs, but no native speaker combines them with this noun — collocations have to be learned as pairs.",
             "difficulty": 1,
             "sortOrder": 1
           },
@@ -270,7 +324,7 @@
               "evaluations"
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “retrieves”. Review the lesson example and try again.",
+            "explanation": "“retrieves” means to get stored data back, which is what a service does with a database. “returns to” and “sends at” attach the wrong preposition, and “evaluations” is a noun where a verb is needed.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -344,7 +398,7 @@
               "The output is JSON."
             ],
             "correctOptionIndex": 2,
-            "explanation": "The correct answer is “The model generates text.”. Review the lesson example and try again.",
+            "explanation": "“The model generates text.” has all three parts: subject (the model), verb (generates), object (text). “The service runs.” stops at the verb, and the other two use be + complement rather than an object.",
             "difficulty": 1,
             "sortOrder": 1
           },
@@ -360,7 +414,7 @@
               "System are reliable."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “The system is reliable.”. Review the lesson example and try again.",
+            "explanation": "“The system is reliable.” needs “is” to link the subject to the adjective. The first option has no verb, “reliability” is a noun instead of an adjective, and “System are” drops the article and breaks agreement.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -452,7 +506,7 @@
               "informations"
             ],
             "correctOptionIndex": 2,
-            "explanation": "The correct answer is “a piece of information”. Review the lesson example and try again.",
+            "explanation": "“Information” is uncountable, so it takes no “a/an” and never adds “-s”. When you need to count it, use a unit word: a piece of information. Data behaves the same way.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -544,7 +598,7 @@
               "generating"
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “generate”. Review the lesson example and try again.",
+            "explanation": "After a modal such as can, the verb stays in its base form: can generate. The modal already carries the tense, so “generates”, “generated” and “generating” all add an ending that does not belong there.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -636,7 +690,7 @@
               "will deployed"
             ],
             "correctOptionIndex": 2,
-            "explanation": "The correct answer is “deployed”. Review the lesson example and try again.",
+            "explanation": "“yesterday” marks a finished point in the past, so Past Simple “deployed” is the form to use. Present “deploy” contradicts the time marker, and “have deploy” and “will deployed” mix two structures together.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -728,7 +782,7 @@
               "What this function does return?"
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “What does this function return?”. Review the lesson example and try again.",
+            "explanation": "“What does this function return?” follows the order question word + auxiliary + subject + verb. “does” carries the tense, which is why the main verb stays as “return” and not “returns”.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -820,7 +874,7 @@
               "unless"
             ],
             "correctOptionIndex": 2,
-            "explanation": "The correct answer is “therefore”. Review the lesson example and try again.",
+            "explanation": "“therefore” introduces the result of what came before: The cache was empty; therefore the request was slow. “because” gives the reason instead, while “although” and “unless” set up a contrast and a condition.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -912,7 +966,7 @@
               "The input is validated."
             ],
             "correctOptionIndex": 3,
-            "explanation": "The correct answer is “The input is validated.”. Review the lesson example and try again.",
+            "explanation": "“The input is validated.” uses the passive formula be + past participle, which keeps the focus on the input rather than on who checks it. “is validate” and “validating” use the wrong form, and “validates” is active.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -1004,7 +1058,7 @@
               "guess without reading"
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “find specific information”. Review the lesson example and try again.",
+            "explanation": "Scanning means moving your eyes quickly to find specific information, such as a field name or a status code. Reading for the general idea is skimming, and neither one requires translating every word.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -1096,7 +1150,7 @@
               "skip the audio"
             ],
             "correctOptionIndex": 2,
-            "explanation": "The correct answer is “listen and answer”. Review the lesson example and try again.",
+            "explanation": "The first pass should be listen and answer. The transcript is for checking what you heard, so opening it early turns a listening exercise into a reading exercise and hides the words you actually missed.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -1188,7 +1242,7 @@
               "In conclusion"
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “For example”. Review the lesson example and try again.",
+            "explanation": "“For example” signals that a specific case is coming. “As a result” introduces a consequence, “My point is” states the main claim, and “In conclusion” closes the answer — in PREP they each mark a different step.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -1280,7 +1334,7 @@
               "I will update the data and rerun the test."
             ],
             "correctOptionIndex": 3,
-            "explanation": "The correct answer is “I will update the data and rerun the test.”. Review the lesson example and try again.",
+            "explanation": "“I will update the data and rerun the test.” names who does what next, so the reader can check whether it happened. The other three report status or cause, which is useful context but not an action.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -1372,7 +1426,7 @@
               "No requirement."
             ],
             "correctOptionIndex": 2,
-            "explanation": "The correct answer is “Could you confirm the expected output?”. Review the lesson example and try again.",
+            "explanation": "“Could you confirm the expected output?” uses a modal question to ask for a fact without blaming anyone. “Fix this now.” is an order and “You are wrong.” is a judgement, so neither invites the information you need.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -1464,7 +1518,7 @@
               "attached"
             ],
             "correctOptionIndex": 2,
-            "explanation": "The correct answer is “postponed”. Review the lesson example and try again.",
+            "explanation": "“postponed” means moved to a later time, which is what “until Friday” signals. A meeting can be attended and an agenda can be reviewed, but neither verb explains a change of date, and files — not meetings — are attached.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -1556,7 +1610,7 @@
               "omit the closing"
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “address every requested point”. Review the lesson example and try again.",
+            "explanation": "It should address every requested point. TOEIC writing is scored on task completion, so an answer that is fluent but misses one of the questions still loses marks.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -1630,7 +1684,7 @@
               "It ranks databases."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “It converts text into tokens.”. Review the lesson example and try again.",
+            "explanation": "“It converts text into tokens.” Tokens are the small pieces the model actually reads, so tokenizing happens before anything else. Storing passwords, deploying an API and ranking databases belong to other parts of a system.",
             "difficulty": 1,
             "sortOrder": 1
           },
@@ -1646,7 +1700,7 @@
               "A decoder which output."
             ],
             "correctOptionIndex": 2,
-            "explanation": "The correct answer is “A decoder is a component that produces output.”. Review the lesson example and try again.",
+            "explanation": "“A decoder is a component that produces output.” follows the standard definition pattern: term + is + a/an + category + that + function. The other options drop the verb or the relative pronoun that pattern needs.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -1720,7 +1774,7 @@
               "Summarize the supplied log in three bullets and name the likely cause."
             ],
             "correctOptionIndex": 3,
-            "explanation": "The correct answer is “Summarize the supplied log in three bullets and name the likely cause.”. Review the lesson example and try again.",
+            "explanation": "“Summarize the supplied log in three bullets and name the likely cause.” names the source, the format and the goal, so there is only one way to follow it. “Analyze it.” leaves all three open.",
             "difficulty": 1,
             "sortOrder": 1
           },
@@ -1736,7 +1790,7 @@
               "tokenizer"
             ],
             "correctOptionIndex": 2,
-            "explanation": "The correct answer is “constraint”. Review the lesson example and try again.",
+            "explanation": "A constraint is a rule that limits what the answer may contain, such as “use only the supplied log”. Retrieval and response name steps in the process, and a tokenizer is a component.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -1819,7 +1873,7 @@
               "The password is displayed."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “Relevant context is retrieved.”. Review the lesson example and try again.",
+            "explanation": "“Relevant context is retrieved.” That retrieval step is what makes the answer grounded rather than invented — without it the model is working from memory alone.",
             "difficulty": 1,
             "sortOrder": 1
           },
@@ -1835,7 +1889,7 @@
               "Relevant chunks retrieved are."
             ],
             "correctOptionIndex": 2,
-            "explanation": "The correct answer is “Relevant chunks are retrieved.”. Review the lesson example and try again.",
+            "explanation": "“Relevant chunks are retrieved.” uses be + past participle, the passive form that pipeline descriptions rely on when the actor does not matter. “are retrieve” keeps the base form, and the other two have no passive at all.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -1918,7 +1972,7 @@
               "Every user should be an admin."
             ],
             "correctOptionIndex": 2,
-            "explanation": "The correct answer is “Secrets must be stored outside source code.”. Review the lesson example and try again.",
+            "explanation": "“Secrets must be stored outside source code.” keeps a key out of the repository, where it would stay in the history even after deletion. The other three describe exactly the practices a security review looks for.",
             "difficulty": 1,
             "sortOrder": 1
           },
@@ -1934,7 +1988,7 @@
               "would"
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “must”. Review the lesson example and try again.",
+            "explanation": "“must” states an obligation with no exceptions, which is what a security rule needs. “might” and “could” express possibility and “would” a hypothetical, so all three leave the rule sounding optional.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -2026,7 +2080,7 @@
               "evolution has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “AI evolved from rule-based systems to data-driven models.”. Review the lesson example and try again.",
+            "explanation": "“AI evolved from rule-based systems to data-driven models.” uses the pattern evolve from X to Y, with the past tense for a change that is finished. That pattern is what lets you describe a timeline in one sentence.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -2118,7 +2172,7 @@
               "inference has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “Inference begins when the service receives an input.”. Review the lesson example and try again.",
+            "explanation": "“Inference begins when the service receives an input.” marks the start of the process with begin when + clause. Use that pattern to anchor the first step before you describe what follows.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -2210,7 +2264,7 @@
               "deterministic has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “A deterministic process returns the same result for the same input.”. Review the lesson example and try again.",
+            "explanation": "“A deterministic process returns the same result for the same input.” is the definition itself: same input, same output. Contrast it with a stochastic process, which may return a different result each time.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -2302,7 +2356,7 @@
               "endpoint has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “The endpoint accepts a request and returns a structured response.”. Review the lesson example and try again.",
+            "explanation": "“The endpoint accepts a request and returns a structured response.” pairs the two verbs that always travel with an endpoint: it accepts what comes in and returns what goes out.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -2394,7 +2448,7 @@
               "evidence has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “The conclusion should be supported by relevant evidence.”. Review the lesson example and try again.",
+            "explanation": "“The conclusion should be supported by relevant evidence.” uses the passive be supported by, which puts the claim first and its backing second — the normal order when you justify an answer.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -2486,7 +2540,7 @@
               "schema has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “The schema defines required fields and data types.”. Review the lesson example and try again.",
+            "explanation": "“The schema defines required fields and data types.” shows what a schema does: it defines, and what it defines are fields and types. “Required” is the standard word for a field that cannot be left out.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -2578,7 +2632,7 @@
               "parameter has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “Each parameter has a name, type, and purpose.”. Review the lesson example and try again.",
+            "explanation": "“Each parameter has a name, type, and purpose.” uses each + singular noun to state a rule that holds for every item, followed by a three-part list. That is the usual way to document an interface.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -2670,7 +2724,7 @@
               "failure has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “The report describes the failure, impact, cause, and mitigation.”. Review the lesson example and try again.",
+            "explanation": "“The report describes the failure, impact, cause, and mitigation.” lists the four parts of an incident report in the order a reader expects: what broke, who it hit, why, and what was done.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -2762,7 +2816,7 @@
               "trade-off has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “The team measured the trade-off between cost and answer quality.”. Review the lesson example and try again.",
+            "explanation": "“The team measured the trade-off between cost and answer quality.” uses the fixed pattern the trade-off between A and B. The two things you are balancing always follow “between”, joined by “and”.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -2854,7 +2908,7 @@
               "dependency has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “The second prompt has a dependency on the first output.”. Review the lesson example and try again.",
+            "explanation": "“The second prompt has a dependency on the first output.” uses have a dependency on — the preposition is “on”, never “to” or “with”. You can also say the second prompt depends on the first.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -2946,7 +3000,7 @@
               "ingest has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “The pipeline ingests, validates, and transforms source documents.”. Review the lesson example and try again.",
+            "explanation": "“The pipeline ingests, validates, and transforms source documents.” chains three pipeline verbs in processing order under one subject, which is how a data flow is normally summarized in one line.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -3038,7 +3092,7 @@
               "chunk has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “Each chunk should preserve enough context for retrieval.”. Review the lesson example and try again.",
+            "explanation": "“Each chunk should preserve enough context for retrieval.” uses enough X for Y to state a threshold: not maximum context, just enough for the chunk to be found and understood on its own.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -3130,7 +3184,7 @@
               "embedding has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “An embedding represents semantic meaning as a vector.”. Review the lesson example and try again.",
+            "explanation": "“An embedding represents semantic meaning as a vector.” uses represent X as Y, the pattern for saying that one thing stands for another in a different form.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -3222,7 +3276,7 @@
               "index has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “The database indexes vectors for efficient retrieval.”. Review the lesson example and try again.",
+            "explanation": "“The database indexes vectors for efficient retrieval.” uses “index” as a verb — the database indexes something — while the noun names the structure that results. The for-phrase gives the purpose.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -3314,7 +3368,7 @@
               "similarity has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “Similarity search ranks documents by relevance to the query.”. Review the lesson example and try again.",
+            "explanation": "“Similarity search ranks documents by relevance to the query.” uses rank by X for the sorting criterion and relevance to Y for what it is measured against.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -3406,7 +3460,7 @@
               "metric has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “Each metric measures one aspect of retrieval or answer quality.”. Review the lesson example and try again.",
+            "explanation": "“Each metric measures one aspect of retrieval or answer quality.” keeps one metric tied to one aspect, which is why evaluation reports quote several metrics instead of a single score.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -3498,7 +3552,7 @@
               "delegate has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “The coordinator delegates a bounded task to a specialist.”. Review the lesson example and try again.",
+            "explanation": "“The coordinator delegates a bounded task to a specialist.” uses delegate something to someone — the task takes no preposition, the person takes “to”. “Bounded” signals that the scope is fixed in advance.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -3590,7 +3644,7 @@
               "route has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “The router sends each request to the appropriate model.”. Review the lesson example and try again.",
+            "explanation": "“The router sends each request to the appropriate model.” shows the noun router doing the routing; as a verb you would say the router routes each request. “Appropriate” is the neutral word for the right choice under the rules.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -3682,7 +3736,7 @@
               "trigger has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “A new event triggers the automation workflow.”. Review the lesson example and try again.",
+            "explanation": "“A new event triggers the automation workflow.” uses “trigger” as a verb with the event as the subject: the event triggers the workflow, not the other way round.",
             "difficulty": 1,
             "sortOrder": 1
           }
@@ -3774,7 +3828,7 @@
               "recovery has no meaning."
             ],
             "correctOptionIndex": 1,
-            "explanation": "The correct answer is “The recovery plan restores service after a failure.”. Review the lesson example and try again.",
+            "explanation": "“The recovery plan restores service after a failure.” pairs recovery with restore and places it after the failure. Recovery is what happens next, not what stops the failure from happening.",
             "difficulty": 1,
             "sortOrder": 1
           }

@@ -82,6 +82,39 @@ public sealed class SeedContentTests
     }
 
     [Fact]
+    public void Every_lesson_quiz_question_explains_its_own_answer()
+    {
+        var lessons = SeedContent.LoadModules(Root).SelectMany(x => x.Lessons);
+
+        Assert.All(lessons, lesson =>
+        {
+            // The sync in SeedData matches a seeded question to its template on the
+            // prompt, so two questions sharing one within a lesson would collide.
+            Assert.Equal(
+                lesson.Questions
+                    .Select(x => x.Prompt)
+                    .Distinct(StringComparer.Ordinal)
+                    .Count(),
+                lesson.Questions.Count);
+            Assert.All(lesson.Questions, question =>
+            {
+                var options = JsonSerializer.Deserialize<string[]>(question.OptionsJson)!;
+                Assert.DoesNotContain(
+                    "Review the lesson example and try again",
+                    question.Explanation,
+                    StringComparison.OrdinalIgnoreCase);
+                Assert.Contains(
+                    options[question.CorrectOptionIndex],
+                    question.Explanation,
+                    StringComparison.Ordinal);
+                Assert.True(
+                    question.Explanation.Length >= 80,
+                    $"Explanation for '{question.Prompt}' is too short to say why.");
+            });
+        });
+    }
+
+    [Fact]
     public void Lesson_slugs_are_unique_across_modules()
     {
         var slugs = SeedContent.LoadModules(Root)
