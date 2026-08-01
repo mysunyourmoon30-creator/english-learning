@@ -47,6 +47,41 @@ public sealed class SeedContentTests
     }
 
     [Fact]
+    public void Every_lesson_carries_a_usable_vocabulary_set()
+    {
+        var lessons = SeedContent.LoadModules(Root).SelectMany(x => x.Lessons);
+
+        Assert.All(lessons, lesson =>
+        {
+            Assert.True(
+                lesson.Vocabulary.Count >= 3,
+                $"Lesson '{lesson.Slug}' has {lesson.Vocabulary.Count} vocabulary items.");
+            Assert.Equal(
+                lesson.Vocabulary
+                    .Select(x => x.Word)
+                    .Distinct(StringComparer.OrdinalIgnoreCase)
+                    .Count(),
+                lesson.Vocabulary.Count);
+            Assert.All(lesson.Vocabulary, vocabulary =>
+            {
+                Assert.False(string.IsNullOrWhiteSpace(vocabulary.Word));
+                Assert.False(string.IsNullOrWhiteSpace(vocabulary.ThaiMeaning));
+                Assert.False(string.IsNullOrWhiteSpace(vocabulary.WordForm));
+                Assert.False(string.IsNullOrWhiteSpace(vocabulary.Collocation));
+                Assert.StartsWith("/", vocabulary.Pronunciation, StringComparison.Ordinal);
+                Assert.EndsWith("/", vocabulary.Pronunciation, StringComparison.Ordinal);
+                // Compared on a stem so an inflected example ("evolve" for "evolution")
+                // still counts, while an example that never uses the word does not.
+                var head = vocabulary.Word.Split(' ')[0];
+                Assert.Contains(
+                    head[..Math.Min(4, head.Length)],
+                    vocabulary.ExampleSentence,
+                    StringComparison.OrdinalIgnoreCase);
+            });
+        });
+    }
+
+    [Fact]
     public void Lesson_slugs_are_unique_across_modules()
     {
         var slugs = SeedContent.LoadModules(Root)

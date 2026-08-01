@@ -38,7 +38,10 @@ public static class SeedData
         await SeedRolesAndDevelopmentAdminAsync(services, configuration, environment);
         var contentRoot = environment.ContentRootPath;
         var moduleTemplates = SeedContent.LoadModules(contentRoot);
-        var existingModules = await db.CourseModules.ToListAsync();
+        var existingModules = await db.CourseModules
+            .Include(x => x.Lessons)
+            .ThenInclude(x => x.Vocabulary)
+            .ToListAsync();
         var existingCodeSet = existingModules
             .Select(x => x.Code)
             .ToHashSet(StringComparer.OrdinalIgnoreCase);
@@ -59,6 +62,7 @@ public static class SeedData
             existing.Category = template.Category;
             existing.SortOrder = template.SortOrder;
             existing.EstimatedMinutes = template.EstimatedMinutes;
+            SyncLessonVocabulary(db, existing, template);
         }
         var missingModules = moduleTemplates
             .Where(x => !existingCodeSet.Contains(x.Code))
@@ -141,6 +145,49 @@ public static class SeedData
             }
         }
         await db.SaveChangesAsync();
+    }
+
+    // Modules are only inserted when their code is missing, so vocabulary added to
+    // content/curriculum/modules.json after the first seed would never reach an existing
+    // database. Rows are matched by word and updated in place rather than replaced, so the
+    // review schedules that point at them survive a content revision.
+    private static void SyncLessonVocabulary(
+        ApplicationDbContext db,
+        CourseModule existing,
+        CourseModule template)
+    {
+        foreach (var lesson in existing.Lessons)
+        {
+            var lessonTemplate = template.Lessons.SingleOrDefault(
+                x => x.Slug.Equals(lesson.Slug, StringComparison.OrdinalIgnoreCase));
+            if (lessonTemplate is null)
+            {
+                continue;
+            }
+
+            var existingWords = lesson.Vocabulary
+                .ToDictionary(x => x.Word, StringComparer.OrdinalIgnoreCase);
+            foreach (var vocabularyTemplate in lessonTemplate.Vocabulary)
+            {
+                if (!existingWords.TryGetValue(vocabularyTemplate.Word, out var vocabulary))
+                {
+                    // Added through the set rather than through lesson.Vocabulary: a template
+                    // item already carries a generated key, so a change tracker that discovers
+                    // it through the navigation reads it as an existing row and updates a
+                    // record that was never inserted.
+                    vocabularyTemplate.LessonId = lesson.Id;
+                    db.VocabularyItems.Add(vocabularyTemplate);
+                    continue;
+                }
+
+                vocabulary.ThaiMeaning = vocabularyTemplate.ThaiMeaning;
+                vocabulary.Pronunciation = vocabularyTemplate.Pronunciation;
+                vocabulary.WordForm = vocabularyTemplate.WordForm;
+                vocabulary.Collocation = vocabularyTemplate.Collocation;
+                vocabulary.ExampleSentence = vocabularyTemplate.ExampleSentence;
+                vocabulary.IsCritical = vocabularyTemplate.IsCritical;
+            }
+        }
     }
 
     private static async Task SeedRolesAndDevelopmentAdminAsync(

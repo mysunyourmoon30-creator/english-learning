@@ -401,6 +401,42 @@
             "collocation": "a piece of information",
             "exampleSentence": "The response contains useful information.",
             "isCritical": true
+          },
+          {
+            "word": "data",
+            "thaiMeaning": "ข้อมูล",
+            "pronunciation": "/ˈdeɪ.tə/",
+            "wordForm": "noun",
+            "collocation": "raw data",
+            "exampleSentence": "The system stores the raw data in one folder.",
+            "isCritical": true
+          },
+          {
+            "word": "number",
+            "thaiMeaning": "จำนวน, ตัวเลข",
+            "pronunciation": "/ˈnʌm.bər/",
+            "wordForm": "noun",
+            "collocation": "a large number of",
+            "exampleSentence": "A large number of users joined the class today.",
+            "isCritical": true
+          },
+          {
+            "word": "example",
+            "thaiMeaning": "ตัวอย่าง",
+            "pronunciation": "/ɪɡˈzɑːm.pəl/",
+            "wordForm": "noun",
+            "collocation": "for example",
+            "exampleSentence": "Give me an example of a correct input.",
+            "isCritical": true
+          },
+          {
+            "word": "team",
+            "thaiMeaning": "ทีม",
+            "pronunciation": "/tiːm/",
+            "wordForm": "noun",
+            "collocation": "join a team",
+            "exampleSentence": "She joined the data team last year.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -456,6 +492,42 @@
             "wordForm": "verb / noun",
             "collocation": "process a request",
             "exampleSentence": "The service processes each request.",
+            "isCritical": true
+          },
+          {
+            "word": "need",
+            "thaiMeaning": "ต้องการ, จำเป็นต้อง",
+            "pronunciation": "/niːd/",
+            "wordForm": "verb",
+            "collocation": "need to check",
+            "exampleSentence": "You need to check the input first.",
+            "isCritical": true
+          },
+          {
+            "word": "can",
+            "thaiMeaning": "สามารถ",
+            "pronunciation": "/kæn/",
+            "wordForm": "modal verb",
+            "collocation": "can run",
+            "exampleSentence": "The model can run on one server.",
+            "isCritical": true
+          },
+          {
+            "word": "work",
+            "thaiMeaning": "ทำงาน",
+            "pronunciation": "/wɜːrk/",
+            "wordForm": "verb / noun",
+            "collocation": "work on a task",
+            "exampleSentence": "I work on the data pipeline every morning.",
+            "isCritical": true
+          },
+          {
+            "word": "finish",
+            "thaiMeaning": "ทำเสร็จ",
+            "pronunciation": "/ˈfɪn.ɪʃ/",
+            "wordForm": "verb",
+            "collocation": "finish a task",
+            "exampleSentence": "We have finished the first test.",
             "isCritical": true
           }
         ],
@@ -513,6 +585,42 @@
             "collocation": "deploy a service",
             "exampleSentence": "We deployed the service yesterday.",
             "isCritical": true
+          },
+          {
+            "word": "start",
+            "thaiMeaning": "เริ่ม",
+            "pronunciation": "/stɑːrt/",
+            "wordForm": "verb / noun",
+            "collocation": "start a project",
+            "exampleSentence": "The team started the project last month.",
+            "isCritical": true
+          },
+          {
+            "word": "already",
+            "thaiMeaning": "แล้ว, เรียบร้อยแล้ว",
+            "pronunciation": "/ɔːlˈred.i/",
+            "wordForm": "adverb",
+            "collocation": "have already fixed",
+            "exampleSentence": "We have already fixed that problem.",
+            "isCritical": true
+          },
+          {
+            "word": "plan",
+            "thaiMeaning": "วางแผน, แผน",
+            "pronunciation": "/plæn/",
+            "wordForm": "verb / noun",
+            "collocation": "plan to release",
+            "exampleSentence": "We plan to release the update next week.",
+            "isCritical": true
+          },
+          {
+            "word": "yesterday",
+            "thaiMeaning": "เมื่อวาน",
+            "pronunciation": "/ˈjes.tər.deɪ/",
+            "wordForm": "adverb / noun",
+            "collocation": "finished yesterday",
+            "exampleSentence": "The report was finished yesterday.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -568,6 +676,42 @@
             "wordForm": "verb",
             "collocation": "clarify a requirement",
             "exampleSentence": "Could you clarify the requirement?",
+            "isCritical": true
+          },
+          {
+            "word": "ask",
+            "thaiMeaning": "ถาม",
+            "pronunciation": "/ɑːsk/",
+            "wordForm": "verb",
+            "collocation": "ask a question",
+            "exampleSentence": "Ask a question if the requirement is not clear.",
+            "isCritical": true
+          },
+          {
+            "word": "answer",
+            "thaiMeaning": "คำตอบ, ตอบ",
+            "pronunciation": "/ˈɑːn.sər/",
+            "wordForm": "noun / verb",
+            "collocation": "answer a question",
+            "exampleSentence": "Please answer the question in one sentence.",
+            "isCritical": true
+          },
+          {
+            "word": "should",
+            "thaiMeaning": "ควร",
+            "pronunciation": "/ʃʊd/",
+            "wordForm": "modal verb",
+            "collocation": "should check",
+            "exampleSentence": "You should check the log before you ask.",
+            "isCritical": true
+          },
+          {
+            "word": "must",
+            "thaiMeaning": "ต้อง",
+            "pronunciation": "/mʌst/",
+            "wordForm": "modal verb",
+            "collocation": "must include",
+            "exampleSentence": "The report must include the error message.",
             "isCritical": true
           }
         ],
@@ -625,6 +769,42 @@
             "collocation": "and therefore",
             "exampleSentence": "The input was invalid; therefore, the request failed.",
             "isCritical": true
+          },
+          {
+            "word": "because",
+            "thaiMeaning": "เพราะว่า",
+            "pronunciation": "/bɪˈkɒz/",
+            "wordForm": "conjunction",
+            "collocation": "because of",
+            "exampleSentence": "The test failed because the file was missing.",
+            "isCritical": true
+          },
+          {
+            "word": "first",
+            "thaiMeaning": "อันดับแรก",
+            "pronunciation": "/fɜːrst/",
+            "wordForm": "adverb / adjective",
+            "collocation": "the first step",
+            "exampleSentence": "First, open the file. Then run the test.",
+            "isCritical": true
+          },
+          {
+            "word": "finally",
+            "thaiMeaning": "สุดท้าย",
+            "pronunciation": "/ˈfaɪ.nəl.i/",
+            "wordForm": "adverb",
+            "collocation": "finally send",
+            "exampleSentence": "Finally, we send the result to the user.",
+            "isCritical": true
+          },
+          {
+            "word": "reason",
+            "thaiMeaning": "เหตุผล",
+            "pronunciation": "/ˈriː.zən/",
+            "wordForm": "noun",
+            "collocation": "the main reason",
+            "exampleSentence": "The main reason for the delay was a missing file.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -680,6 +860,42 @@
             "wordForm": "verb",
             "collocation": "validate input",
             "exampleSentence": "All input is validated before processing.",
+            "isCritical": true
+          },
+          {
+            "word": "require",
+            "thaiMeaning": "ต้องการ, กำหนดให้ต้องมี",
+            "pronunciation": "/rɪˈkwaɪər/",
+            "wordForm": "verb",
+            "collocation": "be required to",
+            "exampleSentence": "All users are required to sign in.",
+            "isCritical": true
+          },
+          {
+            "word": "approve",
+            "thaiMeaning": "อนุมัติ",
+            "pronunciation": "/əˈpruːv/",
+            "wordForm": "verb",
+            "collocation": "approve a request",
+            "exampleSentence": "The request was approved this morning.",
+            "isCritical": true
+          },
+          {
+            "word": "schedule",
+            "thaiMeaning": "ตารางเวลา, กำหนดเวลา",
+            "pronunciation": "/ˈskedʒ.uːl/",
+            "wordForm": "noun / verb",
+            "collocation": "schedule a meeting",
+            "exampleSentence": "The meeting is scheduled for Monday.",
+            "isCritical": true
+          },
+          {
+            "word": "available",
+            "thaiMeaning": "ว่าง, พร้อมใช้งาน",
+            "pronunciation": "/əˈveɪ.lə.bəl/",
+            "wordForm": "adjective",
+            "collocation": "be available",
+            "exampleSentence": "The report will be available after the review.",
             "isCritical": true
           }
         ],
@@ -737,6 +953,42 @@
             "collocation": "scan for details",
             "exampleSentence": "Scan the API reference for the required field.",
             "isCritical": true
+          },
+          {
+            "word": "skim",
+            "thaiMeaning": "อ่านผ่านๆ เอาใจความ",
+            "pronunciation": "/skɪm/",
+            "wordForm": "verb",
+            "collocation": "skim a passage",
+            "exampleSentence": "Skim the passage before you read the questions.",
+            "isCritical": true
+          },
+          {
+            "word": "topic",
+            "thaiMeaning": "หัวข้อ",
+            "pronunciation": "/ˈtɒp.ɪk/",
+            "wordForm": "noun",
+            "collocation": "topic sentence",
+            "exampleSentence": "The topic sentence tells you the main idea.",
+            "isCritical": true
+          },
+          {
+            "word": "detail",
+            "thaiMeaning": "รายละเอียด",
+            "pronunciation": "/ˈdiː.teɪl/",
+            "wordForm": "noun",
+            "collocation": "supporting detail",
+            "exampleSentence": "Check the supporting details in the second paragraph.",
+            "isCritical": true
+          },
+          {
+            "word": "purpose",
+            "thaiMeaning": "จุดประสงค์",
+            "pronunciation": "/ˈpɜː.pəs/",
+            "wordForm": "noun",
+            "collocation": "the purpose of the text",
+            "exampleSentence": "The purpose of the email is to request a delay.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -792,6 +1044,42 @@
             "wordForm": "verb",
             "collocation": "shadow a sentence",
             "exampleSentence": "Shadow the sentence at a comfortable speed.",
+            "isCritical": true
+          },
+          {
+            "word": "transcript",
+            "thaiMeaning": "บทถอดเสียง",
+            "pronunciation": "/ˈtræn.skrɪpt/",
+            "wordForm": "noun",
+            "collocation": "check the transcript",
+            "exampleSentence": "Check the transcript after the second listening.",
+            "isCritical": true
+          },
+          {
+            "word": "repeat",
+            "thaiMeaning": "พูดซ้ำ, ทำซ้ำ",
+            "pronunciation": "/rɪˈpiːt/",
+            "wordForm": "verb",
+            "collocation": "repeat a phrase",
+            "exampleSentence": "Repeat the phrase until it sounds natural.",
+            "isCritical": true
+          },
+          {
+            "word": "summarize",
+            "thaiMeaning": "สรุป",
+            "pronunciation": "/ˈsʌm.ə.raɪz/",
+            "wordForm": "verb",
+            "collocation": "summarize the main points",
+            "exampleSentence": "Summarize the main points in your own words.",
+            "isCritical": true
+          },
+          {
+            "word": "guess",
+            "thaiMeaning": "เดา",
+            "pronunciation": "/ɡes/",
+            "wordForm": "verb / noun",
+            "collocation": "guess the meaning",
+            "exampleSentence": "Guess the meaning from the words around it.",
             "isCritical": true
           }
         ],
@@ -849,6 +1137,42 @@
             "collocation": "improve fluency",
             "exampleSentence": "Short daily practice can improve fluency.",
             "isCritical": true
+          },
+          {
+            "word": "explain",
+            "thaiMeaning": "อธิบาย",
+            "pronunciation": "/ɪkˈspleɪn/",
+            "wordForm": "verb",
+            "collocation": "explain a process",
+            "exampleSentence": "Explain the process in three steps.",
+            "isCritical": true
+          },
+          {
+            "word": "point",
+            "thaiMeaning": "ประเด็น",
+            "pronunciation": "/pɔɪnt/",
+            "wordForm": "noun / verb",
+            "collocation": "make a point",
+            "exampleSentence": "Make your point in the first sentence.",
+            "isCritical": true
+          },
+          {
+            "word": "result",
+            "thaiMeaning": "ผลลัพธ์",
+            "pronunciation": "/rɪˈzʌlt/",
+            "wordForm": "noun / verb",
+            "collocation": "as a result",
+            "exampleSentence": "As a result, the response time improved.",
+            "isCritical": true
+          },
+          {
+            "word": "practice",
+            "thaiMeaning": "ฝึกฝน, การฝึก",
+            "pronunciation": "/ˈpræk.tɪs/",
+            "wordForm": "noun / verb",
+            "collocation": "practice speaking",
+            "exampleSentence": "I practice speaking for ten minutes every day.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -904,6 +1228,42 @@
             "wordForm": "adjective",
             "collocation": "clear and concise",
             "exampleSentence": "Keep the status update clear and concise.",
+            "isCritical": true
+          },
+          {
+            "word": "update",
+            "thaiMeaning": "อัปเดต, รายงานความคืบหน้า",
+            "pronunciation": "/ˈʌp.deɪt/",
+            "wordForm": "noun / verb",
+            "collocation": "send an update",
+            "exampleSentence": "I send a short update every Friday.",
+            "isCritical": true
+          },
+          {
+            "word": "issue",
+            "thaiMeaning": "ปัญหา",
+            "pronunciation": "/ˈɪʃ.uː/",
+            "wordForm": "noun",
+            "collocation": "report an issue",
+            "exampleSentence": "Please report the issue with a screenshot.",
+            "isCritical": true
+          },
+          {
+            "word": "cause",
+            "thaiMeaning": "สาเหตุ, ทำให้เกิด",
+            "pronunciation": "/kɔːz/",
+            "wordForm": "noun / verb",
+            "collocation": "the root cause",
+            "exampleSentence": "The root cause was an expired key.",
+            "isCritical": true
+          },
+          {
+            "word": "suggest",
+            "thaiMeaning": "เสนอแนะ",
+            "pronunciation": "/səˈdʒest/",
+            "wordForm": "verb",
+            "collocation": "suggest a solution",
+            "exampleSentence": "I suggest a small change to the config.",
             "isCritical": true
           }
         ],
@@ -961,6 +1321,42 @@
             "collocation": "report a blocker",
             "exampleSentence": "I need to report one deployment blocker.",
             "isCritical": true
+          },
+          {
+            "word": "progress",
+            "thaiMeaning": "ความคืบหน้า",
+            "pronunciation": "/ˈprəʊ.ɡres/",
+            "wordForm": "noun",
+            "collocation": "make progress",
+            "exampleSentence": "We made good progress on the API this week.",
+            "isCritical": true
+          },
+          {
+            "word": "deadline",
+            "thaiMeaning": "กำหนดส่งงาน",
+            "pronunciation": "/ˈded.laɪn/",
+            "wordForm": "noun",
+            "collocation": "meet a deadline",
+            "exampleSentence": "We can still meet the deadline on Friday.",
+            "isCritical": true
+          },
+          {
+            "word": "confirm",
+            "thaiMeaning": "ยืนยัน",
+            "pronunciation": "/kənˈfɜːrm/",
+            "wordForm": "verb",
+            "collocation": "confirm a requirement",
+            "exampleSentence": "Please confirm the requirement before we start.",
+            "isCritical": true
+          },
+          {
+            "word": "estimate",
+            "thaiMeaning": "ประมาณการ",
+            "pronunciation": "/ˈes.tɪ.mət/",
+            "wordForm": "noun / verb",
+            "collocation": "give an estimate",
+            "exampleSentence": "I will give an estimate after the review.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -1017,6 +1413,42 @@
             "collocation": "postpone a meeting",
             "exampleSentence": "The team postponed the meeting until Friday.",
             "isCritical": true
+          },
+          {
+            "word": "attend",
+            "thaiMeaning": "เข้าร่วม",
+            "pronunciation": "/əˈtend/",
+            "wordForm": "verb",
+            "collocation": "attend a meeting",
+            "exampleSentence": "She will attend the training on Friday.",
+            "isCritical": true
+          },
+          {
+            "word": "announcement",
+            "thaiMeaning": "ประกาศ",
+            "pronunciation": "/əˈnaʊns.mənt/",
+            "wordForm": "noun",
+            "collocation": "make an announcement",
+            "exampleSentence": "Listen to the announcement about the delayed flight.",
+            "isCritical": true
+          },
+          {
+            "word": "colleague",
+            "thaiMeaning": "เพื่อนร่วมงาน",
+            "pronunciation": "/ˈkɒl.iːɡ/",
+            "wordForm": "noun",
+            "collocation": "a former colleague",
+            "exampleSentence": "A colleague from the sales team called this morning.",
+            "isCritical": true
+          },
+          {
+            "word": "notice",
+            "thaiMeaning": "ประกาศแจ้ง, สังเกตเห็น",
+            "pronunciation": "/ˈnəʊ.tɪs/",
+            "wordForm": "noun / verb",
+            "collocation": "give notice",
+            "exampleSentence": "The notice says the office will close early.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -1072,6 +1504,42 @@
             "wordForm": "verb",
             "collocation": "respond to an email",
             "exampleSentence": "Please respond to every point in the email.",
+            "isCritical": true
+          },
+          {
+            "word": "apologize",
+            "thaiMeaning": "ขอโทษ",
+            "pronunciation": "/əˈpɒl.ə.dʒaɪz/",
+            "wordForm": "verb",
+            "collocation": "apologize for the delay",
+            "exampleSentence": "I apologize for the delay in my reply.",
+            "isCritical": true
+          },
+          {
+            "word": "attach",
+            "thaiMeaning": "แนบไฟล์",
+            "pronunciation": "/əˈtætʃ/",
+            "wordForm": "verb",
+            "collocation": "attach a file",
+            "exampleSentence": "I have attached the report to this email.",
+            "isCritical": true
+          },
+          {
+            "word": "regarding",
+            "thaiMeaning": "เกี่ยวกับ",
+            "pronunciation": "/rɪˈɡɑːr.dɪŋ/",
+            "wordForm": "preposition",
+            "collocation": "regarding your request",
+            "exampleSentence": "I am writing regarding your request for a refund.",
+            "isCritical": true
+          },
+          {
+            "word": "recommend",
+            "thaiMeaning": "แนะนำ",
+            "pronunciation": "/ˌrek.əˈmend/",
+            "wordForm": "verb",
+            "collocation": "recommend an option",
+            "exampleSentence": "I recommend the second option because it is cheaper.",
             "isCritical": true
           }
         ],
@@ -1507,6 +1975,42 @@
             "collocation": "evolution in context",
             "exampleSentence": "AI evolved from rule-based systems to data-driven models.",
             "isCritical": true
+          },
+          {
+            "word": "develop",
+            "thaiMeaning": "พัฒนา",
+            "pronunciation": "/dɪˈvel.əp/",
+            "wordForm": "verb",
+            "collocation": "develop a model",
+            "exampleSentence": "Researchers developed the first neural networks decades ago.",
+            "isCritical": true
+          },
+          {
+            "word": "improve",
+            "thaiMeaning": "ปรับปรุงให้ดีขึ้น",
+            "pronunciation": "/ɪmˈpruːv/",
+            "wordForm": "verb",
+            "collocation": "improve accuracy",
+            "exampleSentence": "Larger datasets improved the accuracy of the model.",
+            "isCritical": true
+          },
+          {
+            "word": "replace",
+            "thaiMeaning": "แทนที่",
+            "pronunciation": "/rɪˈpleɪs/",
+            "wordForm": "verb",
+            "collocation": "replace an approach",
+            "exampleSentence": "Deep learning replaced many rule-based systems.",
+            "isCritical": true
+          },
+          {
+            "word": "decade",
+            "thaiMeaning": "ทศวรรษ",
+            "pronunciation": "/ˈdek.eɪd/",
+            "wordForm": "noun",
+            "collocation": "over the last decade",
+            "exampleSentence": "AI changed very quickly over the last decade.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -1562,6 +2066,42 @@
             "wordForm": "technical term",
             "collocation": "inference in context",
             "exampleSentence": "Inference begins when the service receives an input.",
+            "isCritical": true
+          },
+          {
+            "word": "input",
+            "thaiMeaning": "ข้อมูลเข้า",
+            "pronunciation": "/ˈɪn.pʊt/",
+            "wordForm": "noun / verb",
+            "collocation": "user input",
+            "exampleSentence": "The user input is cleaned before the model reads it.",
+            "isCritical": true
+          },
+          {
+            "word": "generate",
+            "thaiMeaning": "สร้าง (ผลลัพธ์)",
+            "pronunciation": "/ˈdʒen.ə.reɪt/",
+            "wordForm": "verb",
+            "collocation": "generate a response",
+            "exampleSentence": "The model generates a response token by token.",
+            "isCritical": true
+          },
+          {
+            "word": "step",
+            "thaiMeaning": "ขั้นตอน",
+            "pronunciation": "/step/",
+            "wordForm": "noun",
+            "collocation": "the next step",
+            "exampleSentence": "In the next step, the text is converted into tokens.",
+            "isCritical": true
+          },
+          {
+            "word": "return",
+            "thaiMeaning": "ส่งกลับ",
+            "pronunciation": "/rɪˈtɜːrn/",
+            "wordForm": "verb",
+            "collocation": "return a result",
+            "exampleSentence": "The API returns the result as JSON.",
             "isCritical": true
           }
         ],
@@ -1619,6 +2159,42 @@
             "collocation": "deterministic in context",
             "exampleSentence": "A deterministic process returns the same result for the same input.",
             "isCritical": true
+          },
+          {
+            "word": "random",
+            "thaiMeaning": "สุ่ม",
+            "pronunciation": "/ˈræn.dəm/",
+            "wordForm": "adjective",
+            "collocation": "a random choice",
+            "exampleSentence": "A higher temperature makes the output more random.",
+            "isCritical": true
+          },
+          {
+            "word": "compare",
+            "thaiMeaning": "เปรียบเทียบ",
+            "pronunciation": "/kəmˈpeər/",
+            "wordForm": "verb",
+            "collocation": "compare two outputs",
+            "exampleSentence": "Compare the two outputs before you choose one.",
+            "isCritical": true
+          },
+          {
+            "word": "consistent",
+            "thaiMeaning": "สม่ำเสมอ, คงเส้นคงวา",
+            "pronunciation": "/kənˈsɪs.tənt/",
+            "wordForm": "adjective",
+            "collocation": "consistent results",
+            "exampleSentence": "The same prompt should give consistent results.",
+            "isCritical": true
+          },
+          {
+            "word": "likely",
+            "thaiMeaning": "น่าจะเป็นไปได้",
+            "pronunciation": "/ˈlaɪk.li/",
+            "wordForm": "adjective / adverb",
+            "collocation": "the most likely token",
+            "exampleSentence": "The model picks the most likely next token.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -1674,6 +2250,42 @@
             "wordForm": "technical term",
             "collocation": "endpoint in context",
             "exampleSentence": "The endpoint accepts a request and returns a structured response.",
+            "isCritical": true
+          },
+          {
+            "word": "send",
+            "thaiMeaning": "ส่ง",
+            "pronunciation": "/send/",
+            "wordForm": "verb",
+            "collocation": "send a request",
+            "exampleSentence": "The client sends a request to the endpoint.",
+            "isCritical": true
+          },
+          {
+            "word": "key",
+            "thaiMeaning": "กุญแจ, คีย์",
+            "pronunciation": "/kiː/",
+            "wordForm": "noun",
+            "collocation": "an API key",
+            "exampleSentence": "Keep the API key out of the source code.",
+            "isCritical": true
+          },
+          {
+            "word": "header",
+            "thaiMeaning": "ส่วนหัวของคำขอ",
+            "pronunciation": "/ˈhed.ər/",
+            "wordForm": "noun",
+            "collocation": "a request header",
+            "exampleSentence": "Put the token in the request header.",
+            "isCritical": true
+          },
+          {
+            "word": "fail",
+            "thaiMeaning": "ล้มเหลว",
+            "pronunciation": "/feɪl/",
+            "wordForm": "verb",
+            "collocation": "fail with an error",
+            "exampleSentence": "The call failed with a 401 error.",
             "isCritical": true
           }
         ],
@@ -1731,6 +2343,42 @@
             "collocation": "evidence in context",
             "exampleSentence": "The conclusion should be supported by relevant evidence.",
             "isCritical": true
+          },
+          {
+            "word": "conclusion",
+            "thaiMeaning": "ข้อสรุป",
+            "pronunciation": "/kənˈkluː.ʒən/",
+            "wordForm": "noun",
+            "collocation": "reach a conclusion",
+            "exampleSentence": "The model explains each step before it reaches a conclusion.",
+            "isCritical": true
+          },
+          {
+            "word": "assume",
+            "thaiMeaning": "สมมติ, คาดเอาเอง",
+            "pronunciation": "/əˈsjuːm/",
+            "wordForm": "verb",
+            "collocation": "assume that",
+            "exampleSentence": "Do not assume that the first answer is correct.",
+            "isCritical": true
+          },
+          {
+            "word": "support",
+            "thaiMeaning": "สนับสนุน",
+            "pronunciation": "/səˈpɔːrt/",
+            "wordForm": "verb / noun",
+            "collocation": "support a claim",
+            "exampleSentence": "Every claim must be supported by a source.",
+            "isCritical": true
+          },
+          {
+            "word": "correct",
+            "thaiMeaning": "ถูกต้อง, แก้ให้ถูก",
+            "pronunciation": "/kəˈrekt/",
+            "wordForm": "adjective / verb",
+            "collocation": "the correct answer",
+            "exampleSentence": "Check whether the correct answer follows from the evidence.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -1786,6 +2434,42 @@
             "wordForm": "technical term",
             "collocation": "schema in context",
             "exampleSentence": "The schema defines required fields and data types.",
+            "isCritical": true
+          },
+          {
+            "word": "field",
+            "thaiMeaning": "ฟิลด์ข้อมูล",
+            "pronunciation": "/fiːld/",
+            "wordForm": "noun",
+            "collocation": "a required field",
+            "exampleSentence": "The name field is required in every answer.",
+            "isCritical": true
+          },
+          {
+            "word": "type",
+            "thaiMeaning": "ชนิดข้อมูล",
+            "pronunciation": "/taɪp/",
+            "wordForm": "noun",
+            "collocation": "a data type",
+            "exampleSentence": "The score field must use a number type.",
+            "isCritical": true
+          },
+          {
+            "word": "valid",
+            "thaiMeaning": "ถูกต้องตามรูปแบบ",
+            "pronunciation": "/ˈvæl.ɪd/",
+            "wordForm": "adjective",
+            "collocation": "valid JSON",
+            "exampleSentence": "The output must be valid JSON.",
+            "isCritical": true
+          },
+          {
+            "word": "missing",
+            "thaiMeaning": "ที่ขาดหายไป",
+            "pronunciation": "/ˈmɪs.ɪŋ/",
+            "wordForm": "adjective",
+            "collocation": "a missing field",
+            "exampleSentence": "The parser rejects the answer when a field is missing.",
             "isCritical": true
           }
         ],
@@ -1843,6 +2527,42 @@
             "collocation": "parameter in context",
             "exampleSentence": "Each parameter has a name, type, and purpose.",
             "isCritical": true
+          },
+          {
+            "word": "call",
+            "thaiMeaning": "เรียกใช้",
+            "pronunciation": "/kɔːl/",
+            "wordForm": "verb / noun",
+            "collocation": "call a function",
+            "exampleSentence": "The model calls the weather function with one parameter.",
+            "isCritical": true
+          },
+          {
+            "word": "value",
+            "thaiMeaning": "ค่า",
+            "pronunciation": "/ˈvæl.juː/",
+            "wordForm": "noun",
+            "collocation": "pass a value",
+            "exampleSentence": "Pass the city name as the value.",
+            "isCritical": true
+          },
+          {
+            "word": "error",
+            "thaiMeaning": "ข้อผิดพลาด",
+            "pronunciation": "/ˈer.ər/",
+            "wordForm": "noun",
+            "collocation": "handle an error",
+            "exampleSentence": "Handle the error and try the call again.",
+            "isCritical": true
+          },
+          {
+            "word": "allow",
+            "thaiMeaning": "อนุญาต",
+            "pronunciation": "/əˈlaʊ/",
+            "wordForm": "verb",
+            "collocation": "allow access",
+            "exampleSentence": "Only allow the tools that the task really needs.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -1898,6 +2618,42 @@
             "wordForm": "technical term",
             "collocation": "failure in context",
             "exampleSentence": "The report describes the failure, impact, cause, and mitigation.",
+            "isCritical": true
+          },
+          {
+            "word": "retry",
+            "thaiMeaning": "ลองใหม่",
+            "pronunciation": "/ˌriːˈtraɪ/",
+            "wordForm": "verb / noun",
+            "collocation": "retry a request",
+            "exampleSentence": "Retry the request after a short wait.",
+            "isCritical": true
+          },
+          {
+            "word": "fix",
+            "thaiMeaning": "แก้ไข",
+            "pronunciation": "/fɪks/",
+            "wordForm": "verb / noun",
+            "collocation": "fix a bug",
+            "exampleSentence": "We fixed the timeout problem yesterday.",
+            "isCritical": true
+          },
+          {
+            "word": "log",
+            "thaiMeaning": "บันทึกการทำงาน",
+            "pronunciation": "/lɒɡ/",
+            "wordForm": "noun / verb",
+            "collocation": "check the logs",
+            "exampleSentence": "Check the logs before you change the prompt.",
+            "isCritical": true
+          },
+          {
+            "word": "timeout",
+            "thaiMeaning": "การหมดเวลารอ",
+            "pronunciation": "/ˈtaɪm.aʊt/",
+            "wordForm": "noun",
+            "collocation": "a request timeout",
+            "exampleSentence": "A timeout means the server did not answer in time.",
             "isCritical": true
           }
         ],
@@ -1955,6 +2711,42 @@
             "collocation": "trade-off in context",
             "exampleSentence": "The team measured the trade-off between cost and answer quality.",
             "isCritical": true
+          },
+          {
+            "word": "reduce",
+            "thaiMeaning": "ลด",
+            "pronunciation": "/rɪˈdjuːs/",
+            "wordForm": "verb",
+            "collocation": "reduce cost",
+            "exampleSentence": "Shorter prompts reduce the cost of every call.",
+            "isCritical": true
+          },
+          {
+            "word": "cost",
+            "thaiMeaning": "ต้นทุน, ค่าใช้จ่าย",
+            "pronunciation": "/kɒst/",
+            "wordForm": "noun / verb",
+            "collocation": "cut the cost",
+            "exampleSentence": "The cost grows with the number of tokens.",
+            "isCritical": true
+          },
+          {
+            "word": "limit",
+            "thaiMeaning": "ขีดจำกัด, จำกัด",
+            "pronunciation": "/ˈlɪm.ɪt/",
+            "wordForm": "noun / verb",
+            "collocation": "a token limit",
+            "exampleSentence": "Every model has a token limit for one request.",
+            "isCritical": true
+          },
+          {
+            "word": "increase",
+            "thaiMeaning": "เพิ่มขึ้น",
+            "pronunciation": "/ɪnˈkriːs/",
+            "wordForm": "verb",
+            "collocation": "increase latency",
+            "exampleSentence": "A long context increases both cost and latency.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -2010,6 +2802,42 @@
             "wordForm": "technical term",
             "collocation": "dependency in context",
             "exampleSentence": "The second prompt has a dependency on the first output.",
+            "isCritical": true
+          },
+          {
+            "word": "pass",
+            "thaiMeaning": "ส่งต่อ",
+            "pronunciation": "/pɑːs/",
+            "wordForm": "verb",
+            "collocation": "pass the output to",
+            "exampleSentence": "Pass the output of the first prompt to the second one.",
+            "isCritical": true
+          },
+          {
+            "word": "order",
+            "thaiMeaning": "ลำดับ",
+            "pronunciation": "/ˈɔːr.dər/",
+            "wordForm": "noun / verb",
+            "collocation": "in the right order",
+            "exampleSentence": "Run the steps in the right order.",
+            "isCritical": true
+          },
+          {
+            "word": "previous",
+            "thaiMeaning": "ก่อนหน้า",
+            "pronunciation": "/ˈpriː.vi.əs/",
+            "wordForm": "adjective",
+            "collocation": "the previous step",
+            "exampleSentence": "Each step uses the output of the previous step.",
+            "isCritical": true
+          },
+          {
+            "word": "combine",
+            "thaiMeaning": "รวมเข้าด้วยกัน",
+            "pronunciation": "/kəmˈbaɪn/",
+            "wordForm": "verb",
+            "collocation": "combine the results",
+            "exampleSentence": "Combine the results into one final answer.",
             "isCritical": true
           }
         ],
@@ -2067,6 +2895,42 @@
             "collocation": "ingest in context",
             "exampleSentence": "The pipeline ingests, validates, and transforms source documents.",
             "isCritical": true
+          },
+          {
+            "word": "load",
+            "thaiMeaning": "โหลดข้อมูลเข้า",
+            "pronunciation": "/ləʊd/",
+            "wordForm": "verb",
+            "collocation": "load a file",
+            "exampleSentence": "The files are loaded from the storage folder.",
+            "isCritical": true
+          },
+          {
+            "word": "clean",
+            "thaiMeaning": "ทำความสะอาดข้อมูล",
+            "pronunciation": "/kliːn/",
+            "wordForm": "verb / adjective",
+            "collocation": "clean the data",
+            "exampleSentence": "The text is cleaned before it is stored.",
+            "isCritical": true
+          },
+          {
+            "word": "extract",
+            "thaiMeaning": "ดึงข้อมูลออกมา",
+            "pronunciation": "/ɪkˈstrækt/",
+            "wordForm": "verb",
+            "collocation": "extract text",
+            "exampleSentence": "The pipeline extracts text from every PDF.",
+            "isCritical": true
+          },
+          {
+            "word": "store",
+            "thaiMeaning": "จัดเก็บ",
+            "pronunciation": "/stɔːr/",
+            "wordForm": "verb",
+            "collocation": "store a document",
+            "exampleSentence": "Each document is stored with its source URL.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -2122,6 +2986,42 @@
             "wordForm": "technical term",
             "collocation": "chunk in context",
             "exampleSentence": "Each chunk should preserve enough context for retrieval.",
+            "isCritical": true
+          },
+          {
+            "word": "split",
+            "thaiMeaning": "แบ่ง",
+            "pronunciation": "/splɪt/",
+            "wordForm": "verb",
+            "collocation": "split a document",
+            "exampleSentence": "Split the document into short sections.",
+            "isCritical": true
+          },
+          {
+            "word": "size",
+            "thaiMeaning": "ขนาด",
+            "pronunciation": "/saɪz/",
+            "wordForm": "noun",
+            "collocation": "chunk size",
+            "exampleSentence": "A small chunk size gives more precise matches.",
+            "isCritical": true
+          },
+          {
+            "word": "overlap",
+            "thaiMeaning": "ส่วนที่ซ้อนทับกัน",
+            "pronunciation": "/ˈəʊ.vər.læp/",
+            "wordForm": "noun / verb",
+            "collocation": "overlap between chunks",
+            "exampleSentence": "A small overlap keeps the meaning between two chunks.",
+            "isCritical": true
+          },
+          {
+            "word": "context",
+            "thaiMeaning": "บริบท",
+            "pronunciation": "/ˈkɒn.tekst/",
+            "wordForm": "noun",
+            "collocation": "lose context",
+            "exampleSentence": "Very short chunks can lose the context of the sentence.",
             "isCritical": true
           }
         ],
@@ -2179,6 +3079,42 @@
             "collocation": "embedding in context",
             "exampleSentence": "An embedding represents semantic meaning as a vector.",
             "isCritical": true
+          },
+          {
+            "word": "meaning",
+            "thaiMeaning": "ความหมาย",
+            "pronunciation": "/ˈmiː.nɪŋ/",
+            "wordForm": "noun",
+            "collocation": "capture the meaning",
+            "exampleSentence": "An embedding captures the meaning of the text.",
+            "isCritical": true
+          },
+          {
+            "word": "convert",
+            "thaiMeaning": "แปลง",
+            "pronunciation": "/kənˈvɜːrt/",
+            "wordForm": "verb",
+            "collocation": "convert text into numbers",
+            "exampleSentence": "The model converts text into numbers.",
+            "isCritical": true
+          },
+          {
+            "word": "vector",
+            "thaiMeaning": "เวกเตอร์",
+            "pronunciation": "/ˈvek.tər/",
+            "wordForm": "noun",
+            "collocation": "a vector of numbers",
+            "exampleSentence": "Each chunk becomes a vector of numbers.",
+            "isCritical": true
+          },
+          {
+            "word": "close",
+            "thaiMeaning": "ใกล้",
+            "pronunciation": "/kləʊs/",
+            "wordForm": "adjective",
+            "collocation": "close to each other",
+            "exampleSentence": "Sentences with a similar meaning sit close to each other.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -2234,6 +3170,42 @@
             "wordForm": "technical term",
             "collocation": "index in context",
             "exampleSentence": "The database indexes vectors for efficient retrieval.",
+            "isCritical": true
+          },
+          {
+            "word": "search",
+            "thaiMeaning": "ค้นหา",
+            "pronunciation": "/sɜːrtʃ/",
+            "wordForm": "verb / noun",
+            "collocation": "search a database",
+            "exampleSentence": "The app searches the database for similar chunks.",
+            "isCritical": true
+          },
+          {
+            "word": "query",
+            "thaiMeaning": "คำค้น, สืบค้น",
+            "pronunciation": "/ˈkwɪə.ri/",
+            "wordForm": "noun / verb",
+            "collocation": "run a query",
+            "exampleSentence": "Every query is converted into a vector first.",
+            "isCritical": true
+          },
+          {
+            "word": "collection",
+            "thaiMeaning": "ชุดข้อมูลที่เก็บรวมกัน",
+            "pronunciation": "/kəˈlek.ʃən/",
+            "wordForm": "noun",
+            "collocation": "create a collection",
+            "exampleSentence": "Create one collection for each product manual.",
+            "isCritical": true
+          },
+          {
+            "word": "fast",
+            "thaiMeaning": "เร็ว",
+            "pronunciation": "/fɑːst/",
+            "wordForm": "adjective",
+            "collocation": "a fast lookup",
+            "exampleSentence": "The index keeps the lookup fast with millions of rows.",
             "isCritical": true
           }
         ],
@@ -2291,6 +3263,42 @@
             "collocation": "similarity in context",
             "exampleSentence": "Similarity search ranks documents by relevance to the query.",
             "isCritical": true
+          },
+          {
+            "word": "score",
+            "thaiMeaning": "คะแนน",
+            "pronunciation": "/skɔːr/",
+            "wordForm": "noun / verb",
+            "collocation": "a high score",
+            "exampleSentence": "Keep only the results with a high score.",
+            "isCritical": true
+          },
+          {
+            "word": "rank",
+            "thaiMeaning": "จัดอันดับ",
+            "pronunciation": "/ræŋk/",
+            "wordForm": "verb / noun",
+            "collocation": "rank the results",
+            "exampleSentence": "The results are ranked from the highest score.",
+            "isCritical": true
+          },
+          {
+            "word": "filter",
+            "thaiMeaning": "กรอง",
+            "pronunciation": "/ˈfɪl.tər/",
+            "wordForm": "verb / noun",
+            "collocation": "filter by date",
+            "exampleSentence": "Filter the results by date before you rank them.",
+            "isCritical": true
+          },
+          {
+            "word": "match",
+            "thaiMeaning": "สิ่งที่ตรงกัน",
+            "pronunciation": "/mætʃ/",
+            "wordForm": "noun / verb",
+            "collocation": "the best match",
+            "exampleSentence": "The top three matches are sent to the model.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -2346,6 +3354,42 @@
             "wordForm": "technical term",
             "collocation": "metric in context",
             "exampleSentence": "Each metric measures one aspect of retrieval or answer quality.",
+            "isCritical": true
+          },
+          {
+            "word": "measure",
+            "thaiMeaning": "วัดผล",
+            "pronunciation": "/ˈmeʒ.ər/",
+            "wordForm": "verb",
+            "collocation": "measure quality",
+            "exampleSentence": "Measure the quality before and after the change.",
+            "isCritical": true
+          },
+          {
+            "word": "accuracy",
+            "thaiMeaning": "ความแม่นยำ",
+            "pronunciation": "/ˈæk.jər.ə.si/",
+            "wordForm": "noun",
+            "collocation": "measure accuracy",
+            "exampleSentence": "We check accuracy on a fixed test set.",
+            "isCritical": true
+          },
+          {
+            "word": "sample",
+            "thaiMeaning": "ตัวอย่างข้อมูล",
+            "pronunciation": "/ˈsɑːm.pəl/",
+            "wordForm": "noun / verb",
+            "collocation": "a test sample",
+            "exampleSentence": "Review a sample of fifty answers by hand.",
+            "isCritical": true
+          },
+          {
+            "word": "baseline",
+            "thaiMeaning": "ค่าตั้งต้นไว้เปรียบเทียบ",
+            "pronunciation": "/ˈbeɪs.laɪn/",
+            "wordForm": "noun",
+            "collocation": "beat the baseline",
+            "exampleSentence": "The new prompt beat the baseline by four points.",
             "isCritical": true
           }
         ],
@@ -2403,6 +3447,42 @@
             "collocation": "delegate in context",
             "exampleSentence": "The coordinator delegates a bounded task to a specialist.",
             "isCritical": true
+          },
+          {
+            "word": "role",
+            "thaiMeaning": "บทบาท",
+            "pronunciation": "/rəʊl/",
+            "wordForm": "noun",
+            "collocation": "assign a role",
+            "exampleSentence": "Each agent has one clear role.",
+            "isCritical": true
+          },
+          {
+            "word": "assign",
+            "thaiMeaning": "มอบหมาย",
+            "pronunciation": "/əˈsaɪn/",
+            "wordForm": "verb",
+            "collocation": "assign a task",
+            "exampleSentence": "The planner assigns each task to one agent.",
+            "isCritical": true
+          },
+          {
+            "word": "share",
+            "thaiMeaning": "แบ่งปัน",
+            "pronunciation": "/ʃeər/",
+            "wordForm": "verb",
+            "collocation": "share information",
+            "exampleSentence": "The agents share information through a common memory.",
+            "isCritical": true
+          },
+          {
+            "word": "complete",
+            "thaiMeaning": "ทำให้เสร็จ, เสร็จสมบูรณ์",
+            "pronunciation": "/kəmˈpliːt/",
+            "wordForm": "verb / adjective",
+            "collocation": "complete a task",
+            "exampleSentence": "The agent reports as soon as the task is complete.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -2458,6 +3538,42 @@
             "wordForm": "technical term",
             "collocation": "route in context",
             "exampleSentence": "The router sends each request to the appropriate model.",
+            "isCritical": true
+          },
+          {
+            "word": "decide",
+            "thaiMeaning": "ตัดสินใจ",
+            "pronunciation": "/dɪˈsaɪd/",
+            "wordForm": "verb",
+            "collocation": "decide which model",
+            "exampleSentence": "The router decides which model handles the request.",
+            "isCritical": true
+          },
+          {
+            "word": "condition",
+            "thaiMeaning": "เงื่อนไข",
+            "pronunciation": "/kənˈdɪʃ.ən/",
+            "wordForm": "noun",
+            "collocation": "meet a condition",
+            "exampleSentence": "If the request meets this condition, send it to the small model.",
+            "isCritical": true
+          },
+          {
+            "word": "choose",
+            "thaiMeaning": "เลือก",
+            "pronunciation": "/tʃuːz/",
+            "wordForm": "verb",
+            "collocation": "choose an option",
+            "exampleSentence": "Choose the cheaper model for simple questions.",
+            "isCritical": true
+          },
+          {
+            "word": "simple",
+            "thaiMeaning": "ง่าย, ไม่ซับซ้อน",
+            "pronunciation": "/ˈsɪm.pəl/",
+            "wordForm": "adjective",
+            "collocation": "a simple request",
+            "exampleSentence": "Simple requests do not need the largest model.",
             "isCritical": true
           }
         ],
@@ -2515,6 +3631,42 @@
             "collocation": "trigger in context",
             "exampleSentence": "A new event triggers the automation workflow.",
             "isCritical": true
+          },
+          {
+            "word": "event",
+            "thaiMeaning": "เหตุการณ์",
+            "pronunciation": "/ɪˈvent/",
+            "wordForm": "noun",
+            "collocation": "an event happens",
+            "exampleSentence": "The workflow starts when a new file event arrives.",
+            "isCritical": true
+          },
+          {
+            "word": "run",
+            "thaiMeaning": "รัน, ทำงาน",
+            "pronunciation": "/rʌn/",
+            "wordForm": "verb",
+            "collocation": "run a job",
+            "exampleSentence": "The job runs every night at midnight.",
+            "isCritical": true
+          },
+          {
+            "word": "daily",
+            "thaiMeaning": "รายวัน",
+            "pronunciation": "/ˈdeɪ.li/",
+            "wordForm": "adjective / adverb",
+            "collocation": "a daily job",
+            "exampleSentence": "A daily job removes the old records.",
+            "isCritical": true
+          },
+          {
+            "word": "automatic",
+            "thaiMeaning": "อัตโนมัติ",
+            "pronunciation": "/ˌɔː.təˈmæt.ɪk/",
+            "wordForm": "adjective",
+            "collocation": "an automatic retry",
+            "exampleSentence": "An automatic retry handles short network problems.",
+            "isCritical": true
           }
         ],
         "questions": [
@@ -2570,6 +3722,42 @@
             "wordForm": "technical term",
             "collocation": "recovery in context",
             "exampleSentence": "The recovery plan restores service after a failure.",
+            "isCritical": true
+          },
+          {
+            "word": "latency",
+            "thaiMeaning": "ความหน่วง",
+            "pronunciation": "/ˈleɪ.tən.si/",
+            "wordForm": "noun",
+            "collocation": "reduce latency",
+            "exampleSentence": "We reduced latency by caching the common answers.",
+            "isCritical": true
+          },
+          {
+            "word": "incident",
+            "thaiMeaning": "เหตุขัดข้อง",
+            "pronunciation": "/ˈɪn.sɪ.dənt/",
+            "wordForm": "noun",
+            "collocation": "an incident report",
+            "exampleSentence": "The team wrote an incident report after the outage.",
+            "isCritical": true
+          },
+          {
+            "word": "monitor",
+            "thaiMeaning": "เฝ้าติดตาม",
+            "pronunciation": "/ˈmɒn.ɪ.tər/",
+            "wordForm": "verb / noun",
+            "collocation": "monitor a service",
+            "exampleSentence": "We monitor the service every minute.",
+            "isCritical": true
+          },
+          {
+            "word": "reliable",
+            "thaiMeaning": "เชื่อถือได้",
+            "pronunciation": "/rɪˈlaɪ.ə.bəl/",
+            "wordForm": "adjective",
+            "collocation": "a reliable system",
+            "exampleSentence": "A reliable system fails in a predictable way.",
             "isCritical": true
           }
         ],
