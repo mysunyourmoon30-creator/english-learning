@@ -1,0 +1,2 @@
+.finding-list{display:grid;gap:.75rem}.finding{display:grid;grid-template-columns:90px 1fr auto;gap:1rem;align-items:start;padding:1rem}.severity{padding:.35rem;text-align:center;border-radius:.5rem;background:#eef2ed;font-size:.7rem;font-weight:800}.severity.critical,.severity.high{background:#fde9e6;color:#9f3e35}.severity.medium{background:#fff3d8;color:#855b10}.finding-body h3{margin:.7rem 0 .3rem}.finding-body p,.finding-body small{color:#6d7c74;font-size:.8rem}
+@media(max-width:700px){.finding{grid-template-columns:1fr}.severity{width:max-content}}
