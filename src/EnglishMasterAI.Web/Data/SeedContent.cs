@@ -244,8 +244,7 @@ public static class SeedContent
                 Pronunciation = v.Pronunciation,
                 WordForm = v.WordForm,
                 Collocation = v.Collocation,
-                ExampleSentence = v.ExampleSentence,
-                IsCritical = v.IsCritical
+                ExampleSentence = v.ExampleSentence
             }));
             lesson.Questions.AddRange(
                 lessonDto.Questions.Select(q => ToQuestion(q, AssessmentKind.LessonQuiz)));
@@ -304,8 +303,7 @@ public static class SeedContent
         string Pronunciation,
         string WordForm,
         string Collocation,
-        string ExampleSentence,
-        bool IsCritical);
+        string ExampleSentence);
 
     private sealed record QuestionDto(
         string Skill,

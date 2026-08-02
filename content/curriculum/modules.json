@@ -17,7 +17,7 @@
         "objective": "Read new words with a sound-first method",
         "thaiExplanation": "แยกตัวอักษร ชื่ออักษร และเสียงของอักษรให้ชัด เริ่มจากเสียงท้ายคำและคู่เสียง R/L, V/W, TH ก่อนใช้ IPA เท่าที่จำเป็น",
         "grammarFocus": "A letter has a name, but it can represent different sounds. Focus on the sound inside a real word.",
-        "readingContent": "Listen to the final sound. The word work ends with /k/. The word live ends with /v/. Clear final sounds make your message easier to understand.",
+        "readingContent": "Listen to the final sound. The word work ends with /k/. The word live ends with /v/. Many students stop the word too early, and then the last sound disappears. Clear final sounds make your message easier to understand. Now listen to two more pairs. Read and lead do not start with the same sound. Very and worry do not start with the same sound either. Say each word slowly. Say the last sound on its own. Then say the whole word again.",
         "listeningTranscript": "Hi, I am Ploy. That is P-L-O-Y. I work on a data team. Now listen to my family name: Sae-Lim. S-A-E, then L-I-M. Say it with me. Then say these three words and stop on the last sound: name, work, live.",
         "speakingPrompt": "Say: very, work, reliable, three. Then spell your name and one technical word.",
         "writingPrompt": "Write four short sentences about the sounds you want to improve.",
@@ -30,8 +30,7 @@
             "pronunciation": "/saʊnd/",
             "wordForm": "noun / verb",
             "collocation": "final sound",
-            "exampleSentence": "Listen to the final sound.",
-            "isCritical": true
+            "exampleSentence": "Listen to the final sound."
           },
           {
             "word": "spell",
@@ -39,8 +38,7 @@
             "pronunciation": "/spel/",
             "wordForm": "verb",
             "collocation": "spell a word",
-            "exampleSentence": "Can you spell your name?",
-            "isCritical": true
+            "exampleSentence": "Can you spell your name?"
           },
           {
             "word": "syllable",
@@ -48,8 +46,7 @@
             "pronunciation": "/ˈsɪl.ə.bəl/",
             "wordForm": "noun",
             "collocation": "stress a syllable",
-            "exampleSentence": "Architecture has four syllables.",
-            "isCritical": true
+            "exampleSentence": "Architecture has four syllables."
           },
           {
             "word": "letter",
@@ -57,8 +54,7 @@
             "pronunciation": "/ˈlet.ər/",
             "wordForm": "noun",
             "collocation": "a capital letter",
-            "exampleSentence": "A letter has a name and a sound.",
-            "isCritical": true
+            "exampleSentence": "A letter has a name and a sound."
           },
           {
             "word": "word",
@@ -66,8 +62,7 @@
             "pronunciation": "/wɜːrd/",
             "wordForm": "noun",
             "collocation": "a new word",
-            "exampleSentence": "Say the new word one more time.",
-            "isCritical": true
+            "exampleSentence": "Say the new word one more time."
           },
           {
             "word": "name",
@@ -75,8 +70,7 @@
             "pronunciation": "/neɪm/",
             "wordForm": "noun / verb",
             "collocation": "say your name",
-            "exampleSentence": "Please say your name slowly.",
-            "isCritical": true
+            "exampleSentence": "Please say your name slowly."
           },
           {
             "word": "read",
@@ -84,8 +78,7 @@
             "pronunciation": "/riːd/",
             "wordForm": "verb",
             "collocation": "read a word",
-            "exampleSentence": "I can read new words with the sound method.",
-            "isCritical": true
+            "exampleSentence": "I can read new words with the sound method."
           },
           {
             "word": "listen",
@@ -93,8 +86,7 @@
             "pronunciation": "/ˈlɪs.ən/",
             "wordForm": "verb",
             "collocation": "listen to",
-            "exampleSentence": "Listen to the final sound in each word.",
-            "isCritical": true
+            "exampleSentence": "Listen to the final sound in each word."
           },
           {
             "word": "say",
@@ -102,8 +94,7 @@
             "pronunciation": "/seɪ/",
             "wordForm": "verb",
             "collocation": "say a word",
-            "exampleSentence": "Say the word again, a little slower.",
-            "isCritical": true
+            "exampleSentence": "Say the word again, a little slower."
           }
         ],
         "questions": [
@@ -209,7 +200,7 @@
         "objective": "Break long technical words into readable chunks",
         "thaiExplanation": "ไม่ต้องจำกฎ phonics ทุกข้อ ให้มอง vowel pattern, prefix, suffix และแบ่งคำยาวเป็นพยางค์ก่อน",
         "grammarFocus": "Prefixes and suffixes give clues. Re-li-a-bil-i-ty becomes easier when you read it in chunks.",
-        "readingContent": "First, find the vowels. Next, divide the word into chunks. Then, mark the stressed syllable. Finally, read the complete word.",
+        "readingContent": "Long words look difficult, but they are built from small parts. First, find the vowels. Next, divide the word into chunks. Then, mark the stressed syllable. Finally, read the complete word. Look at reliability. It has six chunks: re-li-a-bil-i-ty. The stress falls on bil. Now look at availability. It ends the same way, so the stress falls on bil again. A prefix comes at the front of a word and a suffix comes at the end. Re- means again, and -ity turns a word into a noun. When you can see the parts, you can read the word.",
         "listeningTranscript": "Here is a long word: availability. Do not panic. Say it in chunks with me: a-vail-a-bil-i-ty. The stress falls on the fourth chunk, bil. Now try one more: reliability. Same ending, same stress. Once you hear the chunks, long words stop being frightening.",
         "speakingPrompt": "Break down and read: architecture, embedding, reliability, validation.",
         "writingPrompt": "Divide five technical words into syllables and mark the stressed part.",
@@ -222,8 +213,7 @@
             "pronunciation": "/ˈpriː.fɪks/",
             "wordForm": "noun",
             "collocation": "common prefix",
-            "exampleSentence": "The prefix re- often means again.",
-            "isCritical": true
+            "exampleSentence": "The prefix re- often means again."
           },
           {
             "word": "suffix",
@@ -231,8 +221,7 @@
             "pronunciation": "/ˈsʌf.ɪks/",
             "wordForm": "noun",
             "collocation": "add a suffix",
-            "exampleSentence": "The suffix -able changes the word form.",
-            "isCritical": true
+            "exampleSentence": "The suffix -able changes the word form."
           },
           {
             "word": "stress",
@@ -240,8 +229,7 @@
             "pronunciation": "/stres/",
             "wordForm": "noun / verb",
             "collocation": "word stress",
-            "exampleSentence": "Correct word stress makes speech clearer.",
-            "isCritical": true
+            "exampleSentence": "Correct word stress makes speech clearer."
           }
         ],
         "questions": [
@@ -347,7 +335,7 @@
         "objective": "Use six high-frequency technical chunks in complete sentences",
         "thaiExplanation": "จำคำพร้อมเสียง รูปคำ collocation และประโยคตัวอย่าง เช่น make a request, handle an error และ retrieve data",
         "grammarFocus": "A useful chunk is easier to retrieve than an isolated word. Learn “send a response,” not only “response.”",
-        "readingContent": "The client makes a request. The API validates the input and sends a response. If the request fails, the system handles the error.",
+        "readingContent": "Every API call follows the same short story. The client makes a request. The API validates the input and sends a response. If the request fails, the system handles the error and writes a line in the log. Learn these as chunks rather than as single words. We say make a request, send a response, and handle an error. We do not say do a request or answer an error. The same service can retrieve data from the database, and the team will evaluate the result before the release. One chunk is easier to remember than three separate words.",
         "listeningTranscript": "In today's standup, listen for the chunks, not the single words. The client makes a request. We validate it. Then we send a response. If something goes wrong, we handle the error and retrieve the log. Notice that make, send, handle and retrieve each keep their own partner.",
         "speakingPrompt": "Explain a simple API flow using make a request, send a response, and handle an error.",
         "writingPrompt": "Write one sentence for each chunk: retrieve data, deploy an application, evaluate the result.",
@@ -360,8 +348,7 @@
             "pronunciation": "/rɪˈkwest/",
             "wordForm": "noun / verb",
             "collocation": "make a request",
-            "exampleSentence": "The client makes a request.",
-            "isCritical": true
+            "exampleSentence": "The client makes a request."
           },
           {
             "word": "response",
@@ -369,8 +356,7 @@
             "pronunciation": "/rɪˈspɒns/",
             "wordForm": "noun",
             "collocation": "send a response",
-            "exampleSentence": "The API sends a JSON response.",
-            "isCritical": true
+            "exampleSentence": "The API sends a JSON response."
           },
           {
             "word": "retrieve",
@@ -378,8 +364,7 @@
             "pronunciation": "/rɪˈtriːv/",
             "wordForm": "verb",
             "collocation": "retrieve data",
-            "exampleSentence": "The service retrieves customer data.",
-            "isCritical": true
+            "exampleSentence": "The service retrieves customer data."
           },
           {
             "word": "evaluate",
@@ -387,8 +372,7 @@
             "pronunciation": "/ɪˈvæl.ju.eɪt/",
             "wordForm": "verb",
             "collocation": "evaluate the result",
-            "exampleSentence": "We evaluate the result before release.",
-            "isCritical": true
+            "exampleSentence": "We evaluate the result before release."
           }
         ],
         "questions": [
@@ -494,7 +478,7 @@
         "objective": "Build accurate Subject + Verb + Object sentences",
         "thaiExplanation": "ทุกประโยคหลักต้องมองหาใครหรืออะไรเป็นประธาน และเกิดการกระทำหรือสถานะใด จากนั้นตรวจว่ากริยาต้องการกรรมหรือไม่",
         "grammarFocus": "Subject + Verb: The service runs. Subject + Verb + Object: The model generates text. Subject + be + adjective: The system is reliable.",
-        "readingContent": "The client sends a request. The API validates the input. The model generates an answer. The response is useful.",
+        "readingContent": "English sentences follow a small number of patterns. The service runs. That is subject and verb. The client sends a request. The API validates the input. The model generates an answer. Those are subject, verb, and object. The response is useful. The system is reliable. Those are subject, be, and adjective. Notice that English always needs a verb. The response useful is not a sentence, even though the meaning is clear. Once you can hear these three patterns, you can describe almost any part of a system with them.",
         "listeningTranscript": "Let me describe our service in three short patterns. The service runs. That is subject and verb. The model generates an answer. Subject, verb, object. The response is useful. Subject, be, adjective. Three patterns, and you can already describe most of a system.",
         "speakingPrompt": "Describe a four-step system. Start every sentence with a clear subject.",
         "writingPrompt": "Write four sentences about an AI application. Underline the subject and circle the main verb.",
@@ -507,8 +491,7 @@
             "pronunciation": "/ˈsʌb.dʒekt/",
             "wordForm": "noun",
             "collocation": "sentence subject",
-            "exampleSentence": "The subject performs the action.",
-            "isCritical": true
+            "exampleSentence": "The subject performs the action."
           },
           {
             "word": "verb",
@@ -516,8 +499,7 @@
             "pronunciation": "/vɜːb/",
             "wordForm": "noun",
             "collocation": "main verb",
-            "exampleSentence": "Every complete clause needs a verb.",
-            "isCritical": true
+            "exampleSentence": "Every complete clause needs a verb."
           },
           {
             "word": "object",
@@ -525,8 +507,7 @@
             "pronunciation": "/ˈɒb.dʒekt/",
             "wordForm": "noun",
             "collocation": "direct object",
-            "exampleSentence": "Text is the object in “The model generates text.”",
-            "isCritical": true
+            "exampleSentence": "Text is the object in “The model generates text.”"
           }
         ],
         "questions": [
@@ -632,7 +613,7 @@
         "objective": "Use nouns and articles accurately with AI vocabulary",
         "thaiExplanation": "Data และ information มักเป็นคำนามนับไม่ได้ จึงใช้ some data, much information หรือ a piece of information",
         "grammarFocus": "Data และ information มักเป็นคำนามนับไม่ได้ จึงใช้ some data, much information หรือ a piece of information",
-        "readingContent": "The model uses some data. It returns a piece of information.",
+        "readingContent": "The model uses some data. It returns a piece of information. Data and information are uncountable in English. We do not say a data, and we do not say two informations. When you need to count them, use a unit word: a piece of information, two pieces of data. Other nouns are countable. One example, two examples. One number, three numbers. The team is small, but it collected a lot of data this week and found one useful piece of information in it. A lot of works with both kinds of noun, so it is a safe choice when you are not sure which one you have.",
         "listeningTranscript": "A quick note from the data team. We collected a lot of data this week, and we found one useful piece of information in it. Remember, we never say informations, and we never say an information. If you need a number, say two pieces of information.",
         "speakingPrompt": "Explain this pattern in your own words: The model uses some data. It returns a piece of information.",
         "writingPrompt": "Write three new examples based on: The model uses some data. It returns a piece of information.",
@@ -645,8 +626,7 @@
             "pronunciation": "/ˌɪn.fəˈmeɪ.ʃən/",
             "wordForm": "uncountable noun",
             "collocation": "a piece of information",
-            "exampleSentence": "The response contains useful information.",
-            "isCritical": true
+            "exampleSentence": "The response contains useful information."
           },
           {
             "word": "data",
@@ -654,8 +634,7 @@
             "pronunciation": "/ˈdeɪ.tə/",
             "wordForm": "noun",
             "collocation": "raw data",
-            "exampleSentence": "The system stores the raw data in one folder.",
-            "isCritical": true
+            "exampleSentence": "The system stores the raw data in one folder."
           },
           {
             "word": "number",
@@ -663,8 +642,7 @@
             "pronunciation": "/ˈnʌm.bər/",
             "wordForm": "noun",
             "collocation": "a large number of",
-            "exampleSentence": "A large number of users joined the class today.",
-            "isCritical": true
+            "exampleSentence": "A large number of users joined the class today."
           },
           {
             "word": "example",
@@ -672,8 +650,7 @@
             "pronunciation": "/ɪɡˈzɑːm.pəl/",
             "wordForm": "noun",
             "collocation": "for example",
-            "exampleSentence": "Give me an example of a correct input.",
-            "isCritical": true
+            "exampleSentence": "Give me an example of a correct input."
           },
           {
             "word": "team",
@@ -681,8 +658,7 @@
             "pronunciation": "/tiːm/",
             "wordForm": "noun",
             "collocation": "join a team",
-            "exampleSentence": "She joined the data team last year.",
-            "isCritical": true
+            "exampleSentence": "She joined the data team last year."
           }
         ],
         "questions": [
@@ -788,7 +764,7 @@
         "objective": "Choose the correct verb form after auxiliaries",
         "thaiExplanation": "จำสูตรหลัก: Modal + V1, have + V3, be + V-ing และประธาน he/she/it ใช้ V-s ใน Present Simple",
         "grammarFocus": "จำสูตรหลัก: Modal + V1, have + V3, be + V-ing และประธาน he/she/it ใช้ V-s ใน Present Simple",
-        "readingContent": "The service can process requests. The team has deployed the update.",
+        "readingContent": "Look at the verb after each helper word. The service can process requests. After a modal such as can, the verb takes no ending at all. The team has deployed the update. After have or has, we use the third form of the verb. Right now the engineers are working on the second test. After be, we use the -ing form. In the Present Simple, only he, she and it add -s: the service processes, the model generates. Remember that need behaves differently. You need to check the input first, with to before the next verb.",
         "listeningTranscript": "Here is my update. The service can process about a thousand requests a minute. The team has finished the first test. Right now we are working on the second one. Listen to the verb after can, after has, and after are. Each one takes a different form.",
         "speakingPrompt": "Explain this pattern in your own words: The service can process requests. The team has deployed the update.",
         "writingPrompt": "Write three new examples based on: The service can process requests. The team has deployed the update.",
@@ -801,8 +777,7 @@
             "pronunciation": "/ˈprəʊ.ses/",
             "wordForm": "verb / noun",
             "collocation": "process a request",
-            "exampleSentence": "The service processes each request.",
-            "isCritical": true
+            "exampleSentence": "The service processes each request."
           },
           {
             "word": "need",
@@ -810,8 +785,7 @@
             "pronunciation": "/niːd/",
             "wordForm": "verb",
             "collocation": "need to check",
-            "exampleSentence": "You need to check the input first.",
-            "isCritical": true
+            "exampleSentence": "You need to check the input first."
           },
           {
             "word": "can",
@@ -819,8 +793,7 @@
             "pronunciation": "/kæn/",
             "wordForm": "modal verb",
             "collocation": "can run",
-            "exampleSentence": "The model can run on one server.",
-            "isCritical": true
+            "exampleSentence": "The model can run on one server."
           },
           {
             "word": "work",
@@ -828,8 +801,7 @@
             "pronunciation": "/wɜːrk/",
             "wordForm": "verb / noun",
             "collocation": "work on a task",
-            "exampleSentence": "I work on the data pipeline every morning.",
-            "isCritical": true
+            "exampleSentence": "I work on the data pipeline every morning."
           },
           {
             "word": "finish",
@@ -837,8 +809,7 @@
             "pronunciation": "/ˈfɪn.ɪʃ/",
             "wordForm": "verb",
             "collocation": "finish a task",
-            "exampleSentence": "We have finished the first test.",
-            "isCritical": true
+            "exampleSentence": "We have finished the first test."
           }
         ],
         "questions": [
@@ -944,7 +915,7 @@
         "objective": "Report current, past, completed, and future work",
         "thaiExplanation": "Present Simple ใช้กับระบบทำงานทั่วไป Past Simple ใช้กับเหตุการณ์จบแล้ว Present Perfect เชื่อมผลถึงปัจจุบัน",
         "grammarFocus": "Present Simple ใช้กับระบบทำงานทั่วไป Past Simple ใช้กับเหตุการณ์จบแล้ว Present Perfect เชื่อมผลถึงปัจจุบัน",
-        "readingContent": "We deployed the service yesterday. The team has completed the evaluation. We will improve the pipeline.",
+        "readingContent": "Here is a short project report. We started this work last month. We deployed the service yesterday. Both sentences use the Past Simple, because the time they describe is finished. The team has completed the evaluation, so we already know the results. That is the Present Perfect: a past action with a result that still matters now. Next week we will improve the pipeline, and we plan to release the new version at the end of the month. Look at the time words in each sentence. Yesterday and last month point backwards. Already points at now. Next week points forwards. The time word and the tense have to agree with each other.",
         "listeningTranscript": "Good morning. Here is where we are. We started this work last month. We deployed the new service yesterday. The team has already completed the evaluation, so the results are in. Next week we plan to improve the pipeline. Listen for the time words. They tell you the tense.",
         "speakingPrompt": "Explain this pattern in your own words: We deployed the service yesterday. The team has completed the evaluation. We will improve the pipeline.",
         "writingPrompt": "Write three new examples based on: We deployed the service yesterday. The team has completed the evaluation. We will improve the pipeline.",
@@ -957,8 +928,7 @@
             "pronunciation": "/dɪˈplɔɪ/",
             "wordForm": "verb",
             "collocation": "deploy a service",
-            "exampleSentence": "We deployed the service yesterday.",
-            "isCritical": true
+            "exampleSentence": "We deployed the service yesterday."
           },
           {
             "word": "start",
@@ -966,8 +936,7 @@
             "pronunciation": "/stɑːrt/",
             "wordForm": "verb / noun",
             "collocation": "start a project",
-            "exampleSentence": "The team started the project last month.",
-            "isCritical": true
+            "exampleSentence": "The team started the project last month."
           },
           {
             "word": "already",
@@ -975,8 +944,7 @@
             "pronunciation": "/ɔːlˈred.i/",
             "wordForm": "adverb",
             "collocation": "have already fixed",
-            "exampleSentence": "We have already fixed that problem.",
-            "isCritical": true
+            "exampleSentence": "We have already fixed that problem."
           },
           {
             "word": "plan",
@@ -984,8 +952,7 @@
             "pronunciation": "/plæn/",
             "wordForm": "verb / noun",
             "collocation": "plan to release",
-            "exampleSentence": "We plan to release the update next week.",
-            "isCritical": true
+            "exampleSentence": "We plan to release the update next week."
           },
           {
             "word": "yesterday",
@@ -993,8 +960,7 @@
             "pronunciation": "/ˈjes.tər.deɪ/",
             "wordForm": "adverb / noun",
             "collocation": "finished yesterday",
-            "exampleSentence": "The report was finished yesterday.",
-            "isCritical": true
+            "exampleSentence": "The report was finished yesterday."
           }
         ],
         "questions": [
@@ -1100,7 +1066,7 @@
         "objective": "Ask clear technical questions and state requirements",
         "thaiExplanation": "Wh-question ใช้ question word + auxiliary + subject + verb ส่วน modal ตามด้วย V1 เสมอ",
         "grammarFocus": "Wh-question ใช้ question word + auxiliary + subject + verb ส่วน modal ตามด้วย V1 เสมอ",
-        "readingContent": "What does this function return? Could you explain the architecture? The system must validate the input.",
+        "readingContent": "Good questions save hours of work. What does this function return? Where do the logs go? Notice the order: question word, auxiliary, subject, verb. The auxiliary carries the tense, which is why the main verb takes no ending. Could you explain the architecture? A modal such as could makes the request polite, and the verb after it stays in its base form. Negatives follow the same rule. The system does not validate empty input. We say does not validate, never does not validates. When a requirement is unclear, ask one direct question instead of guessing. The system must validate the input, so this is not a part we can leave open.",
         "listeningTranscript": "Before we start, I have three questions. What does this function return? Where do the logs go? And could you explain the retry rule? One more thing. The system must validate every input, so please do not skip that step. If anything is unclear, just ask.",
         "speakingPrompt": "Explain this pattern in your own words: What does this function return? Could you explain the architecture? The system must validate the input.",
         "writingPrompt": "Write three new examples based on: What does this function return? Could you explain the architecture? The system must validate the input.",
@@ -1113,8 +1079,7 @@
             "pronunciation": "/ˈklær.ɪ.faɪ/",
             "wordForm": "verb",
             "collocation": "clarify a requirement",
-            "exampleSentence": "Could you clarify the requirement?",
-            "isCritical": true
+            "exampleSentence": "Could you clarify the requirement?"
           },
           {
             "word": "ask",
@@ -1122,8 +1087,7 @@
             "pronunciation": "/ɑːsk/",
             "wordForm": "verb",
             "collocation": "ask a question",
-            "exampleSentence": "Ask a question if the requirement is not clear.",
-            "isCritical": true
+            "exampleSentence": "Ask a question if the requirement is not clear."
           },
           {
             "word": "answer",
@@ -1131,8 +1095,7 @@
             "pronunciation": "/ˈɑːn.sər/",
             "wordForm": "noun / verb",
             "collocation": "answer a question",
-            "exampleSentence": "Please answer the question in one sentence.",
-            "isCritical": true
+            "exampleSentence": "Please answer the question in one sentence."
           },
           {
             "word": "should",
@@ -1140,8 +1103,7 @@
             "pronunciation": "/ʃʊd/",
             "wordForm": "modal verb",
             "collocation": "should check",
-            "exampleSentence": "You should check the log before you ask.",
-            "isCritical": true
+            "exampleSentence": "You should check the log before you ask."
           },
           {
             "word": "must",
@@ -1149,8 +1111,7 @@
             "pronunciation": "/mʌst/",
             "wordForm": "modal verb",
             "collocation": "must include",
-            "exampleSentence": "The report must include the error message.",
-            "isCritical": true
+            "exampleSentence": "The report must include the error message."
           }
         ],
         "questions": [
@@ -1256,7 +1217,7 @@
         "objective": "Explain a process with sequence and cause-effect words",
         "thaiExplanation": "ใช้ first, next, then, finally สำหรับลำดับ because สำหรับเหตุผล และ therefore/as a result สำหรับผลลัพธ์",
         "grammarFocus": "ใช้ first, next, then, finally สำหรับลำดับ because สำหรับเหตุผล และ therefore/as a result สำหรับผลลัพธ์",
-        "readingContent": "First, the system retrieves documents. Next, it ranks them. Finally, the model generates an answer.",
+        "readingContent": "Let us describe a process. First, the system retrieves documents. Next, it ranks them by score. Finally, the model generates an answer. First, next, then and finally show the order of the steps. Now add the reasons. The system ranks the documents because there is only room for three of them in the prompt. Because introduces the reason. Only the top three are used; therefore, the ranking step decides how good the answer can be. Therefore and as a result introduce the result. Order words tell your reader what happened. Reason and result words tell them why it matters.",
         "listeningTranscript": "Let me walk you through it. First, the system retrieves the documents. Next, it ranks them by score. Then it sends the top three to the model. Finally, the model writes the answer. We rank the documents because there is only room for three. Therefore, that step matters.",
         "speakingPrompt": "Explain this pattern in your own words: First, the system retrieves documents. Next, it ranks them. Finally, the model generates an answer.",
         "writingPrompt": "Write three new examples based on: First, the system retrieves documents. Next, it ranks them. Finally, the model generates an answer.",
@@ -1269,8 +1230,7 @@
             "pronunciation": "/ˈðeə.fɔːr/",
             "wordForm": "adverb",
             "collocation": "and therefore",
-            "exampleSentence": "The input was invalid; therefore, the request failed.",
-            "isCritical": true
+            "exampleSentence": "The input was invalid; therefore, the request failed."
           },
           {
             "word": "because",
@@ -1278,8 +1238,7 @@
             "pronunciation": "/bɪˈkɒz/",
             "wordForm": "conjunction",
             "collocation": "because of",
-            "exampleSentence": "The test failed because the file was missing.",
-            "isCritical": true
+            "exampleSentence": "The test failed because the file was missing."
           },
           {
             "word": "first",
@@ -1287,8 +1246,7 @@
             "pronunciation": "/fɜːrst/",
             "wordForm": "adverb / adjective",
             "collocation": "the first step",
-            "exampleSentence": "First, open the file. Then run the test.",
-            "isCritical": true
+            "exampleSentence": "First, open the file. Then run the test."
           },
           {
             "word": "finally",
@@ -1296,8 +1254,7 @@
             "pronunciation": "/ˈfaɪ.nəl.i/",
             "wordForm": "adverb",
             "collocation": "finally send",
-            "exampleSentence": "Finally, we send the result to the user.",
-            "isCritical": true
+            "exampleSentence": "Finally, we send the result to the user."
           },
           {
             "word": "reason",
@@ -1305,8 +1262,7 @@
             "pronunciation": "/ˈriː.zən/",
             "wordForm": "noun",
             "collocation": "the main reason",
-            "exampleSentence": "The main reason for the delay was a missing file.",
-            "isCritical": true
+            "exampleSentence": "The main reason for the delay was a missing file."
           }
         ],
         "questions": [
@@ -1412,7 +1368,7 @@
         "objective": "Recognize high-frequency workplace grammar patterns",
         "thaiExplanation": "Passive voice ใช้ be + V3 เมื่อต้องการเน้นสิ่งที่ถูกกระทำ เช่น The input is validated before processing.",
         "grammarFocus": "Passive voice ใช้ be + V3 เมื่อต้องการเน้นสิ่งที่ถูกกระทำ เช่น The input is validated before processing.",
-        "readingContent": "The report was reviewed by the team. If the test passes, we will publish the release.",
+        "readingContent": "Read this release note. The report was reviewed by the team on Monday, and the changes were approved the same afternoon. All test accounts are required to be closed before Friday. If the final test passes, we will publish the release on Saturday morning. Notice how often the action appears before the person, or with no person at all. That is the passive: be plus the past participle. Written English at work uses it constantly, because what was done usually matters more than who did it. The input is validated before processing. The meeting is scheduled for Monday. The report will be available after the review. Learn to recognise this shape quickly, because TOEIC Part 5 tests it in almost every set.",
         "listeningTranscript": "Attention, team. The report was reviewed on Monday, and the changes were approved this morning. All test accounts are required to be closed before Friday. The release will be published as soon as the last test passes. Notice how often the action is mentioned before the person.",
         "speakingPrompt": "Explain this pattern in your own words: The report was reviewed by the team. If the test passes, we will publish the release.",
         "writingPrompt": "Write three new examples based on: The report was reviewed by the team. If the test passes, we will publish the release.",
@@ -1425,8 +1381,7 @@
             "pronunciation": "/ˈvæl.ɪ.deɪt/",
             "wordForm": "verb",
             "collocation": "validate input",
-            "exampleSentence": "All input is validated before processing.",
-            "isCritical": true
+            "exampleSentence": "All input is validated before processing."
           },
           {
             "word": "require",
@@ -1434,8 +1389,7 @@
             "pronunciation": "/rɪˈkwaɪər/",
             "wordForm": "verb",
             "collocation": "be required to",
-            "exampleSentence": "All users are required to sign in.",
-            "isCritical": true
+            "exampleSentence": "All users are required to sign in."
           },
           {
             "word": "approve",
@@ -1443,8 +1397,7 @@
             "pronunciation": "/əˈpruːv/",
             "wordForm": "verb",
             "collocation": "approve a request",
-            "exampleSentence": "The request was approved this morning.",
-            "isCritical": true
+            "exampleSentence": "The request was approved this morning."
           },
           {
             "word": "schedule",
@@ -1452,8 +1405,7 @@
             "pronunciation": "/ˈskedʒ.uːl/",
             "wordForm": "noun / verb",
             "collocation": "schedule a meeting",
-            "exampleSentence": "The meeting is scheduled for Monday.",
-            "isCritical": true
+            "exampleSentence": "The meeting is scheduled for Monday."
           },
           {
             "word": "available",
@@ -1461,8 +1413,7 @@
             "pronunciation": "/əˈveɪ.lə.bəl/",
             "wordForm": "adjective",
             "collocation": "be available",
-            "exampleSentence": "The report will be available after the review.",
-            "isCritical": true
+            "exampleSentence": "The report will be available after the review."
           }
         ],
         "questions": [
@@ -1568,7 +1519,7 @@
         "objective": "Use skimming, scanning, context clues, and reference words in technical reading",
         "thaiExplanation": "เริ่มจากมองหัวข้อ โครงสร้าง และคำซ้ำเพื่อหา main idea ก่อนอ่านรายละเอียด จากนั้น scan หาชื่อ field, status code และเงื่อนไขที่โจทย์ถาม",
         "grammarFocus": "เริ่มจากมองหัวข้อ โครงสร้าง และคำซ้ำเพื่อหา main idea ก่อนอ่านรายละเอียด จากนั้น scan หาชื่อ field, status code และเงื่อนไขที่โจทย์ถาม",
-        "readingContent": "Read the endpoint summary first. Scan for the required field and the error response. The reference word “it” points to the request object.",
+        "readingContent": "Technical pages are not read from the top. Read the endpoint summary first to find the topic and the purpose. Then scan for the one thing you need: the required field, the status code, the rate limit. Scanning means moving your eyes quickly to a specific detail without reading anything around it. Skimming is different. It gives you the general idea in one pass, and it is what you do before deciding whether a page is worth your time at all. Watch the reference words as you go. In the sentence it must be a string, the word it points to the request object mentioned before, not to the endpoint. Losing track of one reference word can turn a clear paragraph into a confusing one.",
         "listeningTranscript": "Here is how I read API documents. I skim the summary first to get the topic and the purpose. Then I scan for one thing only, the required field or the error code. I do not read every word. And when I see the word it, I stop and ask what it points to.",
         "speakingPrompt": "Explain this pattern in your own words: Read the endpoint summary first. Scan for the required field and the error response. The reference word “it” points to the request object.",
         "writingPrompt": "Write three new examples based on: Read the endpoint summary first. Scan for the required field and the error response. The reference word “it” points to the request object.",
@@ -1581,8 +1532,7 @@
             "pronunciation": "/skæn/",
             "wordForm": "verb",
             "collocation": "scan for details",
-            "exampleSentence": "Scan the API reference for the required field.",
-            "isCritical": true
+            "exampleSentence": "Scan the API reference for the required field."
           },
           {
             "word": "skim",
@@ -1590,8 +1540,7 @@
             "pronunciation": "/skɪm/",
             "wordForm": "verb",
             "collocation": "skim a passage",
-            "exampleSentence": "Skim the passage before you read the questions.",
-            "isCritical": true
+            "exampleSentence": "Skim the passage before you read the questions."
           },
           {
             "word": "topic",
@@ -1599,8 +1548,7 @@
             "pronunciation": "/ˈtɒp.ɪk/",
             "wordForm": "noun",
             "collocation": "topic sentence",
-            "exampleSentence": "The topic sentence tells you the main idea.",
-            "isCritical": true
+            "exampleSentence": "The topic sentence tells you the main idea."
           },
           {
             "word": "detail",
@@ -1608,8 +1556,7 @@
             "pronunciation": "/ˈdiː.teɪl/",
             "wordForm": "noun",
             "collocation": "supporting detail",
-            "exampleSentence": "Check the supporting details in the second paragraph.",
-            "isCritical": true
+            "exampleSentence": "Check the supporting details in the second paragraph."
           },
           {
             "word": "purpose",
@@ -1617,8 +1564,7 @@
             "pronunciation": "/ˈpɜː.pəs/",
             "wordForm": "noun",
             "collocation": "the purpose of the text",
-            "exampleSentence": "The purpose of the email is to request a delay.",
-            "isCritical": true
+            "exampleSentence": "The purpose of the email is to request a delay."
           }
         ],
         "questions": [
@@ -1724,7 +1670,7 @@
         "objective": "Follow a listen-answer-transcript-shadow-summarize workflow",
         "thaiExplanation": "รอบแรกฟังเพื่อจับความหมายรวมโดยไม่เปิดข้อความ รอบสองตรวจคำตอบด้วย transcript แล้วพูดตามเป็น chunks ก่อนสรุปด้วยคำของตนเอง",
         "grammarFocus": "รอบแรกฟังเพื่อจับความหมายรวมโดยไม่เปิดข้อความ รอบสองตรวจคำตอบด้วย transcript แล้วพูดตามเป็น chunks ก่อนสรุปด้วยคำของตนเอง",
-        "readingContent": "First, listen without the transcript. Next, check the key chunks. Then, shadow each sentence. Finally, summarize the message.",
+        "readingContent": "Work in four rounds. First, listen without the transcript and catch the general message. Do not stop when you miss a word; guess it from the words around it, because a real conversation will not pause for you. Second, answer the questions using only what you heard. Third, open the transcript, check what you missed, and repeat the difficult chunks after the speaker. That is shadowing: you speak along just behind the audio and copy its rhythm. Fourth, summarize the message in your own words. The summary is the part that proves you understood rather than simply recognised. Most learners skip the first round and the last one, and those two are where the skill is built.",
         "listeningTranscript": "Let us do this in four rounds. Round one, just listen. No transcript. Round two, answer the questions. Round three, open the transcript, check what you missed, and repeat the difficult chunks after me. Round four, summarize the whole thing in your own words. If you did not catch something, guess first.",
         "speakingPrompt": "Explain this pattern in your own words: First, listen without the transcript. Next, check the key chunks. Then, shadow each sentence. Finally, summarize the message.",
         "writingPrompt": "Write three new examples based on: First, listen without the transcript. Next, check the key chunks. Then, shadow each sentence. Finally, summarize the message.",
@@ -1737,8 +1683,7 @@
             "pronunciation": "/ˈʃæd.əʊ/",
             "wordForm": "verb",
             "collocation": "shadow a sentence",
-            "exampleSentence": "Shadow the sentence at a comfortable speed.",
-            "isCritical": true
+            "exampleSentence": "Shadow the sentence at a comfortable speed."
           },
           {
             "word": "transcript",
@@ -1746,8 +1691,7 @@
             "pronunciation": "/ˈtræn.skrɪpt/",
             "wordForm": "noun",
             "collocation": "check the transcript",
-            "exampleSentence": "Check the transcript after the second listening.",
-            "isCritical": true
+            "exampleSentence": "Check the transcript after the second listening."
           },
           {
             "word": "repeat",
@@ -1755,8 +1699,7 @@
             "pronunciation": "/rɪˈpiːt/",
             "wordForm": "verb",
             "collocation": "repeat a phrase",
-            "exampleSentence": "Repeat the phrase until it sounds natural.",
-            "isCritical": true
+            "exampleSentence": "Repeat the phrase until it sounds natural."
           },
           {
             "word": "summarize",
@@ -1764,8 +1707,7 @@
             "pronunciation": "/ˈsʌm.ə.raɪz/",
             "wordForm": "verb",
             "collocation": "summarize the main points",
-            "exampleSentence": "Summarize the main points in your own words.",
-            "isCritical": true
+            "exampleSentence": "Summarize the main points in your own words."
           },
           {
             "word": "guess",
@@ -1773,8 +1715,7 @@
             "pronunciation": "/ɡes/",
             "wordForm": "verb / noun",
             "collocation": "guess the meaning",
-            "exampleSentence": "Guess the meaning from the words around it.",
-            "isCritical": true
+            "exampleSentence": "Guess the meaning from the words around it."
           }
         ],
         "questions": [
@@ -1880,7 +1821,7 @@
         "objective": "Organize a technical explanation with Point, Reason, Example, and Result",
         "thaiExplanation": "ใช้ PREP เป็นโครงช่วยคิด ไม่ต้องเลียนสำเนียงเจ้าของภาษา เป้าหมายคือพูดต่อเนื่องและให้ผู้ฟังตามความคิดได้",
         "grammarFocus": "ใช้ PREP เป็นโครงช่วยคิด ไม่ต้องเลียนสำเนียงเจ้าของภาษา เป้าหมายคือพูดต่อเนื่องและให้ผู้ฟังตามความคิดได้",
-        "readingContent": "I prefer RAG because it can use external information. For example, it can retrieve company documents. As a result, the answer can be more relevant.",
+        "readingContent": "A good technical answer has a shape. My point is that we should use RAG. That is the claim, and it comes first so the listener knows where you are going. The reason is that our documents change every week and the model cannot know about the newest ones. For example, last month the refund policy changed twice and the model still answered with the old version. As a result, the team stopped trusting the answers and started checking them by hand. Point, reason, example, result. Fluency means speaking without long pauses. It does not mean speaking quickly, and it has nothing to do with sounding like a native speaker. A clear structure buys you time to think, which is why practice with PREP makes you sound more fluent.",
         "listeningTranscript": "Here is my answer in four moves. My point is that we should use RAG. The reason is that our documents change every week. For example, last month the policy changed twice and the model still had the old version. As a result, the team stopped trusting the answers.",
         "speakingPrompt": "Explain this pattern in your own words: I prefer RAG because it can use external information. For example, it can retrieve company documents. As a result, the answer can be more relevant.",
         "writingPrompt": "Write three new examples based on: I prefer RAG because it can use external information. For example, it can retrieve company documents. As a result, the answer can be more relevant.",
@@ -1893,8 +1834,7 @@
             "pronunciation": "/ˈfluː.ən.si/",
             "wordForm": "noun",
             "collocation": "improve fluency",
-            "exampleSentence": "Short daily practice can improve fluency.",
-            "isCritical": true
+            "exampleSentence": "Short daily practice can improve fluency."
           },
           {
             "word": "explain",
@@ -1902,8 +1842,7 @@
             "pronunciation": "/ɪkˈspleɪn/",
             "wordForm": "verb",
             "collocation": "explain a process",
-            "exampleSentence": "Explain the process in three steps.",
-            "isCritical": true
+            "exampleSentence": "Explain the process in three steps."
           },
           {
             "word": "point",
@@ -1911,8 +1850,7 @@
             "pronunciation": "/pɔɪnt/",
             "wordForm": "noun / verb",
             "collocation": "make a point",
-            "exampleSentence": "Make your point in the first sentence.",
-            "isCritical": true
+            "exampleSentence": "Make your point in the first sentence."
           },
           {
             "word": "result",
@@ -1920,8 +1858,7 @@
             "pronunciation": "/rɪˈzʌlt/",
             "wordForm": "noun / verb",
             "collocation": "as a result",
-            "exampleSentence": "As a result, the response time improved.",
-            "isCritical": true
+            "exampleSentence": "As a result, the response time improved."
           },
           {
             "word": "practice",
@@ -1929,8 +1866,7 @@
             "pronunciation": "/ˈpræk.tɪs/",
             "wordForm": "noun / verb",
             "collocation": "practice speaking",
-            "exampleSentence": "I practice speaking for ten minutes every day.",
-            "isCritical": true
+            "exampleSentence": "I practice speaking for ten minutes every day."
           }
         ],
         "questions": [
@@ -2036,7 +1972,7 @@
         "objective": "Write a clear technical update with status, problem, cause, and next action",
         "thaiExplanation": "ให้แต่ละย่อหน้ามีหน้าที่ชัด เริ่มจากสถานะ ต่อด้วยปัญหาและสาเหตุ แล้วปิดด้วย next action ที่ตรวจสอบได้",
         "grammarFocus": "ให้แต่ละย่อหน้ามีหน้าที่ชัด เริ่มจากสถานะ ต่อด้วยปัญหาและสาเหตุ แล้วปิดด้วย next action ที่ตรวจสอบได้",
-        "readingContent": "The API is complete. However, the integration test is failing because the seed data is incomplete. I will update the data and rerun the test.",
+        "readingContent": "Here is a status update a reader can act on. The API is complete and merged. However, the integration test is failing because the seed data is incomplete. I will update the data and rerun the test before standup tomorrow. Four sentences, four jobs: status, problem, cause, next action. Each paragraph should do one of them and stop. Keep it concise. A reader with forty unread messages will not look for your point inside a long polite opening, so put the issue in the first line rather than the fourth. And make the next action checkable. It needs a person and a time, because I will look into it cannot be followed up by anybody, including you.",
         "listeningTranscript": "Quick voice update on the integration. Status: the API is done. The issue is that the test suite is still failing. The cause is incomplete seed data, and that one is mine. The next action is also mine. I will update the data tonight and rerun the tests before standup tomorrow.",
         "speakingPrompt": "Explain this pattern in your own words: The API is complete. However, the integration test is failing because the seed data is incomplete. I will update the data and rerun the test.",
         "writingPrompt": "Write three new examples based on: The API is complete. However, the integration test is failing because the seed data is incomplete. I will update the data and rerun the test.",
@@ -2049,8 +1985,7 @@
             "pronunciation": "/kənˈsaɪs/",
             "wordForm": "adjective",
             "collocation": "clear and concise",
-            "exampleSentence": "Keep the status update clear and concise.",
-            "isCritical": true
+            "exampleSentence": "Keep the status update clear and concise."
           },
           {
             "word": "update",
@@ -2058,8 +1993,7 @@
             "pronunciation": "/ˈʌp.deɪt/",
             "wordForm": "noun / verb",
             "collocation": "send an update",
-            "exampleSentence": "I send a short update every Friday.",
-            "isCritical": true
+            "exampleSentence": "I send a short update every Friday."
           },
           {
             "word": "issue",
@@ -2067,8 +2001,7 @@
             "pronunciation": "/ˈɪʃ.uː/",
             "wordForm": "noun",
             "collocation": "report an issue",
-            "exampleSentence": "Please report the issue with a screenshot.",
-            "isCritical": true
+            "exampleSentence": "Please report the issue with a screenshot."
           },
           {
             "word": "cause",
@@ -2076,8 +2009,7 @@
             "pronunciation": "/kɔːz/",
             "wordForm": "noun / verb",
             "collocation": "the root cause",
-            "exampleSentence": "The root cause was an expired key.",
-            "isCritical": true
+            "exampleSentence": "The root cause was an expired key."
           },
           {
             "word": "suggest",
@@ -2085,8 +2017,7 @@
             "pronunciation": "/səˈdʒest/",
             "wordForm": "verb",
             "collocation": "suggest a solution",
-            "exampleSentence": "I suggest a small change to the config.",
-            "isCritical": true
+            "exampleSentence": "I suggest a small change to the config."
           }
         ],
         "questions": [
@@ -2192,7 +2123,7 @@
         "objective": "Report progress, clarify requirements, and explain a blocker professionally",
         "thaiExplanation": "ใช้ประโยคตรงประเด็นและแยก fact ออกจาก assumption หาก requirement ไม่ชัดให้ถามยืนยันก่อนเสนอ estimate",
         "grammarFocus": "ใช้ประโยคตรงประเด็นและแยก fact ออกจาก assumption หาก requirement ไม่ชัดให้ถามยืนยันก่อนเสนอ estimate",
-        "readingContent": "The implementation is complete, but deployment is blocked by a missing permission. Could you confirm who can approve the access request?",
+        "readingContent": "Compare two messages. The first says the deployment is broken. The second says the implementation is complete, but deployment is blocked by a missing permission, and asks who can approve the access request. Only the second one can be acted on. Separate what you know from what you assume. It is a fact that the permission is missing. It is an assumption that Anna grants it, so mark it as one: I think Anna can approve this. Report progress before problems, and report a blocker on the day you find it rather than on the day of the deadline. If a requirement is unclear, confirm it before you give an estimate, because an estimate built on a guess is wrong for a reason nobody else can see.",
         "listeningTranscript": "Hi, quick one about the deployment. Good progress this week. The implementation is complete. But I am blocked. I do not have permission to push to staging. Could you confirm who approves that access? Once it is approved, I estimate one more day, and we still meet the deadline.",
         "speakingPrompt": "Explain this pattern in your own words: The implementation is complete, but deployment is blocked by a missing permission. Could you confirm who can approve the access request?",
         "writingPrompt": "Write three new examples based on: The implementation is complete, but deployment is blocked by a missing permission. Could you confirm who can approve the access request?",
@@ -2205,8 +2136,7 @@
             "pronunciation": "/ˈblɒk.ər/",
             "wordForm": "noun",
             "collocation": "report a blocker",
-            "exampleSentence": "I need to report one deployment blocker.",
-            "isCritical": true
+            "exampleSentence": "I need to report one deployment blocker."
           },
           {
             "word": "progress",
@@ -2214,8 +2144,7 @@
             "pronunciation": "/ˈprəʊ.ɡres/",
             "wordForm": "noun",
             "collocation": "make progress",
-            "exampleSentence": "We made good progress on the API this week.",
-            "isCritical": true
+            "exampleSentence": "We made good progress on the API this week."
           },
           {
             "word": "deadline",
@@ -2223,8 +2152,7 @@
             "pronunciation": "/ˈded.laɪn/",
             "wordForm": "noun",
             "collocation": "meet a deadline",
-            "exampleSentence": "We can still meet the deadline on Friday.",
-            "isCritical": true
+            "exampleSentence": "We can still meet the deadline on Friday."
           },
           {
             "word": "confirm",
@@ -2232,8 +2160,7 @@
             "pronunciation": "/kənˈfɜːrm/",
             "wordForm": "verb",
             "collocation": "confirm a requirement",
-            "exampleSentence": "Please confirm the requirement before we start.",
-            "isCritical": true
+            "exampleSentence": "Please confirm the requirement before we start."
           },
           {
             "word": "estimate",
@@ -2241,8 +2168,7 @@
             "pronunciation": "/ˈes.tɪ.mət/",
             "wordForm": "noun / verb",
             "collocation": "give an estimate",
-            "exampleSentence": "I will give an estimate after the review.",
-            "isCritical": true
+            "exampleSentence": "I will give an estimate after the review."
           }
         ],
         "questions": [
@@ -2348,7 +2274,7 @@
         "objective": "Choose a TOEIC strategy by part and manage time across Parts 1–7",
         "thaiExplanation": "Listening เน้นเดาคำถามและจับ paraphrase ส่วน Reading ให้กำหนดเวลา Part 5–6 เพื่อเหลือเวลาสำหรับ Part 7",
         "grammarFocus": "Listening เน้นเดาคำถามและจับ paraphrase ส่วน Reading ให้กำหนดเวลา Part 5–6 เพื่อเหลือเวลาสำหรับ Part 7",
-        "readingContent": "The meeting has been postponed until Friday. All participants should review the revised agenda before then.",
+        "readingContent": "The meeting has been postponed until Friday. All participants should review the revised agenda before then. A notice with the new room number will be sent to your colleagues this afternoon. TOEIC writes announcements exactly like this one, and the questions rarely reuse the words you have just heard. Postponed becomes moved to a later date. Participants becomes everyone who plans to attend. That change of wording is the paraphrase, and catching it is most of Part 4. In the reading half, manage the clock. Parts 5 and 6 are short and should be finished quickly, because Part 7 is where the long passages are. Read each question before you search the passage, so you know what you are scanning for.",
         "listeningTranscript": "Attention, all staff. The quarterly meeting scheduled for Wednesday has been postponed until Friday at two o'clock. Everyone who plans to attend should review the revised agenda beforehand. A notice with the new room number will be sent to your colleagues this afternoon.",
         "speakingPrompt": "Explain this pattern in your own words: The meeting has been postponed until Friday. All participants should review the revised agenda before then.",
         "writingPrompt": "Write three new examples based on: The meeting has been postponed until Friday. All participants should review the revised agenda before then.",
@@ -2361,8 +2287,7 @@
             "pronunciation": "/pəˈspəʊn/",
             "wordForm": "verb",
             "collocation": "postpone a meeting",
-            "exampleSentence": "The team postponed the meeting until Friday.",
-            "isCritical": true
+            "exampleSentence": "The team postponed the meeting until Friday."
           },
           {
             "word": "attend",
@@ -2370,8 +2295,7 @@
             "pronunciation": "/əˈtend/",
             "wordForm": "verb",
             "collocation": "attend a meeting",
-            "exampleSentence": "She will attend the training on Friday.",
-            "isCritical": true
+            "exampleSentence": "She will attend the training on Friday."
           },
           {
             "word": "announcement",
@@ -2379,8 +2303,7 @@
             "pronunciation": "/əˈnaʊns.mənt/",
             "wordForm": "noun",
             "collocation": "make an announcement",
-            "exampleSentence": "Listen to the announcement about the delayed flight.",
-            "isCritical": true
+            "exampleSentence": "Listen to the announcement about the delayed flight."
           },
           {
             "word": "colleague",
@@ -2388,8 +2311,7 @@
             "pronunciation": "/ˈkɒl.iːɡ/",
             "wordForm": "noun",
             "collocation": "a former colleague",
-            "exampleSentence": "A colleague from the sales team called this morning.",
-            "isCritical": true
+            "exampleSentence": "A colleague from the sales team called this morning."
           },
           {
             "word": "notice",
@@ -2397,8 +2319,7 @@
             "pronunciation": "/ˈnəʊ.tɪs/",
             "wordForm": "noun / verb",
             "collocation": "give notice",
-            "exampleSentence": "The notice says the office will close early.",
-            "isCritical": true
+            "exampleSentence": "The notice says the office will close early."
           }
         ],
         "questions": [
@@ -2504,7 +2425,7 @@
         "objective": "Respond to a workplace speaking prompt and write a complete email response",
         "thaiExplanation": "งานพูดต้องตอบตรงและมีรายละเอียดสนับสนุน งานเขียนอีเมลต้องตอบทุกข้อกำหนดพร้อม opening, body และ closing ที่เหมาะสม",
         "grammarFocus": "งานพูดต้องตอบตรงและมีรายละเอียดสนับสนุน งานเขียนอีเมลต้องตอบทุกข้อกำหนดพร้อม opening, body และ closing ที่เหมาะสม",
-        "readingContent": "Thank you for your message. I can attend the workshop on Tuesday. Could you also confirm whether participants should bring a laptop?",
+        "readingContent": "Thank you for your message. I can attend the workshop on Tuesday, and I apologize for the delay in my reply. Could you also confirm whether participants should bring a laptop? I have attached the draft agenda, and I would recommend that everybody reads it beforehand. Look at what that short reply does. It opens politely, answers the question that was asked, asks a question of its own, and closes with a clear recommendation. TOEIC scores writing against the prompt rather than against your vocabulary. If the prompt asks two questions and your answer covers one, you lose marks for task completion however correct the English is. The speaking tasks work the same way: answer directly, then support the answer with one or two concrete details. A fluent answer that never reaches the point scores below a plain answer that does.",
         "listeningTranscript": "Hi, this is Mark, returning your message about the workshop. Regarding your first question, yes, I can attend on Tuesday. I apologize for the slow reply. I was travelling last week. I have attached the draft agenda, and I would recommend that participants bring a laptop.",
         "speakingPrompt": "Explain this pattern in your own words: Thank you for your message. I can attend the workshop on Tuesday. Could you also confirm whether participants should bring a laptop?",
         "writingPrompt": "Write three new examples based on: Thank you for your message. I can attend the workshop on Tuesday. Could you also confirm whether participants should bring a laptop?",
@@ -2517,8 +2438,7 @@
             "pronunciation": "/rɪˈspɒnd/",
             "wordForm": "verb",
             "collocation": "respond to an email",
-            "exampleSentence": "Please respond to every point in the email.",
-            "isCritical": true
+            "exampleSentence": "Please respond to every point in the email."
           },
           {
             "word": "apologize",
@@ -2526,8 +2446,7 @@
             "pronunciation": "/əˈpɒl.ə.dʒaɪz/",
             "wordForm": "verb",
             "collocation": "apologize for the delay",
-            "exampleSentence": "I apologize for the delay in my reply.",
-            "isCritical": true
+            "exampleSentence": "I apologize for the delay in my reply."
           },
           {
             "word": "attach",
@@ -2535,8 +2454,7 @@
             "pronunciation": "/əˈtætʃ/",
             "wordForm": "verb",
             "collocation": "attach a file",
-            "exampleSentence": "I have attached the report to this email.",
-            "isCritical": true
+            "exampleSentence": "I have attached the report to this email."
           },
           {
             "word": "regarding",
@@ -2544,8 +2462,7 @@
             "pronunciation": "/rɪˈɡɑːr.dɪŋ/",
             "wordForm": "preposition",
             "collocation": "regarding your request",
-            "exampleSentence": "I am writing regarding your request for a refund.",
-            "isCritical": true
+            "exampleSentence": "I am writing regarding your request for a refund."
           },
           {
             "word": "recommend",
@@ -2553,8 +2470,7 @@
             "pronunciation": "/ˌrek.əˈmend/",
             "wordForm": "verb",
             "collocation": "recommend an option",
-            "exampleSentence": "I recommend the second option because it is cheaper.",
-            "isCritical": true
+            "exampleSentence": "I recommend the second option because it is cheaper."
           }
         ],
         "questions": [
@@ -2660,7 +2576,7 @@
         "objective": "Explain the main components of an LLM architecture",
         "thaiExplanation": "เชื่อมความรู้ AI กับภาษา: นิยาม component ด้วย “X is a component that…” และใช้ noun phrases เพื่ออธิบายหน้าที่",
         "grammarFocus": "A tokenizer converts text into tokens. The model processes those tokens through multiple layers. A decoder predicts the next token.",
-        "readingContent": "First, the tokenizer converts the input into tokens. Next, the model processes the sequence. Finally, the decoder produces output tokens.",
+        "readingContent": "First, the tokenizer converts the input into tokens. A token is not always a whole word: it may be a word, a part of a word, or a single punctuation mark. Next, the model processes the sequence through many layers, and each layer passes a slightly different representation to the one above it. At the end, the decoder predicts the next token, adds it to the sequence, and starts again. That is why a long answer costs more than a short one: the model does not write it all at once but one token at a time. When the answer is finished, the tokens are converted back into the text you read on the screen.",
         "listeningTranscript": "Let me explain what happens inside. Your sentence goes to the tokenizer, which cuts it into tokens. Those tokens travel through many layers. At each step the model predicts the next token, one at a time. Then the decoder turns those tokens back into text you can read.",
         "speakingPrompt": "Give a 60-second explanation of tokenizer, layers, and decoder.",
         "writingPrompt": "Write a 70-word explanation of an LLM architecture for a junior developer.",
@@ -2673,8 +2589,7 @@
             "pronunciation": "/ˈtəʊ.kən.aɪ.zər/",
             "wordForm": "noun",
             "collocation": "use a tokenizer",
-            "exampleSentence": "The tokenizer converts text into tokens.",
-            "isCritical": true
+            "exampleSentence": "The tokenizer converts text into tokens."
           },
           {
             "word": "layer",
@@ -2682,8 +2597,7 @@
             "pronunciation": "/ˈleɪ.ər/",
             "wordForm": "noun",
             "collocation": "neural layer",
-            "exampleSentence": "Each layer transforms the representation.",
-            "isCritical": true
+            "exampleSentence": "Each layer transforms the representation."
           },
           {
             "word": "predict",
@@ -2691,8 +2605,7 @@
             "pronunciation": "/prɪˈdɪkt/",
             "wordForm": "verb",
             "collocation": "predict a token",
-            "exampleSentence": "The model predicts the next token.",
-            "isCritical": true
+            "exampleSentence": "The model predicts the next token."
           }
         ],
         "questions": [
@@ -2798,7 +2711,7 @@
         "objective": "Write an unambiguous prompt with constraints and output format",
         "thaiExplanation": "ใช้ imperative verbs เช่น summarize, classify, return และระบุข้อจำกัดเชิงบวกพร้อมตัวอย่าง output",
         "grammarFocus": "A strong prompt states the goal, provides context, sets rules, and defines the expected output.",
-        "readingContent": "Summarize the incident in three bullet points. Use only the supplied log. Return valid JSON with summary, cause, and nextAction fields.",
+        "readingContent": "Compare two prompts written for the same job. The first says: analyze this log. The second says: summarize the incident in three bullet points, use only the supplied log, and return valid JSON with summary, cause, and nextAction fields. The second one states the goal, gives the context, sets a constraint, and defines the output format. Those four parts are what make a prompt repeatable: two engineers running it get answers of the same shape, and a parser can read the result without guessing. A constraint is the part that limits what the model may use or say. Use only the supplied log stops the model filling the gaps from what it remembers, which is the failure hardest to notice afterwards.",
         "listeningTranscript": "Compare two prompts. The first one says: analyse this log. That is all. The second one says: summarize the supplied log in three bullet points, name the likely cause, and return valid JSON. The second one gives context, a constraint, and an output format. Only one of them is repeatable.",
         "speakingPrompt": "Read the prompt aloud, then explain why each constraint is necessary.",
         "writingPrompt": "Create a prompt that extracts API errors into a JSON array.",
@@ -2811,8 +2724,7 @@
             "pronunciation": "/kənˈstreɪnt/",
             "wordForm": "noun",
             "collocation": "set a constraint",
-            "exampleSentence": "The prompt includes a length constraint.",
-            "isCritical": true
+            "exampleSentence": "The prompt includes a length constraint."
           },
           {
             "word": "instruction",
@@ -2820,8 +2732,7 @@
             "pronunciation": "/ɪnˈstrʌk.ʃən/",
             "wordForm": "noun",
             "collocation": "follow an instruction",
-            "exampleSentence": "The model should follow the instruction.",
-            "isCritical": true
+            "exampleSentence": "The model should follow the instruction."
           },
           {
             "word": "output format",
@@ -2829,8 +2740,7 @@
             "pronunciation": "/ˈaʊt.pʊt ˈfɔː.mæt/",
             "wordForm": "noun phrase",
             "collocation": "define the output format",
-            "exampleSentence": "Define the output format explicitly.",
-            "isCritical": true
+            "exampleSentence": "Define the output format explicitly."
           }
         ],
         "questions": [
@@ -2936,7 +2846,7 @@
         "objective": "Explain a grounded RAG flow from query to answer",
         "thaiExplanation": "RAG ผสาน retrieval กับ generation ภาษาหลักของบทคือ sequence words, passive voice และคำว่า relevant, source, context",
         "grammarFocus": "In RAG, relevant chunks are retrieved from a knowledge source. They are added to the prompt as context. The model then generates a grounded answer.",
-        "readingContent": "First, the query is converted into an embedding. Next, relevant chunks are retrieved and ranked. Then, the context is sent to the model. Finally, the answer is generated with source references.",
+        "readingContent": "First, the query is converted into an embedding. Next, relevant chunks are retrieved from the store and ranked by score. Then, the top few are added to the prompt as context. Finally, the answer is generated with references to the sources it used. Only the top few are kept, because the prompt has limited space and every token in it is paid for. That retrieval step is what makes an answer grounded. Grounded does not mean short or formal; it means the content came from a document you can show the reader. A chunk is relevant when it actually answers the question, not merely when it came back from the store. Without retrieval the model still answers, but it answers from memory and cannot tell you where the answer came from.",
         "listeningTranscript": "So how does the answer stay grounded? Your question is converted into an embedding. That embedding is matched against the store, and the most relevant chunks come back ranked. Those chunks go into the prompt as context. The model answers from them, and it shows the source it used.",
         "speakingPrompt": "Explain the RAG workflow in 90 seconds using first, next, then, and finally.",
         "writingPrompt": "Write a technical summary that explains how RAG reduces unsupported answers.",
@@ -2949,8 +2859,7 @@
             "pronunciation": "/rɪˈtriːv/",
             "wordForm": "verb",
             "collocation": "retrieve a document",
-            "exampleSentence": "The system retrieves relevant documents.",
-            "isCritical": true
+            "exampleSentence": "The system retrieves relevant documents."
           },
           {
             "word": "relevant",
@@ -2958,8 +2867,7 @@
             "pronunciation": "/ˈrel.ə.vənt/",
             "wordForm": "adjective",
             "collocation": "relevant context",
-            "exampleSentence": "Only relevant context is sent to the model.",
-            "isCritical": true
+            "exampleSentence": "Only relevant context is sent to the model."
           },
           {
             "word": "grounded",
@@ -2967,8 +2875,7 @@
             "pronunciation": "/ˈɡraʊn.dɪd/",
             "wordForm": "adjective",
             "collocation": "grounded answer",
-            "exampleSentence": "A grounded answer is supported by a source.",
-            "isCritical": true
+            "exampleSentence": "A grounded answer is supported by a source."
           },
           {
             "word": "source",
@@ -2976,8 +2883,7 @@
             "pronunciation": "/sɔːs/",
             "wordForm": "noun",
             "collocation": "cite a source",
-            "exampleSentence": "The answer cites its source.",
-            "isCritical": true
+            "exampleSentence": "The answer cites its source."
           }
         ],
         "questions": [
@@ -3083,7 +2989,7 @@
         "objective": "Present a practical security checklist for an AI service",
         "thaiExplanation": "ใช้ must/must not สำหรับข้อบังคับ should สำหรับข้อแนะนำ และ may/might สำหรับความเสี่ยง",
         "grammarFocus": "Secrets must be stored outside source code. The API should validate every input. Logs must not expose personal data.",
-        "readingContent": "Before deployment, permissions are reviewed and secrets are rotated. Inputs are validated and rate limits are enabled. After release, security logs are monitored.",
+        "readingContent": "Before deployment, permissions are reviewed and secrets are rotated. Inputs are validated and rate limits are enabled. After release, security logs are monitored. Read those three sentences again and notice that none of them names a person: at this stage the control matters more than who performs it. Secrets must be stored outside source code. Anything committed to a repository stays in its history even after the file is deleted, which is why a leaked key has to be rotated rather than removed. Every input should be validated at the boundary, before it reaches anything that trusts it. A rate limit caps how many requests arrive in a short time, whether they come from a bug in your own client or from somebody probing the service. And logs must not expose personal data, because logs are copied, shipped and read far away from the service that wrote them.",
         "listeningTranscript": "Before we release tomorrow, three reminders. Rotate the secrets. None of them belong in the repository. Check that every input is validated and that the rate limit is switched on. And read the logs one more time. If a log exposes a customer email address, we are not shipping.",
         "speakingPrompt": "Present five security checks and explain one risk for each check.",
         "writingPrompt": "Write a release security checklist for an AI API.",
@@ -3096,8 +3002,7 @@
             "pronunciation": "/pəˈmɪʃ.ən/",
             "wordForm": "noun",
             "collocation": "grant permission",
-            "exampleSentence": "Grant only the required permission.",
-            "isCritical": true
+            "exampleSentence": "Grant only the required permission."
           },
           {
             "word": "secret",
@@ -3105,8 +3010,7 @@
             "pronunciation": "/ˈsiː.krət/",
             "wordForm": "noun",
             "collocation": "store a secret",
-            "exampleSentence": "Never store a secret in source code.",
-            "isCritical": true
+            "exampleSentence": "Never store a secret in source code."
           },
           {
             "word": "rate limit",
@@ -3114,8 +3018,7 @@
             "pronunciation": "/reɪt ˈlɪm.ɪt/",
             "wordForm": "noun",
             "collocation": "enforce a rate limit",
-            "exampleSentence": "The gateway enforces a rate limit.",
-            "isCritical": true
+            "exampleSentence": "The gateway enforces a rate limit."
           },
           {
             "word": "expose",
@@ -3123,8 +3026,7 @@
             "pronunciation": "/ɪkˈspəʊz/",
             "wordForm": "verb",
             "collocation": "expose data",
-            "exampleSentence": "Logs must not expose personal data.",
-            "isCritical": true
+            "exampleSentence": "Logs must not expose personal data."
           }
         ],
         "questions": [
@@ -3230,7 +3132,7 @@
         "objective": "Explain Evolution of AI clearly in English",
         "thaiExplanation": "บทนี้ฝึก Past tense, timeline, and change verbs แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Past tense, timeline, and change verbs แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "AI evolved from rule-based systems to data-driven models.",
+        "readingContent": "AI evolved from rule-based systems to data-driven models. In the early decades people wrote the rules by hand: if the patient has this symptom and that test result, suggest this diagnosis. Those systems worked inside narrow subjects and broke as soon as a case fell outside the rules somebody had thought of. Then data-driven models replaced most of that work. Instead of being told the rules they learned patterns from examples, and accuracy improved every time the datasets grew. Over the last decade the field developed faster than in the twenty years before it. When you describe this history in English, keep the tenses apart: past simple for what finished, present perfect for the changes that still shape what we build today.",
         "listeningTranscript": "Look at the last three decades. Early systems followed rules that people wrote by hand. Then data-driven models replaced most of those rules. Accuracy improved every time the datasets grew. And in the last decade the field developed faster than in the twenty years before it.",
         "speakingPrompt": "Explain this pattern in your own words: AI evolved from rule-based systems to data-driven models.",
         "writingPrompt": "Write three new examples based on: AI evolved from rule-based systems to data-driven models.",
@@ -3243,8 +3145,7 @@
             "pronunciation": "/ˌiː.vəˈluː.ʃən/",
             "wordForm": "technical term",
             "collocation": "evolution in context",
-            "exampleSentence": "AI evolved from rule-based systems to data-driven models.",
-            "isCritical": true
+            "exampleSentence": "AI evolved from rule-based systems to data-driven models."
           },
           {
             "word": "develop",
@@ -3252,8 +3153,7 @@
             "pronunciation": "/dɪˈvel.əp/",
             "wordForm": "verb",
             "collocation": "develop a model",
-            "exampleSentence": "Researchers developed the first neural networks decades ago.",
-            "isCritical": true
+            "exampleSentence": "Researchers developed the first neural networks decades ago."
           },
           {
             "word": "improve",
@@ -3261,8 +3161,7 @@
             "pronunciation": "/ɪmˈpruːv/",
             "wordForm": "verb",
             "collocation": "improve accuracy",
-            "exampleSentence": "Larger datasets improved the accuracy of the model.",
-            "isCritical": true
+            "exampleSentence": "Larger datasets improved the accuracy of the model."
           },
           {
             "word": "replace",
@@ -3270,8 +3169,7 @@
             "pronunciation": "/rɪˈpleɪs/",
             "wordForm": "verb",
             "collocation": "replace an approach",
-            "exampleSentence": "Deep learning replaced many rule-based systems.",
-            "isCritical": true
+            "exampleSentence": "Deep learning replaced many rule-based systems."
           },
           {
             "word": "decade",
@@ -3279,8 +3177,7 @@
             "pronunciation": "/ˈdek.eɪd/",
             "wordForm": "noun",
             "collocation": "over the last decade",
-            "exampleSentence": "AI changed very quickly over the last decade.",
-            "isCritical": true
+            "exampleSentence": "AI changed very quickly over the last decade."
           }
         ],
         "questions": [
@@ -3386,7 +3283,7 @@
         "objective": "Explain Inference Lifecycle clearly in English",
         "thaiExplanation": "บทนี้ฝึก Sequence words, process language, and passive voice แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Sequence words, process language, and passive voice แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "Inference begins when the service receives an input.",
+        "readingContent": "Inference begins when the service receives an input. The text is cleaned and converted into tokens. The tokens are passed to the model, which generates the answer one token at a time. Finally the API returns the result, usually as JSON the client can parse. Notice how many of those sentences are passive: the text is cleaned, the tokens are passed, the result is returned. When you describe a pipeline the step matters more than the component performing it, and the passive keeps the reader's attention on the step. Every stage costs time, and the user waits for the sum of all of them rather than for the fastest one.",
         "listeningTranscript": "Let me walk through one request. Inference begins when the service receives your input. The text is cleaned, then converted into tokens. The model generates the answer one token at a time. Finally the API returns the result as JSON. Four steps, and every one of them costs time.",
         "speakingPrompt": "Explain this pattern in your own words: Inference begins when the service receives an input.",
         "writingPrompt": "Write three new examples based on: Inference begins when the service receives an input.",
@@ -3399,8 +3296,7 @@
             "pronunciation": "/ˈɪn.fər.əns/",
             "wordForm": "technical term",
             "collocation": "inference in context",
-            "exampleSentence": "Inference begins when the service receives an input.",
-            "isCritical": true
+            "exampleSentence": "Inference begins when the service receives an input."
           },
           {
             "word": "input",
@@ -3408,8 +3304,7 @@
             "pronunciation": "/ˈɪn.pʊt/",
             "wordForm": "noun / verb",
             "collocation": "user input",
-            "exampleSentence": "The user input is cleaned before the model reads it.",
-            "isCritical": true
+            "exampleSentence": "The user input is cleaned before the model reads it."
           },
           {
             "word": "generate",
@@ -3417,8 +3312,7 @@
             "pronunciation": "/ˈdʒen.ə.reɪt/",
             "wordForm": "verb",
             "collocation": "generate a response",
-            "exampleSentence": "The model generates a response token by token.",
-            "isCritical": true
+            "exampleSentence": "The model generates a response token by token."
           },
           {
             "word": "step",
@@ -3426,8 +3320,7 @@
             "pronunciation": "/step/",
             "wordForm": "noun",
             "collocation": "the next step",
-            "exampleSentence": "In the next step, the text is converted into tokens.",
-            "isCritical": true
+            "exampleSentence": "In the next step, the text is converted into tokens."
           },
           {
             "word": "return",
@@ -3435,8 +3328,7 @@
             "pronunciation": "/rɪˈtɜːrn/",
             "wordForm": "verb",
             "collocation": "return a result",
-            "exampleSentence": "The API returns the result as JSON.",
-            "isCritical": true
+            "exampleSentence": "The API returns the result as JSON."
           }
         ],
         "questions": [
@@ -3542,7 +3434,7 @@
         "objective": "Explain Deterministic vs Stochastic clearly in English",
         "thaiExplanation": "บทนี้ฝึก Compare, contrast, and probability language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Compare, contrast, and probability language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "A deterministic process returns the same result for the same input.",
+        "readingContent": "A deterministic process returns the same result for the same input. Run it twice and nothing changes. A language model is different: it samples from the tokens it considers likely, so one prompt can produce different wording each time. Raising the temperature makes the output more varied, and lowering it makes the output more consistent. Neither setting is a fault, and neither one makes the model correct. When you design a system, decide which parts have to be deterministic. Charging a card, applying a discount and writing to a database belong in ordinary code, where the same input always produces the same result. Drafting, rephrasing and suggesting are the parts where variety is useful rather than dangerous.",
         "listeningTranscript": "Here is the difference in one test. Run the same input through a deterministic function twice and you get the same result every time. Run the same prompt through a model twice and the wording may change, because it samples the most likely token rather than the only one.",
         "speakingPrompt": "Explain this pattern in your own words: A deterministic process returns the same result for the same input.",
         "writingPrompt": "Write three new examples based on: A deterministic process returns the same result for the same input.",
@@ -3555,8 +3447,7 @@
             "pronunciation": "/dɪˌtɜː.mɪˈnɪs.tɪk/",
             "wordForm": "technical term",
             "collocation": "deterministic in context",
-            "exampleSentence": "A deterministic process returns the same result for the same input.",
-            "isCritical": true
+            "exampleSentence": "A deterministic process returns the same result for the same input."
           },
           {
             "word": "random",
@@ -3564,8 +3455,7 @@
             "pronunciation": "/ˈræn.dəm/",
             "wordForm": "adjective",
             "collocation": "a random choice",
-            "exampleSentence": "A higher temperature makes the output more random.",
-            "isCritical": true
+            "exampleSentence": "A higher temperature makes the output more random."
           },
           {
             "word": "compare",
@@ -3573,8 +3463,7 @@
             "pronunciation": "/kəmˈpeər/",
             "wordForm": "verb",
             "collocation": "compare two outputs",
-            "exampleSentence": "Compare the two outputs before you choose one.",
-            "isCritical": true
+            "exampleSentence": "Compare the two outputs before you choose one."
           },
           {
             "word": "consistent",
@@ -3582,8 +3471,7 @@
             "pronunciation": "/kənˈsɪs.tənt/",
             "wordForm": "adjective",
             "collocation": "consistent results",
-            "exampleSentence": "The same prompt should give consistent results.",
-            "isCritical": true
+            "exampleSentence": "The same prompt should give consistent results."
           },
           {
             "word": "likely",
@@ -3591,8 +3479,7 @@
             "pronunciation": "/ˈlaɪk.li/",
             "wordForm": "adjective / adverb",
             "collocation": "the most likely token",
-            "exampleSentence": "The model picks the most likely next token.",
-            "isCritical": true
+            "exampleSentence": "The model picks the most likely next token."
           }
         ],
         "questions": [
@@ -3698,7 +3585,7 @@
         "objective": "Explain API-First AI clearly in English",
         "thaiExplanation": "บทนี้ฝึก Request/response verbs and endpoint terminology แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Request/response verbs and endpoint terminology แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "The endpoint accepts a request and returns a structured response.",
+        "readingContent": "The endpoint accepts a request and returns a structured response. The client sends the request over HTTPS with the API key in a header, never in the address bar and never committed to the repository. The body carries the prompt and the settings; the response carries the answer and the usage figures. If the key is missing or wrong, the call fails with a 401. If you are sending requests faster than your plan allows, it fails with a 429 instead. Read the status code before you change anything else. It tells you whether the problem is your credentials, your rate, your request or the service itself, and each of those has a different fix.",
         "listeningTranscript": "A quick tour of one call. The client sends a request to the endpoint. The API key goes in the header, never in the address bar and never in the source code. The endpoint returns a structured response. If the key is wrong, the call fails with a 401 error.",
         "speakingPrompt": "Explain this pattern in your own words: The endpoint accepts a request and returns a structured response.",
         "writingPrompt": "Write three new examples based on: The endpoint accepts a request and returns a structured response.",
@@ -3711,8 +3598,7 @@
             "pronunciation": "/ˈend.pɔɪnt/",
             "wordForm": "technical term",
             "collocation": "endpoint in context",
-            "exampleSentence": "The endpoint accepts a request and returns a structured response.",
-            "isCritical": true
+            "exampleSentence": "The endpoint accepts a request and returns a structured response."
           },
           {
             "word": "send",
@@ -3720,8 +3606,7 @@
             "pronunciation": "/send/",
             "wordForm": "verb",
             "collocation": "send a request",
-            "exampleSentence": "The client sends a request to the endpoint.",
-            "isCritical": true
+            "exampleSentence": "The client sends a request to the endpoint."
           },
           {
             "word": "key",
@@ -3729,8 +3614,7 @@
             "pronunciation": "/kiː/",
             "wordForm": "noun",
             "collocation": "an API key",
-            "exampleSentence": "Keep the API key out of the source code.",
-            "isCritical": true
+            "exampleSentence": "Keep the API key out of the source code."
           },
           {
             "word": "header",
@@ -3738,8 +3622,7 @@
             "pronunciation": "/ˈhed.ər/",
             "wordForm": "noun",
             "collocation": "a request header",
-            "exampleSentence": "Put the token in the request header.",
-            "isCritical": true
+            "exampleSentence": "Put the token in the request header."
           },
           {
             "word": "fail",
@@ -3747,8 +3630,7 @@
             "pronunciation": "/feɪl/",
             "wordForm": "verb",
             "collocation": "fail with an error",
-            "exampleSentence": "The call failed with a 401 error.",
-            "isCritical": true
+            "exampleSentence": "The call failed with a 401 error."
           }
         ],
         "questions": [
@@ -3854,7 +3736,7 @@
         "objective": "Explain Advanced Reasoning clearly in English",
         "thaiExplanation": "บทนี้ฝึก Cause, effect, justification, and evidence แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Cause, effect, justification, and evidence แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "The conclusion should be supported by relevant evidence.",
+        "readingContent": "The conclusion should be supported by relevant evidence. When a model explains its reasoning, read the steps rather than the last line. A good answer says what it observed and then what follows from it: the log shows three timeouts in a row, so the network is the likely cause. A weak answer states the cause and offers nothing behind it. Do not assume that a confident answer is a correct one, because the two look identical on the screen. Ask for the source, and check that the source says what the answer claims it says. That habit is the difference between using a model and trusting one, and it costs about thirty seconds per answer.",
         "listeningTranscript": "When you check a model's answer, do not stop at the conclusion. Ask what supports it. If the evidence is not quoted, assume nothing and go and find the source yourself. An answer that sounds correct and an answer that is correct look exactly the same until somebody checks.",
         "speakingPrompt": "Explain this pattern in your own words: The conclusion should be supported by relevant evidence.",
         "writingPrompt": "Write three new examples based on: The conclusion should be supported by relevant evidence.",
@@ -3867,8 +3749,7 @@
             "pronunciation": "/ˈev.ɪ.dəns/",
             "wordForm": "technical term",
             "collocation": "evidence in context",
-            "exampleSentence": "The conclusion should be supported by relevant evidence.",
-            "isCritical": true
+            "exampleSentence": "The conclusion should be supported by relevant evidence."
           },
           {
             "word": "conclusion",
@@ -3876,8 +3757,7 @@
             "pronunciation": "/kənˈkluː.ʒən/",
             "wordForm": "noun",
             "collocation": "reach a conclusion",
-            "exampleSentence": "The model explains each step before it reaches a conclusion.",
-            "isCritical": true
+            "exampleSentence": "The model explains each step before it reaches a conclusion."
           },
           {
             "word": "assume",
@@ -3885,8 +3765,7 @@
             "pronunciation": "/əˈsjuːm/",
             "wordForm": "verb",
             "collocation": "assume that",
-            "exampleSentence": "Do not assume that the first answer is correct.",
-            "isCritical": true
+            "exampleSentence": "Do not assume that the first answer is correct."
           },
           {
             "word": "support",
@@ -3894,8 +3773,7 @@
             "pronunciation": "/səˈpɔːrt/",
             "wordForm": "verb / noun",
             "collocation": "support a claim",
-            "exampleSentence": "Every claim must be supported by a source.",
-            "isCritical": true
+            "exampleSentence": "Every claim must be supported by a source."
           },
           {
             "word": "correct",
@@ -3903,8 +3781,7 @@
             "pronunciation": "/kəˈrekt/",
             "wordForm": "adjective / verb",
             "collocation": "the correct answer",
-            "exampleSentence": "Check whether the correct answer follows from the evidence.",
-            "isCritical": true
+            "exampleSentence": "Check whether the correct answer follows from the evidence."
           }
         ],
         "questions": [
@@ -4010,7 +3887,7 @@
         "objective": "Explain Structured Outputs clearly in English",
         "thaiExplanation": "บทนี้ฝึก JSON fields, data types, and validation language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก JSON fields, data types, and validation language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "The schema defines required fields and data types.",
+        "readingContent": "The schema defines required fields and data types. It is a contract between the model and the code that reads its output. If the contract says the summary field holds a string and the score field holds a number, then a score arriving as \"8\" in quotation marks has broken it, even though a person reading the output would see nothing wrong. Validate every response against the schema before anything else touches it. When a required field is missing, reject the output rather than filling the gap with a default. An invented value travels quietly through the rest of the system and turns up much later as a bug nobody can trace back to this moment.",
         "listeningTranscript": "The schema is your contract. It says which fields must be there, what type each one holds, and which ones are optional. If a required field is missing, or a number arrives as a string, the output is not valid, and your parser should reject it rather than guess.",
         "speakingPrompt": "Explain this pattern in your own words: The schema defines required fields and data types.",
         "writingPrompt": "Write three new examples based on: The schema defines required fields and data types.",
@@ -4023,8 +3900,7 @@
             "pronunciation": "/ˈskiː.mə/",
             "wordForm": "technical term",
             "collocation": "schema in context",
-            "exampleSentence": "The schema defines required fields and data types.",
-            "isCritical": true
+            "exampleSentence": "The schema defines required fields and data types."
           },
           {
             "word": "field",
@@ -4032,8 +3908,7 @@
             "pronunciation": "/fiːld/",
             "wordForm": "noun",
             "collocation": "a required field",
-            "exampleSentence": "The name field is required in every answer.",
-            "isCritical": true
+            "exampleSentence": "The name field is required in every answer."
           },
           {
             "word": "type",
@@ -4041,8 +3916,7 @@
             "pronunciation": "/taɪp/",
             "wordForm": "noun",
             "collocation": "a data type",
-            "exampleSentence": "The score field must use a number type.",
-            "isCritical": true
+            "exampleSentence": "The score field must use a number type."
           },
           {
             "word": "valid",
@@ -4050,8 +3924,7 @@
             "pronunciation": "/ˈvæl.ɪd/",
             "wordForm": "adjective",
             "collocation": "valid JSON",
-            "exampleSentence": "The output must be valid JSON.",
-            "isCritical": true
+            "exampleSentence": "The output must be valid JSON."
           },
           {
             "word": "missing",
@@ -4059,8 +3932,7 @@
             "pronunciation": "/ˈmɪs.ɪŋ/",
             "wordForm": "adjective",
             "collocation": "a missing field",
-            "exampleSentence": "The parser rejects the answer when a field is missing.",
-            "isCritical": true
+            "exampleSentence": "The parser rejects the answer when a field is missing."
           }
         ],
         "questions": [
@@ -4166,7 +4038,7 @@
         "objective": "Explain Function & Tool Calling clearly in English",
         "thaiExplanation": "บทนี้ฝึก Parameters, conditions, calls, returns, and errors แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Parameters, conditions, calls, returns, and errors แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "Each parameter has a name, type, and purpose.",
+        "readingContent": "Each parameter has a name, type, and purpose. You describe all three, and the model chooses the values from the conversation. A weather tool might take a city as a string and a unit as one of two fixed options. The model reads your description rather than your source code, so the description is the interface. When a call returns an error, catch it, decide whether another attempt is worth making, and try again with something changed. Only allow the tools a task really needs. Every tool you expose is an action the model can take on your behalf, and a tool that deletes records is not made safe by a polite instruction asking the model to be careful.",
         "listeningTranscript": "Think of a tool as a function the model can call. Each parameter has a name, a type, and a purpose, and you describe all three. The model chooses the values. If the call returns an error, catch it and try again. And only allow the tools the task really needs.",
         "speakingPrompt": "Explain this pattern in your own words: Each parameter has a name, type, and purpose.",
         "writingPrompt": "Write three new examples based on: Each parameter has a name, type, and purpose.",
@@ -4179,8 +4051,7 @@
             "pronunciation": "/pəˈræm.ɪ.tər/",
             "wordForm": "technical term",
             "collocation": "parameter in context",
-            "exampleSentence": "Each parameter has a name, type, and purpose.",
-            "isCritical": true
+            "exampleSentence": "Each parameter has a name, type, and purpose."
           },
           {
             "word": "call",
@@ -4188,8 +4059,7 @@
             "pronunciation": "/kɔːl/",
             "wordForm": "verb / noun",
             "collocation": "call a function",
-            "exampleSentence": "The model calls the weather function with one parameter.",
-            "isCritical": true
+            "exampleSentence": "The model calls the weather function with one parameter."
           },
           {
             "word": "value",
@@ -4197,8 +4067,7 @@
             "pronunciation": "/ˈvæl.juː/",
             "wordForm": "noun",
             "collocation": "pass a value",
-            "exampleSentence": "Pass the city name as the value.",
-            "isCritical": true
+            "exampleSentence": "Pass the city name as the value."
           },
           {
             "word": "error",
@@ -4206,8 +4075,7 @@
             "pronunciation": "/ˈer.ər/",
             "wordForm": "noun",
             "collocation": "handle an error",
-            "exampleSentence": "Handle the error and try the call again.",
-            "isCritical": true
+            "exampleSentence": "Handle the error and try the call again."
           },
           {
             "word": "allow",
@@ -4215,8 +4083,7 @@
             "pronunciation": "/əˈlaʊ/",
             "wordForm": "verb",
             "collocation": "allow access",
-            "exampleSentence": "Only allow the tools that the task really needs.",
-            "isCritical": true
+            "exampleSentence": "Only allow the tools that the task really needs."
           }
         ],
         "questions": [
@@ -4322,7 +4189,7 @@
         "objective": "Explain Managing LLM Failures clearly in English",
         "thaiExplanation": "บทนี้ฝึก Troubleshooting and incident language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Troubleshooting and incident language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "The report describes the failure, impact, cause, and mitigation.",
+        "readingContent": "The report describes the failure, impact, cause, and mitigation. That order is not decoration: a reader needs to know what broke and who it affected before they can care about why. Start from the logs, because they record what happened rather than what you assume happened. A short network timeout is worth one automatic retry. An invalid key, a malformed prompt and a missing schema field are not, because they will fail in exactly the same way every time and a retry only spends the budget twice. Write the incident up while the details are fresh, and finish with the fix. A report without one is a story; with one, it is the reason the same incident does not happen again.",
         "listeningTranscript": "When something breaks in production, work in this order. Check the logs first. Was it a timeout, a rate limit, or a bad response? A timeout usually deserves one automatic retry. Then write the incident up: what failed, who it affected, the cause, and the fix.",
         "speakingPrompt": "Explain this pattern in your own words: The report describes the failure, impact, cause, and mitigation.",
         "writingPrompt": "Write three new examples based on: The report describes the failure, impact, cause, and mitigation.",
@@ -4335,8 +4202,7 @@
             "pronunciation": "/ˈfeɪ.ljər/",
             "wordForm": "technical term",
             "collocation": "failure in context",
-            "exampleSentence": "The report describes the failure, impact, cause, and mitigation.",
-            "isCritical": true
+            "exampleSentence": "The report describes the failure, impact, cause, and mitigation."
           },
           {
             "word": "retry",
@@ -4344,8 +4210,7 @@
             "pronunciation": "/ˌriːˈtraɪ/",
             "wordForm": "verb / noun",
             "collocation": "retry a request",
-            "exampleSentence": "Retry the request after a short wait.",
-            "isCritical": true
+            "exampleSentence": "Retry the request after a short wait."
           },
           {
             "word": "fix",
@@ -4353,8 +4218,7 @@
             "pronunciation": "/fɪks/",
             "wordForm": "verb / noun",
             "collocation": "fix a bug",
-            "exampleSentence": "We fixed the timeout problem yesterday.",
-            "isCritical": true
+            "exampleSentence": "We fixed the timeout problem yesterday."
           },
           {
             "word": "log",
@@ -4362,8 +4226,7 @@
             "pronunciation": "/lɒɡ/",
             "wordForm": "noun / verb",
             "collocation": "check the logs",
-            "exampleSentence": "Check the logs before you change the prompt.",
-            "isCritical": true
+            "exampleSentence": "Check the logs before you change the prompt."
           },
           {
             "word": "timeout",
@@ -4371,8 +4234,7 @@
             "pronunciation": "/ˈtaɪm.aʊt/",
             "wordForm": "noun",
             "collocation": "a request timeout",
-            "exampleSentence": "A timeout means the server did not answer in time.",
-            "isCritical": true
+            "exampleSentence": "A timeout means the server did not answer in time."
           }
         ],
         "questions": [
@@ -4478,7 +4340,7 @@
         "objective": "Explain Token Optimization clearly in English",
         "thaiExplanation": "บทนี้ฝึก Quantity, measurement, and trade-off language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Quantity, measurement, and trade-off language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "The team measured the trade-off between cost and answer quality.",
+        "readingContent": "The team measured the trade-off between cost and answer quality. Every token in the prompt is read before a single token is written, so a long prompt raises both the bill and the latency. That makes trimming attractive, and it is where teams go wrong. Cut the examples and the answers drift. Cut the retrieved context and the model starts filling gaps from memory. The saving is immediate and visible on the invoice; the damage is delayed and arrives as complaints. Measure both sides before you change anything. Record the current cost and the current quality on a fixed set of questions, then compare every change against that baseline rather than against your impression of it.",
         "listeningTranscript": "Every token costs money and time. A long prompt increases both the bill and the latency, so remove what the model does not need. But there is a trade-off between cost and answer quality. Cut too much context and you pay again in wrong answers. Measure before you reduce.",
         "speakingPrompt": "Explain this pattern in your own words: The team measured the trade-off between cost and answer quality.",
         "writingPrompt": "Write three new examples based on: The team measured the trade-off between cost and answer quality.",
@@ -4491,8 +4353,7 @@
             "pronunciation": "/ˈtreɪd.ɒf/",
             "wordForm": "technical term",
             "collocation": "trade-off in context",
-            "exampleSentence": "The team measured the trade-off between cost and answer quality.",
-            "isCritical": true
+            "exampleSentence": "The team measured the trade-off between cost and answer quality."
           },
           {
             "word": "reduce",
@@ -4500,8 +4361,7 @@
             "pronunciation": "/rɪˈdjuːs/",
             "wordForm": "verb",
             "collocation": "reduce cost",
-            "exampleSentence": "Shorter prompts reduce the cost of every call.",
-            "isCritical": true
+            "exampleSentence": "Shorter prompts reduce the cost of every call."
           },
           {
             "word": "cost",
@@ -4509,8 +4369,7 @@
             "pronunciation": "/kɒst/",
             "wordForm": "noun / verb",
             "collocation": "cut the cost",
-            "exampleSentence": "The cost grows with the number of tokens.",
-            "isCritical": true
+            "exampleSentence": "The cost grows with the number of tokens."
           },
           {
             "word": "limit",
@@ -4518,8 +4377,7 @@
             "pronunciation": "/ˈlɪm.ɪt/",
             "wordForm": "noun / verb",
             "collocation": "a token limit",
-            "exampleSentence": "Every model has a token limit for one request.",
-            "isCritical": true
+            "exampleSentence": "Every model has a token limit for one request."
           },
           {
             "word": "increase",
@@ -4527,8 +4385,7 @@
             "pronunciation": "/ɪnˈkriːs/",
             "wordForm": "verb",
             "collocation": "increase latency",
-            "exampleSentence": "A long context increases both cost and latency.",
-            "isCritical": true
+            "exampleSentence": "A long context increases both cost and latency."
           }
         ],
         "questions": [
@@ -4634,7 +4491,7 @@
         "objective": "Explain Prompt Chains clearly in English",
         "thaiExplanation": "บทนี้ฝึก Sequencing, dependencies, and handoffs แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Sequencing, dependencies, and handoffs แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "The second prompt has a dependency on the first output.",
+        "readingContent": "The second prompt has a dependency on the first output. That is what makes a chain a chain rather than a list. The first step extracts the facts from the document, the second checks them against the source, and the third writes the summary the user sees. Run them in the wrong order and nothing works, because each step needs what the one before it produced. It also means errors travel forwards. If the extraction step invents a date, the checking step may accept it and the summary will present it as fact. The earliest step is the cheapest place to catch a problem, which is the main reason to split a large prompt into a chain at all.",
         "listeningTranscript": "A chain is simply steps in order. The first prompt extracts the facts. The second one checks them. The third one writes the summary. Each step passes its output to the next, so each step depends on the previous one. If step one is wrong, everything after it is wrong too.",
         "speakingPrompt": "Explain this pattern in your own words: The second prompt has a dependency on the first output.",
         "writingPrompt": "Write three new examples based on: The second prompt has a dependency on the first output.",
@@ -4647,8 +4504,7 @@
             "pronunciation": "/dɪˈpen.dən.si/",
             "wordForm": "technical term",
             "collocation": "dependency in context",
-            "exampleSentence": "The second prompt has a dependency on the first output.",
-            "isCritical": true
+            "exampleSentence": "The second prompt has a dependency on the first output."
           },
           {
             "word": "pass",
@@ -4656,8 +4512,7 @@
             "pronunciation": "/pɑːs/",
             "wordForm": "verb",
             "collocation": "pass the output to",
-            "exampleSentence": "Pass the output of the first prompt to the second one.",
-            "isCritical": true
+            "exampleSentence": "Pass the output of the first prompt to the second one."
           },
           {
             "word": "order",
@@ -4665,8 +4520,7 @@
             "pronunciation": "/ˈɔːr.dər/",
             "wordForm": "noun / verb",
             "collocation": "in the right order",
-            "exampleSentence": "Run the steps in the right order.",
-            "isCritical": true
+            "exampleSentence": "Run the steps in the right order."
           },
           {
             "word": "previous",
@@ -4674,8 +4528,7 @@
             "pronunciation": "/ˈpriː.vi.əs/",
             "wordForm": "adjective",
             "collocation": "the previous step",
-            "exampleSentence": "Each step uses the output of the previous step.",
-            "isCritical": true
+            "exampleSentence": "Each step uses the output of the previous step."
           },
           {
             "word": "combine",
@@ -4683,8 +4536,7 @@
             "pronunciation": "/kəmˈbaɪn/",
             "wordForm": "verb",
             "collocation": "combine the results",
-            "exampleSentence": "Combine the results into one final answer.",
-            "isCritical": true
+            "exampleSentence": "Combine the results into one final answer."
           }
         ],
         "questions": [
@@ -4790,7 +4642,7 @@
         "objective": "Explain Data Ingestion clearly in English",
         "thaiExplanation": "บทนี้ฝึก Pipeline verbs and passive voice แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Pipeline verbs and passive voice แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "The pipeline ingests, validates, and transforms source documents.",
+        "readingContent": "The pipeline ingests, validates, and transforms source documents. Files are loaded from storage, the text is extracted from each one, and the result is cleaned before anything is stored. Documents that fail validation are dropped rather than guessed at, because bad input that reaches the index does not stay quiet: it comes back weeks later as a confident wrong answer with no obvious source. Everything that survives is stored together with its source address and the date it arrived. That pair of fields is what lets you answer the two questions users ask most often about a generated answer: where did this come from, and how old is it?",
         "listeningTranscript": "Here is the pipeline in plain words. The files are loaded from storage. The text is extracted from each document and cleaned. Anything that fails validation is dropped, not guessed at. What survives is stored with its source address, so we can always say where an answer came from.",
         "speakingPrompt": "Explain this pattern in your own words: The pipeline ingests, validates, and transforms source documents.",
         "writingPrompt": "Write three new examples based on: The pipeline ingests, validates, and transforms source documents.",
@@ -4803,8 +4655,7 @@
             "pronunciation": "/ɪnˈdʒest/",
             "wordForm": "technical term",
             "collocation": "ingest in context",
-            "exampleSentence": "The pipeline ingests, validates, and transforms source documents.",
-            "isCritical": true
+            "exampleSentence": "The pipeline ingests, validates, and transforms source documents."
           },
           {
             "word": "load",
@@ -4812,8 +4663,7 @@
             "pronunciation": "/ləʊd/",
             "wordForm": "verb",
             "collocation": "load a file",
-            "exampleSentence": "The files are loaded from the storage folder.",
-            "isCritical": true
+            "exampleSentence": "The files are loaded from the storage folder."
           },
           {
             "word": "clean",
@@ -4821,8 +4671,7 @@
             "pronunciation": "/kliːn/",
             "wordForm": "verb / adjective",
             "collocation": "clean the data",
-            "exampleSentence": "The text is cleaned before it is stored.",
-            "isCritical": true
+            "exampleSentence": "The text is cleaned before it is stored."
           },
           {
             "word": "extract",
@@ -4830,8 +4679,7 @@
             "pronunciation": "/ɪkˈstrækt/",
             "wordForm": "verb",
             "collocation": "extract text",
-            "exampleSentence": "The pipeline extracts text from every PDF.",
-            "isCritical": true
+            "exampleSentence": "The pipeline extracts text from every PDF."
           },
           {
             "word": "store",
@@ -4839,8 +4687,7 @@
             "pronunciation": "/stɔːr/",
             "wordForm": "verb",
             "collocation": "store a document",
-            "exampleSentence": "Each document is stored with its source URL.",
-            "isCritical": true
+            "exampleSentence": "Each document is stored with its source URL."
           }
         ],
         "questions": [
@@ -4946,7 +4793,7 @@
         "objective": "Explain Chunking Strategies clearly in English",
         "thaiExplanation": "บทนี้ฝึก Comparison, advantages, and limitations แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Comparison, advantages, and limitations แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "Each chunk should preserve enough context for retrieval.",
+        "readingContent": "Each chunk should preserve enough context for retrieval. Chunk size is a balance rather than a setting with one correct value. Split a document too small and a sentence loses the paragraph that explained it, so it matches a query and still fails to answer it. Leave the chunks too large and one short question returns half a chapter, which costs tokens and buries the useful line among ten that are not. A small overlap between neighbouring chunks keeps a sentence from being cut in half at the boundary. The right size depends on your documents and your questions, so measure it against real queries instead of copying a number out of an article.",
         "listeningTranscript": "Chunk size is a balance. Split a document too small and each piece loses the context around it. Leave it too large and one short question returns half a chapter. We keep a small overlap between chunks so that a sentence is never cut in the middle.",
         "speakingPrompt": "Explain this pattern in your own words: Each chunk should preserve enough context for retrieval.",
         "writingPrompt": "Write three new examples based on: Each chunk should preserve enough context for retrieval.",
@@ -4959,8 +4806,7 @@
             "pronunciation": "/tʃʌŋk/",
             "wordForm": "technical term",
             "collocation": "chunk in context",
-            "exampleSentence": "Each chunk should preserve enough context for retrieval.",
-            "isCritical": true
+            "exampleSentence": "Each chunk should preserve enough context for retrieval."
           },
           {
             "word": "split",
@@ -4968,8 +4814,7 @@
             "pronunciation": "/splɪt/",
             "wordForm": "verb",
             "collocation": "split a document",
-            "exampleSentence": "Split the document into short sections.",
-            "isCritical": true
+            "exampleSentence": "Split the document into short sections."
           },
           {
             "word": "size",
@@ -4977,8 +4822,7 @@
             "pronunciation": "/saɪz/",
             "wordForm": "noun",
             "collocation": "chunk size",
-            "exampleSentence": "A small chunk size gives more precise matches.",
-            "isCritical": true
+            "exampleSentence": "A small chunk size gives more precise matches."
           },
           {
             "word": "overlap",
@@ -4986,8 +4830,7 @@
             "pronunciation": "/ˈəʊ.vər.læp/",
             "wordForm": "noun / verb",
             "collocation": "overlap between chunks",
-            "exampleSentence": "A small overlap keeps the meaning between two chunks.",
-            "isCritical": true
+            "exampleSentence": "A small overlap keeps the meaning between two chunks."
           },
           {
             "word": "context",
@@ -4995,8 +4838,7 @@
             "pronunciation": "/ˈkɒn.tekst/",
             "wordForm": "noun",
             "collocation": "lose context",
-            "exampleSentence": "Very short chunks can lose the context of the sentence.",
-            "isCritical": true
+            "exampleSentence": "Very short chunks can lose the context of the sentence."
           }
         ],
         "questions": [
@@ -5102,7 +4944,7 @@
         "objective": "Explain Embedding Models clearly in English",
         "thaiExplanation": "บทนี้ฝึก Abstract definitions and analogy แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Abstract definitions and analogy แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "An embedding represents semantic meaning as a vector.",
+        "readingContent": "An embedding represents semantic meaning as a vector. The model converts each chunk of text into a list of numbers, and chunks with a similar meaning end up close to one another in that space. This is why a search for how do I reset my password can find a page that never uses the word reset: the match is on meaning rather than on letters. It also explains the failures. Two sentences that share most of their words but reverse the meaning can land closer together than you would like, and a very short chunk with little content lands near almost anything. An embedding is a good first filter, not a proof of relevance.",
         "listeningTranscript": "Think of an embedding as a way to convert meaning into numbers. Each chunk becomes a vector, and vectors with a similar meaning sit close together. That is why a search for how do I reset my password can find a document that never uses the word reset.",
         "speakingPrompt": "Explain this pattern in your own words: An embedding represents semantic meaning as a vector.",
         "writingPrompt": "Write three new examples based on: An embedding represents semantic meaning as a vector.",
@@ -5115,8 +4957,7 @@
             "pronunciation": "/ɪmˈbed.ɪŋ/",
             "wordForm": "technical term",
             "collocation": "embedding in context",
-            "exampleSentence": "An embedding represents semantic meaning as a vector.",
-            "isCritical": true
+            "exampleSentence": "An embedding represents semantic meaning as a vector."
           },
           {
             "word": "meaning",
@@ -5124,8 +4965,7 @@
             "pronunciation": "/ˈmiː.nɪŋ/",
             "wordForm": "noun",
             "collocation": "capture the meaning",
-            "exampleSentence": "An embedding captures the meaning of the text.",
-            "isCritical": true
+            "exampleSentence": "An embedding captures the meaning of the text."
           },
           {
             "word": "convert",
@@ -5133,8 +4973,7 @@
             "pronunciation": "/kənˈvɜːrt/",
             "wordForm": "verb",
             "collocation": "convert text into numbers",
-            "exampleSentence": "The model converts text into numbers.",
-            "isCritical": true
+            "exampleSentence": "The model converts text into numbers."
           },
           {
             "word": "vector",
@@ -5142,8 +4981,7 @@
             "pronunciation": "/ˈvek.tər/",
             "wordForm": "noun",
             "collocation": "a vector of numbers",
-            "exampleSentence": "Each chunk becomes a vector of numbers.",
-            "isCritical": true
+            "exampleSentence": "Each chunk becomes a vector of numbers."
           },
           {
             "word": "close",
@@ -5151,8 +4989,7 @@
             "pronunciation": "/kləʊs/",
             "wordForm": "adjective",
             "collocation": "close to each other",
-            "exampleSentence": "Sentences with a similar meaning sit close to each other.",
-            "isCritical": true
+            "exampleSentence": "Sentences with a similar meaning sit close to each other."
           }
         ],
         "questions": [
@@ -5258,7 +5095,7 @@
         "objective": "Explain Vector Database clearly in English",
         "thaiExplanation": "บทนี้ฝึก Index, storage, and retrieval vocabulary แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Index, storage, and retrieval vocabulary แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "The database indexes vectors for efficient retrieval.",
+        "readingContent": "The database indexes vectors for efficient retrieval. Every query is converted into a vector first and then compared against the collection rather than against the original text. The index is what keeps that comparison fast when the collection holds millions of rows; without one, every search would have to look at every entry. Keep separate collections for material that should never be mixed, one per product manual or per customer, because a collection boundary is the simplest and most reliable filter you have. Deleting a document is not finished when the file is gone. The vector stays in the index until it is removed too, and until then it can still come back as an answer.",
         "listeningTranscript": "A vector database does one job well. It stores your vectors in an index and searches them fast. Every query is converted into a vector first, then matched against the collection. With a good index the lookup stays fast even with millions of rows.",
         "speakingPrompt": "Explain this pattern in your own words: The database indexes vectors for efficient retrieval.",
         "writingPrompt": "Write three new examples based on: The database indexes vectors for efficient retrieval.",
@@ -5271,8 +5108,7 @@
             "pronunciation": "/ˈɪn.deks/",
             "wordForm": "technical term",
             "collocation": "index in context",
-            "exampleSentence": "The database indexes vectors for efficient retrieval.",
-            "isCritical": true
+            "exampleSentence": "The database indexes vectors for efficient retrieval."
           },
           {
             "word": "search",
@@ -5280,8 +5116,7 @@
             "pronunciation": "/sɜːrtʃ/",
             "wordForm": "verb / noun",
             "collocation": "search a database",
-            "exampleSentence": "The app searches the database for similar chunks.",
-            "isCritical": true
+            "exampleSentence": "The app searches the database for similar chunks."
           },
           {
             "word": "query",
@@ -5289,8 +5124,7 @@
             "pronunciation": "/ˈkwɪə.ri/",
             "wordForm": "noun / verb",
             "collocation": "run a query",
-            "exampleSentence": "Every query is converted into a vector first.",
-            "isCritical": true
+            "exampleSentence": "Every query is converted into a vector first."
           },
           {
             "word": "collection",
@@ -5298,8 +5132,7 @@
             "pronunciation": "/kəˈlek.ʃən/",
             "wordForm": "noun",
             "collocation": "create a collection",
-            "exampleSentence": "Create one collection for each product manual.",
-            "isCritical": true
+            "exampleSentence": "Create one collection for each product manual."
           },
           {
             "word": "fast",
@@ -5307,8 +5140,7 @@
             "pronunciation": "/fɑːst/",
             "wordForm": "adjective",
             "collocation": "a fast lookup",
-            "exampleSentence": "The index keeps the lookup fast with millions of rows.",
-            "isCritical": true
+            "exampleSentence": "The index keeps the lookup fast with millions of rows."
           }
         ],
         "questions": [
@@ -5414,7 +5246,7 @@
         "objective": "Explain Similarity Search clearly in English",
         "thaiExplanation": "บทนี้ฝึก Scores, ranking, filtering, and relevance แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Scores, ranking, filtering, and relevance แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "Similarity search ranks documents by relevance to the query.",
+        "readingContent": "Similarity search ranks documents by relevance to the query. Every match comes back with a score, and the results are ordered from the highest down. Filter before you rank rather than after: by date, by language, by product, by whatever this user is allowed to see. A document that should never reach somebody is not made safe by scoring poorly, and filtering afterwards means it was already in the result set. Then keep the top few matches and drop the rest, because context space is limited and every token you pass in is read and paid for. A high score means the vectors are close, which is a good signal rather than a guarantee that the document answers the question.",
         "listeningTranscript": "Search returns a score for every match, and the results are ranked from the highest down. Filter before you rank, by date, by product, by language, so the model never sees a document it should not. Then keep the top three matches and drop the rest.",
         "speakingPrompt": "Explain this pattern in your own words: Similarity search ranks documents by relevance to the query.",
         "writingPrompt": "Write three new examples based on: Similarity search ranks documents by relevance to the query.",
@@ -5427,8 +5259,7 @@
             "pronunciation": "/ˌsɪm.ɪˈlær.ə.ti/",
             "wordForm": "technical term",
             "collocation": "similarity in context",
-            "exampleSentence": "Similarity search ranks documents by relevance to the query.",
-            "isCritical": true
+            "exampleSentence": "Similarity search ranks documents by relevance to the query."
           },
           {
             "word": "score",
@@ -5436,8 +5267,7 @@
             "pronunciation": "/skɔːr/",
             "wordForm": "noun / verb",
             "collocation": "a high score",
-            "exampleSentence": "Keep only the results with a high score.",
-            "isCritical": true
+            "exampleSentence": "Keep only the results with a high score."
           },
           {
             "word": "rank",
@@ -5445,8 +5275,7 @@
             "pronunciation": "/ræŋk/",
             "wordForm": "verb / noun",
             "collocation": "rank the results",
-            "exampleSentence": "The results are ranked from the highest score.",
-            "isCritical": true
+            "exampleSentence": "The results are ranked from the highest score."
           },
           {
             "word": "filter",
@@ -5454,8 +5283,7 @@
             "pronunciation": "/ˈfɪl.tər/",
             "wordForm": "verb / noun",
             "collocation": "filter by date",
-            "exampleSentence": "Filter the results by date before you rank them.",
-            "isCritical": true
+            "exampleSentence": "Filter the results by date before you rank them."
           },
           {
             "word": "match",
@@ -5463,8 +5291,7 @@
             "pronunciation": "/mætʃ/",
             "wordForm": "noun / verb",
             "collocation": "the best match",
-            "exampleSentence": "The top three matches are sent to the model.",
-            "isCritical": true
+            "exampleSentence": "The top three matches are sent to the model."
           }
         ],
         "questions": [
@@ -5570,7 +5397,7 @@
         "objective": "Explain RAG Evaluation clearly in English",
         "thaiExplanation": "บทนี้ฝึก Criteria, evidence, metrics, and findings แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Criteria, evidence, metrics, and findings แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "Each metric measures one aspect of retrieval or answer quality.",
+        "readingContent": "Each metric measures one aspect of retrieval or answer quality, which is why an evaluation report quotes several instead of one number. Retrieval can find the right document while the answer ignores it, and an answer can be fluent, well formatted and entirely unsupported. Measuring the two steps separately is what tells you which half to fix. Fix a test set and keep it stable, otherwise you are comparing this week's questions against last week's rather than this week's system against last week's. Record the baseline before you change anything, then compare every change against it. And read a sample of the answers by hand; fifty is usually enough. Metrics only catch the failures somebody already thought to measure, and the one costing you users is often the one with no column in the table.",
         "listeningTranscript": "You cannot improve what you do not measure. Fix a test set, then check each metric separately. Did retrieval find the right document, and did the answer actually use it? Compare every change against the baseline, and read a sample of the answers by hand. Accuracy alone hides a lot.",
         "speakingPrompt": "Explain this pattern in your own words: Each metric measures one aspect of retrieval or answer quality.",
         "writingPrompt": "Write three new examples based on: Each metric measures one aspect of retrieval or answer quality.",
@@ -5583,8 +5410,7 @@
             "pronunciation": "/ˈmet.rɪk/",
             "wordForm": "technical term",
             "collocation": "metric in context",
-            "exampleSentence": "Each metric measures one aspect of retrieval or answer quality.",
-            "isCritical": true
+            "exampleSentence": "Each metric measures one aspect of retrieval or answer quality."
           },
           {
             "word": "measure",
@@ -5592,8 +5418,7 @@
             "pronunciation": "/ˈmeʒ.ər/",
             "wordForm": "verb",
             "collocation": "measure quality",
-            "exampleSentence": "Measure the quality before and after the change.",
-            "isCritical": true
+            "exampleSentence": "Measure the quality before and after the change."
           },
           {
             "word": "accuracy",
@@ -5601,8 +5426,7 @@
             "pronunciation": "/ˈæk.jər.ə.si/",
             "wordForm": "noun",
             "collocation": "measure accuracy",
-            "exampleSentence": "We check accuracy on a fixed test set.",
-            "isCritical": true
+            "exampleSentence": "We check accuracy on a fixed test set."
           },
           {
             "word": "sample",
@@ -5610,8 +5434,7 @@
             "pronunciation": "/ˈsɑːm.pəl/",
             "wordForm": "noun / verb",
             "collocation": "a test sample",
-            "exampleSentence": "Review a sample of fifty answers by hand.",
-            "isCritical": true
+            "exampleSentence": "Review a sample of fifty answers by hand."
           },
           {
             "word": "baseline",
@@ -5619,8 +5442,7 @@
             "pronunciation": "/ˈbeɪs.laɪn/",
             "wordForm": "noun",
             "collocation": "beat the baseline",
-            "exampleSentence": "The new prompt beat the baseline by four points.",
-            "isCritical": true
+            "exampleSentence": "The new prompt beat the baseline by four points."
           }
         ],
         "questions": [
@@ -5726,7 +5548,7 @@
         "objective": "Explain Multi-Agent Systems clearly in English",
         "thaiExplanation": "บทนี้ฝึก Roles, delegation, handoffs, and status แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Roles, delegation, handoffs, and status แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "The coordinator delegates a bounded task to a specialist.",
+        "readingContent": "The coordinator delegates a bounded task to a specialist. Each agent has one clear role, and the boundary of its task is decided before it starts rather than discovered while it runs. The agents share what they find through a common memory, so the second one does not repeat the work of the first. When a task is complete the agent reports back instead of choosing its own next task, and control returns to the coordinator. That last rule is what keeps the system from wandering. A multi-agent design is not automatically better than a single prompt: it costs more calls, it is harder to debug, and it fails in ways that are difficult to reproduce. It earns its place when the sub-tasks are genuinely different and each one can be checked on its own.",
         "listeningTranscript": "In a multi-agent system every agent has one clear role. The coordinator assigns a bounded task and delegates it to a specialist. The agents share what they find through a common memory. And when the task is complete, the agent reports back instead of starting something new.",
         "speakingPrompt": "Explain this pattern in your own words: The coordinator delegates a bounded task to a specialist.",
         "writingPrompt": "Write three new examples based on: The coordinator delegates a bounded task to a specialist.",
@@ -5739,8 +5561,7 @@
             "pronunciation": "/ˈdel.ɪ.ɡeɪt/",
             "wordForm": "technical term",
             "collocation": "delegate in context",
-            "exampleSentence": "The coordinator delegates a bounded task to a specialist.",
-            "isCritical": true
+            "exampleSentence": "The coordinator delegates a bounded task to a specialist."
           },
           {
             "word": "role",
@@ -5748,8 +5569,7 @@
             "pronunciation": "/rəʊl/",
             "wordForm": "noun",
             "collocation": "assign a role",
-            "exampleSentence": "Each agent has one clear role.",
-            "isCritical": true
+            "exampleSentence": "Each agent has one clear role."
           },
           {
             "word": "assign",
@@ -5757,8 +5577,7 @@
             "pronunciation": "/əˈsaɪn/",
             "wordForm": "verb",
             "collocation": "assign a task",
-            "exampleSentence": "The planner assigns each task to one agent.",
-            "isCritical": true
+            "exampleSentence": "The planner assigns each task to one agent."
           },
           {
             "word": "share",
@@ -5766,8 +5585,7 @@
             "pronunciation": "/ʃeər/",
             "wordForm": "verb",
             "collocation": "share information",
-            "exampleSentence": "The agents share information through a common memory.",
-            "isCritical": true
+            "exampleSentence": "The agents share information through a common memory."
           },
           {
             "word": "complete",
@@ -5775,8 +5593,7 @@
             "pronunciation": "/kəmˈpliːt/",
             "wordForm": "verb / adjective",
             "collocation": "complete a task",
-            "exampleSentence": "The agent reports as soon as the task is complete.",
-            "isCritical": true
+            "exampleSentence": "The agent reports as soon as the task is complete."
           }
         ],
         "questions": [
@@ -5882,7 +5699,7 @@
         "objective": "Explain Intelligent Routing clearly in English",
         "thaiExplanation": "บทนี้ฝึก Conditions and decision language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Conditions and decision language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "The router sends each request to the appropriate model.",
+        "readingContent": "The router sends each request to the appropriate model. If the question is simple it chooses the small, cheap one. If the request meets the harder condition, long context or code or a language the small model handles badly, it routes to the larger one. The rule is written down rather than kept in somebody's head, because you will be asked later why a particular request was answered by a particular model, and a rule you cannot state is a rule you cannot defend. Routing is where most of the easy savings in a production system are. Paying the top price for every question, including the ones a far smaller model answers correctly, is the most common waste, and it stays invisible until somebody reads the bill by request type.",
         "listeningTranscript": "The router decides where each request goes. If the question is simple, it chooses the small, cheap model. If the request meets the harder condition, long context or code, it routes to the larger one. The rule is written down, so you can explain any decision afterwards.",
         "speakingPrompt": "Explain this pattern in your own words: The router sends each request to the appropriate model.",
         "writingPrompt": "Write three new examples based on: The router sends each request to the appropriate model.",
@@ -5895,8 +5712,7 @@
             "pronunciation": "/ruːt/",
             "wordForm": "technical term",
             "collocation": "route in context",
-            "exampleSentence": "The router sends each request to the appropriate model.",
-            "isCritical": true
+            "exampleSentence": "The router sends each request to the appropriate model."
           },
           {
             "word": "decide",
@@ -5904,8 +5720,7 @@
             "pronunciation": "/dɪˈsaɪd/",
             "wordForm": "verb",
             "collocation": "decide which model",
-            "exampleSentence": "The router decides which model handles the request.",
-            "isCritical": true
+            "exampleSentence": "The router decides which model handles the request."
           },
           {
             "word": "condition",
@@ -5913,8 +5728,7 @@
             "pronunciation": "/kənˈdɪʃ.ən/",
             "wordForm": "noun",
             "collocation": "meet a condition",
-            "exampleSentence": "If the request meets this condition, send it to the small model.",
-            "isCritical": true
+            "exampleSentence": "If the request meets this condition, send it to the small model."
           },
           {
             "word": "choose",
@@ -5922,8 +5736,7 @@
             "pronunciation": "/tʃuːz/",
             "wordForm": "verb",
             "collocation": "choose an option",
-            "exampleSentence": "Choose the cheaper model for simple questions.",
-            "isCritical": true
+            "exampleSentence": "Choose the cheaper model for simple questions."
           },
           {
             "word": "simple",
@@ -5931,8 +5744,7 @@
             "pronunciation": "/ˈsɪm.pəl/",
             "wordForm": "adjective",
             "collocation": "a simple request",
-            "exampleSentence": "Simple requests do not need the largest model.",
-            "isCritical": true
+            "exampleSentence": "Simple requests do not need the largest model."
           }
         ],
         "questions": [
@@ -6038,7 +5850,7 @@
         "objective": "Explain API Automation clearly in English",
         "thaiExplanation": "บทนี้ฝึก Triggers, actions, events, and schedules แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Triggers, actions, events, and schedules แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "A new event triggers the automation workflow.",
+        "readingContent": "A new event triggers the automation workflow. Every automation has the same three parts: a trigger that starts it, a condition that decides whether it should continue, and an action that does the work. A file arriving in a folder is a trigger. A daily job at midnight is a trigger. A person pressing a button is a trigger too. The condition is where most of the reliability lives, because an action that runs on the wrong input is worse than one that does not run at all. Add an automatic retry for the failures that clear by themselves, such as a short network problem, and alert a person for the ones that do not. Written carefully, an automation removes the call at three in the morning rather than becoming the reason for it.",
         "listeningTranscript": "An automation has three parts: a trigger, a condition, and an action. A new file event triggers the workflow. A daily job runs at midnight and removes the old records. And an automatic retry covers the short network problems, so nobody is woken up at three in the morning.",
         "speakingPrompt": "Explain this pattern in your own words: A new event triggers the automation workflow.",
         "writingPrompt": "Write three new examples based on: A new event triggers the automation workflow.",
@@ -6051,8 +5863,7 @@
             "pronunciation": "/ˈtrɪɡ.ər/",
             "wordForm": "technical term",
             "collocation": "trigger in context",
-            "exampleSentence": "A new event triggers the automation workflow.",
-            "isCritical": true
+            "exampleSentence": "A new event triggers the automation workflow."
           },
           {
             "word": "event",
@@ -6060,8 +5871,7 @@
             "pronunciation": "/ɪˈvent/",
             "wordForm": "noun",
             "collocation": "an event happens",
-            "exampleSentence": "The workflow starts when a new file event arrives.",
-            "isCritical": true
+            "exampleSentence": "The workflow starts when a new file event arrives."
           },
           {
             "word": "run",
@@ -6069,8 +5879,7 @@
             "pronunciation": "/rʌn/",
             "wordForm": "verb",
             "collocation": "run a job",
-            "exampleSentence": "The job runs every night at midnight.",
-            "isCritical": true
+            "exampleSentence": "The job runs every night at midnight."
           },
           {
             "word": "daily",
@@ -6078,8 +5887,7 @@
             "pronunciation": "/ˈdeɪ.li/",
             "wordForm": "adjective / adverb",
             "collocation": "a daily job",
-            "exampleSentence": "A daily job removes the old records.",
-            "isCritical": true
+            "exampleSentence": "A daily job removes the old records."
           },
           {
             "word": "automatic",
@@ -6087,8 +5895,7 @@
             "pronunciation": "/ˌɔː.təˈmæt.ɪk/",
             "wordForm": "adjective",
             "collocation": "an automatic retry",
-            "exampleSentence": "An automatic retry handles short network problems.",
-            "isCritical": true
+            "exampleSentence": "An automatic retry handles short network problems."
           }
         ],
         "questions": [
@@ -6194,7 +6001,7 @@
         "objective": "Explain Reliability Engineering clearly in English",
         "thaiExplanation": "บทนี้ฝึก Availability, latency, recovery, and incident language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
         "grammarFocus": "บทนี้ฝึก Availability, latency, recovery, and incident language แล้วนำไปสร้าง technical explanation ที่ตรวจสอบโครงสร้างได้",
-        "readingContent": "The recovery plan restores service after a failure.",
+        "readingContent": "The recovery plan restores service after a failure. Reliability is measured rather than promised, so monitor the service continuously and watch latency as well as availability: a service that answers every request in thirty seconds is technically up and practically useless. When something breaks, restore service first and investigate second. The incident report matters, but it can be written once users are working again, and a team that debugs during an outage is choosing its own curiosity over its customers. Afterwards, write down what failed, who it affected, the cause and the fix. The goal is not a system that never fails, because that system does not exist, but one that fails in a way you have already planned for: a known failure mode, a rehearsed recovery, and a message you can send while it is happening.",
         "listeningTranscript": "Reliability is measured, not promised. We monitor the service every minute and watch the latency, not only whether it is up. When something breaks, the recovery plan restores service first and the incident report comes after. A reliable system fails in a way you have already planned for.",
         "speakingPrompt": "Explain this pattern in your own words: The recovery plan restores service after a failure.",
         "writingPrompt": "Write three new examples based on: The recovery plan restores service after a failure.",
@@ -6207,8 +6014,7 @@
             "pronunciation": "/rɪˈkʌv.ər.i/",
             "wordForm": "technical term",
             "collocation": "recovery in context",
-            "exampleSentence": "The recovery plan restores service after a failure.",
-            "isCritical": true
+            "exampleSentence": "The recovery plan restores service after a failure."
           },
           {
             "word": "latency",
@@ -6216,8 +6022,7 @@
             "pronunciation": "/ˈleɪ.tən.si/",
             "wordForm": "noun",
             "collocation": "reduce latency",
-            "exampleSentence": "We reduced latency by caching the common answers.",
-            "isCritical": true
+            "exampleSentence": "We reduced latency by caching the common answers."
           },
           {
             "word": "incident",
@@ -6225,8 +6030,7 @@
             "pronunciation": "/ˈɪn.sɪ.dənt/",
             "wordForm": "noun",
             "collocation": "an incident report",
-            "exampleSentence": "The team wrote an incident report after the outage.",
-            "isCritical": true
+            "exampleSentence": "The team wrote an incident report after the outage."
           },
           {
             "word": "monitor",
@@ -6234,8 +6038,7 @@
             "pronunciation": "/ˈmɒn.ɪ.tər/",
             "wordForm": "verb / noun",
             "collocation": "monitor a service",
-            "exampleSentence": "We monitor the service every minute.",
-            "isCritical": true
+            "exampleSentence": "We monitor the service every minute."
           },
           {
             "word": "reliable",
@@ -6243,8 +6046,7 @@
             "pronunciation": "/rɪˈlaɪ.ə.bəl/",
             "wordForm": "adjective",
             "collocation": "a reliable system",
-            "exampleSentence": "A reliable system fails in a predictable way.",
-            "isCritical": true
+            "exampleSentence": "A reliable system fails in a predictable way."
           }
         ],
         "questions": [

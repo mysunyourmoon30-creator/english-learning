@@ -121,7 +121,6 @@ public class VocabularyItem
     [MaxLength(80)] public required string WordForm { get; set; }
     [MaxLength(160)] public required string Collocation { get; set; }
     [MaxLength(400)] public required string ExampleSentence { get; set; }
-    public bool IsCritical { get; set; } = true;
 }
 
 public class AssessmentQuestion
