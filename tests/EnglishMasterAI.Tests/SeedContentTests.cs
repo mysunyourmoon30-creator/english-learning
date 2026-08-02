@@ -47,6 +47,105 @@ public sealed class SeedContentTests
     }
 
     [Fact]
+    public void Every_lesson_carries_a_usable_vocabulary_set()
+    {
+        var lessons = SeedContent.LoadModules(Root).SelectMany(x => x.Lessons);
+
+        Assert.All(lessons, lesson =>
+        {
+            Assert.True(
+                lesson.Vocabulary.Count >= 3,
+                $"Lesson '{lesson.Slug}' has {lesson.Vocabulary.Count} vocabulary items.");
+            Assert.Equal(
+                lesson.Vocabulary
+                    .Select(x => x.Word)
+                    .Distinct(StringComparer.OrdinalIgnoreCase)
+                    .Count(),
+                lesson.Vocabulary.Count);
+            Assert.All(lesson.Vocabulary, vocabulary =>
+            {
+                Assert.False(string.IsNullOrWhiteSpace(vocabulary.Word));
+                Assert.False(string.IsNullOrWhiteSpace(vocabulary.ThaiMeaning));
+                Assert.False(string.IsNullOrWhiteSpace(vocabulary.WordForm));
+                Assert.False(string.IsNullOrWhiteSpace(vocabulary.Collocation));
+                Assert.StartsWith("/", vocabulary.Pronunciation, StringComparison.Ordinal);
+                Assert.EndsWith("/", vocabulary.Pronunciation, StringComparison.Ordinal);
+                // Compared on a stem so an inflected example ("evolve" for "evolution")
+                // still counts, while an example that never uses the word does not.
+                var head = vocabulary.Word.Split(' ')[0];
+                Assert.Contains(
+                    head[..Math.Min(4, head.Length)],
+                    vocabulary.ExampleSentence,
+                    StringComparison.OrdinalIgnoreCase);
+            });
+        });
+    }
+
+    [Fact]
+    public void Listening_transcripts_are_not_a_copy_of_the_reading_passage()
+    {
+        var lessons = SeedContent.LoadModules(Root).SelectMany(x => x.Lessons);
+
+        Assert.All(lessons, lesson =>
+        {
+            // The player shows the reading in full and then asks the learner to listen
+            // before opening the transcript, which only works if they differ.
+            Assert.NotEqual(
+                lesson.ReadingContent.Trim(),
+                lesson.ListeningTranscript.Trim(),
+                StringComparer.OrdinalIgnoreCase);
+            Assert.True(
+                lesson.ListeningTranscript.Split(' ').Length >= 30,
+                $"Transcript for '{lesson.Slug}' is too short to listen to.");
+        });
+    }
+
+    [Fact]
+    public void Every_lesson_quiz_question_explains_its_own_answer()
+    {
+        var lessons = SeedContent.LoadModules(Root).SelectMany(x => x.Lessons);
+
+        Assert.All(lessons, lesson =>
+        {
+            // The sync in SeedData matches a seeded question to its template on the
+            // prompt, so two questions sharing one within a lesson would collide.
+            Assert.Equal(
+                lesson.Questions
+                    .Select(x => x.Prompt)
+                    .Distinct(StringComparer.Ordinal)
+                    .Count(),
+                lesson.Questions.Count);
+            // The quiz passes at 80%, so a lesson needs five items for that bar to mean
+            // "one mistake allowed" rather than "answer the only question correctly".
+            Assert.True(
+                lesson.Questions.Count >= 5,
+                $"Lesson '{lesson.Slug}' has {lesson.Questions.Count} quiz questions.");
+            Assert.All(lesson.Questions, question =>
+            {
+                var options = JsonSerializer.Deserialize<string[]>(question.OptionsJson)!;
+                Assert.Equal(4, options.Length);
+                Assert.All(options, option =>
+                    Assert.False(string.IsNullOrWhiteSpace(option)));
+                Assert.DoesNotContain(
+                    "in the module context",
+                    question.Prompt,
+                    StringComparison.OrdinalIgnoreCase);
+                Assert.DoesNotContain(
+                    "Review the lesson example and try again",
+                    question.Explanation,
+                    StringComparison.OrdinalIgnoreCase);
+                Assert.Contains(
+                    options[question.CorrectOptionIndex],
+                    question.Explanation,
+                    StringComparison.Ordinal);
+                Assert.True(
+                    question.Explanation.Length >= 80,
+                    $"Explanation for '{question.Prompt}' is too short to say why.");
+            });
+        });
+    }
+
+    [Fact]
     public void Lesson_slugs_are_unique_across_modules()
     {
         var slugs = SeedContent.LoadModules(Root)
