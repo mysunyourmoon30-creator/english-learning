@@ -832,9 +832,6 @@ namespace EnglishMasterAI.Web.Migrations
                         .HasMaxLength(400)
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("IsCritical")
-                        .HasColumnType("INTEGER");
-
                     b.Property<Guid>("LessonId")
                         .HasColumnType("TEXT");
 

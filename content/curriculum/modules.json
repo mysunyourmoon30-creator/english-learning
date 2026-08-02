@@ -30,8 +30,7 @@
             "pronunciation": "/saʊnd/",
             "wordForm": "noun / verb",
             "collocation": "final sound",
-            "exampleSentence": "Listen to the final sound.",
-            "isCritical": true
+            "exampleSentence": "Listen to the final sound."
           },
           {
             "word": "spell",
@@ -39,8 +38,7 @@
             "pronunciation": "/spel/",
             "wordForm": "verb",
             "collocation": "spell a word",
-            "exampleSentence": "Can you spell your name?",
-            "isCritical": true
+            "exampleSentence": "Can you spell your name?"
           },
           {
             "word": "syllable",
@@ -48,8 +46,7 @@
             "pronunciation": "/ˈsɪl.ə.bəl/",
             "wordForm": "noun",
             "collocation": "stress a syllable",
-            "exampleSentence": "Architecture has four syllables.",
-            "isCritical": true
+            "exampleSentence": "Architecture has four syllables."
           },
           {
             "word": "letter",
@@ -57,8 +54,7 @@
             "pronunciation": "/ˈlet.ər/",
             "wordForm": "noun",
             "collocation": "a capital letter",
-            "exampleSentence": "A letter has a name and a sound.",
-            "isCritical": true
+            "exampleSentence": "A letter has a name and a sound."
           },
           {
             "word": "word",
@@ -66,8 +62,7 @@
             "pronunciation": "/wɜːrd/",
             "wordForm": "noun",
             "collocation": "a new word",
-            "exampleSentence": "Say the new word one more time.",
-            "isCritical": true
+            "exampleSentence": "Say the new word one more time."
           },
           {
             "word": "name",
@@ -75,8 +70,7 @@
             "pronunciation": "/neɪm/",
             "wordForm": "noun / verb",
             "collocation": "say your name",
-            "exampleSentence": "Please say your name slowly.",
-            "isCritical": true
+            "exampleSentence": "Please say your name slowly."
           },
           {
             "word": "read",
@@ -84,8 +78,7 @@
             "pronunciation": "/riːd/",
             "wordForm": "verb",
             "collocation": "read a word",
-            "exampleSentence": "I can read new words with the sound method.",
-            "isCritical": true
+            "exampleSentence": "I can read new words with the sound method."
           },
           {
             "word": "listen",
@@ -93,8 +86,7 @@
             "pronunciation": "/ˈlɪs.ən/",
             "wordForm": "verb",
             "collocation": "listen to",
-            "exampleSentence": "Listen to the final sound in each word.",
-            "isCritical": true
+            "exampleSentence": "Listen to the final sound in each word."
           },
           {
             "word": "say",
@@ -102,8 +94,7 @@
             "pronunciation": "/seɪ/",
             "wordForm": "verb",
             "collocation": "say a word",
-            "exampleSentence": "Say the word again, a little slower.",
-            "isCritical": true
+            "exampleSentence": "Say the word again, a little slower."
           }
         ],
         "questions": [
@@ -222,8 +213,7 @@
             "pronunciation": "/ˈpriː.fɪks/",
             "wordForm": "noun",
             "collocation": "common prefix",
-            "exampleSentence": "The prefix re- often means again.",
-            "isCritical": true
+            "exampleSentence": "The prefix re- often means again."
           },
           {
             "word": "suffix",
@@ -231,8 +221,7 @@
             "pronunciation": "/ˈsʌf.ɪks/",
             "wordForm": "noun",
             "collocation": "add a suffix",
-            "exampleSentence": "The suffix -able changes the word form.",
-            "isCritical": true
+            "exampleSentence": "The suffix -able changes the word form."
           },
           {
             "word": "stress",
@@ -240,8 +229,7 @@
             "pronunciation": "/stres/",
             "wordForm": "noun / verb",
             "collocation": "word stress",
-            "exampleSentence": "Correct word stress makes speech clearer.",
-            "isCritical": true
+            "exampleSentence": "Correct word stress makes speech clearer."
           }
         ],
         "questions": [
@@ -360,8 +348,7 @@
             "pronunciation": "/rɪˈkwest/",
             "wordForm": "noun / verb",
             "collocation": "make a request",
-            "exampleSentence": "The client makes a request.",
-            "isCritical": true
+            "exampleSentence": "The client makes a request."
           },
           {
             "word": "response",
@@ -369,8 +356,7 @@
             "pronunciation": "/rɪˈspɒns/",
             "wordForm": "noun",
             "collocation": "send a response",
-            "exampleSentence": "The API sends a JSON response.",
-            "isCritical": true
+            "exampleSentence": "The API sends a JSON response."
           },
           {
             "word": "retrieve",
@@ -378,8 +364,7 @@
             "pronunciation": "/rɪˈtriːv/",
             "wordForm": "verb",
             "collocation": "retrieve data",
-            "exampleSentence": "The service retrieves customer data.",
-            "isCritical": true
+            "exampleSentence": "The service retrieves customer data."
           },
           {
             "word": "evaluate",
@@ -387,8 +372,7 @@
             "pronunciation": "/ɪˈvæl.ju.eɪt/",
             "wordForm": "verb",
             "collocation": "evaluate the result",
-            "exampleSentence": "We evaluate the result before release.",
-            "isCritical": true
+            "exampleSentence": "We evaluate the result before release."
           }
         ],
         "questions": [
@@ -507,8 +491,7 @@
             "pronunciation": "/ˈsʌb.dʒekt/",
             "wordForm": "noun",
             "collocation": "sentence subject",
-            "exampleSentence": "The subject performs the action.",
-            "isCritical": true
+            "exampleSentence": "The subject performs the action."
           },
           {
             "word": "verb",
@@ -516,8 +499,7 @@
             "pronunciation": "/vɜːb/",
             "wordForm": "noun",
             "collocation": "main verb",
-            "exampleSentence": "Every complete clause needs a verb.",
-            "isCritical": true
+            "exampleSentence": "Every complete clause needs a verb."
           },
           {
             "word": "object",
@@ -525,8 +507,7 @@
             "pronunciation": "/ˈɒb.dʒekt/",
             "wordForm": "noun",
             "collocation": "direct object",
-            "exampleSentence": "Text is the object in “The model generates text.”",
-            "isCritical": true
+            "exampleSentence": "Text is the object in “The model generates text.”"
           }
         ],
         "questions": [
@@ -645,8 +626,7 @@
             "pronunciation": "/ˌɪn.fəˈmeɪ.ʃən/",
             "wordForm": "uncountable noun",
             "collocation": "a piece of information",
-            "exampleSentence": "The response contains useful information.",
-            "isCritical": true
+            "exampleSentence": "The response contains useful information."
           },
           {
             "word": "data",
@@ -654,8 +634,7 @@
             "pronunciation": "/ˈdeɪ.tə/",
             "wordForm": "noun",
             "collocation": "raw data",
-            "exampleSentence": "The system stores the raw data in one folder.",
-            "isCritical": true
+            "exampleSentence": "The system stores the raw data in one folder."
           },
           {
             "word": "number",
@@ -663,8 +642,7 @@
             "pronunciation": "/ˈnʌm.bər/",
             "wordForm": "noun",
             "collocation": "a large number of",
-            "exampleSentence": "A large number of users joined the class today.",
-            "isCritical": true
+            "exampleSentence": "A large number of users joined the class today."
           },
           {
             "word": "example",
@@ -672,8 +650,7 @@
             "pronunciation": "/ɪɡˈzɑːm.pəl/",
             "wordForm": "noun",
             "collocation": "for example",
-            "exampleSentence": "Give me an example of a correct input.",
-            "isCritical": true
+            "exampleSentence": "Give me an example of a correct input."
           },
           {
             "word": "team",
@@ -681,8 +658,7 @@
             "pronunciation": "/tiːm/",
             "wordForm": "noun",
             "collocation": "join a team",
-            "exampleSentence": "She joined the data team last year.",
-            "isCritical": true
+            "exampleSentence": "She joined the data team last year."
           }
         ],
         "questions": [
@@ -801,8 +777,7 @@
             "pronunciation": "/ˈprəʊ.ses/",
             "wordForm": "verb / noun",
             "collocation": "process a request",
-            "exampleSentence": "The service processes each request.",
-            "isCritical": true
+            "exampleSentence": "The service processes each request."
           },
           {
             "word": "need",
@@ -810,8 +785,7 @@
             "pronunciation": "/niːd/",
             "wordForm": "verb",
             "collocation": "need to check",
-            "exampleSentence": "You need to check the input first.",
-            "isCritical": true
+            "exampleSentence": "You need to check the input first."
           },
           {
             "word": "can",
@@ -819,8 +793,7 @@
             "pronunciation": "/kæn/",
             "wordForm": "modal verb",
             "collocation": "can run",
-            "exampleSentence": "The model can run on one server.",
-            "isCritical": true
+            "exampleSentence": "The model can run on one server."
           },
           {
             "word": "work",
@@ -828,8 +801,7 @@
             "pronunciation": "/wɜːrk/",
             "wordForm": "verb / noun",
             "collocation": "work on a task",
-            "exampleSentence": "I work on the data pipeline every morning.",
-            "isCritical": true
+            "exampleSentence": "I work on the data pipeline every morning."
           },
           {
             "word": "finish",
@@ -837,8 +809,7 @@
             "pronunciation": "/ˈfɪn.ɪʃ/",
             "wordForm": "verb",
             "collocation": "finish a task",
-            "exampleSentence": "We have finished the first test.",
-            "isCritical": true
+            "exampleSentence": "We have finished the first test."
           }
         ],
         "questions": [
@@ -957,8 +928,7 @@
             "pronunciation": "/dɪˈplɔɪ/",
             "wordForm": "verb",
             "collocation": "deploy a service",
-            "exampleSentence": "We deployed the service yesterday.",
-            "isCritical": true
+            "exampleSentence": "We deployed the service yesterday."
           },
           {
             "word": "start",
@@ -966,8 +936,7 @@
             "pronunciation": "/stɑːrt/",
             "wordForm": "verb / noun",
             "collocation": "start a project",
-            "exampleSentence": "The team started the project last month.",
-            "isCritical": true
+            "exampleSentence": "The team started the project last month."
           },
           {
             "word": "already",
@@ -975,8 +944,7 @@
             "pronunciation": "/ɔːlˈred.i/",
             "wordForm": "adverb",
             "collocation": "have already fixed",
-            "exampleSentence": "We have already fixed that problem.",
-            "isCritical": true
+            "exampleSentence": "We have already fixed that problem."
           },
           {
             "word": "plan",
@@ -984,8 +952,7 @@
             "pronunciation": "/plæn/",
             "wordForm": "verb / noun",
             "collocation": "plan to release",
-            "exampleSentence": "We plan to release the update next week.",
-            "isCritical": true
+            "exampleSentence": "We plan to release the update next week."
           },
           {
             "word": "yesterday",
@@ -993,8 +960,7 @@
             "pronunciation": "/ˈjes.tər.deɪ/",
             "wordForm": "adverb / noun",
             "collocation": "finished yesterday",
-            "exampleSentence": "The report was finished yesterday.",
-            "isCritical": true
+            "exampleSentence": "The report was finished yesterday."
           }
         ],
         "questions": [
@@ -1113,8 +1079,7 @@
             "pronunciation": "/ˈklær.ɪ.faɪ/",
             "wordForm": "verb",
             "collocation": "clarify a requirement",
-            "exampleSentence": "Could you clarify the requirement?",
-            "isCritical": true
+            "exampleSentence": "Could you clarify the requirement?"
           },
           {
             "word": "ask",
@@ -1122,8 +1087,7 @@
             "pronunciation": "/ɑːsk/",
             "wordForm": "verb",
             "collocation": "ask a question",
-            "exampleSentence": "Ask a question if the requirement is not clear.",
-            "isCritical": true
+            "exampleSentence": "Ask a question if the requirement is not clear."
           },
           {
             "word": "answer",
@@ -1131,8 +1095,7 @@
             "pronunciation": "/ˈɑːn.sər/",
             "wordForm": "noun / verb",
             "collocation": "answer a question",
-            "exampleSentence": "Please answer the question in one sentence.",
-            "isCritical": true
+            "exampleSentence": "Please answer the question in one sentence."
           },
           {
             "word": "should",
@@ -1140,8 +1103,7 @@
             "pronunciation": "/ʃʊd/",
             "wordForm": "modal verb",
             "collocation": "should check",
-            "exampleSentence": "You should check the log before you ask.",
-            "isCritical": true
+            "exampleSentence": "You should check the log before you ask."
           },
           {
             "word": "must",
@@ -1149,8 +1111,7 @@
             "pronunciation": "/mʌst/",
             "wordForm": "modal verb",
             "collocation": "must include",
-            "exampleSentence": "The report must include the error message.",
-            "isCritical": true
+            "exampleSentence": "The report must include the error message."
           }
         ],
         "questions": [
@@ -1269,8 +1230,7 @@
             "pronunciation": "/ˈðeə.fɔːr/",
             "wordForm": "adverb",
             "collocation": "and therefore",
-            "exampleSentence": "The input was invalid; therefore, the request failed.",
-            "isCritical": true
+            "exampleSentence": "The input was invalid; therefore, the request failed."
           },
           {
             "word": "because",
@@ -1278,8 +1238,7 @@
             "pronunciation": "/bɪˈkɒz/",
             "wordForm": "conjunction",
             "collocation": "because of",
-            "exampleSentence": "The test failed because the file was missing.",
-            "isCritical": true
+            "exampleSentence": "The test failed because the file was missing."
           },
           {
             "word": "first",
@@ -1287,8 +1246,7 @@
             "pronunciation": "/fɜːrst/",
             "wordForm": "adverb / adjective",
             "collocation": "the first step",
-            "exampleSentence": "First, open the file. Then run the test.",
-            "isCritical": true
+            "exampleSentence": "First, open the file. Then run the test."
           },
           {
             "word": "finally",
@@ -1296,8 +1254,7 @@
             "pronunciation": "/ˈfaɪ.nəl.i/",
             "wordForm": "adverb",
             "collocation": "finally send",
-            "exampleSentence": "Finally, we send the result to the user.",
-            "isCritical": true
+            "exampleSentence": "Finally, we send the result to the user."
           },
           {
             "word": "reason",
@@ -1305,8 +1262,7 @@
             "pronunciation": "/ˈriː.zən/",
             "wordForm": "noun",
             "collocation": "the main reason",
-            "exampleSentence": "The main reason for the delay was a missing file.",
-            "isCritical": true
+            "exampleSentence": "The main reason for the delay was a missing file."
           }
         ],
         "questions": [
@@ -1425,8 +1381,7 @@
             "pronunciation": "/ˈvæl.ɪ.deɪt/",
             "wordForm": "verb",
             "collocation": "validate input",
-            "exampleSentence": "All input is validated before processing.",
-            "isCritical": true
+            "exampleSentence": "All input is validated before processing."
           },
           {
             "word": "require",
@@ -1434,8 +1389,7 @@
             "pronunciation": "/rɪˈkwaɪər/",
             "wordForm": "verb",
             "collocation": "be required to",
-            "exampleSentence": "All users are required to sign in.",
-            "isCritical": true
+            "exampleSentence": "All users are required to sign in."
           },
           {
             "word": "approve",
@@ -1443,8 +1397,7 @@
             "pronunciation": "/əˈpruːv/",
             "wordForm": "verb",
             "collocation": "approve a request",
-            "exampleSentence": "The request was approved this morning.",
-            "isCritical": true
+            "exampleSentence": "The request was approved this morning."
           },
           {
             "word": "schedule",
@@ -1452,8 +1405,7 @@
             "pronunciation": "/ˈskedʒ.uːl/",
             "wordForm": "noun / verb",
             "collocation": "schedule a meeting",
-            "exampleSentence": "The meeting is scheduled for Monday.",
-            "isCritical": true
+            "exampleSentence": "The meeting is scheduled for Monday."
           },
           {
             "word": "available",
@@ -1461,8 +1413,7 @@
             "pronunciation": "/əˈveɪ.lə.bəl/",
             "wordForm": "adjective",
             "collocation": "be available",
-            "exampleSentence": "The report will be available after the review.",
-            "isCritical": true
+            "exampleSentence": "The report will be available after the review."
           }
         ],
         "questions": [
@@ -1581,8 +1532,7 @@
             "pronunciation": "/skæn/",
             "wordForm": "verb",
             "collocation": "scan for details",
-            "exampleSentence": "Scan the API reference for the required field.",
-            "isCritical": true
+            "exampleSentence": "Scan the API reference for the required field."
           },
           {
             "word": "skim",
@@ -1590,8 +1540,7 @@
             "pronunciation": "/skɪm/",
             "wordForm": "verb",
             "collocation": "skim a passage",
-            "exampleSentence": "Skim the passage before you read the questions.",
-            "isCritical": true
+            "exampleSentence": "Skim the passage before you read the questions."
           },
           {
             "word": "topic",
@@ -1599,8 +1548,7 @@
             "pronunciation": "/ˈtɒp.ɪk/",
             "wordForm": "noun",
             "collocation": "topic sentence",
-            "exampleSentence": "The topic sentence tells you the main idea.",
-            "isCritical": true
+            "exampleSentence": "The topic sentence tells you the main idea."
           },
           {
             "word": "detail",
@@ -1608,8 +1556,7 @@
             "pronunciation": "/ˈdiː.teɪl/",
             "wordForm": "noun",
             "collocation": "supporting detail",
-            "exampleSentence": "Check the supporting details in the second paragraph.",
-            "isCritical": true
+            "exampleSentence": "Check the supporting details in the second paragraph."
           },
           {
             "word": "purpose",
@@ -1617,8 +1564,7 @@
             "pronunciation": "/ˈpɜː.pəs/",
             "wordForm": "noun",
             "collocation": "the purpose of the text",
-            "exampleSentence": "The purpose of the email is to request a delay.",
-            "isCritical": true
+            "exampleSentence": "The purpose of the email is to request a delay."
           }
         ],
         "questions": [
@@ -1737,8 +1683,7 @@
             "pronunciation": "/ˈʃæd.əʊ/",
             "wordForm": "verb",
             "collocation": "shadow a sentence",
-            "exampleSentence": "Shadow the sentence at a comfortable speed.",
-            "isCritical": true
+            "exampleSentence": "Shadow the sentence at a comfortable speed."
           },
           {
             "word": "transcript",
@@ -1746,8 +1691,7 @@
             "pronunciation": "/ˈtræn.skrɪpt/",
             "wordForm": "noun",
             "collocation": "check the transcript",
-            "exampleSentence": "Check the transcript after the second listening.",
-            "isCritical": true
+            "exampleSentence": "Check the transcript after the second listening."
           },
           {
             "word": "repeat",
@@ -1755,8 +1699,7 @@
             "pronunciation": "/rɪˈpiːt/",
             "wordForm": "verb",
             "collocation": "repeat a phrase",
-            "exampleSentence": "Repeat the phrase until it sounds natural.",
-            "isCritical": true
+            "exampleSentence": "Repeat the phrase until it sounds natural."
           },
           {
             "word": "summarize",
@@ -1764,8 +1707,7 @@
             "pronunciation": "/ˈsʌm.ə.raɪz/",
             "wordForm": "verb",
             "collocation": "summarize the main points",
-            "exampleSentence": "Summarize the main points in your own words.",
-            "isCritical": true
+            "exampleSentence": "Summarize the main points in your own words."
           },
           {
             "word": "guess",
@@ -1773,8 +1715,7 @@
             "pronunciation": "/ɡes/",
             "wordForm": "verb / noun",
             "collocation": "guess the meaning",
-            "exampleSentence": "Guess the meaning from the words around it.",
-            "isCritical": true
+            "exampleSentence": "Guess the meaning from the words around it."
           }
         ],
         "questions": [
@@ -1893,8 +1834,7 @@
             "pronunciation": "/ˈfluː.ən.si/",
             "wordForm": "noun",
             "collocation": "improve fluency",
-            "exampleSentence": "Short daily practice can improve fluency.",
-            "isCritical": true
+            "exampleSentence": "Short daily practice can improve fluency."
           },
           {
             "word": "explain",
@@ -1902,8 +1842,7 @@
             "pronunciation": "/ɪkˈspleɪn/",
             "wordForm": "verb",
             "collocation": "explain a process",
-            "exampleSentence": "Explain the process in three steps.",
-            "isCritical": true
+            "exampleSentence": "Explain the process in three steps."
           },
           {
             "word": "point",
@@ -1911,8 +1850,7 @@
             "pronunciation": "/pɔɪnt/",
             "wordForm": "noun / verb",
             "collocation": "make a point",
-            "exampleSentence": "Make your point in the first sentence.",
-            "isCritical": true
+            "exampleSentence": "Make your point in the first sentence."
           },
           {
             "word": "result",
@@ -1920,8 +1858,7 @@
             "pronunciation": "/rɪˈzʌlt/",
             "wordForm": "noun / verb",
             "collocation": "as a result",
-            "exampleSentence": "As a result, the response time improved.",
-            "isCritical": true
+            "exampleSentence": "As a result, the response time improved."
           },
           {
             "word": "practice",
@@ -1929,8 +1866,7 @@
             "pronunciation": "/ˈpræk.tɪs/",
             "wordForm": "noun / verb",
             "collocation": "practice speaking",
-            "exampleSentence": "I practice speaking for ten minutes every day.",
-            "isCritical": true
+            "exampleSentence": "I practice speaking for ten minutes every day."
           }
         ],
         "questions": [
@@ -2049,8 +1985,7 @@
             "pronunciation": "/kənˈsaɪs/",
             "wordForm": "adjective",
             "collocation": "clear and concise",
-            "exampleSentence": "Keep the status update clear and concise.",
-            "isCritical": true
+            "exampleSentence": "Keep the status update clear and concise."
           },
           {
             "word": "update",
@@ -2058,8 +1993,7 @@
             "pronunciation": "/ˈʌp.deɪt/",
             "wordForm": "noun / verb",
             "collocation": "send an update",
-            "exampleSentence": "I send a short update every Friday.",
-            "isCritical": true
+            "exampleSentence": "I send a short update every Friday."
           },
           {
             "word": "issue",
@@ -2067,8 +2001,7 @@
             "pronunciation": "/ˈɪʃ.uː/",
             "wordForm": "noun",
             "collocation": "report an issue",
-            "exampleSentence": "Please report the issue with a screenshot.",
-            "isCritical": true
+            "exampleSentence": "Please report the issue with a screenshot."
           },
           {
             "word": "cause",
@@ -2076,8 +2009,7 @@
             "pronunciation": "/kɔːz/",
             "wordForm": "noun / verb",
             "collocation": "the root cause",
-            "exampleSentence": "The root cause was an expired key.",
-            "isCritical": true
+            "exampleSentence": "The root cause was an expired key."
           },
           {
             "word": "suggest",
@@ -2085,8 +2017,7 @@
             "pronunciation": "/səˈdʒest/",
             "wordForm": "verb",
             "collocation": "suggest a solution",
-            "exampleSentence": "I suggest a small change to the config.",
-            "isCritical": true
+            "exampleSentence": "I suggest a small change to the config."
           }
         ],
         "questions": [
@@ -2205,8 +2136,7 @@
             "pronunciation": "/ˈblɒk.ər/",
             "wordForm": "noun",
             "collocation": "report a blocker",
-            "exampleSentence": "I need to report one deployment blocker.",
-            "isCritical": true
+            "exampleSentence": "I need to report one deployment blocker."
           },
           {
             "word": "progress",
@@ -2214,8 +2144,7 @@
             "pronunciation": "/ˈprəʊ.ɡres/",
             "wordForm": "noun",
             "collocation": "make progress",
-            "exampleSentence": "We made good progress on the API this week.",
-            "isCritical": true
+            "exampleSentence": "We made good progress on the API this week."
           },
           {
             "word": "deadline",
@@ -2223,8 +2152,7 @@
             "pronunciation": "/ˈded.laɪn/",
             "wordForm": "noun",
             "collocation": "meet a deadline",
-            "exampleSentence": "We can still meet the deadline on Friday.",
-            "isCritical": true
+            "exampleSentence": "We can still meet the deadline on Friday."
           },
           {
             "word": "confirm",
@@ -2232,8 +2160,7 @@
             "pronunciation": "/kənˈfɜːrm/",
             "wordForm": "verb",
             "collocation": "confirm a requirement",
-            "exampleSentence": "Please confirm the requirement before we start.",
-            "isCritical": true
+            "exampleSentence": "Please confirm the requirement before we start."
           },
           {
             "word": "estimate",
@@ -2241,8 +2168,7 @@
             "pronunciation": "/ˈes.tɪ.mət/",
             "wordForm": "noun / verb",
             "collocation": "give an estimate",
-            "exampleSentence": "I will give an estimate after the review.",
-            "isCritical": true
+            "exampleSentence": "I will give an estimate after the review."
           }
         ],
         "questions": [
@@ -2361,8 +2287,7 @@
             "pronunciation": "/pəˈspəʊn/",
             "wordForm": "verb",
             "collocation": "postpone a meeting",
-            "exampleSentence": "The team postponed the meeting until Friday.",
-            "isCritical": true
+            "exampleSentence": "The team postponed the meeting until Friday."
           },
           {
             "word": "attend",
@@ -2370,8 +2295,7 @@
             "pronunciation": "/əˈtend/",
             "wordForm": "verb",
             "collocation": "attend a meeting",
-            "exampleSentence": "She will attend the training on Friday.",
-            "isCritical": true
+            "exampleSentence": "She will attend the training on Friday."
           },
           {
             "word": "announcement",
@@ -2379,8 +2303,7 @@
             "pronunciation": "/əˈnaʊns.mənt/",
             "wordForm": "noun",
             "collocation": "make an announcement",
-            "exampleSentence": "Listen to the announcement about the delayed flight.",
-            "isCritical": true
+            "exampleSentence": "Listen to the announcement about the delayed flight."
           },
           {
             "word": "colleague",
@@ -2388,8 +2311,7 @@
             "pronunciation": "/ˈkɒl.iːɡ/",
             "wordForm": "noun",
             "collocation": "a former colleague",
-            "exampleSentence": "A colleague from the sales team called this morning.",
-            "isCritical": true
+            "exampleSentence": "A colleague from the sales team called this morning."
           },
           {
             "word": "notice",
@@ -2397,8 +2319,7 @@
             "pronunciation": "/ˈnəʊ.tɪs/",
             "wordForm": "noun / verb",
             "collocation": "give notice",
-            "exampleSentence": "The notice says the office will close early.",
-            "isCritical": true
+            "exampleSentence": "The notice says the office will close early."
           }
         ],
         "questions": [
@@ -2517,8 +2438,7 @@
             "pronunciation": "/rɪˈspɒnd/",
             "wordForm": "verb",
             "collocation": "respond to an email",
-            "exampleSentence": "Please respond to every point in the email.",
-            "isCritical": true
+            "exampleSentence": "Please respond to every point in the email."
           },
           {
             "word": "apologize",
@@ -2526,8 +2446,7 @@
             "pronunciation": "/əˈpɒl.ə.dʒaɪz/",
             "wordForm": "verb",
             "collocation": "apologize for the delay",
-            "exampleSentence": "I apologize for the delay in my reply.",
-            "isCritical": true
+            "exampleSentence": "I apologize for the delay in my reply."
           },
           {
             "word": "attach",
@@ -2535,8 +2454,7 @@
             "pronunciation": "/əˈtætʃ/",
             "wordForm": "verb",
             "collocation": "attach a file",
-            "exampleSentence": "I have attached the report to this email.",
-            "isCritical": true
+            "exampleSentence": "I have attached the report to this email."
           },
           {
             "word": "regarding",
@@ -2544,8 +2462,7 @@
             "pronunciation": "/rɪˈɡɑːr.dɪŋ/",
             "wordForm": "preposition",
             "collocation": "regarding your request",
-            "exampleSentence": "I am writing regarding your request for a refund.",
-            "isCritical": true
+            "exampleSentence": "I am writing regarding your request for a refund."
           },
           {
             "word": "recommend",
@@ -2553,8 +2470,7 @@
             "pronunciation": "/ˌrek.əˈmend/",
             "wordForm": "verb",
             "collocation": "recommend an option",
-            "exampleSentence": "I recommend the second option because it is cheaper.",
-            "isCritical": true
+            "exampleSentence": "I recommend the second option because it is cheaper."
           }
         ],
         "questions": [
@@ -2673,8 +2589,7 @@
             "pronunciation": "/ˈtəʊ.kən.aɪ.zər/",
             "wordForm": "noun",
             "collocation": "use a tokenizer",
-            "exampleSentence": "The tokenizer converts text into tokens.",
-            "isCritical": true
+            "exampleSentence": "The tokenizer converts text into tokens."
           },
           {
             "word": "layer",
@@ -2682,8 +2597,7 @@
             "pronunciation": "/ˈleɪ.ər/",
             "wordForm": "noun",
             "collocation": "neural layer",
-            "exampleSentence": "Each layer transforms the representation.",
-            "isCritical": true
+            "exampleSentence": "Each layer transforms the representation."
           },
           {
             "word": "predict",
@@ -2691,8 +2605,7 @@
             "pronunciation": "/prɪˈdɪkt/",
             "wordForm": "verb",
             "collocation": "predict a token",
-            "exampleSentence": "The model predicts the next token.",
-            "isCritical": true
+            "exampleSentence": "The model predicts the next token."
           }
         ],
         "questions": [
@@ -2811,8 +2724,7 @@
             "pronunciation": "/kənˈstreɪnt/",
             "wordForm": "noun",
             "collocation": "set a constraint",
-            "exampleSentence": "The prompt includes a length constraint.",
-            "isCritical": true
+            "exampleSentence": "The prompt includes a length constraint."
           },
           {
             "word": "instruction",
@@ -2820,8 +2732,7 @@
             "pronunciation": "/ɪnˈstrʌk.ʃən/",
             "wordForm": "noun",
             "collocation": "follow an instruction",
-            "exampleSentence": "The model should follow the instruction.",
-            "isCritical": true
+            "exampleSentence": "The model should follow the instruction."
           },
           {
             "word": "output format",
@@ -2829,8 +2740,7 @@
             "pronunciation": "/ˈaʊt.pʊt ˈfɔː.mæt/",
             "wordForm": "noun phrase",
             "collocation": "define the output format",
-            "exampleSentence": "Define the output format explicitly.",
-            "isCritical": true
+            "exampleSentence": "Define the output format explicitly."
           }
         ],
         "questions": [
@@ -2949,8 +2859,7 @@
             "pronunciation": "/rɪˈtriːv/",
             "wordForm": "verb",
             "collocation": "retrieve a document",
-            "exampleSentence": "The system retrieves relevant documents.",
-            "isCritical": true
+            "exampleSentence": "The system retrieves relevant documents."
           },
           {
             "word": "relevant",
@@ -2958,8 +2867,7 @@
             "pronunciation": "/ˈrel.ə.vənt/",
             "wordForm": "adjective",
             "collocation": "relevant context",
-            "exampleSentence": "Only relevant context is sent to the model.",
-            "isCritical": true
+            "exampleSentence": "Only relevant context is sent to the model."
           },
           {
             "word": "grounded",
@@ -2967,8 +2875,7 @@
             "pronunciation": "/ˈɡraʊn.dɪd/",
             "wordForm": "adjective",
             "collocation": "grounded answer",
-            "exampleSentence": "A grounded answer is supported by a source.",
-            "isCritical": true
+            "exampleSentence": "A grounded answer is supported by a source."
           },
           {
             "word": "source",
@@ -2976,8 +2883,7 @@
             "pronunciation": "/sɔːs/",
             "wordForm": "noun",
             "collocation": "cite a source",
-            "exampleSentence": "The answer cites its source.",
-            "isCritical": true
+            "exampleSentence": "The answer cites its source."
           }
         ],
         "questions": [
@@ -3096,8 +3002,7 @@
             "pronunciation": "/pəˈmɪʃ.ən/",
             "wordForm": "noun",
             "collocation": "grant permission",
-            "exampleSentence": "Grant only the required permission.",
-            "isCritical": true
+            "exampleSentence": "Grant only the required permission."
           },
           {
             "word": "secret",
@@ -3105,8 +3010,7 @@
             "pronunciation": "/ˈsiː.krət/",
             "wordForm": "noun",
             "collocation": "store a secret",
-            "exampleSentence": "Never store a secret in source code.",
-            "isCritical": true
+            "exampleSentence": "Never store a secret in source code."
           },
           {
             "word": "rate limit",
@@ -3114,8 +3018,7 @@
             "pronunciation": "/reɪt ˈlɪm.ɪt/",
             "wordForm": "noun",
             "collocation": "enforce a rate limit",
-            "exampleSentence": "The gateway enforces a rate limit.",
-            "isCritical": true
+            "exampleSentence": "The gateway enforces a rate limit."
           },
           {
             "word": "expose",
@@ -3123,8 +3026,7 @@
             "pronunciation": "/ɪkˈspəʊz/",
             "wordForm": "verb",
             "collocation": "expose data",
-            "exampleSentence": "Logs must not expose personal data.",
-            "isCritical": true
+            "exampleSentence": "Logs must not expose personal data."
           }
         ],
         "questions": [
@@ -3243,8 +3145,7 @@
             "pronunciation": "/ˌiː.vəˈluː.ʃən/",
             "wordForm": "technical term",
             "collocation": "evolution in context",
-            "exampleSentence": "AI evolved from rule-based systems to data-driven models.",
-            "isCritical": true
+            "exampleSentence": "AI evolved from rule-based systems to data-driven models."
           },
           {
             "word": "develop",
@@ -3252,8 +3153,7 @@
             "pronunciation": "/dɪˈvel.əp/",
             "wordForm": "verb",
             "collocation": "develop a model",
-            "exampleSentence": "Researchers developed the first neural networks decades ago.",
-            "isCritical": true
+            "exampleSentence": "Researchers developed the first neural networks decades ago."
           },
           {
             "word": "improve",
@@ -3261,8 +3161,7 @@
             "pronunciation": "/ɪmˈpruːv/",
             "wordForm": "verb",
             "collocation": "improve accuracy",
-            "exampleSentence": "Larger datasets improved the accuracy of the model.",
-            "isCritical": true
+            "exampleSentence": "Larger datasets improved the accuracy of the model."
           },
           {
             "word": "replace",
@@ -3270,8 +3169,7 @@
             "pronunciation": "/rɪˈpleɪs/",
             "wordForm": "verb",
             "collocation": "replace an approach",
-            "exampleSentence": "Deep learning replaced many rule-based systems.",
-            "isCritical": true
+            "exampleSentence": "Deep learning replaced many rule-based systems."
           },
           {
             "word": "decade",
@@ -3279,8 +3177,7 @@
             "pronunciation": "/ˈdek.eɪd/",
             "wordForm": "noun",
             "collocation": "over the last decade",
-            "exampleSentence": "AI changed very quickly over the last decade.",
-            "isCritical": true
+            "exampleSentence": "AI changed very quickly over the last decade."
           }
         ],
         "questions": [
@@ -3399,8 +3296,7 @@
             "pronunciation": "/ˈɪn.fər.əns/",
             "wordForm": "technical term",
             "collocation": "inference in context",
-            "exampleSentence": "Inference begins when the service receives an input.",
-            "isCritical": true
+            "exampleSentence": "Inference begins when the service receives an input."
           },
           {
             "word": "input",
@@ -3408,8 +3304,7 @@
             "pronunciation": "/ˈɪn.pʊt/",
             "wordForm": "noun / verb",
             "collocation": "user input",
-            "exampleSentence": "The user input is cleaned before the model reads it.",
-            "isCritical": true
+            "exampleSentence": "The user input is cleaned before the model reads it."
           },
           {
             "word": "generate",
@@ -3417,8 +3312,7 @@
             "pronunciation": "/ˈdʒen.ə.reɪt/",
             "wordForm": "verb",
             "collocation": "generate a response",
-            "exampleSentence": "The model generates a response token by token.",
-            "isCritical": true
+            "exampleSentence": "The model generates a response token by token."
           },
           {
             "word": "step",
@@ -3426,8 +3320,7 @@
             "pronunciation": "/step/",
             "wordForm": "noun",
             "collocation": "the next step",
-            "exampleSentence": "In the next step, the text is converted into tokens.",
-            "isCritical": true
+            "exampleSentence": "In the next step, the text is converted into tokens."
           },
           {
             "word": "return",
@@ -3435,8 +3328,7 @@
             "pronunciation": "/rɪˈtɜːrn/",
             "wordForm": "verb",
             "collocation": "return a result",
-            "exampleSentence": "The API returns the result as JSON.",
-            "isCritical": true
+            "exampleSentence": "The API returns the result as JSON."
           }
         ],
         "questions": [
@@ -3555,8 +3447,7 @@
             "pronunciation": "/dɪˌtɜː.mɪˈnɪs.tɪk/",
             "wordForm": "technical term",
             "collocation": "deterministic in context",
-            "exampleSentence": "A deterministic process returns the same result for the same input.",
-            "isCritical": true
+            "exampleSentence": "A deterministic process returns the same result for the same input."
           },
           {
             "word": "random",
@@ -3564,8 +3455,7 @@
             "pronunciation": "/ˈræn.dəm/",
             "wordForm": "adjective",
             "collocation": "a random choice",
-            "exampleSentence": "A higher temperature makes the output more random.",
-            "isCritical": true
+            "exampleSentence": "A higher temperature makes the output more random."
           },
           {
             "word": "compare",
@@ -3573,8 +3463,7 @@
             "pronunciation": "/kəmˈpeər/",
             "wordForm": "verb",
             "collocation": "compare two outputs",
-            "exampleSentence": "Compare the two outputs before you choose one.",
-            "isCritical": true
+            "exampleSentence": "Compare the two outputs before you choose one."
           },
           {
             "word": "consistent",
@@ -3582,8 +3471,7 @@
             "pronunciation": "/kənˈsɪs.tənt/",
             "wordForm": "adjective",
             "collocation": "consistent results",
-            "exampleSentence": "The same prompt should give consistent results.",
-            "isCritical": true
+            "exampleSentence": "The same prompt should give consistent results."
           },
           {
             "word": "likely",
@@ -3591,8 +3479,7 @@
             "pronunciation": "/ˈlaɪk.li/",
             "wordForm": "adjective / adverb",
             "collocation": "the most likely token",
-            "exampleSentence": "The model picks the most likely next token.",
-            "isCritical": true
+            "exampleSentence": "The model picks the most likely next token."
           }
         ],
         "questions": [
@@ -3711,8 +3598,7 @@
             "pronunciation": "/ˈend.pɔɪnt/",
             "wordForm": "technical term",
             "collocation": "endpoint in context",
-            "exampleSentence": "The endpoint accepts a request and returns a structured response.",
-            "isCritical": true
+            "exampleSentence": "The endpoint accepts a request and returns a structured response."
           },
           {
             "word": "send",
@@ -3720,8 +3606,7 @@
             "pronunciation": "/send/",
             "wordForm": "verb",
             "collocation": "send a request",
-            "exampleSentence": "The client sends a request to the endpoint.",
-            "isCritical": true
+            "exampleSentence": "The client sends a request to the endpoint."
           },
           {
             "word": "key",
@@ -3729,8 +3614,7 @@
             "pronunciation": "/kiː/",
             "wordForm": "noun",
             "collocation": "an API key",
-            "exampleSentence": "Keep the API key out of the source code.",
-            "isCritical": true
+            "exampleSentence": "Keep the API key out of the source code."
           },
           {
             "word": "header",
@@ -3738,8 +3622,7 @@
             "pronunciation": "/ˈhed.ər/",
             "wordForm": "noun",
             "collocation": "a request header",
-            "exampleSentence": "Put the token in the request header.",
-            "isCritical": true
+            "exampleSentence": "Put the token in the request header."
           },
           {
             "word": "fail",
@@ -3747,8 +3630,7 @@
             "pronunciation": "/feɪl/",
             "wordForm": "verb",
             "collocation": "fail with an error",
-            "exampleSentence": "The call failed with a 401 error.",
-            "isCritical": true
+            "exampleSentence": "The call failed with a 401 error."
           }
         ],
         "questions": [
@@ -3867,8 +3749,7 @@
             "pronunciation": "/ˈev.ɪ.dəns/",
             "wordForm": "technical term",
             "collocation": "evidence in context",
-            "exampleSentence": "The conclusion should be supported by relevant evidence.",
-            "isCritical": true
+            "exampleSentence": "The conclusion should be supported by relevant evidence."
           },
           {
             "word": "conclusion",
@@ -3876,8 +3757,7 @@
             "pronunciation": "/kənˈkluː.ʒən/",
             "wordForm": "noun",
             "collocation": "reach a conclusion",
-            "exampleSentence": "The model explains each step before it reaches a conclusion.",
-            "isCritical": true
+            "exampleSentence": "The model explains each step before it reaches a conclusion."
           },
           {
             "word": "assume",
@@ -3885,8 +3765,7 @@
             "pronunciation": "/əˈsjuːm/",
             "wordForm": "verb",
             "collocation": "assume that",
-            "exampleSentence": "Do not assume that the first answer is correct.",
-            "isCritical": true
+            "exampleSentence": "Do not assume that the first answer is correct."
           },
           {
             "word": "support",
@@ -3894,8 +3773,7 @@
             "pronunciation": "/səˈpɔːrt/",
             "wordForm": "verb / noun",
             "collocation": "support a claim",
-            "exampleSentence": "Every claim must be supported by a source.",
-            "isCritical": true
+            "exampleSentence": "Every claim must be supported by a source."
           },
           {
             "word": "correct",
@@ -3903,8 +3781,7 @@
             "pronunciation": "/kəˈrekt/",
             "wordForm": "adjective / verb",
             "collocation": "the correct answer",
-            "exampleSentence": "Check whether the correct answer follows from the evidence.",
-            "isCritical": true
+            "exampleSentence": "Check whether the correct answer follows from the evidence."
           }
         ],
         "questions": [
@@ -4023,8 +3900,7 @@
             "pronunciation": "/ˈskiː.mə/",
             "wordForm": "technical term",
             "collocation": "schema in context",
-            "exampleSentence": "The schema defines required fields and data types.",
-            "isCritical": true
+            "exampleSentence": "The schema defines required fields and data types."
           },
           {
             "word": "field",
@@ -4032,8 +3908,7 @@
             "pronunciation": "/fiːld/",
             "wordForm": "noun",
             "collocation": "a required field",
-            "exampleSentence": "The name field is required in every answer.",
-            "isCritical": true
+            "exampleSentence": "The name field is required in every answer."
           },
           {
             "word": "type",
@@ -4041,8 +3916,7 @@
             "pronunciation": "/taɪp/",
             "wordForm": "noun",
             "collocation": "a data type",
-            "exampleSentence": "The score field must use a number type.",
-            "isCritical": true
+            "exampleSentence": "The score field must use a number type."
           },
           {
             "word": "valid",
@@ -4050,8 +3924,7 @@
             "pronunciation": "/ˈvæl.ɪd/",
             "wordForm": "adjective",
             "collocation": "valid JSON",
-            "exampleSentence": "The output must be valid JSON.",
-            "isCritical": true
+            "exampleSentence": "The output must be valid JSON."
           },
           {
             "word": "missing",
@@ -4059,8 +3932,7 @@
             "pronunciation": "/ˈmɪs.ɪŋ/",
             "wordForm": "adjective",
             "collocation": "a missing field",
-            "exampleSentence": "The parser rejects the answer when a field is missing.",
-            "isCritical": true
+            "exampleSentence": "The parser rejects the answer when a field is missing."
           }
         ],
         "questions": [
@@ -4179,8 +4051,7 @@
             "pronunciation": "/pəˈræm.ɪ.tər/",
             "wordForm": "technical term",
             "collocation": "parameter in context",
-            "exampleSentence": "Each parameter has a name, type, and purpose.",
-            "isCritical": true
+            "exampleSentence": "Each parameter has a name, type, and purpose."
           },
           {
             "word": "call",
@@ -4188,8 +4059,7 @@
             "pronunciation": "/kɔːl/",
             "wordForm": "verb / noun",
             "collocation": "call a function",
-            "exampleSentence": "The model calls the weather function with one parameter.",
-            "isCritical": true
+            "exampleSentence": "The model calls the weather function with one parameter."
           },
           {
             "word": "value",
@@ -4197,8 +4067,7 @@
             "pronunciation": "/ˈvæl.juː/",
             "wordForm": "noun",
             "collocation": "pass a value",
-            "exampleSentence": "Pass the city name as the value.",
-            "isCritical": true
+            "exampleSentence": "Pass the city name as the value."
           },
           {
             "word": "error",
@@ -4206,8 +4075,7 @@
             "pronunciation": "/ˈer.ər/",
             "wordForm": "noun",
             "collocation": "handle an error",
-            "exampleSentence": "Handle the error and try the call again.",
-            "isCritical": true
+            "exampleSentence": "Handle the error and try the call again."
           },
           {
             "word": "allow",
@@ -4215,8 +4083,7 @@
             "pronunciation": "/əˈlaʊ/",
             "wordForm": "verb",
             "collocation": "allow access",
-            "exampleSentence": "Only allow the tools that the task really needs.",
-            "isCritical": true
+            "exampleSentence": "Only allow the tools that the task really needs."
           }
         ],
         "questions": [
@@ -4335,8 +4202,7 @@
             "pronunciation": "/ˈfeɪ.ljər/",
             "wordForm": "technical term",
             "collocation": "failure in context",
-            "exampleSentence": "The report describes the failure, impact, cause, and mitigation.",
-            "isCritical": true
+            "exampleSentence": "The report describes the failure, impact, cause, and mitigation."
           },
           {
             "word": "retry",
@@ -4344,8 +4210,7 @@
             "pronunciation": "/ˌriːˈtraɪ/",
             "wordForm": "verb / noun",
             "collocation": "retry a request",
-            "exampleSentence": "Retry the request after a short wait.",
-            "isCritical": true
+            "exampleSentence": "Retry the request after a short wait."
           },
           {
             "word": "fix",
@@ -4353,8 +4218,7 @@
             "pronunciation": "/fɪks/",
             "wordForm": "verb / noun",
             "collocation": "fix a bug",
-            "exampleSentence": "We fixed the timeout problem yesterday.",
-            "isCritical": true
+            "exampleSentence": "We fixed the timeout problem yesterday."
           },
           {
             "word": "log",
@@ -4362,8 +4226,7 @@
             "pronunciation": "/lɒɡ/",
             "wordForm": "noun / verb",
             "collocation": "check the logs",
-            "exampleSentence": "Check the logs before you change the prompt.",
-            "isCritical": true
+            "exampleSentence": "Check the logs before you change the prompt."
           },
           {
             "word": "timeout",
@@ -4371,8 +4234,7 @@
             "pronunciation": "/ˈtaɪm.aʊt/",
             "wordForm": "noun",
             "collocation": "a request timeout",
-            "exampleSentence": "A timeout means the server did not answer in time.",
-            "isCritical": true
+            "exampleSentence": "A timeout means the server did not answer in time."
           }
         ],
         "questions": [
@@ -4491,8 +4353,7 @@
             "pronunciation": "/ˈtreɪd.ɒf/",
             "wordForm": "technical term",
             "collocation": "trade-off in context",
-            "exampleSentence": "The team measured the trade-off between cost and answer quality.",
-            "isCritical": true
+            "exampleSentence": "The team measured the trade-off between cost and answer quality."
           },
           {
             "word": "reduce",
@@ -4500,8 +4361,7 @@
             "pronunciation": "/rɪˈdjuːs/",
             "wordForm": "verb",
             "collocation": "reduce cost",
-            "exampleSentence": "Shorter prompts reduce the cost of every call.",
-            "isCritical": true
+            "exampleSentence": "Shorter prompts reduce the cost of every call."
           },
           {
             "word": "cost",
@@ -4509,8 +4369,7 @@
             "pronunciation": "/kɒst/",
             "wordForm": "noun / verb",
             "collocation": "cut the cost",
-            "exampleSentence": "The cost grows with the number of tokens.",
-            "isCritical": true
+            "exampleSentence": "The cost grows with the number of tokens."
           },
           {
             "word": "limit",
@@ -4518,8 +4377,7 @@
             "pronunciation": "/ˈlɪm.ɪt/",
             "wordForm": "noun / verb",
             "collocation": "a token limit",
-            "exampleSentence": "Every model has a token limit for one request.",
-            "isCritical": true
+            "exampleSentence": "Every model has a token limit for one request."
           },
           {
             "word": "increase",
@@ -4527,8 +4385,7 @@
             "pronunciation": "/ɪnˈkriːs/",
             "wordForm": "verb",
             "collocation": "increase latency",
-            "exampleSentence": "A long context increases both cost and latency.",
-            "isCritical": true
+            "exampleSentence": "A long context increases both cost and latency."
           }
         ],
         "questions": [
@@ -4647,8 +4504,7 @@
             "pronunciation": "/dɪˈpen.dən.si/",
             "wordForm": "technical term",
             "collocation": "dependency in context",
-            "exampleSentence": "The second prompt has a dependency on the first output.",
-            "isCritical": true
+            "exampleSentence": "The second prompt has a dependency on the first output."
           },
           {
             "word": "pass",
@@ -4656,8 +4512,7 @@
             "pronunciation": "/pɑːs/",
             "wordForm": "verb",
             "collocation": "pass the output to",
-            "exampleSentence": "Pass the output of the first prompt to the second one.",
-            "isCritical": true
+            "exampleSentence": "Pass the output of the first prompt to the second one."
           },
           {
             "word": "order",
@@ -4665,8 +4520,7 @@
             "pronunciation": "/ˈɔːr.dər/",
             "wordForm": "noun / verb",
             "collocation": "in the right order",
-            "exampleSentence": "Run the steps in the right order.",
-            "isCritical": true
+            "exampleSentence": "Run the steps in the right order."
           },
           {
             "word": "previous",
@@ -4674,8 +4528,7 @@
             "pronunciation": "/ˈpriː.vi.əs/",
             "wordForm": "adjective",
             "collocation": "the previous step",
-            "exampleSentence": "Each step uses the output of the previous step.",
-            "isCritical": true
+            "exampleSentence": "Each step uses the output of the previous step."
           },
           {
             "word": "combine",
@@ -4683,8 +4536,7 @@
             "pronunciation": "/kəmˈbaɪn/",
             "wordForm": "verb",
             "collocation": "combine the results",
-            "exampleSentence": "Combine the results into one final answer.",
-            "isCritical": true
+            "exampleSentence": "Combine the results into one final answer."
           }
         ],
         "questions": [
@@ -4803,8 +4655,7 @@
             "pronunciation": "/ɪnˈdʒest/",
             "wordForm": "technical term",
             "collocation": "ingest in context",
-            "exampleSentence": "The pipeline ingests, validates, and transforms source documents.",
-            "isCritical": true
+            "exampleSentence": "The pipeline ingests, validates, and transforms source documents."
           },
           {
             "word": "load",
@@ -4812,8 +4663,7 @@
             "pronunciation": "/ləʊd/",
             "wordForm": "verb",
             "collocation": "load a file",
-            "exampleSentence": "The files are loaded from the storage folder.",
-            "isCritical": true
+            "exampleSentence": "The files are loaded from the storage folder."
           },
           {
             "word": "clean",
@@ -4821,8 +4671,7 @@
             "pronunciation": "/kliːn/",
             "wordForm": "verb / adjective",
             "collocation": "clean the data",
-            "exampleSentence": "The text is cleaned before it is stored.",
-            "isCritical": true
+            "exampleSentence": "The text is cleaned before it is stored."
           },
           {
             "word": "extract",
@@ -4830,8 +4679,7 @@
             "pronunciation": "/ɪkˈstrækt/",
             "wordForm": "verb",
             "collocation": "extract text",
-            "exampleSentence": "The pipeline extracts text from every PDF.",
-            "isCritical": true
+            "exampleSentence": "The pipeline extracts text from every PDF."
           },
           {
             "word": "store",
@@ -4839,8 +4687,7 @@
             "pronunciation": "/stɔːr/",
             "wordForm": "verb",
             "collocation": "store a document",
-            "exampleSentence": "Each document is stored with its source URL.",
-            "isCritical": true
+            "exampleSentence": "Each document is stored with its source URL."
           }
         ],
         "questions": [
@@ -4959,8 +4806,7 @@
             "pronunciation": "/tʃʌŋk/",
             "wordForm": "technical term",
             "collocation": "chunk in context",
-            "exampleSentence": "Each chunk should preserve enough context for retrieval.",
-            "isCritical": true
+            "exampleSentence": "Each chunk should preserve enough context for retrieval."
           },
           {
             "word": "split",
@@ -4968,8 +4814,7 @@
             "pronunciation": "/splɪt/",
             "wordForm": "verb",
             "collocation": "split a document",
-            "exampleSentence": "Split the document into short sections.",
-            "isCritical": true
+            "exampleSentence": "Split the document into short sections."
           },
           {
             "word": "size",
@@ -4977,8 +4822,7 @@
             "pronunciation": "/saɪz/",
             "wordForm": "noun",
             "collocation": "chunk size",
-            "exampleSentence": "A small chunk size gives more precise matches.",
-            "isCritical": true
+            "exampleSentence": "A small chunk size gives more precise matches."
           },
           {
             "word": "overlap",
@@ -4986,8 +4830,7 @@
             "pronunciation": "/ˈəʊ.vər.læp/",
             "wordForm": "noun / verb",
             "collocation": "overlap between chunks",
-            "exampleSentence": "A small overlap keeps the meaning between two chunks.",
-            "isCritical": true
+            "exampleSentence": "A small overlap keeps the meaning between two chunks."
           },
           {
             "word": "context",
@@ -4995,8 +4838,7 @@
             "pronunciation": "/ˈkɒn.tekst/",
             "wordForm": "noun",
             "collocation": "lose context",
-            "exampleSentence": "Very short chunks can lose the context of the sentence.",
-            "isCritical": true
+            "exampleSentence": "Very short chunks can lose the context of the sentence."
           }
         ],
         "questions": [
@@ -5115,8 +4957,7 @@
             "pronunciation": "/ɪmˈbed.ɪŋ/",
             "wordForm": "technical term",
             "collocation": "embedding in context",
-            "exampleSentence": "An embedding represents semantic meaning as a vector.",
-            "isCritical": true
+            "exampleSentence": "An embedding represents semantic meaning as a vector."
           },
           {
             "word": "meaning",
@@ -5124,8 +4965,7 @@
             "pronunciation": "/ˈmiː.nɪŋ/",
             "wordForm": "noun",
             "collocation": "capture the meaning",
-            "exampleSentence": "An embedding captures the meaning of the text.",
-            "isCritical": true
+            "exampleSentence": "An embedding captures the meaning of the text."
           },
           {
             "word": "convert",
@@ -5133,8 +4973,7 @@
             "pronunciation": "/kənˈvɜːrt/",
             "wordForm": "verb",
             "collocation": "convert text into numbers",
-            "exampleSentence": "The model converts text into numbers.",
-            "isCritical": true
+            "exampleSentence": "The model converts text into numbers."
           },
           {
             "word": "vector",
@@ -5142,8 +4981,7 @@
             "pronunciation": "/ˈvek.tər/",
             "wordForm": "noun",
             "collocation": "a vector of numbers",
-            "exampleSentence": "Each chunk becomes a vector of numbers.",
-            "isCritical": true
+            "exampleSentence": "Each chunk becomes a vector of numbers."
           },
           {
             "word": "close",
@@ -5151,8 +4989,7 @@
             "pronunciation": "/kləʊs/",
             "wordForm": "adjective",
             "collocation": "close to each other",
-            "exampleSentence": "Sentences with a similar meaning sit close to each other.",
-            "isCritical": true
+            "exampleSentence": "Sentences with a similar meaning sit close to each other."
           }
         ],
         "questions": [
@@ -5271,8 +5108,7 @@
             "pronunciation": "/ˈɪn.deks/",
             "wordForm": "technical term",
             "collocation": "index in context",
-            "exampleSentence": "The database indexes vectors for efficient retrieval.",
-            "isCritical": true
+            "exampleSentence": "The database indexes vectors for efficient retrieval."
           },
           {
             "word": "search",
@@ -5280,8 +5116,7 @@
             "pronunciation": "/sɜːrtʃ/",
             "wordForm": "verb / noun",
             "collocation": "search a database",
-            "exampleSentence": "The app searches the database for similar chunks.",
-            "isCritical": true
+            "exampleSentence": "The app searches the database for similar chunks."
           },
           {
             "word": "query",
@@ -5289,8 +5124,7 @@
             "pronunciation": "/ˈkwɪə.ri/",
             "wordForm": "noun / verb",
             "collocation": "run a query",
-            "exampleSentence": "Every query is converted into a vector first.",
-            "isCritical": true
+            "exampleSentence": "Every query is converted into a vector first."
           },
           {
             "word": "collection",
@@ -5298,8 +5132,7 @@
             "pronunciation": "/kəˈlek.ʃən/",
             "wordForm": "noun",
             "collocation": "create a collection",
-            "exampleSentence": "Create one collection for each product manual.",
-            "isCritical": true
+            "exampleSentence": "Create one collection for each product manual."
           },
           {
             "word": "fast",
@@ -5307,8 +5140,7 @@
             "pronunciation": "/fɑːst/",
             "wordForm": "adjective",
             "collocation": "a fast lookup",
-            "exampleSentence": "The index keeps the lookup fast with millions of rows.",
-            "isCritical": true
+            "exampleSentence": "The index keeps the lookup fast with millions of rows."
           }
         ],
         "questions": [
@@ -5427,8 +5259,7 @@
             "pronunciation": "/ˌsɪm.ɪˈlær.ə.ti/",
             "wordForm": "technical term",
             "collocation": "similarity in context",
-            "exampleSentence": "Similarity search ranks documents by relevance to the query.",
-            "isCritical": true
+            "exampleSentence": "Similarity search ranks documents by relevance to the query."
           },
           {
             "word": "score",
@@ -5436,8 +5267,7 @@
             "pronunciation": "/skɔːr/",
             "wordForm": "noun / verb",
             "collocation": "a high score",
-            "exampleSentence": "Keep only the results with a high score.",
-            "isCritical": true
+            "exampleSentence": "Keep only the results with a high score."
           },
           {
             "word": "rank",
@@ -5445,8 +5275,7 @@
             "pronunciation": "/ræŋk/",
             "wordForm": "verb / noun",
             "collocation": "rank the results",
-            "exampleSentence": "The results are ranked from the highest score.",
-            "isCritical": true
+            "exampleSentence": "The results are ranked from the highest score."
           },
           {
             "word": "filter",
@@ -5454,8 +5283,7 @@
             "pronunciation": "/ˈfɪl.tər/",
             "wordForm": "verb / noun",
             "collocation": "filter by date",
-            "exampleSentence": "Filter the results by date before you rank them.",
-            "isCritical": true
+            "exampleSentence": "Filter the results by date before you rank them."
           },
           {
             "word": "match",
@@ -5463,8 +5291,7 @@
             "pronunciation": "/mætʃ/",
             "wordForm": "noun / verb",
             "collocation": "the best match",
-            "exampleSentence": "The top three matches are sent to the model.",
-            "isCritical": true
+            "exampleSentence": "The top three matches are sent to the model."
           }
         ],
         "questions": [
@@ -5583,8 +5410,7 @@
             "pronunciation": "/ˈmet.rɪk/",
             "wordForm": "technical term",
             "collocation": "metric in context",
-            "exampleSentence": "Each metric measures one aspect of retrieval or answer quality.",
-            "isCritical": true
+            "exampleSentence": "Each metric measures one aspect of retrieval or answer quality."
           },
           {
             "word": "measure",
@@ -5592,8 +5418,7 @@
             "pronunciation": "/ˈmeʒ.ər/",
             "wordForm": "verb",
             "collocation": "measure quality",
-            "exampleSentence": "Measure the quality before and after the change.",
-            "isCritical": true
+            "exampleSentence": "Measure the quality before and after the change."
           },
           {
             "word": "accuracy",
@@ -5601,8 +5426,7 @@
             "pronunciation": "/ˈæk.jər.ə.si/",
             "wordForm": "noun",
             "collocation": "measure accuracy",
-            "exampleSentence": "We check accuracy on a fixed test set.",
-            "isCritical": true
+            "exampleSentence": "We check accuracy on a fixed test set."
           },
           {
             "word": "sample",
@@ -5610,8 +5434,7 @@
             "pronunciation": "/ˈsɑːm.pəl/",
             "wordForm": "noun / verb",
             "collocation": "a test sample",
-            "exampleSentence": "Review a sample of fifty answers by hand.",
-            "isCritical": true
+            "exampleSentence": "Review a sample of fifty answers by hand."
           },
           {
             "word": "baseline",
@@ -5619,8 +5442,7 @@
             "pronunciation": "/ˈbeɪs.laɪn/",
             "wordForm": "noun",
             "collocation": "beat the baseline",
-            "exampleSentence": "The new prompt beat the baseline by four points.",
-            "isCritical": true
+            "exampleSentence": "The new prompt beat the baseline by four points."
           }
         ],
         "questions": [
@@ -5739,8 +5561,7 @@
             "pronunciation": "/ˈdel.ɪ.ɡeɪt/",
             "wordForm": "technical term",
             "collocation": "delegate in context",
-            "exampleSentence": "The coordinator delegates a bounded task to a specialist.",
-            "isCritical": true
+            "exampleSentence": "The coordinator delegates a bounded task to a specialist."
           },
           {
             "word": "role",
@@ -5748,8 +5569,7 @@
             "pronunciation": "/rəʊl/",
             "wordForm": "noun",
             "collocation": "assign a role",
-            "exampleSentence": "Each agent has one clear role.",
-            "isCritical": true
+            "exampleSentence": "Each agent has one clear role."
           },
           {
             "word": "assign",
@@ -5757,8 +5577,7 @@
             "pronunciation": "/əˈsaɪn/",
             "wordForm": "verb",
             "collocation": "assign a task",
-            "exampleSentence": "The planner assigns each task to one agent.",
-            "isCritical": true
+            "exampleSentence": "The planner assigns each task to one agent."
           },
           {
             "word": "share",
@@ -5766,8 +5585,7 @@
             "pronunciation": "/ʃeər/",
             "wordForm": "verb",
             "collocation": "share information",
-            "exampleSentence": "The agents share information through a common memory.",
-            "isCritical": true
+            "exampleSentence": "The agents share information through a common memory."
           },
           {
             "word": "complete",
@@ -5775,8 +5593,7 @@
             "pronunciation": "/kəmˈpliːt/",
             "wordForm": "verb / adjective",
             "collocation": "complete a task",
-            "exampleSentence": "The agent reports as soon as the task is complete.",
-            "isCritical": true
+            "exampleSentence": "The agent reports as soon as the task is complete."
           }
         ],
         "questions": [
@@ -5895,8 +5712,7 @@
             "pronunciation": "/ruːt/",
             "wordForm": "technical term",
             "collocation": "route in context",
-            "exampleSentence": "The router sends each request to the appropriate model.",
-            "isCritical": true
+            "exampleSentence": "The router sends each request to the appropriate model."
           },
           {
             "word": "decide",
@@ -5904,8 +5720,7 @@
             "pronunciation": "/dɪˈsaɪd/",
             "wordForm": "verb",
             "collocation": "decide which model",
-            "exampleSentence": "The router decides which model handles the request.",
-            "isCritical": true
+            "exampleSentence": "The router decides which model handles the request."
           },
           {
             "word": "condition",
@@ -5913,8 +5728,7 @@
             "pronunciation": "/kənˈdɪʃ.ən/",
             "wordForm": "noun",
             "collocation": "meet a condition",
-            "exampleSentence": "If the request meets this condition, send it to the small model.",
-            "isCritical": true
+            "exampleSentence": "If the request meets this condition, send it to the small model."
           },
           {
             "word": "choose",
@@ -5922,8 +5736,7 @@
             "pronunciation": "/tʃuːz/",
             "wordForm": "verb",
             "collocation": "choose an option",
-            "exampleSentence": "Choose the cheaper model for simple questions.",
-            "isCritical": true
+            "exampleSentence": "Choose the cheaper model for simple questions."
           },
           {
             "word": "simple",
@@ -5931,8 +5744,7 @@
             "pronunciation": "/ˈsɪm.pəl/",
             "wordForm": "adjective",
             "collocation": "a simple request",
-            "exampleSentence": "Simple requests do not need the largest model.",
-            "isCritical": true
+            "exampleSentence": "Simple requests do not need the largest model."
           }
         ],
         "questions": [
@@ -6051,8 +5863,7 @@
             "pronunciation": "/ˈtrɪɡ.ər/",
             "wordForm": "technical term",
             "collocation": "trigger in context",
-            "exampleSentence": "A new event triggers the automation workflow.",
-            "isCritical": true
+            "exampleSentence": "A new event triggers the automation workflow."
           },
           {
             "word": "event",
@@ -6060,8 +5871,7 @@
             "pronunciation": "/ɪˈvent/",
             "wordForm": "noun",
             "collocation": "an event happens",
-            "exampleSentence": "The workflow starts when a new file event arrives.",
-            "isCritical": true
+            "exampleSentence": "The workflow starts when a new file event arrives."
           },
           {
             "word": "run",
@@ -6069,8 +5879,7 @@
             "pronunciation": "/rʌn/",
             "wordForm": "verb",
             "collocation": "run a job",
-            "exampleSentence": "The job runs every night at midnight.",
-            "isCritical": true
+            "exampleSentence": "The job runs every night at midnight."
           },
           {
             "word": "daily",
@@ -6078,8 +5887,7 @@
             "pronunciation": "/ˈdeɪ.li/",
             "wordForm": "adjective / adverb",
             "collocation": "a daily job",
-            "exampleSentence": "A daily job removes the old records.",
-            "isCritical": true
+            "exampleSentence": "A daily job removes the old records."
           },
           {
             "word": "automatic",
@@ -6087,8 +5895,7 @@
             "pronunciation": "/ˌɔː.təˈmæt.ɪk/",
             "wordForm": "adjective",
             "collocation": "an automatic retry",
-            "exampleSentence": "An automatic retry handles short network problems.",
-            "isCritical": true
+            "exampleSentence": "An automatic retry handles short network problems."
           }
         ],
         "questions": [
@@ -6207,8 +6014,7 @@
             "pronunciation": "/rɪˈkʌv.ər.i/",
             "wordForm": "technical term",
             "collocation": "recovery in context",
-            "exampleSentence": "The recovery plan restores service after a failure.",
-            "isCritical": true
+            "exampleSentence": "The recovery plan restores service after a failure."
           },
           {
             "word": "latency",
@@ -6216,8 +6022,7 @@
             "pronunciation": "/ˈleɪ.tən.si/",
             "wordForm": "noun",
             "collocation": "reduce latency",
-            "exampleSentence": "We reduced latency by caching the common answers.",
-            "isCritical": true
+            "exampleSentence": "We reduced latency by caching the common answers."
           },
           {
             "word": "incident",
@@ -6225,8 +6030,7 @@
             "pronunciation": "/ˈɪn.sɪ.dənt/",
             "wordForm": "noun",
             "collocation": "an incident report",
-            "exampleSentence": "The team wrote an incident report after the outage.",
-            "isCritical": true
+            "exampleSentence": "The team wrote an incident report after the outage."
           },
           {
             "word": "monitor",
@@ -6234,8 +6038,7 @@
             "pronunciation": "/ˈmɒn.ɪ.tər/",
             "wordForm": "verb / noun",
             "collocation": "monitor a service",
-            "exampleSentence": "We monitor the service every minute.",
-            "isCritical": true
+            "exampleSentence": "We monitor the service every minute."
           },
           {
             "word": "reliable",
@@ -6243,8 +6046,7 @@
             "pronunciation": "/rɪˈlaɪ.ə.bəl/",
             "wordForm": "adjective",
             "collocation": "a reliable system",
-            "exampleSentence": "A reliable system fails in a predictable way.",
-            "isCritical": true
+            "exampleSentence": "A reliable system fails in a predictable way."
           }
         ],
         "questions": [

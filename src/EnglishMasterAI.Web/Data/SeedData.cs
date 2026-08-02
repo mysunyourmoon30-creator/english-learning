@@ -222,7 +222,6 @@ public static class SeedData
             vocabulary.WordForm = vocabularyTemplate.WordForm;
             vocabulary.Collocation = vocabularyTemplate.Collocation;
             vocabulary.ExampleSentence = vocabularyTemplate.ExampleSentence;
-            vocabulary.IsCritical = vocabularyTemplate.IsCritical;
         }
     }
 
