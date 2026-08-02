@@ -82,7 +82,7 @@ public sealed class SeedContentTests
     }
 
     [Fact]
-    public void Listening_transcripts_are_not_a_copy_of_the_reading_passage()
+    public void Reading_and_listening_texts_are_distinct_and_worth_the_lesson_time()
     {
         var lessons = SeedContent.LoadModules(Root).SelectMany(x => x.Lessons);
 
@@ -97,6 +97,11 @@ public sealed class SeedContentTests
             Assert.True(
                 lesson.ListeningTranscript.Split(' ').Length >= 30,
                 $"Transcript for '{lesson.Slug}' is too short to listen to.");
+            // Every lesson is budgeted at 25 minutes, which a single sentence of
+            // reading cannot fill however carefully it is written.
+            Assert.True(
+                lesson.ReadingContent.Split(' ').Length >= 60,
+                $"Reading for '{lesson.Slug}' is too short for its estimate.");
         });
     }
 
