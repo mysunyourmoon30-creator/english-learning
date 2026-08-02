@@ -84,6 +84,46 @@ public sealed class SeedContentSyncTests(EnglishMasterWebFactory factory)
     }
 
     [Fact]
+    public async Task Reseeding_restores_lesson_prose_that_no_editor_has_touched()
+    {
+        await using var scope = factory.Services.CreateAsyncScope();
+        var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        var lesson = await db.Lessons.OrderBy(x => x.Slug).FirstAsync(x => x.Version == 1);
+        var id = lesson.Id;
+        var transcript = lesson.ListeningTranscript;
+        lesson.ListeningTranscript = lesson.ReadingContent;
+        await db.SaveChangesAsync();
+
+        await ReseedAsync(scope.ServiceProvider);
+
+        var refreshed = await db.Lessons.SingleAsync(x => x.Id == id);
+        Assert.Equal(transcript, refreshed.ListeningTranscript);
+    }
+
+    [Fact]
+    public async Task Reseeding_leaves_a_lesson_alone_once_it_has_been_edited()
+    {
+        await using var scope = factory.Services.CreateAsyncScope();
+        var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        var lesson = await db.Lessons.OrderBy(x => x.Slug).FirstAsync(x => x.Version == 1);
+        var id = lesson.Id;
+        var seeded = lesson.ListeningTranscript;
+        const string edited = "An editor rewrote this transcript in the content studio.";
+        lesson.ListeningTranscript = edited;
+        lesson.Version = 2;
+        await db.SaveChangesAsync();
+
+        await ReseedAsync(scope.ServiceProvider);
+
+        var refreshed = await db.Lessons.SingleAsync(x => x.Id == id);
+        Assert.Equal(edited, refreshed.ListeningTranscript);
+
+        refreshed.ListeningTranscript = seeded;
+        refreshed.Version = 1;
+        await db.SaveChangesAsync();
+    }
+
+    [Fact]
     public async Task Reseeding_restores_a_quiz_question_that_is_missing_from_a_lesson()
     {
         await using var scope = factory.Services.CreateAsyncScope();

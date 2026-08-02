@@ -168,9 +168,33 @@ public static class SeedData
                 continue;
             }
 
+            SyncLessonText(lesson, lessonTemplate);
             SyncVocabulary(db, lesson, lessonTemplate);
             SyncQuestions(db, lesson, lessonTemplate);
         }
+    }
+
+    // Lesson prose is editable in the content studio, which bumps Version, snapshots the
+    // old text into a ContentRevision and reopens the reviews. Refreshing only while the
+    // lesson is still at version 1 keeps the content files authoritative up to the point an
+    // editor takes over, and silent about the lesson from then on.
+    private static void SyncLessonText(Lesson lesson, Lesson template)
+    {
+        if (lesson.Version != 1)
+        {
+            return;
+        }
+
+        lesson.Title = template.Title;
+        lesson.Objective = template.Objective;
+        lesson.ThaiExplanation = template.ThaiExplanation;
+        lesson.GrammarFocus = template.GrammarFocus;
+        lesson.ReadingContent = template.ReadingContent;
+        lesson.ListeningTranscript = template.ListeningTranscript;
+        lesson.SpeakingPrompt = template.SpeakingPrompt;
+        lesson.WritingPrompt = template.WritingPrompt;
+        lesson.EstimatedMinutes = template.EstimatedMinutes;
+        lesson.SortOrder = template.SortOrder;
     }
 
     private static void SyncVocabulary(

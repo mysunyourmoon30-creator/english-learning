@@ -82,6 +82,25 @@ public sealed class SeedContentTests
     }
 
     [Fact]
+    public void Listening_transcripts_are_not_a_copy_of_the_reading_passage()
+    {
+        var lessons = SeedContent.LoadModules(Root).SelectMany(x => x.Lessons);
+
+        Assert.All(lessons, lesson =>
+        {
+            // The player shows the reading in full and then asks the learner to listen
+            // before opening the transcript, which only works if they differ.
+            Assert.NotEqual(
+                lesson.ReadingContent.Trim(),
+                lesson.ListeningTranscript.Trim(),
+                StringComparer.OrdinalIgnoreCase);
+            Assert.True(
+                lesson.ListeningTranscript.Split(' ').Length >= 30,
+                $"Transcript for '{lesson.Slug}' is too short to listen to.");
+        });
+    }
+
+    [Fact]
     public void Every_lesson_quiz_question_explains_its_own_answer()
     {
         var lessons = SeedContent.LoadModules(Root).SelectMany(x => x.Lessons);
