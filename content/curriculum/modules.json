@@ -137,7 +137,55 @@
             "correctOptionIndex": 1,
             "explanation": "“model” has two syllables: mo-del. Count the vowel sounds you hear, not the letters you see — the word has five letters but only two beats.",
             "difficulty": 1,
-            "sortOrder": 1
+            "sortOrder": 2
+          },
+          {
+            "skill": "Pronunciation",
+            "toeicPart": null,
+            "prompt": "Which two words end with the same sound?",
+            "supportingText": null,
+            "options": [
+              "spell and tell",
+              "work and live",
+              "name and say",
+              "read and letter"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“spell and tell” both end with the /l/ sound. work ends with /k/ and live with /v/; name ends with /m/ while say ends in a vowel; and read ends with /d/, not with the /r/ that starts letter.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "Can you ___ your name?",
+            "supportingText": null,
+            "options": [
+              "spell",
+              "listen",
+              "read",
+              "sound"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“spell” means saying the letters one by one, which is what the question asks for. You read a word that is already written, and you listen to a sound somebody else makes.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Pronunciation",
+            "toeicPart": null,
+            "prompt": "Which word starts with the /r/ sound?",
+            "supportingText": null,
+            "options": [
+              "read",
+              "letter",
+              "listen",
+              "word"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“read” begins with /r/, the sound Thai learners most often replace with /l/. letter and listen both begin with /l/, and word begins with /w/.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -227,7 +275,55 @@
             "correctOptionIndex": 1,
             "explanation": "A suffix goes on the end of a word: reliable + ity = reliability. A part added to the front is a prefix, as in re-read.",
             "difficulty": 1,
-            "sortOrder": 1
+            "sortOrder": 2
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "Which part of “rewrite” is the prefix?",
+            "supportingText": null,
+            "options": [
+              "re",
+              "write",
+              "ite",
+              "wri"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“re” is the prefix, the part added to the front to mean again. write is the base word, and neither ite nor wri means anything on its own.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Reading",
+            "toeicPart": null,
+            "prompt": "Where does the stress fall in “availability”?",
+            "supportingText": null,
+            "options": [
+              "a-vail-a-BIL-i-ty",
+              "a-VAIL-a-bil-i-ty",
+              "A-vail-a-bil-i-ty",
+              "a-vail-a-bil-i-TY"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "The stress falls on bil: a-vail-a-BIL-i-ty. Words ending in -ity stress the syllable just before that ending, which is why reliability and security follow the same shape.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "A prefix changes a word by…",
+            "supportingText": null,
+            "options": [
+              "adding a part at the front",
+              "adding a part at the end",
+              "removing the last letter",
+              "changing the stress only"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "A prefix works by adding a part at the front: un plus clear becomes unclear. A part added at the end is a suffix, and neither one removes letters from the base word.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -326,7 +422,55 @@
             "correctOptionIndex": 1,
             "explanation": "“retrieves” means to get stored data back, which is what a service does with a database. “returns to” and “sends at” attach the wrong preposition, and “evaluations” is a noun where a verb is needed.",
             "difficulty": 1,
-            "sortOrder": 1
+            "sortOrder": 2
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "Which verb goes with “an error”?",
+            "supportingText": null,
+            "options": [
+              "handle",
+              "answer",
+              "build",
+              "read"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "English pairs handle with error: the system handles the error. You answer a question and build a service, but an error is something you handle or catch.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "The team will ___ the new model before release.",
+            "supportingText": null,
+            "options": [
+              "evaluate",
+              "retrieve",
+              "request",
+              "respond"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“evaluate” means judging how well something works, which is what happens before a release. You retrieve stored data, request something from a service, and respond to a message.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Reading",
+            "toeicPart": null,
+            "prompt": "What does the system do when a request fails?",
+            "supportingText": null,
+            "options": [
+              "It handles the error.",
+              "It deletes the client.",
+              "It sends a new request.",
+              "It stops the API."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“It handles the error.” The passage pairs an if-clause with its result: if the request fails, the system handles the error. Nothing there mentions deleting, resending or stopping.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -416,7 +560,55 @@
             "correctOptionIndex": 1,
             "explanation": "“The system is reliable.” needs “is” to link the subject to the adjective. The first option has no verb, “reliability” is a noun instead of an adjective, and “System are” drops the article and breaks agreement.",
             "difficulty": 1,
-            "sortOrder": 1
+            "sortOrder": 2
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "What is the object in “The API validates the input.”?",
+            "supportingText": null,
+            "options": [
+              "the input",
+              "The API",
+              "validates",
+              "the"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“the input” is the object, the thing the verb acts on. The API is the subject doing the action, and validates is the verb that joins them.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Which sentence is missing a verb?",
+            "supportingText": null,
+            "options": [
+              "The response useful.",
+              "The service runs.",
+              "The model generates text.",
+              "The system is reliable."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“The response useful.” has no verb at all. English needs be even where Thai does not, so the sentence has to read The response is useful.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Which sentence is Subject + be + adjective?",
+            "supportingText": null,
+            "options": [
+              "The system is reliable.",
+              "The output is JSON.",
+              "The client sends a request.",
+              "The service runs."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“The system is reliable.” ends with an adjective after be. The output is JSON. also uses be, but JSON is a noun, and the last two use an action verb instead.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -509,6 +701,70 @@
             "explanation": "“Information” is uncountable, so it takes no “a/an” and never adds “-s”. When you need to count it, use a unit word: a piece of information. Data behaves the same way.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Choose the correct quantity phrase.",
+            "supportingText": null,
+            "options": [
+              "much information",
+              "many information",
+              "an informations",
+              "informations"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“much information” is right because information is uncountable: it takes much rather than many, and it never adds -s. Use many only for things you can count, such as many examples.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "Which noun can you count?",
+            "supportingText": null,
+            "options": [
+              "example",
+              "information",
+              "data",
+              "advice"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“example” is countable: one example, two examples. information, data and advice are uncountable in English, so they take no a/an and no plural ending even where Thai would count them.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "The model returned an answer. ___ was short.",
+            "supportingText": null,
+            "options": [
+              "It",
+              "He",
+              "They",
+              "She"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“It” replaces a thing, and an answer is a thing. He and She are for people, and They would need a plural noun such as answers.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Choose the correct sentence.",
+            "supportingText": null,
+            "options": [
+              "We collected a lot of data.",
+              "We collected a lot of datas.",
+              "We collected many data.",
+              "We collected a data."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“We collected a lot of data.” works because a lot of fits both countable and uncountable nouns. many data and a data treat data as countable, and datas is never correct.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -601,6 +857,70 @@
             "explanation": "After a modal such as can, the verb stays in its base form: can generate. The modal already carries the tense, so “generates”, “generated” and “generating” all add an ending that does not belong there.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "She ___ finished the first test.",
+            "supportingText": null,
+            "options": [
+              "has",
+              "have",
+              "is",
+              "was"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“has” is the form used with she, he and it: she has finished. have goes with I, you, we and they, and neither is nor was can carry a past participle here.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "The service ___ requests every second.",
+            "supportingText": null,
+            "options": [
+              "processes",
+              "process",
+              "processing",
+              "to process"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“processes” adds -s because the subject the service is third person singular. Present Simple marks only that one form, which is why we process stays plain.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Right now the team ___ on the second test.",
+            "supportingText": null,
+            "options": [
+              "is working",
+              "works",
+              "have worked",
+              "work"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“is working” is be + V-ing, the form right now calls for. works would describe a routine rather than something happening at this moment.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "You ___ check the input first.",
+            "supportingText": null,
+            "options": [
+              "need to",
+              "need",
+              "needs to",
+              "needing"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“need to” takes to before the next verb. Unlike can or must, need is not a modal here, so it keeps the to-infinitive after it.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -693,6 +1013,70 @@
             "explanation": "“yesterday” marks a finished point in the past, so Past Simple “deployed” is the form to use. Present “deploy” contradicts the time marker, and “have deploy” and “will deployed” mix two structures together.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "The team ___ already completed the evaluation.",
+            "supportingText": null,
+            "options": [
+              "has",
+              "did",
+              "was",
+              "will"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“has” builds the Present Perfect together with completed. The word already sits between the auxiliary and the participle, which is a position did and was cannot fill.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "We ___ the pipeline next week.",
+            "supportingText": null,
+            "options": [
+              "will improve",
+              "improved",
+              "have improved",
+              "will improved"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“will improve” is the future form, and next week fixes the time. will improved marks the tense twice, and the other two describe work already done.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Which sentence links a past action to the situation now?",
+            "supportingText": null,
+            "options": [
+              "We have deployed the service.",
+              "We deployed the service yesterday.",
+              "We will deploy the service.",
+              "We deploy the service."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“We have deployed the service.” is the Present Perfect, which connects a past action to its present result. The past simple version fixes the action in yesterday and says nothing about now.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "We started this work ___.",
+            "supportingText": null,
+            "options": [
+              "last month",
+              "since last month",
+              "for last month",
+              "in yesterday"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“last month” is a finished time expression, and Past Simple takes it with no preposition at all. since would need a perfect tense, and the last two are not used in English.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -785,6 +1169,70 @@
             "explanation": "“What does this function return?” follows the order question word + auxiliary + subject + verb. “does” carries the tense, which is why the main verb stays as “return” and not “returns”.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Choose the correct negative.",
+            "supportingText": null,
+            "options": [
+              "The system does not validate the input.",
+              "The system not validate the input.",
+              "The system does not validates the input.",
+              "The system no validate the input."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“The system does not validate the input.” uses does not plus the base verb. The auxiliary already carries the tense, so validates would mark it twice, and not cannot stand on its own.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "___ you explain the retry rule?",
+            "supportingText": null,
+            "options": [
+              "Could",
+              "Do",
+              "Are",
+              "Does"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Could” makes a polite request and is followed by the base verb. Do you explain would ask about a habit instead, and the last two do not fit explain in this pattern.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Which sentence states a requirement?",
+            "supportingText": null,
+            "options": [
+              "The system must validate the input.",
+              "The system might validate the input.",
+              "The system could validate the input.",
+              "The system would validate the input."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“The system must validate the input.” states an obligation with no exception. might and could describe possibility and would describes a hypothetical, so none of them makes a rule.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "“Where do the logs go?” asks about…",
+            "supportingText": null,
+            "options": [
+              "a place",
+              "a reason",
+              "a person",
+              "a time"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "Where asks about a place. Why asks for a reason, who asks about a person and when asks a time, so choosing the question word is really choosing what you need.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -877,6 +1325,70 @@
             "explanation": "“therefore” introduces the result of what came before: The cache was empty; therefore the request was slow. “because” gives the reason instead, while “although” and “unless” set up a contrast and a condition.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "The test failed ___ the file was missing.",
+            "supportingText": null,
+            "options": [
+              "because",
+              "therefore",
+              "finally",
+              "although"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“because” introduces the reason for the failure. therefore would introduce the result instead, finally marks a last step, and although sets up a contrast.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Which word marks the last step?",
+            "supportingText": null,
+            "options": [
+              "Finally",
+              "First",
+              "Next",
+              "Because"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Finally” marks the last step in a sequence. First opens it and Next moves it along, while Because is not a sequence word at all.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Which sentence gives a result?",
+            "supportingText": null,
+            "options": [
+              "Therefore, the request was slow.",
+              "The cache was empty.",
+              "The request was slow because the cache was empty.",
+              "First, the cache was checked."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Therefore, the request was slow.” presents the outcome of what came before. The because sentence gives the reason instead, and the other two only state a fact or a step.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Reading",
+            "toeicPart": null,
+            "prompt": "In the passage, what happens after the system ranks the documents?",
+            "supportingText": null,
+            "options": [
+              "The model generates an answer.",
+              "The system retrieves documents.",
+              "The user writes a query.",
+              "The documents are deleted."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“The model generates an answer.” comes last, after First retrieves and Next ranks. Following the sequence words is enough to answer without understanding every word.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -969,6 +1481,70 @@
             "explanation": "“The input is validated.” uses the passive formula be + past participle, which keeps the focus on the input rather than on who checks it. “is validate” and “validating” use the wrong form, and “validates” is active.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "The report ___ by the team last week.",
+            "supportingText": null,
+            "options": [
+              "was reviewed",
+              "reviewed",
+              "is reviewing",
+              "has review"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“was reviewed” is the past passive, be plus past participle, and by the team names who did it. reviewed on its own would make the report the reviewer.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "All users ___ to sign in.",
+            "supportingText": null,
+            "options": [
+              "are required",
+              "require",
+              "requires",
+              "are requiring"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“are required” puts the users on the receiving end of the rule. require would mean the users are the ones demanding something.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "If the test passes, we ___ the release.",
+            "supportingText": null,
+            "options": [
+              "will publish",
+              "published",
+              "would published",
+              "will published"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“will publish” is the result half of a first conditional: if plus present, then will plus the base verb. will published marks the tense twice.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "The meeting is ___ for Monday at ten.",
+            "supportingText": null,
+            "options": [
+              "scheduled",
+              "available",
+              "approved",
+              "validated"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“scheduled” is the word for fixing a time. available describes a free slot, approved means agreed to, and validated means checked for correctness.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -1061,6 +1637,70 @@
             "explanation": "Scanning means moving your eyes quickly to find specific information, such as a field name or a status code. Reading for the general idea is skimming, and neither one requires translating every word.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Reading",
+            "toeicPart": null,
+            "prompt": "You need one error code from a long API page. What do you do?",
+            "supportingText": null,
+            "options": [
+              "Scan for it.",
+              "Skim the whole page.",
+              "Translate every word.",
+              "Read from the top."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Scan for it.” Scanning means going straight to one specific piece of information without reading the rest, which is all a single error code needs.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Reading",
+            "toeicPart": null,
+            "prompt": "What does skimming give you?",
+            "supportingText": null,
+            "options": [
+              "the general idea",
+              "one exact number",
+              "a full translation",
+              "every detail"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "Skimming gives you the general idea, the topic and the purpose, in one quick pass. Exact numbers come from scanning, and no reading technique produces a translation.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Reading",
+            "toeicPart": null,
+            "prompt": "A reference word such as “it” usually points to…",
+            "supportingText": null,
+            "options": [
+              "a noun mentioned before",
+              "the writer",
+              "the next paragraph",
+              "a verb"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "It points back to a noun mentioned before it. Finding that noun is what keeps a long technical paragraph from falling apart halfway through.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Reading",
+            "toeicPart": null,
+            "prompt": "Which one is a supporting detail rather than a main idea?",
+            "supportingText": null,
+            "options": [
+              "The endpoint returns a 404 when the id is unknown.",
+              "This page explains the orders endpoint.",
+              "The document covers three endpoints.",
+              "This guide is written for new developers."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“The endpoint returns a 404 when the id is unknown.” is one specific case, which makes it a supporting detail. The other three describe what the whole document is about.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -1153,6 +1793,70 @@
             "explanation": "The first pass should be listen and answer. The transcript is for checking what you heard, so opening it early turns a listening exercise into a reading exercise and hides the words you actually missed.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Listening",
+            "toeicPart": null,
+            "prompt": "What does shadowing mean?",
+            "supportingText": null,
+            "options": [
+              "speaking along just after the audio",
+              "reading the transcript aloud",
+              "translating each sentence",
+              "listening with the sound off"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "Shadowing means speaking along just after the audio, copying its rhythm before you have time to translate. Reading a transcript aloud is a different exercise with no listening in it.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Listening",
+            "toeicPart": null,
+            "prompt": "You miss one word in a sentence. What comes first?",
+            "supportingText": null,
+            "options": [
+              "Guess it from the words around it.",
+              "Open the transcript.",
+              "Restart the audio.",
+              "Look it up in a dictionary."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Guess it from the words around it.” Real conversations do not pause, so guessing from context is the skill that transfers. The transcript can wait for the second pass.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Listening",
+            "toeicPart": null,
+            "prompt": "What is the last step of the workflow?",
+            "supportingText": null,
+            "options": [
+              "Summarize the message in your own words.",
+              "Listen without the transcript.",
+              "Check the key chunks.",
+              "Shadow each sentence."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Summarize the message in your own words.” comes last, after listening, checking and shadowing. Producing your own version is what proves you understood rather than recognised.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "The written version of the audio is the ___.",
+            "supportingText": null,
+            "options": [
+              "transcript",
+              "summary",
+              "chunk",
+              "shadow"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“transcript” is the written version of what is said. A summary is shorter than the original, a chunk is a small group of words, and shadowing is a speaking exercise.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -1245,6 +1949,70 @@
             "explanation": "“For example” signals that a specific case is coming. “As a result” introduces a consequence, “My point is” states the main claim, and “In conclusion” closes the answer — in PREP they each mark a different step.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Speaking",
+            "toeicPart": null,
+            "prompt": "In PREP, what comes first?",
+            "supportingText": null,
+            "options": [
+              "your point",
+              "your reason",
+              "your example",
+              "your result"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "PREP opens with your point, the claim itself, so the listener knows where the answer is going. The reason, the example and the result all support it afterwards.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Speaking",
+            "toeicPart": null,
+            "prompt": "Which phrase introduces a result?",
+            "supportingText": null,
+            "options": [
+              "As a result",
+              "For example",
+              "The reason is",
+              "My point is"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“As a result” introduces the outcome. For example brings a case, The reason is gives the cause, and My point is opens the claim: four phrases, four different jobs.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Speaking",
+            "toeicPart": null,
+            "prompt": "What does fluency mean here?",
+            "supportingText": null,
+            "options": [
+              "speaking without long pauses",
+              "speaking with no accent",
+              "using difficult words",
+              "speaking very fast"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "Fluency is speaking without long pauses so the listener can follow your thinking. It has nothing to do with sounding like a native speaker or choosing rare words.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Speaking",
+            "toeicPart": null,
+            "prompt": "Your answer is one sentence long. What is missing?",
+            "supportingText": null,
+            "options": [
+              "a reason and an example",
+              "a longer word",
+              "a faster speed",
+              "a native accent"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“a reason and an example” are what turn a claim into an answer somebody can follow. Speed and accent add no content, and a rare word will not fill the gap either.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -1337,6 +2105,70 @@
             "explanation": "“I will update the data and rerun the test.” names who does what next, so the reader can check whether it happened. The other three report status or cause, which is useful context but not an action.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Writing",
+            "toeicPart": null,
+            "prompt": "Which sentence states the cause?",
+            "supportingText": null,
+            "options": [
+              "The seed data is incomplete.",
+              "The test is failing.",
+              "I will rerun the test.",
+              "The API is complete."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“The seed data is incomplete.” explains why the failure happened. The failing test is the symptom, the rerun is the next action, and the API line is status.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Writing",
+            "toeicPart": null,
+            "prompt": "Which opening is the most concise?",
+            "supportingText": null,
+            "options": [
+              "The integration test is failing.",
+              "I wanted to write today to let you know that, as of now, the integration test seems to be failing.",
+              "Hello, I hope this message finds you well and that your week is going smoothly.",
+              "There is possibly maybe an issue somewhere in the tests, I think."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“The integration test is failing.” says the whole thing in one line. The others delay the point with greetings or soften it with maybe and I think until the reader cannot tell what happened.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Writing",
+            "toeicPart": null,
+            "prompt": "A usable next action includes…",
+            "supportingText": null,
+            "options": [
+              "who does it and when",
+              "an apology",
+              "the full error log",
+              "a list of everyone involved"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "A next action needs who does it and when, so anyone reading can check whether it happened. An apology and a log may both be useful, but neither can be followed up.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "I ___ a smaller change to the config.",
+            "supportingText": null,
+            "options": [
+              "suggest",
+              "issue",
+              "cause",
+              "update"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“suggest” introduces a proposal. issue and cause work as nouns here, and update would need something that already exists to be updated.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -1429,6 +2261,70 @@
             "explanation": "“Could you confirm the expected output?” uses a modal question to ask for a fact without blaming anyone. “Fix this now.” is an order and “You are wrong.” is a judgement, so neither invites the information you need.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Workplace",
+            "toeicPart": null,
+            "prompt": "What is a blocker?",
+            "supportingText": null,
+            "options": [
+              "something that stops your work until it is resolved",
+              "a task you have finished",
+              "a meeting in your calendar",
+              "a deadline you set yourself"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "A blocker is something that stops your work until it is resolved, such as a missing permission. Reporting one early is what gives the team time to clear it.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Workplace",
+            "toeicPart": null,
+            "prompt": "Which sentence separates fact from assumption?",
+            "supportingText": null,
+            "options": [
+              "Deployment is blocked by a missing permission; I think Anna can approve it.",
+              "Anna is blocking the deployment.",
+              "Nobody has approved anything.",
+              "The deployment is broken."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Deployment is blocked by a missing permission; I think Anna can approve it.” states what is known and marks the rest with I think. The others present a guess as a fact.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Workplace",
+            "toeicPart": null,
+            "prompt": "The requirement is unclear. What comes before your estimate?",
+            "supportingText": null,
+            "options": [
+              "Confirm what is expected.",
+              "Estimate the longest case.",
+              "Start coding and see.",
+              "Wait for the deadline."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Confirm what is expected.” An estimate built on a guess is wrong for a reason nobody can see, so one clarifying question protects the whole schedule.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "We can still meet the ___.",
+            "supportingText": null,
+            "options": [
+              "deadline",
+              "progress",
+              "blocker",
+              "estimate"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“deadline” is the date something is due, and English pairs it with meet. You make progress, clear a blocker and give an estimate.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -1521,6 +2417,70 @@
             "explanation": "“postponed” means moved to a later time, which is what “until Friday” signals. A meeting can be attended and an agenda can be reviewed, but neither verb explains a change of date, and files — not meetings — are attached.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "TOEIC",
+            "toeicPart": null,
+            "prompt": "“All participants should review the agenda.” Who is that for?",
+            "supportingText": null,
+            "options": [
+              "everyone who plans to attend",
+              "the speaker only",
+              "new employees only",
+              "people who cannot come"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“everyone who plans to attend” is what participants means here. TOEIC constantly swaps one word for another that means the same thing, and that paraphrase is what you listen for.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "TOEIC",
+            "toeicPart": null,
+            "prompt": "Which word means a person you work with?",
+            "supportingText": null,
+            "options": [
+              "colleague",
+              "participant",
+              "agenda",
+              "announcement"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“colleague” is a person you work with. A participant attends an event, an agenda lists what will be discussed, and an announcement is the message itself.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "TOEIC",
+            "toeicPart": null,
+            "prompt": "You are short of time in Part 7. What is the best move?",
+            "supportingText": null,
+            "options": [
+              "Read the questions first, then scan for the answers.",
+              "Read every passage from the start.",
+              "Answer at random and move on.",
+              "Translate the first paragraph carefully."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Read the questions first, then scan for the answers.” Knowing what to look for turns a long passage into a short search, which is the only way Part 7 fits the time.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "TOEIC",
+            "toeicPart": null,
+            "prompt": "The meeting moved from Wednesday to Friday. It was ___.",
+            "supportingText": null,
+            "options": [
+              "postponed",
+              "cancelled",
+              "attended",
+              "announced"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“postponed” means moved to a later time. A cancelled meeting would not happen at all, and announced only means it was made public.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -1613,6 +2573,70 @@
             "explanation": "It should address every requested point. TOEIC writing is scored on task completion, so an answer that is fluent but misses one of the questions still loses marks.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "TOEIC",
+            "toeicPart": null,
+            "prompt": "You are late replying to a customer. Which opening is best?",
+            "supportingText": null,
+            "options": [
+              "I apologize for the delay in my reply.",
+              "Sorry, I forgot about you.",
+              "You did not remind me.",
+              "This email is late."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“I apologize for the delay in my reply.” takes responsibility in a neutral, professional register. Blaming the reader or announcing your own mistake bluntly costs marks and goodwill.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "TOEIC",
+            "toeicPart": null,
+            "prompt": "Which phrase names the topic of an email?",
+            "supportingText": null,
+            "options": [
+              "Regarding your request for a refund",
+              "Because of you",
+              "As you already know",
+              "In the end"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Regarding your request for a refund” states the subject in the first line, so the reader knows what the message is about before the details start.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "TOEIC",
+            "toeicPart": null,
+            "prompt": "The prompt asks two questions and you answer one. What happens?",
+            "supportingText": null,
+            "options": [
+              "You lose marks for task completion.",
+              "You lose marks for grammar.",
+              "Nothing, if the English is correct.",
+              "You lose marks for pronunciation."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“You lose marks for task completion.” TOEIC writing is scored against the prompt, so a fluent answer that skips a requested point is still incomplete.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "TOEIC",
+            "toeicPart": null,
+            "prompt": "Which sentence recommends something?",
+            "supportingText": null,
+            "options": [
+              "I would recommend bringing a laptop.",
+              "I attached the agenda.",
+              "I can attend on Tuesday.",
+              "Thank you for your message."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“I would recommend bringing a laptop.” gives advice, softened by would. The others confirm, attach or thank, which are useful moves but not recommendations.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -1702,7 +2726,55 @@
             "correctOptionIndex": 2,
             "explanation": "“A decoder is a component that produces output.” follows the standard definition pattern: term + is + a/an + category + that + function. The other options drop the verb or the relative pronoun that pattern needs.",
             "difficulty": 1,
-            "sortOrder": 1
+            "sortOrder": 2
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "What does the decoder produce?",
+            "supportingText": null,
+            "options": [
+              "output tokens",
+              "a database index",
+              "an API key",
+              "a training set"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "The decoder produces output tokens, which are turned back into readable text. Indexes, keys and training sets belong to other parts of the system.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "The model predicts the next token ___.",
+            "supportingText": null,
+            "options": [
+              "one at a time",
+              "all at once",
+              "before tokenizing",
+              "after decoding"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "It works one at a time, using everything before it to choose what comes next. That is why a long answer costs more than a short one.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Which sentence describes a process step?",
+            "supportingText": null,
+            "options": [
+              "The tokenizer converts the input into tokens.",
+              "The tokenizer is a token.",
+              "The tokenizer of input.",
+              "Converting tokenizer input the."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“The tokenizer converts the input into tokens.” has a subject, a verb and an object, and convert X into Y is the pattern for describing a change of form.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -1792,7 +2864,55 @@
             "correctOptionIndex": 2,
             "explanation": "A constraint is a rule that limits what the answer may contain, such as “use only the supplied log”. Retrieval and response name steps in the process, and a tokenizer is a component.",
             "difficulty": 1,
-            "sortOrder": 1
+            "sortOrder": 2
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which part of a prompt defines the output format?",
+            "supportingText": null,
+            "options": [
+              "Return valid JSON with summary, cause, and nextAction fields.",
+              "Use only the supplied log.",
+              "Summarize the incident.",
+              "You are a helpful assistant."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Return valid JSON with summary, cause, and nextAction fields.” describes the shape of the answer. Using only the log is a constraint, and summarizing the incident is the goal.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "“Use only the supplied log” is an example of a…",
+            "supportingText": null,
+            "options": [
+              "constraint",
+              "goal",
+              "output format",
+              "role"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "A constraint limits what the model may use or say. The goal is what you want done, the output format is the shape of the answer, and the role is who the model should act as.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Why is “Analyze it.” a weak prompt?",
+            "supportingText": null,
+            "options": [
+              "It gives no goal, context, or output format.",
+              "It is too polite.",
+              "It is grammatically wrong.",
+              "It is too long."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“It gives no goal, context, or output format.” Two people running that prompt would get two unrelated answers, which is the opposite of what production needs.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -1891,7 +3011,55 @@
             "correctOptionIndex": 2,
             "explanation": "“Relevant chunks are retrieved.” uses be + past participle, the passive form that pipeline descriptions rely on when the actor does not matter. “are retrieve” keeps the base form, and the other two have no passive at all.",
             "difficulty": 1,
-            "sortOrder": 1
+            "sortOrder": 2
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "What makes an answer grounded?",
+            "supportingText": null,
+            "options": [
+              "It is based on retrieved sources.",
+              "It is short.",
+              "It is written in formal English.",
+              "It is generated quickly."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“It is based on retrieved sources.” Grounding is about where the content came from, not how it reads, which is why a grounded answer can cite the document it used.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Why are retrieved chunks ranked?",
+            "supportingText": null,
+            "options": [
+              "Only the top few fit in the prompt.",
+              "Ranking makes them shorter.",
+              "The database requires it.",
+              "It removes duplicates."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Only the top few fit in the prompt.” Context space is limited, so ranking decides which chunks are worth spending it on.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "A chunk that actually answers the question is ___.",
+            "supportingText": null,
+            "options": [
+              "relevant",
+              "grounded",
+              "retrieved",
+              "structured"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“relevant” means related to what was asked. Retrieved only means it came back from the store, and grounded describes the answer rather than the chunk.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -1990,7 +3158,55 @@
             "correctOptionIndex": 1,
             "explanation": "“must” states an obligation with no exceptions, which is what a security rule needs. “might” and “could” express possibility and “would” a hypothetical, so all three leave the rule sounding optional.",
             "difficulty": 1,
-            "sortOrder": 1
+            "sortOrder": 2
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "What does a rate limit protect against?",
+            "supportingText": null,
+            "options": [
+              "too many requests in a short time",
+              "weak passwords",
+              "invalid JSON",
+              "slow databases"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "A rate limit caps too many requests in a short time, whether they come from a bug or an attack. Passwords, schemas and database speed are handled elsewhere.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "A log line contains a customer's email address. Why is that a problem?",
+            "supportingText": null,
+            "options": [
+              "It exposes personal data.",
+              "It makes the log longer.",
+              "It slows the service.",
+              "It breaks the JSON."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“It exposes personal data.” Logs are read, copied and shipped to other systems, so anything personal in them travels far beyond the service that wrote it.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Where should an API key live?",
+            "supportingText": null,
+            "options": [
+              "in a secret store outside the repository",
+              "in the source code",
+              "in a code comment",
+              "in the README"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "It belongs in a secret store outside the repository. Anything committed stays in the history even after you delete it, which is why rotating a leaked key is the only real fix.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -2071,18 +3287,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “evolution” in the module context?",
+            "prompt": "Which sentence presents the change as finished?",
             "supportingText": null,
             "options": [
-              "evolution is unrelated to this topic.",
-              "AI evolved from rule-based systems to data-driven models.",
-              "Never explain the evolution.",
-              "evolution has no meaning."
+              "Data-driven models replaced most rule-based systems.",
+              "Data-driven models replace most rule-based systems.",
+              "Data-driven models will replace most rule-based systems.",
+              "Data-driven models are replacing most rule-based systems."
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“AI evolved from rule-based systems to data-driven models.” uses the pattern evolve from X to Y, with the past tense for a change that is finished. That pattern is what lets you describe a timeline in one sentence.",
+            "correctOptionIndex": 0,
+            "explanation": "“Data-driven models replaced most rule-based systems.” uses Past Simple, which closes the change off. The present and future forms leave it open or still in progress.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "Ten years is one ___.",
+            "supportingText": null,
+            "options": [
+              "decade",
+              "century",
+              "period",
+              "era"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“decade” is exactly ten years. A century is a hundred, while period and era are vague spans with no fixed length.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Accuracy ___ every time the datasets grew.",
+            "supportingText": null,
+            "options": [
+              "improved",
+              "improve",
+              "has improve",
+              "improving"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“improved” matches the past time frame that grew has already set. Two verbs describing the same past situation stay in the same tense.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "What replaced hand-written rules?",
+            "supportingText": null,
+            "options": [
+              "data-driven models",
+              "faster networks",
+              "larger screens",
+              "new programming languages"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“data-driven models” learned the patterns people used to write out by hand. The other things changed too, but none of them is what replaced the rules.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "Which verb describes slow change over a long time?",
+            "supportingText": null,
+            "options": [
+              "evolve",
+              "delete",
+              "deploy",
+              "attach"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“evolve” describes gradual change, which is why the field talks about the evolution of AI rather than its installation.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -2163,18 +3443,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “inference” in the module context?",
+            "prompt": "When does inference begin?",
             "supportingText": null,
             "options": [
-              "inference is unrelated to this topic.",
-              "Inference begins when the service receives an input.",
-              "Never explain the inference.",
-              "inference has no meaning."
+              "when the service receives an input",
+              "when the model is trained",
+              "when the database is indexed",
+              "when the user signs in"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“Inference begins when the service receives an input.” marks the start of the process with begin when + clause. Use that pattern to anchor the first step before you describe what follows.",
+            "correctOptionIndex": 0,
+            "explanation": "Inference begins when the service receives an input. Training happens long before, and indexing belongs to retrieval rather than to a single request.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "The text ___ into tokens before the model reads it.",
+            "supportingText": null,
+            "options": [
+              "is converted",
+              "converts",
+              "converting",
+              "convert"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“is converted” is the passive, be plus past participle, which keeps the focus on the text rather than on whatever does the converting.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "What does the API return at the end?",
+            "supportingText": null,
+            "options": [
+              "the result",
+              "the prompt",
+              "the training data",
+              "the model weights"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "The API returns the result, usually as JSON. Prompts go in rather than out, and weights and training data never leave the model.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Put the steps in order.",
+            "supportingText": null,
+            "options": [
+              "tokenize, generate, return",
+              "generate, tokenize, return",
+              "return, tokenize, generate",
+              "tokenize, return, generate"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "The order is tokenize, generate, return. Nothing can be generated before the text becomes tokens, and nothing is returned before it exists.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Why does every step matter for latency?",
+            "supportingText": null,
+            "options": [
+              "Each step adds time to the same response.",
+              "Each step needs a new key.",
+              "Each step opens a database.",
+              "Each step retrains the model."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Each step adds time to the same response.” Latency is the sum of the lifecycle, so a slow step anywhere is a slow answer for the user.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -2255,18 +3599,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “deterministic” in the module context?",
+            "prompt": "A deterministic function is one that…",
             "supportingText": null,
             "options": [
-              "deterministic is unrelated to this topic.",
-              "A deterministic process returns the same result for the same input.",
-              "Never explain the deterministic.",
-              "deterministic has no meaning."
+              "returns the same result for the same input",
+              "never fails",
+              "runs quickly",
+              "uses no memory"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“A deterministic process returns the same result for the same input.” is the definition itself: same input, same output. Contrast it with a stochastic process, which may return a different result each time.",
+            "correctOptionIndex": 0,
+            "explanation": "It returns the same result for the same input, every single run. Speed, reliability and memory use are separate properties.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Why can one prompt give different wording twice?",
+            "supportingText": null,
+            "options": [
+              "The model samples from likely tokens.",
+              "The prompt changes itself.",
+              "The API is broken.",
+              "The network is slow."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“The model samples from likely tokens.” Sampling is what makes the output vary, and it is a setting you control rather than a fault to report.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "Results that stay the same across runs are ___.",
+            "supportingText": null,
+            "options": [
+              "consistent",
+              "random",
+              "relevant",
+              "structured"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“consistent” describes results that do not change between runs. random is the opposite, and the other two describe content rather than repeatability.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "The temperature is higher, ___ the output is more varied.",
+            "supportingText": null,
+            "options": [
+              "so",
+              "because",
+              "although",
+              "unless"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“so” introduces the result of the higher temperature. because would reverse cause and effect, and the other two set up a contrast or a condition.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which step must not be left to a sampled model output?",
+            "supportingText": null,
+            "options": [
+              "charging a customer's card",
+              "writing a first draft",
+              "suggesting three titles",
+              "rephrasing a paragraph"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“charging a customer's card” must not vary between runs, so it belongs in ordinary code where the same input always gives the same result.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -2347,18 +3755,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “endpoint” in the module context?",
+            "prompt": "Where does the API key belong?",
             "supportingText": null,
             "options": [
-              "endpoint is unrelated to this topic.",
-              "The endpoint accepts a request and returns a structured response.",
-              "Never explain the endpoint.",
-              "endpoint has no meaning."
+              "in the request header",
+              "in the URL",
+              "in a code comment",
+              "in the response body"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“The endpoint accepts a request and returns a structured response.” pairs the two verbs that always travel with an endpoint: it accepts what comes in and returns what goes out.",
+            "correctOptionIndex": 0,
+            "explanation": "“in the request header” keeps the key out of logs and browser history, which is exactly where putting it in the URL would leave it.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "What does the endpoint return?",
+            "supportingText": null,
+            "options": [
+              "a structured response",
+              "a new endpoint",
+              "the source code",
+              "the API key"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "The endpoint returns a structured response, usually JSON your code can parse without guessing at the shape.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "The call ___ with a 401 error.",
+            "supportingText": null,
+            "options": [
+              "failed",
+              "fell",
+              "broke down",
+              "stopped"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "English pairs fail with an error code: the call failed with a 401. The other verbs describe breaking in ways that do not collocate here.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "The client ___ a request to the endpoint.",
+            "supportingText": null,
+            "options": [
+              "sends",
+              "send",
+              "sending",
+              "is send"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“sends” takes -s because the client is third person singular in the Present Simple.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "A 401 usually means…",
+            "supportingText": null,
+            "options": [
+              "the key is missing or wrong",
+              "the server is down",
+              "the request is too long",
+              "the model is busy"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“the key is missing or wrong.” 401 is the status for authentication, so read the code before you start rewriting the prompt.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -2439,18 +3911,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “evidence” in the module context?",
+            "prompt": "What has to support a conclusion?",
             "supportingText": null,
             "options": [
-              "evidence is unrelated to this topic.",
-              "The conclusion should be supported by relevant evidence.",
-              "Never explain the evidence.",
-              "evidence has no meaning."
+              "evidence",
+              "confidence",
+              "length",
+              "formatting"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“The conclusion should be supported by relevant evidence.” uses the passive be supported by, which puts the claim first and its backing second — the normal order when you justify an answer.",
+            "correctOptionIndex": 0,
+            "explanation": "A conclusion rests on evidence somebody can check. A long, confident, well-formatted answer can still be completely wrong.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Every claim ___ by a source.",
+            "supportingText": null,
+            "options": [
+              "must be supported",
+              "must support",
+              "must supporting",
+              "must be support"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“must be supported” is a modal followed by the passive, be plus past participle, which keeps the claim as the subject of the sentence.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "To ___ means to accept something without checking.",
+            "supportingText": null,
+            "options": [
+              "assume",
+              "conclude",
+              "support",
+              "measure"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“assume” means taking something as true without checking it, which is the habit this lesson exists to break.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "The answer sounds confident but cites nothing. What now?",
+            "supportingText": null,
+            "options": [
+              "Ask for the source.",
+              "Accept it.",
+              "Rewrite it.",
+              "Shorten it."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Ask for the source.” Confidence is a style, not a guarantee, and the source is the only part of an answer you can actually verify.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which one shows the reasoning rather than only the conclusion?",
+            "supportingText": null,
+            "options": [
+              "The log shows three timeouts, so the network is the likely cause.",
+              "The network is broken.",
+              "This is a network problem.",
+              "The cause is the network."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“The log shows three timeouts, so the network is the likely cause.” gives the evidence and the step taken from it. The others state a result with nothing behind it.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -2531,18 +4067,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “schema” in the module context?",
+            "prompt": "What does a schema define?",
             "supportingText": null,
             "options": [
-              "schema is unrelated to this topic.",
-              "The schema defines required fields and data types.",
-              "Never explain the schema.",
-              "schema has no meaning."
+              "required fields and data types",
+              "the model's speed",
+              "the prompt length",
+              "the server location"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“The schema defines required fields and data types.” shows what a schema does: it defines, and what it defines are fields and types. “Required” is the standard word for a field that cannot be left out.",
+            "correctOptionIndex": 0,
+            "explanation": "A schema defines required fields and data types, which is the shape your code can rely on before it ever sees an answer.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "The score arrives as \"8\" rather than 8. What is wrong?",
+            "supportingText": null,
+            "options": [
+              "The type is wrong.",
+              "The field is missing.",
+              "The JSON is empty.",
+              "The schema is missing."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“The type is wrong.” A number in quotation marks is a string, and code that adds it to another number will either break or silently join the two together.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "A field that cannot be left out is ___.",
+            "supportingText": null,
+            "options": [
+              "required",
+              "optional",
+              "valid",
+              "missing"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“required” marks a field that must appear. optional is its opposite, valid describes the whole document, and missing is what happens when a required field is absent.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "The output must ___ valid JSON.",
+            "supportingText": null,
+            "options": [
+              "be",
+              "is",
+              "being",
+              "been"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "After the modal must, the verb stays in its base form: must be. The modal already carries the tense for both of them.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "A required field is missing. What should the parser do?",
+            "supportingText": null,
+            "options": [
+              "Reject the output.",
+              "Fill it with an empty string.",
+              "Ignore the schema for that call.",
+              "Round the other numbers."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Reject the output.” A schema you bend under pressure is not a contract, and an invented value is far harder to debug than a clean failure.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -2623,18 +4223,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “parameter” in the module context?",
+            "prompt": "What does a parameter description tell the model?",
             "supportingText": null,
             "options": [
-              "parameter is unrelated to this topic.",
-              "Each parameter has a name, type, and purpose.",
-              "Never explain the parameter.",
-              "parameter has no meaning."
+              "the name, type, and purpose",
+              "the model's temperature",
+              "the user's language",
+              "the server address"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“Each parameter has a name, type, and purpose.” uses each + singular noun to state a rule that holds for every item, followed by a three-part list. That is the usual way to document an interface.",
+            "correctOptionIndex": 0,
+            "explanation": "It gives the name, type, and purpose, so the model can choose sensible values without ever seeing your code.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "If the call returns an error, ___ it and try again.",
+            "supportingText": null,
+            "options": [
+              "catch",
+              "catching",
+              "to catch",
+              "caught"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“catch” is the base form used for an instruction inside an if-sentence: if this happens, do that. The -ing form and the to-infinitive cannot open a command like this one.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "The model ___ the weather function with one parameter.",
+            "supportingText": null,
+            "options": [
+              "calls",
+              "says",
+              "opens",
+              "reads"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "English pairs call with function: the model calls the weather function. You open a file and read a value, but a function is called.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Why limit which tools a model may use?",
+            "supportingText": null,
+            "options": [
+              "Each extra tool is another way for something to go wrong.",
+              "Tools cost nothing.",
+              "More tools are always faster.",
+              "Tools cannot fail."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Each extra tool is another way for something to go wrong.” Every tool you expose is an action the model can take on your behalf.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "The model passes a city name. What is the parameter?",
+            "supportingText": null,
+            "options": [
+              "the name of the input the function expects",
+              "the model's answer",
+              "the error code",
+              "the API key"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "The parameter is the name of the input the function expects; the city name is the value filled into it.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -2715,18 +4379,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “failure” in the module context?",
+            "prompt": "What do you check first when a call fails?",
             "supportingText": null,
             "options": [
-              "failure is unrelated to this topic.",
-              "The report describes the failure, impact, cause, and mitigation.",
-              "Never explain the failure.",
-              "failure has no meaning."
+              "the logs",
+              "the prompt",
+              "the model version",
+              "the documentation"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“The report describes the failure, impact, cause, and mitigation.” lists the four parts of an incident report in the order a reader expects: what broke, who it hit, why, and what was done.",
+            "correctOptionIndex": 0,
+            "explanation": "Check the logs first. They record what actually happened, while everything else is a guess about what might have.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "The server did not answer in time. That is a ___.",
+            "supportingText": null,
+            "options": [
+              "timeout",
+              "rate limit",
+              "schema",
+              "retry"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“timeout” is what you call it when no answer arrives in time. A rate limit refuses the call outright, and a retry is your response rather than the fault.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which failure deserves an automatic retry?",
+            "supportingText": null,
+            "options": [
+              "a short network timeout",
+              "an invalid API key",
+              "a malformed prompt",
+              "a missing schema field"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“a short network timeout” often clears by itself. The other three fail identically every time, so retrying only spends the budget twice.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "The report describes what failed, ___ it affected, and why.",
+            "supportingText": null,
+            "options": [
+              "who",
+              "which",
+              "where",
+              "when"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“who” asks about people, and the impact section of an incident report names the users who were affected.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "What belongs in an incident report?",
+            "supportingText": null,
+            "options": [
+              "the cause and the fix",
+              "the team's opinions",
+              "the full source code",
+              "the model's temperature"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“the cause and the fix” are what stop the same incident happening twice, which is the only reason to write the report at all.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -2807,18 +4535,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “trade-off” in the module context?",
+            "prompt": "What does a longer prompt increase?",
             "supportingText": null,
             "options": [
-              "trade-off is unrelated to this topic.",
-              "The team measured the trade-off between cost and answer quality.",
-              "Never explain the trade-off.",
-              "trade-off has no meaning."
+              "both cost and latency",
+              "accuracy only",
+              "the token limit",
+              "the model size"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“The team measured the trade-off between cost and answer quality.” uses the fixed pattern the trade-off between A and B. The two things you are balancing always follow “between”, joined by “and”.",
+            "correctOptionIndex": 0,
+            "explanation": "A longer prompt raises both cost and latency, because every token is read before a single one is written.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "The maximum you may send in one request is the ___.",
+            "supportingText": null,
+            "options": [
+              "token limit",
+              "trade-off",
+              "baseline",
+              "latency"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“token limit” is the hard cap on one request. A trade-off is a choice you make inside that cap, not the cap itself.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Shorter prompts ___ the cost of every call.",
+            "supportingText": null,
+            "options": [
+              "reduce",
+              "reduces",
+              "reducing",
+              "are reduce"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“reduce” takes no -s because the subject prompts is plural. Only a third person singular subject, such as a prompt or the model, adds that ending in the Present Simple.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "You cut half the context and answers get worse. What does that show?",
+            "supportingText": null,
+            "options": [
+              "The cut context was doing work.",
+              "The model is broken.",
+              "The token limit changed.",
+              "The prompt was too short before."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“The cut context was doing work.” That is the trade-off in action: the saving was real, and so was the price paid for it.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "What comes before optimizing?",
+            "supportingText": null,
+            "options": [
+              "Measure the current cost and quality.",
+              "Shorten every prompt.",
+              "Switch to a smaller model.",
+              "Remove all examples."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Measure the current cost and quality.” Without a baseline you cannot tell an improvement from a regression.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -2899,18 +4691,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “dependency” in the module context?",
+            "prompt": "What does each step in a chain use?",
             "supportingText": null,
             "options": [
-              "dependency is unrelated to this topic.",
-              "The second prompt has a dependency on the first output.",
-              "Never explain the dependency.",
-              "dependency has no meaning."
+              "the output of the previous step",
+              "a different model",
+              "its own database",
+              "only the user's first message"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“The second prompt has a dependency on the first output.” uses have a dependency on — the preposition is “on”, never “to” or “with”. You can also say the second prompt depends on the first.",
+            "correctOptionIndex": 0,
+            "explanation": "Each step uses the output of the previous step, which is exactly why the order cannot be changed freely.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "Step two needs step one, so step two has a ___ on it.",
+            "supportingText": null,
+            "options": [
+              "dependency",
+              "order",
+              "overlap",
+              "trade-off"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“dependency” names that relationship, and the preposition is on: a dependency on the first output.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Step one extracts the wrong facts. What about step three?",
+            "supportingText": null,
+            "options": [
+              "It is wrong too.",
+              "It is unaffected.",
+              "It retries step one.",
+              "It skips the chain."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“It is wrong too.” Errors travel forward through a chain, which is why the cheapest place to check is the earliest step.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "___ step passes its output to the next one.",
+            "supportingText": null,
+            "options": [
+              "Each",
+              "Every of",
+              "All of",
+              "Any of the"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Each” goes straight before a singular noun. All and any would need of the and a plural noun after them.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Why split one large prompt into a chain?",
+            "supportingText": null,
+            "options": [
+              "Each step can be checked on its own.",
+              "Chains are always cheaper.",
+              "One prompt cannot be long.",
+              "The model prefers short prompts."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Each step can be checked on its own.” Splitting buys visibility, and it usually costs more tokens rather than fewer.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -2989,20 +4845,84 @@
         ],
         "questions": [
           {
-            "skill": "Technical English",
+            "skill": "Grammar",
             "toeicPart": null,
-            "prompt": "Which sentence uses “ingest” in the module context?",
+            "prompt": "The files ___ from the storage folder.",
             "supportingText": null,
             "options": [
-              "ingest is unrelated to this topic.",
-              "The pipeline ingests, validates, and transforms source documents.",
-              "Never explain the ingest.",
-              "ingest has no meaning."
+              "are loaded",
+              "load",
+              "loading",
+              "is loaded"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“The pipeline ingests, validates, and transforms source documents.” chains three pipeline verbs in processing order under one subject, which is how a data flow is normally summarized in one line.",
+            "correctOptionIndex": 0,
+            "explanation": "“are loaded” is the passive with a plural subject, which is how pipeline steps are normally described.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "What happens to a document that fails validation?",
+            "supportingText": null,
+            "options": [
+              "It is dropped.",
+              "It is stored anyway.",
+              "It is renamed.",
+              "It is retried forever."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“It is dropped.” Bad input that reaches the index comes back later as a confident wrong answer, so the pipeline stops it at the door.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "Getting the text out of a PDF is called ___.",
+            "supportingText": null,
+            "options": [
+              "extracting",
+              "ingesting",
+              "cleaning",
+              "storing"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“extracting” is pulling the content out of a file. Ingesting covers the whole intake, cleaning comes next, and storing is the last step.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Why store the source address with each document?",
+            "supportingText": null,
+            "options": [
+              "So an answer can be traced back to it.",
+              "To save space.",
+              "To speed up the model.",
+              "To avoid cleaning the text."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“So an answer can be traced back to it.” Without the source you can show a user an answer but never prove where it came from.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "In what order does the pipeline work?",
+            "supportingText": null,
+            "options": [
+              "load, extract, clean, store",
+              "store, clean, load, extract",
+              "clean, store, extract, load",
+              "extract, store, load, clean"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "The order is load, extract, clean, store. Every step needs what the one before it produced.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -3083,18 +5003,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “chunk” in the module context?",
+            "prompt": "What is the risk of very small chunks?",
             "supportingText": null,
             "options": [
-              "chunk is unrelated to this topic.",
-              "Each chunk should preserve enough context for retrieval.",
-              "Never explain the chunk.",
-              "chunk has no meaning."
+              "They lose the context around them.",
+              "They are slower to search.",
+              "They cost more to store.",
+              "They cannot be embedded."
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“Each chunk should preserve enough context for retrieval.” uses enough X for Y to state a threshold: not maximum context, just enough for the chunk to be found and understood on its own.",
+            "correctOptionIndex": 0,
+            "explanation": "“They lose the context around them.” A sentence with nothing around it can match a query perfectly and still not answer it.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "What is the risk of very large chunks?",
+            "supportingText": null,
+            "options": [
+              "One match returns far more text than the question needs.",
+              "They cannot be indexed.",
+              "They are always wrong.",
+              "They break the embedding model."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“One match returns far more text than the question needs.” You pay for that text in tokens, and the model has more to sift through for the same answer.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "The shared text between two neighbouring chunks is the ___.",
+            "supportingText": null,
+            "options": [
+              "overlap",
+              "split",
+              "size",
+              "context"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“overlap” is the repeated part that stops a sentence being cut in half at a chunk boundary.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Each chunk should ___ enough context for retrieval.",
+            "supportingText": null,
+            "options": [
+              "preserve",
+              "preserves",
+              "preserving",
+              "to preserving"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "After the modal should, the verb stays in its base form: should preserve. The modal already carries the sense of obligation, so the verb after it never takes an ending.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "How do you choose a chunk size?",
+            "supportingText": null,
+            "options": [
+              "Test it against real questions.",
+              "Always use five hundred tokens.",
+              "Use the largest the model allows.",
+              "Match it to the file size."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Test it against real questions.” The right size depends on your documents and your queries, which is why the number is measured rather than quoted.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -3175,18 +5159,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “embedding” in the module context?",
+            "prompt": "What does an embedding represent?",
             "supportingText": null,
             "options": [
-              "embedding is unrelated to this topic.",
-              "An embedding represents semantic meaning as a vector.",
-              "Never explain the embedding.",
-              "embedding has no meaning."
+              "the meaning of the text",
+              "the length of the text",
+              "the file format",
+              "the author"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“An embedding represents semantic meaning as a vector.” uses represent X as Y, the pattern for saying that one thing stands for another in a different form.",
+            "correctOptionIndex": 0,
+            "explanation": "An embedding represents the meaning of the text as numbers, which is why it can match wording it has never literally seen.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "An embedding represents meaning ___ a vector.",
+            "supportingText": null,
+            "options": [
+              "as",
+              "like to",
+              "for",
+              "into a"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "The pattern is represent X as Y, where as introduces the form the meaning takes.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Two sentences mean the same thing. Their vectors are…",
+            "supportingText": null,
+            "options": [
+              "close together",
+              "identical",
+              "far apart",
+              "empty"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "They sit close together. Identical would need identical text, and distance is exactly what similarity search measures.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Why can a search for “reset my password” find a page that never says reset?",
+            "supportingText": null,
+            "options": [
+              "The embedding matches meaning, not words.",
+              "The search corrects spelling.",
+              "The database stores synonyms.",
+              "The model rewrites the query."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“The embedding matches meaning, not words.” That is the whole reason to embed rather than to search for keywords.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "To ___ text into numbers means to change its form.",
+            "supportingText": null,
+            "options": [
+              "convert",
+              "compare",
+              "collect",
+              "complete"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“convert” is the verb for changing something into another form, and it takes into: convert text into numbers.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -3267,18 +5315,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “index” in the module context?",
+            "prompt": "What does an index give you?",
             "supportingText": null,
             "options": [
-              "index is unrelated to this topic.",
-              "The database indexes vectors for efficient retrieval.",
-              "Never explain the index.",
-              "index has no meaning."
+              "fast lookup over many rows",
+              "smaller files",
+              "better embeddings",
+              "cleaner text"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“The database indexes vectors for efficient retrieval.” uses “index” as a verb — the database indexes something — while the noun names the structure that results. The for-phrase gives the purpose.",
+            "correctOptionIndex": 0,
+            "explanation": "An index gives you fast lookup over many rows. It changes how quickly something is found, not what is stored.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "What happens to a query before the search runs?",
+            "supportingText": null,
+            "options": [
+              "It is converted into a vector.",
+              "It is translated.",
+              "It is stored as a document.",
+              "It is split into chunks."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“It is converted into a vector.” The query and the documents have to be in the same space before anything can be compared.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "A named group of documents in a vector database is a ___.",
+            "supportingText": null,
+            "options": [
+              "collection",
+              "chunk",
+              "vector",
+              "query"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“collection” is the container. A vector is one entry inside it, a chunk is the text behind that entry, and a query is what you send in.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "The database ___ vectors for efficient retrieval.",
+            "supportingText": null,
+            "options": [
+              "indexes",
+              "index",
+              "indexing",
+              "is index"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“indexes” takes -s with the singular subject the database, and here index is working as a verb rather than a noun.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Why keep one collection per product manual?",
+            "supportingText": null,
+            "options": [
+              "Searches stay inside the right document set.",
+              "Collections are free.",
+              "It makes the embeddings smaller.",
+              "The model requires it."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Searches stay inside the right document set.” Separating collections is the simplest filter there is.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -3359,18 +5471,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “similarity” in the module context?",
+            "prompt": "What does the score tell you?",
             "supportingText": null,
             "options": [
-              "similarity is unrelated to this topic.",
-              "Similarity search ranks documents by relevance to the query.",
-              "Never explain the similarity.",
-              "similarity has no meaning."
+              "how close the match is",
+              "how long the document is",
+              "how new the document is",
+              "how often it was read"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“Similarity search ranks documents by relevance to the query.” uses rank by X for the sorting criterion and relevance to Y for what it is measured against.",
+            "correctOptionIndex": 0,
+            "explanation": "The score says how close the match is in the vector space, and nothing about length, age or popularity.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "When should you filter?",
+            "supportingText": null,
+            "options": [
+              "before ranking",
+              "after generating",
+              "instead of scoring",
+              "only when the score is low"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "Filter before ranking, so the model never sees a document it should not have, no matter how well that document scores.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "The results ___ from the highest score down.",
+            "supportingText": null,
+            "options": [
+              "are ranked",
+              "rank",
+              "ranking",
+              "is ranked"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“are ranked” is the passive with a plural subject; whatever does the ranking is not the point here.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "The document that fits the query best is the top ___.",
+            "supportingText": null,
+            "options": [
+              "match",
+              "filter",
+              "score",
+              "query"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“match” is the document that came back. The score is the number attached to it, and the filter is what you applied before ranking.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "You keep the top three matches. Why not all twenty?",
+            "supportingText": null,
+            "options": [
+              "Context space is limited and every token is paid for.",
+              "Twenty is never allowed.",
+              "Ranking breaks above ten.",
+              "The model reads only three."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Context space is limited and every token is paid for.” Everything you pass in is read and billed, so the tail of the list rarely earns its place.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -3451,18 +5627,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “metric” in the module context?",
+            "prompt": "What is a baseline for?",
             "supportingText": null,
             "options": [
-              "metric is unrelated to this topic.",
-              "Each metric measures one aspect of retrieval or answer quality.",
-              "Never explain the metric.",
-              "metric has no meaning."
+              "comparing a change against it",
+              "training the model",
+              "filtering documents",
+              "storing vectors"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“Each metric measures one aspect of retrieval or answer quality.” keeps one metric tied to one aspect, which is why evaluation reports quote several metrics instead of a single score.",
+            "correctOptionIndex": 0,
+            "explanation": "A baseline exists for comparing a change against it: it is last run's number, and without one you cannot tell whether a new prompt helped or hurt.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Retrieval found the right document but the answer is wrong. What failed?",
+            "supportingText": null,
+            "options": [
+              "generation",
+              "retrieval",
+              "the index",
+              "the embedding"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“generation” failed: the evidence was there and the answer still missed it. Measuring the two steps separately is what makes that visible.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "Each metric ___ one aspect of quality.",
+            "supportingText": null,
+            "options": [
+              "measures",
+              "measure",
+              "measuring",
+              "are measuring"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“measures” takes -s because each metric is singular, even when several metrics are in play.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Why read a sample of the answers by hand?",
+            "supportingText": null,
+            "options": [
+              "Metrics miss problems nobody thought to measure.",
+              "Metrics are always wrong.",
+              "It is faster than a script.",
+              "Reviewers score better than tests."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Metrics miss problems nobody thought to measure.” Fifty answers read by a person show you the failure your test set has no column for.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "A fixed set of questions used for every run is a ___.",
+            "supportingText": null,
+            "options": [
+              "test set",
+              "baseline",
+              "metric",
+              "sample"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“test set” is the fixed input. The baseline is the score it produced last time, and a metric is one way of scoring it.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -3543,18 +5783,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “delegate” in the module context?",
+            "prompt": "What does a coordinator do?",
             "supportingText": null,
             "options": [
-              "delegate is unrelated to this topic.",
-              "The coordinator delegates a bounded task to a specialist.",
-              "Never explain the delegate.",
-              "delegate has no meaning."
+              "assigns tasks to specialists",
+              "writes the final code",
+              "stores the vectors",
+              "trains the model"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“The coordinator delegates a bounded task to a specialist.” uses delegate something to someone — the task takes no preposition, the person takes “to”. “Bounded” signals that the scope is fixed in advance.",
+            "correctOptionIndex": 0,
+            "explanation": "A coordinator assigns tasks to specialists and collects what comes back, rather than doing the work itself.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "The coordinator delegates a task ___ a specialist.",
+            "supportingText": null,
+            "options": [
+              "to",
+              "for",
+              "with",
+              "on"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "The pattern is delegate something to someone: the task takes no preposition and the person takes to.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "A task whose scope is fixed in advance is ___.",
+            "supportingText": null,
+            "options": [
+              "bounded",
+              "shared",
+              "complete",
+              "assigned"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“bounded” means the limits are set beforehand, so the agent knows where its job stops.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Why give each agent one role?",
+            "supportingText": null,
+            "options": [
+              "A narrow job is easier to check.",
+              "Agents cannot do two things.",
+              "Roles make them faster.",
+              "The model requires it."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“A narrow job is easier to check.” When something goes wrong you can tell which agent produced it.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "The agent finishes its task. What should it do?",
+            "supportingText": null,
+            "options": [
+              "Report that the task is complete.",
+              "Start the next task itself.",
+              "Delete its memory.",
+              "Ask for a new role."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Report that the task is complete.” Handing control back is what keeps a multi-agent system from wandering off on its own.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -3635,18 +5939,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “route” in the module context?",
+            "prompt": "What does a router decide?",
             "supportingText": null,
             "options": [
-              "route is unrelated to this topic.",
-              "The router sends each request to the appropriate model.",
-              "Never explain the route.",
-              "route has no meaning."
+              "which model handles the request",
+              "what the answer says",
+              "how the data is stored",
+              "when the model is trained"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“The router sends each request to the appropriate model.” shows the noun router doing the routing; as a verb you would say the router routes each request. “Appropriate” is the neutral word for the right choice under the rules.",
+            "correctOptionIndex": 0,
+            "explanation": "The router decides which model handles the request, and it decides before any answer exists.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "A short, simple question arrives. Where should it go?",
+            "supportingText": null,
+            "options": [
+              "to the small, cheaper model",
+              "to the largest model",
+              "to a human",
+              "to the database"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“to the small, cheaper model.” Paying the top price for an easy question is the most common waste in a routed system.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "___ the request is simple, send it to the small model.",
+            "supportingText": null,
+            "options": [
+              "If",
+              "Unless",
+              "Although",
+              "Whether"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“If” introduces the condition that triggers the action. Unless would reverse it, and although would turn it into a contrast.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "A rule that must be true before an action happens is a ___.",
+            "supportingText": null,
+            "options": [
+              "condition",
+              "route",
+              "decision",
+              "trigger"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“condition” is the test itself. The route is where the request goes afterwards, and the decision is the act of choosing.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Why write the routing rule down?",
+            "supportingText": null,
+            "options": [
+              "So any decision can be explained afterwards.",
+              "So the model runs faster.",
+              "So the cost is fixed.",
+              "So the router needs no code."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“So any decision can be explained afterwards.” When a user asks why their request got the cheap model, the written rule is the answer.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -3727,18 +6095,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “trigger” in the module context?",
+            "prompt": "What starts an automation?",
             "supportingText": null,
             "options": [
-              "trigger is unrelated to this topic.",
-              "A new event triggers the automation workflow.",
-              "Never explain the trigger.",
-              "trigger has no meaning."
+              "a trigger",
+              "a report",
+              "a schema",
+              "a summary"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“A new event triggers the automation workflow.” uses “trigger” as a verb with the event as the subject: the event triggers the workflow, not the other way round.",
+            "correctOptionIndex": 0,
+            "explanation": "It is started by a trigger, whether that is an event, a schedule or a manual run. Everything else in the workflow happens after it.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "A new event ___ the workflow.",
+            "supportingText": null,
+            "options": [
+              "triggers",
+              "trigger",
+              "triggering",
+              "is trigger"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“triggers” takes -s with the singular subject a new event, and here trigger is the verb rather than the noun.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "A job that runs once every day is a ___ job.",
+            "supportingText": null,
+            "options": [
+              "daily",
+              "automatic",
+              "triggered",
+              "scheduled event"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“daily” says how often it runs. automatic says that nobody starts it by hand, which is a different idea altogether.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Why add an automatic retry?",
+            "supportingText": null,
+            "options": [
+              "Short network problems clear by themselves.",
+              "Retries make the job faster.",
+              "It removes the need for logs.",
+              "It replaces error handling."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“Short network problems clear by themselves.” One retry absorbs the noise, so nobody is woken for something that was gone a second later.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Which part of an automation is the action?",
+            "supportingText": null,
+            "options": [
+              "removing the old records",
+              "the new file arriving",
+              "the midnight schedule",
+              "the retry count"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“removing the old records” is the work being done. The file and the schedule are triggers, and the retry count is a setting.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }
@@ -3819,18 +6251,82 @@
           {
             "skill": "Technical English",
             "toeicPart": null,
-            "prompt": "Which sentence uses “recovery” in the module context?",
+            "prompt": "What does monitoring watch besides uptime?",
             "supportingText": null,
             "options": [
-              "recovery is unrelated to this topic.",
-              "The recovery plan restores service after a failure.",
-              "Never explain the recovery.",
-              "recovery has no meaning."
+              "latency",
+              "the source code",
+              "the schema",
+              "the prompt"
             ],
-            "correctOptionIndex": 1,
-            "explanation": "“The recovery plan restores service after a failure.” pairs recovery with restore and places it after the failure. Recovery is what happens next, not what stops the failure from happening.",
+            "correctOptionIndex": 0,
+            "explanation": "It watches latency too, because a service that answers in thirty seconds is up and still unusable.",
             "difficulty": 1,
             "sortOrder": 1
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "Something breaks in production. What comes first?",
+            "supportingText": null,
+            "options": [
+              "restoring service",
+              "writing the report",
+              "finding who caused it",
+              "rewriting the code"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“restoring service” comes first. The report matters, but it can be written once users are working again.",
+            "difficulty": 1,
+            "sortOrder": 2
+          },
+          {
+            "skill": "Vocabulary",
+            "toeicPart": null,
+            "prompt": "A system you can depend on over time is ___.",
+            "supportingText": null,
+            "options": [
+              "reliable",
+              "available",
+              "recovered",
+              "monitored"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“reliable” means it behaves as expected over time. available describes only this moment, and monitored just means somebody is watching.",
+            "difficulty": 1,
+            "sortOrder": 3
+          },
+          {
+            "skill": "Grammar",
+            "toeicPart": null,
+            "prompt": "The recovery plan ___ service after a failure.",
+            "supportingText": null,
+            "options": [
+              "restores",
+              "restore",
+              "restoring",
+              "is restore"
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“restores” takes -s because the recovery plan is a singular subject. Decide the verb ending from the head noun plan, not from the words standing next to the verb.",
+            "difficulty": 1,
+            "sortOrder": 4
+          },
+          {
+            "skill": "Technical English",
+            "toeicPart": null,
+            "prompt": "What does “fails in a predictable way” mean?",
+            "supportingText": null,
+            "options": [
+              "The failure mode was planned for.",
+              "The system never fails.",
+              "Failures are rare.",
+              "Failures are logged."
+            ],
+            "correctOptionIndex": 0,
+            "explanation": "“The failure mode was planned for.” Reliability is not the absence of failure but knowing in advance what a failure will look like.",
+            "difficulty": 1,
+            "sortOrder": 5
           }
         ]
       }

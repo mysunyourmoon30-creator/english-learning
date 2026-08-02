@@ -115,9 +115,21 @@ public sealed class SeedContentTests
                     .Distinct(StringComparer.Ordinal)
                     .Count(),
                 lesson.Questions.Count);
+            // The quiz passes at 80%, so a lesson needs five items for that bar to mean
+            // "one mistake allowed" rather than "answer the only question correctly".
+            Assert.True(
+                lesson.Questions.Count >= 5,
+                $"Lesson '{lesson.Slug}' has {lesson.Questions.Count} quiz questions.");
             Assert.All(lesson.Questions, question =>
             {
                 var options = JsonSerializer.Deserialize<string[]>(question.OptionsJson)!;
+                Assert.Equal(4, options.Length);
+                Assert.All(options, option =>
+                    Assert.False(string.IsNullOrWhiteSpace(option)));
+                Assert.DoesNotContain(
+                    "in the module context",
+                    question.Prompt,
+                    StringComparison.OrdinalIgnoreCase);
                 Assert.DoesNotContain(
                     "Review the lesson example and try again",
                     question.Explanation,

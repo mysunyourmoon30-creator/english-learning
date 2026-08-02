@@ -231,6 +231,15 @@ public static class SeedData
         Lesson lesson,
         Lesson template)
     {
+        // A question the content file no longer carries has been retired rather than
+        // reworded, and leaving it behind would let a lesson keep an item its own quiz no
+        // longer contains. Nothing references a question row, so removing it is safe.
+        var templatePrompts = template.Questions
+            .Select(x => x.Prompt)
+            .ToHashSet(StringComparer.Ordinal);
+        db.AssessmentQuestions.RemoveRange(
+            lesson.Questions.Where(x => !templatePrompts.Contains(x.Prompt)));
+
         var existingPrompts = lesson.Questions
             .GroupBy(x => x.Prompt, StringComparer.Ordinal)
             .ToDictionary(x => x.Key, x => x.First(), StringComparer.Ordinal);

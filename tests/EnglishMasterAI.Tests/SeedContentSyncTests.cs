@@ -1,4 +1,5 @@
 using EnglishMasterAI.Web.Data;
+using EnglishMasterAI.Web.Domain;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -81,6 +82,36 @@ public sealed class SeedContentSyncTests(EnglishMasterWebFactory factory)
 
         var refreshed = await db.AssessmentQuestions.SingleAsync(x => x.Id == id);
         Assert.Equal(explanation, refreshed.Explanation);
+    }
+
+    [Fact]
+    public async Task Reseeding_retires_a_question_the_content_file_no_longer_carries()
+    {
+        await using var scope = factory.Services.CreateAsyncScope();
+        var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        var lesson = await db.Lessons
+            .Include(x => x.Questions)
+            .OrderBy(x => x.Slug)
+            .FirstAsync(x => x.Questions.Count > 0);
+        var expectedCount = lesson.Questions.Count;
+        db.AssessmentQuestions.Add(new AssessmentQuestion
+        {
+            LessonId = lesson.Id,
+            Kind = AssessmentKind.LessonQuiz,
+            Skill = "Grammar",
+            Prompt = "A question that was dropped from the curriculum file.",
+            OptionsJson = """["a","b","c","d"]""",
+            CorrectOptionIndex = 0,
+            Explanation = "Retired.",
+            SortOrder = 99
+        });
+        await db.SaveChangesAsync();
+
+        await ReseedAsync(scope.ServiceProvider);
+
+        var remaining = await db.AssessmentQuestions
+            .CountAsync(x => x.LessonId == lesson.Id);
+        Assert.Equal(expectedCount, remaining);
     }
 
     [Fact]
